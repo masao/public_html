@@ -1,4 +1,4 @@
-<?php
+<?php // -*- html-helper -*-
 //error_reporting(E_ERROR | E_PARSE);
 switch ($_POST['type']) {
   case 'kochi-gothic':
@@ -9,6 +9,12 @@ switch ($_POST['type']) {
     break;
   case 'mikachan':
     $fontfile = "./mikachan.ttf";
+    break;
+  case 'vera':
+    $fontfile = "./Vera.ttf";
+    break;
+  case 'caslon':
+    $fontfile = "./CASLR___.TTF";
     break;
   case 'batang':
     $fontfile = "./batang.ttf";
@@ -55,14 +61,14 @@ if (strlen($text) > 0) {
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../default.css" type="text/css">
 <link rev="made" href="mailto:masao@ulis.ac.jp">
-<title>TrueTypeフォントのテスト</title>
+<title>TrueTypeフォントの表示テスト</title>
 </head>
 <body>
 <div class="last-update">公開日: 2003年06月24日</div>
 <!-- hhmts start -->
 <div class="last-update">最終更新日: 2003年06月24日</div>
 <!-- hhmts end -->
-<h1>TrueTypeフォントのテスト</h1>
+<h1>TrueTypeフォントの表示テスト</h1>
 <p>
 PHPに同梱されているGDライブラリの機能を使って、
 各種TrueTypeフォントの文字をPNG画像として表示します。
@@ -75,6 +81,8 @@ PHPに同梱されているGDライブラリの機能を使って、
   <option value="kochi-gothic">東風ゴチック</option>
   <option value="kochi-mincho">東風明朝</option>
   <option value="mikachan">みかちゃんフォント</option>
+  <option value="vera">Bitstream Veraフォント</option>
+  <option value="caslon">Caslonフォント</option>
   <option value="batang">Baekmuk明朝（batang）</option>
   <option value="dotum">Baekmukゴチック（dotum）</option>
   <option value="gulim">Baekmuk丸ゴチック（gulim）</option>
@@ -98,6 +106,8 @@ PHPに同梱されているGDライブラリの機能を使って、
 <ul>
   <li><a href="http://sourceforge.jp/projects/efont/">東風フォント</a>: kochi-substitute-20030623.tar.bz2
   <li><a href="http://mikachan-font.com">みかちゃんフォント</a>: mikachanfont-8.8.tar.bz2
+  <li><a href="http://www.gnome.org/fonts/">Bitstream Vera Fonts</a>: ttf-bitstream-vera-1.10.tar.bz2
+  <li><a href="http://bibliofile.mc.duke.edu/gww/fonts/Caslon/Caslon.html#Unicode">Caslon</a>: CasUni.zip
   <li><a href="ftp://ftp.mizi.com/pub/baekmuk">Baekmuk</a>（※ 韓国語用です）: baekmuk-ttf-2.1.tar.gz
 </ul>
 <hr>
