@@ -166,7 +166,9 @@ sub get_contents () {
 	$tmp =~ s#<!--(.*?)-->##go;
 	$tmp =~ s#<tr[^>]*>(.+?)</tr>#push(@entries,$1)#geio;
     } else {
-	return undef;
+	print "<p><a href=\"$ORIG_URL\">問題と対策のページ</a>にアクセスできませんでした。</p>\n";
+	print_html_foot();
+	exit();
     }
     my $date = scalar localtime $res->headers->last_modified;
     print "<p><a href=\"$ORIG_URL\">元のページ</a>（最終更新日: <strong>$date</strong>）</p>\n";
