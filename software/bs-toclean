@@ -1,0 +1,2 @@
+#!/bin/sh
+bsfilter --sub-spam --add-clean --update --show-new-token $@
