@@ -42,11 +42,7 @@ my @problems = ();
 main();
 sub main {
     print $q->header('text/html; charset=EUC-JP');
-    print <<EOF;
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html lang="ja"><head><title>$TITLE</title></head><body>
-<h1>$TITLE</h1>
-EOF
+    print print_html_head();
 
     my @entries = get_contents();
 
@@ -103,16 +99,8 @@ EOF
     print "</table>\n";
     print_pages();
 
-    my $id = '$Id$';
-    print <<EOF;
-<hr><address>
-<a href="http://nile.ulis.ac.jp/~masao/ulisonly/ipc-trouble.cgi">http://nile.ulis.ac.jp/~masao/ulisonly/ipc-trouble.cgi</a><br>
-$id
-<!-- 本ページは個人的に作成しているものです。
-お問い合わせは<a href="mailto:$address">$address</a>までお願いします。-->
-</address>
-</body></html>
-EOF
+    print_html_foot();
+
 }
 
 # 数字を考慮したソート
@@ -134,6 +122,27 @@ sub print_pages() {
 	}
     }
     print "</p>\n";
+}
+
+sub print_html_head() {
+    return <<EOF;
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="ja"><head><title>$TITLE</title></head><body>
+<h1>$TITLE</h1>
+EOF
+}
+
+sub print_html_foot() {
+    my $id = '$Id$';
+    return <<EOF;
+<hr><address>
+<a href="http://nile.ulis.ac.jp/~masao/ulisonly/ipc-trouble.cgi">http://nile.ulis.ac.jp/~masao/ulisonly/ipc-trouble.cgi</a><br>
+$id
+<!-- 本ページは個人的に作成しているものです。
+お問い合わせは<a href="mailto:$address">$address</a>までお願いします。-->
+</address>
+</body></html>
+EOF
 }
 
 sub escape_html($) {
