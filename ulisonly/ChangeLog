@@ -1,3 +1,245 @@
+2002-03-13  Masao Takaku  <masao@ulis.ac.jp>
+
+	* TRIPLE: とりあえずメモ。
+
+	http://triple.semanticweb.org/
+
+	「TRIPLE is an RDF query, inference, and transformation language
+	for the Semantic Web.」
+
+	* X-Smiles: http://www.x-smiles.org/
+	
+	SMIL ブラウザ。（その他の XML 形式にも対応している）
+
+2002-03-10  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 杉本授業: 長らく先延しにしていた杉本先生の授業（ゼミ）。
+
+	色々と有益なツッコミを頂いた。
+
+	・それのウリは？
+	・本当に「可視化」なの？
+
+	やはり自分でも疑問だった部分の方向を指摘してもらって助かった。
+
+	とはいうものの、あれだけいっぺんにきついツッコミを受けると、精神上
+	よろしくない気も。。。
+
+	* 「ユーザビリティの神様も筆を誤る？」:
+	http://www.hotwired.co.jp/webmonkey/2001/30/index1a.html
+
+	頷ける点が多々ある。
+	実際のところ、ヤコブ・ニールセンの書いたものには、この記事の指摘す
+	るような「微妙な違和感」を感じることがある。
+
+2002-03-09  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 「それはわたしのデザインだもん」:
+
+	Web 制作の納品したものを他に転用されてしまって金にならないというデ
+	ザイナーの嘆き。
+	http://www.zdnet.co.jp/macwire/0203/05/dc_kenkyusitu.html
+
+	ちょっと考えると、キチンと契約で取り決めておけばよいだけのような気
+	がするんだけど。。。
+
+2002-03-07  Masao Takaku  <masao@ulis.ac.jp>
+
+	* installer: rfc2821 のような形式で保存していくとかも良いかも…。
+
+	* デニーズ（ランチ）: マグロのカツが思ったよりもおいしかった。
+
+	* 内蔵HDDすげかえ:
+
+	gakkou の内蔵 HDD を 4GB のものから 20GB のものにすげかえた。
+
+	作業自体は阪口さんがやってくれた。だいたい、3時間ほどかかった。
+
+	* 2講のページ検索（Namazu）:
+
+	ChangeLog.html を作るようにしたら、ChaSen のバグで mknmz ごと落ち
+	るようになっていた。
+
+	とりあえず、Kakasi でインデクシングするよう変更。
+
+	% mkdir /tmp/2kou-namazu
+	% cd /tmp/2kou-namazu
+	% vi /project/2kou/namazu/mknmzrc
+	% mknmz -f /project/2kou/2kou/namazu/mknmzrc \
+		-T /project/2kou/2kou/namazu/ /project/2kou/2kou/
+	% cd /project/2kou/2kou/namazu
+	% mkdir oldidx
+	% mv NMZ.* oldidx
+	% mv /tmp/2kou-namazu/NMZ.* .
+	% mv oldidx/NMZ.slog .
+
+	ついでに、Namazu 2.0.10, kakasi 2.3.4, Text-Kakasi 1.05 もインストー
+	ルした。
+
+2002-03-06  Masao Takaku  <masao@ulis.ac.jp>
+
+	* {参考した方が良い, 参考になる}URL: とりあえずメモしておく。
+
+	Hyperbolic View を使った有名な可視化:
+	http://www.inxight.com/
+
+	Sony CSL の松井さんの可視化研究のレビュー（ちょっと古い）:
+	http://www.csl.sony.co.jp/person/masui/Visualization/
+
+	* 検索例: not を使った検索例はあまり思い付かないので、書いておく。
+
+	「可視化 AND グラフ NOT グラフィ NOT ホログラフ」
+
+	とかく、「グラフ」関係の論文は探しづらいね…。
+
+2002-03-04  Masao Takaku  <masao@ulis.ac.jp>
+
+	* Lucene: 2年位前に見た覚えのある Java ベースの全文検索エンジン。
+
+	Apache の Jakarta Project に参加している。
+
+	http://jakarta.apache.org/lucene/docs/index.html
+	cf. Ja-Jakarta: http://www.ingrid.org/jajakarta/lucene/
+
+	* Cocoon vs. Zope:
+
+	Slashdot.org で引用されていた記事。
+	http://www.arielpartners.com/arielpartners/content/public/topics/technology/technologyReviews/zopeVsCocoon
+
+	* from NEWS:
+
+	携帯で Wizardry。。。
+	http://www.zdnet.co.jp/mobile/0202/28/n_wizard.html
+
+2002-03-03  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 「神々の指紋」批判ページ: けっこう前に話題になった本をトンデモ本
+	として批判しているページ。
+	（著者は古代西アジア専攻の研究者）
+	http://bosei.cc.u-tokai.ac.jp/~haruta/hancock/index.html
+
+	「もしも、犯人がドラえもんだったら…。」
+	の項が非常に面白い考察だった。
+
+	* Templating System （Perl）の比較記事:
+
+	http://www.perl.com/lpt/a/2001/08/21/templating.html
+	Perl のいろいろある Template System を比較している。
+
+	* namazu.cgi の Content-Type 指定:
+
+	長い間、namazu.cgi は「Content-Type: text/html; charset=EUC-JP」と
+	吐いてくれると勘違いしていた。
+
+	Namazu2 に上がった時の国際化の段階で、charset をコードに埋め込むの
+	はやめていたらしい。
+
+	対策としては、.namazurc に
+
+	ContentType	"text/html; charset=EUC-JP"
+
+	と書いておくか、<meta> タグで対処するしかなさそう…。
+
+2002-03-01  Masao Takaku  <masao@ulis.ac.jp>
+
+	* ULIS-DL 検索: 一通り完了。
+
+	* putty 日本語対応版:
+
+	SSH2 にも対応している putty の日本語対応パッチがあった。
+	（後で試してみよう!）
+
+	cf. PuTTY で ISO 2022 による日本語入力・表示を可能にするパッチ
+	http://hp.vector.co.jp/authors/VA024651/#PuTTYkj_top
+
+2002-02-26  Masao Takaku  <masao@ulis.ac.jp>
+
+	* UDL-Namazu: Namazu そのものの機能だけでは実現できない部分があり
+	そうなので、Search::Namazu を使うことにする。
+
+	Search::Namazu を単純に利用する方法。
+
+	use Search::Namazu;
+	@tmp = Search::Namazu::Search(index=>"/home/masao/Mail",query=>"tmp");
+	for my $h (@tmp) {
+	    for my $k (keys %$h) {
+	    	print "$k: ", $$h{$k}, "\n";
+	    }
+	    print "\n";
+	}
+
+	Search::Namazu::Result オブジェクトが持つメソッドは、score(),
+	uri(), date(), rank() のみ。
+
+	フィールド（NMZ.result.*も）にアクセスする部分は、libnmz 自体は持っ
+	ていないらしい…。
+
+	ので、自作するしかないっぽい。
+
+	………とか言っていたら、やめろ! という天命が下ったので、この機能は
+	あきらめることにする。
+
+	* mailer.pl: なんとか長谷川先生に納品。。。
+
+	* 引越し: 2講部屋になんとか作業場所を確保した。
+
+	念のため、Mozilla のパスワード、クッキーの類を消しておく。
+
+	IE の方の消し方がわからないので、探してみた。
+	cf. http://pcweb.mycom.co.jp/column/smart98/smart98002.html
+
+	IE 5.x は手で消すしかない模様。
+	（IE 6からはGUIで消せるらしいが…）
+
+2002-02-18  Masao Takaku  <masao@ulis.ac.jp>
+
+	* nile 引越し: とりあえず nile の引越し完了。
+
+	* XMLエディタ: xmlhack.com で見かけたもの。
+	XXE（XMLmind XML Editor） - http://www.xmlmind.com/xmleditor/
+
+	けっこう珍しめの文書系XMLエディタ。
+	特徴はスタイルシートを適用しながら、使える点か…。
+
+	ライセンスは、
+	・個人使用にかぎり、タダ。
+	・再配布不可。
+
+2002-02-15  Masao Takaku  <masao@ulis.ac.jp>
+
+	* ホームページ作成ソフトレビュー:
+
+	・http://www.mars.dti.ne.jp/~fuming/yobi/wysiwyg1.htm
+
+	けっこうな数の作成ソフトについての情報がまとまっている。
+
+	・http://www.kanzaki.com/docs/html/nice-editors.html
+
+	こっちは、主にHTMLのソース書き用のエディタが載っている。
+
+	* シチュー: このあいだ、ガッテンでやっていた方法で作ってみた。
+
+	注意点は、以下の2点。
+	・始めから弱火でずっと。
+	・ルーを入れる前に火を止め、5分ほど置く。
+
+2002-02-12  Masao Takaku  <masao@ulis.ac.jp>
+
+	* ダイレクトメール:
+
+	だいぶ前に Unicef から募金を呼び掛けるダイレクトメールが来ていたの
+	で、3000円を郵便局で振り込んでみた。
+
+	振り込んだ後で本当にユニセフからのものかどうか気になり、調べてみた。
+
+	http://www.unicef.or.jp/kyoryoku/kyo_g3.htm
+
+	を見ると、最近はじめたDMによるキャンペーンらしい…。
+	どうやら、電話帳などの情報をものに案内を発送しているらしい。
+
+	Google で検索してみると、他にも気味悪がっている人がいた。
+	http://village.infoweb.ne.jp/~wagamama/mag/mon/tada66.htm
+
 2002-02-11  Masao Takaku  <masao@ulis.ac.jp>
 
 	* Perl Graph library: CPAN で検索してみる。
