@@ -18,6 +18,8 @@
 </p>
 <!--#config timefmt="<span class=\"lastmodified\">[%Y-%m-%d]</span>" -->
 <ul>
+  <li><a href="test-ttf.php">TrueTypeフォントのテスト</a>
+      <!--#flastmod file="test-ttf.php" -->
   <li><a href="paper-checklist.html">論文投稿前のチェックリスト</a>
       <!--#flastmod file="paper-checklist.html" -->
   <li><a href="wikiwiki.html">WikiCloneについてのメモ</a>
