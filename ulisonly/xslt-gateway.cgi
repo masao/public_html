@@ -28,7 +28,7 @@ my $HTML_HEAD = <<EOF;
 <ul>
 <li>ファイル指定の方が優先されます。ファイル指定しない場合は、テキストエリアの内容が使われます。
 <li>テキストエリアでの XML 宣言は、必ず<code>encoding="EUC-JP"</code>を使ってください。
-<li>XSLTでは<code>&lt;xsl:output encoding="EUC-JP"&gt;</code>としないと、文字化けします。
+<li>XSLT中で<code>&lt;xsl:output encoding="EUC-JP"&gt;</code>としないと、日本語などが文字化けしてしまいます。
 </ul>
 <hr>
 EOF
@@ -76,7 +76,7 @@ sub main {
 	$result = escape_html($result);
 	print <<EOF;
 <h2>変換結果</h2>
-<pre>$result</pre>
+<pre style="border: solid thin; padding: 2px;">$result</pre>
 EOF
 	print "<hr>", html_form();
     } else {
@@ -86,8 +86,7 @@ EOF
 }
 
 sub exec_xslt($$) {
-    # 実行性能を上げるために必要な時以外はロードしない。
-    require XML::LibXML;
+    require XML::LibXML;  # 実行性能を上げるために必要な時以外はロードしない。
     require XML::LibXSLT;
 
     my $parser = new XML::LibXML;
@@ -98,6 +97,7 @@ sub exec_xslt($$) {
 
     my $style_obj = $xslt_parser->parse_stylesheet($style_doc);
     my $result = $style_obj->transform($source_doc);
+
     return $style_obj->output_string($result);
 }
 
@@ -132,10 +132,10 @@ sub html_form () {
 <form action="xslt-gateway.cgi" method="POST" enctype="multipart/form-data">
 <div>
 <h2>XML</h2>
-<label for="source_f">ファイル: <input type="file" name="source_f" value="$source_f" size="40"></label><br>
+<label for="source_f">ファイル: <input type="file" name="source_f" id="source_f" value="$source_f" size="40"></label><br>
 <textarea name="source" rows="10" cols="60">$source</textarea>
 <h2>XSLTスタイルシート</h2>
-<label for="stylesheet_f">ファイル: <input type="file" name="stylesheet_f" value="$stylesheet_f" size="40"></label><br>
+<label for="stylesheet_f">ファイル: <input type="file" name="stylesheet_f" id="stylesheet_f" value="$stylesheet_f" size="40"></label><br>
 <textarea name="stylesheet" rows="10" cols="60">$stylesheet</textarea><br>
 <input type="submit" name="submit" value=" 送 信 ">
 </div>
