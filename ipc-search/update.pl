@@ -47,7 +47,7 @@ print "完了 - " . `date` ."\n";
 print "Indexing を行います。\n";
 if (-d "www.ulis.ac.jp") {
     $ENV{'LANG'} = "ja";
-    system "$Mknmz --all --checkpoint -f ${HtmlDir}/mknmzrc --replace='s#${BaseDir}/#http://#;' ${BaseDir}/www.ulis.ac.jp/";
+    system "$Mknmz --all --checkpoint -f ${HtmlDir}/mknmzrc --replace='s#${BaseDir}/#http://#;' ${BaseDir}/*.ac.jp/";
 } else {
     die "収集した文書が $BaseDir/www.ulis.ac.jp にありません。";
 }
@@ -104,14 +104,24 @@ sub update_news($%) {
 	if ($line =~ /$flag/i) {
 	    print HTML "$flag\n";
 	    print HTML "  <dt>$date\n";
-	    print HTML "  <dd>インデックスを更新。全 $info{'total'} URL。（";
-	    print HTML "追加 $info{'added'}" if (defined($info{'added'}));
-	    print HTML "、削除 $info{'deleted'}" if (defined($info{'deleted'}));
-	    print HTML "、更新 $info{'updated'}" if (defined($info{'updated'}));
-	    print HTML "）\n";
+	    print HTML "  <dd>". info2str(%info);
 	} else {
 	    print HTML $line;
 	}
     }
     close(HTML);
+}
+
+sub info2str(%) {
+    my (%info) = @_;
+    my $retstr = "インデックスを更新。全 $info{'total'} URL。";
+    my %infostr = ('added' => "追加",
+		   'deleted' => "削除",
+		   'updated' => "更新");
+    my @tmp = ();
+    foreach my $k (keys %infostr) {
+	push @tmp, "$infostr{$k} $info{$k} 件" if defined $info{$k}
+    }
+    $result .= "（". join(@tmp, "、") ."）\n";
+    return $result;
 }
