@@ -60,13 +60,14 @@ EOF
 
 ### CGI 引数
 my $display = param('display') || 'preview';
-my $source = param('source') || $DEFAULT_SOURCE;
-my $source_f = param('source_f') || '';
-my $stylesheet = param('stylesheet') || $DEFAULT_STYLESHEET;
-my $stylesheet_f = param('stylesheet_f') || '';
 
-my $xml = length(param("source_f")) ? read_data($source_f) : $source;
-my $xslt = length(param("stylesheet_f")) ? read_data($stylesheet_f) : $stylesheet;
+my $source = param('source') || $DEFAULT_SOURCE;
+$source = read_data(param('source_f'))
+    if defined param('source_f') && length param('source_f');
+
+my $stylesheet = param('stylesheet') || $DEFAULT_STYLESHEET;
+$stylesheet = read_data(param('stylesheet_f'))
+    if defined param('stylesheet_f') && length param('stylesheet_f');
 
 main();
 sub main {
@@ -94,15 +95,15 @@ EOF
     }
 }
 
-sub exec_xslt($$) {
+sub exec_xslt() {
     require XML::LibXML;  # 実行性能を上げるために必要な時以外はロードしない。
     require XML::LibXSLT;
 
     my $parser = new XML::LibXML;
     my $xslt_parser = new XML::LibXSLT;
 
-    my $source_doc = $parser->parse_string($xml);
-    my $style_doc = $parser->parse_string($xslt);
+    my $source_doc = $parser->parse_string($source);
+    my $style_doc = $parser->parse_string($stylesheet);
 
     my $style_obj = $xslt_parser->parse_stylesheet($style_doc);
     my $type = $style_obj->media_type();
@@ -135,17 +136,16 @@ EOF
 
 sub html_form () {
     $source = escape_html($source);
-    $source_f = escape_html($source_f);
     $stylesheet = escape_html($stylesheet);
-    $stylesheet_f = escape_html($stylesheet_f);
     return <<EOF;
 <form action="xslt-gateway.cgi" method="POST" enctype="multipart/form-data">
 <div>
 <h2>XML</h2>
-<label for="source_f">ファイル: <input type="file" name="source_f" id="source_f" value="$source_f" size="40"></label><br>
+<label for="source_f">ファイル:
+<input type="file" name="source_f" id="source_f" value="" size="40"></label><br>
 <textarea name="source" rows="10" cols="60">$source</textarea>
 <h2>XSLTスタイルシート</h2>
-<label for="stylesheet_f">ファイル: <input type="file" name="stylesheet_f" id="stylesheet_f" value="$stylesheet_f" size="40"></label><br>
+<label for="stylesheet_f">ファイル: <input type="file" name="stylesheet_f" id="stylesheet_f" value="" size="40"></label><br>
 <textarea name="stylesheet" rows="10" cols="60">$stylesheet</textarea><br>
 <fieldset><legend>表示方式</legend>
 <label><input type="radio" name="display" value="preview" checked>変換結果のソースをプレビュー表示する</label><br>
