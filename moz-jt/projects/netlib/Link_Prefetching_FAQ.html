@@ -8,7 +8,7 @@
 }
 .orig { font-size:smaller; color:gray; }
 </style>
-  <title>Link Prefetching FAQ</title>
+  <title>リンクの先読み機能 FAQ</title>
   <meta http-equiv="content-type"
  content="text/html; charset=EUC-JP">
 <LINK REL="stylesheet" HREF="../../persistent-style.css" TYPE="text/css">
@@ -71,7 +71,7 @@ CLASS="mozillaorgbanner" WIDTH="600" HEIGHT="58">
 
 <div style="text-align: center;"><big><big><span
  style="font-weight: bold;">
-リンク先読み機能 FAQ<br>
+リンクの先読み機能 FAQ<br>
 <span class="orig">Link Prefetching FAQ<br></span>
 </span><small><small><span style="font-style: italic;">Darin Fisher /
 darin at netscape dot com<br>
@@ -81,15 +81,15 @@ darin at netscape dot com<br>
 </span></small></small></big></big>
 <div style="text-align: left;">
 <hr style="width: 100%; height: 2px;"><br>
-<a href="#What_is_link_prefetching">リンクの先読みとは何ですか？</a><br>
+<a href="#What_is_link_prefetching">リンクの先読みとは？</a><br>
 <span class="orig"><a href="#What_is_link_prefetching">What is link prefetching?</a><br></span>
-<a href="#What_are_the_prefetching_hints">先読みのヒントとは何ですか？</a><br>
+<a href="#What_are_the_prefetching_hints">先読みのヒントとは？</a><br>
 <span class="orig"><a href="#What_are_the_prefetching_hints">What are the prefetching
 hints?</a><br></span>
 <a href="#Are_anchor_a_tags_prefetched">アンカータグ（&lt;a&gt;）の内容も先読みされますか？</a><br>
 <span class="orig"><a href="#Are_anchor_a_tags_prefetched">Are anchor (&lt;a&gt;) tags
 prefetched?</a><br></span>
-<a href="#Is_link_prefetching_standards_compliant">リンク先読み機能は標準に準拠していますか？</a><br>
+<a href="#Is_link_prefetching_standards_compliant">リンクの先読み機能は標準に準拠していますか？</a><br>
 <span class="orig"><a href="#Is_link_prefetching_standards_compliant">Is link prefetching
 standards compliant?</a><br></span>
 <a href="#How_is_browser_idle_time_determined">ブラウザが使われていない時（アイドルタイム）をどのように判定しますか？</a><br>
@@ -98,7 +98,7 @@ determined?</a><br></span>
 <a href="#What_happens_if_I_click_on_a_link_while">先読みの取得中に別のリンクをクリックするとどうなりますか？</a><br>
 <span class="orig"><a href="#What_happens_if_I_click_on_a_link_while">What happens if I
 click on a link while something is being prefetched?</a><br></span>
-<a href="#What_if_Im_downloading_something_in_the">バックグラウンドで何かをダウンロードしている場合はどうですか？リンクの先読み機能は帯域を奪い合いますか？</a><br>
+<a href="#What_if_Im_downloading_something_in_the">バックグラウンドで何かをダウンロードしている場合はどうですか？リンクの先読み機能は回線容量を奪い合いますか？</a><br>
 <span class="orig"><a href="#What_if_Im_downloading_something_in_the">What if I'm
 downloading something in the background? &nbsp;Will link prefetching
 compete for bandwidth?</a><br></span>
@@ -110,17 +110,17 @@ restrictions on what is prefetched?</a><br></span>
 documents from a different host?</a><br></span>
 <a href="#Do_prefetched_requests_contain_a">先読みのリクエストには Referer: ヘッダが付きますか？</a><br>
 <span class="orig"><a href="#Do_prefetched_requests_contain_a">Do prefetched requests
-contain a <span style="font-family: monospace;">Referer:</span>header?</a><br>
+contain a <span style="font-family: monospace;">Referer:</span>header?</a><br></span>
 <a href="#As_a_server_admin_can_I_distinguish">サーバ管理者ですが、先読みのリクエストを通常のリクエストと区別する方法はありますか？</a><br>
-<a href="#As_a_server_admin_can_I_distinguish">As a server admin, can I
+<span class="orig"><a href="#As_a_server_admin_can_I_distinguish">As a server admin, can I
 distinguish prefetch requests from normal requests?</a><br></span>
-<a href="#Is_there_a_preference_to_disable_link">リンク先読み機能を無効化する設定はありますか？</a><br>
+<a href="#Is_there_a_preference_to_disable_link">リンクの先読み機能を無効化する設定はありますか？</a><br>
 <span class="orig"><a href="#Is_there_a_preference_to_disable_link">Is there a preference
 to disable link prefetching?</a><br></span>
-<a href="#What_about_folks_who_pay-per-byte_for">ネットワーク帯域の出費がバイト単位で行われている人たちについてはどうですか？</a><br>
+<a href="#What_about_folks_who_pay-per-byte_for">ネットワーク回線容量の出費をバイト単位で行っている人たちについてはどうですか？</a><br>
 <span class="orig"><a href="#What_about_folks_who_pay-per-byte_for">What about folks who
 pay-per-byte for network bandwidth?</a><br></span>
-<a href="#Which_browsers_support_link_prefetching">どのブラウザがリンク先読み機能に対応していますか？</a><br>
+<a href="#Which_browsers_support_link_prefetching">どのブラウザがリンクの先読み機能に対応していますか？</a><br>
 <span class="orig"><a href="#Which_browsers_support_link_prefetching">Which browsers
 support link prefetching?</a><br></span>
 <a href="#What_about..._">他には…？</a><br>
@@ -130,7 +130,7 @@ support link prefetching?</a><br></span>
 <hr style="width: 100%; height: 2px;"><span style="font-weight: bold;"></span><span
  style="font-weight: bold;"><br>
 <a name="What_is_link_prefetching"></a>
-リンクの先読みとは何ですか？</span><br>
+リンクの先読みとは？</span><br>
 <span class="orig">What is link prefetching?<br></span>
 リンクの先読みとはブラウザの機能の一つで、ブラウザの使われていない時間を使って、ユーザが近い将来に訪問するであろう文書をダウンロードして、<span style="font-style: italic;">予め読み込んでおく</span>ことを指します。
 先読みのヒントをブラウザに渡すウェブページでは、そのページをロードし終わると、ブラウザは黙って指定された文書を先読みし、キャッシュに蓄積しておきます。
@@ -146,7 +146,7 @@ of the browser's cache.<br></span>
 <br>
 <span style="font-weight: bold;"><a
  name="What_are_the_prefetching_hints"></a>
-先読みのヒントとは何ですか？<br>
+先読みのヒントとは？<br>
 <span class="orig">What are the prefetching
 hints?<br></span>
 </span>
@@ -227,8 +227,8 @@ anchor (<span style="font-family: monospace;">&lt;a&gt;</span>) tags
 prefetched?<br></span></span>
 いいえ。
 <span style="font-family: monospace;">next</span> か <span style="font-family: monospace;">prefetch</span> のリンク形式を持つ <span style="font-family: monospace;">&lt;link&gt;</span> タグだけが先読みの対象です。
-しかし将来的には、十分な利点がある場合、<span style="font-family: monospace;">next</span> や <span style="font-family: monospace;">prefetch</span> の関係を含む &lt;a&gt; タグのリンク先読み機能をサポートするようになるかもしれません。
-その場合には、古くさい先読みリンクの問題をコンテンツ提供者が避けられるようになるかもしれません。<br>
+しかし、要望が多いようなら、<span style="font-family: monospace;">next</span> や <span style="font-family: monospace;">prefetch</span> の関係を含む &lt;a&gt; タグのリンクの先読みを将来的にはサポートするようになるかもしれません。
+その場合には、古くさい先読みリンクの問題をコンテンツ提供者が避けられるようになるかもしれません。<span class="comment">[ 「the problem of stale prefetching links」って何？ ]</span><br>
 <span class="orig">No, only <span style="font-family: monospace;">&lt;link&gt;</span> tags
 w/ a relation type of <span style="font-family: monospace;">next</span>
 or <span style="font-family: monospace;">prefetch</span> are prefetched.
@@ -241,13 +241,13 @@ of stale prefetching links.<br>
 </span><br>
 <span style="font-weight: bold;"><a
  name="Is_link_prefetching_standards_compliant"></a>
-リンク先読み機能は標準に準拠していますか？<br>
+リンクの先読み機能は標準に準拠していますか？<br>
 <span class="orig">Is link prefetching
 standards compliant?<br></span></span>
-はい。ここで述べているリンク先読み機能は、既存のウェブ標準に違反していません。
+はい。ここで述べているリンクの先読み機能は、既存のウェブ標準に違反していません。
 実際、HTML 4.01 仕様書では新たなリンク形式の定義は明確に許されています（<a
  href="http://www.w3.org/TR/html4/types.html#type-links"
- style="font-family: monospace;">http://www.w3.org/TR/html4/types.html#type-links</a> <span class="comment">[訳注: <a href="http://www.asahi-net.or.jp/~sd5a-ucd/rec-html401j/types.html#type-links">日本語訳</a>]</span> 参照）。
+ style="font-family: monospace;">http://www.w3.org/TR/html4/types.html#type-links</a> <span class="comment">[ 訳注: <a href="http://www.asahi-net.or.jp/~sd5a-ucd/rec-html401j/types.html#type-links">日本語訳</a> ]</span> 参照）。
 しかし、Mozilla で採用した手法自体はまだ標準化されていません。
 Internet Draft を現在準備中です。<br>
 <span class="orig">Yes, link prefetching as outlined in this document does not violate any
@@ -290,10 +290,10 @@ begin until the top-most frame and all its "child" frames finish loading.<br>
 <span class="orig">What happens if I
 click on a link while something is being prefetched?<br></span>
 </span>
-ユーザがリンクをクリックしたり、何らかの種類のページ読み込みを発生させたりすると、リンク先読みは止まり、先読みのヒントは捨てられます。
-先読みしている文書が部分的にダウンロードされている場合は、途中までの文書がサーバから送られた "<span style="font-family: monospace;">Accept-Ranges: bytes</span>" レスポンスヘッダ付きでキャッシュに蓄積されます。
-このヘッダは、大抵、ウェブサーバが静的なコンテンツが提供する際に生成するものです。
-ユーザが先読みした文書を実際に訪問する際には、その文書の残りの部分が HTTP の byte-range リクエストを使って取得されます。
+ユーザがリンクをクリックしたり、何らかの種類のページ読み込みを発生させたりすると、先読みは停止し、先読みのヒントは捨てられます。
+先読みしている文書が部分的にダウンロードされている場合は、途中までの文書をサーバから送られた "<span style="font-family: monospace;">Accept-Ranges: bytes</span>" レスポンスヘッダ付きでキャッシュに蓄積されます。
+このヘッダは、大抵、ウェブサーバが静的なコンテンツを提供する際に生成するものです。
+ユーザが先読みした文書を実際に訪問する際には、その文書の残りの部分を HTTP の byte-range リクエストを使って取得します。
 <br>
 <span class="orig">When the user clicks on a link, or initiates any kind of page
 load, link prefetching will stop and any prefetch hints will be
@@ -308,14 +308,14 @@ will be fetched using a HTTP byte-range request.<br></span>
 <span style="font-weight: bold;"><a
  name="What_if_Im_downloading_something_in_the"></a>
 バックグラウンドで何かをダウンロードしている場合はどうですか？
-リンクの先読み機能は帯域を奪い合いますか？<br>
+リンクの先読み機能は回線容量を奪い合いますか？<br>
 <span class="orig">What if I'm
 downloading something in the background? &nbsp;Will link prefetching
 compete for bandwidth?<br></span></span>
-「yes」であり、「no」でもあります。
-Mozilla を使って何かをダウンロードしている場合は、全てのダウンロードが終わるまでリンクの先読み機能を遅らせます。
-例えば、ブックマーク・グループをロードしている（複数のタブを開く）場合には、全てのタブがロードし終わるまで、ブックマークされたページのどれかによって起こされた先読みリクエストが行われることはありません。
-もし他のアプリケーションがネットワークを使っている場合は、Mozilla のリンク先読み機能はその他のアプリケーションと帯域を奪い合います。
+「イエス」であり、「ノー」でもあります。
+まず、Mozilla を使って何かをダウンロードしている場合は、全てのダウンロードが終わるまでリンクの先読み機能を遅らせます。
+例えば、ブックマーク・グループを読み込んでいる（複数のタブを開く）場合には、そのブックマークされたページで発生した先読みリクエストは、全てのタブがロードし終わるまで、開始されません。
+また、もしも、別のアプリケーションがネットワークを使っている場合は、Mozilla のリンクの先読みはその他のアプリケーションと回線容量を奪い合います。
 将来的には、ネットワークのアイドルタイムを監視するオペレーティングシステムのサービスを利用して、この問題を解決したいと思っています<br>
 <span class="orig">Yes and no. &nbsp;If you are downloading something using Mozilla, link
 prefetching will be delayed until any background downloads complete.
@@ -333,14 +333,14 @@ operating system services to monitor network idle time.<br></span>
 <span class="orig">Are there any
 restrictions on what is prefetched?<br></span></span>
 はい。http:// URL だけが先読み可能です（https:// URL はセキュリティ上の理由から先読みされません）。
-（FTP などの）その他のプロトコルはクライアントサイドのキャッシュを十分にサポートしていません。
-さらに、query 文字列付きの URL も先読みされません。
+（FTP などの）その他のプロトコルはクライアントサイドのキャッシュへの対応が十分でありません。
+さらに、クエリ文字列 <span class="comment">[ 訳注: "http://example.org/?foo" の "?foo" のこと ] </span>付きの URLも先読みされません。
 これは、このような URL の多くはブラウザのキャッシュを再利用しないような文書であるためで、これらの先読みは大抵役に立ちません。
-一連の文書群の中で次の文書を参照するために、<span style="font-family: monospace;">&lt;link rel="next"&gt;</span> タグに query 文字列付きの URL を使っている既存のサイトも現実にあります。
+一連の文書群の中で次の文書を参照するために、<span style="font-family: monospace;">&lt;link rel="next"&gt;</span> タグにクエリ文字列付きの URL を使っている既存のサイトも現実にあります。
 Bugzilla はこのようなサイトの一例です。
 Bugzilla のバグ報告などはキャッシュ可能でないため、これらの URL を先読みすると貧弱な Bugzilla の負荷を倍にしてしまうことになってしまいます!
-他のサイトでも Bugzilla と同様に設計されていると容易に想像できますので、query 文字列付きの URL は先読みしないことにしました（ただし、<span
- style="font-family: monospace;">rel=prefetch</span> のリンク形式が指定されている文書は既存のコンテンツには存在しないと思われるので、これは先読みしてもよいかもしれません）。
+他のサイトも Bugzilla と同様の設計になっていると容易に想像できますので、クエリ文字列付きの URL は先読みしないことにしました（ただし、<span
+ style="font-family: monospace;">rel=prefetch</span> のリンク形式が指定されている文書は既存のコンテンツには存在しないと思われますので、これは先読みしてもよいかもしれません）。
 先読みされる URL にその他の制限はありません。<br>
 <span class="orig">Yes, only http:// URLs can be prefetched (https:// URLs are never
 prefetched for security reasons). &nbsp;Other protocols (such as FTP) do
@@ -367,7 +367,7 @@ Mozilla は別のホストからも文書を先読みしますか？<br>
 <span class="orig">Will Mozilla
 prefetch documents from a different host?<br></span></span>
 はい。
-リンク先読みには、同一生成元（same-origin）についての制限はありません。
+先読みには、同一生成元（same-origin）についての制限はありません。
 リンクの先読みを同一のサーバに限定したとしても、ブラウザのセキュリティ向上にはならないでしょう。<br>
 <span class="orig">Yes. &nbsp; There is no same-origin restriction for link prefetching.<span
  style="font-weight: bold;"> &nbsp;</span>Limiting prefetching to only
@@ -382,7 +382,7 @@ security.
 <span class="orig">Do prefetched requests
 contain a <span style="font-family: monospace;">Referer:</span>header?<br></span></span>
 はい。
-先読みリクエストには、どの文書から先読みヒントを取ったかとを示す、HTTP の <span style="font-family: monospace;">Referer:</span> ヘッダが付きます。<br>
+先読みリクエストには、どの文書から先読みヒントを取ったかを示す、HTTP の <span style="font-family: monospace;">Referer:</span> ヘッダが付きます。<br>
 <span class="orig">Yes, prefetched requests include a HTTP <span
  style="font-family: monospace;">Referer:</span> header indicating the
 document from which the prefetching hint was extracted.<br></span>
@@ -390,8 +390,8 @@ document from which the prefetching hint was extracted.<br></span>
 このことは、多くのサイトで広く行われている参照元の記録に影響するかもしれません。
 このため、リンクの先読みは全てのコンテンツに対して向くものではないかもしれません。
 そこで、"<span style="font-family: monospace;">Cache-control:
-must-revalidate</span>" HTTP レスポンスヘッダを指定することにより、ユーザが先読みされた文書へのリンクを辿った際に、Mozilla にその先読みされた文書を確認させることが可能になります。
-このヘッダによりキャッシュが可能になりますが、ブラウザのキャッシュから文書を取り出す前に、"<span style="font-family: monospace;">If-Modified-Since</span>" もしくは "<span style="font-family: monospace;">If-None-Match</span>" の検証用リクエストが必要になります。<br>
+must-revalidate</span>" HTTP レスポンスヘッダを指定することにより、ユーザが先読みされた文書へのリンクを辿った際に、Mozilla にその先読みされた文書を検証させることが可能になります。
+このヘッダによりキャッシュが有効になりますが、ブラウザのキャッシュから文書を取り出す前に、"<span style="font-family: monospace;">If-Modified-Since</span>" もしくは "<span style="font-family: monospace;">If-None-Match</span>" の検証用リクエストが必要になります。<br>
 <span class="orig">This may impact referrer tracking that is commonly used on many sites.
 &nbsp;For this reason, link prefetching may not be appropriate for all
 content. &nbsp;However, it is possible to instruct Mozilla to validate a
@@ -410,7 +410,7 @@ cache.<br></span>
 I distinguish prefetch requests from normal requests?<br></span>
 </span>
 はい。
-先読みリクエストには、次のようなヘッダが付きます。<br>
+先読みのリクエストには、次のようなヘッダが付きます。<br>
 <span class="orig">Yes, we send the following header along with each prefetch
 request:<br></span>
 <br>
@@ -423,12 +423,12 @@ change in future Mozilla releases.<br></span>
 <span style="font-weight: bold;"></span> <br style="font-weight: bold;">
 <span style="font-weight: bold;"><a
  name="Is_there_a_preference_to_disable_link"></a>
-リンク先読み機能を無効化する設定はありますか？<br>
+リンクの先読み機能を無効化する設定はありますか？<br>
 <span class="orig">Is there a preference
 to disable link prefetching?<br></span>
 </span>
 はい。
-リンク先読み機能を無効化できる隠し設定があります。
+リンクの先読み機能を無効化できる隠し設定があります。
 Mozilla のプロファイルディレクトリにある prefs.js ファイルに次の行を追加してください。<br>
 <span class="orig">Yes, there is a hidden preference that you can set to disable
 link prefetching. &nbsp;Add this line to your prefs.js file located in
@@ -440,8 +440,8 @@ false);</span></div>
 この設定用の UI を追加することも考慮中です（<a
  href="http://bugzilla.mozilla.org/show_bug.cgi?id=166648"
  style="text-decoration: line-through;">bug 166648</a> をご覧ください）。
-しかし、リンク先読み機能を無効にしたいという場合には、この先読みの実装に何か不具合があるのではないかと思っています。
-我々としては、不具合がある場合には、単にユーザに設定 UI の目立たない設定を探させるよりも、実装を改善したいと思っています。
+しかし、リンクの先読み機能を無効にしたいという場合には、この先読みの実装に何か不具合があるのではないかと思います。
+我々としては、不具合がある場合には、単にユーザに設定 UI の中から目立たない設定項目を探させるよりも、実装を改善したいと思っています。
 だって、Mozilla の設定 UI はもう十分にごちゃごちゃしているんだもん。 ;-)<br>
 <span class="orig">We are considering adding UI for this preference (see bug <a
  href="http://bugzilla.mozilla.org/show_bug.cgi?id=166648"
@@ -455,7 +455,7 @@ expect users to locate some obscure preference in the preferences UI.
  style="font-style: italic; color: rgb(0, 0, 0); font-weight: bold;"><br>
 追記:</span>
 <span style="font-style: italic;">
-多くの人の要望により、Mozilla 1.3 以降にはリンク先読みを無効化する設定が UI に入りました。リンク先読みを無効化するには Preferences-&gt;Advanced-&gt;Cache をご覧ください。
+多くの人の要望により、Mozilla 1.3 以降にはリンクの先読みを無効化する設定が UI に入りました。リンクの先読みを無効化するには Preferences-&gt;Advanced-&gt;Cache <span class="comment">[ 訳注: 日本語版では 「設定-&gt;詳細-&gt;キャッシュ」 ]</span> をご覧ください。
 </span><br>
 <span class="orig"><span
  style="font-style: italic; color: rgb(0, 0, 0); font-weight: bold;"><br>
@@ -466,7 +466,7 @@ prefetching.</span><br></span>
 <span style="font-weight: bold;"></span><br>
 <span style="font-weight: bold;"><a
  name="What_about_folks_who_pay-per-byte_for"></a>
-ネットワーク帯域の出費がバイト単位で行われている人たちについてはどうですか？<br>
+ネットワーク回線容量の出費をバイト単位で行っている人たちについてはどうですか？<br>
 <span class="orig">What about folks who
 pay-per-byte for network bandwidth?<br></span>
 </span>
@@ -484,7 +484,7 @@ it easily. <br>
   </li>
 </ol></div>
 まず、既存のウェブサイトにおいて、JavaScript や DOM の色々な技を使って黙ってダウンロードする手法を進めていく代わりに、<span style="font-family: monospace;">&lt;link&gt;</span> タグを使った手法を採用してもらうことが重要です。
-<span style="font-family: monospace;">&lt;link&gt;</span> タグにより、ブラウザはサイトがどの方向に進むべきかを知ることができます。
+<span style="font-family: monospace;">&lt;link&gt;</span> タグにより、ブラウザはサイトの進むべき方向を知ることができます。
 この情報を使うことによって、文書の先読みの優先順序をより良く付けることができます。
 <span style="font-family: monospace;">&lt;link&gt;</span> タグによる先読みを無効化するユーザ設定を付けることは、単に JavaScript や DOM による技で我慢させることにつながり、ユーザに対するデメリットになるかもしれません。
 先読み機能がデフォルトで有効なのは、このためです。
@@ -505,7 +505,7 @@ by default.<br></span>
  style="font-style: italic; color: rgb(0, 0, 0); font-weight: bold;"></span><span
  style="font-weight: bold;"><a
  name="Which_browsers_support_link_prefetching"></a>
-どのブラウザがリンク先読み機能に対応していますか？<br>
+どのブラウザがリンクの先読み機能に対応していますか？<br>
 <span class="orig">Which browsers
 support link prefetching?<br></span></span>
 Mozilla 1.2 以降ベースおよび Mozilla 1.0.2 以降ベースのブラウザが先読み機能をサポートしています。
@@ -520,7 +520,7 @@ prefetching.<br></span>
 <span style="font-weight: bold;"><a name="What_about..._"></a>
 他には…？<br>
 <span class="orig">What about...?<br></span></span>
-リンク先読み機能について質問やコメントなどありましたら、お気軽にどうぞ。 :-)<br>
+リンクの先読み機能について質問やコメントなどありましたら、お気軽にどうぞ。 :-)<br>
 <span class="orig">If you have any questions or comments about link prefetching, please
 feel free to send them my way :-) </span></div>
 </div>
