@@ -33,14 +33,14 @@
 </p>
 <hr>
 <form method="get" action="namazu.cgi">
-<p>
+<div>
 <strong>検索式:</strong> 
 <input type="text" name="query" size="40">
 <input type="submit" name="submit" value="Search!">
 <input type="hidden" name="idxname" value="html4">
 <a href="help.html">[検索方法]</a>
-</p>
-<p>
+</div>
+<div>
 <strong>表示件数:</strong>
 <select name="max">
 <option value="10">10
@@ -57,18 +57,14 @@
 <strong>ソート:</strong>
 <select name="sort">
 <option selected value="score">スコア
-<option value="date:late">日付 (新しい順)
-<option value="date:early">日付 (古い順)
 <option value="field:subject:ascending">題名 (昇順)
 <option value="field:subject:descending">題名 (降順)
-<option value="field:from:ascending">著者 (昇順)
-<option value="field:from:descending">著者 (降順)
 <option value="field:size:ascending">サイズ (昇順)
 <option value="field:size:descending">サイズ (降順)
 <option value="field:uri:ascending">URI (昇順)
 <option value="field:uri:descending">URI (降順)
 </select>
-</p>
+</div>
 </form>
 <!-- -*-html-helper-*- -->
 <hr>
