@@ -78,7 +78,7 @@ sub get_loginfo($) {
     for my $line (@tmp) {
 	last if ($line =~ /^\[/);
 
-	if ($line =~ /^(Added|Updated|Deleted|Total)\s+Documents:\s+([0-9,]+)/i) {
+	if ($line =~ /^(Added|Updated|Deleted|Total)\s+Documents:\s+([0-9,]+)$/i) {
 	    $info{lc($1)} = $2;
 	}
     }
@@ -120,7 +120,7 @@ sub info2str(%) {
     foreach my $k (keys %infostr) {
 	push(@tmp, "$infostr{$k} $info{$k} 件") if defined $info{$k};
     }
-    $retstr .= "（". join(@tmp, "、") ."）\n";
+    $retstr .= "（". join("、", @tmp) ."）\n";
     return $retstr;
 }
 
