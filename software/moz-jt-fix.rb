@@ -27,11 +27,7 @@ EOF
 META_CHARSET = %Q[<meta http-equiv="Content-Type" content="text/html;charset=EUC-JP">]
 
 JT_STYLE = <<EOF
-<style type="text/css">
-.comment {
-    color: #20A040;
-    font-size: 80%;
-}
+<style type="text/css" class="draft-comment">
 .draft-comment {
     color: #20A040;
     font-size: 80%;

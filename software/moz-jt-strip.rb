@@ -10,4 +10,4 @@
 #  class="draft-comment" 属性の指定された要素（草稿中のコメント）
 #
 
-puts ARGF.read.gsub(/<(\w+)\s+class="(orig|draft-comment)">((?:(?!<\1).)*?)(<\1[^>]*>.*?<\/\1>)*((?:(?!<\1).)*?)<\/\1>/m, '')
+puts ARGF.read.gsub(/<(\w+)\s*[^>]*\s*class="(orig|draft-comment)"[^>]*>((?:(?!<\1).)*?)(<\1[^>]*>.*?<\/\1>)*((?:(?!<\1).)*?)<\/\1>/m, '')
