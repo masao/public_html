@@ -15,28 +15,32 @@ my $bgcolor = '#ddddd0';
 # テーブルヘッダの背景色
 my $bgcolor_head = '#00A020';
 
+my @TABLE_LABEL = ('項番', '問題点', '対策状況', '発生日', '対策日');
+
 my $q = new CGI;
+my $page = escape_html($q->param('page')) || 0;
+my $search = escape_html($q->param('search')) || "";
+my $sort = escape_html($q->param('sort')) || 0;
+
+my @problems = ();
 
 main();
 sub main {
     my @entries = ();
-    my $page = $q->param('page') || 0;
-    my $start = $page * $MAX;
-    my $search = $q->param('search') || "";
-    my $sort = $q->param('sort') || 0;
 
+    print $q->header('text/html; charset=EUC-JP');
     print <<EOF;
-Content-Type: text/html; charset=EUC-JP
-
-<html><head><title>問題と対策 改</title></head><body>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="ja"><head><title>問題と対策 改</title></head><body>
 <h1>問題と対策 改</h1>
-<p><a href="$ORIG_URL">本家のページ</a></p>
+<p><a href="$ORIG_URL">（本家のページ）</a></p>
 <hr>
 <form method="GET" action="$ENV{'SCRIPT_NAME'}">
-正規表現:
+<p>正規表現:
 <input type="text" name="search" value="$search">
 <input type="hidden" name="sort" value="$sort">
 <input type="submit" value="絞り込み検索">
+</p>
 </form>
 EOF
 
@@ -47,39 +51,68 @@ EOF
 
     if (length($search)) {	# 検索
 	@entries = grep(/$search/i, @entries);
- 	print "<p color=\"red\">", $#entries + 1, "</p>";
-	print "件</p>\n";
+ 	print "<p><font color=\"red\">検索結果: ", $#entries + 1, "件</font></p>\n";
     }
+
+    foreach my $cont (@entries) {
+	my @tmp = ();
+	$cont =~ s#<td>(.+?)</td>#push(@tmp,$1)#gei;
+	push(@problems, \@tmp);
+    }
+    @problems = sort { fncmp($a->[$sort], $b->[$sort]) } @problems;
 
     print <<EOF;
 <hr>
 <table width="100%" border="1" bgcolor="$bgcolor">
 <tr bgcolor="$bgcolor_head">
-<th>項番</th>
-<th>問題点</th>
-<th>対策状況</th>
-<th>発生日</th>
-<th>対策日</th>
-</tr>
 EOF
-    for (my $i = $start; $i < $#entries && $i < $start + $MAX; $i++) {
-	my @content = ();
-	$entries[$i] =~ s#<td>(.+?)</td>#push(@content,$1)#gei;
+    for (my $i = 0; $i < @TABLE_LABEL; $i++) {
+	print "<th><a href=\"$ENV{'SCRIPT_NAME'}?sort=$i;search=$search\">$TABLE_LABEL[$i]</a></th>\n";
+    }
+    print "</tr>\n";
+
+    for (my $i = $page * $MAX; $i < @problems && $i < ($page+1) * $MAX; $i++) {
 	print "<tr valign=\"top\">\n";
-	foreach my $cont (@content) {
+	foreach my $cont (@{$problems[$i]}) {
 	    $cont =~ s#((https?|ftp)://[;\/?:@&=+\$,A-Za-z0-9\-_.!~*'()]+)#<a href="$1">$1</a>#gi;
 	    print "<td>$cont</td>\n";
 	}
 	print "</tr>\n";
     }
     print "</table>\n";
-    print "<div>ページ:\n";
-    for (my $i = 0; $i*$MAX < $#entries; $i++) {
-	print "<a href=\"$ENV{'SCRIPT_NAME'}?page=$i\">", $i+1, "</a>\n";
-    }
-    print "</div>\n";
-    # print $content;
+    print_pages();
     print <<EOF;
 </body></html>
 EOF
+}
+
+# 数字を考慮したソート
+sub fncmp() {
+    my ($x, $y) = @_;
+    $x =~ s/(\d+)/sprintf("%05d", $1)/ge;
+    $y =~ s/(\d+)/sprintf("%05d", $1)/ge;
+    return $x cmp $y;
+}
+
+sub print_pages() {
+    my $base_url = "$ENV{'SCRIPT_NAME'}?sort=$sort;search=$search";
+    print "<p>ページ:\n";
+    for (my $i = 0; $i*$MAX < @problems; $i++) {
+	if ($i == $page) {
+	    print $i+1, "\n";
+	} else {
+	    print "<a href=\"$base_url;page=$i\">", $i+1, "</a>\n";
+	}
+    }
+    print "</p>\n";
+}
+
+sub escape_html($) {
+    my ($str) = @_;
+    return undef if not defined $str;
+    $str =~ s/&/&amp;/g;
+    $str =~ s/</&lt;/g;
+    $str =~ s/>/&gt;/g;
+    $str =~ s/"/&quot;/g;
+    return $str;
 }
