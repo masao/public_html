@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-JP">
+<link rel="stylesheet" href="../default.css" type="text/css">
+<link rev="made" href="mailto:masao@ulis.ac.jp">
+<title>Mozillaの不具合メモ</title>
+</head>
+
+<body>
+
+<!-- hhmts start -->
+<p>最終更新日: <strong>Fri Jul 20 17:53:54 2001</strong></p>
+<!-- hhmts end -->
+<hr>
+
+<h1>Mozillaの不具合メモ</h1>
+<p>
+私は、基本的に<a href="http://www.mozilla.org/">Mozilla</a>を
+常用のウェブブラウザとして使っています。
+他の人にもMozillaを奨める時に
+「『×××』の機能が無いことだけ我慢すれば、十分に実用だよ！」
+と言っています。
+しかし、『×××』な機能にどんなものがあったのか、忘れがちです。
+</p>
+<p>
+<strong>注意事項:</strong>
+なお、大半の不具合は
+<a href="http://bugzilla.mozilla.org/">Bugzilla</a>に登録され、
+バグ処理を待っている段階にありますので、
+ひょっとすると、最新版のMozillaでは直っている機能もあるかも知れません。
+ご了承下さい。
+</p>
+
+
+<h2>バグ一覧</h2>
+<dl>
+  <dt>印刷プレビュー
+  <dd>印刷結果をプレビューすることができません。
+      印刷のページ数があらかじめ分からないと不安なときには、困るでしょう。
+  <dd>cf. <a href="http://bugzilla.mozilla.org/showvotes.cgi?bug_id=20943">[bugzilla 20943]</a>
+
+  <dt>Proxyの自動設定
+  <dd>JavaScriptを使ったProxyの自動設定機能がうまく働いていないようです。
+      直接プロキシサーバのホスト名・ポート番号を指定しましょう。
+  <dd>cf. <a href="http://bugzilla.mozilla.org/show_bug.cgi?id=54804">[bugzilla 54804]</a>
+
+  <dt>FTP
+  <dd>プロキシを通さない直接接続で FTP した時に、
+      ファイルの一覧などが取得できないみたいです。
+      プロキシ経由の接続を普段から使いましょう。
+  <dd>[bugzilla XXX]: バグ報告例を発見できませんでした。
+      （ご存じの方、教えてください）
+</dl>
+
+<hr>
+<h2>参考URL</h2>
+<ul>
+  <li><a href="http://www.mozilla.org/">Mozilla.org</a>: 本家。
+  <li><a href="http://bugzilla.mozilla.org/">Bugzilla</a>: 本家のバグデータベース（英語）
+  <li><a href="http://www.mozilla.gr.jp/">もじら組</a>: 日本のMozillaコミュニティ。
+  <li><a href="http://bugzilla.mozilla.gr.jp/">Bugzilla-jp</a>: 日本でのバグデータベース（日本語）
+</ul>
+
+<hr>
+<address>
+高久雅生 (Takaku Masao)<br>
+<a href="http://nile.ulis.ac.jp/~masao/">http://nile.ulis.ac.jp/~masao/</a>, 
+<a href="mailto:masao@ulis.ac.jp">masao@ulis.ac.jp</a>
+</address>
+<div class="id">$Id$</div>
+</body>
+</html>
