@@ -6,9 +6,9 @@ use strict;
 use CGI qw/:cgi/;
 use CGI::Carp qw(fatalsToBrowser);
 
-### Âç°èÊÑ¿ô
+### å¤§åŸŸå¤‰æ•°
 
-my $TITLE = 'XSLT ¥²¡¼¥È¥¦¥§¥¤';
+my $TITLE = 'XSLT ã‚²ãƒ¼ãƒˆã‚¦ã‚§ã‚¤';
 my $FROM = 'masao@ulis.ac.jp';
 
 my $HTML_HEAD = <<EOF;
@@ -16,36 +16,33 @@ my $HTML_HEAD = <<EOF;
 "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="ja">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-JP">
 <link rel="stylesheet" href="../default.css" type="text/css">
 <link rev=made href="mailto:$FROM">
 <title>$TITLE</title>
 </head>
 <body>
 <h1>$TITLE</h1>
-<p><acronym title="Extensible Markup Language">XML</acronym>¤È<acronym title="XSL Transformations">XSLT</acronym>¤òÆşÎÏ¤¹¤ë¤È¡¢ÊÑ´¹·ë²Ì¤ò³ÎÇ§¤Ç¤­¤Ş¤¹¡£</p>
-<p><strong>Ãí°Õ:</strong></p>
+<p><a href="http://www.w3.org/TR/1998/REC-xml-19980210"><acronym title="Extensible Markup Language">XML</acronym></a>æ–‡æ›¸ã«å¯¾ã—ã¦<a href="http://www.w3.org/TR/1999/REC-xslt-19991116"><acronym title="XSL Transformations">XSLT</acronym></a>ã‚’é©ç”¨ã—ãŸå¤‰æ›çµæœã‚’ç¢ºèªã§ãã¾ã™ã€‚</p>
+<p><strong>æ³¨æ„:</strong></p>
 <ul>
-<li>¥Õ¥¡¥¤¥ë»ØÄê¤ÎÊı¤¬Í¥Àè¤µ¤ì¤Ş¤¹¡£¥Õ¥¡¥¤¥ë»ØÄê¤·¤Ê¤¤¾ì¹ç¤Ï¡¢¥Æ¥­¥¹¥È¥¨¥ê¥¢¤ÎÆâÍÆ¤¬»È¤ï¤ì¤Ş¤¹¡£
-<li>¥Æ¥­¥¹¥È¥¨¥ê¥¢¤Ç¤Î XML Àë¸À¤Ï¡¢É¬¤º<code>encoding="EUC-JP"</code>¤ò»È¤Ã¤Æ¤¯¤À¤µ¤¤¡£
-<li>XSLTÃæ¤Ç<code>&lt;xsl:output encoding="EUC-JP"&gt;</code>¤È¤·¤Ê¤¤¤È¡¢¥×¥ì¥Ó¥å¡¼É½¼¨¤¬Ê¸»ú²½¤±¤¹¤ë¾ì¹ç¤¬¤¢¤ê¤Ş¤¹¡£
+<li>ãƒ•ã‚¡ã‚¤ãƒ«æŒ‡å®šã®æ–¹ãŒå„ªå…ˆã•ã‚Œã¾ã™ã€‚ãƒ•ã‚¡ã‚¤ãƒ«æŒ‡å®šã—ãªã„å ´åˆã¯ã€ãƒ†ã‚­ã‚¹ãƒˆã‚¨ãƒªã‚¢ã®å†…å®¹ãŒä½¿ã‚ã‚Œã¾ã™ã€‚
 </ul>
 <hr>
 EOF
 
 my $DEFAULT_SOURCE = <<EOF;
-<?xml version="1.0" encoding="EUC-JP"?>
-<¤Û¤²>
-¤Õ¤¬¤Õ¤¬
-</¤Û¤²>
+<?xml version="1.0"?>
+<ã»ã’>
+ãµãŒãµãŒ
+</ã»ã’>
 EOF
 
 my $DEFAULT_STYLESHEET = <<EOF;
-<?xml version="1.0" encoding="EUC-JP"?>
+<?xml version="1.0"?>
 <xsl:transform xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                xmlns="http://www.w3.org/1999/xhtml"
                version="1.0">
-<xsl:output method="html" encoding="EUC-JP"/>
+<xsl:output method="html"/>
 
 <xsl:template match="/">
 <html>
@@ -58,7 +55,7 @@ my $DEFAULT_STYLESHEET = <<EOF;
 </xsl:transform>
 EOF
 
-### CGI °ú¿ô
+### CGI å¼•æ•°
 my $display = param('display') || 'preview';
 
 my $source = param('source') || $DEFAULT_SOURCE;
@@ -74,11 +71,11 @@ sub main {
     if (defined param('submit')) {
 	my ($type, $result) = exec_xslt();
 	if ($display eq 'preview') {
-	    print header("text/html; charset=EUC-JP");
+	    print header("text/html; charset=UTF-8");
 	    print $HTML_HEAD;
 	    $result = escape_html($result);
 	    print <<EOF;
-<h2>ÊÑ´¹·ë²Ì</h2>
+<h2>å¤‰æ›çµæœ</h2>
 <pre style="border: solid thin; padding: 2px;">$result</pre>
 EOF
 	    print "<hr>", html_form();
@@ -88,7 +85,7 @@ EOF
 	    print $result;
 	}
     } else {
-	print header("text/html; charset=EUC-JP");
+	print header("text/html; charset=UTF-8");
 	print $HTML_HEAD;
 	print html_form();
 	print html_foot();
@@ -96,7 +93,7 @@ EOF
 }
 
 sub exec_xslt() {
-    require XML::LibXML;  # ¼Â¹ÔÀ­Ç½¤ò¾å¤²¤ë¤¿¤á¤ËÉ¬Í×¤Ê»ş°Ê³°¤Ï¥í¡¼¥É¤·¤Ê¤¤¡£
+    require XML::LibXML;  # å®Ÿè¡Œæ€§èƒ½ã‚’ä¸Šã’ã‚‹ãŸã‚ã«å¿…è¦ãªæ™‚ä»¥å¤–ã¯ãƒ­ãƒ¼ãƒ‰ã—ãªã„ã€‚
     require XML::LibXSLT;
 
     my $parser = new XML::LibXML;
@@ -141,17 +138,17 @@ sub html_form () {
 <form action="xslt-gateway.cgi" method="POST" enctype="multipart/form-data">
 <div>
 <h2>XML</h2>
-<label for="source_f">¥Õ¥¡¥¤¥ë:
+<label for="source_f">ãƒ•ã‚¡ã‚¤ãƒ«:
 <input type="file" name="source_f" id="source_f" value="" size="40"></label><br>
 <textarea name="source" rows="10" cols="60">$source</textarea>
-<h2>XSLT¥¹¥¿¥¤¥ë¥·¡¼¥È</h2>
-<label for="stylesheet_f">¥Õ¥¡¥¤¥ë: <input type="file" name="stylesheet_f" id="stylesheet_f" value="" size="40"></label><br>
+<h2>XSLTã‚¹ã‚¿ã‚¤ãƒ«ã‚·ãƒ¼ãƒˆ</h2>
+<label for="stylesheet_f">ãƒ•ã‚¡ã‚¤ãƒ«: <input type="file" name="stylesheet_f" id="stylesheet_f" value="" size="40"></label><br>
 <textarea name="stylesheet" rows="10" cols="60">$stylesheet</textarea><br>
-<fieldset><legend>É½¼¨Êı¼°</legend>
-<label><input type="radio" name="display" value="preview" checked>ÊÑ´¹·ë²Ì¤Î¥½¡¼¥¹¤ò¥×¥ì¥Ó¥å¡¼É½¼¨¤¹¤ë</label><br>
-<label><input type="radio" name="display" value="raw">ÊÑ´¹·ë²Ì¤ò¤½¤Î¤Ş¤ŞÉ½¼¨¤¹¤ë</label>
+<fieldset><legend>è¡¨ç¤ºæ–¹å¼</legend>
+<label><input type="radio" name="display" value="preview" checked>å¤‰æ›çµæœã®ã‚½ãƒ¼ã‚¹ã‚’ãƒ—ãƒ¬ãƒ“ãƒ¥ãƒ¼è¡¨ç¤ºã™ã‚‹</label><br>
+<label><input type="radio" name="display" value="raw">å¤‰æ›çµæœã‚’ãã®ã¾ã¾è¡¨ç¤ºã™ã‚‹</label>
 </fieldset>
-<input type="submit" name="submit" value=" Á÷ ¿® ">
+<input type="submit" name="submit" value=" é€ ä¿¡ ">
 </div>
 </form>
 EOF
