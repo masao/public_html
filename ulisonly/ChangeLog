@@ -1,3 +1,71 @@
+2002-02-11  Masao Takaku  <masao@ulis.ac.jp>
+
+	* Perl Graph library: CPAN で検索してみる。
+
+	・Graph: 『Mastering Algorithms with Perl』のもの。（汎用）
+	http://search.cpan.org/search?dist=Graph
+
+	・Graph-ReadWrite: Graphvizなどのグラフツールのファイル形式を読み
+	書きするもの。
+	http://search.cpan.org/search?dist=Graph-ReadWrite
+
+	・GraphViz: Graphviz用のライブラリ。
+	http://search.cpan.org/search?dist=GraphViz
+
+	* 里谷多英 銅メダル:
+
+	非常にすばらしい。見ていて鳥肌が立った。
+
+	実況を担当したフジテレビは、ひどかった。
+
+	途中で現地の解説などのマイクが不調で完全に実況アナウンスが聞こえな
+	くなるトラブル自体は、競技会場の音声のみが聞こえるという結果的には、
+	非常に良かったが、決勝終了後のスタジオのアナウンサーが最低!!
+
+	完全にモノを知らないアホなコメントを連発していた。。。
+
+	どちらにしろ、競技前は上村のみ、競技後は里谷だけの報道になるマスコ
+	ミの節操の無さはヒドイね。
+
+	* Google Programming Contenst:
+	cf. http://www.google.com/programming-contest/
+
+	Google の巨大なデータベースを生かすアイデアをコンテストという形で
+	募集している。
+	優勝者には、10,000＄、Googleの巨大なデータでの実験、Google社訪問が
+	与えられる。
+
+	まあ、テストデータやサンプルコードの類は参考になるかも…。
+
+2002-02-08  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 最終発表: 卒研の最終発表があった。
+
+	全部聞いていたら、すごく疲れた。
+
+2002-02-04  Masao Takaku  <masao@ulis.ac.jp>
+
+	* ゼミ: 来年度の修士ゼミは、
+
+	・一人10分前後の発表。
+	・出席者は、質問・コメントをノルマ化。
+
+	* Version Control System: arch というのもあるらしい。
+	http://www.regexps.com/#arch
+
+	CVS, Subversion との機能比較の表を見るかぎりでは、結構良さげ。
+
+	* 新PC: DELL で見積りをとった。
+
+	・1.7GHz
+	・40GB HDD
+	・1024 MB SDRAM
+	・モニタなし
+
+	178,151 円なり。
+
+	* 整理: 物品廃棄で出る cosmo のまわりの書類などを整理した。
+
 2002-02-03  Masao Takaku  <masao@ulis.ac.jp>
 
 	* 新マシン: platinum が故障したので修理に出してくださいと言ったら、
