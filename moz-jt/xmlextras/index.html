@@ -1,0 +1,302 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+
+   <title>XML Extras</title>
+<LINK REL="stylesheet" HREF="../persistent-style.css" TYPE="text/css">
+<LINK REL="icon" HREF="../images/mozilla-16.png" TYPE="image/png">
+</HEAD>
+<BODY>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%">
+<TR>
+<TD VALIGN="TOP" class="bannercell">
+<A HREF="http://www.mozilla.org/" CLASS="bannerlink">
+<IMG SRC="../images/mozilla-banner.gif" ALT=""
+CLASS="mozillaorgbanner" WIDTH="600" HEIGHT="58">
+</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR>
+<TD VALIGN="TOP" >
+<TABLE BORDER="0" class="outersidebar"><TR><TD class="bordercell" VALIGN="TOP">
+<TABLE BORDER="0" CELLSPACING="3" class="middlesidebar"><TR><TD class="titlecell" VALIGN="TOP">
+<TABLE CELLPADDING="0" CELLSPACING="3" BORDER="0" class="innersidebar">
+<TR><TD class="linkcell" COLSPAN=2><A HREF=".././"><B> mozilla.org</B></A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../mozorg.html"> At A Glance</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../why/"> Why Use Mozilla</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../MPL/"> License Terms</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../get-involved.html"> Get Involved</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../community.html"> Newsgroups</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../feedback.html"> Feedback</A></TD></TR>
+<TR><TD class="spacercell"></TD></TR>
+<TR><TD class="linkcell" COLSPAN=2><A HREF="../catalog/"><B> Development</B></A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../roadmap.html"> Roadmap</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../projects/"> Projects</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../owners.html"> Module Owners</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../hacking/"> Hacking</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../source.html"> Get the Source</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../build/"> Build It</A></TD></TR>
+<TR><TD class="spacercell"></TD></TR>
+<TR><TD class="linkcell" COLSPAN=2><A HREF="../quality/"><B> Testing</B></A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../releases/"> Releases</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="http://ftp.mozilla.org/pub/mozilla/nightly/latest-trunk/"> Nightly Builds</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="http://bugzilla.mozilla.org/enter_bug.cgi?format=guided"> Report A Bug</A></TD></TR>
+<TR><TD class="spacercell"></TD></TR>
+<TR><TD class="linkcell" COLSPAN=2><A HREF="../tools.html"><B> Tools</B></A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="http://bugzilla.mozilla.org/"> Bugzilla</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="http://tinderbox.mozilla.org/showbuilds.cgi?tree=SeaMonkey"> Tinderbox</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="http://bonsai.mozilla.org/cvsqueryform.cgi?"> Bonsai</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="http://lxr.mozilla.org/seamonkey/"> LXR</A></TD></TR>
+<TR><TD class="spacercell"></TD></TR>
+<TR><TD class="linkcell" COLSPAN=2><A HREF="../faq.html"><B> FAQ</B></A></TD></TR>
+<TR><TD class="linkcell" COLSPAN=2><A HREF="http://www.mozilla.org/search.html"><B> Search</B></A></TD></TR>
+</TABLE>
+</TD></TR></TABLE>
+</TD></TR></TABLE>
+</TD>
+<TD VALIGN="TOP">
+
+
+
+
+
+<h2>XML Extras</h2>
+
+
+<p>Newsgroup: <a href="news://news.mozilla.org/netscape.public.mozilla.xml">netscape.public.mozilla.xml</a>
+<br>Page maintained by: <a href="mailto:heikki@netscape.com">Heikki Toivonen</a>
+
+<hr WIDTH="100%">
+
+<p>
+The XML Extras module contains several features that allow developers to
+treat XML as data i.e. not as just another document format. The module
+is structured as a drop-in component and exposes its XML-as-data features
+both to JavaScript and C++/XPCOM users. The XML Extras module
+is built by default on all platforms, and is included in the browser
+installers so it is available in the nightly builds.</p>
+<p>
+<br><a href="#FeatureStatus">Feature Status</a>
+<br><a href="#QA">QA and Testing</a>
+<br><a href="#Documentation">Documentation</a>
+<br><a href="#How">How can I help?</a>
+</p>
+<hr WIDTH="100%">
+<h4>
+<a NAME="FeatureStatus"></a>Feature Status</h4>
+
+<table BORDER COLS=4 WIDTH="100%" >
+<tr>
+<td><b>Feature</b></td>
+
+<td><b>Status</b></td>
+
+</tr>
+
+<tr>
+<td>XML Serializer</td>
+
+<td>in nightly builds, to be replaced by DOM Level 3 Load and Save?</td>
+
+</tr>
+
+<tr>
+<td>XMLHttpRequest</td>
+
+<td>in nightly builds</td>
+
+</tr>
+
+<tr>
+<td>XML Parser (string and stream input source)</td>
+
+<td>in nightly builds, to be replaced by DOM Level 3 Load and Save?</td>
+
+</tr>
+
+<tr>
+<td><a href="/projects/webservices/">Web Services with SOAP and WSDL</a></td>
+
+<td>Available since 1.4alpha. Moved to Web Services module during
+1.4beta.</td>
+
+</tr>
+
+<tr>
+<td>XML Persistence</td>
+
+<td></td>
+
+</tr>
+
+<tr>
+<td><a href="http://www.mozilla.org/newlayout/xml/#linking">FIXptr and XPointer</a></td>
+
+<td>Available since 1.4alpha in the core Mozilla. Moved to
+XMLExtras during 1.4beta.</td>
+
+</tr>
+
+</table>
+
+<p>
+See also:</p>
+<ul>
+<li><a href="http://lxr.mozilla.org/seamonkey/source/extensions/xml-rpc/">XML-RPC</a></li>
+<li><a href="http://www.mozilla.org/newlayout/xml/#load">document.load()</a></li>
+<li><a href="http://www.mozilla.org/newlayout/xml/">XML in Mozilla</a></li>
+</ul>
+
+<h4>
+<a NAME="QA"></a>QA and Testing</h4>
+
+<p>There are some <a href="tests.html">online tests</a> for mainly exercising the 
+HTTP GET method via XMLHttpRequest.</p>
+
+<p>Other test cases for each of the implemented components listed above
+exist in <a href="http://lxr.mozilla.org/seamonkey/source/extensions/xmlextras/tests/">mozilla/extensions/xmlextras/tests/</a>.
+More exhaustive test suites need to be created, however. If you'd like to 
+help out with QA, you can do one of the
+following:
+<ul>
+<li>
+Sign up as the QA owner for any of the implemented components. The QA owner
+will manage the tests associated with their component, act as QA contact
+for related bugs and help with regression testing.</li>
+
+<li>
+Contribute a test suite or individual tests that use the implemented components.
+Tests can be sent to the QA owner (<a href="mailto:heikki@netscape.com">heikki@netscape.com</a>
+is the default owner) and/or checked into <a href="http://lxr.mozilla.org/seamonkey/source/extensions/xmlextras/tests/">mozilla/extensions/xmlextras/tests/</a>.</li>
+
+<li>
+File bugs against the implemented components. Bugs should be filed against
+the XML component in the Browser product.</li>
+</ul>
+
+<h4>
+<a NAME="Documentation"></a>Documentation</h4>
+
+<p>Probably the best way to learn how to use these technologies is through examples.
+There are some in 
+<a href="http://lxr.mozilla.org/seamonkey/source/extensions/xmlextras/tests/">mozilla/extensions/xmlextras/tests/</a>.
+If you follow that link to look at the examples you will need to look at page source for the HTML documents.</p>
+
+<p>For <b>XMLHttpRequest</b> object you can mostly rely on the 
+<a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/xmlsdk30/htm/xmobjxmlhttprequest.asp">Microsoft XMLHttpRequest documentation</a>,
+with some caveats: all functions and property names begin with a lower case letter and
+the object creation is different. Some properties are not implemented.</p>
+
+<p>Thad Hoffman has written a document that shows how you can mimic 
+<a href="xmldataislands/">XML Data Islands in Mozilla</a>. Edmond
+Woychowsky has also written articles on XML Data Islands in Mozilla:
+"<a href="http://builder.com.com/article.jhtml?id=u00220030515woy01.htm">Make
+XML data islands work in Mozilla</a>" and 
+"<a href="http://builder.com.com/article.jhtml?id=u00320030718woy01.htm">Implement
+a flexible shopping cart with XML and ASP</a>"</p>
+
+<p>Below are some key differencies in "XML Extras" between Mozilla and Microsoft software:</p>
+
+<table border="1" cols="3">
+<tr>
+<td><b>Difference</b></td>
+<td><b>Microsoft</b></td>
+<td><b>Mozilla</b></td>
+</tr>
+<tr>
+<td>Member names</td>
+<td>Case insensitive?</td>
+<td>Begins with lower case letter</td>
+</tr>
+<tr>
+<td>XMLHttpRequest Creation</td>
+<td>new ActiveXObject("Msxml2.XMLHTTP")</td>
+<td>new XMLHttpRequest()</td>
+</tr>
+<tr>
+<td>XMLHttpRequest.send("some string")</td>
+<td>ok</td>
+<td>ok starting with milestone 0.9.7 (actually nightly 2001-11-28). 
+With older builds, passing strings to send() works only in chrome, see 
+<a href="http://lxr.mozilla.org/seamonkey/source/extensions/xmlextras/tests/post.html">post.html</a> 
+sample. The "workaround" is to use DOMParser object's parseFromString() method to create
+a document from string, and pass the temporary document into send().</td>
+</tr>
+<tr>
+<td>XMLHttpRequest.open("some host")</td>
+<td>ok</td>
+<td>file:// documents can access http:// documents but you need to
+enable <tt>UniversalBrowserRead</tt> privilege in your scripts - 
+see the <a href="http://www.mozilla.org/projects/security/components/signed-scripts.html#privs">JavaScript Security: Signed Scripts</a> document for more details.
+Normally your files should reside on a webserver so this shouldn't
+pose a problem (there you do not need that line either).
+Additionally, "foo.com:80" and "foo.com:313" are considered different hosts for
+security purposes. You cannot open a connection to a different host.
+</td>
+</tr>
+<tr>
+<td>DOMParser Creation</td>
+<td><i>not available</i></td>
+<td>new DOMParser()</td>
+</tr>
+<tr>
+<td>XMLSerializer Creation</td>
+<td><i>not available</i></td>
+<td>new XMLSerializer()</td>
+</tr>
+</table>
+
+<p>Minimal documentation for the components listed above can be found using
+Mozilla documentation generated by <a href="http://unstable.elemental.com/mozilla/">Doxygen</a>.
+Additional documentation contributions, either specifically aimed at JavaScript
+developers or to complete &amp; clarify the JavaDoc-style comments in the
+IDL files should be sent to <a href="mailto:heikki@netscape.com">heikki@netscape.com</a>.
+<p><a href="http://unstable.elemental.com/mozilla/build/latest/mozilla/extensions/dox/interfacensIDOMSerializer.html">nsIDOMSerializer</a>
+(Currently, the JavaScript constructor is <i>XML</i>Serializer())
+<br><a href="http://unstable.elemental.com/mozilla/build/latest/mozilla/extensions/dox/interfacensIDOMParser.html">nsIDOMParser</a>
+(Currently, the JavaScript constructor is <i>DOM</i>Parser())
+<br><a href="http://unstable.elemental.com/mozilla/build/latest/mozilla/extensions/dox/interfacensIXMLHttpRequest.html">nsIXMLHttpRequest</a>
+
+<p>Please see the <a href="http://www.mozilla.org/newlayout/xml/#linking">XML Linking and Pointing</a>
+section in XML in Mozilla document for FIXptr and XPointer documentation.</p>
+
+<h4>
+<a NAME="How"></a>How can I help?</h4>
+
+<ul>
+<li>
+Help with <a href="#QA">testing</a> the components contained within the
+module.</li>
+
+<li>
+Contribute <a href="#Documentation">documentation</a> to the module.</li>
+
+<li>
+Help at the code level, contributing code patches for bug fixes or feature
+completion.</li>
+</ul>
+
+
+
+
+</TD>
+</TR>
+<TR>
+<TD COLSPAN="2" ALIGN="RIGHT" VALIGN="TOP">
+<div class="documentinfo">
+Copyright &copy; 1998-2003 The Mozilla Organization
+<BR>
+Last modified July 11,  2003
+<BR>
+<A HREF="http://www.mozilla.org/webtools/bonsai/cvslog.cgi?file=mozilla-org/html/xmlextras/index.html&amp;rev=&amp;root=/cvsroot/">Document History</A>
+<BR>
+<A HREF="http://doctor.mozilla.org/?file=mozilla-org/html/xmlextras/index.html">Edit this Page</A>
+(or <A HREF="/README-cvs.html">via CVS</A>)
+</div>
+</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>
