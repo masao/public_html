@@ -1,0 +1,263 @@
+
+<HTML>
+<HEAD><style type="text/css">
+.comment {
+    color: #20A040;
+    font-size: 80%;
+}
+.orig { font-size:smaller; color:gray; }
+</style>
+<meta name="http-equiv" content="text/html;charset=EUC-JP">
+
+<title>Mozilla WSDL Example: Amazon Web Services</title>
+  <style>
+  .item {border: 1px solid black; margin:5px; padding:5px;}
+  .name {font-weight:bold;}
+  .price {margin-left:12px;}
+  body {font-family: verdana, arial, serif;}
+  .info {padding-left: 100px;}
+  .image {position:absolute;}
+  </style>
+
+ <script>
+   <!-- 
+    var proxy= null;
+
+    function CallAmazon (aValue)
+    {
+    
+      if (aValue == "")
+        return;
+        
+      if (!proxy) {
+        var listener = { 
+
+          // gets called once the proxy has been instantiated
+          onLoad: function (aProxy) 
+          {
+            proxy = aProxy;
+            proxy.setListener(listener);
+            requestBooks(aValue);
+          },
+         
+          // gets called if an error occurs
+          onError: function (aError) 
+          {
+            alert(aError);
+          },
+      
+          // callback function is hardcoded to {methodname}Callback in 1.4beta
+          KeywordSearchRequestCallback : function (aresult) 
+          {
+            var container = document.getElementById('container');
+            var myResultsLength = aresult.TotalResults;
+            
+            container.innerHTML = "Total Results: " + myResultsLength + ". Showing first page only.<br>"
+          
+            var myDetails = aresult.Details;
+
+
+            for (var run = 0; run < myDetails.length; run++){
+              myResultItem = "<div class='item'>";
+              
+             myResultItem += "<div class='image'><img src='"+myDetails[run].ImageUrlSmall+"'></div>";
+              
+              myResultItem += "<div class='info'>";
+              
+              myResultItem += "<div class='name'><a href='"+myDetails[run].Url+"'>"+myDetails[run].ProductName+"</a></div>"
+              
+              //authors
+              if (myDetails[run].Authors){
+                myResultItem += "<div>";
+               
+                for (var run2=0; run2 < myDetails[run].Authors.length; run2++){
+                  myResultItem +=  " " + myDetails[run].Authors[run2];
+                  if (run2 < (myDetails[run].Authors.length-1))
+                    myResultItem +=",";
+                }
+                myResultItem += "</div>";
+              }  
+              
+              // pricing
+              if (myDetails[run].ListPrice){
+                myResultItem += "<div class='price'>Retail price: " +myDetails[run].ListPrice + "</div>";
+                myResultItem += "<div class='price'>Amazon price: " +myDetails[run].OurPrice + "</div>";              
+              }  
+              
+              // SalesRank
+              if (myDetails[run].SalesRank)
+                myResultItem += "<div class=''>Sales rank: "+myDetails[run].SalesRank+"</div>";
+              
+              myResultItem += "</div></div>";
+              container.innerHTML +=myResultItem;
+            }
+          }
+        };
+        createProxy(listener);
+      }
+      else {
+        requestBooks(aValue);
+      }
+    }
+
+    function createProxy(aCreationListener) 
+    {
+      try {
+        var factory = new WebServiceProxyFactory();
+        factory.createProxyAsync('http://soap.amazon.com/schemas2/AmazonWebServices.wsdl', "AmazonSearchPort", "", true, aCreationListener);
+      }
+      catch (ex) {
+        alert("test "+ ex);
+      }
+    }
+
+    function requestBooks(value) 
+    {
+      if (proxy) {
+        netscape.security.PrivilegeManager.enablePrivilege("UniversalBrowserRead");
+        
+        var KeywordSearchRequest = new Object();
+        KeywordSearchRequest.keyword=value;
+        KeywordSearchRequest.page="1";
+        KeywordSearchRequest.mode="books";
+        KeywordSearchRequest.tag="webservices-20";
+        KeywordSearchRequest.type="lite";
+        KeywordSearchRequest.devtag="D2Z2KU2NWTOHI";
+        KeywordSearchRequest.format="xml";
+        KeywordSearchRequest.version="1.0";
+        proxy.KeywordSearchRequest(KeywordSearchRequest);
+      }
+      else {
+        alert("Error: Proxy set up not complete!");
+      }
+    }
+
+  -->
+
+
+
+  </script>
+
+<LINK REL="stylesheet" HREF="../../../../persistent-style.css" TYPE="text/css">
+<LINK REL="icon" HREF="../../../../images/mozilla-16.png" TYPE="image/png">
+</HEAD>
+<BODY>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%">
+<TR>
+<TD VALIGN="TOP" class="bannercell">
+<a href="/" CLASS="bannerlink">
+<IMG SRC="../../../../images/mozilla-banner.gif" ALT=""
+CLASS="mozillaorgbanner" WIDTH="600" HEIGHT="58">
+</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR>
+<TD VALIGN="TOP" >
+<TABLE BORDER="0" class="outersidebar"><TR><TD class="bordercell" VALIGN="TOP">
+<TABLE BORDER="0" CELLSPACING="3" class="middlesidebar"><TR><TD class="titlecell" VALIGN="TOP">
+<TABLE CELLPADDING="0" CELLSPACING="3" BORDER="0" class="innersidebar">
+<TR><TD class="linkcell" COLSPAN=2><A HREF="../../../.././"><B> mozilla.org</B></A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../../../../mozorg.html"> At A Glance</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../../../../why/"> Why Use Mozilla</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../../../../MPL/"> License Terms</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../../../../get-involved.html"> Get Involved</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../../../../community.html"> Newsgroups</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../../../../feedback.html"> Feedback</A></TD></TR>
+<TR><TD class="spacercell"></TD></TR>
+<TR><TD class="linkcell" COLSPAN=2><A HREF="../../../../catalog/"><B> Development</B></A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../../../../roadmap.html"> Roadmap</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../../../../projects/"> Projects</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../../../../owners.html"> Module Owners</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../../../../hacking/"> Hacking</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../../../../source.html"> Get the Source</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../../../../build/"> Build It</A></TD></TR>
+<TR><TD class="spacercell"></TD></TR>
+<TR><TD class="linkcell" COLSPAN=2><A HREF="../../../../quality/"><B> Testing</B></A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../../../../releases/"> Releases</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="http://ftp.mozilla.org/pub/mozilla/nightly/latest-trunk/"> Nightly Builds</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="http://bugzilla.mozilla.org/enter_bug.cgi?format=guided"> Report A Bug</A></TD></TR>
+<TR><TD class="spacercell"></TD></TR>
+<TR><TD class="linkcell" COLSPAN=2><A HREF="../../../../tools.html"><B> Tools</B></A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="http://bugzilla.mozilla.org/"> Bugzilla</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="http://tinderbox.mozilla.org/showbuilds.cgi?tree=SeaMonkey"> Tinderbox</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="http://bonsai.mozilla.org/cvsqueryform.cgi?"> Bonsai</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><a href="/lxr/seamonkey/"> LXR</A></TD></TR>
+<TR><TD class="spacercell"></TD></TR>
+<TR><TD class="linkcell" COLSPAN=2><A HREF="../../../../faq.html"><B> FAQ</B></A></TD></TR>
+<TR><TD class="linkcell" COLSPAN=2><a href="/search.html"><B> Search</B></A></TD></TR>
+</TABLE>
+</TD></TR></TABLE>
+</TD></TR></TABLE>
+</TD>
+<TD VALIGN="TOP">
+<!--
+/* ***** BEGIN LICENSE BLOCK *****
+ * Licensed under Version: MPL 1.1/GPL 2.0/LGPL 2.1
+ * Full Terms at /lib/js/license/mpl-tri-license.txt
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+ * for the specific language governing rights and limitations under the
+ * License.
+ *
+ * The Original Code is Netscape Communications code.
+ *
+ * The Initial Developer of the Original Code is
+ * Netscape Communications Corporation.
+ * Portions created by the Initial Developer are Copyright (C) 2003
+ * the Initial Developer. All Rights Reserved.
+ *
+ * Contributor(s): Doron Rosenberg <doron@netscape.com>
+ *                 Marcio S Galli <mgalli@netscape.com>
+ *
+ * ***** END LICENSE BLOCK ***** */-->
+ 
+
+
+
+
+
+  <h3>Search for Books using Amazon's Web Service.</h3>
+  <div id="banner" style="margin-left:1em;background-color:#eeeeee;padding:10px;-moz-border-radius:12px;">
+    <input id="input" onkeypress="if(event.keyCode==13) CallAmazon(document.getElementById('input').value)"> 
+    <input id="BUTTON" type="button" value="Search" onclick="CallAmazon(document.getElementById('input').value)">
+
+  </div>
+
+ <div id="container" style="margin-left:1em;background-color:#eeeeee;-moz-border-radius:12px; padding:5px; background-color:#dddddd;"></div>
+  
+
+
+
+
+</TD>
+</TR>
+<TR>
+<TD COLSPAN="2" ALIGN="RIGHT" VALIGN="TOP">
+<div class="documentinfo">
+Copyright &copy; 1998-2003 The Mozilla Organization
+<BR>
+Last modified May 19,  2003
+<BR>
+<A HREF="http://www.mozilla.org/webtools/bonsai/cvslog.cgi?file=mozilla-org/html/projects/webservices/examples/mozilla-wsdl/amazonwsdl.html&amp;rev=&amp;root=/cvsroot/">Document History</A>
+<BR>
+<A HREF="http://doctor.mozilla.org/?file=mozilla-org/html/projects/webservices/examples/mozilla-wsdl/amazonwsdl.html">Edit this Page</A>
+(or <A HREF="/README-cvs.html">via CVS</A>)
+</div>
+<div align="right"><font size="-1">
+訳者： 高久雅生 &lt;<a href="mailto:masao@ulis.ac.jp">masao@ulis.ac.jp</a>&gt;<br>
+<a href="http://www.mozilla.org/projects/webservices/examples/mozilla-wsdl/amazonwsdl.html">このドキュメントのオリジナルは mozilla.org において英語で公布されています。</a><br>
+またドキュメントの管理の言語は現在も英語です。この日本語訳は、<br>
+利用者の利便のためにもじら組和訳プロジェクトによって提供されたものです。<br>
+フィードバックは英語で、元の著者に送って下さい。<br>
+翻訳された文書の一覧は、現在以下のURLで見ることが出来ます。<br>
+<a href="http://www.mozilla.gr.jp/jt/index.html">http://www.mozilla.gr.jp/jt/index.html</a>
+</font></div>
+
+</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>
