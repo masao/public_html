@@ -13,7 +13,7 @@
 </style>
 <meta name="http-equiv" content="text/html;charset=EUC-JP">
 
-   <title>XML Extras</title>
+   <title>XML 追加モジュール</title>
 <LINK REL="stylesheet" HREF="../persistent-style.css" TYPE="text/css">
 <LINK REL="icon" HREF="../images/mozilla-16.png" TYPE="image/png">
 </HEAD>
@@ -73,15 +73,22 @@ CLASS="mozillaorgbanner" WIDTH="600" HEIGHT="58">
 
 
 
-<h2>XML Extras</h2>
-
-
-<p>Newsgroup: <a href="news://news.mozilla.org/netscape.public.mozilla.xml">netscape.public.mozilla.xml</a>
-<br>Page maintained by: <a href="mailto:heikki@netscape.com">Heikki Toivonen</a>
-
-<hr WIDTH="100%">
+<h2>XML 追加モジュール</h2>
+<h2 class="orig">XML Extras</h2>
 
 <p>
+ニュースグループ: <a href="news://news.mozilla.org/netscape.public.mozilla.xml">netscape.public.mozilla.xml</a>
+<br>ページ管理者: <a href="mailto:heikki@netscape.com">Heikki Toivonen</a></p>
+<p class="orig">Newsgroup: <a href="news://news.mozilla.org/netscape.public.mozilla.xml">netscape.public.mozilla.xml</a>
+<br>Page maintained by: <a href="mailto:heikki@netscape.com">Heikki Toivonen</a></p>
+
+<hr WIDTH="100%">
+<p>
+XML 追加モジュールは、開発者に XML をデータ（つまりただのドキュメントフォーマットとしてでなく）として扱うことを可能とするいくつかの機能を含んでいます。
+モジュールは drop-in のコンポーネントとして構成され、その XML-as-data（XML をデータとして扱う）の機能を JavaScript と C++/XPCOM ユーザー両方に公開します。
+XML 追加モジュールは標準で全プラットフォームでビルドされ、ブラウザ・インストーラに含まれていますので、Nightly ビルドでも利用できます。
+</p>
+<p class="orig">
 The XML Extras module contains several features that allow developers to
 treat XML as data i.e. not as just another document format. The module
 is structured as a drop-in component and exposes its XML-as-data features
@@ -89,70 +96,96 @@ both to JavaScript and C++/XPCOM users. The XML Extras module
 is built by default on all platforms, and is included in the browser
 installers so it is available in the nightly builds.</p>
 <p>
+<br><a href="#FeatureStatus">各機能の状態</a>
+<br><a href="#QA">品質保証とテスト</a>
+<br><a href="#Documentation">文書化</a>
+<br><a href="#How">どうやって手伝えばいいの？</a>
+</p>
+<p class="orig">
 <br><a href="#FeatureStatus">Feature Status</a>
 <br><a href="#QA">QA and Testing</a>
 <br><a href="#Documentation">Documentation</a>
 <br><a href="#How">How can I help?</a>
 </p>
 <hr WIDTH="100%">
-<h4>
-<a NAME="FeatureStatus"></a>Feature Status</h4>
+<h4><a name="FeatureStatus">各機能の状態</a></h4>
+<h4 class="orig">Feature Status</h4>
 
 <table BORDER COLS=4 WIDTH="100%" >
 <tr>
-<td><b>Feature</b></td>
+<td>機能<b class="orig"><br>Feature</b></td>
 
-<td><b>Status</b></td>
+<td>状態<b class="orig"><br>Status</b></td>
 
 </tr>
 
 <tr>
-<td>XML Serializer</td>
+<td>XML シリアライザ<span class="orig"><br>XML Serializer</span></td>
 
-<td>in nightly builds, to be replaced by DOM Level 3 Load and Save?</td>
+<td>Nightly ビルドに含まれる。DOM Level 3 Load and Save に置き換えられる？
+<span class="orig"><br>in nightly builds, to be replaced by DOM Level 3 Load and Save?</span>
+</td>
 
 </tr>
 
 <tr>
 <td>XMLHttpRequest</td>
 
-<td>in nightly builds</td>
+<td>Nightly ビルドに含まれる
+<span class="orig"><br>in nightly builds</span></td>
 
 </tr>
 
 <tr>
-<td>XML Parser (string and stream input source)</td>
+<td>
+XML パーサ（文字列およびストリーム入力）
+<span class="orig"><br>XML Parser (string and stream input source)</span></td>
 
-<td>in nightly builds, to be replaced by DOM Level 3 Load and Save?</td>
-
-</tr>
-
-<tr>
-<td><a href="/projects/webservices/">Web Services with SOAP and WSDL</a></td>
-
-<td>Available since 1.4alpha. Moved to Web Services module during
-1.4beta.</td>
+<td>Nightly ビルドに含まれる。DOM Level 3 Load and Save に置き換えられる？
+<span class="orig"><br>in nightly builds, to be replaced by DOM Level 3 Load and Save?</span></td>
 
 </tr>
 
 <tr>
-<td>XML Persistence</td>
+<td>
+<a href="/projects/webservices/">SOAP と WSDL による Web サービス</a>
+<span class="orig"><br><a href="/projects/webservices/">Web Services with SOAP and WSDL</a></span></td>
+
+<td>1.4alpha 以降で利用可能。1.4beta で Web サービスモジュールに移った。
+<span class="orig"><br>
+Available since 1.4alpha. Moved to Web Services module during
+1.4beta.</span>
+</td>
+
+</tr>
+
+<tr>
+<td>XML 永続性
+<span class="orig"><br>XML Persistence</span>
+</td>
 
 <td></td>
 
 </tr>
 
 <tr>
-<td><a href="/newlayout/xml/#linking">FIXptr and XPointer</a></td>
+<td><a href="/newlayout/xml/#linking">FIXptr と XPointer</a>
+<span class="orig">
+<br><a href="/newlayout/xml/#linking">FIXptr and XPointer</a></span>
+</td>
 
-<td>Available since 1.4alpha in the core Mozilla. Moved to
-XMLExtras during 1.4beta.</td>
+<td>1.4alpha 以降で Mozilla のコア部分で利用可能になり、1.4beta で XML 追加モジュールに移った。
+<span class="orig"><br>
+Available since 1.4alpha in the core Mozilla. Moved to
+XMLExtras during 1.4beta.</span>
+</td>
 
 </tr>
 
 </table>
 
-<p>
+<p>以下も参照してください。</p>
+<p class="orig">
 See also:</p>
 <ul>
 <li><a href="/lxr/seamonkey/source/extensions/xml-rpc/">XML-RPC</a></li>
@@ -160,47 +193,91 @@ See also:</p>
 <li><a href="/newlayout/xml/">XML in Mozilla</a></li>
 </ul>
 
-<h4>
-<a NAME="QA"></a>QA and Testing</h4>
-
-<p>There are some <a href="tests.html">online tests</a> for mainly exercising the 
+<h4><a name="QA">品質保証とテスト</a></h4>
+<h4 class="orig">QA and Testing</h4>
+<p>
+主に XMLHttpRequest を通じて HTTP の GET メソッドを行う<a href="tests.html">オンラインのテスト</a>もいくつかあります。
+</p>
+<p class="orig">There are some <a href="tests.html">online tests</a> for mainly exercising the 
 HTTP GET method via XMLHttpRequest.</p>
 
-<p>Other test cases for each of the implemented components listed above
+<p>
+上記で挙げた実装済のコンポーネントそれぞれについての他のテストケースは
+<a href="/lxr/seamonkey/source/extensions/xmlextras/tests/">mozilla/extensions/xmlextras/tests/</a>
+にあります。
+しかし、より網羅的なテストスイートを作る必要があります。
+品質保証を手伝って頂ける方は、以下からお願いします。
+<span class="orig">
+<br>
+Other test cases for each of the implemented components listed above
 exist in <a href="/lxr/seamonkey/source/extensions/xmlextras/tests/">mozilla/extensions/xmlextras/tests/</a>.
 More exhaustive test suites need to be created, however. If you'd like to 
 help out with QA, you can do one of the
 following:
+</span>
 <ul>
-<li>
+  <li>実装済のコンポーネントどれかに品質保証オーナーとして参加してください。
+      品質保証オーナーは、それらのコンポーネントに付随したテストを管理し、
+      関連するバグに対する品質保証の窓口として活動し、
+      回帰テストを手伝います。
+  <li class="orig">
 Sign up as the QA owner for any of the implemented components. The QA owner
 will manage the tests associated with their component, act as QA contact
 for related bugs and help with regression testing.</li>
 
-<li>
+  <li>実装済コンポーネントが使うテストスイートや個別テストを提供してください。
+      テストは品質保証オーナー（デフォルトオーナーは <a href="mailto:heikki@netscape.com">heikki@netscape.com</a> ）に送るか、<a href="/lxr/seamonkey/source/extensions/xmlextras/tests/">mozilla/extensions/xmlextras/tests/</a> にチェックインしてください。
+<li class="orig">
 Contribute a test suite or individual tests that use the implemented components.
 Tests can be sent to the QA owner (<a href="mailto:heikki@netscape.com">heikki@netscape.com</a>
 is the default owner) and/or checked into <a href="/lxr/seamonkey/source/extensions/xmlextras/tests/">mozilla/extensions/xmlextras/tests/</a>.</li>
 
-<li>
+  <li>実装済コンポーネントに対するバグを提出してください。
+      バグは、Browser プロダクトの XML コンポーネントに提出してください。
+<li class="orig">
 File bugs against the implemented components. Bugs should be filed against
 the XML component in the Browser product.</li>
 </ul>
 
-<h4>
-<a NAME="Documentation"></a>Documentation</h4>
-
-<p>Probably the best way to learn how to use these technologies is through examples.
+<h4><a name="Documentation">文書化</a></h4>
+<h4 class="orig">Documentation</h4>
+<p>
+たぶん、ここで述べている技術の利用方法を学ぶ最も良い方法は、
+動作例によるものでしょう。
+<a href="/lxr/seamonkey/source/extensions/xmlextras/tests/">mozilla/extensions/xmlextras/tests/</a> にいくつかの動作例があります。
+動作例を見るには上記のリンクをたどって、
+HTML 文書のページソースを見る必要があります。
+</p>
+<p class="orig">Probably the best way to learn how to use these technologies is through examples.
 There are some in 
 <a href="/lxr/seamonkey/source/extensions/xmlextras/tests/">mozilla/extensions/xmlextras/tests/</a>.
 If you follow that link to look at the examples you will need to look at page source for the HTML documents.</p>
 
-<p>For <b>XMLHttpRequest</b> object you can mostly rely on the 
+<p>
+<b>XMLHttpRequest</b> オブジェクトでは、<a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/xmlsdk30/htm/xmobjxmlhttprequest.asp">Microsoft XMLHttpRequest ドキュメント</a>
+<span class="comment">（英語）</span>
+にほぼ準拠しています。
+ただし、以下の点に注意すること。
+全ての関数名とプロパティ名は小文字で始まります。
+オブジェクト生成の方法が異なります。
+いくつかのプロパティは実装されていません。
+</p>
+<p class="orig">For <b>XMLHttpRequest</b> object you can mostly rely on the 
 <a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/xmlsdk30/htm/xmobjxmlhttprequest.asp">Microsoft XMLHttpRequest documentation</a>,
 with some caveats: all functions and property names begin with a lower case letter and
 the object creation is different. Some properties are not implemented.</p>
 
-<p>Thad Hoffman has written a document that shows how you can mimic 
+<p>
+Thad Hoffman は、<a href="xmldataislands/">Mozilla で XML Data Islands</a> を真似る方法を文書化しました。
+Edmond Woychowsky も Mozilla での XML Data Islands についての記事:
+"<a href="http://builder.com.com/article.jhtml?id=u00220030515woy01.htm">XML data islands work in Mozilla</a>"
+<span class="comment">（英語）</span>
+と
+"<a href="http://builder.com.com/article.jhtml?id=u00320030718woy01.htm">Implement a flexible shopping cart with XML and ASP</a>"
+<span class="comment">（英語）</span>
+を書いています。
+</p>
+<p class="orig">Thad Hoffman has written a document that shows how you can mimic 
 <a href="xmldataislands/">XML Data Islands in Mozilla</a>. Edmond
 Woychowsky has also written articles on XML Data Islands in Mozilla:
 "<a href="http://builder.com.com/article.jhtml?id=u00220030515woy01.htm">Make
@@ -208,83 +285,127 @@ XML data islands work in Mozilla</a>" and
 "<a href="http://builder.com.com/article.jhtml?id=u00320030718woy01.htm">Implement
 a flexible shopping cart with XML and ASP</a>"</p>
 
-<p>Below are some key differencies in "XML Extras" between Mozilla and Microsoft software:</p>
+<p>
+以下に、XML 追加モジュール関連の Mozilla と Microsoft 製品との主要な相違点を示します。
+</p>
+<p class="orig">Below are some key differencies in "XML Extras" between Mozilla and Microsoft software:</p>
 
 <table border="1" cols="3">
 <tr>
-<td><b>Difference</b></td>
+<td><b>相違点</b><span class="orig"><br><b>Difference</b></span></td>
 <td><b>Microsoft</b></td>
 <td><b>Mozilla</b></td>
 </tr>
 <tr>
-<td>Member names</td>
-<td>Case insensitive?</td>
-<td>Begins with lower case letter</td>
+<td>メンバ名<span class="orig"><br>Member names</span></td>
+<td>大文字・小文字を区別しない？<span class="orig"><br>Case insensitive?</span></td>
+<td>小文字で始まる<span class="orig"><br>Begins with lower case letter</span></td>
 </tr>
 <tr>
-<td>XMLHttpRequest Creation</td>
+<td>XMLHttpRequest の生成<span class="orig"><br>XMLHttpRequest Creation</span></td>
 <td>new ActiveXObject("Msxml2.XMLHTTP")</td>
 <td>new XMLHttpRequest()</td>
 </tr>
 <tr>
 <td>XMLHttpRequest.send("some string")</td>
-<td>ok</td>
-<td>ok starting with milestone 0.9.7 (actually nightly 2001-11-28). 
+<td>可能<span class="orig"><br>ok</span>
+</td>
+<td>マイルストーン 0.9.7 以降で可能（実際には 2001-11-28 の Nightly ビルドから）。
+これより古いビルドでは、send() に文字列を渡す方法は chrome でしか動作しません。
+<a href="/lxr/seamonkey/source/extensions/xmlextras/tests/post.html">post.html</a> のサンプルをご覧ください。
+回避方法としては、文字列からドキュメントを作成するのに
+DOMParser オブジェクトの parseFromString() メソッドを使い、
+その一時ドキュメントを send() に渡します。
+<span class="orig"><br>
+ok starting with milestone 0.9.7 (actually nightly 2001-11-28). 
 With older builds, passing strings to send() works only in chrome, see 
 <a href="/lxr/seamonkey/source/extensions/xmlextras/tests/post.html">post.html</a> 
 sample. The "workaround" is to use DOMParser object's parseFromString() method to create
 a document from string, and pass the temporary document into send().</td>
+</span>
 </tr>
 <tr>
 <td>XMLHttpRequest.open("some host")</td>
-<td>ok</td>
-<td>file:// documents can access http:// documents but you need to
+<td>可能<span class="orig"><br>ok</span></td>
+<td>
+file:// 文書は http:// 文書にアクセスできますが、
+スクリプト中で <tt>UniversalBrowserRead</tt> 権限を有効にする必要があります
+（詳細については、<a href="/projects/security/components/signed-scripts.html#privs">JavaScript セキュリティ: 署名付きスクリプト</a>をご覧ください）。
+通常はファイルを Web サーバ上に置いているでしょうから、この問題起きなくなるでしょう（上記の記述は必要ありません）。
+さらに、"foo.com:80" と "foo.com:313" はセキュリティ上の目的から、別のサイトとみなされます。
+このような別のサイトへの接続はできません。
+<span class="orig"><br>
+file:// documents can access http:// documents but you need to
 enable <tt>UniversalBrowserRead</tt> privilege in your scripts - 
 see the <a href="/projects/security/components/signed-scripts.html#privs">JavaScript Security: Signed Scripts</a> document for more details.
 Normally your files should reside on a webserver so this shouldn't
 pose a problem (there you do not need that line either).
 Additionally, "foo.com:80" and "foo.com:313" are considered different hosts for
 security purposes. You cannot open a connection to a different host.
-</td>
+</span></td>
 </tr>
 <tr>
-<td>DOMParser Creation</td>
-<td><i>not available</i></td>
+<td>DOMParser の生成<span class="orig"><br>DOMParser Creation</span></td>
+<td><i>不可</i><i class="orig"><br>not available</i></td>
 <td>new DOMParser()</td>
 </tr>
 <tr>
-<td>XMLSerializer Creation</td>
-<td><i>not available</i></td>
+<td>XMLSerializer の生成<span class="orig"><br>XMLSerializer Creation</span></td>
+<td><i>不可</i><i class="orig"><br>not available</i></td>
 <td>new XMLSerializer()</td>
 </tr>
 </table>
 
-<p>Minimal documentation for the components listed above can be found using
+<p>
+上で挙げたコンポーネントに対する最小限のドキュメントは
+<a href="http://unstable.elemental.com/mozilla/">Doxygen</a>
+によって生成される Mozilla ドキュメントにあります。
+追加の文書化の提供は、
+特にJavaScript 開発者を対象にしたものか、
+IDL ファイル内で JavaDoc スタイルのコメントを完成させ明確にしたもののどちらでも <a href="mailto:heikki@netscape.com">heikki@netscape.com</a> に送ってください。
+</p>
+<p class="orig">Minimal documentation for the components listed above can be found using
 Mozilla documentation generated by <a href="http://unstable.elemental.com/mozilla/">Doxygen</a>.
 Additional documentation contributions, either specifically aimed at JavaScript
 developers or to complete &amp; clarify the JavaDoc-style comments in the
-IDL files should be sent to <a href="mailto:heikki@netscape.com">heikki@netscape.com</a>.
-<p><a href="http://unstable.elemental.com/mozilla/build/latest/mozilla/extensions/dox/interfacensIDOMSerializer.html">nsIDOMSerializer</a>
+IDL files should be sent to <a href="mailto:heikki@netscape.com">heikki@netscape.com</a>.</p>
+
+<p>
+<a href="http://unstable.elemental.com/mozilla/build/latest/mozilla/extensions/dox/interfacensIDOMSerializer.html">nsIDOMSerializer</a>
+（現在、JavaScript コンストラクタは <i>XML</i>Serializer() です）
+<br><a href="http://unstable.elemental.com/mozilla/build/latest/mozilla/extensions/dox/interfacensIDOMParser.html">nsIDOMParser</a>
+（現在、JavaScript コンストラクタは <i>DOM</i>Parser() です）
+<br><a href="http://unstable.elemental.com/mozilla/build/latest/mozilla/extensions/dox/interfacensIXMLHttpRequest.html">nsIXMLHttpRequest</a>
+</p>
+<p class="orig"><a href="http://unstable.elemental.com/mozilla/build/latest/mozilla/extensions/dox/interfacensIDOMSerializer.html">nsIDOMSerializer</a>
 (Currently, the JavaScript constructor is <i>XML</i>Serializer())
 <br><a href="http://unstable.elemental.com/mozilla/build/latest/mozilla/extensions/dox/interfacensIDOMParser.html">nsIDOMParser</a>
 (Currently, the JavaScript constructor is <i>DOM</i>Parser())
 <br><a href="http://unstable.elemental.com/mozilla/build/latest/mozilla/extensions/dox/interfacensIXMLHttpRequest.html">nsIXMLHttpRequest</a>
+</p>
 
-<p>Please see the <a href="/newlayout/xml/#linking">XML Linking and Pointing</a>
+<p>
+FIXptr および XPointer のドキュメントとしては、
+「Mozilla における XML」文書の <a href="/newlayout/xml/#linking">XML Linking and Pointing</a> セクションをご覧ください。
+</p>
+<p class="orig">Please see the <a href="/newlayout/xml/#linking">XML Linking and Pointing</a>
 section in XML in Mozilla document for FIXptr and XPointer documentation.</p>
 
-<h4>
-<a NAME="How"></a>How can I help?</h4>
+<h4><a name="How">どうやって手伝えばいいの？</a></h4>
+<h4 class="orig">How can I help?</h4>
 
 <ul>
-<li>
+  <li>モジュールに含まれるコンポーネントの<a href="#QA">テスト</a>を手伝ってください。
+<li class="orig">
 Help with <a href="#QA">testing</a> the components contained within the
 module.</li>
 
-<li>
+  <li>モジュールに対する<a href="#Documentation">ドキュメント</a>を提供してください。
+<li class="orig">
 Contribute <a href="#Documentation">documentation</a> to the module.</li>
 
-<li>
+  <li>コードレベルで手伝うには、バグ修正や機能の完成のためのパッチコードを提供してください。
+<li class="orig">
 Help at the code level, contributing code patches for bug fixes or feature
 completion.</li>
 </ul>
@@ -307,7 +428,6 @@ Last modified July 11,  2003
 (or <A HREF="/README-cvs.html">via CVS</A>)
 </div>
 <div align="right"><font size="-1">
-訳者： 高久雅生 &lt;<a href="mailto:masao@ulis.ac.jp">masao@ulis.ac.jp</a>&gt;<br>
 <a href="http://www.mozilla.org/xmlextras/">このドキュメントのオリジナルは mozilla.org において英語で公布されています。</a><br>
 またドキュメントの管理の言語は現在も英語です。この日本語訳は、<br>
 利用者の利便のためにもじら組和訳プロジェクトによって提供されたものです。<br>
