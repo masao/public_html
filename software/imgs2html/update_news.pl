@@ -20,7 +20,7 @@ sub main {
     my $news = news2html($NEWSFILE);
 
     $cont = subst_all($cont, "NEWS", $news);
-    $cont = subst_all($cont, "LATEST", "<a href=\"$latest\">$latest</a>");
+    $cont = subst_all($cont, "LATEST", "<a href=\"../archive/$latest\">$latest</a>");
 
     rename($HTML, "$HTML.bak") || die "rename error: $!";
     open(HTML, "> $HTML") || die "$HTML: $!";
