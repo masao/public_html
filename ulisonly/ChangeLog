@@ -1,3 +1,532 @@
+2002-10-23  Masao Takaku  <masao@ulis.ac.jp>
+
+	* backup.pl:
+	senjimon 上でバックアップを取るスクリプト。
+
+	.slis.tsukuba.ac.jp になって rsh が効かなくなったので、ついでに
+	ssh を使うようにしたのも合わせて Perl で書いてみた。
+	
+	----
+	#!/usr/bin/perl -w
+
+	use strict;
+
+	my $DIR = "/home/x/masao/Backup";
+	my $SSH_AGENT_ENV = "/tmp/.ssh-masao-agent.lnk";
+	my $RSYNC = "/usr/bin/rsync";
+	my @RSYNC_ARGS = ("-e", "/usr/bin/ssh", "-auqS", "--delete");
+
+	main();
+	sub main {
+	    my $from = $ARGV[0] || usage();
+
+	    my @path = split(/[:\/]/, $from);
+	    my $to = pop @path;
+
+	    unless (defined $to || -d "$DIR/$to") {
+	        print "mkdir \"$DIR/$to\"\n";
+	        mkdir("$DIR/$to", 0400) || die "mkdir error: $!";
+	    }
+
+	    unless (-x $RSYNC) {
+	        print "rsync command not executable: $RSYNC\n";
+	        exit;
+	    }
+
+	    load_sshenv();
+
+	    my @cmd = ($RSYNC, @RSYNC_ARGS, $from, "$DIR/$to");
+	    print "@cmd\n";
+	    system(@cmd);
+	}
+
+	sub usage() {
+	    print "  USAGE:  $0 target\n";
+	    print "\tplease specify target host or directory\n";
+	    exit;
+	}
+
+	sub load_sshenv() {
+	    open(F, $SSH_AGENT_ENV) || die "open error: $SSH_AGENT_ENV: $!";
+	    while (my $line = <F>) {
+	        if ($line =~ /^setenv\s+(\S+)\s+(\S+);$/) {
+	            $ENV{$1} = $2;
+	            print $line;
+	        }
+	    }
+	    close F;
+	}
+	----
+
+2002-10-22  Masao Takaku  <masao@ulis.ac.jp>
+
+	* Wiki Way: やっと読み終わった。
+
+	実際のコードを使ったカスタマイズ例、実際の企業・大学での利用例など
+	が非常に素晴しい。
+
+	Wiki はモデルとしてもとても興味深いので、たまに読みなおしてみると
+	良い刺激になるだろう。
+
+	* ADSL: TTNet で 12M が開通した。
+
+	たまに PuTTY での nile との通信中に止まってしまう現象が起きる。
+	それ以外は実に快調。
+
+	* ModLogAn: http://jan.kneschke.de/projects/modlogan/
+
+	Webalizer 風で良いかも…。
+	ちゃんと1年分以上のインデックスも残せるし。
+
+	from Apacheログ概論:
+	http://arika.org/doc/uu.200108.apache_log.html
+
+2002-10-19  Masao Takaku  <masao@ulis.ac.jp>
+
+	* GenForm v1.0:
+	http://students.infoiasi.ro/~stanasa/genform/index.html
+
+	JavaScript ベースでフォームを設定する。面白い。
+
+	* Web Forum:
+	Kent Web で公開されている掲示板スクリプトがまとめて XSS 対策で更新
+	していた模様。
+
+2002-10-18  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 用語数ほかの統計データ:
+	やっと EDR の問題が解消できたので、とりあえず出してみた。
+
+	EDR:
+	用語数: 118782
+	異なり用語数: 118134
+	階層関係数: 184958
+
+	EICnet:
+	用語数: 391
+	異なり用語数: 361
+	階層関係数: 380
+
+	ODP (Kids-Teens):
+	用語数: 2059
+	異なり用語数: 1617
+	階層関係数: 2058
+
+	NDC:
+	用語数: 30659
+	異なり用語数: 25410
+	階層関係数: 102639
+
+	ODP:
+	用語数: 446926
+	異なり用語数: 150387
+	階層関係数: 446928
+
+	SS:
+	用語数: 117206
+	異なり用語数: 117206
+	階層関係数: 199941
+
+	* mkindex_edr.pl: 致命的なバグがあったみたい。
+
+	EDR については、6月からずっと階層関係が 0 のまま動かしていた。
+
+2002-10-17  Masao Takaku  <masao@ulis.ac.jp>
+
+	* HIDAM - The Hierarchical Data Manager: http://www.s3m.com/hidam/
+	面白そうだけど、wxWindows, Xerces-C とかの requirements が面倒。
+
+	* Snatcher:
+	http://www.arc.ritsumei.ac.jp/kachina/mikio/snatcher-ja.html
+
+	基本機能はNamazuと同等な全文検索エンジン。
+	・インデックスは GDBM (?)
+	・Web Crawler + Indexer 同梱
+	・シソーラス展開機能
+	・要約生成機能
+
+	Namazu の基本設計に足りない部分を独自に実装したように見える。
+
+2002-10-16  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 論文作成に役立つリンク集:
+	http://marketing.misc.hit-u.ac.jp/~matsui/links/method.html
+
+	様々な観点から「論文書きのプロ」が書いたリソースのリンク集。
+
+	* なかなか論文を書けない若者のために: from ARG.
+	http://hostgk3.biology.tohoku.ac.jp/sakai/ronbun/nakanaka/nakanaka.html
+
+	『論文を書けない理由のかなりは「心の問題」にある』という前提のもと
+	に書かれたもの。「先送り症候群」などに説得力あるものがある。
+
+2002-10-15  Masao Takaku  <masao@ulis.ac.jp>
+
+	* セゾンカード:
+	ようやく西武に行ってクレジットカードの申込をしてきた。
+
+	ただ、父親の誕生日を書き間違えたらしい。
+	本来は 12/4 なのに、12/5 と書いてしまった。
+
+	* libexif: http://sourceforge.net/projects/libexif
+	gPhoto プロジェクトでも採用されている Exif 解析ライブラリ。
+
+	これの Perl モジュールがあると良いのだが。。。
+	肝心の Image::Info がうまくコンパイルできないので…。
+
+	とりあえずコマンドライン版のユーティリティを使ってみたかったので、
+	コンパイルしてみた。以下のパッケージが必要だったので、これも入れた。
+
+	  - pkg-config
+	  - popt.h
+
+	* hirax.net: http://www.hirax.net/index.html
+	オッパイ星人など、お馬鹿な調査記録多数。
+
+	* マンガ・インターネットカフェ:
+	Zone というシネプレックスの隣のマンガ・インターネットカフェに行っ
+	てきた。
+
+	初めてだったが、どうも私はマンガをそこまでして読みたいとは思わない
+	らしい…。あと、パソコンとイスの高さが合わなかったので、PCを使う気
+	もしなかったので、ONE PIECE をちょっと読んだだけ。
+
+2002-10-12  Masao Takaku  <masao@ulis.ac.jp>
+
+	* not 1:
+	Perl では、not 1 という式は undef ではなく、'' を返すらしい。
+
+	* Genform:
+	管理インタフェースは Mailman のものをまねることにした。
+
+	現在、「初期設定」→「データベース作成」までの部分は完了。
+
+	* サイクリング: 忘れないうちにメモ。
+
+	10/8（火）には「西大通→6号→東大通」のコースをだいたい2時間くらい
+	かけて、のんびりサイクリングした。
+
+	* UNIQLO: 忘れないうちにメモ。
+
+	一昨日は、ユニクロまでサイクリングがてら行ってきた。
+	長袖シャツ、チノパン、ジーパン、ジャンバーの計4点購入。
+
+	あと、ダイソーの方も見たけど、結構良かった。
+
+2002-10-11  Masao Takaku  <masao@ulis.ac.jp>
+
+	* Software Configuration Management FAQ:
+	http://www.daveeaton.com/scm/
+
+	news:comp.software.config-mgmt でのFAQがまとめておいてある。
+
+2002-10-10  Masao Takaku  <masao@ulis.ac.jp>
+
+	* OhTeX package:
+	http://www.fu.is.saga-u.ac.jp/~grimberg/SHOGI/ohtex.html
+
+	将棋の棋譜用のTeXマクロ。
+
+	* Apache Watcher: http://ilovedaemon.net/hanai/apache/
+	Apache2 の追っかけメモ。
+
+	* RDFPic: http://jigsaw.w3.org/rdfpic/
+	写真のメタデータを RDF 形式で JPEG に埋め込み、Web サーバ 側で自動
+	的に Content Negotiation に沿ったモノを提供する。また、PUT メソッ
+	ドで更新も行なえる。
+	RDF のスキーマとしては、Dublin Core＋デジカメの情報＋被写体を表わ
+	す Subject 用 refinement-schema を用意している。
+
+	今なら Web Services を使うかもね。
+
+	* デジカメナビゲート:
+	http://homepage2.nifty.com/B2ON/dc/index.html
+
+	Sony・DSC-U10の購入を検討しているのだが、カメラについては全くわか
+	らないので、詳細な解説が非常に参考になった。
+
+	* JPEG画像の回転:
+	convert を使うよりも jpeg library 付属の jpegtran を使った方が劣化
+	が少ないらしい…。
+	  cf. http://studio.imagemagick.org/pipermail/magick-developers/2002-October/000911.html
+
+	  % jpegtran -rotate 90 foo.jpg
+
+2002-10-09  Masao Takaku  <masao@ulis.ac.jp>
+
+	* muttでJNAMES:
+	設定変数 reverse_alias を使えば同様のことが可能みたい…。
+	ただ、色を変えるのは難しいかも。
+
+	* Z39.50: 忘れない内にちょっとだけメモ。
+
+	『電子図書館への道（5）』 UNIX MAGAZINE 2002-10 にて、以下のような
+	Z39.50 についての言及がある。
+
+	  「…日本の図書館では、Z39.50を用いて書誌情報の検索サービスを提供
+	  しようという姿勢はみられない。まるで、日本の図書館業界がZ39.50に
+	  は取り組まないと決めたかのように、積極的な取組みはまったくおこな
+	  われていないのが実状である。」
+
+	これはさすがに言い過ぎ（事実誤認）であるように思う。好意的に解釈す
+	れば、過激に発言することで物議を醸し、この分野の議論を活性化させた
+	いのかもしれない。しかしながら、それにしても「まったくおこなわれて
+	いない」という文章は、現在までZ39.50に関わってきた全ての人に対して
+	失礼だと思う。今後のZ39.50の展開を考えれば、きちんと貢献してきた人
+	たちに対する礼儀を払うべきである。
+	  cf. http://libsys.lib.keio.ac.jp/
+
+	Annotationとか面白い話があるのに、ここの記述にちょっとむかついたの
+	で、なんだか読む気が失せてしまった。
+	以上。
+
+	* <form>自動生成: cf. [2002-06-12]
+	前回に引き続き今度は単独のアプリケーションをfreshmeatでちょっと探
+	してみた。
+
+	・phpMyAdmin: http://www.phpmyadmin.net/
+	この分野では主要なシステム。MySQLサーバをWeb上から扱うシステム。広
+	く使われている。
+
+	・WWWdb: http://wwwdb.org/WWWdb
+	phpMyAdminのPerl版といった雰囲気。
+
+	・DBMEdit: http://www.jmarshall.com/tools/dbmedit/
+	Perlでの実装を探していたら、見つけた。イメージにけっこう近い。DBM
+	での実装。値をデリミッタで区切ってマルチカラムに対応させている。
+
+	あと、商用のシステムでは、Cybozなどのいわゆるグループウェアに付属の
+	「データベース機能」として実装されている例も多い。
+
+	・サイボーズDBメーカー: http://cybozu.co.jp/products/cbdb/
+	・ファイルメーカーPro: http://www.filemaker.co.jp/
+	  なお、http://www.zdnet.co.jp/macwire/0208/26/hj00_filemaker.html
+	  から始まるレポートも興味深い。
+
+	* Namespaces 1.1:
+	http://www.w3.org/TR/2002/WD-xml-names11-20020905/
+
+	1.0 との違い(?):
+	・URI→IRI（Internationalized Reference Identifier）
+	・名前空間の宣言の抑止
+	・URI参照（http://www.w3.org/2000/xmlns/）の予約
+	・(6) * No attributes with a declared type of ID, IDREF(S),
+		ENTITY(IES), or NOTATION contain any colons.
+
+	* 属性値に名前空間:
+	複数のXMLボキャブラリからもらってきた ID を一意に識別させるために
+	XML Namespace を用いたい。
+
+	☆ 結論
+
+	「属性値中に表われる namespace prefix は、その XML ボキャブラリの
+	仕様に沿って解釈されうる。XPath, XML Schema などはそのような仕様の
+	一例である。また、DOMやSAXなどにはそれらの属性値の生成に役立つAPI
+	などがあるらしい。」
+
+	☆ 感想
+
+	名前空間ってメチャクチャやん!!
+
+	☆ 参照資料
+
+	・＠ITの連載: 檜山さんによる解説。
+	実体参照におけるヒントなど、非常に詳細な情報アリ。ただ、属性値につ
+	いては言及なし。
+	http://www.atmarkit.co.jp/fxml/ddd/ddd001/ddd001-namespaces1.html
+
+	・[xml-user 5831] あたりから始まる議論:
+	XPath/XSLT/Namespace のそれぞれの仕様がどのような関係にあり、名前
+	空間がどのように適用されるかについての詳細が述べられている。XPath
+	がコンテキストで名前空間を扱うという重要な概念にも言及。
+	http://www2.xml.gr.jp/log.html?MLID=xmlusers&N=5831
+
+	・[xml-users 6562] から始まる議論:
+	今回の問題に直接関係する議論。
+	XPathが導入したやり方が他の仕様でも取り入れられてしまい、そもそも
+	の目的からはずれた使われ方をし始めているという歴史的経緯についても
+	触れられている。
+	http://www2.xml.gr.jp/log.html?MLID=xmlusers&N=6562
+
+2002-10-08  Masao Takaku  <masao@ulis.ac.jp>
+
+	* mindterm:
+	JavaでのSSH実装の一つであるmindtermの開発元が再度売られたらしい。
+
+2002-10-07  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 用例データベース: http://www.idd.tamabi.ac.jp/corpus/yourei/
+	とりあえずメモ。
+
+	* 翻訳メモリ（translation memory）:
+	プロの翻訳屋が使っている過去の翻訳を元にした翻訳支援システムらしい。
+	  cf. http://www.comsus.co.jp/comtm.html
+	      http://www.raycomm.com/techwhirl/magazine/technical/translationmemory.html
+
+	フリーのものはなかなか無いみたい。
+	（特にEmacsで動くのがあれば最高なんだけど…）
+
+	一応、Gnome, KDE などの開発チームが gettext 用に使っている Kbabel,
+	gtranslator とかが有望みたい…。
+	http://www.suse.de/~ke/po-toys/po-file-management.html とかも…。
+
+	あとは、翻訳のポータルサイトにいくつか情報あり。
+	http://www.owaki.mmcgi.com/portal/
+
+2002-10-06  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 「Webの創成」:
+	http://www.amazon.co.jp/exec/obidos/ASIN/4839902879/250-5581403-2756205
+
+	前半、後半ともに Tim-Berners-Leeの信条が卒直に語られていて、非常に
+	面白かった。特に、前半のWebの発展にいたる道筋は一つのドラマとして
+	も非常に興味深い。どっかで映画化しないかなぁ。
+
+	あと、Mosaicグループとの確執（というほどでもないが…）とかも知らん
+	かったので、興味深かった。
+
+2002-10-05  Masao Takaku  <masao@ulis.ac.jp>
+
+	* The Academic Web Link Database Project:
+	http://cybermetrics.wlv.ac.uk/database/
+
+	Web のリンク構造を扱う研究用データとして、各国（イギリス、ニュージー
+	ランド、台湾など）の大学でのリンクデータベースを作成し、公開してい
+	る。ツール類も配布している。
+
+	* nile のセキュリティ:
+	統合でファイアウォールが甘くなったので、いろいろ問題がありそうな有
+	名所は潰しておくつもりでちょっと調査。
+
+	・XDR の問題: 106942-23 108451-06
+	http://www.cert.org/advisories/CA-2002-25.html
+	http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalert%2F46122
+
+	・CDE ToolTalk の問題: 107893-20
+	http://www.cert.org/advisories/CA-2002-26.html
+	http://sunsolve.Sun.COM/pub-cgi/retrieve.pl?doc=fsalert%2F46366
+
+	ただ、再起動が必要そうなので、次回の停電時などに…。
+
+2002-10-04  Masao Takaku  <masao@ulis.ac.jp>
+
+	* Global Site Viewer:
+	http://ai-www.aist-nara.ac.jp/~tomoki-m/gsv/
+
+	「Shodouka」にさらにSSL, Cookieに対応させたもの。
+	（from NetNews便り 『UNIX MAGAZINE』2002-10）
+
+	* ipc-search:
+	統合でトップページが変わったので、wget の引数を変えてやりなおした。
+	ついでに、wget のバージョンを上げるかも…。
+
+2002-10-02  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 生きている「理由」（毎日新聞東京版９月２４日夕刊掲載）:
+	http://www.maki-taro.net/kokodake/backnum.htm
+
+	熱い文章が伝わってくる。
+	ただ、筆者の主張自体はわかるが、賛同はできない。
+
+2002-09-21  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 林檎の木: http://ringonoki.net/
+	窓の杜よりもシンプルな感じで良い。
+
+	* WinShot:
+	別の場所で再開されたみたい。cf. [2002-03-21]
+
+	http://www.woodybells.com/winshot.html
+
+	* /~masao/diary/:
+	昔（たぶん [2002-05-07] あたり）、Web から参照できるところに置いた
+	のを忘れていた。
+
+	今、アクセスログを見たら、AAA!Cafeを筆頭にいくつかのサーチエンジン
+	に登録されていたらしい…。
+	う〜ん、学内限定にしておいたような錯覚になっていたみたい。
+
+	とりあえず、rm -rf しておいた。
+
+	* search.cpan.org:
+	気付かないうちにリニューアルしていた。
+	CGI の引数の形式とかが変更したようなので、リンクを張りなおさない
+	と…。
+	cf. http://use.perl.org/article.pl?sid=02/08/09/2046256
+
+	* 美文書作成入門:
+	なんか minipage 環境への言及が見当たらないんだけど、なんでだろう。
+
+	机の上にはコレしか TeX 本は置いていないからちょっと困った。
+
+	* idsearch.cgi:
+	再帰的トラバースにバグあり。やっぱり、ちゃんと考えないとダメみたい。
+
+	ある程度以上深くたどる指定をした場合、延々と <word> 要素が出力され
+	る。dot表現した際には、同一ノードが統合されるので、気付かなかった
+	が…。
+
+	最初の処理方式（一度たどったノードはトラバースしない）を採用して、
+	複数のエッジが dot 出力時に出る問題の方は XSLT 側で対処した方が良
+	いかも。
+
+2002-09-18  Masao Takaku  <masao@ulis.ac.jp>
+
+	* Typespeed: http://pww.evtek.fi/~k0001744/typespeed/
+
+	以前（[2002-07-17]）見たときは Linux 以外では動かなかったので、諦
+	めていたが、バージョンがあがって動くようになっていたので、uni に入
+	れてみた。
+	学生サーバあたりで宣伝してみようかしら…。
+
+	* 「砂山に埋まった…」:
+	久々に読んでみた。
+
+	読みながら冷静にはなれないけど、キチンと自分で調べなおしてみたいと
+	の思いを強くした。
+
+	* 日朝関係:
+	とにかく粘り強くこれから交渉していくしか道はないだろう。
+
+	今後どうなるにしても、いつの日か横田さんなどの拉致された人の足跡を
+	辿ることができる日を願って。合掌。
+
+2002-09-17  Masao Takaku  <masao@ulis.ac.jp>
+
+	* session.el:
+
+	パーミッション設定されるようになったみたいなので、しばらく使ってみ
+	ることにする。cf. [2002-06-15], [2002-08-28]
+	
+
+2002-09-16  Masao Takaku  <masao@ulis.ac.jp>
+
+	* HunkaButta: http://www.hunkabutta.com/
+
+	東京で暮らす外国人の撮った写真とその日記から構成されるサイト。
+
+	写真がキレイで良い。
+	山手線の講評も面白かった。
+
+	* Engrish.com: http://www.engrish.com/
+
+	日本で見かける英語の間違いを載せたサイト。
+
+	いや、ちっとも笑えないけど、面白さは伝わってくる。
+
+2002-09-07  Masao Takaku  <masao@ulis.ac.jp>
+
+	* diggler: http://diggler.mozdev.org/
+
+	Mozilla で現在のURLの上位階層に行くボタンを付けるアドオン。
+
+	よくやる行動なので、試しにインストールしてみた。
+
+2002-09-04  Masao Takaku  <masao@ulis.ac.jp>
+
+	* ODP: <narrow[12]> の違いを示す例は、「Top/Arts/Architecture」。
+	cf. http://www.resource-zone.com/showflat.php?Cat=&Board=world&Number=3936&page=0&view=collapsed&sb=5&o=&fpart=1
+
 2002-09-02  Masao Takaku  <masao@ulis.ac.jp>
 
 	* ○○に100の質問:
