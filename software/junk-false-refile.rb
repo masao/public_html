@@ -13,7 +13,7 @@ Dir::open( TOSPAM_DIR ) do |dir|
 		unless system( BSFILTER, "-s", "-C", "-u", TOSPAM_DIR + "/" + f )
 			raise "bsfilter failed."
 		end
-		system( BSFILTER, TOSPAM_DIR + "/" + f )
+		system( "#{BSFILTER} < #{ TOSPAM_DIR + "/" + f }" )
 		if ($?.to_i / 256) == 0 then
 			system( REFILE, "-src", "+junk.tospam", f, "+junk" )
 			puts "#{f} refile done."
