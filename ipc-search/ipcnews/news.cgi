@@ -1,8 +1,8 @@
 #!/usr/local/bin/ruby -wT
 # -*- Ruby -*-
-# $Id$
-
 # ニュース情報を独自に提供する CGI
+
+RCSID = '$Id$'
 
 require "date"
 require "base64"
@@ -11,6 +11,13 @@ require "cgi"
 
 $:.unshift "."
 require "ipcnews"
+
+class String
+   def auto_link
+      self.gsub(/((https?|ftp):\/\/[;\/?:@&=+\$,A-Za-z0-9\-_.!~*'()]+)/,
+		"<a href=\"\\1\">\\1</a>")
+   end
+end
 
 class CGI
    def base_path
@@ -60,9 +67,10 @@ EOF
 本ページは個人的に運営しているもので、
 <a href="http://www.ulis.ac.jp/ipc/">センター</a>
 とは一切関係ありません。<br>
-本ページの内容について、
-<a href="http://www.ulis.ac.jp/ipc/">センター</a>
-に問い合わせなどしないようお願いします。
+また、本ページの内容は
+<a href="http://www.ulis.ac.jp/ipc/ipnews/ipcnews_new.html">センターニュース</a>
+を機械的に解析して生成したものなので、ノイズが含まれる可能性があります。
+より正確な情報については、上記の公式サイトをご覧ください。
 </p>
 <hr>
 <address>
@@ -70,6 +78,7 @@ EOF
 <a href="http://nile.ulis.ac.jp/~masao/">http://nile.ulis.ac.jp/~masao/</a>,
 <a href="mailto:masao@ulis.ac.jp">masao@ulis.ac.jp</a>
 </address>
+<div class="id">#{RCSID}</div>
 <div class="validator">
 <a href="http://validator.w3.org/check/referer"><img src="http://www.w3.org/Icons/valid-html401" alt="Valid HTML 4.01!" height="31" width="88"></a>
 <a href="http://jigsaw.w3.org/css-validator/check/referer"><img width="88" height="31" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!"></a>
@@ -92,7 +101,7 @@ if cgi.query_string && cgi.query_string.length > 0
       cgi.out() do
 	 cgi.html_header(CGI.escapeHTML(title)) +
 	    "<p class=\"lastmodified\">最終更新日: #{db[title].lastmodified}</p>" +
-	    "<p>#{CGI.escapeHTML(db[title].description)}</p>" +
+	    "<p>#{CGI.escapeHTML(db[title].description).auto_link}</p>" +
 	    cgi.html_footer
       end
    else
