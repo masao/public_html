@@ -1,0 +1,131 @@
+
+<HTML>
+<HEAD>
+
+<script src="wsdl-babel.js" />
+<LINK REL="stylesheet" HREF="../../../../persistent-style.css" TYPE="text/css">
+<LINK REL="icon" HREF="../../../../images/mozilla-16.png" TYPE="image/png">
+</HEAD>
+<BODY>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%">
+<TR>
+<TD VALIGN="TOP" class="bannercell">
+<A HREF="http://www.mozilla.org/" CLASS="bannerlink">
+<IMG SRC="../../../../images/mozilla-banner.gif" ALT=""
+CLASS="mozillaorgbanner" WIDTH="600" HEIGHT="58">
+</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR>
+<TD VALIGN="TOP" >
+<TABLE BORDER="0" class="outersidebar"><TR><TD class="bordercell" VALIGN="TOP">
+<TABLE BORDER="0" CELLSPACING="3" class="middlesidebar"><TR><TD class="titlecell" VALIGN="TOP">
+<TABLE CELLPADDING="0" CELLSPACING="3" BORDER="0" class="innersidebar">
+<TR><TD class="linkcell" COLSPAN=2><A HREF="../../../.././"><B> mozilla.org</B></A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../../../../mozorg.html"> At A Glance</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../../../../why/"> Why Use Mozilla</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../../../../MPL/"> License Terms</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../../../../get-involved.html"> Get Involved</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../../../../community.html"> Newsgroups</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../../../../feedback.html"> Feedback</A></TD></TR>
+<TR><TD class="spacercell"></TD></TR>
+<TR><TD class="linkcell" COLSPAN=2><A HREF="../../../../catalog/"><B> Development</B></A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../../../../roadmap.html"> Roadmap</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../../../../projects/"> Projects</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../../../../owners.html"> Module Owners</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../../../../hacking/"> Hacking</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../../../../source.html"> Get the Source</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../../../../build/"> Build It</A></TD></TR>
+<TR><TD class="spacercell"></TD></TR>
+<TR><TD class="linkcell" COLSPAN=2><A HREF="../../../../quality/"><B> Testing</B></A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../../../../releases/"> Releases</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="http://ftp.mozilla.org/pub/mozilla/nightly/latest-trunk/"> Nightly Builds</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="http://bugzilla.mozilla.org/enter_bug.cgi?format=guided"> Report A Bug</A></TD></TR>
+<TR><TD class="spacercell"></TD></TR>
+<TR><TD class="linkcell" COLSPAN=2><A HREF="../../../../tools.html"><B> Tools</B></A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="http://bugzilla.mozilla.org/"> Bugzilla</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="http://tinderbox.mozilla.org/showbuilds.cgi?tree=SeaMonkey"> Tinderbox</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="http://bonsai.mozilla.org/cvsqueryform.cgi?"> Bonsai</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="http://lxr.mozilla.org/seamonkey/"> LXR</A></TD></TR>
+<TR><TD class="spacercell"></TD></TR>
+<TR><TD class="linkcell" COLSPAN=2><A HREF="../../../../faq.html"><B> FAQ</B></A></TD></TR>
+<TR><TD class="linkcell" COLSPAN=2><A HREF="http://www.mozilla.org/search.html"><B> Search</B></A></TD></TR>
+</TABLE>
+</TD></TR></TABLE>
+</TD></TR></TABLE>
+</TD>
+<TD VALIGN="TOP">
+
+
+
+<h2>Mozilla WSDL Example - Using Translation Web Services Widget</h2>
+
+<a href="mailto:mgalli@netscape.com">Marcio Galli (mgalli@netscape.com)</a>
+<p>This page demonstrates the use of Web Services technology in Mozilla. The demonstration works with Mozilla 1.4beta and newer versions. It uses the Gecko's WSDL capabilities and shows a JavaScript-based application that connects with Babelfish Web Services at <a href="http://www.xmethods.com">xmethods.com</a>.
+</p>
+<p>
+The demo is basically a widget that offers translation funcionality. The Translation widget is entirely written in JavaScript and can be tied to the browser's interface to translate contents of generic web pages. 
+</p>
+
+<h3>Notes about cross-domain and security</h3>
+<p>The JavaScript code will establish calls to xmethods.com web site, specifically the Babelfish translation Web Service, without showing security alert box. 
+This is possible because of the <a href="http://bugzilla.mozilla.org/attachment.cgi?id=108425&action=view">New Security Model</a> in Mozilla that allows xmethods.com to grant access ( via <a href="http://www.xmethods.com/web-scripts-access.xml">an xml file</a> ) to its services from any domain.
+</p>
+
+<p>Without the cross-domain restrictions, this JavaScript application can be placed in any web page, regardless the domain, and will be able to request the remote translation services via Babelfish. There are two ways you can test this demonstration:
+</p>
+<h3>Inline Sample: Testing the Translation Service</h3>
+<div style="margin-left:1em;background-color:#eeeeee;padding:10px;-moz-border-radius:12px;">
+	<form onsubmit="Translate(document.getElementById('TEXT').value);return false">
+	<input type="radio" name="optionto" value="en_pt" checked="checked">English&gt;portuguese | 
+	<input type="radio" name="optionto" value="en_fr">English&gt;French | 
+	<input type="radio" name="optionto" value="en_de">English&gt;German
+	<br>
+	<br>
+
+	<input type="text" id="TEXT" size="60">
+	<input id="BUTTON" type="button" value="Translate" onclick="Translate(document.getElementById('TEXT').value)">
+	</form>
+	
+	<div style="background-color:#dddddd;padding:10px;">
+	<strong>Results:</strong>
+	<div id="results"></div>
+	</div>
+	
+
+</div>
+
+<h3>Babelfish Translator Widget</h3>
+<div style="margin-left:1em">
+<p>Mozilla allows you to drag links to the personal bar. If the link is a "javascript:" statement and is clicked from the personal toolbar, it will be executed in the scope of the currently displayed web page. Because of this, the translation widget will work on top of other sites. You can simply drag one of the following links to your personal toolbar and start using this widget. 
+<ul>
+<li> <a href='javascript: var proxy= null; var wsdl_uri = "http://www.xmethods.net/sd/2001/BabelFishService.wsdl"; function Translate (aValue) { if (!proxy) { var listener = { onLoad: function (aProxy) { proxy = aProxy; proxy.setListener(listener); requestTranslation(aValue); }, onError: function (aError) { }, BabelFishCallback : function (aTranslatedValue) { alert(aTranslatedValue); } }; createProxy(listener); } else { requestTranslation(aValue); } } function createProxy(aCreationListener) { try { var factory = new WebServiceProxyFactory(); factory.createProxyAsync(wsdl_uri, "BabelFishPort", "", true, aCreationListener); } catch (ex) { alert(ex); } } function requestTranslation (value) { if (proxy) {   proxy.BabelFish("en_fr", value); } else { alert("Error: Proxy set up not complete!"); } } if(window.getSelection()!="")Translate(window.getSelection());  else alert("please select a text before");void(0);'>Translate EN-FR</a></li>
+<li> <a href='javascript: var proxy= null; var wsdl_uri = "http://www.xmethods.net/sd/2001/BabelFishService.wsdl"; function Translate (aValue) { if (!proxy) { var listener = { onLoad: function (aProxy) { proxy = aProxy; proxy.setListener(listener); requestTranslation(aValue); }, onError: function (aError) { }, BabelFishCallback : function (aTranslatedValue) { alert(aTranslatedValue); } }; createProxy(listener); } else { requestTranslation(aValue); } } function createProxy(aCreationListener) { try { var factory = new WebServiceProxyFactory(); factory.createProxyAsync(wsdl_uri, "BabelFishPort", "", true, aCreationListener); } catch (ex) { alert(ex); } } function requestTranslation (value) { if (proxy) {   proxy.BabelFish("en_pt", value); } else { alert("Error: Proxy set up not complete!"); } } if(window.getSelection()!="") Translate(window.getSelection()); else alert("please select a text before");void(0);'>Translate EN-PT</a></li>
+<li> <a href='javascript: var proxy= null; var wsdl_uri = "http://www.xmethods.net/sd/2001/BabelFishService.wsdl"; function Translate (aValue) { if (!proxy) { var listener = { onLoad: function (aProxy) { proxy = aProxy; proxy.setListener(listener); requestTranslation(aValue); }, onError: function (aError) { }, BabelFishCallback : function (aTranslatedValue) { alert(aTranslatedValue); } }; createProxy(listener); } else { requestTranslation(aValue); } } function createProxy(aCreationListener) { try { var factory = new WebServiceProxyFactory(); factory.createProxyAsync(wsdl_uri, "BabelFishPort", "", true, aCreationListener); } catch (ex) { alert(ex); } } function requestTranslation (value) { if (proxy) {   proxy.BabelFish("en_de", value); } else { alert("Error: Proxy set up not complete!"); } } if(window.getSelection()!="") Translate(window.getSelection()); else alert("please select a text before");void(0);'>Translate EN-DE</a></li>
+</ul>
+<p>This demonstration shows that Web Services interfaces can be plugged on top of existing web pages to extend its funcionality. With the new security model in Mozilla, a web page can include scripts to connect with multiple Web Services providing a combination of services all together.</p>
+</div>
+
+
+
+</TD>
+</TR>
+<TR>
+<TD COLSPAN="2" ALIGN="RIGHT" VALIGN="TOP">
+<div class="documentinfo">
+Copyright &copy; 1998-2003 The Mozilla Organization
+<BR>
+Last modified April 29,  2003
+<BR>
+<A HREF="http://www.mozilla.org/webtools/bonsai/cvslog.cgi?file=mozilla-org/html/projects/webservices/examples/babelfish-wsdl/index.html&amp;rev=&amp;root=/cvsroot/">Document History</A>
+<BR>
+<A HREF="http://doctor.mozilla.org/?file=mozilla-org/html/projects/webservices/examples/babelfish-wsdl/index.html">Edit this Page</A>
+(or <A HREF="/README-cvs.html">via CVS</A>)
+</div>
+</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>
