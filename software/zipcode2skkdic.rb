@@ -47,9 +47,9 @@ class ConvertZipcode
 	 end
       end
 
-      if entry == word or entry.tr('ぁ-ん', 'ァ-ン') == word
-	 return false
-      end
+#        if entry == word or entry.tr('ぁ-ん', 'ァ-ン') == word
+#  	  return false
+#        end
       
       unless entry =~ /^[ぁ-んー#]+$/  # wrong entry
 	 return false
