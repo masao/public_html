@@ -128,10 +128,10 @@ sub print_pages() {
 sub escape_html($) {
     my ($str) = @_;
     return undef if not defined $str;
-    $str =~ s/&/&amp;/g;
-    $str =~ s/</&lt;/g;
-    $str =~ s/>/&gt;/g;
-    $str =~ s/"/&quot;/g;
+    $str =~ s/&/&amp;/go;
+    $str =~ s/</&lt;/go;
+    $str =~ s/>/&gt;/go;
+    $str =~ s/"/&quot;/go;
     return $str;
 }
 
@@ -142,8 +142,8 @@ sub get_contents () {
     my $res = $ua->request($req);
     if ($res->is_success) {
 	my $tmp = $res->content;
-	$tmp =~ s/\s+/ /g;
-	$tmp =~ s#<!--(.*?)-->##g;
+	$tmp =~ s/\s+/ /go;
+	$tmp =~ s#<!--(.*?)-->##go;
 	$tmp =~ s#<tr>(.+?)</tr>#push(@entries,$1)#geio;
     } else {
 	return undef;
