@@ -133,7 +133,8 @@ support link prefetching?</a><br></span>
 リンクの先読みとは？</span><br>
 <span class="orig">What is link prefetching?<br></span>
 リンクの先読みとはブラウザの機能の一つで、ブラウザのアイドル時間を使って、ユーザが近い将来に訪問するであろう文書をダウンロードして、<span style="font-style: italic;">予め読み込んでおく</span>ことを指します。
-先読みのヒントをブラウザに渡すウェブページでは、そのページをロードし終わると、ブラウザは黙って指定された文書を先読みし、キャッシュに蓄積しておきます。
+まず、Web ページの方から先読みのヒントをブラウザに渡します。
+そのページの読み込みが完了すると、ブラウザは黙って指定された文書を先読みし、キャッシュに蓄積しておきます。
 ユーザが先読みされている文書を訪問すると、ブラウザのキャッシュからすぐに提供できます。<br>
 <span class="orig">Link prefetching is a browser mechanism, which utilizes browser idle
 time to download <span style="font-style: italic;">or prefetch</span>
@@ -316,7 +317,7 @@ compete for bandwidth?<br></span></span>
 「イエス」であり、「ノー」でもあります。
 まず、Mozilla を使って何かをダウンロードしている場合は、全てのダウンロードが終わるまでリンクの先読み機能を遅らせます。
 例えば、ブックマーク・グループを読み込んでいる（複数のタブを開く）場合には、そのブックマークされたページで発生した先読みリクエストは、全てのタブがロードし終わるまで、開始されません。
-また、もしも、別のアプリケーションがネットワークを使っている場合は、Mozilla のリンクの先読みはその他のアプリケーションと回線容量を奪い合います。
+一方、別のアプリケーションがネットワークを使っている場合は、Mozilla のリンクの先読みはその他のアプリケーションと回線容量を奪い合います。
 将来的には、ネットワークのアイドル時間を監視するオペレーティングシステムのサービスを利用して、この問題を解決したいと思っています<br>
 <span class="orig">Yes and no. &nbsp;If you are downloading something using Mozilla, link
 prefetching will be delayed until any background downloads complete.
@@ -336,8 +337,8 @@ restrictions on what is prefetched?<br></span></span>
 はい。http:// URL だけが先読み可能です（https:// URL はセキュリティ上の理由から先読みされません）。
 （FTP などの）その他のプロトコルはクライアントサイドのキャッシュへの対応が十分でありません。
 さらに、クエリ文字列 <span class="comment">[ 訳注: "http://example.org/?foo" の "?foo" のこと ] </span>付きの URLも先読みされません。
-これは、このような URL の多くはブラウザのキャッシュを再利用しないような文書であるためで、これらの先読みは大抵役に立ちません。
-一連の文書群の中で次の文書を参照するために、<span style="font-family: monospace;">&lt;link rel="next"&gt;</span> タグにクエリ文字列付きの URL を使っている既存のサイトも現実にあります。
+なぜなら、このような URL の多くはブラウザのキャッシュを再利用しないような文書であるため、これらの先読みは大抵役に立たないからです。
+一連の文書群の中で次の文書を参照するために、<span style="font-family: monospace;">&lt;link rel="next"&gt;</span> タグにクエリ文字列付きの URL を使っている既存のサイトも現実にはあります。
 Bugzilla はこのようなサイトの一例です。
 Bugzilla のバグ報告などはキャッシュ可能でないため、これらの URL を先読みすると貧弱な Bugzilla の負荷を倍にしてしまうことになってしまいます!
 他のサイトも Bugzilla と同様の設計になっていると容易に想像できますので、クエリ文字列付きの URL は先読みしないことにしました（ただし、<span
@@ -369,7 +370,7 @@ Mozilla は別のホストからも文書を先読みしますか？<br>
 prefetch documents from a different host?<br></span></span>
 はい。
 先読みには、同一生成元（same-origin）についての制限はありません。
-リンクの先読みを同一のサーバに限定したとしても、ブラウザのセキュリティ向上にはならないでしょう。<br>
+リンクの先読みを同一サーバの URL に限定したとしても、ブラウザのセキュリティ向上にはならないでしょうから。<br>
 <span class="orig">Yes. &nbsp; There is no same-origin restriction for link prefetching.<span
  style="font-weight: bold;"> &nbsp;</span>Limiting prefetching to only
 URLs from the the same server would not offer any increased browser
@@ -456,7 +457,14 @@ expect users to locate some obscure preference in the preferences UI.
  style="font-style: italic; color: rgb(0, 0, 0); font-weight: bold;"><br>
 追記:</span>
 <span style="font-style: italic;">
-多くの人の要望により、Mozilla 1.3 以降にはリンクの先読みを無効化する設定が UI に入りました。リンクの先読みを無効化するには Preferences-&gt;Advanced-&gt;Cache <span class="comment">[ 訳注: 日本語版では 「設定-&gt;詳細-&gt;キャッシュ」 ]</span> をご覧ください。
+多くの人の要望により、
+Mozilla 1.3 以降の UI にリンクの先読みを無効化する設定が入りました。
+リンクの先読みを無効化するには
+Preferences-&gt;Advanced-&gt;Cache
+<span class="comment">
+[ 訳注: 日本語版では 「設定-&gt;詳細-&gt;キャッシュ」 ]
+</span>
+をご覧ください。
 </span><br>
 <span class="orig"><span
  style="font-style: italic; color: rgb(0, 0, 0); font-weight: bold;"><br>
@@ -474,7 +482,7 @@ pay-per-byte for network bandwidth?<br></span>
 基本的には、この問題は二つの観点から見ることができます。<br>
 <span class="orig">Basically, there are two ways of looking at this issue:<br></span>
 <ol>
-  <li>ウェブサイトでは既に JavaScript や DOM といった技を使って、無断で色々とダウンロードをしている。</li>
+  <li>ウェブサイトでは既に JavaScript や DOM といった技を使って、無断でダウンロードすることが色々と行われている。</li>
   <li>先読みはブラウザの機能の一つであり、ユーザが簡単に無効化できるようにしておくべきだ。</li>
 </ol>
 <div class="orig"><ol>
@@ -487,7 +495,7 @@ it easily. <br>
 まず、既存のウェブサイトにおいて、JavaScript や DOM の色々な技を使って黙ってダウンロードする手法を進めていく代わりに、<span style="font-family: monospace;">&lt;link&gt;</span> タグを使った手法を採用してもらうことが重要です。
 <span style="font-family: monospace;">&lt;link&gt;</span> タグにより、ブラウザはサイトの進むべき方向を知ることができます。
 この情報を使うことによって、文書の先読みの優先順序をより良く付けることができます。
-<span style="font-family: monospace;">&lt;link&gt;</span> タグによる先読みを無効化するユーザ設定を付けることは、単に JavaScript や DOM による技で我慢させることにつながり、ユーザに対するデメリットになるかもしれません。
+<span style="font-family: monospace;">&lt;link&gt;</span> タグによる先読みを無効化するユーザ設定を付けることは、単に JavaScript や DOM による技で我慢させることにつながり、ユーザにとって望ましくない結果になるかもしれません。
 先読み機能がデフォルトで有効なのは、このためです。
 <br>
 <span class="orig">It is important that websites adopt <span
@@ -521,7 +529,7 @@ prefetching.<br></span>
 <span style="font-weight: bold;"><a name="What_about..._"></a>
 他には…？<br>
 <span class="orig">What about...?<br></span></span>
-リンクの先読み機能について質問やコメントなどありましたら、お気軽にどうぞ。 :-)<br>
+リンクの先読み機能について質問やコメントなどありましたら、私の方までお気軽にどうぞ。 :-)<br>
 <span class="orig">If you have any questions or comments about link prefetching, please
 feel free to send them my way :-) </span></div>
 </div>
