@@ -40,60 +40,65 @@ JT_STYLE = <<EOF
 </style>
 EOF
 
-USAGE = "Usage: #{$0} url"
+def moz_jt_fix( uri )
+   uri = URI::parse( uri )
 
-unless ARGV[0]
-   puts USAGE
-   exit
-end
+   contents = nil
 
-uri = URI::parse( ARGV[0] )
-
-contents = nil
-
-Net::HTTP.start( uri.host, uri.port ) {|http|
-   response , = http.get(uri.request_uri)
-   contents = response.body
-}
-
-if contents then
-   # meta タグ
-   contents.sub!(/<head[^>]*>.*<\/head>/im) {|head|
-      unless head.sub!(/<meta\s+([^>]*)charset=[\w_\-]+/im) { "<meta #{$1}charset=EUC-JP" }
-	 head.sub!(/<head[^>]*>/i) {|tag| tag + META_CHARSET }
-      end
-      head
-   } or contents.sub!(/<body/i) { "<head>#{META_CHARSET}</head>\n<body" }
-
-   # スタイル追加
-   contents.sub!(/<head[^>]*>/im) {|head| head + JT_STYLE }
-
-   # リンク修正
-   contents.gsub!(/<(a|link)([^>]*)href=(["']?)http:\/\/(www.)?mozilla.org([!~*'();\/?:\@&=+\$,%#\w.-]+)\3/i) {|href|
-      tag = $1
-      attr = $2
-      path = $5
-      if path =~ /^\/webtools\/bonsai\/\w+\.cgi/
-	 href
-      elsif path.nil?
-	 "<#{tag}#{attr}href=\"/\""
-      else
-	 "<#{tag}#{attr}href=\"#{path}\""
-      end
-   }
-   contents.gsub!(/<a([^>]*)href=(["']?)http:\/\/lxr.mozilla.org([!~*'();\/?:\@&=+\$,%#\w.-]*)\2/im) {|href|
-      "<a#{$1}href=\"/lxr#{$3}\""
+   Net::HTTP.start( uri.host, uri.port ) {|http|
+      response , = http.get(uri.request_uri)
+      contents = response.body
    }
 
-   # テンプレート追加
-   contents.gsub!(/<div id="footer">.*<\/div>/im) {|info|
-      info.sub(/<\/div>$/){|tag| JTP_NOTE.gsub(/THIS_URI/, uri) + tag }
-   } or contents.gsub!(/<\/body>/i) {|body| JTP_NOTE.gsub(/THIS_URI/, uri) + body }
+   if contents then
+      # meta タグ
+      contents.sub!(/<head[^>]*>.*<\/head>/im) {|head|
+         unless head.sub!(/<meta\s+([^>]*)charset=[\w_\-]+/im) { "<meta #{$1}charset=EUC-JP" }
+            head.sub!(/<head[^>]*>/i) {|tag| tag + META_CHARSET }
+         end
+         head
+      } or contents.sub!(/<body/i) { "<head>#{META_CHARSET}</head>\n<body" }
 
-   # 文字コード変換
-   contents = NKF.nkf('-ec', contents)
-else
-   puts "No contents."
+      # スタイル追加
+      contents.sub!(/<head[^>]*>/im) {|head| head + JT_STYLE }
+
+      # リンク修正
+      contents.gsub!(/<(a|link)([^>]*)href=(["']?)http:\/\/(www.)?mozilla.org([!~*'();\/?:\@&=+\$,%#\w.-]+)\3/i) {|href|
+         tag = $1
+         attr = $2
+         path = $5
+         if path =~ /^\/webtools\/bonsai\/\w+\.cgi/
+            href
+         elsif path.nil?
+            "<#{tag}#{attr}href=\"/\""
+         else
+            "<#{tag}#{attr}href=\"#{path}\""
+         end
+      }
+      contents.gsub!(/<a([^>]*)href=(["']?)http:\/\/lxr.mozilla.org([!~*'();\/?:\@&=+\$,%#\w.-]*)\2/im) {|href|
+         "<a#{$1}href=\"/lxr#{$3}\""
+      }
+
+      # テンプレート追加
+      contents.gsub!(/<div id="footer">.*<\/div>/im) {|info|
+         info.sub(/<\/div>$/){|tag| JTP_NOTE.gsub(/THIS_URI/, uri) + tag }
+      } or contents.gsub!(/<\/body>/i) {|body| JTP_NOTE.gsub(/THIS_URI/, uri) + body }
+
+      # 文字コード変換
+      contents = NKF.nkf('-ec', contents)
+   end
+   contents
 end
 
-puts contents
+
+if $0 == __FILE__
+   unless ARGV[0]
+      puts = "Usage: #{$0} url"
+      exit
+   end
+   if contents = moz_jt_fix( ARGV[0] )
+      puts contents
+   else
+      puts "No contents."
+   end
+end
