@@ -12,13 +12,13 @@
 
 <h1>Mozillaの不具合メモ</h1>
 <p>
-私は、基本的に<a href="http://www.mozilla.org/">Mozilla</a>を
+私は、基本的にMS Windows上で<a href="http://www.mozilla.org/">Mozilla</a>を
 常用のウェブブラウザとして使っています。
 他の人にもMozillaを奨める時に
 「『×××』の機能が無いことだけ我慢すれば、十分に実用だよ！」
 と言っています。
 しかし、『×××』にどんなものがあったのか、忘れがちです。
-というわけで、メモっておきます。
+というわけで、そのためのメモです。
 </p>
 <p>
 <strong>注意事項:</strong>
@@ -31,6 +31,13 @@
 
 <h2>バグ一覧</h2>
 <dl>
+  <dt>印刷
+  <dd>印刷のデフォルト設定（ページサイズなど）が反映されない。
+      特に、起動するたびに、
+      ページサイズがLetterサイズになってしまうのが不便です。
+      （Mozilla 0.9.8 頃からの現象のようです）
+  <dd>cf. <a href="http://bugzilla.mozilla.gr.jp/show_bug.cgi?id=1011">[bugzilla-jp 1011]</a>, <a href="http://bugzilla.mozilla.org/show_bug.cgi?id=123554">[bugzilla 123554]</a>
+
   <dt>FTP
   <dd>プロキシを通さない直接接続で FTP した時に、
       ファイルの一覧などが取得できないみたいです。
@@ -46,6 +53,8 @@
       インストーラがそれを自動認識してJava Plug-inを使うようになるはずですが、
       なぜか手元ではできない場合がありました。
       (再現条件は不明)
+  <dd>一時的な解決策: インストール時にJDKをインストールしたディレクトリの<code>bin/NP*.dll</code>を Mozilla の<code>plugins/</code>ディレクトリにほうりこんでおく。
+  <dd>cf. <a href="http://www.mozilla.org/releases/mozilla0.9.8/#java">Mozilla 0.9.8 Release Notes: Java</a>
 
 </dl>
 
