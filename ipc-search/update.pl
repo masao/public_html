@@ -108,4 +108,5 @@ sub update_news($%) {
 	    print HTML $line;
 	}
     }
+    close(HTML);
 }
