@@ -58,6 +58,7 @@ if (strlen($text) > 0) {
 <title>TrueTypeフォントのテスト</title>
 </head>
 <body>
+<div class="last-update">公開日: 2003年06月24日</div>
 <!-- hhmts start -->
 <div class="last-update">最終更新日: 2003年06月24日</div>
 <!-- hhmts end -->
@@ -66,12 +67,12 @@ if (strlen($text) > 0) {
 PHPに同梱されているGDライブラリの機能を使って、
 各種TrueTypeフォントの文字をPNG画像として表示します。
 </p>
-<form action="./test-kochi.php" method="POST">
+<form action="./test-ttf.php" method="POST">
 <div>
 <textarea name="text" rows="5" cols="80">Hello, World!
 ここに文章を書いてください。</textarea><br>
 フォント: <select name="type">
-  <option value="kochi-gothic" selected>東風ゴチック</option>
+  <option value="kochi-gothic">東風ゴチック</option>
   <option value="kochi-mincho">東風明朝</option>
   <option value="mikachan">みかちゃんフォント</option>
   <option value="batang">Baekmuk明朝（batang）</option>
@@ -96,7 +97,7 @@ PHPに同梱されているGDライブラリの機能を使って、
 </p>
 <ul>
   <li><a href="http://sourceforge.jp/projects/efont/">東風フォント</a>: kochi-substitute-20030623.tar.bz2
-  <li><a href="http://www.mikachan-font.com">みかちゃんフォント</a>: mikachanfont-8.8.tar.bz2
+  <li><a href="http://mikachan-font.com">みかちゃんフォント</a>: mikachanfont-8.8.tar.bz2
   <li><a href="ftp://ftp.mizi.com/pub/baekmuk">Baekmuk</a>（※ 韓国語用です）: baekmuk-ttf-2.1.tar.gz
 </ul>
 <hr>
