@@ -20,6 +20,8 @@ dt {
 }
 code, pre {
   color: navy;
+  white-space: pre;
+  text-indent: 0;
 }
 
 div.id {
