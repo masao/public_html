@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-JP">
+<link rel="stylesheet" href="../default.css" type="text/css">
+<link rev="made" href="mailto:masao@ulis.ac.jp">
+<title>mnewsprint</title>
+</head>
+
+<body>
+
+<h1>mnewsprint</h1>
+<p>
+mnewsprint はメール記事を整形して印刷するためのツールです。
+整形にはLaTeX2eを利用します。
+</p>
+
+<h2>目次</h2>
+<ul>
+  <li><a href="#feature">特徴</a>
+  <li><a href="#install">インストール方法</a>
+  <li><a href="#usage">使い方 &amp; 設定</a>
+  <li><a href="#download">ダウンロード</a>
+  <li><a href="#similar">類似ソフトウェア</a>
+  <li><a href="#contact">連絡先</a>
+</ul>
+<hr>
+
+<h2><a name="feature">特徴</a></h2>
+<ul>
+  <li>LaTeX2eによる*比較的*きれいな出力。
+  <li>出力ヘッダを指定可能。
+  <li>メールの引用部分をグレイで出力。
+</ul>
+<h2><a name="install">インストール方法</a></h2>
+<pre>
+        % ./configure
+        % make
+        % make install
+</pre>
+<p>としてインストールしてください。デフォルトでは、</p>
+<pre>
+        /usr/local/bin/mnewsprint
+                   man/man1/mnewsprint.1
+</pre>
+<p>
+にインストールされます。
+</p>
+<p>
+詳しいインストール方法は<a href="INSTALL">INSTALL</a>をご覧下さい。
+</p>
+
+<h2><a name="usage">使い方 &amp; 設定</a></h2>
+<p>
+<code>mnewsprint(1)</code>を参照してください。
+</p>
+<p>
+mnews で使うには <code>~/.mnews_setup</code> 中に以下の設定を加えて下さい。
+</p>
+<pre>      lpr_command: nkf -em | mnewsprint</pre>
+<p>
+その他のMUA（Muttなど）でも同様の設定を加えることで使えるようになると思います。
+</p>
+<h2><a name="download">ダウンロード</a></h2>
+<p>
+mnewsprint は <a href="http://www.gnu.org/copyleft/gpl.html">GNU Generic Public License version 2</a>に従ったフリーソフトウェアとします。
+</p>
+<ul>
+  <li><a href="mnewsprint-0.0.2.tar.gz">mnewsprint-0.0.2.tar.gz</a>
+</ul>
+
+<h2><a name="similar">類似ソフトウェア</a></h2>
+<ul>
+  <li><a href="http://muttprint.sourceforge.net/">muttprint</a>:
+      日本語が通らなかったのでmnewsprintを作りました。
+</ul>
+
+<h2><a name="contact">連絡先</a></h2>
+<p>
+バグ報告・要望・感想などは <a href="mailto:masao@ulis.ac.jp">masao@ulis.ac.jp</a> までお寄せ下さい。お気軽にどうぞ。
+</p>
+
+<hr>
+<address>
+高久雅生 (Takaku Masao)<br>
+<a href="http://nile.ulis.ac.jp/~masao/">http://nile.ulis.ac.jp/~masao/</a>, 
+<a href="mailto:masao@ulis.ac.jp">masao@ulis.ac.jp</a>
+</address>
+<div class="id">$Id$</div>
+</body>
+</html>
