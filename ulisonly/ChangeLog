@@ -1,3 +1,78 @@
+2002-02-03  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 新マシン: platinum が故障したので修理に出してくださいと言ったら、
+
+	「どうせなら新しいマシンを買いませんか？」
+
+	と言われてしまった。。。
+
+	* cosmo.ulis.ac.jp: 捨てることになった。
+
+	さようなら。。。
+
+	* 引越しメモ: 院生室各部屋にある冷蔵庫はどうしよう…。
+
+2002-01-31  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 母のたわごと: だいぶ前にひょんなことでたどりついたサイト。
+
+	あるフリーウェアの作者（現在、大学生）の母が書いている日記もどきが
+	あったのを探していたが、やっと見つけた。 :-)
+
+	http://www.takenet.or.jp/~ryuuji/
+
+	* Version Control System: CVS 以外では、Bitkeeper というのがあるら
+	しい。
+	http://www.bitkeeper.com/
+	
+	* 晩飯: 「とんQ」に行ってきた。
+
+	ゴマが出てこなかったり、レベルが落ちた気がする…。
+
+	* IME: Microsoft IME 2000 だと、「おおはしきょせん」がそのまま変換
+	されない。
+
+	SKKだと SKK-JISYO.L に登録されている模様。
+
+2002-01-30  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 家賃: 払ってきた。
+
+	* アルバイト: 追加したい処理。
+
+	・<textarea> の内容は、
+		s/\r?\n/<br>/g;
+	  した方が良いかも…。（Macからも確かめて）
+
+2002-01-29  Masao Takaku  <masao@ulis.ac.jp>
+
+	* アルバイト: CGIのテスト始まる。
+
+	あんまりひどいバグは無いものと願いたい…。
+
+	* 政治: 大橋巨泉が議員辞職を発表した。
+
+	ただのアホか、こいつは!?
+
+2002-01-22  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 「にいさんたちへ100の質問」:
+	http://www.galstown.ne.jp/4/fleamarket/daisuki/mens100.html
+
+	* アルバイト: メール送出用スクリプトを書いてみた。
+
+	* アイデア: NAS2002のアルバイトに関連して思いついたアイデア。
+
+	「Web上から処理可能な受付システム」
+
+	ほとんど全ての機能をWebベースで行なえるとうれしいかも。
+	メールの送信などもWebから行なう。	
+
+	ついでに、受付項目の定義、更新もWebから行なえるとうれしい。
+	（XFormsみたいのを使って!?）
+
+	ただし、今回のアルバイトには間に合わないからダメだけどね。
+
 2002-01-21  Masao Takaku  <masao@ulis.ac.jp>
 
 	* 香辛飯屋: ひさびさに夕飯を食いに「香辛飯屋」に行った。
@@ -120,7 +195,7 @@
 	論文に文字鏡フォントを使い、LaTeX 校正をしている情報知識学会に投稿
 	する場合、向こうに文字鏡環境がないとダメそう。
 
-	とりあえず、今回は
+	とりあえず、今回は METAFONT のソースを添付することで解決（？）。
 
 	* 不在票: 家に帰ったら、クロネコヤマトの不在票が入っていた。
 
@@ -231,7 +306,7 @@
 	http://directory.google.com/Top/Computers/Software/Internet/Site_Management/Content_Management/
 	あたりから辿れる。
 
-	* Google holiday?: 今回のロゴはは何だろうか？
+	* Google holiday?: 今回のロゴは何だろうか？
 	http://www.google.com/doodle4.html
 
 	「ハッピーホリデー」というんだから、Google 自体の休日かしら？
