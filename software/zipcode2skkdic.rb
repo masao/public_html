@@ -35,6 +35,7 @@ class ConvertZipcode
       annotation = annotation.delete("\"")
 
       # 「○○郡××町」の単位を2つに分割する
+      # FIXME: ぐぐんまぐんぐんままち /群馬郡群馬町/
       if (w = /^(.+郡)(.+)$/.match(word)) and (e = /^(.+ぐん)(.+)$/.match(entry))
 	 register(e[1], w[1], annotation)
 	 register(e[2], w[2], annotation + w[1])
