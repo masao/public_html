@@ -31,11 +31,13 @@ dbh['AutoCommit'] = false
 dbh.transaction do
    dbh.do(CREATE_TABLE)
    sth = dbh.prepare("INSERT INTO zipcode VALUES(?, ?, ?, ?, ?, ?)");
+   logfile = open("zipcode.log.#{Time.now.strftime("%Y%m%d")}", "w")
    ARGF.each_line do |line|
       data = line.split(/,/).map{|e| e.sub(/^\"(.*)\"$/, '\1'); }
       sth.execute(data[2], data[6], data[7], data[4], data[8], data[5]);
-      puts [ data[2], data[6], data[7], data[8] ].join(" ")
+      logfile.puts [ data[2], data[6], data[7], data[8] ].join(" ")
    end
+   logfile.close
 end
 
 File.mv(DBNAME_TMP, DBNAME, true)
