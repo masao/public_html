@@ -69,7 +69,7 @@ EOF
       result = <<EOF
 <p class="notice">
 本ページは個人的に運営している非公式のものです。<br>
-<a href="http://www.ulis.ac.jp/ipc/ipnews/ipcnews_new.html">センターニュース</a>を機械的に解析して生成しているため、内容に不正確な情報が含まれている可能性があります。より正確な情報については、<a href="http://www.ulis.ac.jp/ipc/">公式サイト</a>をご覧ください。
+<a href="#{NEWS_URI}">センターニュース</a>を機械的に解析して生成しているため、内容に不正確な情報が含まれている可能性があります。より正確な情報については、<a href="http://www.slis.tsukuba.ac.jp/ipc/">公式サイト</a>をご覧ください。
 </p>
 <hr>
 <address>
