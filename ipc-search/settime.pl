@@ -4,8 +4,8 @@
 # This script was originally written by Koji Kishi <kis@hdsoft.sony.co.jp>
 # from [namazu:01625](avocado).
 
-use MD5;
-$md5 = new MD5;
+use Digest::MD5;
+$md5 = new Digest::MD5;
 
 $file = '/home/masao/public_html/ipc-search/digest';
 $dir = '/home/masao/Namazu/ipc-search/www.ulis.ac.jp/';
