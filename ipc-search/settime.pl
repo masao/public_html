@@ -1,4 +1,8 @@
 #!/usr/local/bin/perl
+# $Id$
+#
+# This script was originally written by Koji Kishi <kis@hdsoft.sony.co.jp>
+# from [namazu:01625](avocado).
 
 use MD5;
 $md5 = new MD5;

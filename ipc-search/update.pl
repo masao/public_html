@@ -36,6 +36,12 @@ print "文書群を収集します。... ";
 system "$Wget --mirror --no-parent -l 0 -R .gif,.GIF,.jpg,.JPG,.jpeg,.avi,.mov,.mpg,.mpeg,.pic,.pict,.ppm,.tiff,.tiff,.vrml,.wrl,.xpm,.ps,.aif,.au,.cdr,.hcom,.mid,.pcm,.ra,.ram,.smp,.snd,.wav,.wave,.hqx,.lzh,.sit,.tar,.tgz,.zip,.exe,.class --wait=5 --proxy=off --output-file=wget.log $TargetUrl" ;
 print "完了 - " . `date` ."\n";
 
+# 収集したページのうち、LastModifiedヘッダを返さないページの更新日付を
+# 調整する。
+print "ファイルの更新日付を調整します。... ";
+system "$HtmlDir/settime.pl";
+print "完了 - " . `date` ."\n";
+
 # 次に、Indexingする。
 print "Indexing を行います。\n";
 if (-d "www.ulis.ac.jp") {
