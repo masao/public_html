@@ -50,6 +50,11 @@ if (-d "www.ulis.ac.jp") {
 }
 print "完了 - " . `date` ."\n";
 
+print "お知らせを更新します。... ";
+my %loginfo = get_loginfo("$BaseDir/NMZ.log");
+update_news("$HtmlDir/body.txt", %loginfo);
+print "完了 - ". `date` ."\n";
+
 # 最後にトップページを自動的に更新させる。
 print "トップページを更新します。... ";
 if (-f "$BaseDir/NMZ.head.ja" &&
@@ -59,4 +64,48 @@ if (-f "$BaseDir/NMZ.head.ja" &&
     print "完了 - " . `date` ."\n";
 } else {
     warn "必要なファイルが見つかりません。";
+}
+
+sub get_loginfo($) {
+    my ($file) = @_;
+    my %info = ();
+    open(LOG, $file) || die "can't open $file: $!";
+    my @tmp = <LOG>;
+    @tmp = reverse @tmp;
+    for my $line (@tmp) {
+	last if ($line =~ /^\[/);
+
+	if ($line =~ /^(Added|Updated|Deleted|Total)\s+Documents:\s+([0-9,]+)/i) {
+	    $info{lc($1)} = $2;
+	}
+    }
+    return %info;
+}
+
+sub update_news($%) {
+    my ($file, %info) = @_;
+    my $flag = '<!-- What\'s New -->';	# 目印
+    my $date = sprintf("%4d-%.2d-%.2d",
+		       (localtime)[5]+1900,
+		       (localtime)[4]+1,
+		       (localtime)[3]);
+
+    open(HTML, $file) || die "can't open $file: $!";
+    my @tmp = <HTML>;
+    close(HTML);
+
+    open(HTML, ">$file") || die "can't open $file: $!";
+    for my $line (@tmp) {
+	if ($line =~ /$flag/i) {
+	    print HTML "$flag\n";
+	    print HTML "  <dt>$date\n";
+	    print HTML "  <dd>インデックスを更新。全 $info{'total'} URL。（";
+	    print HTML "追加 $info{'added'}" if (defined($info{'added'}));
+	    print HTML "、削除 $info{'deleted'}" if (defined($info{'deleted'}));
+	    print HTML "、更新 $info{'updated'}" if (defined($info{'updated'}));
+	    print HTML "）\n";
+	} else {
+	    print HTML $line;
+	}
+    }
 }
