@@ -93,7 +93,7 @@ end
 
 if $0 == __FILE__
    unless ARGV[0]
-      puts = "Usage: #{$0} url"
+      puts "Usage: #{$0} url"
       exit
    end
    if contents = moz_jt_fix( ARGV[0] )
