@@ -38,8 +38,10 @@ JT_STYLE = <<EOF
 </style>
 EOF
 
+USAGE = "Usage: #{$0} url"
+
 unless ARGV[0]
-	puts "Usage: #{$0} uri"
+	puts USAGE
 	exit
 end
 
@@ -56,7 +58,7 @@ if contents then
 	# meta タグ
 	contents.sub!(/<head[^>]*>.*<\/head>/im) {|head|
 		unless head.sub!(/<meta\s+([^>]*)charset=[\w_\-]+/im) { "<meta #{$1}charset=EUC-JP" }
-			head.sub!(/<head[^>]*>/i) {|head| head + META_CHARSET }
+			head.sub!(/<head[^>]*>/i) {|tag| tag + META_CHARSET }
 		end
 		head
 	} or contents.sub!(/<body/i) { "<head>#{META_CHARSET}</head>\n<body" }
@@ -83,7 +85,7 @@ if contents then
 	# テンプレート追加
 	contents.gsub!(/<div class="documentinfo">.*<\/div>/im) {|info|
 		info + JTP_NOTE.gsub(/THIS_URI/, uri)
-	}
+	} or contents.gsub!(/<\/body>/i) {|body| JTP_NOTE.gsub(/THIS_URI/, uri) + body }
 
 	# 文字コード変換
 	contents = NKF.nkf('-ec', contents)
