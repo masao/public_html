@@ -9,7 +9,7 @@ $| = 1;
 my $Wget='/usr/local/bin/wget';
 my $Mknmz='/usr/local/bin/mknmz';
 
-my $WgetOpt = '--mirror -l 0 -R .gif,.GIF,.jpg,.JPG,.jpeg,.png,.PNG,.avi,.mov,.mpg,.mpeg,.pic,.pict,.ppm,.tiff,.tiff,.vrml,.wrl,.xpm,.aif,.au,.cdr,.hcom,.mid,.pcm,.ra,.ram,.smp,.snd,.wav,.wave,.hqx,.lzh,.sit,.tar,.tgz,.zip,.exe,.class --proxy=off'
+my $WgetOpt = '--mirror -l 0 -R .gif,.GIF,.jpg,.JPG,.jpeg,.png,.PNG,.avi,.mov,.mpg,.mpeg,.pic,.pict,.ppm,.tiff,.tiff,.vrml,.wrl,.xpm,.aif,.au,.cdr,.hcom,.mid,.pcm,.ra,.ram,.smp,.snd,.wav,.wave,.hqx,.lzh,.sit,.tar,.tgz,.zip,.exe,.class --proxy=off';
 
 	#ディレクトリ
 my $BaseDir="/home/masao/Namazu/ipc-search";
