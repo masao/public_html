@@ -1,4 +1,4 @@
-<html><body><pre>			☆ インストール方法 ☆
+			☆ インストール方法 ☆
 
 							たかくまさお
 							masao@ulis.ac.jp
@@ -7,26 +7,26 @@
 
   ・Perl5
 	以下から入手できます。
-	<a href="http://www.perl.com/">http://www.perl.com/</a>
+	http://www.perl.com/
 
 	また、Perl5のモジュールPod::Usageを利用していますので、これも
 	インストールしておいてください。（Perl version 5.6.0からは標準
 	モジュールに含まれています）
 	Pod::Usage は PodParser-X.XX.tar.gz に含まれています。（CPAN
-	&lt;<a href="http://cpan.perl.com/">http://cpan.perl.com/</a>&gt; などから入手できます）
+	<http://cpan.perl.com/> などから入手できます）
 
   ・ImageMagick
 	以下から入手できます。
-	<a href="http://www.wizards.dupont.com/cristy/ImageMagick.html">http://www.wizards.dupont.com/cristy/ImageMagick.html</a>
+	http://www.wizards.dupont.com/cristy/ImageMagick.html
 
 
   ・nkf (Network Kanji Filter)
 	以下から入手できます。
-	<a href="ftp://ftp.ie.u-ryukyu.ac.jp/pub/software/kono/">ftp://ftp.ie.u-ryukyu.ac.jp/pub/software/kono/</a>
+	ftp://ftp.ie.u-ryukyu.ac.jp/pub/software/kono/
 
   ・Ghostscript
 	日本語対応したものを入れておいてください。以下から入手できます。
-	<a href="http://www.cs.wisc.edu/~ghost/">http://www.cs.wisc.edu/~ghost/</a>
+	http://www.cs.wisc.edu/~ghost/
 	
 2. configureスクリプトを動かす。
 
@@ -48,4 +48,3 @@
 	  /usr/local/man/man1/imgs2html.1
 			      ps2imgs.1
 以上です。
-</pre></body></html> 
