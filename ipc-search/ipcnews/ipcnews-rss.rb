@@ -9,6 +9,8 @@ require "base64"
 require "pstore"
 require "ipcnews"
 
+BASEURI = "http://nile.ulis.ac.jp/~masao/ipc-search/ipcnews/news.cgi"
+
 rss = []
 db = PStore.new("ipcnews.db")
 db.transaction do
@@ -35,7 +37,7 @@ EOF
 
 rss.each do |item|
    result += <<-EOF
-      <rdf:li rdf:resource="##{encode64(item.title).tr("\n","")}"/>
+      <rdf:li rdf:resource="#{BASEURI}?#{encode64(item.title).tr("\n","")}"/>
    EOF
 end
 
@@ -47,9 +49,9 @@ EOF
 
 rss.each do |item|
    result += <<-EOF
-  <item rdf:about="#{encode64(item.title).tr("\n","")}">
+  <item rdf:about="#{BASEURI}?#{encode64(item.title).tr("\n","")}">
     <title>#{item.title}</title>
-    <link>#{encode64(item.title).tr("\n","")}</link>
+    <link>#{BASEURI}?#{encode64(item.title).tr("\n","")}</link>
     <description>#{item.description}</description>
     <dc:date>#{item.lastmodified}</dc:date>
   </item>
