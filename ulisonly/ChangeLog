@@ -1,3 +1,84 @@
+2001-07-05  Masao Takaku  <masao@ulis.ac.jp>
+
+	* xslt-process: 便利そう。
+	http://xslt-process.sourceforge.net/
+
+	XSLT-process is a minor mode for GNU Emacs/XEmacs which transforms
+	it into a powerful editor with XSLT processing and debugging
+	capabilities.
+
+	* つくば市IT: つかれた…。
+
+	あまりコメントできなかったけど、あんなものでしょう。
+	税金使って仕事するのって大変そう…。思い知りました。
+
+	やっぱり最初の個人でのコメントの段階が一番良かったかもね。
+	あれ以上は勘弁してね。
+
+2001-07-04  Masao Takaku  <masao@ulis.ac.jp>
+
+	* dvpdfm-jpatch: すばらしい。
+	cf. http://hamilcar.phys.kyushu-u.ac.jp/~hirata/dvipdfm/index.html
+
+	さっそく nile に入れてみました。
+	これで ps2pdf しなくても済むようになるかも。
+
+	* GImageView: 画像閲覧ソフト。
+	サムネールの対応などに優れている? なにより、imgs2html のようなソフ
+	トの紹介があるのがうれしい。
+	cf. http://www.homa.ne.jp/~ashie/gimageview/
+
+	* Terraform: テレイン生成。
+	卒研の時にこれがあれば便利だったかも…。
+	VRMLの生成機能はあるんだろうか?
+	cf. http://terraform.sourceforge.net/
+
+2001-07-03  Masao Takaku  <masao@ulis.ac.jp>
+
+	* スーパーサーチエンジン: Pluggable Search Engine が良いかも。
+
+	以下をすべて入れ替え可能な形で記述できるとうれしい。
+	
+	・インデックスのモデル
+	  - 確率モデル
+	  - ベクトル空間モデル
+	・インデックスの構造
+	  - 転置リスト
+	  - Suffix Array
+	  - PAT木
+	  - TRI木
+	  - B+木
+	  - …
+	・各種パラメータ
+
+	問題は、「どのあたりから手をつけるべきか？」というあたり。
+
+	* etaでGTK+を選んだ理由:
+
+	・Cでやれば、YAZとのリンクが容易
+	・フリー（LGPL）
+	・Glibを使って豊富なデータタイプ、関数が利用可能
+
+	* etaの仕様:
+
+	・スレッドを使って、複数のウィンドウを起動可能
+	・複数のDBを同時に検索可能
+	・日本語を含むマルチバイト対応（Unicodeも?）
+	・libyaz.soをリンク
+	・GNU gettextを利用したメッセージの国際化
+	・Z39.50の基本機能に対応
+	・Scan, Sortなどの拡張機能にも随時対応
+
+	* eta: やることいっぱい。
+
+	・ YAZ の呼び出し部分をテスト
+	・ GUI の設計 （紙、Glade、コード）
+	・ 他のZ39.50クライアントの調査 （機能、GUI）
+
+	* つくば市IT: 最終提言のためのミーティング完了。
+
+	みなさん、お疲れでした…。
+
 2001-07-02  Masao Takaku  <masao@ulis.ac.jp>
 
 	* 修士ゼミ: 次回以降ゼミで何をやるかでうまく意見統一が図れなかった。
