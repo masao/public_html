@@ -1,10 +1,19 @@
 body {
   background-color: #aaffaa;
   line-height: 120%;
-  font-family: verdana, arial, helvetica, Sans-Serif;
+  font-family: verdana, arial, helvetica, sans-serif;
 }
 h1 {
   text-align: center;
+}
+p, dd {
+  text-indent: 1em;
+}
+dt {
+  font-weight: bold;
+}
+code, pre {
+  color: navy;
 }
 
 div.id {
