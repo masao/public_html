@@ -13,7 +13,7 @@ rescue LoadError
    require 'erb/erbl'
 end
 
-VERSION = '$Id$'
+ZIPCODECGI_VERSION = '$Id$'
 
 class String
    def format_zipcode
@@ -50,38 +50,41 @@ class ZipcodeCGI
       @search_time = DBI::Utils.measure do
 	 if @keyword
 	    sql = ""
+	    args = []
 	    case @keyword
 	    when /^[0-9\-]+$/
-	       sql << "where zipcode7 like '#{ @keyword.delete("-") }%'"
+	       sql << "zipcode7 like ?"
+	       args << "#{ @keyword.delete("-") }%"
 	    when /^[ぁ-ん]+$/
-	       escaped_keyword = @keyword.tr('ぁ-ん', 'ァ-ン').gsub('\'', '\'\'')
-	       sql << "where city_yomi like '%#{ escaped_keyword }%' or town_yomi like '%#{ escaped_keyword }%'"
+	       keyword_yomi = @keyword.tr('ぁ-ん', 'ァ-ン')
+	       sql << "city_yomi like ? or town_yomi like ?"
+	       args.push "%#{ keyword_yomi }%", "%#{ keyword_yomi }%"
 	    when /^[ァ-ン]+$/
-	       escaped_keyword = @keyword.gsub('\'', '\'\'')
-	       sql << "where city_yomi like '%#{ escaped_keyword }%' or town_yomi like '%#{ escaped_keyword }%'"
+	       sql << "city_yomi like ? or town_yomi like ?"
+	       args.push "%#{ @keyword }%", "%#{ @keyword }%"
 	    else
-	       sql << "where town like '%#{ @keyword.gsub('\'', '\'\'') }%'"
+	       sql << "city like ? or town like ?"
+	       args.push "%#{ @keyword }%", "%#{ @keyword }%"
 	    end
-	    sth = dbh.prepare("select zipcode7, pref, city, town from zipcode #{sql}")
-	    sth.execute
+	    sth = dbh.prepare("select zipcode7, pref, city, town from zipcode where #{sql} order by zipcode7")
+	    sth.execute(*args)
 	    sth.each do |row|
 	       zipcode7 = row.shift
 	       @result.push(zipcode7.format_zipcode << " " << row.join(" "))
 	    end
 	    sth.finish
 	 elsif @pref and @city
-	    sth = dbh.prepare("select zipcode7, pref, city, town from zipcode where pref = ? and city = ?")
+	    sth = dbh.prepare("select zipcode7, pref, city, town from zipcode where pref = ? and city = ? order by zipcode7")
 	    sth.execute(@pref, @city)
 	    sth.each do |row|
 	       zipcode7 = row.shift
 	       @result.push(zipcode7.format_zipcode << " " << row.join(" "))
 	    end
 	 elsif @pref
-	    sth = dbh.prepare("select distinct city from zipcode where pref = ?")
+	    sth = dbh.prepare("select distinct city from zipcode where pref = ? order by city_yomi")
 	    sth.execute(@pref)
 	    sth.each do |row|
-	       STDERR.puts row.inspect
-	       @result.push "<a href=\"./zipcode.cgi?pref=#{CGI.escape(@pref)};city=#{CGI.escape(row['city'])}\">#{row.join(" ")}</a>\n"
+	       @result.push "<a href=\"./zipcode.cgi?pref=#{CGI.escape(@pref)};city=#{CGI.escape(row['city'])}\">#{h(row[0])}</a>\n"
 	    end
 	 end
       end
