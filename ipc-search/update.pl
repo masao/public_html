@@ -14,61 +14,59 @@ my $WgetOpt = '--mirror -l 0 -R .gif,.GIF,.jpg,.JPG,.jpeg,.png,.PNG,.avi,.mov,.m
 	#ディレクトリ
 my $BaseDir="/home/masao/Namazu/ipc-search";
 my $HtmlDir="/home/masao/public_html/ipc-search";
-
 ######グローバル変数 END
 
-if (-d $BaseDir) {
-    chdir($BaseDir);
-} else {
-    die "ERROR: 作業ディレクトリ $BaseDir がありません。";
-}
+main();
+sub main {
+    if (-d $BaseDir) {
+	chdir($BaseDir);
+    } else {
+	die "ERROR: 作業ディレクトリ $BaseDir がありません。";
+    }
 
-# 以前のファイル群は(一応)バックアップしておく。
-if (-d "www.ulis.ac.jp") {
-    print "古いファイルをバックアップします。... ";
-    system "rm -rf www.ulis.ac.jp.old";
-    system "mv -f www.ulis.ac.jp www.ulis.ac.jp.old";
+    # 以前のファイル群は(一応)バックアップしておく。
+    backup_dirs("www.ulis.ac.jp", "www.cc.tsukuba.ac.jp");
+
+    # まず、ページを収集する。
+    print "文書群を収集します。... ";
+    system "$Wget $WgetOpt --output-file=wget.log -I ipc -I newsys http://www.ulis.ac.jp/ipc/" ;
+    system "$Wget $WgetOpt --append-output=wget.log --no-parent http://www.cc.tsukuba.ac.jp/kasuga/";
     print "完了 - " . `date` ."\n";
-}
 
-# まず、ページを収集する。
-print "文書群を収集します。... ";
-system "$Wget $WgetOpt --output-file=wget.log -I ipc -I newsys http://www.ulis.ac.jp/ipc/" ;
-system "$Wget $WgetOpt --append-output=wget.log --no-parent http://www.cc.tsukuba.ac.jp/kasuga/";
-print "完了 - " . `date` ."\n";
-
-# 収集したページのうち、LastModifiedヘッダを返さないページの更新日付を
-# 調整する。
-print "ファイルの更新日付を調整します。... ";
-system "$HtmlDir/settime.pl";
-print "完了 - " . `date` ."\n";
-
-# 次に、Indexingする。
-print "Indexing を行います。\n";
-if (-d "www.ulis.ac.jp") {
-    $ENV{'LANG'} = "ja";
-    system "$Mknmz --all --checkpoint -f ${HtmlDir}/mknmzrc --replace='s#${BaseDir}/#http://#;' ${BaseDir}/*.ac.jp/";
-} else {
-    die "収集した文書が $BaseDir/www.ulis.ac.jp にありません。";
-}
-print "完了 - " . `date` ."\n";
-
-print "お知らせを更新します。... ";
-my %loginfo = get_loginfo("$BaseDir/NMZ.log");
-update_news("$HtmlDir/body.txt", %loginfo);
-print "完了 - ". `date` ."\n";
-
-# 最後にトップページを自動的に更新させる。
-print "トップページを更新します。... ";
-if (-f "$BaseDir/NMZ.head.ja" &&
-    -f "$HtmlDir/body.txt" &&
-    -f "$BaseDir/NMZ.foot.ja") {
-    system "cat $BaseDir/NMZ.head.ja $HtmlDir/body.txt $BaseDir/NMZ.foot.ja > $HtmlDir/index.html";
-    chdir $HtmlDir;
-    system "cvs commit -m 'regularly update.' body.txt index.html";
+    # 収集したページのうち、LastModifiedヘッダを返さないページの更新日付を
+    # 調整する。
+    print "ファイルの更新日付を調整します。... ";
+    system "$HtmlDir/settime.pl";
     print "完了 - " . `date` ."\n";
-} else {
-    warn "必要なファイルが見つかりません。";
+
+    # 次に、Indexingする。
+    print "Indexing を行います。\n";
+    if (-d "www.ulis.ac.jp" &&
+	-d "www.cc.tsukuba.ac.jp") {
+	$ENV{'LANG'} = "ja";
+	system "$Mknmz --all --checkpoint -f ${HtmlDir}/mknmzrc --replace='s#${BaseDir}/#http://#;' *.ac.jp";
+    } else {
+	die "収集した文書が $BaseDir/www.ulis.ac.jp にありません。";
+    }
+    print "完了 - " . `date` ."\n";
+
+    print "お知らせを更新します。... ";
+    my %loginfo = get_loginfo("$BaseDir/NMZ.log");
+    update_news("$HtmlDir/body.txt", %loginfo);
+    print "完了 - ". `date` ."\n";
+
+    # 最後にトップページを自動的に更新させる。
+    print "トップページを更新します。... ";
+    if (-f "$BaseDir/NMZ.head.ja" &&
+	-f "$HtmlDir/body.txt" &&
+	-f "$BaseDir/NMZ.foot.ja") {
+	system "cat $BaseDir/NMZ.head.ja $HtmlDir/body.txt $BaseDir/NMZ.foot.ja > $HtmlDir/index.html";
+	chdir $HtmlDir;
+	system "cvs commit -m 'regularly update.' body.txt index.html";
+	print "完了 - " . `date` ."\n";
+    } else {
+	warn "必要なファイルが見つかりません。";
+    }
 }
 
 sub get_loginfo($) {
@@ -122,6 +120,18 @@ sub info2str(%) {
     foreach my $k (keys %infostr) {
 	push @tmp, "$infostr{$k} $info{$k} 件" if defined $info{$k}
     }
-    $result .= "（". join(@tmp, "、") ."）\n";
-    return $result;
+    $retstr .= "（". join(@tmp, "、") ."）\n";
+    return $retstr;
+}
+
+sub backup_dirs(@) {
+    my (@dirs) = @_;
+    foreach my $dir (@dirs) {
+	if (-d $dir) {
+	    print "$dir をバックアップします。... ";
+	    system "rm -rf $dir.old";
+	    system "mv -f $dir $dir.old";
+	}
+    }
+    print "完了 - " . `date` ."\n";
 }
