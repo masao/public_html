@@ -14,21 +14,44 @@ sub main {
     close IN;
     my $cont = join('', @tmp);
 
-    my $news = news2html($NEWSFILE);
-    $cont =~ s#(<!-- NEWS -->)(.*)(<!-- NEWS -->)#$1\n$news\n$3#gs;
+    my $latest = get_latest("../archive", "imgs2html");
+    print "Latest: $latest\n";
 
+    my $news = news2html($NEWSFILE);
+
+    $cont = subst_all($cont, "NEWS", $news);
+    $cont = subst_all($cont, "LATEST", "<a href=\"$latest\">$latest</a>");
+
+    rename($HTML, "$HTML.bak") || die "rename error: $!";
     open(HTML, "> $HTML") || die "$HTML: $!";
     print HTML $cont;
 }
 
+sub subst_all($$$) {
+    my ($src, $context, $subst) = @_;
+    $src =~ s#(<!-- $context -->)(.*?)(<!-- $context -->)#$1\n$subst\n$3#gs;
+    return $src;
+}
+
+sub get_latest($$) {
+    my ($dir, $prefix) = @_;
+    opendir(D, $dir) || die "opendir error: $dir: $!";
+    my @files = grep(/^$prefix/i, readdir(D));
+    @files =  map  { $_->[0] }
+	      sort { $b->[1] cmp $a->[1] }
+	      map  { my $tmp = $_; $tmp =~ s/(\d+)/sprintf("%08d", $1)/ge;
+		     [ $_, $tmp ] } @files;
+    return $files[0];
+}
+
 sub news2html($) {
     my ($file) = @_;
-    my $ret = "<dl>\n";
+    my $ret = "<ul>\n";
     open(NEWS, $file) || die "$file: $!";
     while (my $line = <NEWS>) {
 	chomp($line);
 	if ($line =~ /^\[(\S+)\]\s*\(([\d\-]+)\)/) {
-	    $ret .= "<dt>$2: Version $1 ¤ò¸ø³«<dd><ul>\n";
+	    $ret .= "<li><strong>$2</strong>: Version $1 ¤ò¸ø³«<ul>\n";
 	} elsif ($line =~ s/^\s+//) {
 	    $line =~ s/\*/<li>/;
 	    $ret .= "$line\n";
@@ -36,6 +59,6 @@ sub news2html($) {
 	    $ret .= "</ul>\n";
 	}
     }
-    $ret .= "</dl>\n";
+    $ret .= "</ul>\n";
     return $ret;
 }
