@@ -1,4 +1,153 @@
+2003-01-14  Masao Takaku  <masao@ulis.ac.jp>
+
+	* PHP4: cf. [2002-05-24]
+	php-4.3.0 を入れなおしてみる。
+
+	% ./configure  --enable-mbstring --enable-mbstr-enc-trans \
+		--enable-mbregex --with-apxs=/usr/local/apache/bin/apxs \
+		--with-openssl \
+		--with-db3 --with-png --with-zlib \
+		--with-bz2 --enable-exif \
+		--with-gd --enable-gd-native-ttf --with-ttf \
+		--with-jpeg-dir=/usr/local --with-zlib-dir=/usr/local \
+		--with-png-dir=/usr/local \
+		--with-gettext --with-iconv --with-dom \
+		--with-dom-xslt --with-dom-exslt
+	% make
+	% sudo make install
+
+	* msearch: http://www.kiteya.net/script/msearch/
+	「タダなび」で使っていた Web 用全文検索エンジン。
+
+	Perl で書かれていてよくできている感じ。
+	ソースもきれいなのでナイス。
+
+	* 授業をよくする方法 - 若い大学教師への助言 -: from [ARG-150]
+	http://www0.let.kumamoto-u.ac.jp/cs/cu/021216useful.html
+	非常におもしろい。
+	色んな意味でタメになるかも。
+	
+2003-01-13  Masao Takaku  <masao@ulis.ac.jp>
+
+	* デジタルプリント:
+	正月に主に鼓々乃を撮った写真を digipri.com で計 106 枚のプリントを
+	注文。由未子あてに発送しておいた。
+
+	* dc.pl:
+	DL で発表した時の dc.pl が見たいと、慶應SFCのM1の人からメールをも
+	らった。
+
+	どうやら、図書館・情報学科に近いデジタル・アーカイブ関連の研究室に
+	いる人みたい…。
+
+	* 新年: 年末・年始はカゼで寝こむ正月。
+
+2002-12-25  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 投稿: ついに投稿。
+
+	CVS 上では、submit-20021225 というタグを付けておいた。
+
+	* 翻訳さんぽみち: http://www.monjunet.ne.jp/PT/sampo/
+	1〜3回まで読んだところだけど、非常に興味深い。
+
+	from: 論文作成の英養素: http://www.geocities.co.jp/Technopolis/6506/
+
+2002-12-24  Masao Takaku  <masao@ulis.ac.jp>
+
+	* C-Search: http://www.nk.rim.or.jp/~t_kimata/cgi/soft/c-search/
+	下の C-Ticker と同一の作者による検索支援。
+
+	特徴より:
+	・複数の検索エンジンでの検索を支援
+	・Ada, C, COBOL, C++, C#, Delphi, DOS Batch, Eiffel, Fortran,
+	  Haskell, Icon, JAVA, JavaScript, Make, ML, Perl, PHP,
+	  Postscript, Prolog, Python, Ruby, Scheme, Smalltalk, Tcl,
+	  VBScript, ひまわりの 26個のバージョンを用意
+	・柔軟な拡張性。Ｃ−ＳＥＡＲＣＨジェネレータにより対応検索エンジン
+	  を増やしたコードを簡単に生成できます
+
+	26 の言語って…。すごいね。
+
+	* C-Ticker: http://www.nk.rim.or.jp/~t_kimata/cgi/soft/c-ticker/
+	BSD ライセンスで公開されている Java ベースのニュース表示ソフト。
+	RSS0.91 形式しか対応していないのを改良すれば良いのかも…。
+
+	* What is RSS?:
+	http://www.xml.com/pub/a/2002/12/18/dive-into-xml.html
+	実にタイムリな記事。
+
+	* Ranganathan for IAs:
+	http://www.boxesandarrows.com/archives/ranganathan_for_ias.php
+	Information Architecture でもランガナータンか…。
+
+2002-12-23  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 無料ウェブスペース:
+	とりあえず以下のどちらかを使ってみると良いかも…。
+
+	・xrea.com:
+	  長所: CGI の類が自由に設置できるなどの中級者向け機能が魅力
+	  短所: CGI で PATH_INFO が使えないらしい…
+
+	・tsukaeru.net:
+	  長所: 容量無制限
+	  短所: Ruby なし
+
+2002-12-22  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 著作権のひろば: http://cozylaw.com/copy.html
+	著作権についての解説など。
+
+	* Managing Gigabytes for Java: http://vigna.dsi.unimi.it/MG4J/
+	あの MG の Java 実装。
+
+	* ipc-search:
+	うまくいかずに一からインデクシングするハメになった場合のメモ。
+
+	  % cd ~/Namazu/ipc-search
+	  % mkdir nmz-backup
+	  % cp NMZ.* nmz-backup
+	  % mknmz --all ...
+	  % cp nmz-backup/NMZ.{head.ja,foot.ja,body.ja,result.normal.ja,slog} .
+
+	最後に、NMZ.head.ja の最初の方にある、文書数、キーワード数を手で正
+	確なものに変えておく。
+
+2002-12-20  Masao Takaku  <masao@ulis.ac.jp>
+
+	* Google Viewer: http://labs.google.com/gviewer.html
+	Google の検索結果をスライドショー風に見れる。
+	そのサイトの画面イメージも表示される。
+
+	* ipc-search:
+	春日サブセンターのページを入れると、だいぶスクリプトを変える必要が
+	出た…。
+
+	* 引き継ぎ:
+	dais に一応テープの交換などについて教えた。
+
+	ただ、dais は入室の申請をまだしていなかったので、まだ完了しなかっ
+	たが…。
+
+	* daypct: http://daypct.minidns.net/
+	写真日記サイト。
+
+	* HotSheet: http://www.johnmunsch.com/projects/HotSheet/
+	RSS ニュースを取り込んでまとめて表示する Java ベースのツール。
+
+	せっかく RSS を作ったので、一応確認を。
+
+	こんな感じで Windows のデスクトップ上に RSS のニュースを常に表示す
+	るソフトが欲しいかも…。
+
 2002-12-19  Masao Takaku  <masao@ulis.ac.jp>
+
+	* XHTML EDEN: http://ryuzi.dyndns.org/xhtml/
+	XHTMLに特化した情報サイト。
+
+	* DOM Tooltip: http://freshmeat.net/projects/domtt/
+	クロスプラットホームな JavaScript による Tooltip 用ライブラリ。
 
 	* [RFE] stripping URI-parts of fragment, query:
 	http://mozdev.org/bugs/show_bug.cgi?id=2711
