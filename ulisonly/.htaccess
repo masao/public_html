@@ -1,4 +1,5 @@
 Order deny,allow
 Deny from all
 Allow from .ulis.ac.jp
+Allow from .slis.tsukuba.ac.jp
 Allow from 133.51.
