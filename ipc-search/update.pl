@@ -13,8 +13,6 @@ my $Mknmz='/usr/local/bin/mknmz';
 my $BaseDir="/home/masao/Namazu/ipc-search";
 my $HtmlDir="/home/masao/public_html/ipc-search";
 
-	#その他
-my $TargetUrl="http://www.ulis.ac.jp/ipc/ http://www.ulis.ac.jp/newsys/";
 ######グローバル変数 END
 
 if (-d $BaseDir) {
@@ -33,7 +31,7 @@ if (-d "www.ulis.ac.jp") {
 
 # まず、ページを収集する。
 print "文書群を収集します。... ";
-system "$Wget --mirror --no-parent -l 0 -R .gif,.GIF,.jpg,.JPG,.jpeg,.avi,.mov,.mpg,.mpeg,.pic,.pict,.ppm,.tiff,.tiff,.vrml,.wrl,.xpm,.ps,.aif,.au,.cdr,.hcom,.mid,.pcm,.ra,.ram,.smp,.snd,.wav,.wave,.hqx,.lzh,.sit,.tar,.tgz,.zip,.exe,.class --wait=5 --proxy=off --output-file=wget.log $TargetUrl" ;
+system "$Wget --mirror --no-parent -l 0 -R .gif,.GIF,.jpg,.JPG,.jpeg,.avi,.mov,.mpg,.mpeg,.pic,.pict,.ppm,.tiff,.tiff,.vrml,.wrl,.xpm,.ps,.aif,.au,.cdr,.hcom,.mid,.pcm,.ra,.ram,.smp,.snd,.wav,.wave,.hqx,.lzh,.sit,.tar,.tgz,.zip,.exe,.class --wait=5 --proxy=off --output-file=wget.log -I ipc -I newsys http://www.ulis.ac.jp/" ;
 print "完了 - " . `date` ."\n";
 
 # 収集したページのうち、LastModifiedヘッダを返さないページの更新日付を
@@ -45,7 +43,7 @@ print "完了 - " . `date` ."\n";
 # 次に、Indexingする。
 print "Indexing を行います。\n";
 if (-d "www.ulis.ac.jp") {
-    $ENV{'LANG'} = "ja_JP.EUC";
+    $ENV{'LANG'} = "ja";
     system "$Mknmz --all --checkpoint --use-chasen --replace='s#${BaseDir}/#http://#;' ${BaseDir}/www.ulis.ac.jp/";
 } else {
     die "収集した文書が $BaseDir/www.ulis.ac.jp にありません。";
