@@ -26,6 +26,9 @@ my $bgcolor_head = '#00A020';
 # メールアドレス
 my $address = 'masao@ulis.ac.jp';
 
+# ソートを逆順にするか？
+my $REVERSE = undef;
+
 # 項目のラベル
 my @TABLE_LABEL = ('項番', '問題点', '対策状況', '発生日', '対策日');
 
@@ -35,7 +38,9 @@ my $SCRIPT_NAME = $q->script_name();
 my $page = escape_html($q->param('page')) || 0;
 my $search = escape_html($q->param('search')) || "";
 my $sort = escape_html($q->param('sort')) || 0;
+$REVERSE = 1 if $sort =~ /r$/;
 
+### 各項目を入れる作業用の配列
 my @problems = ();
 
 main();
@@ -71,6 +76,7 @@ EOF
 	push(@problems, \@tmp);
     }
     @problems = sort { fncmp($a->[$sort], $b->[$sort]) } @problems;
+    @problems = reverse @problems if defined $REVERSE;
 
     print <<EOF;
 <hr>
@@ -78,7 +84,12 @@ EOF
 <tr bgcolor="$bgcolor_head">
 EOF
     for (my $i = 0; $i < @TABLE_LABEL; $i++) {
-	print "<th><a href=\"$SCRIPT_NAME?sort=$i;search=$search\">$TABLE_LABEL[$i]</a></th>\n";
+	print <<EOF;
+<th>
+<a href="$SCRIPT_NAME?sort=$i;search=$search">$TABLE_LABEL[$i]</a>
+<a href="$SCRIPT_NAME?sort=${i}r;search=$search">(*)</a>
+</th>
+EOF
     }
     print "</tr>\n";
 
