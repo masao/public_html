@@ -1,0 +1,23 @@
+Options +ExecCGI
+
+# if you run p-album2 with symbolic link, use settings below.
+#Options +FollowSymLinks
+
+AddHandler cgi-script .rb
+DirectoryIndex index.rb
+
+<Files "*.rhtml*">
+	deny from all
+</Files>
+
+<Files "p-album.*">
+	deny from all
+</Files>
+
+<Files update.rb>
+AuthType Basic
+AuthName "private area"
+AuthUserFile /home/masao/public_html/private/.htpasswd
+require user masao
+</Files>
+
