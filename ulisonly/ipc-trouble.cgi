@@ -31,6 +31,7 @@ my @TABLE_LABEL = ('項番', '問題点', '対策状況', '発生日', '対策日');
 
 # CGIパラメータ
 my $q = new CGI;
+my $SCRIPT_NAME = $q->script_name();
 my $page = escape_html($q->param('page')) || 0;
 my $search = escape_html($q->param('search')) || "";
 my $sort = escape_html($q->param('sort')) || 0;
@@ -50,7 +51,7 @@ EOF
 
     print <<EOF;
 <hr>
-<form method="GET" action="$ENV{'SCRIPT_NAME'}">
+<form method="GET" action="$SCRIPT_NAME">
 <p>正規表現:
 <input type="text" name="search" value="$search">
 <input type="hidden" name="sort" value="$sort">
@@ -77,7 +78,7 @@ EOF
 <tr bgcolor="$bgcolor_head">
 EOF
     for (my $i = 0; $i < @TABLE_LABEL; $i++) {
-	print "<th><a href=\"$ENV{'SCRIPT_NAME'}?sort=$i;search=$search\">$TABLE_LABEL[$i]</a></th>\n";
+	print "<th><a href=\"$SCRIPT_NAME?sort=$i;search=$search\">$TABLE_LABEL[$i]</a></th>\n";
     }
     print "</tr>\n";
 
@@ -113,7 +114,7 @@ sub fncmp() {
 }
 
 sub print_pages() {
-    my $base_url = "$ENV{'SCRIPT_NAME'}?sort=$sort;search=$search";
+    my $base_url = "$SCRIPT_NAME?sort=$sort;search=$search";
     print "<p>ページ:\n";
     for (my $i = 0; $i*$MAX < @problems; $i++) {
 	if ($i == $page) {
