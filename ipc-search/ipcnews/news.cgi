@@ -132,6 +132,9 @@ if cgi.query_string && cgi.query_string.length > 0
       cgi.out() do
 	 cgi.html_header("Not Found: 「" + CGI.escapeHTML(title) + "」") +
             "<p>記事「#{CGI.escapeHTML(title)}」は存在しません。</p>" +
+	    "<div class=\"navbar\">" +
+	    "<a href=\"#{cgi.script_name}\">[最新]</a>" +
+	    "</div>" +
 	    cgi.html_footer
       end
    end
@@ -150,6 +153,9 @@ elsif cgi.path_info && cgi.path_info.length > 0
 	    "<li><a href=\"#{cgi.script_name}?#{encode64(item.title).tr("\n","")}\">#{CGI.escapeHTML(item.title)}</a> <span class=\"date\">[#{item.lastmodified}]</span>"
          end.join +
 	 "</ul>" +
+	    "<div class=\"navbar\">" +
+	    "<a href=\"#{cgi.script_name}\">[最新]</a>" +
+	    "</div>" +
 	 cgi.html_footer
    end
 else
