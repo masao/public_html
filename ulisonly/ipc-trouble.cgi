@@ -91,6 +91,7 @@ EOF
     print_pages();
     print <<EOF;
 <hr><address>
+<a href="http://nile.ulis.ac.jp/~masao/ulisonly/ipc-trouble.cgi">http://nile.ulis.ac.jp/~masao/ulisonly/ipc-trouble.cgi</a><br>
 本ページは個人的に作成しているものです。
 お問い合わせは<a href="mailto:$address">$address</a>までお願いします。
 </address>
