@@ -1,0 +1,26 @@
+<hr>
+<p>
+本学の総合情報処理センターが提供している文書群の全文検索サービスを提供しています。
+センターが電子的に提供しているマニュアルなどの検索に有用だと思います。
+</p>
+<p>
+検索対象は
+</p>
+<ul>
+  <li><a href="http://www.ulis.ac.jp/ipc/">総合情報処理センター</a>
+  <li><a href="http://www.ulis.ac.jp/newsys/">メインコンピュータシステム</a>
+</ul>
+<p>
+の各ページからリンクのたどれるHTML、テキスト文書です。
+</p>
+<p>
+検索システムの構築には以下のソフトウェアを利用しています。
+</p>
+<ol>
+  <li>WWW巡回取得ツール<a href="http://www.gnu.org/software/wget/">GNU Wget</a>
+  <li>全文検索システム<a href="http://www.namazu.org/">Namazu</a>
+  <li>日本語形態素解析システム<a href="http://cl.aist-nara.ac.jp/lab/nlt/chasen/">茶筌</a>
+</ol>
+<p>
+なお、<strong>学外からは検索できないよう設定しています。</strong>
+</p>
