@@ -1,3 +1,748 @@
+2002-11-18  Masao Takaku  <masao@ulis.ac.jp>
+
+	* キーの無効化:
+	ノートPCで Enter キーの隣に Home, End, PgUp, PgDown キーが並んでい
+	る配列のキーボードは使いづらい（編集中に間違えて Home などを押して
+	しまってカーソルが移動してしまう）。
+
+	そこで、これらのキーを無効化するツールを探してみた。
+	ベクタにいろいろあった。
+	  cf. http://www.vector.co.jp/vpack/filearea/winnt/util/operate/keyboard/index.html
+
+	・ChageKey: http://www.aa.alpha-net.ne.jp/satoshic/
+	・KeySwap: http://www.asahi-net.or.jp/~ee7k-nsd/
+	（どちらも WinNT/2000/XP 用）
+
+	どちらかというと、ChangeKey の方がとっつきやすいインタフェース。
+
+2002-11-17  Masao Takaku  <masao@ulis.ac.jp>
+
+	* org.apache.xalan.xslt.Process doesn't work in Japanese
+	environment:
+	http://developer.java.sun.com/developer/bugParade/bugs/4662527.html
+	アホな問題やな…。
+
+	で、付属の Xalan をやめて、最新の xalan.jar を使うにはどうすれば良
+	いのかなと思って探してみると、以下のようにするらしい。
+
+	  java -Djava.endorsed.dirs=/home/masao/class ...
+
+	/home/masao/class には、xalan.jar の置いてあるディレクトリを書く。
+	  cf. http://java.sun.com/xml/jaxp/faq.html#override
+
+	* XSLTにおけるURIエスケープ:
+	  <xsl:output method="html" encoding="EUC-JP"/>
+	  ...
+	  <xsl:template match="keyword">
+	  <a href="foo.cgi?search={.}"><xsl:value-of select="."/></a>
+	  </xsl:template>
+
+	上記のようなXSLTを、
+
+	  <keyword>化学</keyword>
+	
+	上記のようなXML片に対して適用すると、
+
+	  XT:		<a href="foo.cgi?search=化学">化学</a>
+	  XalanJ:	<a href="foo.cgi?search=%E5%8C%96%E5%AD%A6">化学</a>
+	  Libxslt:	<a href="foo.cgi?search=%E5%8C%96%E5%AD%A6">化学</a>
+
+	となる。つまりURIエスケープが UTF-8 ベースでなされてしまうのだ。
+
+	仕様書には以下の記述があった。
+	http://www.w3.org/TR/xslt#section-HTML-Output-Method
+	[16.2 HTML Output Method]:
+	    The html output method should escape non-ASCII characters in
+	    URI attribute values using the method recommended in Section
+	    B.2.1 of the HTML 4.0 Recommendation.
+
+	libxslt のバグDBでは、この記述を受けて、この動作を妥当としている。
+	  cf. http://bugzilla.gnome.org/show_bug.cgi?id=92438
+
+	また、Xalan-JのバグDBには、XSLT仕様のエディタに問合せをして、2.0か
+	らは escape-uri-attributes というパラメータが提供されるようになる、
+	という記述がある。
+	  cf. http://nagoya.apache.org/bugzilla/show_bug.cgi?id=13754
+	      http://www.w3.org/TR/xslt20/
+
+	一番単純な workaround は全ての処理を UTF-8 ベースで行うことかな？
+
+2002-11-16  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 散財（家）: http://www.spc.gr.jp/waste/person.rhtml?person=%A4%C8%A4%B7%A4%A2%A4%AD;date=2002#1113
+
+	* 創作のためのアイデア発想術:
+	http://www.asahi-net.or.jp/~ul1f-hk/idea.html
+	作家向けだが、参考になる。
+
+	from 情報整理 http://ryuji.joetsu.info/index.php?%5B%5B%BE%F0%CA%F3%C0%B0%CD%FD%5D%5D
+
+2002-11-15  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 確認ダイアログ（Mozilla）:
+	Mozilla を使っていて、何度も C-w と間違えて C-q を押してしまって、
+	開いていたタブの情報が消えてしまっているので、NN4みたいに確認ダイ
+	アログが出てほしい。
+
+	とりあえず、以下のバグに Vote しておいた。
+	・too easy to hit ctrl-q instead of ctrl-w:
+	  http://bugzilla.mozilla.org/show_bug.cgi?id=52821
+	・Multi-tabbed windows should confirm close:
+	  http://bugzilla.mozilla.org/show_bug.cgi?id=108973
+
+	議論を読んでいると、IEみたいに Mozilla 全体を終了させる操作キーは
+	なくてよい、という意見まであって。結構みんな困っているみたい。
+
+	* LHa for UNIX: http://sourceforge.jp/projects/lha/
+	autotool化したものがsf.jp上で配布されている。
+
+	* 論文メモ:
+	中山拓也, 松本裕治. シソーラスへの未登録語の自動登録. 情報処理学会
+	自然言語処理 研究報告. no. 120, 1997, pp. 103-108.
+
+	SS-KWIC+共起情報のような手法。
+
+	* 深夜のデニーズ:
+	筑波大がテスト前なのか、なんだか人が多かった。
+
+	向かいの男性2人組は「尿道」「クロマチンが豊富」「病理のテスト」
+	「肝臓を完ペキにしよう」「オニオンスライス」とかしゃべってた。
+	あと、携帯で「UFOみた？緑の…」とか怪しげなことも口走ってた。
+
+	こっちは必死に、論文の推敲、オントロジ関連研究の文献調査をしてた。
+
+2002-11-14  Masao Takaku  <masao@ulis.ac.jp>
+
+	* バイト: 天野さんに話を聞いた。
+
+	http://www.nabe-intl.co.jp/
+	ここでLinuxクラスタでバイオ関係のシステム構築の仕事らしい。
+	とりあえず今のところは保留しておく。
+
+	* Photo Studio: http://www.stuffware.co.uk/
+	デジカメ画像管理ソフト。
+
+	欲しかったExifでの日付情報を使ったWebアルバム作成ができてるみたい…。
+
+	* JavaでのExif対応アルバム作成ツール: とりあえずメモ。
+
+	・AlbumMaker: http://www2.airnet.ne.jp/~kenshi/album.html
+	・MakeThumb: http://hp.vector.co.jp/authors/VA019034/photo/MakeThumb.html
+	・ExifExtractor: http://drewnoakes.com/code/exif/
+
+	Exif対応、ソースあり（全て）。
+
+	ちょっと毛色の違うところでは、Picture Metadata Toolkit というのも
+	あり。これは画像用のメタデータを取り扱う形式を決めて、そのツールキッ
+	トを作る動き。C++ or Java。Java版はあまり活発ではない。
+	http://picturemetadata.sourceforge.net/
+
+2002-11-13  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 自然言語処理ポータル: http://www.kc.t.u-tokyo.ac.jp/NLP_Portal/
+	from たつを日記。
+
+	* Webページの日付:
+	Accessibility を考えて、とりあえず以下のように変更した。
+	（こちらの方が読み上げソフトでは自然に読めるらしいので）
+
+	(add-hook 'html-helper-timestamp-hook
+	          '(lambda ()
+	             (insert "<div class=\"last-update\">最終更新日: "
+	                     (format-time-string "%Y年%m月%d日")
+	                     "</div>\n")))
+
+	あと、yomoyomoさんところみたいに、初版公開日も入れたい。CVSの情報
+	をもらってくれば良いかしら…。
+
+	暇があったら、lang="en" とかを考慮して、自動的に英語表記になるよう
+	にもしておきたい。
+
+	* One Way Ticket To PDF - pdf995(1):
+	http://pcweb.mycom.co.jp/column/toolexp/toolexp008.html
+	PDFWriter相当の機能を持ったフリーソスト。
+
+	* 教科書には載らないニッポンのインターネットの歴史ヽ(´ー｀)人
+	(´ー｀)ノ: http://blogdex.tripod.co.jp/encyclopedia/
+	BBS系の情報が中心だが、一般的な情報も入っている。
+
+	自分が古参の部類だと再認識させられた。
+
+	* I can't blog:
+	http://www1.neweb.ne.jp/wa/yamdas/column/technique/blog.html
+	Bloggerの現状。特に日本においては、Web日記サイトなどの隆盛もあり、
+	なかなかblogならではのウリやその斬新さをアピールできていない気がし
+	ます。
+
+	と、個人的に思っていたのだけど、そういう内容で考察してます。
+	っていうか、tdiaryはblogツールでしょ…。
+	
+	* 万能Web出版: http://www.d-pub.co.jp/bwp/index.html
+	20万円で一冊、というのは安いのかな。
+
+2002-11-12  Masao Takaku  <masao@ulis.ac.jp>
+
+	* line-height:
+	CSS の line-height は、パーセント指定ではなく数値指定しないと、
+	<h1>などのフォントサイズの大きな要素で文字が重なってしまう。
+	cf. http://www.pugx3.com/bfi/html/howto/lineheight/index.html
+
+	ついでに、NN4とかの古いブラウザ相手にはスタイルシートを無効化する
+	ようにした方が良いかも…。
+	cf. http://www.asahi-net.or.jp/~xk3t-cb/css/CSSBugsJ.html
+
+2002-11-11  Masao Takaku  <masao@ulis.ac.jp>
+
+	* FormMan: http://www.formman.com/
+	お手軽にフォームの設置が出来る（CGI）。
+
+	無料だけど、会員登録が必要。
+	一部、直観に合わないインタフェースもあるけど、基本的な機能はけっこ
+	うよくできている。
+
+	* 広報つくばML:
+	ウィルスを大量に送ってきた。しかも、To: に講読者と思われるアドレス
+	を含んだ状態で…。ダメすぎ。
+
+	* 田中実:
+	アリー5でめっちゃ軽い弁護士役の声をやっていたので、驚いた。
+	これにはちなっちゃんもビックリしてるだろうね。
+	cf. http://www.nhk.or.jp/kaigai/ally5/chara/2_5_raymond.html
+
+2002-11-08  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 駅名辞書: cf. [2001-12-18]
+	しばらく前から以前見つけたページが、not found だったので探してたら、
+	やっと見つかったので、メモ。
+
+	以下のURLに移動していた模様。
+	Takamoto's page: http://hit.vis.ne.jp/
+
+	* Comparing Open Source Indexers: from knok日記
+	http://www.infomotions.com/musings/opensource-indexers/
+	ローカルデモがあるのが良い。
+
+	* 先生曰く: 「冗談じゃあ、ねぇやぃ…」
+	なんか印象に残りました。
+	個人指導は途中で終わっちゃったけどね。
+
+	* ruby-libexif: http://tam.0xfa.com/ruby-libexif/
+	使えそう。
+
+	* p-album:
+	file2date に Exif 対応機能をつけて、それから、chalow-like な処理を
+	加えれば良さげ。
+	cf. http://nais.to/~yto/tools/file2date/
+
+2002-11-07  Masao Takaku  <masao@ulis.ac.jp>
+
+	* オープンソース・ライセンスの実務:
+	http://icrouton.as.wakwak.ne.jp/pub/e-law/opensource.html
+	弁護士の方が書かれたオープンソースライセンスに関するメモ。
+
+	* The History of Weblogs: とりあえずメモ。
+	http://newhome.weblogs.com/historyOfWeblogs
+
+	* jGloss: http://jgloss.sourceforge.net/
+	日本語学習者用のアノテーション・ソフトウェア。
+
+	HTML出力によるXHTMLのルビ表記が良い感じ。
+	→ http://jgloss.sourceforge.net/karinodouji/kari.html
+
+	* ジャンバー: 寒くなったので、真冬用のジャンバーを着始めた。
+
+2002-11-06  Masao Takaku  <masao@ulis.ac.jp>
+
+	* Web上でのフォトアルバムサービス:
+	いろいろありそうなので、とりあえずYahoo!で見つけたもののみチェック。
+
+	・Yahoo!フォト: http://photos.yahoo.co.jp/
+	容量制限30MBまで。
+	プリントサーブス、共有設定、並べ替え機能など、結構がんばってる。
+
+	・PhotoAccess: http://www.photoaccess.co.jp/
+	容量制限の記載なし。Exif対応。回転機能あり。
+	元々、海外のサイトだったので、日本語版はあまりこなれていない感じ。
+	（通知メールが文字化け、アイコン画像の日本語が汚ない）
+	あと、JavaScriptを多用したインタフェースがちょっと嫌な感じ。
+
+	・Photohighway Japan: http://www.photohighway.co.jp/
+	容量制限100MB。Exif対応。画像編集機能あり。
+	全体に落ち着いた雰囲気の管理画面で好感が持てる。
+	また、専用メールアカウントやメーリングリストもあり。
+
+	・ピクチャーステージ: http://www.picturestage.ne.jp/
+	容量制限50MB。画像編集機能あり。
+	基本的な機能はそろっているが、逆に言うと他サイトと比べての特長はあ
+	まりない。
+
+	・イメージステーション: http://www.imagestation.jp/
+	容量制限の記載なし。回転機能あり。
+	Sony運営のサイト。
+	堅実な作りに好感が持てる。
+
+	・パレットネットアルバム: http://plaza.photonet.co.jp/
+	容量制限記載なし。30日間保管（延長可）。
+	全国チェーン展開の写真店パレットプラザ運営のサイト。
+	プライバシポリシが無いので…。:-<
+
+	* いろいろやりたい初心者のページ:
+	http://rose.zero.ad.jp/~zac06238/index.html
+	Web上にある様々な無料サービスを紹介している。
+	例えば、ネット懸賞、検索エンジン、メールマガジン、地図サイト、路線
+	検索、レシピ、フリー＆シェアウェア、チャット、メッセンジャー、スケ
+	ジュール管理、オンラインアルバムなどなど。
+
+	それぞれのサービスの概要と代表的なサイトのレビューがよくまとまって
+	いる。
+	
+	* テーマパーク4096:
+	http://member.nifty.ne.jp/~houshimaru/tp4096/tp4096.html
+	勝手に各地の公園を取材した内容がメインのサイト。
+
+	非常に面白かった。「なぜにそこまでライドにこだわる!」と言いたくな
+	るような執念に満ちた記述が最高ですね。
+	身近でよく知っている飛鳥山とかも、なぜか展望タワーや桜並木、路面電
+	車などの格好の取材対象には目もくれず、ひたすらライドにこだわった内
+	容のみで構成していた。
+
+	* Graph Visualization Framework: http://gvf.sourceforge.net/
+	Java2ベースのグラフ・ライブラリ。（GPL）
+
+	・SVG, JPG, PNG でのエクスポート機能
+	・GML, GraphXML, CNSなどの読み込み
+	・グラフレイアウト
+	・ネスト構造に対応
+	・Focus+context "fish-eye" interaction
+
+	最後のも含めて、使えそうかも…。
+	開発者は、情報可視化とグラフ描画の研究者。
+	  cf. http://www.cwi.nl/InfoVisu/
+
+	* TerraVision: http://www.tvgeo.com/welcome.shtml
+	3D地形表示ソフトウェア。
+
+	商用のものがMPL(Mozilla Public License)でオープンソース化したらし
+	い。一定の水準にあると思って良いかな?
+
+	* セゾンカード:
+	メモするのを忘れてたけど、昨日郵便局で受け取ってきました。
+	これでWebでお買い物できるね。:-)
+
+	* 研究する人生: http://www.onweb.to/ken9/
+	研究者向け2ch。
+	匿名で議論したいネタがあるなら、良いのかも…。
+
+	* Dnavi: http://dnavi.ndl.go.jp/
+	国立国会図書館が始めたデータベースに関するメタデータ作成プロジェク
+	ト。（国立国会図書館データベース・ナビゲーション・サービス(Dnavi)）
+
+	ついに11/01から公開されたので、見てみた。
+
+	これって「データベース」なのっていう疑問が湧く。
+	ただの「リンク集」が含まれているのにアゼン。
+	「データベース」の定義は難しいから、しょうがないのかなあ。
+
+	* p-album (periodical photo album):
+	デジカメの写真を整理してWeb公開するソフトウェアを作ってみたい。
+
+	☆ 特徴
+	・時系列で閲覧
+	  - chalow-like
+	  - Exif 情報に基づく
+	・Webベース
+	  - URIは以下のような感じ。
+	  - http://www/.../album/2002/08/02/00:01.jpg
+	  			            t00:01.jpg  （サムネール）
+					    00:01.html
+	・タイトル・コメント付与機能
+	・写真の簡単な加工（オリジナルは残す）
+	  - 縮小・拡大
+	  - 回転
+
+	* 朝食: 白菜のミルクスープ。
+	cf. http://cookpad.com/recipe.cfm?RID=68398
+
+	ちょっと濃い目の味だったがおいしかった。
+
+	cookpad.com って色々なレシピが揃っていて良いね。
+
+	SFC の学生が起業したモノ？
+	  cf. http://cookpad.com/support/docs/about.cfm
+
+2002-11-05  Masao Takaku  <masao@ulis.ac.jp>
+
+	* LaTeX2e で ISO8601-like な日付表記:
+
+	  \def\twodigits#1{\ifnum#1<10 0\fi\number#1}
+	  \renewcommand{\today}{\sf\number\year--\twodigits\month--\twodigits\day~\twodigits\hour:\twodigits\minute}
+
+	詳細は、『LaTeX2e [マクロ＆クラス]プログラミング基礎解説』 p.52-53
+	を参照のこと。
+	（\hour, \minute は ptex で提供されているモノなので注意）
+	
+	日付表記については、↓が詳しい。
+	http://www.kanzaki.com/docs/html/dtf.html
+
+	* Mozilla book: http://books.mozdev.org/
+	オライリーから出ている「Creating Applications with Mozilla」という
+	本（洋書）の全文がそのまま公開されている。内容はXULアプリケーショ
+	ンの構築法など。（Open Publication License）
+
+	Mozillaの内部構造を知りたい時に見ると良い。
+
+	* Googlebar: http://googlebar.mozdev.org/
+	Google ToolbarのMozilla（XUL）版。
+
+	日本語版もある。→ http://web.domaindlx.com/kazy/
+
+	* 論文メモ:
+	内藤求, Lars Marius Garshol. トピック・マップ. 第7回SGML/XML研修
+	フォーラム. 東京, 2002-10-22, 情報知識学会. 情報知識学会誌.
+	vol.12, no.3, 2002, p.45-52.
+
+	トピックマップの概説。
+
+	トピックマップって良いかも。特にボトムアップ的に情報構造を構築して
+	いくのに良いのでは。
+	リンク集をこれでやる手もあるかも。
+
+	* Meadow TIPS: http://www.fan.gr.jp/~ring/Meadow/
+	Meadowと銘打っているが、Emacs一般にも適用可能な技がいろいろ。
+
+2002-11-04  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 14年度未踏採択一覧:
+	http://www.ipa.go.jp/NBP/14nendo/14mito/index.html
+
+	今年の分が出たらしい。
+	全体に「ユビキタス」とかのキーワードが多い気がする…。
+
+	気になったところ:
+
+	・CYCLONE: 最強事典サイトの構築: 藤井さんの。
+	http://www.ipa.go.jp/NBP/14nendo/14mito/gaiyou/3-22.html
+
+	・多様なトピックに対応する高精度の情報検索システム:
+	観点の違いとかやるのかな？
+	http://www.ipa.go.jp/NBP/14nendo/14mito/gaiyou/3-25.html
+
+	・自分と同レベルの訳文を出力する翻訳システムの探求:
+	Translation Memoryとかとはどう違うの？
+	http://www.ipa.go.jp/NBP/14nendo/14mito/gaiyou/4-21.html
+
+	・写真画像群による個人の空間軌跡の3Dコンテンツ化支援ツールと、それ
+	を用いた実風景型Webブラウザ:
+	面白そう。純粋に{使|作}ってみたい。
+	http://www.ipa.go.jp/NBP/14nendo/14mito/gaiyou/5-29.html
+
+	・略地図を利用した情報蓄積・管理システム:
+	略地図空間？面白そう。
+	http://www.ipa.go.jp/NBP/14nendo/14mito/gaiyou/6-21.html
+
+	・予測入力方式の拡張: 七色、pobox.el。
+	http://www.ipa.go.jp/NBP/14nendo/14mito/gaiyou/8-17.html
+
+	・RelaxerStudio: RelaxerのGUI版。
+	http://www.ipa.go.jp/NBP/14nendo/14mito/gaiyou/8-56.html
+
+	・「紙」の高度化と、柔軟な階層構造を持つインターフェースの開発:
+	http://www.ipa.go.jp/NBP/14nendo/14mito/gaiyou/9-34.html
+
+2002-11-01  Masao Takaku  <masao@ulis.ac.jp>
+
+	* WL-Enq [WEB アンケート]: http://yomi.pekori.to/wl-enq.html
+	なかなか良さそうなアンケート用CGI。
+	設定もWebからできるのが良いと思う。
+
+2002-10-31  Masao Takaku  <masao@ulis.ac.jp>
+
+	* NDC体系のバグ？:
+	「ギリシア音楽」（762.03）は上位語・下位語の存在しない見出し語になっ
+	ている。
+
+	どうやら、762（各国の音楽）はあるのに、762.0 が無いためらしい。
+
+	* Bug Tracking System 比較表:
+	http://www.momonga-linux.org/diary/20020928.html#p01
+
+	Momonga-Linux Project での採用のための調査結果。ほぼ網羅。
+	すばらしい。
+
+	結論としては、
+	・Bugzilla の高機能さが目立つ。
+	・影舞は、attachment機能がダメなのが痛い。
+
+	元々、MLでの議論のまとめ。
+	http://www.momonga-linux.org/archive/Momonga-devel.ja/msg00128.html
+	から始まるスレッド参照。
+
+	* BugCommunicator: http://www.nongnu.org/pupa/bugcomm.html
+	新たなBTS。
+	・Rubyによる実装
+	・バックエンドにMySQL
+	・E-mailによる報告を扱える
+	・文字コードはUTF-8ベース
+
+	cf. BugCommunicatorを使ってみる:
+	    http://arika.org/memo.cgi?cmd=view;name=BugCommunicator%A4%F2%BB%C8%A4%C3%A4%C6%A4%DF%A4%EB
+
+	* Atsuyo's Homepage:  http://city.hokkai.or.jp/~atsuyo/
+	「娘よ!」とか、一母親によるエッセイがとても面白かった。
+	（yomoyomoさんのところからたどった）
+
+	* links-cgi:
+	リンク集をWeb上から作成できるツールを作ってる。
+
+	・実装は、CSV形式を基本として、「カテゴリ」と「リンク」を別に持つ
+	  方法でやってみている。
+	・ついでに、XBELにも対応したい。
+	・見た目くらいは派手に。（CSS）
+	
+	☆ 既存のもの
+	なんか一杯ありそうな気もするけど、今はとりあえずこの辺で…。
+
+	・Yahoo! Bookmarks
+	http://help.yahoo.co.jp/help/jp/bkmk/index.html
+	とりあえず登録してないので、ヘルプにリンクのみ。
+
+	・Free For All Links: http://nms-cgi.sourceforge.net/scripts.shtml
+	フリーのCGIスクリプトとして海外では古典的なMatt's Scriptを改訂した
+	もの。
+	
+	* 世が世なら「浴道」が生まれたかもしれないね。:
+	http://www.post1.com/home/hiyori13/cut/cut200112.html
+	面白い。
+
+	たしかに、体を洗うときは首からとか、小さい時には親にいろいろ言われ
+	ながら風呂に入ってた気がするなあ。
+
+	ちなみに、私の風呂プロトコルは以下の部分が決まりになってる。大部分
+	は親に教わった通りだけど。
+	まず、頭を洗う。洗い終ったら、2度洗面器ですすぎ、その湯はそのまま
+	流す。次にリンスする。これも2度洗面器ですすぎ、その湯もそのまま流
+	す。
+	体を洗った後は体を洗ったモノ（なんて言うのか知らんけど）を洗面器で
+	すすいで、そのお湯を体にかける。それを2回繰り返してから、体を洗う
+	モノは絞ってタオル掛けに戻す。それから、洗面器に湯を汲んで顔を洗う。
+	最後に、全身に湯をかぶる。
+	再度、湯ぶねにつかったら、出る。
+	
+	* Wiki Way: http://www1.neweb.ne.jp/wa/yamdas/wikiway/index.html
+	Wiki Way邦訳者のサポートページ。
+
+	エッセイなどもあり。
+
+	* GOBLIN (A Graph Object Library for Network Programming
+	Problems): http://www.math.uni-augsburg.de/opt/goblin.html
+	C++ベースのライブラリ。Tcl/Tkを使ったグラフエディタなど同梱。
+	とりあえずメモ。
+
+	* rpm2cpio:
+	Linux用のアップデートSRPMから中身のファイルだけを取りだしたい時に
+	やる方法。
+
+	  （内容の表示）
+	    % rpm2cpio webalizer-2.01_09-2.src.rpm | cpio -itv
+	  （内容の取り出し）
+	    % rpm2cpio webalizer-2.01_09-2.src.rpm | cpio -i
+
+	めったにやらないから、すぐ忘れるのでメモ。
+
+	* アイデア:
+	画像ディレクトリを chalow-like なインデックスで日付順に表示する。
+
+	  image/2002/01/19/123200.jpg
+	  image/2002/01/19/123201.jpg
+
+	Exif情報から、上記のようなファイル名をとりだして使う。
+
+	Perl の Image::Info にはバグがあったので、RAA(Ruby Application
+	Archive)でみつけた ruby-libexif は not found になってしまっていた。
+
+2002-10-30  Masao Takaku  <masao@ulis.ac.jp>
+
+	* OSS4libで卒論？: http://www.pacry.com/finalreport/index.html
+	慶應の学生さん。
+
+	* California Digital Library: http://www.cdlib.org/
+	「CDL-hosted Databases」（データベース情報の一覧）というリンクから
+	そこで提供しているデータベース情報が閲覧できる。
+
+	その他に、SearchLightというZ39.50/WWWゲートウェイのメタサーチ機能
+	などもある。
+	http://searchlight.cdlib.org/cgi-bin/searchlight
+
+	* デジカメ どう？ラク！Simple Edition:
+	http://www.hisago.co.jp/software/products/CIDD15/Default.htm
+
+	日付ベースで管理できるデジカメ画像管理ソフト。
+	こんな感じのものを作ってみようかしら…。
+
+	それとも、1980円だから、買っちゃおうか。
+	ちょっとアルバム形式の出力がカスタマイズできれば、これで決まりなん
+	だけど…。
+
+	* ASCII24 > 製品レビュー > ソフトウェア > 画像管理ソフト:
+	http://review.ascii24.com/db/review/soft/imageman/
+
+	いろいろあるので、迷うところ。
+	とりあえず参考になりそうなので、メモ。
+
+	* Xopus: http://xopus.org/
+	Xopus is a browser based in-place wysiwyg XML editor.
+
+	XML+XSLT+Javascriptでブラウザ上でXMLエディタを実現した。
+
+	* OASIS XML Localization Interchange File Format:
+	http://www.oasis-open.org/committees/xliff/
+	gettext の XML 版といった雰囲気。
+
+	Oracle, Sun, IBM, SDL といった企業が開発に参加している。
+
+	* FreeMind: http://freemind.sourceforge.net/
+	マインドマップ（木構造）の編集・閲覧ツール。
+
+	Graphvizみたいに見辛い表示ではなく、もうちょっとシンプルに表示して
+	くれるのが、良い感じ。
+
+	可視化方法としては、root を中心に、そのまわりにその子ノードを配置
+	していく。配置する方向は特になく、全方向に置かれる。
+
+	Mind Map programというのは、Outline Editorの一種か？
+
+	* CMS調査報告:
+	http://member.nifty.ne.jp/WalkingLint/cms/AboutCMS.html
+
+	Content Management Systemに関する調査。
+	CMSとは何か、Zopeはどうか、などなどユニークで詳細な解説がされてお
+	り、一見の価値あり。
+
+	* JSch (Java Secure Channel): http://www.jcraft.com/jsch/
+	pure-JavaでのSSH2実装。X11フォワード、ファイル転送機能付き。LGPL。
+
+	* 博士への長いかもしれない道:
+	http://www.shudo.net/article/doctor.html
+
+	「早稲田大学大学院理工学研究科情報科学専攻の場合」と題してのもの。
+	下のリンク集からはリンクされていない。
+
+	早稲田にはドクターが助手（任期3年）になる制度があるのね。これがあ
+	ると楽になるだろうなあ。
+
+	* 博士論文体験記 Collection:
+	http://www5b.biglobe.ne.jp/~aiida/dr.html
+
+	Webで公開されている博士論文提出までの道のりをまとめたリソースへの
+	リンク。
+
+2002-10-29  Masao Takaku  <masao@ulis.ac.jp>
+
+	* OPAC（本人利用状況の照会）:
+	どうやら、利用証に載っているバーコードID全てを「ID」欄に入力すれば、
+	良いらしい。これまでは一部だけを入力するんだったと思うんですが…。
+
+	* 論文メモ:
+	Junliang Zhang, Javed Mostafa. Information Retrieval by Semantic
+	Analysis and Visualization of the Concept Space of D-Lib
+	Magazine. D-Lib Magazine. Vol.8 No.10, 2002.
+	URL: <http://dlib.org/dlib/october02/zhang/10zhang.html>, （最終ア
+	クセス日付: 2002-10-29）
+
+	概念空間の自動抽出手法とその手法をD-Lib Magazineの論文に適用した可
+	視化システムについて述べている。
+
+	抽出手法自体は、既存の手法の延長線上にあり、それほど斬新ではないが、
+	Graph-Layoutを使った可視化インタフェースとで、合わせ技一本といった
+	雰囲気。今後の課題として、usability testを踏まえた可視化手法の評価
+	を挙げている。
+
+	* 全国の苗字（名字）一覧:
+	http://www2s.biglobe.ne.jp/~suzakihp/index40.html
+	「高久」は 1305 位、3276世帯。
+
+	『人口に換算する場合は３倍』とのことなので、全国に一万人程度存在す
+	るということか…。
+
+	* NIIメタデータ・データベース共同構築事業:
+	http://www.nii.ac.jp/metadata/
+	分担入力方式で学術リソースのメタデータを作成する試み。
+
+	「入力マニュアル」におけるデータの扱いについての記述とかは興味深い。
+	あと、他機関との連携とか、他のデータベースからのデータの取り込みと
+	かの仕様が現段階で決まっていないのは後から辛い状況になるではないか
+	と思ってしまう。
+
+	ULIS-DLのメタデータ入力作業はダメダメだって噂だし…。
+	こういうデータをどうコントロールしていくかは実に悩ましい問題を抱え
+	ている。しかし、NIIには、NACSIS-CATでつちかった土台があるので、そ
+	れが効果的に働くか、今後に注目。
+
+	あ、大綱がやってたりして…。
+
+	* 小・中・高・大学のページ:
+	浮小と小石川のページがあったので、全部そろったみたい。
+	プロフィールのページからリンクを張っておいた。
+
+	* 小石川高校旧校舎イラスト:
+	http://www.ne.jp/asahi/pro/his/illustration/koishikawa.html
+	私よりも7期上の方が書いたイラストでの再現。
+	味わいがあって懐しい気もする。ワンゲル小屋とかね…。
+
+	* 知的財産権法の調べ方:
+	http://www.juris.hokudai.ac.jp/~ytamura/chite1.htm
+	参考資料の一覧という雰囲気。専門家（北大・教授）による解説付きなの
+	で、非常に参考になる。
+
+	* アクセシビリティ関連サイト: 日本のサイトだと以下が有名みたい。
+
+	・みんなのWeb: http://www.jwas.gr.jp/
+	総務省が母体となってウェブアクセシビリティ実証実験などを行っている。
+	その報告（主要ウェブサイトのアクセシビリティ調査、ユーザー特性分析）
+	および実験で得られた成果（ウェブヘルパー）などのコンテンツがある。
+
+	・ACRI（Accessible Contents Research Initiative）:
+	http://www.acri.jp/
+	音声ブラウザ向けコンテンツの普及を目的とするプロジェクト。まだ始まっ
+	たばかりだが、ガイドラインの作成、独自音声ブラウザの作成などの目標
+	を掲げている。
+
+	・Network Accessibility Project (NAP):
+	http://www.accessibility.org/
+	情報通信分野における障害者のためのアクセシビリティの確立を目指す団
+	体。メーリングリストなどを通じてアクセシビリティについての議論、情
+	報提供が行われている。
+
+	* お土産: 2日ぶりに学校に来たら、机の上に「笹まんじゅう」があった。
+
+	メモが無いので、誰のお土産なのかわからん…。
+
+2002-10-25  Masao Takaku  <masao@ulis.ac.jp>
+
+	* ヤフーは自社ディレクトリーよりグーグルに頼る？:
+	http://ascii24.com/news/reading/searchengine/2002/10/16/639275-000.html
+
+	Yahoo!のクールマークは一定の指標なので、便利だったんだけど…。
+	ディレクトリ検索がデフォルトでなくなったのはちょいショック。
+
+2002-10-24  Masao Takaku  <masao@ulis.ac.jp>
+
+	* ITIS (Integrated Taxonomic Information System):
+	http://www.itis.usda.gov/index.html
+
+	生物の分類学的な体系の標準化とそのアクセスの向上を図るために、米国・
+	生物の多様性と生態系に関する小委員会が設立した組織で、そのデータそ
+	のものとディレクトリサービスによる提供システムを構築している。
+	元は、Interagency Taxonomic Information System の略だった。
+	
+	[2002-08-27] で触れたEDRの関連を見ていてたどりついた。
+
+	また、配布データの処理プログラムなども開発している。配布データの形
+	式にはXMLもある。
+
+	例: 「ホモサピエンス（人類）」の項目
+	http://www.itis.usda.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180092
+
 2002-10-23  Masao Takaku  <masao@ulis.ac.jp>
 
 	* backup.pl:
