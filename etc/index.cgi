@@ -60,6 +60,7 @@ sub iso8601($) {
     my ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst) =
 	localtime($time);
     $year += 1900;
+    $mon += 1;
     return sprintf("%04d-%02d-%02d", $year, $mon, $mday);
 }
 
