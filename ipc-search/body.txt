@@ -31,7 +31,8 @@
      （http://www.ulis.ac.jp/newsys/）
 </ul>
 <p>
-の各ページからリンクのたどれるHTML、テキスト文書です。
+の各ページからリンクのたどれるHTML、テキスト文書だけです。<br>
+（学内全体の検索には、<a href="http://www-student.ulis.ac.jp/search/">学内検索</a>などをご利用下さい）
 </p>
 <p>
 検索システムの構築には以下のソフトウェアを利用しています。
