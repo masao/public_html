@@ -9,7 +9,7 @@ use LWP::UserAgent;
 use HTTP::Request;
 
 # 本家のURL
-my $ORIG_URL = 'http://www.ulis.ac.jp/ipc/main2002/troublelist.html';
+my $ORIG_URL = 'http://www.ulis.ac.jp/ipc/main2002/troublelist.shtml';
 
 # タイトル
 my $TITLE = '「問題と対策」改';
@@ -64,8 +64,8 @@ EOF
 
     foreach my $cont (@entries) {
 	my @tmp = ();
-	$cont =~ s#<td>(.+?)</td>#push(@tmp,$1)#gei;
-	push(@problems, \@tmp);
+	$cont =~ s#<td>(.+?)</td>#push(@tmp,$1)#sgei;
+	push(@problems, \@tmp) if @tmp > 0;
     }
 
     my $sortby = 0;
@@ -130,6 +130,9 @@ sub print_html_head() {
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="ja"><head><title>$TITLE</title></head><body>
 <h1>$TITLE</h1>
+<p>
+本ページは<strong>個人的に</strong>作成しているものです。<br>
+センターの<a href="$ORIG_URL">問題と対策のページ</a>の更新状況によっては、うまく表示されない場合があります。御了承ください。</p>
 EOF
 }
 
@@ -138,9 +141,7 @@ sub print_html_foot() {
     print <<EOF;
 <hr><address>
 <a href="http://nile.ulis.ac.jp/~masao/ulisonly/ipc-trouble.cgi">http://nile.ulis.ac.jp/~masao/ulisonly/ipc-trouble.cgi</a><br>
-$id
-<!-- 本ページは個人的に作成しているものです。
-お問い合わせは<a href="mailto:$address">$address</a>までお願いします。-->
+$id<br>
 </address>
 </body></html>
 EOF
@@ -163,15 +164,18 @@ sub get_contents () {
     my $res = $ua->request($req);
     if ($res->is_success) {
 	my $tmp = $res->content;
-	$tmp =~ s/\s+/ /go;
-	$tmp =~ s#<!--(.*?)-->##go;
-	$tmp =~ s#<tr[^>]*>(.+?)</tr>#push(@entries,$1)#geio;
+	# $tmp =~ s/\s+/ /go;  # <pre>...</pre>対策でコメントアウト
+	$tmp =~ s#<!--(.*?)-->##sgo;
+	$tmp =~ s#<tr[^>]*>(.+?)</tr>#push(@entries,$1)#sgeio;
+	# print "\@entries: $#entries\n";
     } else {
 	print "<p><a href=\"$ORIG_URL\">問題と対策のページ</a>にアクセスできませんでした。</p>\n";
 	print_html_foot();
 	exit();
     }
-    my $date = scalar localtime $res->headers->last_modified;
-    print "<p><a href=\"$ORIG_URL\">元のページ</a>（最終更新日: <strong>$date</strong>）</p>\n";
+    my $date = $res->headers->last_modified;
+    # print "<p><a href=\"$ORIG_URL\">元のページ</a>";
+    # print "（最終更新日: <strong>$date</strong>）" if defined $date;
+    # print "</p>\n";
     return @entries;
 }
