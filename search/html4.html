@@ -25,11 +25,11 @@
 <body lang="ja">
 <h1>HTML 4 仕様書の全文検索</h1>
 <p>
-現在、<!-- FILE --> 2,364 <!-- FILE --> URLがインデックス化され、
-<!-- KEY --> 19,755 <!-- KEY --> 個のキーワードが登録されています。
+現在、<!-- FILE --> 2,364 <!-- FILE --> の文書がインデックス化され、
+<!-- KEY --> 19,723 <!-- KEY --> 個のキーワードが登録されています。
 </p>
 <p>
-<strong>インデックスの最終更新日: <!-- DATE --> 2000-05-23 <!-- DATE --></strong>
+<strong>インデックスの最終更新日: <!-- DATE --> 2001-10-10 <!-- DATE --></strong>
 </p>
 <hr>
 <form method="get" action="namazu.cgi">
@@ -37,9 +37,8 @@
 <strong>検索式:</strong> 
 <input type="text" name="query" size="40">
 <input type="submit" name="submit" value="Search!">
-<input type="hidden" name="whence" value="0">
 <input type="hidden" name="idxname" value="html4">
-<a href="namazu.cgi?idxname=html4">[検索方法]</a>
+<a href="help.html">[検索方法]</a>
 </p>
 <p>
 <strong>表示件数:</strong>
@@ -50,16 +49,20 @@
 <option value="50">50
 <option value="100">100
 </select>
-<strong>要約:</strong>
+<strong>表示形式:</strong>
 <select name="result">
-<option selected value="normal">あり
-<option value="short">なし
+<option selected value="normal">標準
+<option value="short">簡潔
 </select>
 <strong>ソート:</strong>
 <select name="sort">
 <option selected value="score">スコア
+<option value="date:late">日付 (新しい順)
+<option value="date:early">日付 (古い順)
 <option value="field:subject:ascending">題名 (昇順)
 <option value="field:subject:descending">題名 (降順)
+<option value="field:from:ascending">著者 (昇順)
+<option value="field:from:descending">著者 (降順)
 <option value="field:size:ascending">サイズ (昇順)
 <option value="field:size:descending">サイズ (降順)
 <option value="field:uri:ascending">URI (昇順)
@@ -67,6 +70,7 @@
 </select>
 </p>
 </form>
+<!-- -*-html-helper-*- -->
 <hr>
 <h2>概要</h2>
 <p>

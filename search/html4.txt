@@ -1,0 +1,15 @@
+<!-- -*-html-helper-*- -->
+<hr>
+<h2>概要</h2>
+<p>
+HTML4 の仕様書 (以下) を対象にしています。
+</p>
+<ul>
+  <li><a href="http://www.w3.org/TR/html4">HTML 4 Specification</a> (W3C)
+  <li><a href="http://www.asahi-net.or.jp/~sd5a-ucd/rec-html401j/">HTML 4.01 仕様書邦訳</a> (日本語版)
+</ul>
+<p>
+この全文検索システムは
+<a href="http://www.namazu.org/">Namazu</a> <!-- VERSION --> v2.0.5 <!-- VERSION -->
+によって構築されています。
+</p>
