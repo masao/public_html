@@ -9,10 +9,20 @@
 </head>
 <body>
 <!-- hhmts start -->
-<div class="last-update">最終更新日: <strong>Tue Oct  9 10:05:15 2001</strong></div>
+<div class="last-update">最終更新日: <strong>Wed Oct 10 02:00:20 2001</strong></div>
 <!-- hhmts end -->
 <hr>
 <h1>Graphviz-ja</h1>
+<h2>目次</h2>
+<ul>
+  <li><a href="#overview">概要</a>
+  <li><a href="#usage">使い方</a>
+  <li><a href="#example">描画例</a>
+  <li><a href="#download">ダウンロード</a>
+  <li><a href="#reference">参考URL</a>
+</ul>
+<hr>
+<h2><a name="overview">概要</a></h2>
 <p>
 <a href="http://www.research.att.com/sw/tools/graphviz/">Graphviz</a>はグラフ構造の整形、描画、編集システムです。
 </p>
@@ -23,23 +33,69 @@
 </p>
 このパッチをあてることにより、
 日本語EUC-JPコードの混じった dot 形式のファイルを
-GDライブラリを経由した画像形式（GIF, PNG, JPEGなど）で
+GDライブラリを経由した画像形式 GIF, PNG, JPEGなどで
 出力できるようになります。
 （ただし、フォントファイルとして、
-watanabe-mincho.ttf や wadalab-gothic.ttf が必要になります。）
+watanabe-mincho.ttf や wadalab-gothic.ttf など
+が必要になります。）
 </p>
 <p>
 <strong>出来ないこと：</strong>
-PostscriptやPDFなどの日本語出力は未対応です。
+</p>
+<ul>
+  <li>PostscriptやPDFなどの日本語出力は未対応です。
+  <li>韓国語、中国語などの表示は未確認です。
+</ul>
+<p>
+（動作確認は RedHat Linux 6.1J の上でのみ行っています。）
 </p>
 
-<h2>描画例</h2>
+<h2><a name="usage">使い方</a></h2>
+<p>
+まず、日本語用パッチのあたった Graphviz をインストールします。
+</p>
+<pre>
+  % tar zxvf graphviz-1.7.9.tar.gz
+  % cd graphviz-1.7.9
+  % patch -p1 &lt; ../graphviz-1.7.9-ja0.patch
+  % ./configure
+  % make
+  % su
+  # make install
+</pre>
+<p>
+さらに、日本語のTrueTypeフォントファイルが必要です。
+（例えば、
+<code>/usr/X11R6/lib/fonts/TruType/watanabe-mincho.ttf</code>
+ファイルがあることを確認してください。）
+</p>
+<p>
+日本語入りの dot ファイルを処理できます。
+例えば、<code><a href="ff9.dot">ff9.dot</a></code>みたいの。
+また、文字コードは EUC-JP であることを確認してください。
+コマンドラインから、次のようなコマンドを打ち込むと、
+GIF ファイルが生成されます。
+（<code>-Tオプション</code>を変更すれば、JPEG や PNG 形式も生成できます。）
+</p>
+<pre>
+  % dot -Tgif ff9.dot &gt; ff9.gif
+</pre>
+<p>
+上記のGIFファイルで日本語の部分が文字化けしている場合は、
+日本語フォントが見つからない場合だと思います。
+この場合、<code>watanabe-mincho.ttf</code>を
+<code>${HOME}/share/fonts</code>などに置いて
+<code>DOTFONTPATH</code>環境変数をそのディレクトリに設定してから
+dot コマンドを実行すると日本語フォント入りの画像ファイルを生成できます。
+</p>
+
+<h2><a name="example">描画例</a></h2>
 <ul>
   <li><a href="ff9.png">PNG画像</a>, <a href="ff9.dot">ソース</a>:  元となるデータは<a href="http://ff-11.com/9ff/9ff.html">９−ＦＦいっしょにＴＡＬＫ！</a>から抽出したものです。
   <li><a href="info.png">PNG画像</a>, <a href="info.dot">ソース</a>: 元となるデータは<a href="http://www.ulis.ac.jp/~chinatsu/">伊東千夏さん</a>からいただいたものです。
 </ul>
 
-<h2>ダウンロード</h2>
+<h2><a name="download">ダウンロード</a></h2>
 <ul>
   <li><a href="archive/graphviz-1.7.9-ja0.patch">graphviz-1.7.9-ja0.patch</a> (2001-10-09 公開)<br>
       主な変更点は、
@@ -50,9 +106,9 @@ PostscriptやPDFなどの日本語出力は未対応です。
       </ul>
       です。
 </ul>
-<h2>参考URL</h2>
+<h2><a name="reference">参考URL</a></h2>
 <ul>
-  <li><a href="http://www.research.att.com/sw/tools/graphviz/">GraphViz</a>: 本家サイト （ドキュメントなど）
+  <li><a href="http://www.research.att.com/sw/tools/graphviz/">Graphviz</a>: 本家サイト （ドキュメントなど）
   <li><a href="http://www.graphviz.org/">Welcome to GraphViz</a>: 開発者向けサイト（CVSレポジトリなど）
   <li><a href="http://www.research.att.com/sw/tools/graphviz/packages/grappa.html">Grappa</a>: グラフ描画エンジンのJava実装。
   <li><a href="http://ma2tak.dyndns.org:8888/ma2tak/974">GraphVizで日本語を使いたい</a>: 似たようなことを考えていた方がいました。
