@@ -1,3 +1,387 @@
+2002-07-17  Masao Takaku  <masao@ulis.ac.jp>
+
+	* XML Software (freshmeat:Category Review):
+	http://freshmeat.net/articles/view/484/
+
+	XML関連のUNIX上のツールについて、簡潔にまとまっている感じ。
+
+2002-07-16  Masao Takaku  <masao@ulis.ac.jp>
+
+	* Tomcat + UserDir:
+
+	Servlet を触ってみたいので、Apache-Jakarta Project の Tomcat を使っ
+	てみようかと思うのだが、nile などの複数ユーザに使わせる環境での設
+	定方法が良くわからないので、調べてみた。
+
+	↓から始まるスレッドを読む限りでは、Apache+Tomcat の構成で、これら
+	の設定を簡単にする方法はなさそうで、Tomcat 単独の機能としてならOKっ
+	ぽい。
+
+	http://www.apachelabs.org/tomcat-user/200201.mbox/%3c20020108171305.T25458@carlisle.msoe.edu%3e
+
+	* Galatea Flashguides: http://www.galatea.com/flashguides/index
+
+	Tomcat, Cocoon などのツール類についての Tips など。
+
+	「Servlet Garden」に内容的には似ている。
+	http://www.t3.rim.or.jp/~yoko-k-h/java/servlet/engines/tomcat4.0.1.html
+
+2002-07-15  Masao Takaku  <masao@ulis.ac.jp>
+
+	* The Open Web Application Security Project:
+	http://www.owasp.org/
+
+	ドキュメント・ツールなどがある。
+
+	* Gabriel: http://www.bl.uk/gabriel/
+
+	ヨーロッパ各国の National Libarary による Web での入口。
+
+2002-07-12  Masao Takaku  <masao@ulis.ac.jp>
+
+	* Backup-mini-HOWTO:
+	http://www.linux.or.jp/JF/JFdocs/Backup-mini-HOWTO/
+
+	afio を使ったバックアップ方法。
+
+	* 二ヶ国語サイトの作り方:
+	http://www.yuzuriha.sakura.ne.jp/~akikan/nika/index.html
+
+	個人サイト、特に CG 系のサイトを想定して書いている。
+
+	* Nitamogy: http://cl.aist-nara.ac.jp/~daiti-m/rec/nitamogy.html
+
+	アホなのが、面白い。
+
+	例: 「米犬統領」とか…。
+
+	* XSH, XML Editing Shell:
+	http://www.xml.com/lpt/a/2002/07/10/kip.html
+
+	おもしろそう。
+	ただ、Perl 5.6.0 以上を要求するので nile では動かせない…。^_^;;
+
+	* graphviz-1.8.8:
+
+	ちょっと試してみた。
+	ビットマップ画像のマージン値が変更された影響でちょっとクリッカブル・
+	マップの範囲がズレる…。
+	とりあえずの対応パッチ。（gdgen.c と合わせておく）
+
+	diff -ru graphviz-1.8.8/dotneato/common/imapgen.c graphviz-1.8.8.mod/dotneato/common/imapgen.c
+	--- graphviz-1.8.8/dotneato/common/imapgen.c	Wed Jul  3 02:45:45 2002
+	+++ graphviz-1.8.8.mod/dotneato/common/imapgen.c	Fri Jul 12 14:27:28 2002
+	@@ -84,10 +84,10 @@
+	 	tmp.y = Scale * p.y;
+	 	if (Rot == 0) {
+	 		rv.x = tmp.x + Offset.x;
+	-		rv.y = PB.UR.y - PB.LL.y - tmp.y + Offset.y;
+	+		rv.y = PB.UR.y - PB.LL.y - tmp.y - Offset.y;
+	 	} else {
+	-		rv.x = PB.UR.x - PB.LL.x - tmp.y + Offset.x;
+	-                rv.y = PB.UR.y - PB.LL.y - tmp.x + Offset.y;
+	+		rv.x = PB.UR.x - PB.LL.x - tmp.y - Offset.x;
+	+                rv.y = PB.UR.y - PB.LL.y - tmp.x - Offset.y;
+	 	}
+	 	return rv;
+	 }
+	@@ -137,12 +137,11 @@
+	 	char               *s;
+	 
+	 	g = g;
+	-	PB.LL.x = bb.LL.x * SCALE;
+	-	PB.LL.y = bb.LL.y * SCALE;
+	-	PB.UR.x = bb.UR.x * SCALE;
+	-	PB.UR.y = bb.UR.y * SCALE;
+	-	Offset.x = PB.LL.x + 1;
+	-	Offset.y = PB.LL.y + 1;
+	+	PB.LL.x = PB.LL.y = 0;
+	+	PB.UR.x = (bb.UR.x - bb.LL.x + g->u.drawing->margin.x) * SCALE;
+	+	PB.UR.y = (bb.UR.y - bb.LL.y + g->u.drawing->margin.y) * SCALE;
+	+	Offset.x = PB.LL.x + (g->u.drawing->margin.x * SCALE / 2);
+	+	Offset.y = PB.LL.y + (g->u.drawing->margin.y * SCALE / 2);
+	 	if (onetime) {
+	 		init_imap();
+	 		onetime = FALSE;
+
+	* 色盲の人にもわかるバリアフリープレゼンテーション法 :
+	http://jfly.nibb.ac.jp/html/color_blind/index-j.html
+
+	「できるだけ、黒・白・青・黄を基本とする」とか、参考になります。
+
+2002-07-11  Masao Takaku  <masao@ulis.ac.jp>
+
+	* Jerry Hill Presents: http://anzwers.org/free/jhpn/
+
+	各国でのいろんなモノについての名称についてのリンク集。
+	非常に多くの国・地域をカバーするリンク集なので、有用かも。
+
+	* FAQmanager: http://www.fourteenminutes.com/code/faqmanager/
+
+	スクリプト自体はとても良い感じ。
+	ただ、Web 上からの編集機能を持ってないのがちょっと難点か…。
+
+	* 体系同士の統合結果:
+
+	対象とする体系: eic odp edr ndc ss kt-odp
+
+	eic + odp: 4
+	eic + edr: 11
+	eic + ndc: 45
+	eic + ss: 11
+	eic + kt-odp: 0
+	odp + edr: 142
+	odp + ndc: 489
+	odp + ss: 141
+	odp + kt-odp: 1617
+	edr + ndc: 1165
+	edr + ss: 117202
+	edr + kt-odp: 0
+	ndc + ss: 1166
+	ndc + kt-odp: 2
+	ss + kt-odp: 0
+
+	eic + odp + edr: 1
+	eic + odp + ndc: 3
+	eic + odp + ss: 1
+	eic + odp + kt-odp: 0
+	eic + edr + ndc: 2
+	eic + edr + ss: 11
+	eic + edr + kt-odp: 0
+	eic + ndc + ss: 2
+	eic + ndc + kt-odp: 0
+	eic + ss + kt-odp: 0
+	odp + edr + ndc: 39
+	odp + edr + ss: 141
+	odp + edr + kt-odp: 0
+	odp + ndc + ss: 39
+	odp + ndc + kt-odp: 2
+	odp + ss + kt-odp: 0
+	edr + ndc + ss: 1165
+	edr + ndc + kt-odp: 0
+	edr + ss + kt-odp: 0
+	ndc + ss + kt-odp: 0
+
+	eic + odp + edr + ndc: 1
+	eic + odp + edr + ss: 1
+	eic + odp + edr + kt-odp: 0
+	eic + odp + ndc + ss: 1
+	eic + odp + ndc + kt-odp: 0
+	eic + odp + ss + kt-odp: 0
+	eic + edr + ndc + ss: 2
+	eic + edr + ndc + kt-odp: 0
+	eic + edr + ss + kt-odp: 0
+	eic + ndc + ss + kt-odp: 0
+	odp + edr + ndc + ss: 39
+	odp + edr + ndc + kt-odp: 0
+	odp + edr + ss + kt-odp: 0
+	odp + ndc + ss + kt-odp: 0
+	edr + ndc + ss + kt-odp: 0
+	
+	eic + odp + edr + ndc + ss: 1
+	eic + odp + edr + ndc + kt-odp: 0
+	eic + odp + edr + ss + kt-odp: 0
+	eic + odp + ndc + ss + kt-odp: 0
+	eic + edr + ndc + ss + kt-odp: 0
+	odp + edr + ndc + ss + kt-odp: 0
+	
+	* 組み合わせ:
+
+	体系統合についての実験のデータを取りたいので、順列から異なる組み合
+	わせを求めるプログラムを書く。
+
+	http://ht.econ.kobe-u.ac.jp/~tanizaki/class/combinat/combinat.htm
+	http://www.namazu.org/~satoru/programming/permstr.html
+
+	あたりがとても参考になる。
+
+	* Community Place: ついに終わったらしい。
+
+	Google のキャッシュには↓のようなメッセージだけが残っていた…。
+	---
+	この度、Community Placeは、平成１４年６月末日をもちまして、 営業及
+	び販売をすべて終了させて頂くことになりました。これまでの弊社製品・
+	サービスへのご愛顧に対しまして心より御礼申し上げます。
+
+	　なお、販売終了に伴いましてメールおよび電話窓口における対応、Web
+	サイトも6月末日をもちまして閉めさせて頂きます。ご了承くださいます
+	ようお願い申し上げます。
+
+	お問い合わせ先は：CPインフォメーションデスク
+	Phone 03-5448-6630(Mon.-Fri9:00-17:00)
+	E-Mail info-vs@sony.co.jp
+	---
+
+	* Snowball: http://snowball.sourceforge.net/
+
+	ステミング・ライブラリ。
+
+2002-07-10  Masao Takaku  <masao@ulis.ac.jp>
+
+	* つくば市農業気象情報:
+	http://weather.info.tsukuba.ibaraki.jp/index.html
+
+	つくば市が行っている気象情報提供システム。
+
+	* MSXML (IE6):
+
+	てっきり IE6 では XSLT 勧告仕様版は利用できないとばかり思い込んで
+	いた…。どこかでそういう記述を見かけた気もするんだけどなあ。
+
+	ただ、これで IE6 を使う動機付けができたかもね。;-)
+
+	* Amaya 6.2:
+
+	リリースノートを読むかぎりでは、日本語文字コードに対応した模様。
+
+	* 新形式のHTMLファイルについて - 青空文庫:
+	http://www.sumomo.sakura.ne.jp/~aozora/txt2html/html_warning.html
+
+	昔はダメダメだったので、頑張ってほしい。 cf. [2002-04-24]
+
+	* ghostscript-7.05 + gdevlips:
+
+	[2002-05-28] のエプソンコーワ純正のドライバだと、なぜか EPS 画像が
+	横長に間延びしてしまう不具合があったので、gdevlips に入れ替えるつ
+	いでに ghostscript のバージョンも上げてみた。
+
+	→ http://www.ucatv.ne.jp/~taeko/software/gs/
+
+	% tar zxvf ~/src/ghostscript-7.05.tar.gz
+	% tar zxvf ~/src/gdevlips-2.4.0.tar.gz
+	% cd gdevlips-2.4.0/
+	% cp *.c *.h ../ghostscript-7.05/src
+	% cat gdevlips.mak >> ../ghostscript-7.05/src
+	% cd ../ghostscript-7.05
+	% ./configure
+	% vi Makefile
+	% diff -u Makefile Makefile.old
+	--- Makefile	Wed Jul 10 08:45:21 2002
+	+++ Makefile.old	Wed Jul 10 08:08:30 2002
+	@@ -372,7 +372,7 @@
+	 DEVICE_DEVS14=$(DD)jpeg.dev $(DD)jpeggray.dev
+	 DEVICE_DEVS15=$(DD)pdfwrite.dev $(DD)pswrite.dev $(DD)epswrite.dev $(DD)pxlmono.dev $(DD)pxlcolor.dev
+	 
+	-DEVICE_DEVS16=	$(DD)lips2p.dev $(DD)lips3.dev $(DD)bjc880j.dev $(DD)lips4.dev $(DD)lp2000.dev $(DD)escpage.dev $(DD)npdl.dev $(DD)rpdl.dev $(DD)lips4v.dev
+	+DEVICE_DEVS16=
+	 DEVICE_DEVS17=
+	 DEVICE_DEVS18=
+	 DEVICE_DEVS19=
+
+	% make XCFLAGS=-I/usr/local/include/libpng XLDFLAGS=-R/usr/local/lib
+	% sudo make install
+
+	% cd /usr/local/share/ghostscript/7.05/lib
+	% sudo vi CIDFnmap
+	% diff -u CIDFnmap.orig CIDFnmap
+	--- CIDFnmap.orig	Wed Jul 10 16:31:16 2002
+	+++ CIDFnmap	Wed Jul 10 16:31:45 2002
+	@@ -139,7 +139,7 @@
+	 %(CIDFnmap.ARP) .runlibfile
+	 %(CIDFnmap.Bae) .runlibfile
+	 %(CIDFnmap.Koc) .runlibfile
+	-%(CIDFnmap.Sol) .runlibfile
+	+(CIDFnmap.Sol) .runlibfile
+	 %(CIDFnmap.Win) .runlibfile
+	 
+	 %(CIDFnmap.CJK) .runlibfile
+	@@ -155,3 +155,10 @@
+	 
+	 % native CIDFontName (euc-kr) in Korean
+	 %(CIDFnmap.ksx) .runlibfile
+	+
+	+/Ryumin-Light           /HG-MinchoL	  ;
+	+/GothicBBB-Medium       /HG-GothicB	  ;
+	+/HeiseiMin-W3           /HeiseiMin-W3H	  ;
+	+/HeiseiKakuGo-W5        /GothicBBB-Medium ;
+	+/HeiseiMin-W3-Acro      /Ryumin-Light	  ;
+	+/HeiseiKaKuGo-W5-Acro   /GothicBBB-Medium ;
+
+	% sudo vi gs_res.ps
+	% diff -u gs_res.ps.orig gs_res.ps
+	--- gs_res.ps.orig	Wed Jul 10 16:31:56 2002
+	+++ gs_res.ps	Wed Jul 10 16:33:03 2002
+	@@ -245,8 +245,8 @@
+	   /pssystemparams 10 dict readonly def
+	 } if
+	 pssystemparams begin
+	-  /FontResourceDir (/Resource/Font/) readonly .forcedef	% pssys'params is r-o
+	-  /GenericResourceDir (/Resource/) readonly .forcedef	% pssys'params is r-o
+	+  /FontResourceDir (/usr/local/share/ghostscript/Resource/Font/) readonly .forcedef	% pssys'params is r-o
+	+  /GenericResourceDir (/usr/local/share/ghostscript/Resource/) readonly .forcedef	% pssys'params is r-o
+	   /GenericResourcePathSep (/) readonly .forcedef	% pssys'params is r-o
+	 end
+	 end
+
+	* センター障害:
+
+	どうやら昨夜から学外と接続できないみたい…。
+	ただ、学内の Web サーバも落ちてしまっている様子。
+
+	やっぱ、昨日の雷での瞬停でどこかのハードがやられたかな!?
+
+2002-07-09  Masao Takaku  <masao@ulis.ac.jp>
+
+	* imgs2html-0.2.0:
+
+	ImageMagick のバージョンを上げたら、identify コマンドの出力の書式
+	が変わってしまって、画像サイズの取得ができなくなっていた模様。
+
+	ついでなので、Image::Size を使うように修正しておいた。
+
+	* クロスサイトスクリプティング脆弱性蔓延の現状と解決策:
+	http://securit.etl.go.jp/SecurIT/advisory/cross-site-scripting-1/
+
+	素晴らしい。
+
+	* XML::LibXSLT:
+
+	XSLT（not XML）のエラーを catch できない様子。
+	既にバグレポートはされている模様。
+	cf. http://rt.cpan.org/NoAuth/Bug.html?id=758
+
+	とりあえず、以下のようにしておく。
+
+	--- LibXSLT.xs	Thu May 23 21:52:28 2002
+	+++ LibXSLT.xs.new	Tue Jul  9 16:53:10 2002
+	@@ -253,6 +253,8 @@
+	         else {
+	             xsltSetGenericDebugFunc(NULL, NULL);
+	         }
+	+	xsltSetGenericErrorFunc(PerlIO_stderr(), 
+	+				(xmlGenericErrorFunc)LibXSLT_error_handler);
+	         RETVAL = xsltParseStylesheetDoc(doc_copy);
+	         if (RETVAL == NULL) {
+	             XSRETURN_UNDEF;
+
+	「あんまり使われていないの？」って感じ。
+
+	* CSS Labolatory: http://www.inter-cool.net/~phantasm/wdzone/
+
+	CSS のブラウザ別対応状況などについて詳細な記述あり。
+
+	* /home: file system full
+
+	う〜ん。あんまり確認せずにコマンドを実行し、昼飯を食いに出かけてい
+	る間の出来事…。ちなみに、コマンドは clover で以下のようにしたもの。
+
+	% rsh -l masao nile 'dd id=/dev/rmt/0m' | tar xf ./usr/local
+
+	この場合、tar は nile 上で実行されるみたい…。
+
+	* clover:/usr/local クラッシュ:
+
+	長谷川先生のミスで一部消失したらしい…。
+
+	幸い 2002-03-12 に tar 形式で取ったフル・バックアップが残っている
+	ので、大丈夫。感謝!! ＞ ちなっちゃん。
+
+	とりあえず nile 上で取り出す。
+	% mt -f /dev/rmt/1mn rewind
+	% cd /project3
+	% sudo mkdir clover-200203
+	% sudo tar xf /dev/rmt/1mn ./usr/local
+
 2002-07-08  Masao Takaku  <masao@ulis.ac.jp>
 
 	* XSLT - web tools - Track Palace:
