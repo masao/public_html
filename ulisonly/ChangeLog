@@ -1,7 +1,102 @@
+2001-10-10  Masao Takaku  <masao@ulis.ac.jp>
+
+	* GraphViz-ja: ついでに、GraphViz もパッチを作り直しました。
+
+	* シソーラスの可視化: ここ3日の間にひととおり作り上げた。
+
+	あとは、「複数のレベルをたどって表示させる機能」があればOKかな。
+
+2001-10-06  Masao Takaku  <masao@ulis.ac.jp>
+
+	* Web page/site management: 自分の個人ページにて、うまくWebページ
+	の管理などやりやすいツールはないか検討中。
+
+	現在は、Emacs(html-helper-mode) + CVS でテンプレートを共通にして作っ
+	ているのだけど、テンプレートを変更していくと、昔のを直すのを忘れて
+	なかなか全体のレイアウトの統一性が取れないサイトになりつつあるので、
+	そこらへんをうまくやるツールを探してみた。
+
+	候補は以下の通り。
+
+	・Website Meta Language
+	結構いろいろ出来そうだけど、独自の構文を覚えるのが面倒そう。
+	cf. http://www.engelschall.com/sw/wml/
+
+	・GNU m4
+	「General Purpose pre-processor」だそうなので、覚えれば何かと便利
+	そうだけど、いちいち自分でマクロを組むのは面倒かも。
+	あと限界とかもある？
+	cf. http://www.fysik.dtu.dk/CAMP/htmlinm4.html
+	cf. http://www.seindal.dk/rene/gnu/thissite.htm
+
+	・その他
+	PHP など？ 以下のURLに色々あり。
+	cf. http://webmake.taint.org/similar.html
+
+	…だけど、どれも新しい言語や考え方を導入してしまうのが面倒で、特に、
+	現在の html-helper-mode + CVS の手法の気軽さが無くなってしまうのが
+	イヤ。（単に、html-helper-mode のキーバインドから離れられないだけ
+	か？）
+
+	* CVS+SSH/Windows: Windows9x 上から UNIX 上の CVS レポジトリ
+	にアクセスして普通に利用する方法を探してみたが、うまくいかない…。
+
+	まず、 Cygwin には CVS, OpenSSH の両方が入っているものの、Cygwin
+	のバグでチェックアウト直後に固まってしまうバグがあるので却下。
+	cf. http://sources.redhat.com/cygwin/faq/faq_5.html#SEC125
+
+	次に、WinCVS を使う方法だが、これもなぜかうまく SSH で接続しようと
+	せずに RSH で接続してしまうのでダメ。
+	（http://www.wincvs.org/ssh.html の通りにやってるのに…。）
+
+	あとで、もうちょい確認してみよう。
+
+	* FBC: 昨日、Food Battle Club の後半戦を観た。
+
+	小林尊がまさか負けるとは思わなかった…。
+
+	やっぱ、既に大食いは「スポーツ」の域に達しているような感銘を受けた。
+
+	でも、世界陸上と同様に TBS の演出のひどさが相変わらずなのが泣け
+	た。スポーツはキチンと事実を伝えればそれだけで感動できるのに、なん
+	であんな姑息な演出をするんだろうか？
+
+2001-10-04  Masao Takaku  <masao@ulis.ac.jp>
+
+	* Range: RubyでRangeオブジェクトを使っていたら不可解な現象に出会っ
+	た。
+
+	% ruby -e 'p (0..10)'
+	0..10
+
+	% ruby -e 'p (0..10).to_a'
+	0..10
+
+	% ruby -e 'p Array(0..10)'
+	[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+	% ruby -e 'p Range.new(0, 10).to_a'
+	[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+2001-10-03  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 家賃: 大野さん家に行ってきて家賃を払ってきました。
+
+	ついでに、大野ハイツの建て替えの件も聞きましたが、どうやら相続税対
+	策ということらしい。（おばさんは反対だったらしいけど…）
+
+	* オーストラリア土産: 長谷川先生より、「カエルの描かれたマウスパッ
+	ド」をいただいた。
+
+2001-10-02  Masao Takaku  <masao@ulis.ac.jp>
+
+	* BBQ: 久々に（大半は5〜6年ぶり）高校の陸上部の連中と会った。
+	楽しかったです。
+
 2001-09-28  Masao Takaku  <masao@ulis.ac.jp>
 
-	* BBQ: 高校の時の連中がバーベキューをやるというので、矢部ちゃんに
-	ついていくことにした。
+	* BBQ: 30日に高校の時の連中がバーベキューをやるというので、矢部ちゃ
+	んについていくことにした。
 
 2001-09-27  Masao Takaku  <masao@ulis.ac.jp>
 
