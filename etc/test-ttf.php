@@ -36,6 +36,10 @@ $text = $_POST['text'];
 $size = is_numeric($_POST['size']) ? $_POST['size'] : 40;
 
 if (strlen($text) > 0) {
+  if (get_magic_quotes_gpc()) {
+    $text = stripslashes($text);
+  }
+
   header("Content-type: image/jpeg");
 //    ImageFtText($im, 10, 0, 0, 0, $black, $fontfile, $text);
   $bbox = ImageTtfBbox($size, 0, $fontfile, $text);
@@ -66,13 +70,9 @@ if (strlen($text) > 0) {
 <body>
 <div class="last-update">公開日: 2003年06月24日</div>
 <!-- hhmts start -->
-<div class="last-update">最終更新日: 2003年06月24日</div>
+<div class="last-update">最終更新日: 2003年06月29日</div>
 <!-- hhmts end -->
 <h1>TrueTypeフォントの表示テスト</h1>
-<p>
-PHPに同梱されているGDライブラリの機能を使って、
-各種TrueTypeフォントの文字をPNG画像として表示します。
-</p>
 <form action="./test-ttf.php" method="POST">
 <div>
 <textarea name="text" rows="5" cols="80">Hello, World!
@@ -100,8 +100,19 @@ PHPに同梱されているGDライブラリの機能を使って、
 <input type="submit" value="変換">
 </div>
 </form>
+<h2>概要</h2>
 <p>
-使っているフォントとそのバージョンを以下に示します。
+PHPに同梱されているGDライブラリの機能を使って、
+各種TrueTypeフォントの文字をPNG画像として表示します。
+</p>
+<p>
+<a href="http://wiki.fdiary.net/font/">書体関係Wiki</a>の議論を見ていて、
+作成を思い立ちました。
+フォントについては素人なので、何も分かっていませんが、
+いろんなフォントを簡単に閲覧できると嬉しいと思ったので…。
+</p>
+<p>
+一応、使っているフォントとそのバージョンを以下に示します。
 </p>
 <ul>
   <li><a href="http://sourceforge.jp/projects/efont/">東風フォント</a>: kochi-substitute-20030623.tar.bz2
