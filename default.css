@@ -1,19 +1,11 @@
 body {
   background-color: #aaffaa;
-  font-family: verdana, sans-serif;
+  font-family: helvetica, sans-serif;
   margin: 2%;
-}
-p, dl, ul, ol {
   line-height: 120%;
 }
 h1 {
   text-align: center;
-}
-a {
-  text-decoration:none;
-}
-a:hover {
-  text-decoration:underline;
 }
 p, dd {
   text-indent: 1em;
@@ -32,10 +24,11 @@ div.id {
   font-size: small;
 }
 .news {
-  /*border: medium solid red;*/
-  font-size: small;
-  margin-left: 40px;
-  margin-right: 40px;
+  padding: 5px;
+  border: medium solid #bbb;
+  font-size: smaller;
+  float: right;
+  width: 45%;
 }
 div.last-update {
   text-align: right;
