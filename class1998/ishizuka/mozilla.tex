@@ -1,0 +1,362 @@
+\documentstyle[a4j,eclepsf,ascmac,eclbkbox]{jarticle}
+\title{XML In Mozilla}
+\author{}
+\date{}
+\begin{document}
+
+\begin{flushright}
+1998年10月12日\\
+データベース構成論II（全文データベース）\\
+98513 高久雅生
+\end{flushright}
+
+\begin{center}
+ \huge\bf XML In Mozilla
+\end{center}
+
+%\begin{screen}
+ 発表資料：
+\begin{itemize}
+ \item XML In Mozilla. {\tt http://www.mozilla.org/rdf/doc/xml.html}
+ \item RDF In Mozilla. {\tt http://www.mozilla.org/rdf/doc/}
+\end{itemize}
+%\end{screen}
+
+\vspace{2mm}
+\begin{minipage}{15cm}
+ \begin{center}
+%\begin{figure}[h]
+  \epsfile{file=mozilla2.ps,width=15cm}\\\nopagebreak
+  {\small 図1 : Mozillaのウィンドウイメージ}
+%  \label{mozilla-first}
+%  \caption{Mozillaのウィンドウイメージ}
+%\end{figure} 
+ \end{center}
+\end{minipage}
+\vspace{2mm}
+
+ \section{Mozillaとは}
+
+一般には、Netscape Communications社のWWWブラウザ、
+Netscape Navigatorを指す。
+同社はNetscape Communicatorの
+フリーソフトウェア化とソースコードの公開を1998年1月に発表した。
+ソースコードは3月に公開されて
+世界中の開発者たちの手で現在も開発が進められている、
+このNetscape Communicator 5.0の開発バージョンを
+ここではMozilla（モジラ）と呼ぶ。
+%Mozillaの起動した際のウィンドウイメージを図1に示す。
+Mozillaの公開と開発、それに関連する文書は{\tt http://www.mozilla.org/}で公開されている。
+
+Mozillaのソースコードからのコンパイルは
+\begin{itemize}
+\item 機種：Sun Ultra-Enterprise 3000
+\item OS：Solaris 2.6
+\item Cコンパイラ：GNU C ( C++ ) Compiler 2.8.1
+\end{itemize}
+という環境で行なった。
+%コンパイルは、UNIX上のmake（GNU make version 3.74）コマンドを利用して行なった。
+
+現在の配布バージョンは1998年9月4日版で、
+{\tt mozilla-19980904.tar.gz} という名前で配布されており、このファイルの容量は約21.3Mバイトである。
+この圧縮された配布ファイルを解凍すると、全体で約159.8Mバイトの容量となる。
+（ちなみに、プログラムのソースファイルの数だけでも10000以上ある。）
+
+コンパイルに成功すると、図1のようなウィンドウのMozillaが起動できる。
+
+ \section{XMLの利用形態}
+
+XMLの利用形態は、文書（documents）とデータ（data）の2種類に大別される
+（図2参照）。
+これらの処理は具体的に以下のような違いがある。
+データは順序を気にせず（例：患者のレコード vs. 詩）、
+情報の蓄積を考慮した（例：異なる情報源から患者の情報を統合する）
+ものである。
+
+データはRDF%\cite{w3c-rdf}
+\footnote{RDF (Resource Description Framework) : WWW上での汎用的なメタデータの記述。{\tt http://www.w3.org/RDF/}参照。}
+に従って記述される。
+また、文書はCSS%\cite{w3c-css}
+\footnote{CSS (Cascading Style Sheets)：Web文書のスタイル指定言語。{\tt http://www.w3.org/Style/CSS/}参照。}
+やXSL%\cite{w3c-xsl}
+\footnote{XSL (Extensible Style Language)：XML用の拡張可能なスタイル指定言語。{\tt http://www.w3.org/Style/XSL/}参照。}
+と共に記述され、ユーザが閲覧できるように提供される。
+
+W3Cで定義されている、
+XMLとRDFによる様々なデータ形式の構成とその関係の表現を図3に示す。
+RDFはXMLの構造記述を使って、
+データを共有するための共通のセマンティクスを表現する。
+
+\vspace{2mm}
+%\begin{figure}[h]
+\begin{minipage}{5cm}
+ \begin{center}
+  \epsfile{file=guha-2.ps,width=5cm} \\\nopagebreak
+  {\small 図2 : XMLの利用形態}
+  % \label{xml-use-type}
+  % \caption{XMLの利用形態}
+ \end{center}
+%\end{figure}
+\end{minipage}\hfill
+\begin{minipage}{9cm}
+ \begin{center}
+  \epsfile{file=Arch-blocks.ps,width=9cm} \\\nopagebreak
+  {\small 図3 : XMLとRDFによるデータ形式\footnotemark}
+ \end{center}
+\end{minipage}
+\vspace{2mm}
+\footnotetext{出典：{\tt http://www.w3.org/TR/NOTE-rdfarch}}
+
+ \section{XMLの処理}
+
+実際のXMLの処理は以下のようなモジュールが個々におこなっている。
+
+\begin{itemize}
+ 
+\item XML パーサ
+
+James ClarkによるC言語で書かれているexpatパーサ%\cite{expat}
+      \footnote{{\tt http://www.jclark.com/xml/expat.html}参照。}を利用する。
+このパーサはMozillaの他のモジュール中のどこからでも呼び出し可能となっている。
+
+\item DOM構造
+      
+DOM
+%\cite{w3c-dom}
+\footnote{Document Object Model : Webページ・XMLアプリケーションへの標準アクセス・インタフェースモデル。{\tt http://www.w3.org/DOM/}参照。}
+はJavascript（もしくはその他のプラグイン）によるAPIの準備が計画されている。
+
+  \item スタイルシート
+
+現在はCSS、XML-Link、HTMLネームスペースでの要素を
+利用したXMLページを表示できる（図4参照）。
+今後はCSS・XSL・DSSSL
+\footnote{Document Style Semantics and Specification Language : SGML用のスタイル指定言語。}
+などのスタイルシート別の処理ができる
+「スタイルシートプラグインAPI」を準備する計画が進められている。
+
+  \item その他（計画）
+      
+      \begin{itemize}
+       \item Mozillaのコード中からXMLパーサ、Netlibコード、RDFモジュールなどの独立性を高める。
+	     
+       \item MathML%\cite{MathML}
+	     \footnote{Mathematical Markup Language : Web上で数式表現を行なうためのタグ付け言語。{\tt http://www.w3.org/Math/}参照。}の実現。
+	     
+       \item XMLに基づいたベクトル図形表示。（VML?）
+      \end{itemize}
+\end{itemize}
+
+ \section{RDF in Mozilla}
+
+RDF\cite{w3c-rdf}はMozilla中で多くの目的のために使用されている。
+特に、NavCntr/Aurora と SmartBrowsing で中心的に用いられている。
+
+RDFのデータモデルは階層的なハイパーツリー構造として実装されている。
+
+NavCntr/AuroraはMozillaで新たに取り入れられた機能の1つで、
+ブックマーク、ブラウザの履歴、メール、
+ローカルのファイルシステム、WWW上の検索エンジンなどの
+情報を統合的に管理できるようにしたもの。
+
+SmartBrowsingは``Related Links''という機能を実現する。
+この機能はあるウェブページを訪れた際に、
+そのページに関連するサイトを提示するというサービスである。
+現在はCGIとして実装されている。\footnote{{\tt http://www-rl1.netscape.com/wtgn?}参照。}
+
+ \section{例}
+
+\subsection{XML文書}
+
+実際に{\tt http://docs.sun.com/mozilla/TocView.xml}
+のXML文書をMozillaで表示した際のウィンドウを図4に示す。
+
+この{\tt TocView.xml}の内容のリストを付録として添付した。
+また、XML文書中で指定されているCSSファイルも添付する。
+
+{\noindent {\tt TocView.xml}の内容：}
+\vspace{2mm}
+\begin{breakbox}
+\begin{verbatim}
+<?xml version="1.0"?>
+<?xml:stylesheet type="text/css2" href="SolarisDocBook.css"?>
+
+<Book>
+
+<ToolBar XML-Link="LINK" Role="HTML" Show="EMBED" href="toolbar.html"/>        
+<html:img src="icons/ab2_open_book.gif"/>
+
+   <Chapter>
+      <Title XML-Link="LINK" href="@Ab2PageView/98?">Preface</Title>
+   </Chapter>
+   <Chapter>
+      <Title XML-Link="LINK" href="@Ab2PageView/386?">Introduction to the Solari
+s User Environment</Title>
+   </Chapter>
+   <Chapter>
+      <Title XML-Link="LINK" href="@Ab2PageView/2999?">File Manager</Title>
+   </Chapter>
+   <Chapter>
+      <Title XML-Link="LINK" href="@Ab2PageView/6205?">Text Editor</Title>
+   </Chapter>
+   <Chapter> 
+       <Title XML-Link="LINK" href="@Ab2PageView/7393?">Multimedia Mail Tool</Ti
+tle>
+   </Chapter> 		
+   <Chapter> 
+       <Title XML-Link="LINK" href="@Ab2PageView/11023?">Calendar Manager</Title
+>
+   </Chapter> 		
+   <Chapter> 
+       <Title XML-Link="LINK" href="@Ab2PageView/13421?">Command Tool, Shell Too
+l, and Console Window </Title>
+   </Chapter> 		
+   <Chapter> 
+       <Title XML-Link="LINK" href="@Ab2PageView/13895?">Clock </Title>
+   </Chapter> 		
+   <Chapter> 
+       <Title XML-Link="LINK" href="@Ab2PageView/14314?">Calculator </Title>
+   </Chapter> 		
+   <Chapter> 
+       <Title XML-Link="LINK" href="@Ab2PageView/19318?">Tape Tool</Title>
+   </Chapter> 		
+   <Chapter> 
+       <Title XML-Link="LINK" href="@Ab2PageView/21441?">Snapshot</Title>
+   </Chapter> 		
+   <Chapter> 
+       <Title XML-Link="LINK" href="@Ab2PageView/21825?">Icon Editor</Title>
+   </Chapter> 		
+   <Chapter> 
+       <Title XML-Link="LINK" href="@Ab2PageView/22750?">Binder</Title>
+   </Chapter> 		
+   <Chapter> 
+       <Title XML-Link="LINK" href="@Ab2PageView/23852?">Customizing the Solaris
+ Environment</Title>
+   </Chapter> 		 
+   <Chapter> 
+       <Title XML-Link="LINK" href="@Ab2PageView/25997?">Utilities</Title>
+   </Chapter> 		
+   <Chapter> 
+       <Title XML-Link="LINK" href="@Ab2PageView/26320?">Using the AnswerBook So
+ftware</Title>
+   </Chapter> 		
+   <Chapter> 
+       <Title XML-Link="LINK" href="@Ab2PageView/27093?">Solaris Troubleshooting
+</Title>
+   </Chapter> 		
+   <Chapter> 
+       <Title XML-Link="LINK" href="disability.xml">Access for Users with Disabi
+lities</Title>
+   </Chapter> 		
+   <Chapter> 
+       <Title XML-Link="LINK" href="@Ab2PageView/29045?">Glossary</Title>
+   </Chapter> 		
+</Book>
+\end{verbatim}
+\end{breakbox}
+
+\vspace{3mm}
+{\noindent {\tt SolarisDocBook.css}の内容：}
+\vspace{2mm}
+\begin{breakbox}
+\begin{verbatim}
+Title   {font-size:12pt; margin-left:14pt;}
+
+Title {Display: Block}
+
+PARA {Display: Block; margin-left:14pt;}
+
+LISTITEM {Display: List}
+\end{verbatim}
+\end{breakbox}
+
+%\begin{figure}[h]
+\vspace{2mm}
+\begin{minipage}{15cm}
+  \begin{center}
+   \epsfile{file=TocView.ps,width=15cm}\\\nopagebreak
+   {\small 図4 : XML文書の表示例}
+   % \caption{XML文書の表示例}
+   % \label{sun-doc}
+  \end{center}
+\end{minipage}
+ %\end{figure}
+\vspace{2mm}
+
+  \subsection{RDF データ例}
+
+Mozillaのソース配布の中に含まれているテスト用のRDFデータの例を以下に示す。
+
+{\noindent {\tt navcntr.rdf}の内容：}
+\vspace{2mm}
+\begin{breakbox}
+\begin{verbatim}
+<RDF:RDF>
+
+<Topic id="NC:NavCenter">  
+   <child>
+       <Topic id="NC:Bookmarks" name="Bookmarks"/>
+   </child>
+   <child href="NC:Search"  largeIcon="icon/large:workspace,search" name="Srch"/>
+   <child>
+        <Topic id="NC:History" largeIcon="icon/large:workspace,history" name="His
+tory" />
+   </child>
+   <child>
+        <Topic id="NC:Sitemaps" name="Site Tools" htmlURL="http://rdf.netscape.co
+m/rdf/navcntradvert.html" />
+   </child>
+   <child>
+        <Topic id="NC:LocalFiles" name="Files" largeIcon="http://rdf.netscape.com
+/rdf/heabou.gif"/>
+   </child>
+   <child>
+        <Topic id="http://www.netscape.com/netcenter.rdf#root" name="Netcenter"/>
+   </child> 
+   <child>
+        <Topic id="http://www.ilrt.bris.ac.uk/discovery/demos/rdf/webcat.rdf#ilrt
+root" name="WebCat"/>
+   </child>
+   <child>
+        <Topic id="NC:NavInternals" name="Navigator Internals">
+	  <child href="NC:SmartBrowsingProviders" name="SmartBrowsing Providers"/>
+        </Topic>
+   </child>
+</Topic>
+<Topic id="NC:SmartBrowsingProviders">
+    <child href="http://altavista.digital.com/cgi-bin/query?q=link%3A"
+          name="Who points to me?"
+          resultType="TEXT/HTML"/>
+    <child href="http://www-rl1.netscape.com/wtgn?" name="Related Links"
+          resultType="TEXT/RDF" />
+</Topic>
+</RDF:RDF>
+\end{verbatim}
+\end{breakbox}
+
+%\renewcommand{\refname}{参照文献}
+\begin{thebibliography}{99}
+%\small
+\bibitem{mozila.org}
+mozilla.org.
+{\tt <http://www.mozilla.org/>}
+% \bibitem{rdf-arch}
+% RDF Architecture - W3C Note. {\tt http://www.w3.org/TR/NOTE-rdfarch}
+ \bibitem{xml}
+ XML/SGMLサロン. 標準XML完全解説. 東京, 技術評論社, 1998, 354p.
+ \bibitem{w3c-rdf}
+ W3C Resource Description Framework.
+ {\tt http://www.w3.org/RDF/}
+% \bibitem{w3c-css}
+% Cascading Style Sheets. {\tt http://www.w3.org/Style/CSS/}
+% \bibitem{w3c-xsl}
+% Extensible Style Language (XSL). {\tt http://www.w3.org/Style/XSL/}
+% \bibitem{expat}
+% expat - XML Parser Toolkit.
+% {\tt http://www.jclark.com/xml/expat.html}
+% \bibitem{w3c-dom}
+% Document Object Model (DOM). {\tt http://www.w3.org/DOM/}
+% \bibitem{MathML}
+% W3C Math Home Page. {\tt http://www.w3.org/Math/}
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,224 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+<link rev=made href="mailto:masao@ulis.ac.jp">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-2022-JP">
+<title>1998年度の講義日程</title>
+</head>
+
+<body bgcolor="#aaffaa">
+
+<!--#exec cmd="/home/x/masao/public_html/.log" -->
+
+<!-- hhmts start -->
+<p>最終更新日： <b>Wed Apr 14 18:54:09 1999</b></p>
+<!-- hhmts end -->
+
+ここでは、1998年度に僕の履修した科目をリストしておきます。
+単なる個人的なメモですので、コメントはつけません。
+また、どの教科を切って、どの教科を蹴ったかも載せません。
+あしからず…。
+<p>
+リンク先はその授業のかんたんな紹介と、授業で作成した発表資料などを公開しています。
+レジュメ中の記述に誤りなどがありましたら、<a href="mailto:masao@ulis.ac.jp">masao@ulis.ac.jp</a>まで連絡頂ければ大変ありがたいです。
+<hr>
+
+<h1>1学期</h1>
+
+<table border="1">
+  <caption>講義日程（1学期）</caption>
+  <tr>
+    <th>時限/<br>
+曜日</th>
+    <th>月曜日</th>
+    <th>火曜日</th>
+    <th>水曜日</th>
+    <th>木曜日</th>
+    <th>金曜日</th></tr>
+  <tr>
+    <th>1時限</th>
+    <td align="right"><b>専門知識論III</b><br>
+<i>（自然科学専門知識）</i><br>
+202 磯谷</td>
+    <td></td>
+    <td></td>
+    <td align="right"><a href="tabata/"><b>システム構成論I</b><br>
+<i>（情報システム構築論）</i><br>
+203 田畑</a></td>
+    <td></td></tr>
+  <tr>
+    <th>2時限</th>
+    <td align="right"><b>専門知識論III</b><br>
+<i>（自然科学専門知識）</i><br>
+202 磯谷</td>
+    <td></td>
+    <td></td>
+    <td align="right"><a href="tabata/"><b>システム構成論I</b><br>
+<i>（情報システム構築論）</i><br>
+203 田畑</a></td>
+    <td></td></tr>
+  <tr>
+    <th>3時限</th>
+    <td align="right"></td>
+    <td></td>
+    <td></td>
+    <td align="right"></td>
+    <td></td></tr>
+  <tr>
+    <th>4時限</th>
+    <td align="right"><a href="harada/"><b>情報知識化論III</b><br>
+<i>（データベース利用論）</i><br>
+203 原田</a></td>
+    <td></td>
+    <td></td>
+    <td align="right"><b>システム構成論II</b><br>
+<i>（ソフトウェアシステム）</i><br>
+203 中田</td>
+    <td></td></tr>
+  <tr>
+    <th>5時限</th>
+    <td align="right"><a href="harada/"><b>情報知識化論III</b><br>
+<i>（データベース利用論）</i><br>
+203 原田</a></td>
+    <td></td>
+    <td></td>
+    <td align="right"><b>システム構成論II</b><br>
+<i>（ソフトウェアシステム）</i><br>
+203 中田</td>
+<td></td></tr>
+</table>
+
+<h1>2学期</h1>
+
+<table border="1">
+  <caption>講義日程（2学期）</caption>
+  <tr>
+    <th>時限/<br>
+曜日</th>
+    <th>月曜日</th>
+    <th>火曜日</th>
+    <th>水曜日</th>
+    <th>木曜日</th>
+    <th>金曜日</th></tr>
+  <tr>
+    <th>1時限</th>
+    <td align="right"><a href="ishizuka/"><b>データベース構成論II</b><br>
+<i>（全文データベース）</i><br>
+202 石塚</a></td>
+    <td align="right"><a href="masunaga/"><b>データベース構成論I</b><br>
+<i>（先端データベース）</i><br>
+203 増永</a></td>
+    <td align="right"><a href="sugimoto/"><b>知識システム論II</b><br>
+<i>（知識応用システム）</i><br>
+202 杉本</a></td>
+    <td align="right"></td>
+    <td></td></tr>
+  <tr>
+    <th>2時限</th>
+    <td align="right"><a href="ishizuka/"><b>データベース構成論II</b><br>
+<i>（全文データベース）</i><br>
+202 石塚</a></td>
+    <td align="right"><a href="masunaga/"><b>データベース構成論I</b><br>
+<i>（先端データベース）</i><br>
+203 増永</a></td>
+    <td align="right"><a href="sugimoto/"><b>知識システム論II</b><br>
+<i>（知識応用システム）</i><br>
+202 杉本</a></td>
+    <td align="right"></td>
+    <td></td></tr>
+  <tr>
+    <th>3時限</th>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td></td></tr>
+  <tr>
+    <th>4時限</th>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td align="right"><a href="hasebe/"><b>システムコミュニケーション論II</b><br>
+<i>（システムインタフェース）</i><br>
+203 長谷部</a></td>
+    <td align="right"></td>
+    <td></td></tr>
+  <tr>
+    <th>5時限</th>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td align="right"><a href="hasebe/"><b>システムコミュニケーション論II</b><br>
+<i>（システムインタフェース）</i><br>
+203 長谷部</a></td>
+    <td align="right"></td>
+    <td></td></tr>
+</table>
+
+<h1>3学期</h1>
+
+<table border="1">
+  <caption>講義日程（3学期）</caption>
+  <tr>
+    <th>時限/<br>
+曜日</th>
+    <th>月曜日</th>
+    <th>火曜日</th>
+    <th>水曜日</th>
+    <th>木曜日</th>
+    <th>金曜日</th></tr>
+  <tr>
+    <th>1時限</th>
+    <td align="right"></td>
+    <td align="right"><a href="odaka/"><b>情報認識論III</b><br>
+<i>（パターン認識）</i><br>
+203 小高</a></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td></td></tr>
+  <tr>
+    <th>2時限</th>
+    <td align="right"></td>
+    <td align="right"><a href="odaka/"><b>情報認識論III</b><br>
+<i>（パターン認識）</i><br>
+203 小高</a></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td></td></tr>
+  <tr>
+    <th>3時限</th>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td></td></tr>
+  <tr>
+    <th>4時限</th>
+    <td align="right"><a href="matsui/"><b>情報組織化論IV</b><br>
+<i>（文献データ構造論）</i><br>
+202 松井</a></td>
+    <td align="right"><a href="hasegawa/"><b>システム基礎論III</b><br>
+<i>（数値演算）</i><br>
+202 長谷川</a></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td></td></tr>
+  <tr>
+    <th>5時限</th>
+    <td align="right"><a href="matsui/"><b>情報組織化論IV</b><br>
+<i>（文献データ構造論）</i><br>
+202 松井</a></td>
+    <td align="right"><a href="hasegawa/"><b>システム基礎論III</b><br>
+<i>（数値演算）</i><br>
+202 長谷川</a></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td></td></tr>
+</table>
+
+<hr>
+<address>
+高久雅生 (Takaku Masao)<br>
+<a href="http://www.ulis.ac.jp/~masao/">http://www.ulis.ac.jp/~masao/</a><br>
+<a href="mailto:masao@ulis.ac.jp">masao@ulis.ac.jp</a>
+</address>
+</body>
+</html>

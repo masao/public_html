@@ -1,0 +1,252 @@
+\batchmode
+\documentstyle[a4j,eclepsf,ascmac,eclbkbox]{jarticle}
+\makeatletter
+\title{XML In Mozilla}
+\author{}
+\date{}
+
+
+
+
+\makeatletter
+\count@=\the\catcode`\_ \catcode`\_=8 
+\newenvironment{tex2html_wrap}{}{} \catcode`\_=\count@
+\makeatother
+\let\mathon=$
+\let\mathoff=$
+\ifx\AtBeginDocument\undefined \newcommand{\AtBeginDocument}[1]{}\fi
+\newbox\sizebox
+\setlength{\hoffset}{0pt}\setlength{\voffset}{0pt}
+\addtolength{\textheight}{\footskip}\setlength{\footskip}{0pt}
+\addtolength{\textheight}{\topmargin}\setlength{\topmargin}{0pt}
+\addtolength{\textheight}{\headheight}\setlength{\headheight}{0pt}
+\addtolength{\textheight}{\headsep}\setlength{\headsep}{0pt}
+\setlength{\textwidth}{349pt}
+\newwrite\lthtmlwrite
+\makeatletter
+\let\realnormalsize=\normalsize
+\global\topskip=2sp
+\def\preveqno{}\let\real@float=\@float \let\realend@float=\end@float
+\def\@float{\let\@savefreelist\@freelist\real@float}
+\def\end@float{\realend@float\global\let\@freelist\@savefreelist}
+\let\real@dbflt=\@dbflt \let\end@dblfloat=\end@float
+\let\@largefloatcheck=\relax
+\def\@dbflt{\let\@savefreelist\@freelist\real@dbflt}
+\def\adjustnormalsize{\def\normalsize{\mathsurround=0pt \realnormalsize
+ \parindent=0pt\abovedisplayskip=0pt\belowdisplayskip=0pt}\normalsize}%
+\def\lthtmltypeout#1{{\let\protect\string\immediate\write\lthtmlwrite{#1}}}%
+\newcommand\lthtmlhboxmathA{\adjustnormalsize\setbox\sizebox=\hbox\bgroup}%
+\newcommand\lthtmlvboxmathA{\adjustnormalsize\setbox\sizebox=\vbox\bgroup%
+ \let\ifinner=\iffalse }%
+\newcommand\lthtmlboxmathZ{\@next\next\@currlist{}{\def\next{\voidb@x}}%
+ \expandafter\box\next\egroup}%
+\newcommand\lthtmlmathtype[1]{\def\lthtmlmathenv{#1}}%
+\newcommand\lthtmllogmath{\lthtmltypeout{l2hSize %
+:\lthtmlmathenv:\the\ht\sizebox::\the\dp\sizebox::\the\wd\sizebox.\preveqno}}%
+\newcommand\lthtmlfigureA[1]{\let\@savefreelist\@freelist
+       \lthtmlmathtype{#1}\lthtmlvboxmathA}%
+\newcommand\lthtmlfigureZ{\lthtmlboxmathZ\lthtmllogmath\copy\sizebox
+       \global\let\@freelist\@savefreelist}%
+\newcommand\lthtmldisplayA[1]{\lthtmlmathtype{#1}\lthtmlvboxmathA}%
+\newcommand\lthtmldisplayB[1]{\edef\preveqno{(\theequation)}%
+  \lthtmldisplayA{#1}\let\@eqnnum\relax}%
+\newcommand\lthtmldisplayZ{\lthtmlboxmathZ\lthtmllogmath\lthtmlsetmath}%
+\newcommand\lthtmlinlinemathA[1]{\lthtmlmathtype{#1}\lthtmlhboxmathA  \vrule height1.5ex width0pt }%
+\newcommand\lthtmlinlineA[1]{\lthtmlmathtype{#1}\lthtmlhboxmathA}%
+\newcommand\lthtmlinlineZ{\egroup\expandafter\ifdim\dp\sizebox>0pt %
+  \expandafter\centerinlinemath\fi\lthtmllogmath\lthtmlsetinline}
+\newcommand\lthtmlinlinemathZ{\egroup\expandafter\ifdim\dp\sizebox>0pt %
+  \expandafter\centerinlinemath\fi\lthtmllogmath\lthtmlsetmath}
+\def\lthtmlsetinline{\hbox{\vrule width.1em\vtop{\vbox{%
+  \kern.1em\copy\sizebox}\ifdim\dp\sizebox>0pt\kern.1em\else\kern.3pt\fi
+  \ifdim\hsize>\wd\sizebox \hrule depth1pt\fi}}}
+\def\lthtmlsetmath{\hbox{\vrule width.1em\vtop{\vbox{%
+  \kern.1em\kern0.8 pt\hbox{\hglue.17em\copy\sizebox\hglue0.8 pt}}\kern.3pt%
+  \ifdim\dp\sizebox>0pt\kern.1em\fi \kern0.8 pt%
+  \ifdim\hsize>\wd\sizebox \hrule depth1pt\fi}}}
+\def\centerinlinemath{%\dimen1=\ht\sizebox
+  \dimen1=\ifdim\ht\sizebox<\dp\sizebox \dp\sizebox\else\ht\sizebox\fi
+  \advance\dimen1by.5pt \vrule width0pt height\dimen1 depth\dimen1 
+ \dp\sizebox=\dimen1\ht\sizebox=\dimen1\relax}
+
+\def\lthtmlcheckvsize{\ifdim\ht\sizebox<\vsize\expandafter\vfill
+  \else\expandafter\vss\fi}%
+\makeatletter \tracingstats = 1 
+
+
+\begin{document}
+\pagestyle{empty}\thispagestyle{empty}%
+\lthtmltypeout{latex2htmlLength hsize=\the\hsize}%
+\lthtmltypeout{latex2htmlLength vsize=\the\vsize}%
+\lthtmltypeout{latex2htmlLength hoffset=\the\hoffset}%
+\lthtmltypeout{latex2htmlLength voffset=\the\voffset}%
+\lthtmltypeout{latex2htmlLength topmargin=\the\topmargin}%
+\lthtmltypeout{latex2htmlLength topskip=\the\topskip}%
+\lthtmltypeout{latex2htmlLength headheight=\the\headheight}%
+\lthtmltypeout{latex2htmlLength headsep=\the\headsep}%
+\lthtmltypeout{latex2htmlLength parskip=\the\parskip}%
+\lthtmltypeout{latex2htmlLength oddsidemargin=\the\oddsidemargin}%
+\makeatletter
+\if@twoside\lthtmltypeout{latex2htmlLength evensidemargin=\the\evensidemargin}%
+\else\lthtmltypeout{latex2htmlLength evensidemargin=\the\oddsidemargin}\fi%
+\makeatother
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline10}%
+$\mbox{$\bullet$}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+\stepcounter{section}
+\stepcounter{section}
+\stepcounter{section}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline54}%
+$\mbox{$\mathbf{\circ}$}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+\stepcounter{section}
+\stepcounter{section}
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlfigureA{breakbox67}%
+\begin{breakbox}\begin{tex2html_preform}\begin{verbatim}<?xml version="1.0"?>
+<?xml:stylesheet type="text/css2" href="SolarisDocBook.css"?>
+
+<Book>
+
+<ToolBar XML-Link="LINK" Role="HTML" Show="EMBED" href="toolbar.html"/>        
+<html:img src="icons/ab2_open_book.gif"/>
+
+   <Chapter>
+      <Title XML-Link="LINK" href="@Ab2PageView/98?">Preface</Title>
+   </Chapter>
+   <Chapter>
+      <Title XML-Link="LINK" href="@Ab2PageView/386?">Introduction to the Solari
+s User Environment</Title>
+   </Chapter>
+   <Chapter>
+      <Title XML-Link="LINK" href="@Ab2PageView/2999?">File Manager</Title>
+   </Chapter>
+   <Chapter>
+      <Title XML-Link="LINK" href="@Ab2PageView/6205?">Text Editor</Title>
+   </Chapter>
+   <Chapter> 
+       <Title XML-Link="LINK" href="@Ab2PageView/7393?">Multimedia Mail Tool</Ti
+tle>
+   </Chapter> 		
+   <Chapter> 
+       <Title XML-Link="LINK" href="@Ab2PageView/11023?">Calendar Manager</Title
+>
+   </Chapter> 		
+   <Chapter> 
+       <Title XML-Link="LINK" href="@Ab2PageView/13421?">Command Tool, Shell Too
+l, and Console Window </Title>
+   </Chapter> 		
+   <Chapter> 
+       <Title XML-Link="LINK" href="@Ab2PageView/13895?">Clock </Title>
+   </Chapter> 		
+   <Chapter> 
+       <Title XML-Link="LINK" href="@Ab2PageView/14314?">Calculator </Title>
+   </Chapter> 		
+   <Chapter> 
+       <Title XML-Link="LINK" href="@Ab2PageView/19318?">Tape Tool</Title>
+   </Chapter> 		
+   <Chapter> 
+       <Title XML-Link="LINK" href="@Ab2PageView/21441?">Snapshot</Title>
+   </Chapter> 		
+   <Chapter> 
+       <Title XML-Link="LINK" href="@Ab2PageView/21825?">Icon Editor</Title>
+   </Chapter> 		
+   <Chapter> 
+       <Title XML-Link="LINK" href="@Ab2PageView/22750?">Binder</Title>
+   </Chapter> 		
+   <Chapter> 
+       <Title XML-Link="LINK" href="@Ab2PageView/23852?">Customizing the Solaris
+ Environment</Title>
+   </Chapter> 		 
+   <Chapter> 
+       <Title XML-Link="LINK" href="@Ab2PageView/25997?">Utilities</Title>
+   </Chapter> 		
+   <Chapter> 
+       <Title XML-Link="LINK" href="@Ab2PageView/26320?">Using the AnswerBook So
+ftware</Title>
+   </Chapter> 		
+   <Chapter> 
+       <Title XML-Link="LINK" href="@Ab2PageView/27093?">Solaris Troubleshooting
+</Title>
+   </Chapter> 		
+   <Chapter> 
+       <Title XML-Link="LINK" href="disability.xml">Access for Users with Disabi
+lities</Title>
+   </Chapter> 		
+   <Chapter> 
+       <Title XML-Link="LINK" href="@Ab2PageView/29045?">Glossary</Title>
+   </Chapter> 		
+</Book>\end{verbatim}\end{tex2html_preform}
+\end{breakbox}%
+\lthtmlfigureZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlfigureA{breakbox74}%
+\begin{breakbox}\begin{tex2html_preform}\begin{verbatim}Title   {font-size:12pt; margin-left:14pt;}
+
+Title {Display: Block}
+
+PARA {Display: Block; margin-left:14pt;}
+
+LISTITEM {Display: List}\end{verbatim}\end{tex2html_preform}
+\end{breakbox}%
+\lthtmlfigureZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlfigureA{breakbox90}%
+\begin{breakbox}\begin{tex2html_preform}\begin{verbatim}<RDF:RDF>
+
+<Topic id="NC:NavCenter">  
+   <child>
+       <Topic id="NC:Bookmarks" name="Bookmarks"/>
+   </child>
+   <child href="NC:Search"  largeIcon="icon/large:workspace,search" name="Srch"/>
+   <child>
+        <Topic id="NC:History" largeIcon="icon/large:workspace,history" name="His
+tory" />
+   </child>
+   <child>
+        <Topic id="NC:Sitemaps" name="Site Tools" htmlURL="http://rdf.netscape.co
+m/rdf/navcntradvert.html" />
+   </child>
+   <child>
+        <Topic id="NC:LocalFiles" name="Files" largeIcon="http://rdf.netscape.com
+/rdf/heabou.gif"/>
+   </child>
+   <child>
+        <Topic id="http://www.netscape.com/netcenter.rdf#root" name="Netcenter"/>
+   </child> 
+   <child>
+        <Topic id="http://www.ilrt.bris.ac.uk/discovery/demos/rdf/webcat.rdf#ilrt
+root" name="WebCat"/>
+   </child>
+   <child>
+        <Topic id="NC:NavInternals" name="Navigator Internals">
+	  <child href="NC:SmartBrowsingProviders" name="SmartBrowsing Providers"/>
+        </Topic>
+   </child>
+</Topic>
+<Topic id="NC:SmartBrowsingProviders">
+    <child href="http://altavista.digital.com/cgi-bin/query?q=link%3A"
+          name="Who points to me?"
+          resultType="TEXT/HTML"/>
+    <child href="http://www-rl1.netscape.com/wtgn?" name="Related Links"
+          resultType="TEXT/RDF" />
+</Topic>
+</RDF:RDF>\end{verbatim}\end{tex2html_preform}
+\end{breakbox}%
+\lthtmlfigureZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+
+\end{document}
