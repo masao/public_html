@@ -1,3 +1,303 @@
+2002-07-08  Masao Takaku  <masao@ulis.ac.jp>
+
+	* XSLT - web tools - Track Palace:
+	http://www.trickpalace.net/tools/xslt.htm
+
+	IE の XSLT 処理系を JavaScript から実行させて結果を表示するモノ。
+	
+	こんな感じのものを CGI で実現させると良いかも…。
+	（file upload も可能にするとなお良い）
+
+	* XML::LibXSLT:
+
+	すでに clover では導入済だったけど、nileでも使いたいので入れてみる。
+
+	途中で Perl モジュールをたくさん入れたので、一応メモしておく。
+	（全部、CPANより）
+
+	File-Temp-0.12, XML-NamespaceSupport-1.07, XML-SAX-0.10,
+	XML-LibXML-1.52, XML-LibXSLT-1.50
+
+	* http://nite.kuicr.kyoto-u.ac.jp/~katayama/
+	[ふぉんとまにあっくす], [ぎんぷ] (Perl-Fu), [Ming/Rubyいじり]など
+	個性的なコンテンツがとても良い感じ。
+
+	あと、「俺ルパン」(CGI)は、昔の lupin.exe を思い出して懐しい…。
+
+	* XFML: http://xfml.org/
+
+	Webページについてのメタデータと分類法の共有を狙ったもの。
+
+	他人の作成したトピックがマージできるという点がウリなのかな!?
+	ちょっと面白そう。
+
+	* ConvertToRDF: http://www.mindswap.org/~mhgrove/ConvertToRDF/
+
+	RDF/DAML 形式で記述しておいた CSV テキストファイルの内容を RDF に
+	自動変換するモノ。
+
+2002-07-05  Masao Takaku  <masao@ulis.ac.jp>
+
+	* デジカメ: http://www.zdnet.co.jp/mobile/0207/04/n_uex.html
+
+	どっちか欲しいな…。
+
+	* mod_cvs: http://www.sub.nu/mod_cvs/
+	"CVS Module for Apache" なもの。
+
+	CVSROOT/loginfo で `cvs update` させる必要がなくなるかな!?
+
+	* AmigoDatabase (汎用データベースCGI): とりあえずメモ。
+	http://www.cgi-amigo.com/database.html
+
+	* Web メンテナンスのためのメモ:
+	http://www.gnome.gr.jp/jgug/authoring.html
+
+	JGUG（Japan Gnome Users Group）での XML + XSLT をベースにした、
+	Web ページのメンテナンス方法。
+	実際の XSLT ファイルなどもとても興味深い。
+
+	* 漢字の写真字典: 
+	http://homepage2.nifty.com/Gat_Tin/kanji/kaindex.htm
+
+	実際の使われ方も紹介されているので面白い。
+
+2002-07-04  Masao Takaku  <masao@ulis.ac.jp>
+
+	* サトラレ:
+
+	映画版が思ったより良かったので、期待して見てしまった。
+	映画版そのままのストーリーだったのがちょっと意外…。
+
+	ただ、小池栄子はどうもダメな感じ。
+
+2002-07-03  Masao Takaku  <masao@ulis.ac.jp>
+
+	* Koha - Open Source Library System: http://koha.org/
+	"Koha is the world's first free Open Source Library System. Made
+	in New Zealand by the Horowhenua Library Trust and Katipo
+	Communications Ltd, the Koha system is a full catalogue, opac,
+	circulation, member management and acquisitions package."
+
+	GPL で提供されている図書館管理システム。
+
+	Apache + MySQL + Perl による構成。
+	Z39.50 対応とかの記述も見える。
+
+	* MARC4j: とりあえずメモ。
+	http://marc4j.tigris.org/
+	"MARC4J is an open source library for working with MARC records."
+
+2002-07-02  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 世界の志村:
+	http://www.6prog.org/iof/wc2002/news/openstory.asp?id=15&noprevnext=&vp=y#pi
+
+	おっとビックリ。
+
+	しかし、ULIS トリムってまるでドイツの選手みたいに見えるね。
+	
+	* 命名法のエッセンス - 第10回　Perl スタイルガイド:
+	http://www.rfs.jp/sitebuilder/perl/07/02.html
+
+	命名に役立つ名詞・動詞の一覧が興味深い。
+
+	* 技術系日本語のポイント: とりあえずメモ。
+	http://www.ise.chuo-u.ac.jp/ise-labs/suzuki-lab/office/howtowrt/
+
+	「使用禁止」表現がオモシロイ。
+
+	* 日本発の wiki クローンリスト:
+	http://www1.neweb.ne.jp/wa/yamdas/column/technique/clonelist.html
+
+	私が適当にメモしたリストよりずっと網羅的なのでうれしい。
+
+	* Things you might not know about how real people search:
+	from "SEARCH TOOLS NEWS, #021"
+	http://www.searchtools.com/analysis/how-people-search.html
+
+	認知心理学からのサーチエンジンのユーザビリティ調査についての報告。
+
+	ユーザの検索行動を Specific と Non-Specific の2つに大別し、
+	「Pre-Click Confidence」なる閾値を導入して説明している。
+	また、別の調査から、ユーザが「次の10件」を見ない点、Advanced
+	Feature を使わない点なども明らかにしている。
+	最後に従来のリスト形式の結果画面よりも表形式の検索結果の方がずっと
+	素早く眺めることができ、有効だと述べている。
+
+	* Taxonomy of Web Search Forms: from "SEARCH TOOLS NEWS, #021"
+	http://www.bobulate.com/popups_full/search_p1.html
+
+	検索インタフェースを簡単に分類したもの。
+	
+2002-07-01  Masao Takaku  <masao@ulis.ac.jp>
+
+	* Viaweb:
+	http://www.shiro.dreamhost.com/scheme/trans/beating-the-averages-j.html
+
+	上記URLで説明されているオンラインストアビルダ。
+	Lisp で書かれていて、後に Yahoo! に買収されたソフトらしい。
+	cf. http://store.yahoo.com/
+
+	本文そのものは、Lisp の優位性についての解説を述べている。
+
+	こんな感じの Web ベースのカスタマイズツールが欲しい。
+	cf. [2002-01-22]
+
+2002-06-29  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 新着資料: http://www.ulis.ac.jp/library/NewSys2002/sinchaku.html
+
+	いつまで待っても図書館の新着資料情報のページが止まったままなので、
+	自力で OPAC 検索から引っぱってくるようにしてみた。
+
+	crontab の内容は以下の通り。
+
+	0 20 * * 5	/usr/local/bin/w3m -dump -cols 78 'http://uls03.ipc.ulis.ac.jp/cgi-bin/limedio/limewwwopac/search?search=search;category-book=category;arrival=7;listlimit=300' | /usr/local/bin/nkf -j | /bin/mailx -s "ULIS: library material (=?ISO-2022-JP?B?uqO9taTOv7fD5b/evfE=?=)" masao@ulis.ac.jp,yuka@ulis.ac.jp
+
+	listlimit はとりあえず 300 件にしておく。
+	もうちょい増やした方が良いかもしれんけど…。
+
+	あと、ブックマーク関連のボタン類もうっとおしい。
+	
+	* 「サイト構築の秘密」:
+	http://www.timedia.co.jp/new/column/web/tips
+
+	Zope を使ったWebサイトの構築に関する記事。
+
+2002-06-26  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 暴走韓国、ここまでやるか！〜醜悪な韓国の勝利:
+	http://members.tripod.co.jp/lets_go_korea/
+
+	韓国戦の誤審やサポーターの行動などを批判するサイト。
+
+	ここらへんの問題を公の場で報道しない日本のマスコミのアホさが際立つ。
+
+	TVなどで目立つのは、せいぜい飯島愛や明石家さんまの行動くらいか。
+	ただ、飯島愛のはヒステリーになってしまって、イマイチだったけど。
+	明石家さんまのはさすがの話芸で不快感を感じさせないのが偉かったね。
+
+	* HTML Special Characters and Browser Compatibility:
+	http://wdvl.internet.com/Authoring/HTML/Entities/index.html
+
+	HTML4の実体参照への IE, Netscape などの対応状況を調査。
+
+	もうちょっと網羅的なものの方がうれしい…。
+
+	* Cave or Community?:
+	http://firstmonday.org/issues/issue7_6/krishnamurthy/
+
+	Open Source Software の開発に関する調査。SourceForge のプロジェク
+	トを基に調査。
+	1. 開発者の数: 中央値は 4 人、最頻値は 1 人。
+	2. 議論はあまりしていない。
+	3. ソフトウェアのダウンロード数などは開発者の数に比例。
+	4. プロジェクトの年数と開発者の数には関連がある。
+	5. プロジェクトの管理者の数は開発者の人数と反比例。
+
+	けっこう興味深い。
+
+2002-06-24  Masao Takaku  <masao@ulis.ac.jp>
+
+	* Japan/MARC (研究報告):
+
+	JSIK に「事例報告」として再度出してみることに。
+
+	* 説明会: ダメダメなものだった。
+
+	なんで説明資料をちゃんと配らない!!
+	なんで広報担当の宛先を明示しない!!
+	なんで検討事項については質問者にその旨返さない!!
+	なんで決定事項をWebに載せない!!
+
+	ホントに溜息がでるほど、呆れてしまった。
+
+	* トルコ vs セネガル (W杯): 韓国戦もすごかったけど、もっと面白かっ
+	た。
+
+	今大会屈指の好カードだったと思う。
+
+2002-06-20  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 裁縫: カーテンがほつれてきていたので、小学校の家庭科の授業以来と
+	なる針仕事をした。
+
+	まあ、慣れればいいんだけど、ちょっと肩がこるかも。
+
+2002-06-19  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 研究者専用履歴書・業績書スタイルファイル: とりあえずメモ。
+	http://www.econ.ryukoku.ac.jp/~nakagawa/math/knots/cv/index.html
+
+	* Japan/MARC (研究報告): 査読で不採録とのこと。
+
+	残念だけど、まあ予想の範囲内。
+	元々、「事例報告」として出せれば良かったのだが…。
+
+	* W杯:
+
+	・日本 vs トルコ
+	ダメだった…。なんかすごく淋しい気分になってしまった。
+
+	・韓国 vs イタリア
+	沈んだ気分で見てたけど、同点で追い付いたところで一気に気分が盛り上
+	がった。素晴しかった。逆転の際は、涙が出るほど感動した。
+	ホン・ミョンボを交代してまで、攻撃に人を掛けてきた時点で何かが起き
+	る予感がしてた。あと、あのサポーターで審判が韓国寄りになっていたの
+	も効いていた。
+	
+
+2002-06-18  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 日本木材学会／情報処理委員会: http://www.jwrs.org/cmmttees/hp/
+
+	学会ホームページ運営のノウハウが興味深い。
+
+	* 「メタデータ・データベース構築システムの試行運用開始について」:
+	http://www.nii.ac.jp/CAT-ILL/INFO/metadata/20020603_shikou_unyo.html
+
+	NACSIS-CAT を Web にまで広げる試みだろうか…。
+	まあ、これで電子図書館プロジェクト間の相互運用とかがうまくいくと良
+	いのだけど…。
+
+2002-06-15  Masao Takaku  <masao@ulis.ac.jp>
+
+	* wcwidth_cjk(): XTerm ML を読んでいてみつけたモノ。
+	http://www.cl.cam.ac.uk/~mgk25/ucs/wcwidth.c
+
+	* 結合文字: gd-2.0.1(Beta) + freetype-1.3.0 にて Unicode ベースの
+	TrueType フォントを扱った場合、結合文字をうまく扱ってくれないのが
+	判明…。
+
+	どこのレイヤーで処理するのが正しいのだろうか…。
+
+	* Slashdot.jp: 結構、最近よく見ていたのだが、だんだん 2ch の出張サ
+	イトと化してきた気がする。
+
+	やはり、2ch というのは偉大なのか…。
+
+	* W杯: 日本決勝トーナメント進出。
+
+	もう、びっくりだね。
+	まさか、行けるとは思ってなかった…。
+
+	ただ、ホームの利は大きいのかも…。
+	あと、だいぶ前のテレビ番組でのあるサポーターの一言も気にいっている。
+	「実はそこらへんのサッカーを知らないオッサン・オバサンは本気で日本
+	が優勝すると思ってるよ!!」
+
+	あと、韓国の決勝トーナメント進出も喜び。
+	去年、韓国に行ったから、なんかすごくうれしい。
+
+	* session.el: http://emacs-session.sourceforge.net/
+
+	高林さんの「履歴マニア」を読んで以来、気になっていたのでちょっと使っ
+	てみた。
+
+	~/.session のパーミッションが world-readable になってしまうのが気
+	になるところ…。できれば、~/.history みたいに 600 で作ってほしい。
+
 2002-06-14  Masao Takaku  <masao@ulis.ac.jp>
 
 	* Unicode-based TrueType font:
@@ -8,7 +308,9 @@
 	ただ、フォントエンコーディングが Shift_JIS ベースであるため、UTF-8
 	文字列を GD ライブラリで画像化するのに、そのままでは使えないみたい。
 
-	とりあえず、フォントエンコーディングを変更する方法:
+	とりあえず、TTEdit を取ってきて触ってみた。
+
+	フォントエンコーディングを変更する方法:
 	・TTEditを起動
 	・「ファイル」→「一括コピー...」を選択する、
 	・「コピー元ファイル」に xWatanabeMinHabian2000.ttf を選択する、
