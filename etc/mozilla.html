@@ -10,11 +10,6 @@
 
 <body>
 
-<!-- hhmts start -->
-<div class="last-update">最終更新日: <strong>Tue Oct 23 23:52:12 2001</strong></div>
-<!-- hhmts end -->
-<hr>
-
 <h1>Mozillaの不具合メモ</h1>
 <p>
 私は、基本的に<a href="http://www.mozilla.org/">Mozilla</a>を
@@ -39,13 +34,8 @@
   <dt>ULIS OPAC検索
   <dd><a href="http://www.ulis.ac.jp/library/opac-start.html">付属図書館のOPAC</a>の検索ができません。
       MozillaとIEなどでは微妙にJavaScriptの実装が異なるので、検索できません。
-  <dd>対策: 図書館に文句を言うか、
-      <a href="http://webcat.nii.ac.jp/">Webcat</a>を使いましょう。
-
-  <dt>印刷プレビュー
-  <dd>印刷結果をプレビューすることができません。
-      印刷のページ数があらかじめ分からないと不安なときには、困るでしょう。
-  <dd>参考: <a href="http://bugzilla.mozilla.org/showvotes.cgi?bug_id=20943">[bugzilla 20943]</a>
+  <dd>対策: みんなで図書館に文句を言いましょう!!
+      あと、<a href="http://webcat.nii.ac.jp/">Webcat</a>もありますね。
 
   <dt>FTP
   <dd>プロキシを通さない直接接続で FTP した時に、
@@ -62,12 +52,21 @@
       インストーラがそれを自動認識してJava Plug-inを使うようになるはずですが、
       なぜか手元ではできない場合がありました。
       (再現条件は不明)
+
 </dl>
 
 <h2>解決したバグ</h2>
 <dl>
+  <dt>印刷プレビュー
+  <dd>Mozilla 0.9.6で実装されました。（一部、不安定な部分も残っていますが…）
+  <dd><strike>
+      印刷結果をプレビューすることができません。
+      印刷のページ数があらかじめ分からないと不安なときには、困るでしょう。
+      </strike>
+  <dd>参考: <a href="http://bugzilla.mozilla.org/show_bug.cgi?id=20943">[bugzilla 20943]</a>
+
   <dt>Proxyの自動設定
-  <dd>Mozilla-0.9.4で使えることを確認しました。
+  <dd>Mozilla 0.9.4で使えることを確認しました。
   <dd><strike>
       JavaScriptを使ったProxyの自動設定機能がうまく働いていないようです。
       直接プロキシサーバのホスト名・ポート番号を指定しましょう。
