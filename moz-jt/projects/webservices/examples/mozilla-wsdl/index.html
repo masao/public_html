@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+
+  <meta http-equiv="content-type"
+ content="text/html; charset=ISO-8859-1">
+  <title>Mozilla WSDL Example</title>
+<LINK REL="stylesheet" HREF="../../../../persistent-style.css" TYPE="text/css">
+<LINK REL="icon" HREF="../../../../images/mozilla-16.png" TYPE="image/png">
+</HEAD>
+<BODY>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%">
+<TR>
+<TD VALIGN="TOP" class="bannercell">
+<A HREF="http://www.mozilla.org/" CLASS="bannerlink">
+<IMG SRC="../../../../images/mozilla-banner.gif" ALT=""
+CLASS="mozillaorgbanner" WIDTH="600" HEIGHT="58">
+</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR>
+<TD VALIGN="TOP" >
+<TABLE BORDER="0" class="outersidebar"><TR><TD class="bordercell" VALIGN="TOP">
+<TABLE BORDER="0" CELLSPACING="3" class="middlesidebar"><TR><TD class="titlecell" VALIGN="TOP">
+<TABLE CELLPADDING="0" CELLSPACING="3" BORDER="0" class="innersidebar">
+<TR><TD class="linkcell" COLSPAN=2><A HREF="../../../.././"><B> mozilla.org</B></A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../../../../mozorg.html"> At A Glance</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../../../../why/"> Why Use Mozilla</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../../../../MPL/"> License Terms</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../../../../get-involved.html"> Get Involved</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../../../../community.html"> Newsgroups</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../../../../feedback.html"> Feedback</A></TD></TR>
+<TR><TD class="spacercell"></TD></TR>
+<TR><TD class="linkcell" COLSPAN=2><A HREF="../../../../catalog/"><B> Development</B></A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../../../../roadmap.html"> Roadmap</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../../../../projects/"> Projects</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../../../../owners.html"> Module Owners</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../../../../hacking/"> Hacking</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../../../../source.html"> Get the Source</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../../../../build/"> Build It</A></TD></TR>
+<TR><TD class="spacercell"></TD></TR>
+<TR><TD class="linkcell" COLSPAN=2><A HREF="../../../../quality/"><B> Testing</B></A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../../../../releases/"> Releases</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="http://ftp.mozilla.org/pub/mozilla/nightly/latest-trunk/"> Nightly Builds</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="http://bugzilla.mozilla.org/enter_bug.cgi?format=guided"> Report A Bug</A></TD></TR>
+<TR><TD class="spacercell"></TD></TR>
+<TR><TD class="linkcell" COLSPAN=2><A HREF="../../../../tools.html"><B> Tools</B></A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="http://bugzilla.mozilla.org/"> Bugzilla</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="http://tinderbox.mozilla.org/showbuilds.cgi?tree=SeaMonkey"> Tinderbox</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="http://bonsai.mozilla.org/cvsqueryform.cgi?"> Bonsai</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="http://lxr.mozilla.org/seamonkey/"> LXR</A></TD></TR>
+<TR><TD class="spacercell"></TD></TR>
+<TR><TD class="linkcell" COLSPAN=2><A HREF="../../../../faq.html"><B> FAQ</B></A></TD></TR>
+<TR><TD class="linkcell" COLSPAN=2><A HREF="http://www.mozilla.org/search.html"><B> Search</B></A></TD></TR>
+</TABLE>
+</TD></TR></TABLE>
+</TD></TR></TABLE>
+</TD>
+<TD VALIGN="TOP">
+
+
+
+
+<big style="font-weight: bold;"><big><big>Mozilla WSDL Example</big></big></big><br>
+<br>
+<a href="mailto:doron@netscape.com">Doron Rosenberg</a>
+(doron@netscape.com)<br>
+<br>
+With Mozilla 1.4beta, Gecko has WSDL (Web Service Description Language)
+capabilities that allows it to easily communicate with web
+services.&nbsp; In this example, the Amazon web services will be queried
+for books matching the string the user entered.<br>
+<br>
+<big><span style="font-weight: bold;">Note about Security</span></big><br>
+Since this example needs to call another domain (mozilla.org to
+amazon.com), it breaks the cross-domain security model that Mozilla
+has.&nbsp; There is <a
+ href="http://lxr.mozilla.org/mozilla/source/extensions/webservices/docs/New_Security_Model.html">a
+new model</a> developed especially<br>
+for web services in Mozilla 1.4beta that allows a web service to grant
+the browser permission to call it.&nbsp; However, since it is very new,
+it hasn't reached yet the public web services out there.&nbsp;
+Therefore, as a workaround, you <a
+ href="http://devedge.netscape.com/viewsource/2002/bypassing-security-restrictions/">have
+to bypass it</a> by setting the following user preference:<br>
+<code><br>
+user_pref("signed.applets.codebase_principal_support",       true);<br>
+<br>
+</code><big><small>This will make Mozilla prompt you to allow it to
+access amazon.com.<br>
+<br>
+</small><span style="font-weight: bold;">Example<br>
+</span><small>The example allows the user to search the Amazon web
+service for books matching a given keyword.&nbsp; For example, typing in
+"Mozilla" will match books related to the infamous lizard.&nbsp; To run
+the example, click <a href="amazonwsdl.html">here</a>.<br>
+<br>
+<big><span style="font-weight: bold;">How it Works</span></big><br>
+</small></big><big><small> First, we instantiate an "Amazon" object
+using their <a
+ href="http://soap.amazon.com/schemas2/AmazonWebServices.wsdl">WSDL file</a>.&nbsp;
+This creates a proxy object in the browser for the Amazon web service
+which can then be scripted as if it where a local resource.&nbsp; The
+WSDL file describes the interface, detailing which&nbsp; methods can be
+called, which arguments to pass in and what the response will look
+like.&nbsp; When a method is called on the proxy object, Mozilla
+generates a SOAP envelope based on the WSDL file and sends it to
+Amazon.&nbsp; When Amazon responds, Mozilla is able to convert that SOAP </small></big><big><small>response
+into a JavaScript object.&nbsp; In this case, an array of "book"
+objects, where each book contains information such as the title, an
+array of the authors, the retail and amazon's price and more.&nbsp; </small></big><br>
+<big><small> <br>
+The example then takes this information and displays it by adding it to
+the page's DOM - no new page has to be loaded.<br>
+</small></big><br>
+<big><span style="font-weight: bold;">Resources<br>
+</span><a href="http://mozilla.org/projects/webservices/"><small>Mozilla.org's
+Web Services Project Page</small></a><span style="font-weight: bold;"><br>
+</span></big> <a
+ href="http://devedge.netscape.com/viewsource/2003/soap/01/">SOAP In
+Gecko</a><br>
+<a
+ href="http://associates.amazon.com/exec/panama/associates/ntg/browse/-/1067662/104-8408885-5274312">Amazon
+Web Services</a><br>
+<br>
+<br>
+
+
+
+</TD>
+</TR>
+<TR>
+<TD COLSPAN="2" ALIGN="RIGHT" VALIGN="TOP">
+<div class="documentinfo">
+Copyright &copy; 1998-2003 The Mozilla Organization
+<BR>
+Last modified May 13,  2003
+<BR>
+<A HREF="http://www.mozilla.org/webtools/bonsai/cvslog.cgi?file=mozilla-org/html/projects/webservices/examples/mozilla-wsdl/index.html&amp;rev=&amp;root=/cvsroot/">Document History</A>
+<BR>
+<A HREF="http://doctor.mozilla.org/?file=mozilla-org/html/projects/webservices/examples/mozilla-wsdl/index.html">Edit this Page</A>
+(or <A HREF="/README-cvs.html">via CVS</A>)
+</div>
+</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>
