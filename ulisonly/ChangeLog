@@ -1,4 +1,100 @@
+2001-07-02  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 修士ゼミ: 次回以降ゼミで何をやるかでうまく意見統一が図れなかった。
+	「M2は(とりあえず)修論の進捗状況の報告をする」で落ち着いたけど、M1
+	は「お勉強」と「進捗状況の報告」のどちらかで意見が割れた。
+
+	個人的には、テーマも決まっていない段階で「進捗状況の報告」はキツイ
+	と思う。何もしないよりは良いかも知れないけど。
+
+	「お勉強」はあまり楽しくない。
+	どうせやるなら、進捗状況の報告が良い。
+
+2001-06-29  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 買いたい本: 財布と相談しながら買おうと思う（衝動買いしたくない）
+	のでリストにしておく。
+
+	「入門CGI 第2版」
+	「GNOME プログラミング入門」
+	「LaTeX2eトータルガイド」
+
+	* つくば市IT: グループ打ち合わせ3回目。
+
+	次回までに Word と PowerPoint で資料作り。
+	う〜ん、Word なんか使いたくないんですが、困った。X-<
+
+	* WinScp: avalon のみ "error reading directory" というエラーが出て
+	ファイル名の一覧が取得できなかった。
+
+	阪口さんによれば、 /etc/csh.login で tty を持っていることを前提に
+	していたコードを書いていたらしい。
+	これを設定し直したことで、うまく行くようになった。万歳!!
+
+2001-06-28  Masao Takaku  <masao@ulis.ac.jp>
+
+	* WinScp:
+	ずっとファイル一覧の取得ができないので、失敗していたが、.cshrc で
+	WinScp での接続の時のみ "setenv LANG C"	することで解決。
+	これで、ファイル転送はすべて WinScp でOK。万歳!!
+	
+	cf. http://www.hlla.is.tsukuba.ac.jp/~arak/pub/
+
+	* アレゲ: slash.jp の開設以来、私と同じように「語源は何？」となっ
+	てる人は多いみたい。[2001-06-22]
+	Linux Japanの中村正三郎さんのコラムにも同じようなことが書いてあっ
+	た。
+
+	新たに発見した資料：
+	http://jla.linux.or.jp/event/archive/200006-nagoya/nagoya6.html
+	http://www.topstudio.co.jp/~kmuto/debian/english.txt
+
+	「アレゲ世代」というのは初耳。
+	でも、世代の意味で使ってるのは少数の用法な気が…。
+
+	* UNIX Magazine(2001-07): あんまりおもしろい記事は無かったけど、
+	ssh-agentを自動的に設定する話が載っていたので、これを元に以下のよ
+	うなのを~/.alias-local に書いておく。
+	
+	# For ssh-agent.
+	# UNIX Magazine. 2001-07, p. 54:
+	set ssh_agent_lock=/tmp/.ssh-masao-agent.lnk
+	if ( -f $ssh_agent_lock ) then
+	    source $ssh_agent_lock
+	else
+	    touch $ssh_agent_lock
+	    chmod 600 $ssh_agent_lock
+	    ssh-agent | grep -v '^echo' > $ssh_agent_lock
+	    source $ssh_agent_lock
+	    ssh-add
+	endif
+
+	* 無洗米: カスミで無洗米を売るようになっていた。
+	これで、無洗米のためだけにダイエーに行かなくても良くなった。万歳!!
+
+	* OCLC-Z39.50 Client: 昨日、小鷹さんに聞いたOCLCのCJK部門で開発さ
+	れたというZ39.50クライアントを調べてみる。
+
+	以下のURLにて提供されている様子。
+	http://www.oclc.org/zclient/
+
+	動作環境が Windows NT, 2000 だけなので、とりあえず様子見かも…。
+
 2001-06-27  Masao Takaku  <masao@ulis.ac.jp>
+
+	* Mrs.Kotaka: OCLCのCJK部門のチーフクラスを長年勤めている小鷹さん
+	という方が宇陀先生のツテで来訪したので、ちょっと懇談。
+
+	あまり時間がなかったので、お互いのことを話す余裕が無かったけど、結
+	構パワフルなおばさんだったので印象的でした。
+	特に、「情報は流れないと意味が無い」とか言うあたり。
+
+	* 地理情報クリアリングハウス: 国土地理院がクリアリングハウスを構築
+	している。
+	cf. http://zgate.gsi.go.jp/
+
+	裏では、Z39.50サーバの全文検索が動いている様子。
+	Isiteを使ってるみたい。
 
 	* 「2005年の図書館像」: なる報告書が出ているらしい。
 	cf. http://www.mext.go.jp/b_menu/houdou/12/12/001260.htm
