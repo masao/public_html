@@ -1,3 +1,218 @@
+2002-04-24  Masao Takaku  <masao@ulis.ac.jp>
+
+	* Wiki Way: WikiWikiWeb の書籍。
+
+	Amazon.co.jp から買おうかと一瞬思ったけど、YukiWiki にある情報によ
+	ると翻訳中らしいので、やめておく。
+
+	http://www.amazon.co.jp/exec/obidos/ASIN/020171499X/wwwhyukcomhir-22/250-8557369-0853839
+	http://www.hyuki.com/yukiwiki/yukiwiki.cgi?mycmd=read&mypage=WikiWay
+
+	* Web 掲示板: 一応、気になったものを書いておく。
+
+	・Web Forum: http://www.kent-web.com/bbs/wforum.html
+
+	オーソドックスなツリー型掲示板。（有名な掲示板配布サイト）
+
+	・ハイパースレッド: http://www-power.net/cgi/bbs/hyper_thread/
+
+	ツリー・トピック・スレッドの3つの形式を切り替えて表示できる。
+	青空文庫で採用。
+
+	・Child Tree: http://www.cj-c.com/cgi_s/cbbs.htm
+
+	ツリー・トピック・スレッドの3つの形式を切り替えて表示できる。
+	もじら組で採用。
+
+	もじら組（http://www.mozilla.gr.jp/）で使っているものは、以下のURL
+	から取ってこれる。
+	http://bugzilla.mozilla.gr.jp/buglist.cgi?bug_status=NEW&bug_status=CLOSED&product=mozilla.gr.jp&component=%A4%E2%A4%B8%A4%E9%C1%C8BBS
+
+	* エキサイト翻訳: http://www.excite.co.jp/world/text/
+
+	英作文に困ったので、とりあえず頼ってみた。
+	はたして通じるかしら。
+
+	* 「青空文庫」データベース:
+	http://sourceforge.jp/projects/aozora-db/
+
+	おもしろそうだけど、どこまでやる気かしら…。
+
+	とりあえず、本家には、ルビの不思議マークアップをなんとかしてほしい
+	ね。
+
+	* 面白そうな文献:
+
+	用語体系の統合という観点からは、
+
+	・ICHISE Ryutarou, TAKEDA Hideaki, and HONIDEN Shinichi
+	  An Alignment Algorithm between Concept Hierarchies
+
+	というのを見つけた。
+
+	学会などでの発表としては、WWW10 でのポスター発表およびIPSJの『知能
+	と複雑系』での発表がほぼ同一のものか。
+	cf. http://www10.org/cdrom/posters/1093.pdf
+	cf. http://www.ipsj.or.jp/members/SIGNotes/Jpn/02/2001/124/article005.html
+
+	異なる概念階層同士を重ねるためのアルゴリズムらしい。
+	評価として、Lycos と Yahoo!Japan のカテゴリを対象とした実験をして
+	いる。
+
+	* 面白そうな文献:
+
+	・野末 俊比古 (学術情報センター), 越塚 美加 (学術情報センター)
+	  「情報利用学」の構築に向けた予備的考察　：　図書館情報学における
+	  情報利用行動研究と情報利用教育研究を中心に
+	
+	・越塚 美加 (学術情報センター)
+	  文献のブラウジングが研究過程に与える影響
+
+	両方とも「学術情報センター紀要」第10号(1998年3月)から。
+	cf. http://www.nii.ac.jp/hrd/HTML/Journal/bulletins/no10/abst-j.html
+
+	暇ができたら、読んでみる。
+
+	
+	* emerald 不調: とりあえず IAA（Intel Application Accelerator）を
+	インストールしてみた。
+
+2002-04-23  Masao Takaku  <masao@ulis.ac.jp>
+
+	* IM (Internet Messenger) !?:
+
+	「共用の PC で使うのはやめて!!」
+
+	とメーリングリストに流した方が良いかも…。
+
+	* Emacs on Windows:
+
+	そろそろ Windows 上でも Emacs というかマトモなテキストエディタを使
+	いたくなってきたので、探してみる。Meadow を使うか、Emacs21 にする
+	かでちょっと悩んでみる。
+
+	cf. 「Meadow FAQ page」 http://meadow-faq.sourceforge.net/
+
+	cf. 「Windows上のIMEを使う」
+	    http://www.boreas.dti.ne.jp/~miyoshi/NTEmacs21/index.html
+
+	* 学生サーバでWikiWikiWebというアイデア: けっこうイケるかも…。
+
+	* 新院生室（2-A）:
+
+	とりあえず、座席表を作成して、名前を書き込むようにした。
+
+2002-04-20  Masao Takaku  <masao@ulis.ac.jp>
+
+	* Apacheバージョンアップ手順:
+
+	・httpd.conf の退避
+
+	% diff -u httpd.conf-dist httpd.conf.20020420 > /tmp/httpd.conf.diff
+	% sudo cp httpd.conf httpd.conf.20020420
+
+	・既存 Apache の停止
+
+	% cd /etc/init.d
+	% sudo ./apache stop
+
+	・ログファイルの退避
+
+	% cd /usr/local/apache/logs
+	% sudo mv access_log access_log.20020420
+	% sudo gzip -9 access_log.20020420
+	% sudo mv error_log error_log.20020420
+	% sudo gzip -9 error_log.20020420
+
+	% cd /project/www-student/logs
+	% sudo mv access_log access_log.20020420
+	% sudo gzip -9 access_log.20020420
+	% sudo mv error_log error_log.20020420
+	% sudo gzip -9 error_log.20020420
+
+	・Apache のコンパイル、インストール
+
+	% ./configure --enable-module=all
+	% make
+	% sudo make install
+
+	・httpd.conf の編集
+
+	/tmp/httpd.conf.diff を見て、ひとつずつ設定項目を確認しながら編集
+	していく。
+
+	% sudo vi httpd.conf
+
+	・httpd.conf のテスト
+
+	% /usr/local/apache/bin/httpd -t
+	% /usr/local/apache/bin/httpd -T
+	% /usr/local/apache/bin/httpd -S
+
+	・Apache の起動
+
+	% cd /etc/init.d
+	% sudo ./apache start
+
+2002-04-19  Masao Takaku  <masao@ulis.ac.jp>
+
+	* iiimf-skk: http://www.kondara.org/~famao/iiimf-skk/
+
+	SKK ライクな入力エンジンを提供する試み。
+	今日、開設された SourceForge.jp を見に行ってみつけた。
+
+	* あしたは、Apache バージョンアップの手順書を作成すること。
+
+	* RWiki:
+
+	RD という標準フォーマットがきちんと定義されているのが魅力で、ちょっ
+	とインストールしてみようかと思ったけど、面倒だからやめる。
+
+	なにせ、dRuby を使うので、デーモンを立ちあげておかないといけないら
+	しい…。これでは、本運用するにはちょい問題あり。
+
+	* WikiClone: 続 Wikiサーベイ。
+
+	・vikky: http://vivi.dyndns.org/vikky2/vikky.phtml?title=TopPage
+	PHP + PostgreSql ベース。
+	表組み、フォーム、ログインなど豊富な機能を持っていて強力。
+	
+	・MoinMoin: http://www.gembook.jp/html/moin/moin.cgi/FrontPage
+	Pythonベース。
+
+	・EmacsWiki: http://www.gci-net.com/users/j/johnw/EmacsResources.html
+	
+	Emacs-Lispベース。
+	Web上で編集できるというWikiの特徴はちょっと違うものの、個人の情報
+	管理機能としては有用との報告も。
+	cf. http://www.ops.dti.ne.jp/~cake-smd/wiki/MakingOfWikiTech.html
+
+	・UseModWiki: http://www.usemod.com/cgi-bin/wiki.pl?UseModWiki
+	http://emacswiki.org/ が採用するなど、海外では結構人気のあるみたい。
+	日本語はそのままでは通らない。
+	
+	・TWiki: http://twiki.org/
+	Perlベース。
+	けっこう強力らしい。ただ、GPLなのにダウンロード時にE-mailを使わな
+	いといけないのがちょっとイヤ。
+	あと、日本語は通らない。（ISO-8859-1でハードコーディングされている）
+
+2002-04-18  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 個人指導:
+
+	「環境関連のデータを可視化してみたら…。」という話になった。
+
+	* 付属図書館OPAC利用状況:
+
+	申請して ID をもらったが、なんだかルーチンワーク化していない感じ。
+
+	なんだかなぁ〜。
+
+	* 健康診断: 珍しく早い時間に終わった。
+
+	こんなにマトモに回ったのは、初めてかも…。
+
 2002-04-17  Masao Takaku  <masao@ulis.ac.jp>
 
 	* メインシステム・ユーザ定例会:
