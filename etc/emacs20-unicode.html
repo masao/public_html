@@ -25,6 +25,14 @@
 </p>
 <h2>導入の手順</h2>
 <p>
+導入に必要なファイル群は以下のURLなどから入手してください。
+</p>
+<ul>
+  <li><a href="ftp://ftp.m17n.org/pub/mule/">ftp://ftp.m17n.org/pub/mule/</a><a href="ftp://ftp.m17n.org/pub/mule/emacs-20.7.tar.gz">emacs-20.7.tar.gz</a>
+  <li><a href="ftp://ftp.m17n.org/pub/mule/">ftp://ftp.m17n.org/pub/mule/</a><a href="ftp://ftp.m17n.org/pub/mule/leim-20.7.tar.gz">leim-20.7.tar.gz</a>
+  <li><a href="ftp://ftp.m17n.org/pub/mule/Mule-UCS/">ftp://ftp.m17n.org/pub/mule/Mule-UCS/</a><a href="ftp://ftp.m17n.org/pub/mule/Mule-UCS/Mule-UCS-0.84.tar.gz">Mule-UCS-0.84.tar.gz</a>
+</ul>
+<p>
 以下に、導入の手順を示します。
 </p>
 <pre>
@@ -52,7 +60,7 @@ Password: ******
 # mkdir ${prefix}/share/emacs/site-lisp/Mule-UCS
 # cp -r lisp/* ${prefix}/share/emacs/site-lisp/Mule-UCS
 </pre>
-<h2>個人環境の設定</h2>
+<h2>設定</h2>
 <p>
 導入がうまくいったら、次に個人環境の設定をおこないます。
 Mule-UCSを利用するには、
@@ -64,6 +72,8 @@ Mule-UCSを利用するには、
 <p>
 また、Xサーバの方にUnicodeが表示できるフォントを用意してあげないと、
 □で表示されてしまいます。
+これに対処するには、Emacs向けに開発された
+Unicode対応フォントパッケージintlfontsをインストールする必要があります。
 </p>
 
 <h2>使い方</h2>
@@ -74,10 +84,14 @@ utf-8などUnicodeベースのエンコーディングのファイルを開くと
 Unicodeテキストの表示や編集ができるようになります。
 </p>
 <p>
-また、一般のIMEなどから入力できない文字については、
-Unicodeのコード番号から入力することができるようです。
+まず、編集中のバッファの文字コードを変更する方法には、
+<code>C-x [RETURN] f</code>と打ちこんで、
+バッファの文字エンコーディングを尋ねられたら、
+<code>utf-8</code>などと打ち込めばOKです。
 </p>
 <p>
+また、一般のIMEなどから入力できない文字については、
+Unicodeのコード番号から入力することができるようです。
 例えば、U+FA19にあたる文字（&#xfa19;: 「神」の旧字体です）を入力する場合、
 <code>M-x insert-ucs-character [RETURN]</code>としてから
 <code>?\xFA19</code>と打ちこむと、
@@ -97,7 +111,7 @@ Unicodeのコード番号から入力することができるようです。
   <li><a href="http://www.cl.cam.ac.uk/~mgk25/unicode.html">UTF-8 and Unicode FAQ for Linux</a>:
       実際にUnicodeを扱う環境としての Unix, Linux についての情報が満載。
       (Mule-UCSについてはココで知りました)
-  <li>
+
 </ul>
 <hr>
 <address>
