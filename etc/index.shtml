@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-JP">
+<link rel="stylesheet" href="../default.css" type="text/css">
+<link rev="made" href="mailto:masao@ulis.ac.jp">
+<title>たかくまさおのその他のページ</title>
+</head>
+
+<body>
+<p>
+雑多な覚え書きその他を置いてあります。
+</p>
+
+<!--#config timefmt="[%Y-%m-%d]" -->
+<ul>
+  <li><a href="wikiwiki.html">WikiCloneについてのメモ</a>
+      <!--#flastmod file="wikiwiki.html" -->
+  <li><a href="windows-software.html">Useful Softwares on Windows</a>
+      <!--#flastmod file="windows-software.html" -->
+  <li><a href="mozilla.html">Mozillaの不具合メモ</a>
+      <!--#flastmod file="mozilla.html" -->
+  <li><a href="clover-papi.html">Clover上でPAPI(Performance API)を動作させる</a>
+      <!--#flastmod file="clover-papi.html" -->
+  <li><a href="rpm.html">RPMの使い方</a>
+      <!--#flastmod file="rpm.html" -->
+  <li><a href="emacs20-unicode.html">Emacs20でUnicodeを使おう!</a>
+      <!--#flastmod file="emacs20-unicode.html" -->
+  <li><a href="config.html">各種設定ファイル</a>
+      <!--#flastmod file="config.html" -->
+</ul>
+<p>
+以下のものはだいぶ昔に書いたものです。
+</p>
+<ul>
+  <li><a href="man-change-allfilename.html">ファイル名の一括変換の方法</a>
+      <!--#flastmod file="man-change-allfilename.html" -->
+  <li><a href="man-win95-trouble.html">Windows 95 トラブルシューティング</a>
+      <!--#flastmod file="man-win95-trouble.html" -->
+  <li><a href="calc.html">電卓アップレット</a>
+      <!--#flastmod file="calc.html" -->
+</ul>
+<hr>
+<address>
+高久雅生 (Takaku Masao)<br>
+<a href="http://nile.ulis.ac.jp/~masao/">http://nile.ulis.ac.jp/~masao/</a>, 
+<a href="mailto:masao@ulis.ac.jp">masao@ulis.ac.jp</a>
+</address>
+</body>
+</html>
