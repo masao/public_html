@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-JP">
+<link rel="stylesheet" href="../default.css" type="text/css">
+<link rev="made" href="mailto:masao@ulis.ac.jp">
+<title>WikiCloneについてのメモ</title>
+</head>
+<body>
+<!-- hhmts start -->
+<div class="last-update">最終更新日: <strong>Fri Apr 19 16:42:28 2002</strong></div>
+<!-- hhmts end -->
+<h1>WikiCloneについてのメモ</h1>
+<p>
+情報提供システムの一種であるWikiWikiWebの実装に関するメモです。
+おもに、<a href="http://nile.ulis.ac.jp/sys/">システム分野のページ</a>のような文書を複数人で管理するために採用できないかという検討を行うために調査した際のものです。
+以下、調査したWikiCloneの名称、開発元、コメントなどを書いておきます。
+</p>
+
+<dl>
+  <dt><a href="http://www.todo.org/">Tiki</a>
+  <dd>Rubyベース。バックエンドはプレインテキストのファイル群。
+  <dd>日本語が通るものとしては最古参（たぶん）。
+
+  <dt><a href="http://www.hyuki.com/yukiwiki/">YukiWiki</a>
+  <dd>Perlベース。バックエンドは DBM 形式。掲示板風？
+
+  <dt><a href="http://factage.com/sng/pukiwiki/">PukiWiki</a>
+  <dd>PHPベース。YukiWikiを参考にPHPで実装。高機能。
+
+  <dt><a href="http://www.jin.gr.jp/~nahi/RWiki/">RWiki</a>
+  <dd>Rubyベース。RD 形式で記述する。
+  <dd><p>
+      RD という標準フォーマットがきちんと定義されているのが魅力で、ちょっ
+      とインストールしてみようかと思ったけど、面倒だからやめる。
+
+      なにせ、dRuby を使うので、デーモンを立ちあげておかないといけないら
+      しい…。これでは、本運用するにはちょい問題あり。
+      </p>
+
+  <dt><a href="http://www.gembook.jp/html/moin/moin.cgi/FrontPage">MoinMoin</a>
+  <dd>Pythonベース。
+
+  <dt><a href="http://vivi.dyndns.org/vikky2/vikky.phtml?title=TopPage">vikky</a>
+  <dd>PHP + PostgreSQL ベース。
+  <dd>表組み、フォーム、ログインなど豊富な機能を持っていてかなり強力。
+
+  <dt><a href="http://www.gci-net.com/users/j/johnw/EmacsResources.html">EmacsWiki</a>
+  <dd>Emacs-Lispベース。
+  <dd>Web上で編集できるというWikiの特徴はちょっと違うものの、<q>個人の情報管理ツールとしては有用</q>との<a href="http://www.ops.dti.ne.jp/~cake-smd/wiki/EmacsWiki.html">報告</a>も。
+
+  <dt><a href="http://twiki.org/">TWiki</a>
+  <dd>Perlベース。けっこう強力らしい。
+  <dd>ただ、GPLなのにダウンロード時に登録?しないといけないのがちょっとイヤ。あと、日本語は通らない。（ISO-8859-1でハードコーディングされている）
+
+  <dt><a href="http://www.usemod.com/cgi-bin/wiki.pl?UseModWiki">UseModWiki</a>
+  <dd><a href="http://emacswiki.org/">http://emacswiki.org/</a> が採用するなど、海外では結構人気のあるみたい。日本語はそのままでは通らない。
+
+
+</dl>
+
+<h2>参照URL</h2>
+<ul>
+  <li><a href="http://c2.com/cgi/wiki?WikiEngines">本家のサイト</a>
+</ul>
+<hr>
+<address>
+高久雅生 (Takaku Masao)<br>
+<a href="http://nile.ulis.ac.jp/~masao/">http://nile.ulis.ac.jp/~masao/</a>, 
+<a href="mailto:masao@ulis.ac.jp">masao@ulis.ac.jp</a>
+</address>
+<div class="id">$Id$</div>
+</body>
+</html>
