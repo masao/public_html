@@ -7,7 +7,13 @@ use CGI;
 use LWP::UserAgent;
 use HTTP::Request;
 
+# 本家のURL
 my $ORIG_URL = 'http://www.ulis.ac.jp/ipc/main2002/troublelist.html';
+
+# タイトル
+my $TITLE = '「問題と対策」改';
+
+# 1ページに表示する件数
 my $MAX = 10;
 
 # テーブル全体の背景色
@@ -19,8 +25,10 @@ my $bgcolor_head = '#00A020';
 # メールアドレス
 my $address = 'masao@ulis.ac.jp';
 
+# 項目のラベル
 my @TABLE_LABEL = ('項番', '問題点', '対策状況', '発生日', '対策日');
 
+# CGIパラメータ
 my $q = new CGI;
 my $page = escape_html($q->param('page')) || 0;
 my $search = escape_html($q->param('search')) || "";
@@ -33,8 +41,8 @@ sub main {
     print $q->header('text/html; charset=EUC-JP');
     print <<EOF;
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html lang="ja"><head><title>問題と対策 改</title></head><body>
-<h1>問題と対策 改</h1>
+<html lang="ja"><head><title>$TITLE</title></head><body>
+<h1>$TITLE</h1>
 EOF
 
     my @entries = get_contents();
