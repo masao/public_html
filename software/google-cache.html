@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-JP">
+<link rel="stylesheet" href="../default.css" type="text/css">
+<link rev="made" href="mailto:masao@ulis.ac.jp">
+<title>google-cache.pl</title>
+</head>
+
+<body>
+
+<h1>google-cache.pl</h1>
+
+<h2 name="overview">概要</h2>
+<p>
+2001年5月に、マシンのトラブルによって
+自分のつくっていたWebページのデータがすべて消えてしまいました。
+一から書き直すのは、ちょっと悲しかったので、
+<a href="http://www.google.com/help/features.html#cached">Googleのキャッシュ</a>から再帰的にデータを取ってくるスクリプトを書いてみました。
+</p>
+<p>
+動作には、
+<a href="http://www.perl.com/">Perl5</a>,
+<a href="http://search.cpan.org/search?dist=URI">URI.pm（Perlモジュール）</a>,
+<a href="http://sunsite.dk/wget/">GNU wget</a>が必要になります。
+（動作確認は手元のSolaris7でしか行っていません。）
+</p>
+
+<h2 name="example">例</h2>
+<pre>
+perl google-r.pl -l 5 http://cosmo.ulis.ac.jp/~masao/ 
+</pre>
+<p>
+上記のように動かすと、
+<code>http://cosmo.ulis.ac.jp/~masao/</code>のURLからたどれる
+Googleのキャッシュを5レベルまで再帰的に取得します。
+<code>-l NUM</code> オプションを省略すると、
+指定したURLの一ファイルだけを取ってきます。
+</p>
+<p>
+取得したファイルは、カレントディレクトリにそのまま
+保存されていくので注意が必要かもしれません。
+（<code>-O DIR</code>オプションを指定すれば、出力するディレクトリを指定できます）
+</p>
+
+<h2 name="download">ダウンロード</h2>
+<dl>
+  <dt><a href="google-cache.pl">google-cache.pl</a>
+  <dd>初期公開版
+</dl>
+
+<h2 name="notes">注意事項</h2>
+<p>
+<strong>大量のコンテンツを持つURLを出発点にして再帰的に取得することは、
+ネットワークに大きな負荷をかけますので、
+十分に注意して実行してください。
+</strong>
+</p>
+<p>
+当然のことながら、画像、スタイルシートなどを含め、
+Googleでキャッシュされていないファイルは取得できません。
+</p>
+<p>
+また、かなりアドホックなことをやってるので、
+<a href="http://www.google.com/">Google</a>の出力するHTMLが変更されたら、
+うまくいかなくなります。当面は動くと思うけど…。
+</p>
+
+<h2 name="bugs">BUGS (TODO)</h2>
+<ul>
+  <li>application/pdf
+      <p>
+      テキストバージョンしか残っていない…。
+      </p>
+  <li>text/plain
+      <p>プレインテキストに対しては先頭と末尾に
+      <code>&lt;html&gt;&lt;body&gt; ... &lt;/body&gt;&lt;/html&gt;</code>
+      が挿入されている。
+      </p>
+  <li>
+</ul>
+<p>
+不具合などありましたら、
+<a href="mailto:masao@ulis.ac.jp">masao@ulis.ac.jp</a>まで
+お気軽にお知らせ下さい。
+</p>
+
+<h2 name="links">類似品</h2>
+<p>
+類似のソフトウェアなどあれば、教えてください。
+</p>
+
+
+<hr>
+<address>
+高久雅生 (Takaku Masao)<br>
+<a href="http://nile.ulis.ac.jp/~masao/">http://nile.ulis.ac.jp/~masao/</a>, 
+<a href="mailto:masao@ulis.ac.jp">masao@ulis.ac.jp</a>
+</address>
+<div class="id">$Id$</div>
+</body>
+</html>
