@@ -3,18 +3,23 @@
 <html lang="ja">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-JP">
+<meta http-equiv="content-style-type" content="text/css">
 <link rel="stylesheet" href="../default.css" type="text/css">
 <link rev="made" href="mailto:masao@ulis.ac.jp">
 <title>たかくまさおのその他のページ</title>
+<style type="text/css">
+.lastmodified { color: maroon; font-size: smaller; }
+</style>
 </head>
-
 <body>
 <p>
 雑多な覚え書きその他を置いてあります。
+（<span class="lastmodified">[日付]</span>は更新日を示します）
 </p>
-
-<!--#config timefmt="[%Y-%m-%d]" -->
+<!--#config timefmt="<span class=\"lastmodified\">[%Y-%m-%d]</span>" -->
 <ul>
+  <li><a href="paper-checklist.html">論文投稿前のチェックリスト</a>
+      <!--#flastmod file="paper-checklist.html" -->
   <li><a href="wikiwiki.html">WikiCloneについてのメモ</a>
       <!--#flastmod file="wikiwiki.html" -->
   <li><a href="windows-software.html">Useful Softwares on Windows</a>
