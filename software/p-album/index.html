@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="EUC-JP" ?>
+<!DOCTYPE html 
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head>
+<title>p-album</title>
+<meta http-equiv="Content-type" content="text/html; charset=EUC-JP" />
+<link href="../../default.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+<h1><a name="label:0" id="label:0">Web アルバム生成ツール: p-album</a></h1><!-- RDLabel: "Web アルバム生成ツール: p-album" -->
+<p>p-album は、デジタルカメラで撮影した写真を Web で公開するための
+スクリプトです。</p>
+<h2><a name="label:1" id="label:1">特徴</a></h2><!-- RDLabel: "特徴" -->
+<ul>
+<li>撮影日時に基づく時系列のWebアルバムを生成できる
+<ul>
+<li>写真に埋め込まれた EXIF 情報を利用する</li>
+<li>写真のファイル名は "%Y-%m-%dT%H:%M:%S.jpg" の ISO8601 形式</li>
+</ul></li>
+<li>写真にタイトル、説明を付与できる</li>
+<li>タイトル、説明の文字列をキーワード検索できる</li>
+</ul>
+<h2><a name="label:2" id="label:2">動作環境</a></h2><!-- RDLabel: "動作環境" -->
+<p>主なUNIX系OSでは大体動くと思います。</p>
+<p>手元では以下のような環境（OS: Solaris7）で運用しています。</p>
+<ul>
+<li><a href="http://www.imagemagick.org">ImageMagick</a> 5.4.5</li>
+<li><a href="http://www.ruby-lang.org/ja/">Ruby</a> 1.6.7</li>
+<li><a href="http://yaml4r.sourceforge.net/">YAML.rb</a> 0.46</li>
+<li><a href="http://tam.0xfa.com/ruby-libexif/">ruby-libexif</a> 0.1.1</li>
+</ul>
+<h2><a name="label:3" id="label:3">使い方</a></h2><!-- RDLabel: "使い方" -->
+<p>まず、配布アーカイブを Web 公開用ディレクトリにそのまま展開します。</p>
+<pre>% cd public_html
+% gzip -cd p-album-X.X.X.tar.gz | tar xvf -
+% cd p-album-X.X.X</pre>
+<p>次に、配布ファイル中の p-album.conf.sample を p-album.conf にコピーして、
+設定内容を自分の環境に合わせてください。</p>
+<pre>% cp p-album.conf.sample p-album.conf</pre>
+<p><a href="#label:4">p-album.conf による設定</a>が済んだら、写真を取り込みます。
+写真の画像ファイルを指定して、以下のように実行します。</p>
+<pre>% ./p-import ~/photo/DSC*.JPG
+/home/masao/photo/DSC00134.JPG -&gt; 2002-11-24T16:27:14.jpg
+/home/masao/photo/DSC00135.JPG -&gt; 2002-11-25T09:41:43.jpg
+/home/masao/photo/DSC00136.JPG -&gt; 2002-11-26T04:43:27.jpg
+...</pre>
+<p>取り込みが完了するとカレントディレクトリに、
+写真の撮影日時に基づくファイル名としてファイルがコピーされます。</p>
+<p>最後に、コピーしてきたカレントディレクトリの画像ファイルについて、
+HTMLやサムネールを生成して Web アルバムとして公開できるようにします。</p>
+<pre>% ./p-album</pre>
+<p>取り込んだファイルにタイトルや説明を付与したい場合は、
+カレントディレクトリに生成されている metadata.yaml ファイルに
+情報を書き込みます。</p>
+<p>例えば、取り込み直後の metadata.yaml ファイルの内容は、
+以下のようなものです。</p>
+<pre>2002-11-24T16:27:14.jpg:
+  datetime: 2002-11-24 16:27:14.000000 +09:00
+2002-11-25T09:41:43.jpg:
+  datetime: 2002-11-25 09:41:43.000000 +09:00
+2002-11-26T04:43:27.jpg:
+  datetime: 2002-11-26 04:43:27.000000 +09:00</pre>
+<p>ここで、タイトルを付けるには title ヘッダを付与し、
+説明を付けるには description ヘッダを付与します。
+なお、datetime ヘッダは撮影日時の情報ですので、
+いじらないようにしてください。</p>
+<pre>2002-11-24T16:27:14.jpg:
+  datetime: 2002-11-24 16:27:14.000000 +09:00
+  description: "定番の野菜炒めにカブを入れてみた。野菜炒めにカブはあんまり合わなかった…。"
+  title: "カブの野菜炒め"
+2002-11-25T09:41:43.jpg:
+  datetime: 2002-11-25 09:41:43.000000 +09:00
+  description: "[2002-11-17]。前よりももうちょっとしっかり水切りしてから作ってみた。"
+  title: "大根のホットサラダ卵とじ風"
+2002-11-26T04:43:27.jpg:
+  datetime: 2002-11-26 04:43:27.000000 +09:00
+  description: "定番"
+  title: "焼きそば"</pre>
+<p>以上のような感じで、タイトルと説明を付けたら、
+再度 p-album を実行して、HTMLを生成しておきます。</p>
+<pre>% ./p-album</pre>
+<p>ここまでが、p-album を使った Web アルバムの生成の流れです。
+あとは、写真を追加するたびに
+p-import → metadata.yaml の編集 → p-album
+を繰り返せば OK です。</p>
+<p>なお、p-import コマンドは title, description などの内容をソートし直すなど
+勝手に書き換えますので、御注意を。</p>
+<h2><a name="label:4" id="label:4">p-album.conf による設定</a></h2><!-- RDLabel: "p-album.conf による設定" -->
+<p>p-album.conf では HTML に埋め込む情報を指定します。</p>
+<pre>TITLE    : "Webアルバム（日常の風景）"
+EMAIL    : "masao@ulis.ac.jp"
+HOME_URL : "http://nile.ulis.ac.jp/~masao/"
+NAME     : "高久雅生 (Takaku Masao)"</pre>
+<p>TITLE は、このアルバムのタイトルです。
+EMAIL は、このアルバムの作者の連絡先（メールアドレス）です。
+HOME_URL は、このアルバムの作者のホームページアドレス（URL）です。
+NAME は、このアルバムの作者の名前です。</p>
+<h2><a name="label:5" id="label:5">文字列の置き換え</a></h2><!-- RDLabel: "文字列の置き換え" -->
+<p>[2002-11-24] のような文字列は、その日付へのリンクになります。</p>
+<p>また、[Cookpad:12345] のような形式で、他のサイトへのリンクを簡単にはれます。</p>
+<h2><a name="label:6" id="label:6">関連リンク</a></h2><!-- RDLabel: "関連リンク" -->
+<ul>
+<li>chalow</li>
+<li>dcdiary</li>
+<li>~nihi/d.cgi</li>
+<li>...</li>
+</ul>
+<h2><a name="label:7" id="label:7">TODO</a></h2><!-- RDLabel: "TODO" -->
+<ul>
+<li>CGI での実行
+<ul>
+<li>CGIの場合は YAML での設定は必要ないかも…（PStore で十分？）</li>
+<li>ImageMagick のオプション設定、タイトル・説明付与はずっと楽に。</li>
+</ul></li>
+<li>Windows 上での利用
+<ul>
+<li>ファイル名に : を使ってはいけないので、その設定を分離する必要あり。</li>
+</ul></li>
+<li>まともなテンプレートエンジンを採用する。
+<ul>
+<li>Amrita</li>
+<li>eRuby</li>
+<li>?</li>
+</ul></li>
+<li>文字列置き換えの汎用化
+<ul>
+<li>簡単に設定できるようにする。</li>
+<li>Google, Amazon なんかもデフォルトで定義しておきたい…。</li>
+<li>各写真へのリンクも簡単に作れるようにする。</li>
+</ul></li>
+<li>同一時刻（秒単位）のファイルが既にある場合にどうするか？
+<ul>
+<li>現在は、警告を出してスキップするようにしてある。</li>
+</ul></li>
+</ul>
+<hr/>
+<address>
+高久雅生 (Takaku Masao)<br/>
+<a href="http://nile.ulis.ac.jp/~masao/">http://nile.ulis.ac.jp/~masao/</a>, 
+<a href="mailto:masao@ulis.ac.jp">masao@ulis.ac.jp</a>
+</address>
+
+
+</body>
+</html>
