@@ -1,3 +1,359 @@
+2001-12-09  Masao Takaku  <masao@ulis.ac.jp>
+
+	* Webアルバム系ツール: from freshmeat.net ...
+
+	cthumb: http://cthumb.sourceforge.net/
+	Gallery.py: http://www.net-es.dk/~pj/python/
+	Gallery: http://www.menalto.com/projects/gallery/
+
+	* 2講のページのTodo:
+
+	・Windowsプリンタ（2kou8100）の文書化
+	・「CVSの使い方」のrefine。（リンクの追加など？）
+	・文書の投稿フォームの設置？
+	・サイト内検索
+	・cvs-2kou （作業者向け）メーリングリスト
+	・cvsweb を導入。（各文書から履歴へのリンクをはる）
+	・更新した文書に目印をつける。（自動化する）
+	・更新日順でソートした index.html （全体）
+	・サイトマップ？
+	・トップページの再編。
+	・FAQ の作成？（全文書の内容を question 化）
+
+	* 京都: 先週はほとんど京都滞在。（DBWeb2001に参加）
+
+	メモを取っていないので、思いだせる分だけ。
+
+	・サンルートホテル京都に5200円で泊まれた。
+	  はじめは 720 円の予定だった…。
+	・会場（キャンパスプラザ京都）の1階にあった公共端末は、telnet.exe
+	  などの起動もできないようにきちんと設定してあった。
+	・同じ会場でやっていた国際会議WISE2001で発表していたひとみと会えた。
+	・休憩でたちよった『みたらし団子屋』が良かった。（下加茂神社の前）
+	・普段は行かない山科の方に行った。
+	  毘沙門堂・醍醐寺は桜の咲くころにもう一度行きたい。
+	・新幹線の指定席も自動券売機で買える。
+	・YggdrasillはWindows2ユーザライセンスで4万円。
+
+2001-12-05  Masao Takaku  <masao@ulis.ac.jp>
+
+	* Semantic Web セッション:
+
+	全体の感想： 意外と企業からの力が入っているのね。
+
+	印象に残った言葉たち：
+	・Web の役割：
+	  1. 人と人のコミュニケーション 2. 人と機械のコミュニケーション
+	  Semantic Webは 2. を担う。
+	・ロードマップ：
+	  1年後にはWeb Servicesを補うようなオントロジー。
+	  2年後には限定的な範囲（悪人のいないような）でのサービス。
+	  その後、悪人もいるような世界での適用。
+	・エージェント、DAML+OILは1-2年後には、アプリケーションは＋αで。
+
+2001-12-04  Masao Takaku  <masao@ulis.ac.jp>
+
+	* /home 100%: 晩飯から帰ってきたら、nile の /home の空き容量が 100%
+	（filesystem full）になっていた。
+
+	あわてて、いらないファイル群を消して、500MB ほど空けておく。
+
+2001-12-03  Masao Takaku  <masao@ulis.ac.jp>
+
+	* BINS: アルバム生成ツール。
+	cf. http://bins.sautret.org/
+	Locale::Gettext を使った国際化。（作者はフランス人？）
+
+	* プロ言課題（1）: ちょっとやってみた。
+
+	cat(C), grep(B), sort(C) の各課題をやってみた。
+	それぞれ1時間。合計3時間かかった。
+
+	一応、テストケースを作りながら、やった。
+
+2001-12-01  Masao Takaku  <masao@ulis.ac.jp>
+
+	* SourceWell: SourceForge もどき？
+	バックエンドに MySQL, フロントエンドに PHP を使っている。
+	XML/RDF なども採用している。
+	http://sourcewell.berlios.de/html/
+
+	こんなに大仰なのではなく、坂本さんの『がんばれ和製オープンソースソ
+	フト』みたいのでいいから、フリーソフトウェアのイントール記録が簡単
+	につけられるものが欲しい。
+	http://www2u.biglobe.ne.jp/~hsaka/soft-jp.cgi
+
+	仕様を検討して自分で作ろうかしら…。既にある気もするけど…。
+	欲しい機能は以下の通り：
+	・ジャンル分け（Yahoo!-likeなディレクトリ）
+	・ツッコミ（掲示板-likeなスレッド表示？）
+	・E-mail通知
+	・XMLベース（データ管理）
+	etc.
+	DBMSとか無くてもOKかなあ？
+
+2001-11-30  Masao Takaku  <masao@ulis.ac.jp>
+
+	* XSLT error?: 小室さんに聞かれて、サーバ・サイドでのXSLT変換をちょ
+	っと教えてみたのだけれど、なぜかエラーがでる。
+
+	とりあえず、Xalan, XT, LibXSLT 全てでうまくいかない…。
+	なにやら、XMLパーサがエラーを出している模様。
+	（Xalan-J も XT も Xerces-J を使用している）
+
+	推測だが、IEではエラーが出ていないところを見ると、JIS X 0213 由来
+	の UTF-8 エンコードされている文字があるのではないだろうか？
+
+	Java の持っている Unicode エンコーディングはどのバージョンの
+	Unicode なのだろうか？
+
+	謎は深まる。。
+
+	☆とりあえず参考資料：
+	http://www.ingrid.org/java/i18n/
+	http://www.debian.or.jp/~kubota/unicode-symbols.html
+	http://java-house.etl.go.jp/ml/archive/j-h-b/033602.html
+
+2001-11-28  Masao Takaku  <masao@ulis.ac.jp>
+
+	* refDB: 参照文献データベース
+	http://refdb.sourceforge.net/sysreq.html
+
+	参照のスタイルをSGML形式で定義し、Jadeでそれへの変換が可能。
+	というあたりが興味深い。
+
+	他には、
+	・MySQL をバックエンドに持つ。
+	・DocBookのSGML形式にも対応。
+	などの特徴あり。 
+
+2001-11-27  Masao Takaku  <masao@ulis.ac.jp>
+
+	* ldic for SKK:
+	
+	ldic - 図書館用かな漢字変換辞書パッケージ
+	http://www.tulips.tsukuba.ac.jp/~kondou/ldic/
+
+	をSKK向けに変換してみた。
+
+	ldicはWnn形式で提供されているので、SKK-JISHO.pubdic+の変換方法とし
+	て載っているやりかたをそのまま流用できた。↓
+
+	  % pubdic2list ldic | adddummy | sort -u | removedummy | list2skk > temp
+	  % skkdic-expr temp - SKK-JISYO.L > diff
+	  % skkdic-sort < diff > SKK-JISYO.library
+
+	* 図情大〒: 学校の郵便番号がなぜか郵政省のデータベースでひけない…。
+
+	インターネットでの検索を拒否したのかしら？
+
+	* コミパル: 14.4kbps なので、遅くてちょっと不満。
+
+	100件くらいメールがあると、10分以上かかる…。
+
+	http://www.zaurusworld.ne.jp/menu21/appli/driver.zhtml
+	にあるドライバソフトを購入しようかと思ったけど、14.4kbpsなのは変わ
+	らないようなので、やめておく。
+	（Packet64を契約すれば64kbpsになるみたい）
+
+	素直にノートPCでも買おうかしら…。
+
+	* POBox: おもしろそう。
+	http://www.csl.sony.co.jp/person/masui/OpenPOBox/index.html
+
+	以下にあるEmacs用の実装を使ってみたいけど、なんかうまくいかない…。
+	Pogemo + pobox-el:
+	http://cvs.namazu.org/pogemo/
+	http://www.taiyaki.org/pobox/
+
+2001-11-26  Masao Takaku  <masao@ulis.ac.jp>
+
+	* nile不調: 2日ほど不調のため止まっていた。
+
+	* 『情報処理』(?): 情報の可視化問題のトップテンリスト。
+	Computer Graphics, 33(2), May 1999.
+
+2001-11-24  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 晩飯: 『天丼屋 ふくすけ』で特上天丼800円を食べた。
+
+	1歳くらいの子供がいる不思議な店。
+
+	* 自転車購入:
+	ダイエーの自転車屋で7,980円で売っていたのでつい買ってしまった。
+
+	3年ぶりの自転車でのペデはちょっとこわくておそるおそるっていう感じ。
+
+	これで行動範囲がちょっとは広くなるかしら…。
+
+	* 飲み: 「最後の栗苑祭」に学部の同期の連中が来たので、『大将』で飲
+	みました。(ゆか、大綱、ガク、えりこ、山田、横室)
+
+	* epoxml: mule/XEmacs拡張java入力支援モード『epoxml』
+	http://park.ruru.ne.jp/ando/work/who/epojava/doc/xml.html
+
+	fj で見かけたもの。入力支援環境EPO(YaTeX の拡張)の上で動作するもの。
+
+2001-11-23  Masao Takaku  <masao@ulis.ac.jp>
+
+	* オバハン日誌: パキスタン現地での生の声。
+	http://www.pat.hi-ho.ne.jp/nippagrp/obahan.htm
+
+2001-11-22  Masao Takaku  <masao@ulis.ac.jp>
+
+	* かぜ？: 風邪かどうかはわからんが、ここ3日ほど体調が悪い。
+	どうも引越しの疲れが出ている気がする。
+	
+	症状としては、頭痛・だるさ・寒気がある。
+
+	* 中間発表: ドクターの中間発表が12月1日に行われることになった。
+
+	* 「超」整理法: 読了。
+
+	だいぶ昔に書かれた本だけど、さほど違和感なく読むことができた。
+	述べられていた手法のうちのいくつかについては、意識せずに多くの人が
+	実践しているのではないだろうか、という印象を抱いた。
+
+	作業日誌をつけるという部分については、現在のWeb日記のベースにある
+	のではないかと想像できる。
+
+	* 引越し: なんとか完了…。
+
+	やはり、新居への引越しのほうがずっと面倒だと思った。
+
+	その疲れからか、3日ほど寝込む。(風邪かも)
+
+2001-11-16  Masao Takaku  <masao@ulis.ac.jp>
+
+	* Opera: 日本語対応のベータ版が出たので使ってみた。
+
+	なかなか軽快だけど、学生サーバの掲示板を見にいったらさっそくフリー
+	ズした。
+
+	* 可視化システム: Frameを使ってインタフェースを見易くしたかったん
+	だけど、あまりに面倒でやめた。
+
+	具体的には、後で他の機能を付け加えたり、他のアプリケーションと協調
+	動作するようなコードを追加した場合の保守性を考慮すると、Frameに特
+	有のHTMLの処理をCGIに加えたくないので、やめた。
+
+2001-11-15  Masao Takaku  <masao@ulis.ac.jp>
+
+	* Namazu on ULIS-DL: 最初の話し合い。
+
+	インタフェースのカスタマイズについて要望を聞いた。
+
+	* Anthy: カスタマイズ性と使っている辞書がちょっと気にいらなかった
+	ので、やっぱり SKK にもどった。
+
+	* Website Meta Language: 日本語での情報源。
+
+	http://silver.fureai.or.jp/wml/
+		附属文書の日本語訳など。
+
+	http://www.debian.org/devel/website/using_wml.ja.html
+		Debian GNU/Linuxのウェブサイトでの利用しているWMLの使い方。
+	
+2001-11-14  Masao Takaku  <masao@ulis.ac.jp>
+
+	* OpenFTS: バックエンドに PostgreSQL を使う全文検索エンジン。
+	cf. http://openfts.sourceforge.net/
+
+	インデックスのデータ構造として RD-Tree を採用し、Omseek 由来の
+	"Poter's Stemming Algorithm"を使っているらしい。
+
+	* 袋田の滝: ちなっちゃんと一緒に行ってきました。
+
+	5年くらい前に、母親が寺澤のおじさんに連れていってもらって「すごく
+	良かった」と言っていたのを思いだしました。
+
+	ただし、調子に乗って観望台というところまで行こうとしたら、登山をす
+	るハメになりました。
+	日頃の運動不足がたたって、つらかったです。(^_^;;
+
+2001-11-12  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 鼓々乃: だいぶ大きくなってました。(また1kg増えたらしい)
+
+	しばらく抱いていると筋肉痛になりそうなほど重いし、しっかりと立ちあ
+	がって伝い歩きができるようになりました。
+
+	* 内覧会: 実家の改築が一通り完了して、内覧会なるものをやっていたの
+	で、2日ほど浮間へ。
+
+	家自体はだいぶ良いものができていたみたい。
+
+	所々、「ウォッシュレットじゃないの？」とか、「手すりがつかみづらい」
+	とか、「カウンターが低い」とか、「ワークベンチが高すぎる」とかの細
+	かい手直しが必要な部分がありそうだけど…。
+
+2001-11-09  Masao Takaku  <masao@ulis.ac.jp>
+
+	* XWeb: 実際に自分のページで導入してみた。
+
+	どうもネストしたセクションを適切に扱うやり方がよくわからないので、
+	パスすることにする。
+
+	* Sary: 用語体系の可視化システムの検索部分に採用した。
+
+	今までにくらべて、とても高速になった。
+
+	Search::Saryer（Perl版）を使ったけど、導入に30分もかからなかった。
+	むしろ、ライブラリのインストールの方がかかっているかも…。
+	
+	ライブラリを公開してくれた高林さんに感謝!!
+
+	* BibTeX (SIST-02): [2001-11-06] にてSIST-02用のBibTeXスタイルが欲
+	しいな〜んて書いていたら、横山さんから「作りました」というアナウン
+	スがあった。
+
+	実にタイムリーだ!
+
+	* JGloss: Annotation for Japanese text.
+	というので、見にいったら、日本語の学習者が日本語のテキストにルビを
+	ふるツールのようだ。
+
+	まあ、でもアノテーションの例としても面白いよね。
+
+2001-11-08  Masao Takaku  <masao@ulis.ac.jp>
+
+	* Anthy: Project hekeで開発されている日本語変換エンジン。
+	http://www.kmc.kyoto-u.ac.jp/proj/heke/
+
+	ライブラリやデーモンを必要とせず、単体をインストールするだけで動作
+	するのが魅力的か。
+	まあ、SKKのお手軽感が味わえる*普通の*IMEかな!?
+
+	まだα版ということでちょっと物足りない面もあるけど、まあまあのでき
+	かな??
+
+2001-11-07  Masao Takaku  <masao@ulis.ac.jp>
+
+	* tcsh: 久々に tcsh のプロンプトを変えてみた。
+
+	でも、zsh の右プロンプトというものも使ってみたくなったね!
+
+2001-11-06  Masao Takaku  <masao@ulis.ac.jp>
+
+	* CVS+SSH on Cygwin: Cygwin上での CVS + SSH が途中で終わってしまう
+	バグがとれた模様。
+
+	これで、Windowsでもファイルをいじれるね。
+
+	* libxslt: JavaベースのXSLT処理系は起動がちょっと遅くなるので、Cで
+	書いたものを入れてみた…。
+
+	* bibtex2xml: BibTeXの記法が嫌いなのと、SIST-02みたいに新しい整形
+	方法に対応したくなった時に .bst ファイルを書くのは面倒なので、XML
+	ベースのツールが欲しくなった。
+
+	で、そんなソフトを探してみたら、DTDとスタイルシートがありました。
+
+	BibTeX in XML: http://carol.wins.uva.nl/~zegerh/bibteXML/
+
+	なんだかあんまりこなれていなそうな雰囲気…。
+	まあ、ちょっとだけ使ってみます。
+
 2001-11-04  Masao Takaku  <masao@ulis.ac.jp>
 
 	* XWeb: [2001-10-16]で紹介したXWebは、マニュアルを読んでいる段階だ
