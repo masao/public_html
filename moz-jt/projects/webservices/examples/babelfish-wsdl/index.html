@@ -69,7 +69,7 @@ CLASS="mozillaorgbanner" WIDTH="600" HEIGHT="58">
 
 
 <h2>Mozilla の WSDL 動作例 : 翻訳 Web サービス・ウィジェットの利用</h2>
-<h2 class="orig">Mozilla WSDL Example - Using Translation Web Services Widget</h2>
+
 
 <a href="mailto:mgalli@netscape.com">Marcio Galli (mgalli@netscape.com)</a>
 <p>
@@ -77,46 +77,36 @@ CLASS="mozillaorgbanner" WIDTH="600" HEIGHT="58">
 このデモは、Mozilla 1.4 β版以降で動作します。
 これは Gecko の WSDL 機能を使って、<a href="http://www.xmethods.com">xmethods.com</a> の Babelfish Web Services に接続する JavaScript ベースのアプリケーションです。
 </p>
-<p class="orig">This page demonstrates the use of Web Services technology in Mozilla. The demonstration works with Mozilla 1.4beta and newer versions. It uses the Gecko's WSDL capabilities and shows a JavaScript-based application that connects with Babelfish Web Services at <a href="http://www.xmethods.com">xmethods.com</a>.
-</p>
+
 <p>
 このデモは、翻訳機能を提供するウィジェットについてのものです。
 この翻訳ウィジェットは、全て JavaScript で書かれていて、 Web ページのコンテンツを翻訳するようにブラウザのインタフェースと結び付けることも可能です。
 </p>
-<p class="orig">
-The demo is basically a widget that offers translation funcionality. The Translation widget is entirely written in JavaScript and can be tied to the browser's interface to translate contents of generic web pages. 
-</p>
+
 
 <h3>ドメイン横断とセキュリティに関する注意</h3>
-<h3 class="orig">Notes about cross-domain and security</h3>
+
 <p>
 ここでの JavaScript のコードは、セキュリティの警告を出さずに xmethods.com サイトの Babelfish Web サービスの呼び出しを行います。
 これは、Mozilla が<a href="http://bugzilla.mozilla.org/attachment.cgi?id=108425&action=view">新しいセキュリティモデル</a> <span class="comment">[ 訳注: <a href="/lxr/mozilla/source/extensions/webservices/docs/New_Security_Model.html">日本語訳</a> ]</span>
 に基づいて、xmethods.com のサービスへのアクセスをどのドメインからのものでも許すようにしたこと（<a href="http://www.xmethods.com/web-scripts-access.xml">こちらの XML ファイル</a>を通じて）によるものです。
 </p>
-<p class="orig">The JavaScript code will establish calls to xmethods.com web site, specifically the Babelfish translation Web Service, without showing security alert box. 
-This is possible because of the <a href="http://bugzilla.mozilla.org/attachment.cgi?id=108425&action=view">New Security Model</a> in Mozilla that allows xmethods.com to grant access ( via <a href="http://www.xmethods.com/web-scripts-access.xml">an xml file</a> ) to its services from any domain.
-</p>
+
 <p>
 ドメイン間の制限が無ければ、ドメインを気にせずに、この JavaScript アプリケーションをあらゆる Web ページに設置できます。
 そして、Babelfish によるリモートの翻訳サービスにリクエストを送ることができることでしょう。
 このデモを試すには、次の 2 つの方法があります。
 </p>
-<p class="orig">Without the cross-domain restrictions, this JavaScript application can be placed in any web page, regardless the domain, and will be able to request the remote translation services via Babelfish. There are two ways you can test this demonstration:
-</p>
+
 <h3>インラインの例: 翻訳サービスを試す</h3>
-<h3 class="orig">Inline Sample: Testing the Translation Service</h3>
+
 <div style="margin-left:1em;background-color:#eeeeee;padding:10px;-moz-border-radius:12px;">
 	<form onsubmit="Translate(document.getElementById('TEXT').value);return false">
 	<input type="radio" name="optionto" value="en_ja" checked="checked">英語→日本語 | 
 	<input type="radio" name="optionto" value="en_pt">英語→ポルトガル語 | 
 	<input type="radio" name="optionto" value="en_fr">英語→フランス語 | 
 	<input type="radio" name="optionto" value="en_de">英語→ドイツ語<br>
-<span class="orig">
-	<input type="radio" name="optionto" value="en_pt">English&gt;portuguese | 
-	<input type="radio" name="optionto" value="en_fr">English&gt;French | 
-	<input type="radio" name="optionto" value="en_de">English&gt;German
-	<br></span>
+
 	<br>
 
 	<input type="text" id="TEXT" size="60">
@@ -125,7 +115,7 @@ This is possible because of the <a href="http://bugzilla.mozilla.org/attachment.
 	
 	<div style="background-color:#dddddd;padding:10px;">
 	<strong>翻訳結果:</strong>
-	<strong class="orig"><br>Results:</strong>
+	
 	<div id="results"></div>
 	</div>
 	
@@ -133,7 +123,7 @@ This is possible because of the <a href="http://bugzilla.mozilla.org/attachment.
 </div>
 
 <h3>Babelfish 翻訳ウィジェット</h3>
-<h3 class="orig">Babelfish Translator Widget</h3>
+
 <p class="comment">訳注: 最近ではブックマークレット（Bookmarklet）とも呼ばれています。</p>
 <div style="margin-left:1em">
 <p>
@@ -143,8 +133,7 @@ Mozilla は、リンクをパーソナルツールバーにドラッグすることができます。
 以下のリンクのどれかをあなたのパーソナルツールバーにドラッグするだけで、このウィジェットを使うことができます。
 <span class="comment">[ 訳注: 以下のリンクは、ブラウザ上で選択している部分の翻訳を行うものです。文章を選択してからクリックしてみてください。 ]</span>
 </p>
-<p class="orig">Mozilla allows you to drag links to the personal bar. If the link is a "javascript:" statement and is clicked from the personal toolbar, it will be executed in the scope of the currently displayed web page. Because of this, the translation widget will work on top of other sites. You can simply drag one of the following links to your personal toolbar and start using this widget.
-</p>
+
 
 <ul>
 <li> <a href='javascript: var proxy= null; var wsdl_uri = "http://www.xmethods.net/sd/2001/BabelFishService.wsdl"; function Translate (aValue) { if (!proxy) { var listener = { onLoad: function (aProxy) { proxy = aProxy; proxy.setListener(listener); requestTranslation(aValue); }, onError: function (aError) { }, BabelFishCallback : function (aTranslatedValue) { alert(aTranslatedValue); } }; createProxy(listener); } else { requestTranslation(aValue); } } function createProxy(aCreationListener) { try { var factory = new WebServiceProxyFactory(); factory.createProxyAsync(wsdl_uri, "BabelFishPort", "", true, aCreationListener); } catch (ex) { alert(ex); } } function requestTranslation (value) { if (proxy) {   proxy.BabelFish("en_ja", value); } else { alert("Error: Proxy set up not complete!"); } } if(window.getSelection()!="")Translate(window.getSelection());  else alert("先に翻訳したい文章を選択してください。");void(0);'>英日翻訳</a></li>
@@ -152,16 +141,12 @@ Mozilla は、リンクをパーソナルツールバーにドラッグすることができます。
 <li> <a href='javascript: var proxy= null; var wsdl_uri = "http://www.xmethods.net/sd/2001/BabelFishService.wsdl"; function Translate (aValue) { if (!proxy) { var listener = { onLoad: function (aProxy) { proxy = aProxy; proxy.setListener(listener); requestTranslation(aValue); }, onError: function (aError) { }, BabelFishCallback : function (aTranslatedValue) { alert(aTranslatedValue); } }; createProxy(listener); } else { requestTranslation(aValue); } } function createProxy(aCreationListener) { try { var factory = new WebServiceProxyFactory(); factory.createProxyAsync(wsdl_uri, "BabelFishPort", "", true, aCreationListener); } catch (ex) { alert(ex); } } function requestTranslation (value) { if (proxy) {   proxy.BabelFish("en_pt", value); } else { alert("Error: Proxy set up not complete!"); } } if(window.getSelection()!="")Translate(window.getSelection());  else alert("先に翻訳したい文章を選択してください。");void(0);'>英葡翻訳</a></li>
 <li> <a href='javascript: var proxy= null; var wsdl_uri = "http://www.xmethods.net/sd/2001/BabelFishService.wsdl"; function Translate (aValue) { if (!proxy) { var listener = { onLoad: function (aProxy) { proxy = aProxy; proxy.setListener(listener); requestTranslation(aValue); }, onError: function (aError) { }, BabelFishCallback : function (aTranslatedValue) { alert(aTranslatedValue); } }; createProxy(listener); } else { requestTranslation(aValue); } } function createProxy(aCreationListener) { try { var factory = new WebServiceProxyFactory(); factory.createProxyAsync(wsdl_uri, "BabelFishPort", "", true, aCreationListener); } catch (ex) { alert(ex); } } function requestTranslation (value) { if (proxy) {   proxy.BabelFish("en_de", value); } else { alert("Error: Proxy set up not complete!"); } } if(window.getSelection()!="")Translate(window.getSelection());  else alert("先に翻訳したい文章を選択してください。");void(0);'>英独翻訳</a></li>
 </ul>
-<ul class="orig">
-<li> <a href='javascript: var proxy= null; var wsdl_uri = "http://www.xmethods.net/sd/2001/BabelFishService.wsdl"; function Translate (aValue) { if (!proxy) { var listener = { onLoad: function (aProxy) { proxy = aProxy; proxy.setListener(listener); requestTranslation(aValue); }, onError: function (aError) { }, BabelFishCallback : function (aTranslatedValue) { alert(aTranslatedValue); } }; createProxy(listener); } else { requestTranslation(aValue); } } function createProxy(aCreationListener) { try { var factory = new WebServiceProxyFactory(); factory.createProxyAsync(wsdl_uri, "BabelFishPort", "", true, aCreationListener); } catch (ex) { alert(ex); } } function requestTranslation (value) { if (proxy) {   proxy.BabelFish("en_fr", value); } else { alert("Error: Proxy set up not complete!"); } } if(window.getSelection()!="")Translate(window.getSelection());  else alert("please select a text before");void(0);'>Translate EN-FR</a></li>
-<li> <a href='javascript: var proxy= null; var wsdl_uri = "http://www.xmethods.net/sd/2001/BabelFishService.wsdl"; function Translate (aValue) { if (!proxy) { var listener = { onLoad: function (aProxy) { proxy = aProxy; proxy.setListener(listener); requestTranslation(aValue); }, onError: function (aError) { }, BabelFishCallback : function (aTranslatedValue) { alert(aTranslatedValue); } }; createProxy(listener); } else { requestTranslation(aValue); } } function createProxy(aCreationListener) { try { var factory = new WebServiceProxyFactory(); factory.createProxyAsync(wsdl_uri, "BabelFishPort", "", true, aCreationListener); } catch (ex) { alert(ex); } } function requestTranslation (value) { if (proxy) {   proxy.BabelFish("en_pt", value); } else { alert("Error: Proxy set up not complete!"); } } if(window.getSelection()!="") Translate(window.getSelection()); else alert("please select a text before");void(0);'>Translate EN-PT</a></li>
-<li> <a href='javascript: var proxy= null; var wsdl_uri = "http://www.xmethods.net/sd/2001/BabelFishService.wsdl"; function Translate (aValue) { if (!proxy) { var listener = { onLoad: function (aProxy) { proxy = aProxy; proxy.setListener(listener); requestTranslation(aValue); }, onError: function (aError) { }, BabelFishCallback : function (aTranslatedValue) { alert(aTranslatedValue); } }; createProxy(listener); } else { requestTranslation(aValue); } } function createProxy(aCreationListener) { try { var factory = new WebServiceProxyFactory(); factory.createProxyAsync(wsdl_uri, "BabelFishPort", "", true, aCreationListener); } catch (ex) { alert(ex); } } function requestTranslation (value) { if (proxy) {   proxy.BabelFish("en_de", value); } else { alert("Error: Proxy set up not complete!"); } } if(window.getSelection()!="") Translate(window.getSelection()); else alert("please select a text before");void(0);'>Translate EN-DE</a></li>
-</ul>
+
 <p>
 今回のデモでは、Web サービスのインタフェースを既存の Web ページに埋め込めることを示しました。
 この Mozilla の新しいセキュリティモデルを使えば、複数の Web サービスに接続して、それらのサービスを組み合わせて使うようなスクリプトを Web ページに埋め込むことができます。
 </p>
-<p class="orig">This demonstration shows that Web Services interfaces can be plugged on top of existing web pages to extend its funcionality. With the new security model in Mozilla, a web page can include scripts to connect with multiple Web Services providing a combination of services all together.</p>
+
 </div>
 
 

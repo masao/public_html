@@ -79,7 +79,7 @@ CLASS="mozillaorgbanner" WIDTH="600" HEIGHT="58">
 
 
 <big style="font-weight: bold;"><big><big>Mozilla WSDL の動作例</big></big></big><br>
-<span class="orig"><big style="font-weight: bold;"><big><big>Mozilla WSDL Example</big></big></big><br></span>
+
 <br>
 <a href="mailto:doron@netscape.com">Doron Rosenberg</a>
 (doron@netscape.com)<br>
@@ -87,51 +87,33 @@ CLASS="mozillaorgbanner" WIDTH="600" HEIGHT="58">
 Mozilla 1.4 β版で Gecko は WSDL (Web Service Description Language) に対応し、Web サービスと容易にやりとりできるようになりました。
 ここでの例では、ユーザの入力した文字列にマッチする書籍がないか Amazon Web サービスに問い合わせます。
 <br>
-<span class="orig">With Mozilla 1.4beta, Gecko has WSDL (Web Service Description Language)
-capabilities that allows it to easily communicate with web
-services.&nbsp; In this example, the Amazon web services will be queried
-for books matching the string the user entered.<br>
-</span><br>
+<br>
 <big><span style="font-weight: bold;">セキュリティに関する注意</span></big><br>
-<span class="orig"><big><span style="font-weight: bold;">Note about Security</span></big><br></span>
+
 本動作例では、（mozilla.org から amazon.com へ）別のドメインに対して呼び出しを行う必要があるため、Mozilla のドメイン間セキュリティモデルに違反します。
 Mozilla 1.4 β版には、特に Web サービス用に開発された<a href="/lxr/mozilla/source/extensions/webservices/docs/New_Security_Model.html">新しいセキュリティモデル</a>があります。
 これを使えば、Web サービスを呼び出す権限をブラウザに与えることができるようになります。
 しかし、これは非常に新しい機能なので、現在公開されている Web サービスにはまだ対応していません。
 従って、代わりに以下のユーザ設定を行うことにより、<a href="http://devedge.netscape.com/viewsource/2002/bypassing-security-restrictions/">このセキュリティの制限を回避しなければなりません</a>。<br>
-<span class="orig">Since this example needs to call another domain (mozilla.org to
-amazon.com), it breaks the cross-domain security model that Mozilla
-has.&nbsp; There is <a
- href="/lxr/mozilla/source/extensions/webservices/docs/New_Security_Model.html">a
-new model</a> developed especially
-for web services in Mozilla 1.4beta that allows a web service to grant
-the browser permission to call it.&nbsp; However, since it is very new,
-it hasn't reached yet the public web services out there.&nbsp;
-Therefore, as a workaround, you <a
- href="http://devedge.netscape.com/viewsource/2002/bypassing-security-restrictions/">have
-to bypass it</a> by setting the following user preference:<br></span>
+
 <code><br>
 user_pref("signed.applets.codebase_principal_support",       true);<br>
 <br>
 </code><big><small>
 この設定により、Mozilla はユーザに amazon.com にアクセスするのを許可するかどうかを確認するようになります。<br>
-<span class="orig">This will make Mozilla prompt you to allow it to
-access amazon.com.<br></span>
+
 <br>
 </small><span style="font-weight: bold;">
 動作例<br>
-<span class="orig">Example<br></span>
+
 </span><small>
 動作例では、ユーザが Amazon Web サービスに与えたキーワードにマッチする書籍を検索できます。
 例えば、"Mozilla" と打ち込んだ場合、この悪名高いトカゲ <span class="comment">[ 訳注: Mozilla のこと ]</span> に関連する本がヒットするでしょう。
-この動作例を実行するには<a href="amazonwsdl.html">ここ</a>をクリックしてください。<br>
-<span class="orig">The example allows the user to search the Amazon web
-service for books matching a given keyword.&nbsp; For example, typing in
-"Mozilla" will match books related to the infamous lizard.&nbsp; To run
-the example, click <a href="amazonwsdl.html">here</a>.<br></span>
+この動作例を実行するには<a href="amazonwsdl.html">ここをクリックしてください</a>。<br>
+
 <br>
 <big><span style="font-weight: bold;">どのように動作するのか</span></big><br>
-<span class="orig"><big><span style="font-weight: bold;">How it Works</span></big><br></span>
+
 </small></big>
 まず、Amazon 側の <a href="http://soap.amazon.com/schemas2/AmazonWebServices.wsdl">WSDL ファイル</a>を使って "Amazon" オブジェクトを初期化します。
 これにより、ブラウザでは Amazon Web サービス用のプロキシオブジェクトが生成され、Amazon のサービスがまるでローカルのリソースであるかのようにスクリプトから扱えるようになります。
@@ -141,30 +123,17 @@ WSDL ファイルにはインタフェースが記述されています。
 Amazon が返答を返すと、Mozilla は SOAP レスポンスを JavaScript のオブジェクトに変換します。
 今回の場合は、タイトル・著者名の配列・定価・Amazon 価格などのような各書籍についての情報を含む "book" オブジェクトの配列が対象となります。
 <br>
-<span class="orig">First, we instantiate an "Amazon" object
-using their <a
- href="http://soap.amazon.com/schemas2/AmazonWebServices.wsdl">WSDL file</a>.&nbsp;
-This creates a proxy object in the browser for the Amazon web service
-which can then be scripted as if it where a local resource.&nbsp; The
-WSDL file describes the interface, detailing which&nbsp; methods can be
-called, which arguments to pass in and what the response will look
-like.&nbsp; When a method is called on the proxy object, Mozilla
-generates a SOAP envelope based on the WSDL file and sends it to
-Amazon.&nbsp; When Amazon responds, Mozilla is able to convert that SOAP response
-into a JavaScript object.&nbsp; In this case, an array of "book"
-objects, where each book contains information such as the title, an
-array of the authors, the retail and amazon's price and more.&nbsp; <br></span>
+
 <br>
 動作例では、この情報を受け取って、それをそのページの DOM に追加することで表示を行います（新たにページを読み込むわけではありません）。<br>
-<span class="orig">The example then takes this information and displays it by adding it to
-the page's DOM - no new page has to be loaded.<br></span>
+
 <br>
 <big><span style="font-weight: bold;">
 リソース<br>
-<span class="orig">Resources<br></span>
+
 </span></big>
 <a href="../../">Mozilla.org の Web サービスプロジェクトのページ</a><br>
-<span class="orig"><a href="../../">Mozilla.org's Web Services Project Page</a><br></span>
+
 <a
  href="http://devedge.netscape.com/viewsource/2003/soap/01/">SOAP In
 Gecko</a> <span class="comment">（英文）</span><br>
