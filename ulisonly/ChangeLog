@@ -1,3 +1,237 @@
+2001-12-21  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 忘年会: 急遽、行くことになった。
+
+2001-12-20  Masao Takaku  <masao@ulis.ac.jp>
+
+	* クリスマスツリー:
+	デニーズのサンタに加えて（？）、例年の金材研のクリスマスツリーも始
+	まった模様。
+
+	* yamaarashi返還メモ:
+
+	共用マシンとして戻すときに以下をする。
+
+	・ブラウザのクッキー、履歴、キャッシュ、（パスワード?）の削除。
+	・Astec-Xの削除。
+	・…。
+
+	* サンタクロース: 昨日、晩飯を食いにデニーズに行ったら、店員の女の
+	子たちがみんなサンタクロースの格好（赤のエプロンと帽子）していた。
+
+	セクハラにならないのかなあ。
+
+	今度、行ったら男の店員もサンタになっているか確認してこよう…。
+
+2001-12-18  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 技術系MLで質問するときのパターンランゲージ:
+
+	毒のない「〜FAQ」という感じ。
+	質問用のテンプレートもあって、さらに良い感じ。
+
+	http://www.hyuki.com/writing/techask.html
+
+	* IPA 情報セキュリティセミナー: 質疑応答などの生の声がいい感じ。
+
+	cf. http://www.ipa.go.jp/security/event/2001/2001report.html
+
+	* 北風: ペデで自転車をこいでいると、北風が強いっすね。
+
+	まじで、体力が落ちてるかも。心肺と太ももが、キツい…。
+
+	* skk 辞書:
+
+	~/.skk でいろいろな辞書をロードする設定を追加していくのが面倒なの
+	で、全部を SKK-JISYO.L としてまとめておく。
+
+	  % cd ~/CVSwork/skk/dic
+	  % cat SKK-JISYO.{L,M,S,pubdic+,edict,mazegaki,jinmei,geo,eki,library,law,okinawa,JIS*} zipcode/SKK-JISYO.* > tmp
+	  % ../tools/skkdic-expr -o tmp2 tmp
+	  % ../tools/skkdic-sort < tmp2 > tmp
+	  % mv tmp ~/share/skk/SKK-JISYO.L
+
+	元の：
+	  % ../tools/skkdic-count SKK-JISYO.L
+	  SKK-JISYO.L 156304 candidates
+	まとめたもの：
+	  % ../tools/skkdic-count ~/share/skk/SKK-JISYO.L
+	  /home/masao/share/skk/SKK-JISYO.L 480666 candidates
+
+	* 駅名辞書:
+
+	なぜか SKK の辞書に駅名辞書が含まれていないことに気付いた。おかげ
+	で、「北赤羽」やら「浮間舟渡」などの駅名を登録しないといけないのね。
+
+	ちゅうか、こういうデータこそ（郵便番号データと同じく）パブリックド
+	メインで配布しろよな〜 > 各鉄道会社。
+
+	で、探してみると、
+	  http://www.os.rim.or.jp/~h-taka/
+	に駅名辞書があった。
+
+	また、Vector にも r-dic という鉄道関連の辞書があり、駅名辞書も含ま
+	れていたが、ちょっと古いのでやめておく。
+	（「北赤羽」が東北本線になっているのも気にいらない…）
+
+	ちゅうわけで、
+	  % cd ~/CVSwork/skk/dic
+	  % nkf -e ekidat.txt | awk -F, '{print $1" /"$2"/";}' > SKK-JISYO.eki
+
+	* Xindice: 以前から dbXML という XML のネイティブ・データベースの
+	実装が XML Apache Project に参加し、Xindice に名称を変えて活動する
+	模様。
+
+	cf. http://www.dbxml.org/
+	
+	* Dateヘッダ (mnews):
+
+	mnews で送信したメールの Date: ヘッダを見ると、
+
+	  Date: Mon, 17 Dec 2001 22:42:47 JST
+
+	のように timezone が "JST" になっている。
+	一方、Sylpheed や生の Sendmail が送信時に追加するヘッダの形式は、
+
+	  Date: Tue, 18 Dec 2001 03:00:22 +0900 (JST)
+
+	のように "+0900 (JST)" になっている。
+	つまり、mnews が追加する Date: ヘッダがちょっと違うことが分かった。
+
+	どこで mnews がヘッダを追加しているかを確認したところ、SMTP サーバ
+	との接続時に渡していた(smtplib)。さらに、このヘッダを渡すのを制御
+	するためのコンパイル時オプションの類も見当たらなかったので、あきら
+	めた。
+	
+	まあ、結局のところ、このこと自体はあまり問題にならないと思う。
+	RFC2822 では obsolete 扱いの日付形式だけど、今の mnews は、RFC2822
+	以前にリリースされたソフトなので、問題ないと思う。
+	つまり、RFC822 には準拠していので…。
+
+	もしやるのであれば、他のヘッダに関しても RFC2822 準拠になるように
+	書き直さないと意味ない。でも、これはさすがに面倒そうなので、やる気
+	にはなれないですね。はい。
+
+	* インストールしたソフトウェアの情報の管理:
+
+	ScrollKeeper: Open Source Document Management
+	http://xml.com/lpt/a/2001/11/28/scrollkeeper.html
+
+	という XML.com の記事にある OMF という Dublin Core の Open Source
+	Software 用のサブセットは参考になるかも。
+
+	15 の Dublin Core エレメントのうち、
+	・Publisher を抜いて、
+	・Version, Current Maintainer が追加されている。
+
+	* アメリカ最初のWebmaster:
+
+	10年前に、Stanford大の物理学者が立ち上げたらしい…。
+	cf. http://news.cnet.com/news/0-1014-201-8104108-0.html
+
+	* xml.com: CGI::XMLApplication
+	http://xml.com/pub/a/12/12/2001/cgi-xml.html
+
+2001-12-17  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 修士ゼミ: 中国における電子政府の概況。
+
+	中国は、戸籍の管理は徹底してかも（一人っ子政策のため？）。
+	子供を産むにも許可が必要だからか!?
+
+2001-12-15  Masao Takaku  <masao@ulis.ac.jp>
+
+	* imgs2html: space.gif で強制的に空白を挿入しているのをやめたい。
+	けど、CSS未対応ブラウザでもOKにしたい。
+
+	<td width="Xpt"></td> かな？
+
+	* orienteer退会:
+
+	よく考えたら（考えなくても…）、必要ないのに続けていた。
+	ので、退会した。
+	あ、eGroupsに移行するまでは、参加・退会が人手だったので、お願いす
+	るのが面倒だっただけか。。。
+
+	思いかえせば、結構いろいろ入っているMLの内でも最初のころからずっと
+	講読し続けてきたMLじゃあなかろうか。
+	（汎用WSのquotaのきつい時期から…。）
+
+	* Delete or Remove?:
+
+	英語でChangeLogを書いていてちょっと気になったこと。
+
+	remove と delete の違いは？
+
+	英和辞典などを見ると、remove="re-move：移転させる"の意が強いので、
+	「消す（削除）」を表すときには、delete の方を使えば良いのかな。
+
+2001-12-14  Masao Takaku  <masao@ulis.ac.jp>
+
+	* Batch Goo!:
+	cf. http://www.aa.alpha-net.ne.jp/njunpc/SW_BatchGOO.htm
+
+	柳さんが実習室2のPhotoShopで保存したファイルを使おうとしていたので、
+	*.psd ファイルの変換方法を探してみたところ、psd 形式のファイルから
+	サムネール部分を取り出して変換するソフトウェアを発見。試してみる。
+	サムネールだけしかとれないので、ちょっとダメだった。
+
+	でも、*.psd 以外の機能も使えそう。LA研究会でもこのソフト使えるかも。
+
+	* imgs2html:
+
+	imgs2html がはくHTMLで、img 要素の title 属性 を使うべきか迷う。
+
+	現在は、
+	<img src="page001.gif" alt="page 1">
+	のようにしているが、
+	<img src="page001.gif" alt="page 1" title="page 1">
+	のように書いた方が適切かしら。
+
+	参考URL： http://www.kanzaki.com/docs/html/htminfo-alt.html
+	（ユニバーサルHTML/XHTML」の著者による解説）
+
+	暇があるときに、WAIガイドラインを読んでおいた方が良いかもね。
+	→ http://www.w3.org/TR/WAI-WEBCONTENT
+	→ http://www.zspc.com/documents/wcag10/ （邦訳）
+
+	* 新着図書: 『標準XML完全解説 上・下』
+
+	* スキャナ: 柳さんがスキャナで画像取り込みをしてメールで送ったら、
+	相手に読めないと言われたそうなので、その対処法。
+
+	元々はTiffで送ったがダメ。
+
+	結果としては、「デジカメの達人」で取り込めばOKらしい。
+	（GIFで保存できる）
+
+	* misc: from freshmeat...
+
+	・アカウント管理： http://freshmeat.net/projects/acctmgr/
+	・XML同士のdiff：  http://freshmeat.net/projects/vmtools/
+	・時間管理： http://freshmeat.net/projects/timetrackxml/
+	・プレゼンテーションツール：
+	http://freshmeat.net/projects/latex2slides/
+
+	* BUSIN: 年齢の概念が無くなってずいぶん簡単になってしまった。
+
+2001-12-13  Masao Takaku  <masao@ulis.ac.jp>
+
+	* flinch: リンクチェッカ。
+	cf. http://www.remote.org/jochen/software/flinch/
+
+	・設定ファイルはXML
+	・巡回・チェック・HTML出力を好きなタイミングで実行できる。
+	・チェックした履歴を保存できる。
+
+	などのアイデア自体は良いのだけど、
+
+	・ちょっとインストールが面倒。（XML関連のモデュールがいっぱい必要）
+	・メール報告機能がうまく動作しない。（sendmailのパスが変?）
+
+	などが難点。メール報告機能さえ動いてくれれば、Checkbotを置きかえら
+	れそうなんだけどね。
+
 2001-12-12  Masao Takaku  <masao@ulis.ac.jp>
 
 	* アルバイト (PAPI):
