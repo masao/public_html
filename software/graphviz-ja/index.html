@@ -9,7 +9,7 @@
 </head>
 <body>
 <!-- hhmts start -->
-<div class="last-update">最終更新日: <strong>Wed Oct 10 02:15:20 2001</strong></div>
+<div class="last-update">最終更新日: <strong>Thu Oct 11 07:06:12 2001</strong></div>
 <!-- hhmts end -->
 <hr>
 <h1>Graphviz-ja</h1>
@@ -40,15 +40,22 @@ watanabe-mincho.ttf や wadalab-gothic.ttf など
 が必要になります。）
 </p>
 <p>
+（動作確認は RedHat Linux 6.1J の上でのみ行っています。）
+</p>
+<p>
 <strong>出来ないこと：</strong>
 </p>
 <ul>
   <li>PostscriptやPDFなどの日本語出力は未対応です。
   <li>韓国語、中国語などの表示は未確認です。
 </ul>
-<p>
-（動作確認は RedHat Linux 6.1J の上でのみ行っています。）
-</p>
+<p><strong>パッチの問題点：</strong></p>
+<ul>
+  <li>フォントファイルは問答無用で、
+      watanabe-mincho.ttf か wadalab-gothic.ttf
+      を使うようになります。
+      Boldとかイタリックとかの dot での指定は効かないと思う（多分）。
+</ul>
 
 <h2><a name="usage">使い方</a></h2>
 <p>
