@@ -16,7 +16,7 @@ Dir::open( TOSPAM_DIR ) do |dir|
 		system( "#{BSFILTER} < #{ TOSPAM_DIR + "/" + f }" )
 		if ($?.to_i / 256) == 0 then
 			system( REFILE, "-src", "+junk.tospam", f, "+junk" )
-			puts "#{f} refile done."
+			# puts "#{f} refile done."
 		else
 			puts "#{f} must be re-validate."
 		end
