@@ -1,4 +1,4 @@
-#!/usr/local/bin/perl -w
+#!/usr/local/bin/perl -wT
 # -*- CPerl -*-
 # $Id$
 
@@ -23,12 +23,12 @@ my $HTML_HEAD = <<EOF;
 </head>
 <body>
 <h1>$TITLE</h1>
-<p>XMLとXSLTを入力すると、変換結果を確認できます。</p>
+<p><acronym title="Extensible Markup Language">XML</acronym>と<acronym title="XSL Transformations">XSLT</acronym>を入力すると、変換結果を確認できます。</p>
 <p><strong>注意:</strong></p>
 <ul>
 <li>ファイル指定の方が優先されます。ファイル指定しない場合は、テキストエリアの内容が使われます。
 <li>テキストエリアでの XML 宣言は、必ず<code>encoding="EUC-JP"</code>を使ってください。
-<li>XSLT中で<code>&lt;xsl:output encoding="EUC-JP"&gt;</code>としないと、日本語などが文字化けしてしまいます。
+<li>XSLT中で<code>&lt;xsl:output encoding="EUC-JP"&gt;</code>としないと、プレビュー表示が文字化けする場合があります。
 </ul>
 <hr>
 EOF
@@ -149,7 +149,7 @@ sub html_form () {
 <textarea name="stylesheet" rows="10" cols="60">$stylesheet</textarea><br>
 <fieldset><legend>表示方式</legend>
 <label><input type="radio" name="display" value="preview" checked>変換結果のソースをプレビュー表示する</label><br>
-<label><input type="radio" name="display" value="raw">変換結果のみをそのまま表示する</label>
+<label><input type="radio" name="display" value="raw">変換結果をそのまま表示する</label>
 </fieldset>
 <input type="submit" name="submit" value=" 送 信 ">
 </div>
