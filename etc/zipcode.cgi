@@ -6,6 +6,13 @@ require 'jcode'
 require 'cgi'
 require 'dbi'
 
+begin
+   require 'erb'
+   ERbLight = ERB
+rescue LoadError
+   require 'erb/erbl'
+end
+
 # escapeHTML のラッパー
 def e(str)
    if str
@@ -27,91 +34,86 @@ class String
    end
 end
 
-class ZipcodeCGI < CGI
-   def keyword
-      self.params['keyword'][0]
+class CGI
+   def valid?( arg )
+      self.params[arg][0] and self.params[arg][0].length > 0
+   end
+end
+
+class ZipcodeCGI
+   attr_reader :keyword, :pref, :city
+   def initialize( cgi, rhtml )
+      @cgi, @rhtml = cgi, rhtml
+      @keyword = @cgi.params['keyword'][0] if @cgi.valid?( 'keyword' )
+      @pref = @cgi.params['pref'][0] if @cgi.valid?( 'pref' )
+      @city = @cgi.params['city'][0] if @cgi.valid?( 'city' )
    end
 
-   def title; "郵便番号検索"; end
-   
-   def html_header
-      return <<EOF
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-   "http://www.w3.org/TR/html4/strict.dtd">
-<html lang="ja">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-JP">
-<link rel="stylesheet" href="../default.css" type="text/css">
-<link rev="made" href="mailto:masao@ulis.ac.jp">
-<title>#{title}#{ keyword ? ": " + e(keyword) : "" }</title>
-</head>
-<body>
-<h1>郵便番号検索</h1>
-EOF
+   # 実際の検索を行う
+   def do_search
+      dbh = DBI.connect("dbi:SQLite:zipcode.db")
+      @result = []
+      @search_time = Time.now
+      if @keyword
+	 sql = ""
+	 case @keyword
+	 when /^[0-9\-]+$/
+	    sql << "where zipcode7 like '#{ @keyword.delete("-") }%'"
+	 when /^[ぁ-ん]+$/
+	    escaped_keyword = @keyword.tr('ぁ-ん', 'ァ-ン').gsub('\'', '\'\'')
+	    sql << "where city_yomi like '%#{ escaped_keyword }%' or town_yomi like '%#{ escaped_keyword }%'"
+	 when /^[ァ-ン]+$/
+	    escaped_keyword = @keyword.gsub('\'', '\'\'')
+	    sql << "where city_yomi like '%#{ escaped_keyword }%' or town_yomi like '%#{ escaped_keyword }%'"
+	 else
+	    sql << "where town like '%#{ @keyword.gsub('\'', '\'\'') }%'"
+	 end
+	 sth = dbh.prepare("select zipcode7, pref, city, town from zipcode #{sql}")
+	 sth.execute
+	 sth.each do |row|
+	    zipcode7 = row.shift
+	    @result.push(zipcode7.format_zipcode << " " << row.join(" "))
+	 end
+	 sth.finish
+      elsif @pref and @city
+	 sth = dbh.prepare("select zipcode7, pref, city, town from zipcode where pref = ? and city = ?")
+	 sth.execute(@pref, @city)
+	 sth.each do |row|
+	    zipcode7 = row.shift
+	    @result.push(zipcode7.format_zipcode << " " << row.join(" "))
+	 end
+      elsif @pref
+	 sth = dbh.prepare("select distinct city from zipcode where pref = ?")
+	 sth.execute(@pref)
+	 sth.each do |row|
+	    STDERR.puts row.inspect
+	    @result.push "<a href=\"./zipcode.cgi?pref=#{CGI.escape(@pref)};city=#{CGI.escape(row['city'])}\">#{row.join(" ")}</a>\n"
+	 end
+      end
+      @search_time = Time.now - @search_time
    end
 
-   def html_footer
-      "</body></html>\n"
-   end
-   
-   def html_form
-      return <<EOF
-<form action="./zipcode.cgi" method="GET">
-<div class="form">
-キーワード: <input type="text" name="keyword" value="#{e(keyword)}" size="40">
-<input type="submit" value="検索">
-</div>
-</form>
-EOF
+   def do_eval_rhtml
+      ERbLight::new( open( @rhtml ).read ).result( binding )
    end
 end
 
 begin
-   cgi = ZipcodeCGI.new
+   @cgi = CGI.new
+   zipcode_app = ZipcodeCGI.new(@cgi, "zipcode.rhtml")
 
-   print cgi.header("text/html; charset=EUC-JP")
-   print cgi.html_header
-   print cgi.html_form
-
-   time = nil
-   result = []
-   if cgi.keyword
-      time = Time.now
-      dbh = DBI.connect("dbi:SQLite:zipcode.db")
-      sql = ""
-      case cgi.keyword
-      when /^[0-9\-]+$/
-	 sql << "where zipcode7 like '#{cgi.keyword.delete("-")}%'"
-      when /^[ぁ-ん]+$/
-	 sql << "where town_yomi like '%#{cgi.keyword.tr('ぁ-ん', 'ァ-ン').gsub('\'', '\'\'')}%'"
-      when /^[ァ-ン]+$/
-	 sql << "where town_yomi like '%#{cgi.keyword.gsub('\'', '\'\'')}%'"
-      else
-	 sql << "where town like '%#{cgi.keyword.gsub('\'', '\'\'')}%'"
-      end
-      sth = dbh.prepare("select zipcode7, pref, city, town from zipcode #{sql}")
-      sth.execute
-      sth.each do |row|
-	 zipcode7 = row.shift
-	 result.push(zipcode7.format_zipcode << " " << row.join(" "))
-      end
-      sth.finish
-      time = -(time - Time.now)
+   if zipcode_app.keyword or zipcode_app.pref or zipcode_app.city
+      zipcode_app.do_search
    end
 
-   if result
-      puts "<p>'#{e(cgi.keyword)}': #{result.size} 件ヒットしました</p>"
-      puts "<ul>"
-      result.sort.each do |e|
-	 puts "<li>" << e(e)
-      end
-      puts "</ul>"
-      puts "<p style=\"font-size:smaller;\">検索にかかった時間 #{"%.2f" % time}秒</p>"
-   end
-   print cgi.html_footer
+   @cgi.out("text/html; charset=EUC-JP"){ zipcode_app.do_eval_rhtml }
 
 rescue Exception
-   print "Content-Type: text/plain\n\n"
+   if @cgi then
+      print @cgi.header( 'type' => 'text/plain' )
+   else
+      print "Content-Type: text/plain\n\n"
+   end
    puts "#$! (#{$!.class})"
    puts ""
    puts $@.join( "\n" )

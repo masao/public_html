@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-JP">
+<link rel="stylesheet" href="../default.css" type="text/css">
+<link rev="made" href="mailto:masao@ulis.ac.jp">
+<title>郵便番号検索<% @keyword ? ": " + e(@keyword) : "" %></title>
+<style type="text/css">
+div.form { text-align: center; }
+</style>
+</head>
+<body>
+<h1>郵便番号検索</h1>
+<form action="./zipcode.cgi" method="GET">
+<div class="form">
+キーワード:
+<input type="text" name="keyword" value="<%=e @keyword %>" size="40">
+<input type="submit" value="検索">
+</div>
+</form>
+<% if @result then %>
+<p><strong><%=e @keyword || @city || @pref %></strong>:
+<%= @result.size %> 件ヒットしました</p>
+<ul>
+<% @result.sort.each do |e| %>
+  <li><%= e %>
+<% end %>
+</ul>
+<p style="font-size:smaller;">検索にかかった時間 <%= "%.2f" % @search_time %>秒</p>
+<% end %>
+<h2>検索の方法</h2>
+<p>
+以下の3種類の検索が行えます。
+</p>
+<dl>
+  <dt>地域選択</dt>
+  <dd>以下の選択欄から都道府県を選択して、表示します。
+      <form action="./zipcode.cgi" method="GET">
+      <div>
+      <select name="pref">
+	<option<%= " selected" if @pref == "北海道"%>>北海道
+	<option<%= " selected" if @pref == "青森県"%>>青森県
+	<option<%= " selected" if @pref == "岩手県"%>>岩手県
+	<option<%= " selected" if @pref == "宮城県"%>>宮城県
+	<option<%= " selected" if @pref == "秋田県"%>>秋田県
+	<option<%= " selected" if @pref == "山形県"%>>山形県
+	<option<%= " selected" if @pref == "福島県"%>>福島県
+	<option<%= " selected" if @pref == "茨城県"%>>茨城県
+	<option<%= " selected" if @pref == "栃木県"%>>栃木県
+	<option<%= " selected" if @pref == "群馬県"%>>群馬県
+	<option<%= " selected" if @pref == "埼玉県"%>>埼玉県
+	<option<%= " selected" if @pref == "千葉県"%>>千葉県
+	<option<%= " selected" if @pref == "東京都"%>>東京都
+	<option<%= " selected" if @pref == "神奈川県"%>>神奈川県
+	<option<%= " selected" if @pref == "新潟県"%>>新潟県
+	<option<%= " selected" if @pref == "富山県"%>>富山県
+	<option<%= " selected" if @pref == "石川県"%>>石川県
+	<option<%= " selected" if @pref == "福井県"%>>福井県
+	<option<%= " selected" if @pref == "山梨県"%>>山梨県
+	<option<%= " selected" if @pref == "長野県"%>>長野県
+	<option<%= " selected" if @pref == "岐阜県"%>>岐阜県
+	<option<%= " selected" if @pref == "静岡県"%>>静岡県
+	<option<%= " selected" if @pref == "愛知県"%>>愛知県
+	<option<%= " selected" if @pref == "三重県"%>>三重県
+	<option<%= " selected" if @pref == "滋賀県"%>>滋賀県
+	<option<%= " selected" if @pref == "京都府"%>>京都府
+	<option<%= " selected" if @pref == "大阪府"%>>大阪府
+	<option<%= " selected" if @pref == "兵庫県"%>>兵庫県
+	<option<%= " selected" if @pref == "奈良県"%>>奈良県
+	<option<%= " selected" if @pref == "和歌山県"%>>和歌山県
+	<option<%= " selected" if @pref == "鳥取県"%>>鳥取県
+	<option<%= " selected" if @pref == "島根県"%>>島根県
+	<option<%= " selected" if @pref == "岡山県"%>>岡山県
+	<option<%= " selected" if @pref == "広島県"%>>広島県
+	<option<%= " selected" if @pref == "山口県"%>>山口県
+	<option<%= " selected" if @pref == "徳島県"%>>徳島県
+	<option<%= " selected" if @pref == "香川県"%>>香川県
+	<option<%= " selected" if @pref == "愛媛県"%>>愛媛県
+	<option<%= " selected" if @pref == "高知県"%>>高知県
+	<option<%= " selected" if @pref == "福岡県"%>>福岡県
+	<option<%= " selected" if @pref == "佐賀県"%>>佐賀県
+	<option<%= " selected" if @pref == "長崎県"%>>長崎県
+	<option<%= " selected" if @pref == "熊本県"%>>熊本県
+	<option<%= " selected" if @pref == "大分県"%>>大分県
+	<option<%= " selected" if @pref == "宮崎県"%>>宮崎県
+	<option<%= " selected" if @pref == "鹿児島県"%>>鹿児島県
+	<option<%= " selected" if @pref == "沖縄県"%>>沖縄県
+      </select>
+      <input type="submit" value="選択">
+      </div>
+      </form>
+  <dt>文字列（キーワード）検索</dt>
+  <dd>市区町村名、町域名に任意のキーワードが含まれるものを検索します。
+      なお、カナ書きした場合は読みも検索します。<br>
+      例: <var>気仙</var>, <var>けせん</var> など
+  <dt>郵便番号検索</dt>
+  <dd>「キーワード」欄に数字を打ち込めば、郵便番号として前方一致検索を行います。<br>
+      例: <var>305</var>, <var>115-0012</var> など
+</dl>
+<h2>補足</h2>
+<p>
+このシステムは、個人的な用途に基づき運営しているものです。
+内容の正確性などについては、無保証です。
+<a href="http://www.post.japanpost.jp/zipcode/index.html">郵政公社</a>などから提供されている正式版を適宜参照してください。
+</p>
+<p>
+また、本検索プログラムは、以下のソフトウェアなどにより実装されています。
+各ソフトウェアの作者の方々に感謝いたします。
+</p>
+<ul>
+  <li><a href="http://www.ruby-lang.org/ja/">Ruby</a>
+  <li><a href="http://www2a.biglobe.ne.jp/~seki/ruby/erb.html">ERB</a>
+  <li><a href="http://www.sqlite.org/">SQLite</a>
+  <li><a href="http://ruby-dbi.sourceforge.net/">Ruby/DBI</a>
+  <li>データ: <a href="http://www.post.japanpost.jp/zipcode/index.html">郵便番号データ</a> （平成15年11月8日更新版）
+</ul> 
+<hr>
+<address>
+高久雅生 (Takaku Masao)<br>
+<a href="http://nile.ulis.ac.jp/~masao/">http://nile.ulis.ac.jp/~masao/</a>,
+<a href="mailto:masao@ulis.ac.jp">masao@ulis.ac.jp</a>
+</address>
+</body></html>
