@@ -118,7 +118,7 @@ sub info2str(%) {
 		   'updated' => "更新");
     my @tmp = ();
     foreach my $k (keys %infostr) {
-	push @tmp, "$infostr{$k} $info{$k} 件" if defined $info{$k}
+	push @tmp, "$infostr{$k} $info{$k} 件" if defined $info{$k};
     }
     $retstr .= "（". join(@tmp, "、") ."）\n";
     return $retstr;
