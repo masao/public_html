@@ -1,8 +1,8 @@
 body {
   background-color: #aaffaa;
-  font-family: helvetica, sans-serif;
+  font-family: "Helvetica", sans-serif;
   margin: 2%;
-  line-height: 120%;
+  line-height: 1.2;
 }
 h1 {
   text-align: center;
