@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-JP">
+<link rel="stylesheet" href="../default.css" type="text/css">
+<link rev="made" href="mailto:masao@ulis.ac.jp">
+<title>mailer-stat.pl</title>
+</head>
+<body>
+<!-- hhmts start -->
+<div class="last-update">最終更新日: <strong>Wed Dec 12 23:22:43 2001</strong></div>
+<!-- hhmts end -->
+<h1>mailer-stat.pl</h1>
+<p>
+MH形式で格納されているメールから、
+使われているメーラの情報を取りだしてメーラ毎の件数を表示します。
+メーラの特定には、
+<code>X-Mailer</code>, <code>User-Agent</code>, <code>X-Newsreader</code>
+の各ヘッダを利用します。
+</p>
+<h2>ダウンロード</h2>
+<ul>
+  <li><a href="mailer-stat.pl">mailer-stat.pl</a>
+</ul>
+<h2>使い方</h2>
+<p>
+たとえば、以下のように
+<code>~/Mail</code>ディレクトリ以下の全メールを対象にして実行できます。
+</p>
+<pre>
+% ./mailer-stat.pl ~/Mail | head -20
+4466    Unknown
+1574    Mozilla
+1284    Microsoft Outlook Express
+898     Becky!
+887     mnews
+753     Mew
+622     Wanderlust
+562     Sylpheed
+284     Internet Mail Service
+261     Mail User's Shell
+199     AL-Mail
+192     Winbiff
+164     Microsoft Outlook IMO
+140     Mutt
+130     EdMax
+113     Microsoft Outlook
+100     ELM
+98      QUALCOMM Windows Eudora
+97      QUALCOMM Windows Eudora Pro
+85      VM
+</pre>
+
+<hr>
+<address>
+高久雅生 (Takaku Masao)<br>
+<a href="http://nile.ulis.ac.jp/~masao/">http://nile.ulis.ac.jp/~masao/</a>, 
+<a href="mailto:masao@ulis.ac.jp">masao@ulis.ac.jp</a>
+</address>
+<div class="id">$Id$</div>
+</body>
+</html>
