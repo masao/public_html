@@ -1,0 +1,475 @@
+<HTML>
+<HEAD>
+
+   <title>RDF と Z39.50</title>
+<LINK REL="stylesheet" HREF="../../persistent-style.css" TYPE="text/css">
+<LINK REL="icon" HREF="../../images/mozilla-16.png" TYPE="image/png">
+</HEAD>
+<BODY>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%">
+<TR>
+<TD VALIGN="TOP" class="bannercell">
+<A HREF="/" CLASS="bannerlink">
+<IMG SRC="../../images/mozilla-banner.gif" ALT=""
+CLASS="mozillaorgbanner" WIDTH="600" HEIGHT="58">
+</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR>
+<TD VALIGN="TOP" >
+<TABLE BORDER="0" class="outersidebar"><TR><TD class="bordercell" VALIGN="TOP">
+<TABLE BORDER="0" CELLSPACING="3" class="middlesidebar"><TR><TD class="titlecell" VALIGN="TOP">
+<TABLE CELLPADDING="0" CELLSPACING="3" BORDER="0" class="innersidebar">
+<TR><TD class="linkcell" COLSPAN=2><A HREF="../.././"><B> The Mozilla<BR>Organization</B></A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../../mozorg.html"> At A Glance</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../../feedback.html"> Feedback</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../../get-involved.html"> Get Involved</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../../community.html"> Newsgroups</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../../MPL/"> License Terms</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="/newsbot/"> Newsbot</A></TD></TR>
+<TR><TD class="spacercell"></TD></TR>
+<TR><TD class="linkcell" COLSPAN=2><A HREF="../../catalog/"><B> Developer Docs</B></A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../../roadmap.html"> Roadmap</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../../projects/"> Projects</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../../ports/"> Ports</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../../owners.html"> Module Owners</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../../hacking/"> Hacking</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../../source.html"> Get the Source</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../../build/"> Build It</A></TD></TR>
+<TR><TD class="spacercell"></TD></TR>
+<TR><TD class="linkcell" COLSPAN=2><A HREF="../../quality/"><B> Testing</B></A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../../releases/"> Download</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="http://bugzilla.mozilla.org/enter_bug.cgi?format=guided"> Report A Bug</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../../bugs/"> Bugzilla</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="../../quality/bug-writing-guidelines.html"> Bug Writing</A></TD></TR>
+<TR><TD class="spacercell"></TD></TR>
+<TR><TD class="linkcell" COLSPAN=2><A HREF="../../tools.html"><B> Tools</B></A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="http://lxr.mozilla.org/seamonkey/"> View Source</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="http://tinderbox.mozilla.org/showbuilds.cgi?tree=SeaMonkey"> Tree Status</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="http://bonsai.mozilla.org/cvsquery.cgi?treeid=default&amp;module=SeaMonkeyAll&amp;branch=HEAD&amp;branchtype=match&amp;dir=&amp;file=&amp;filetype=match&amp;who=&amp;whotype=match&amp;sortby=Date&amp;hours=2&amp;date=day&amp;mindate=&amp;maxdate=&amp;cvsroot=%2Fcvsroot"> New Checkins</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><A HREF="http://bugzilla.mozilla.org/"> Submit A Bug</A></TD></TR>
+<TR><TD class="spacercell"></TD></TR>
+<TR><TD class="linkcell" COLSPAN=2><A HREF="../../faq.html"><B> FAQ</B></A></TD></TR>
+<TR><TD class="linkcell" COLSPAN=2><A HREF="/search.html"><B> Search</B></A></TD></TR>
+</TABLE>
+</TD></TR></TABLE>
+</TD></TR></TABLE>
+</TD>
+<TD VALIGN="TOP">
+
+
+
+
+<center>
+<h1>Mozilla RDF / Z39.50 統合プロジェクト</h1>
+</center>
+
+連絡先:<br>
+<SMALL>
+<a href="mailto:daniel.brickley@bristol.ac.uk">Dan Brickley</A> (daniel.brickley@bristol.ac.uk)<BR>
+<a href="mailto:rden@loc.gov">Ray Denenberg</A> <A HREF="http://lcweb.loc.gov/z3950/agency/">Z39.50 Maintainance Agency</A>, Library of Congress (rden@loc.gov)<BR>
+<a href="mailto:echristi@usgs.gov">Eliot Christian</A> <A HREF="http://www.gils.net/">GILS initiative</A>, (echristi@usgs.gov)<BR>
+<a href="mailto:quinn@indexdata.dk">Sebastian Hammer</A> <A
+HREF="http://www.indexdata.dk/">Index Data</A> (quinn@indexdata.dk)<BR>
+<a href="mailto:waterson@netscape.com">Chris Waterson</a> (waterson@netscape.com)<br>
+
+</SMALL>
+<BR>
+
+<P>
+本プロジェクトは、Mozilla の RDF ベースの情報管理環境下での
+Z39.50 の検索機能の統合を検討するプロジェクトです。
+</P>
+
+<H2>目的</H2>
+
+<UL>
+<li>Mozilla 内から Z39.50 データソースへの検索ができるようにする。</li>
+<li>Z39.50 アトリビュートセットの RDF 表現を検討する。</li>
+</UL>
+
+<P>
+ネットワーク上には多くの Z39.50 サーバが存在しています。
+これらのサーバに検索クエリを送ったり、
+Mozilla 標準の bookmark/sitemap インタフェース内で検索結果レコードを保持したりできる
+Mozilla ユーザインタフェースに基づくメカニズムを検討し、明らかにしていくことができると思います。
+</P>
+
+<H2>背景: Z39.50</H2>
+
+<P>
+ANSI/NISO Z39.50 はクライアント/サーバ環境における、情報検索のための通信プロトコルです。
+これは、書誌情報や電子図書館アプリケーションで広く利用されています。
+Z39.50 は、書誌データ検索関連の実践を代表するものであり、
+コミュニティ特有のメタデータ・アトリビュートセットに対して相互運用可能なセマンティクスを提供する仕様です。
+ここで紹介する Z39.50 統合プロジェクトは、
+Mozilla の RDF ベースの '<a href="/rdf/doc/aurora.html">Aurora</a>' 環境の中から、
+Z39.50 のデータソースやメタデータ・アトリビュートセットを利用できるような
+適切なメカニズムを検討し、明らかにしようとするものです。
+</P>
+
+
+<H2>はじめに</H2>
+
+<P>
+このページでは、Z39.50, RDF, Mozilla の各コミュニティの寄与したい人に、
+共通の問題に取り組むことができるような有用なリソース群を提供することを目指します。
+Z39.50 は通信プロトコルに不案内な人にはやや複雑ですが、
+この分野での経験を積んだ多くの開発者たちがいます。
+われわれが真に必要としているものは、
+Mozilla の新機能をハックしたい外部の寄与者に向けた優れた入門用の文書です。
+<a href="/rdf/doc/index.html">Mozilla RDF ページ</a> のうちのいくつかは、
+その足掛かりになるでしょう。
+また、それを始めるよい方法は、単純に Mozilla の初期リリースのコピーを
+<a href="/binaries.html">ダウンロード</a>し、その動作方法を見ることでしょう。
+</P>
+
+<H3>Mozilla に不案内な Z39.50 開発者の方へ...</H3>
+<P>
+もしも Z39.50 がわかるなら、これを容易なことかもしれません…。
+Mozila の UI 全体は、
+XUL ファイル、Javascript、RDF クエリと取得のようなサービスに対する XP-COM 呼び出し
+から構成されています。
+XUL によってユーザインタフェースがどのように構成されるかは
+<a href="/xpfe/">クロスプラットホーム・フロントエンド</a>を読んで研究してみると良いでしょう。
+XUL は XML 応用の一つで、
+XML, HTML. Javascript, RDF を使ってインタフェースを作成できます。
+<a href="/rdf/doc/xul-template-reference.html">XUL テンプレートリファレンス</a>では、
+RDF データグラフを検索しながら、XUL ウィジェット（ツリー、メニュー）がどのように配置されるかについて、
+詳しく解説しています。
+また、<a href="http://www.w3.org/RDF/">W3C RDF ページ</a> にある仕様を読んだり、
+このサイト上の RDF-in-Mozilla 関連のリンクを調査したりすると良いでしょう。
+Mozilla における最も興味深いデータソースは、
+RDF グラフ抽象化を通じてユーザインタフェースに渡されるそれです。
+Z39.50 サーバからのデータをこのようなグラフとして、
+または XUL ベースのユーザインタフェース要素として取得することを考慮すると、
+検討すべきオプションがいくつもあります。
+新しい RDF データソースの実装者向けの段階的なガイドとしては、
+<a href="/rdf/doc/datasource-howto.html">データソース HOWTO</a> を参照してください。
+</P>
+
+<P>
+基本的なレシピは次の通りです。
+RDF データソース API と
+定義（たぶん流通している Z39.50 レファレンスへの IDL を見つけて）したいすべての追加 XP-COM API
+を実装し、コンポーネントとして（できるだ多くのプラットホームで）コンパイルします。
+それから、Mozilla の 'components/' ディレクトリにファイルを置いて、
+ブラウザが起動する際に、新しいコンポーネントとして検査させます。
+これは、Mozilla を構成する Javascript, RDF, XUL の世界で見えるように記述されたものです（
+Mozilla の上位アーキテクチャの概要については WebReview.com の <a href="http://webreview.com/pub/1999/08/20/feature/index.html">1999年8月の記事</a>を参照）。
+</P>
+
+<P>
+Javascript からコンポーネントを呼び出すことには、基本的なアプローチがあります。
+まずコンポーネントはそれぞれ名前（例: 'component://z3950service'）を持ち、
+一つもしくは複数のスクリプト可能なインタフェースを持ちます。
+以下の架空のコード片は Z39.50 オブジェクトの初期化を示しています。
+これは Z39.50 のよりネイティブなインタフェースを提供する一方で、
+あたかも RDF グラフであるかのようにも扱えます。
+</P>
+ <PRE>
+ var z3950 = Components.classes["component://z3950service"].createInstance();
+ z3950 = z3950.QueryInterface(Components.interfaces.nsIRDFDataSource);
+ zapi = z3950.QueryInterface(Components.interfaces.IZ3950Service);
+</PRE>
+
+
+<P>
+次は何をすればよいでしょう。
+まず、
+どこかに去ってしまわず、また、
+Mozilla の <A HREF="../../roadmap.html">開発ロードマップ</A> にあるスケッチや
+<A HREF="index.html">Mozilla RDF ページ</A> と合わないようなことに
+注力してしまわないことが重要です。
+このためには、
+<B>mozilla-rdf</B> フォーラムでアイデアを提案することが一番の方法です
+（ニュースグループやメーリングリストでのアクセスについての詳細は
+<A HREF="../../community.html">コミュニティ</A>を参照のこと）。
+</P>
+
+<H3>プロトタイプ</H3>
+<P>
+さて、これが次にやるべきことになるでしょう。
+Mozilla Z39.50 クライアントがどのようなものになるかを示す、
+協調動作するようなモノというのは、
+どちらかと言えばシンプルなモノでなければなりません
+（例えば、XML/RDF ファイルを出力する Z39.50 - CGI スクリプト）。
+いったんこれができれば、
+含まれていた問題を評価し、完全な Z39.50 データソースに望むもの（以下を参照）を
+把握するのは容易になるでしょう。
+例えば:
+検索結果をブックマークとして格納できる方が良いのか？
+データ構造の表現として <A HREF="http://purl.org/dc/">Dublin Core</A> の
+RDF ボキャブラリを使えるか？
+</P>
+<P>
+<B>注意</B>
+M9 Mozilla マイルストーンには、非 Z39.50 インタネット検索機能が
+（検索エンジンへの検索結果 HTML ページからの 'screenscraping' に基づく）
+が含まれています。
+</P>
+
+<H2>Z39.50 RDF データソースへのロードマップ</H2>
+
+<P>
+Z39.50 へのネイティブなクライアントサイドでの対応が
+Mozilla に統合されるならば、
+われわれは、Z39.50 クライアントを実装し、
+Mozilla での RDF データソースに仕上げられるコードを探さねばなりません。
+これには、<A HREF="http://www.indexdata.dk/">IndexData</A> 社の
+<A HREF="http://www.indexdata.dk/yaz/">Yaz</A> ツールキットが使えると思います。
+これは、Z39.50 クライアントのコード用の確固とした基礎となるでしょう
+（YAZ は、主な制約が帰属権および「無保証」である
+<A HREF="http://www.indexdata.dk/yaz/license.shtml">寛大なライセンス</A>
+の下で公開されています）。
+作業の主に実体となる部分は、
+YAZ を RDF APIs に結合し、RDF と Z39.50 のデータモデルを様々な方法で熟考することになるでしょう
+</P>
+<H2>未解決の課題</H2>
+
+<P>
+この部分は、個別のページとして、
+もっと構造化した課題リストへ発展させるべきです。
+今の所、自由形式のブレインストームが適していそうですが…。
+</P>
+
+<P>
+Mozilla RDF の「検索可能なモノ」の概念とは何でしょうか？
+Mozilla が対応すべきネットワーク上の検索プロトコルは、他にもありますか？
+完全な Z39.50 対応をクライアントに追加すること
+（例えば、他のライブラリを通じて??）は実現可能でしょうか？
+それとも、HTTP 上で（XML/RDF かなにかで）トンネリングするのが、
+現実的でしょうか？
+サードパーティによって寄与されるコードには、どんな制約がありますか？
+どのくらい正確に、
+外部で書かれたコード
+（例えば、<A HREF="http://www.indexdata.dk/yaz/">Yaz</A>）を
+<A HREF="../../projects/xpcom/">XP-COM</A> プラグインデータソースとしての
+結合に着手できるでしょうか？
+</P>
+
+<TABLE BORDER="1">
+<TR><TH>問題</TH><TH>概要</TH><TH>状況など（備考）</TH></TR>
+
+<TR>
+<TD VALIGN="TOP">Yaz library</TD>
+<TD VALIGN="TOP">Yaz の <A HREF="http://www.indexdata.dk/yaz/license.shtml">ライセンス</A> が Mozilla と一緒に使えるかどうか確認をとれる？
+</TD> <TD VALIGN="TOP">Mozilla.org の助言がほしい。これは <A
+HREF="../../NPL/FAQ.html#14">Frequently asked question</A> にもあるけど、問題はないみたい…。
+</TD>
+</TR>
+
+<TR>
+<TD VALIGN="TOP">サービス記述</TD>
+<TD VALIGN="TOP">様々な Z39.50 サービス（接続の詳細、対象の範囲など）の XML/RDF 表現が必要でしょう。
+</TD>
+<TD VALIGN="TOP"><A HREF="http://www.gils.net/list/index.html">GILS 
+Locator Records</A>
+  （たぶん RDF と Dublin Core に変更される？）がこれの基礎になるかも。
+  <A HREF="SmartBrowsing.html">SmartBrowsing</A> や Mozilla の他の RDF データサービスとの調整が重要。
+  これが Mozilla の他の部分（キャッシュサービスのローカル設定、アイコン用の CSS/XUL、chrome など）でどう動くかを見極める必要あり。
+  ウェブ上のサービス用のサイトマップである RDF サイトマップにも関係する。
+  これに、Z39.50 検索サーバ（や他のインタフェース）がどこにあるかを記述する RDF/XML を入れられるようにすべきだろう（RDF サイトマップに関する文書が必要）。
+</TD>
+  <!--
+  訳者注: 以下は原文では、「サービス記述」の項にあるけど、
+  それは誤りだと思うので、移動しておく。
+  -->
+  </TR>
+  <TR>
+<TD VALIGN="TOP">Necko との協調</TD>
+<TD VALIGN="TOP">Necko は Mozilla の新しいネットワークライブラリ。
+  ネットワーク上のサーバへの接続は Necko を通じて行われるべきだろう。
+  それをする方法はまだ分からんけど…。
+</TD>
+<TD VALIGN="TOP">
+<A HREF="/docs/netlib/necko.html">Necko 概要</A>が助けになるけど、
+  コピーすべきコード例が欲しい…。
+  理想的には、Z39.50 URLs と関連付けされたプロトコルハンドラから書き始めたい。
+  HTTP トンネリングした Z39.50 という考えも忘れていません。
+    こっちの方が近道かな…。
+</TD></TR>
+
+<TR>
+<TD VALIGN="TOP">
+非 Z39.50 検索
+</TD>
+<TD VALIGN="TOP">
+  RDF/XUL からアクセス可能な Z39.50 以外の検索サービスもあるでしょう。
+  例えば、ポータル検索、ブックマークの「Find」など。
+  不必要な重複を避けるのも重要なので、
+  Mozilla.org が計画・調整している作業などについての
+  ロードマップをもらっておきたい。
+</TD>
+<TD VALIGN="TOP">
+  M9 に対する
+  <A HREF="http://bugzilla.mozilla.org/show_bug.cgi?id=11347">Bug 11347</A>
+  はロードマップを更新する必要についての覚書。
+  重複を避ける一番の方法は公開フォーラム上で議論をし、
+  ニュースグループ上での RDF 検索に関する <A HREF="news://news.mozilla.org/375D5B7F.E0481FE6%40netscape.com">過去のスレッド</A> を読み返しておくことだろう。
+</TD>
+</TR>
+
+<TR>
+<TD VALIGN="TOP">
+BER ユーティリティ
+</TD>
+<TD VALIGN="TOP">
+  Z39.50 は ASN.1 と BER 符号化を使う。
+  Yaz には BER を扱うコードがあるけど、Mozilla の LDAP ライブラリも
+  BER ツールがあるみたい。どうするのが一番？
+</TD>
+<TD VALIGN="TOP">
+  LDAP の BER ユーティリティが XP-COM その他から利用できるかどうか、要調査。
+  重複問題を重く見るか、
+  LDAP の作業と連携する複雑さを取るか。
+  ところで、LDAP の RDF データソースはまだ計画段階？？
+  <BR>
+  Sebastian より: <EM>
+  われわれがランタイムローダブルモジュールとしてそれをすべて構築できれば、
+  2つのBERスタックを取り扱うオーバーヘッドはさほど重要ではありません。
+  私は、BERコード自体のサイズは、
+  実際の構造化された Z39.50 （あるいは LDAP）の PDU を符号化する
+  高層のものより小さいと思います。
+<BR>
+[Status: <B>CLOSED</B>] <BR>
+  Yaz の BER ライブラリを使う方が良いというのが一般的なコンセンサス。
+</EM>
+ </TD>
+</TR>
+
+</TABLE>
+
+
+<H2>議論</H2>
+
+<P>適切なメーリングリスト/ニュースグループへのリンクについては、メインの <A HREF="index.html">Mozilla RDF</A> ページをご覧ください。
+</P>
+
+<H2>リソース</H2>
+
+<H3>Z39.50 関連</H3>
+<UL>
+
+<LI><A HREF="http://lcweb.loc.gov/z3950/agency/">Z39.50 Maintainance
+Agency</A> アメリカ議会図書館（Library of Congress）</LI>
+
+
+<LI><A HREF="http://www.biblio-tech.com/html/z39_50_core.html">Z39.50 Core
+Services</A> - プロトコルの概要
+
+<LI><A HREF="http://www.dlib.org/dlib/april97/04lynch.html">The Z39.50
+Information Retrieval Standard</A> (D-Lib の記事 by Clifford Lynch)
+
+<LI><A HREF="http://lcweb.loc.gov/z3950/agency/document.html">The Z39.50
+specification</A> (仕様書)</LI>
+
+<LI>データソース例 - <A HREF="http://www.gils.net/list/index.html">GILS Locator
+Records</A> 多数の Z39.50 サーバを XML 形式で記述</LI>
+
+<LI><A HREF="http://www.mailbase.ac.uk/lists/rdf-dev/1998-06/0008.html">a
+draft proposal</A> Eliot Christian による GILS locator record 用の RDF Schema (<A
+HREF="http://www.mailbase.ac.uk/lists/rdf-dev/1999-06/0027.html">opinion 
+piece on Z39.50 and the RDF Semantic Web...</A> も参照のこと)</LI>
+
+<LI><A HREF="http://www.indexdata.dk/">IndexData</A> 社による <A HREF="http://www.indexdata.dk/yaz/">Yaz</A> Z39.50 programmer's toolkit (Mozilla での使用コード候補)
+
+<LI><A HREF="http://lcweb.loc.gov/z3950/agency/zhttp.html">Profile for
+Z39.50 over HTTP (draft)</A>
+<LI><A
+HREF="http://lcweb.loc.gov/z3950/agency/attrarch/attrarch.html">Z39.50
+Attribute Architecture</A>
+
+
+<LI>The <A HREF="http://asf.gils.net/xer">XER encoding rules</A>
+    （伝統的な ASN.1 データ構造の BER 符号化を XML 表現で置き換える提案）
+</LI>
+
+
+<LI>さらなる背景には、 <A
+HREF="http://www.ilrt.bris.ac.uk/discovery/z3950/resources/">Z39.50
+related resources</A> を参照のこと
+</LI>
+
+<LI><A
+HREF="http://www.w3.org/TandS/QL/QL98/pp/distributed.html">Query
+Language Issues in a Distributed Indexing Environment</A> (QL'98 ワークショップのディスカッションペーパー)
+</LI>
+
+
+</UL>
+<H3>Mozilla 関連</H3>
+<UL>
+
+
+<LI><A HREF="/roadmap.html">Mozilla 開発ロードマップ</A>
+<LI><A HREF="../../get-involved.html">参加方法</A></LI>
+<LI><A HREF="datasource-howto.html">RDF データソース HOWTO</A></LI>
+<LI><A HREF="../../projects/xpcom/">XP-COM</A>
+<LI><A HREF="../../scriptable/roadmap.html">ロードマップ: XPCOM, XP-Connect, XPTCall, XPIDL</A></LI>
+<LI>Mozilla の <A
+HREF="/directory/">directory / LDAP</A> コードも見る価値があるでしょう。
+    LDAP 
+    <A HREF="/directory/sourcedocs.html">ライブラリ</A>
+    には BER 符号化メッセージを扱うツールがあるので。
+
+</UL>
+
+
+<H3>断り書き</H3>
+
+<P>
+本プロジェクトは予備的なものであり、
+Z39.50 コミュニティの専門知識を Mozilla で構築中の検索環境に提供することが
+容易かどうかを見る実験でもあります。
+つまり、「5.0リリース」に Z39.50 コードを追加するという方針決定や
+この問題に技術的なリソースを注ぎこむという約束をするものでは
+<EM>けっしてありません</EM>。
+これは言う必要はないかもしれませんが、
+Mozilla は NSCP/AOL ではありませんので…。
+基本的には、なんらかの XML/RDF ベースのクライアント/サーバのメタデータ検索機能は Mozilla に採用されるでしょう。
+願わくば、これが既存の Z39.50 実装と連携し、互換性あるものとなりますように。
+しかし、われわれはあなた方の手助けを必要としています…。
+</P>                      
+             
+
+<hr>
+<SMALL>
+Author: Dan Brickley <A HREF="mailto:daniel.brickley@bristol.ac.uk">daniel.brickley@bristol.ac.uk</A><BR>
+Last Updated: Id: z3950.html,v 1.6 1999/08/22 19:48:30 daniel.brickley%bristol.ac.uk Exp <br>
+</SMALL>
+
+
+
+
+
+</TD>
+</TR>
+<TR>
+<TD COLSPAN="2" ALIGN="RIGHT" VALIGN="TOP">
+<div class="documentinfo">
+Copyright &copy; 1998-2002 The Mozilla Organization.
+<BR>
+Last modified August 22,  1999.
+<BR>
+<A HREF="http://www.mozilla.org/webtools/bonsai/cvslog.cgi?file=mozilla-org/html/rdf/doc/z3950.html&amp;rev=&amp;root=/cvsroot/">Document History</A>.
+<BR>
+<A HREF="http://doctor.mozilla.org/?file=mozilla-org/html/rdf/doc/z3950.html">Edit this Page</A>.
+</div>
+  <p>
+<div align="right"><font size="-1">
+訳者： たかくまさお &lt;<a href="mailto:masao@ulis.ac.jp">masao@ulis.ac.jp</a>&gt;<br>
+<a href="http://www.mozilla.org/rdf/doc/z3950.html">このドキュメントのオリジナルは mozilla.org において英語で公布されています。</a><br>
+またドキュメントの管理の言語は現在も英語です。この日本語訳は、<br>
+利用者の利便のためにmozilla.org 和訳プロジェクトによって提供されたものです。<br>
+フィードバックは英語で、元の著者に送って下さい。<br>
+翻訳された文書の一覧は、現在以下のURLで見ることが出来ます。<br>
+<a href="http://www.mozilla.gr.jp/jt/index.html">http://www.mozilla.gr.jp/jt/index.html</a>
+</font></div>
+</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>
