@@ -1,3 +1,45 @@
+2001-06-20  Masao Takaku  <masao@ulis.ac.jp>
+
+	* Cygwin: 昔から何度もインストールだけはするのだけど、あまりの遅さ
+	に投げ出してきたので、あんまり使いたくない。
+
+	となるとMS VC++か!? ‥‥‥う〜ん、悩ましい。
+
+	* GTK+, Windows: 以下のURLが参考になる。
+
+	「GTK+ and GIMP for Windows」
+	http://www.gimp.org/~tml/gimp/win32/
+	
+	「GTK+ for Win32で始めるWindowsプログラミング」
+	http://www.geocities.co.jp/SiliconValley/3097/learning_gtk_win/learning_gtk_index.html
+
+	* IT懇話会: 迷走中??
+	いろいろ方針転換しすぎのような気も…（以下略）。
+
+	何はともあれ、まとめについてもうちょい考えなければ…。
+
+	* 矢部ちゃんと今日会うことになった。
+
+2001-06-19  Masao Takaku  <masao@ulis.ac.jp>
+
+	* LD_LIBRARY_PATH: とりあえず、 ~/.cshrc で設定した。
+	[2001-06-15]
+
+	* Glade: けっこう簡単にGUIが作れるのでおもしろい。
+	(ref. http://glade.gnome.org/)
+
+2001-06-18  Masao Takaku  <masao@ulis.ac.jp>
+
+	* Z39.50クライアント: 名前は「Eta」（イータ）に決定。
+	由来は、ギリシャ文字で「Zeta」（ゼータ）の次、という安直なもの。
+
+	別の由来もあるけれど、それは言わないことにする。
+
+	* 飲み: 相変わらず「酒に飲まれて」います…。
+
+	一緒に付き合ってくださったみなさまどうもです。（本人は途中から意識
+	がないのですが…）(^_^;;
+
 2001-06-15  Masao Takaku  <masao@ulis.ac.jp>
 
 	* 電話: 土肥からいきなり連絡あり。
