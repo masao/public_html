@@ -4,7 +4,7 @@
 use strict;
 $| = 1;
 
-my $MNEWS_SETUP = "ENV{'HOME'}/.mnews_setup-news";
+my $MNEWS_SETUP = "$ENV{'HOME'}/.mnews_setup-news";
 
 main();
 sub main {
