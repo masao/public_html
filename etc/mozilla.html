@@ -11,7 +11,7 @@
 <body>
 
 <!-- hhmts start -->
-<p>最終更新日: <strong>Fri Jul 20 22:11:07 2001</strong></p>
+<div class="last-update">最終更新日: <strong>Tue Oct 23 23:52:12 2001</strong></div>
 <!-- hhmts end -->
 <hr>
 
@@ -22,7 +22,8 @@
 他の人にもMozillaを奨める時に
 「『×××』の機能が無いことだけ我慢すれば、十分に実用だよ！」
 と言っています。
-しかし、『×××』な機能にどんなものがあったのか、忘れがちです。
+しかし、『×××』にどんなものがあったのか、忘れがちです。
+というわけで、メモっておきます。
 </p>
 <p>
 <strong>注意事項:</strong>
@@ -33,10 +34,9 @@
 ご了承下さい。
 </p>
 
-
 <h2>バグ一覧</h2>
 <dl>
-  <dt>OPAC検索
+  <dt>ULIS OPAC検索
   <dd><a href="http://www.ulis.ac.jp/library/opac-start.html">付属図書館のOPAC</a>の検索ができません。
       MozillaとIEなどでは微妙にJavaScriptの実装が異なるので、検索できません。
   <dd>対策: 図書館に文句を言うか、
@@ -47,19 +47,33 @@
       印刷のページ数があらかじめ分からないと不安なときには、困るでしょう。
   <dd>参考: <a href="http://bugzilla.mozilla.org/showvotes.cgi?bug_id=20943">[bugzilla 20943]</a>
 
-  <dt>Proxyの自動設定
-  <dd>JavaScriptを使ったProxyの自動設定機能がうまく働いていないようです。
-      直接プロキシサーバのホスト名・ポート番号を指定しましょう。
-  <dd>cf. <a href="http://bugzilla.mozilla.org/show_bug.cgi?id=54804">[bugzilla 54804]</a>
-
   <dt>FTP
   <dd>プロキシを通さない直接接続で FTP した時に、
       ファイルの一覧などが取得できないみたいです。
       プロキシ経由の接続を普段から使いましょう。
   <dd>[bugzilla XXX]: バグ報告例を発見できませんでした。
       （ご存じの方、教えてください）
+  <dd>学内のファイアウォールの影響である可能性が出てきました。
+      現在、IPCに問い合わせ中です。
+      (2001-10-23追記)
+
+  <dt>Java Plug-inがうまくインストールされない。
+  <dd>JDKをインストールしておけば、
+      インストーラがそれを自動認識してJava Plug-inを使うようになるはずですが、
+      なぜか手元ではできない場合がありました。
+      (再現条件は不明)
 </dl>
 
+<h2>解決したバグ</h2>
+<dl>
+  <dt>Proxyの自動設定
+  <dd>Mozilla-0.9.4で使えることを確認しました。
+  <dd><strike>
+      JavaScriptを使ったProxyの自動設定機能がうまく働いていないようです。
+      直接プロキシサーバのホスト名・ポート番号を指定しましょう。
+      </strike>
+  <dd>cf. <a href="http://bugzilla.mozilla.org/show_bug.cgi?id=54804">[bugzilla 54804]</a>
+</dl>
 <hr>
 <h2>参考URL</h2>
 <ul>
