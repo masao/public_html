@@ -7,7 +7,7 @@ $KCODE = 'euc'
 require 'cgi'
 require 'net/http'
 require 'uri'
-require 'kconv'
+require 'nkf'
 
 cgi = CGI.new
 
@@ -21,6 +21,9 @@ JOYO_KANJI = '°¡°¥°¦°­°®°µ°·°Â°Å°Æ°Ê°Ì°Í°Î°Ï°Ñ°Ò°Ó°Õ°Ö°×°Ù°Û°Ü°Ý°Þ°ß°á°ã°ä°å°æ°è
 JINMEI_KANJI = '±¯¾çÇµÇ·ÌéÏË°çËòµüÎ¼°Ë¸à´ìÎâ²ÀÍ¤´¦ÐÒ¸öÏÁ¼Å°ôºãÌêÎ¿ÑÛÆä³®Ò¦¶©±¬±ÃÂþ³ð¸ãÏ¤ºÈ±´Âï¶¬²Å·½¶ÆÆàÔ÷É²´òÌÒ¹¨Í¨ÆÒ½ÔÖÅÍò¿óº·Îæ´àÌ¦ÇÃÃ§¾±¹°Ìï×ÂÉ§É·ÉËÎç½úÄðÆ×°ÔÁÚ·ÅÆ´·ý¾¹ÆèÆØÈå±÷Ã¶°°²¢¹·¾»Úå¹¸¿¸ÚçÚðÚïÃÒÚöÄª½ìÊþºóÍû°ÉÅÎÉ¢Í®Ëï·ªÛÙ·Ë¶Í°´¾¿¸èÍüÌºÄÇÜ¿ÄØÍÌÉöÆï¿ºËêÄÐ³òµÌÃÉ¶Õ¶Öµ£ÝÜÄõ¼®ÂÁº»½§Þ­Þ«¹À½ß½í°¯Í¯ÞæÞûßºô¦·§ßù»¸à¢ÁÖ¼¤Ãö¶êÎèÎ°ÂöÎÖ¸ê±Í¿ðÎÜàöº¼ÍþÊã»©â«ÈýâÈËÓÎÆÆ·¶ëÊËÀÙ°ëÍ´Ï½Ä÷¿Áµ©Ì­ÎÇ¾÷½×ãùºû¼Ó¹ÉÄÝ¸¾°¼ÁîåÅåº°½ÈìæÆ¿éÍÔÌíÁïÈ¥¸Õ°ýæû½Ø±ðÉç¶Ü±ñçý²Ø³ý°«è½´Ð¾ÔèÁË¨Çë°ª¼¬ÁóÍÖÏ¡ÄÕ¾ÖÉùÍõÆ£Íö¸×ÆúÄ³¶Þ·¶ºÀëÎµÃëÙÎÊìâÊåÃ¤íìÍÚÎËÍ¸Æá°êÆÓ½æºÓ¶Ó³ù°¤È»¿÷²âÌ÷µÇ¿Üðóñ¥³¾¶ð½Ù³¡°¾¸ñÂäÈ·Ë±¹ãË²ÄáÂë¼¯ÎÛËûóÕÂãµµ'
 
 HTML_FOOTER = <<EOF
+<p>
+<strong>Ãí°Õ</strong>: EUC-JP, ISO-2022-JP, Shift_JIS °Ê³°¤ÎÊ¸»ú¥³¡¼¥É¤Ë¤ÏÂÐ±þ¤·¤Æ¤¤¤Þ¤»¤ó¡£
+</p>
 <hr>
 <address>
 ¹âµ×²íÀ¸ (Takaku Masao)<br>
@@ -34,7 +37,7 @@ EOF
 
 # str Ê¸»úÎóÃæ¤Î´Á»ú¤Î¤¦¤Á¡¢dict ¤Ë´Þ¤Þ¤ì¤Ê¤¤¤â¤Î¤òÅ¬µ¹ÊÑ´¹¤¹¤ë
 def kanji_convert (str, dict)
-  converted_str = str.toeuc.gsub(ALL_KANJI_REGEXP) {|str|
+  converted_str = NKF.nkf("-eX", str).gsub(ALL_KANJI_REGEXP) {|str|
     dict.index(str) ? str : "<span title=\"#{str}\">¢®</span>"
   }
   return converted_str
