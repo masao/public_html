@@ -8,6 +8,10 @@
 
 require 'jcode'
 
+def parse_zipcode(line)
+   line.split(",").map{|e| e.sub(/^"(.*)"$/, '\1') }
+end
+
 class ConvertZipcode
    attr_accessor :duplicate, :annotation, :kana, :split_city
 
@@ -79,9 +83,7 @@ class ConvertZipcode
 
    # 市区町村名の変換
    def convert_city(entry, word, annotation = nil)
-      entry = entry.delete("\"").tr('ァ-ン', 'ぁ-ん')
-      word = word.delete("\"")
-      annotation = annotation.delete("\"") if annotation
+      entry = entry.tr('ァ-ン', 'ぁ-ん')
 
       if @split_city
 	 # 「○○郡××町」の単位を2つに分割する
@@ -110,11 +112,9 @@ class ConvertZipcode
 
    # 町域名の変換
    def convert_town(entry, word, annotation = nil)
-      entry = entry.delete("\"").gsub(/\(.+\)/, "").sub(/\(.+$/, "").gsub(/-/, "ー").tr('ァ-ン', 'ぁ-ん')
+      entry = entry.gsub(/\(.+\)/, "").sub(/\(.+$/, "").gsub(/-/, "ー").tr('ァ-ン', 'ぁ-ん')
 
-      word = word.delete("\"").gsub(/（.+）/, "").sub(/（.+$/, "")
-
-      annotation = annotation.delete("\"") if annotation
+      word = word.gsub(/（.+）/, "").sub(/（.+$/, "")
 
       case word
       when "以下に掲載がない場合", /）$/, /、/, /〜/
@@ -155,7 +155,7 @@ if $0 == __FILE__
    converter = ConvertZipcode::new
 
    ARGF.each_line do |line|
-      array = line.split(/,/)
+      array = parse_zipcode(line)
       converter.convert_city(array[4], array[7], array[6])
       # converter.convert_town(array[5], array[8], array[7])
    end
