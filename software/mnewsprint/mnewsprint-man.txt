@@ -1,0 +1,37 @@
+NAME
+    mnewsprint - E-mail メッセージの整形印刷ツール
+
+SYNOPSIS
+    mnewsprint [--printer=PRINTER] [--file=FILE] [--header=LIST] [--
+    help] [--version]
+
+DESCRIPTION
+    mnewsprintはE-mailメッセージを整形して印刷するスクリプトです。
+
+OPTIONS
+    以下のオプションを指定できます。
+
+    -P, --printer=PRINTER
+        出力するプリンタ名を指定します。 （デフォルトでは PRINTER
+        環境変数または "lp" です）
+
+    -f, --file=FILE
+        印刷すべきファイルを指定します。
+        （デフォルトでは標準入力から読み込みます）
+
+    -H, --header=LIST
+        出力すべきメール・ヘッダを指定します。 （デフォルトでは
+        "date,from,to,cc,newsgroups,subject" です）
+
+PREREQUISITES
+    このスクリプトはメールの整形に LaTeX2e を利用します。
+
+NOTES
+    メールの日本語の文字コードの変換処理は行っていません。MIME
+    形式のメールにも未対応です。このスクリプトを利用する前に nkf
+    などのコード変換ツールやメールソフトウェアを利用して EUC-JP
+    に変換してから渡してください。
+
+AUTHOR
+    高久 雅生 <masao@ulis.ac.jp>
+
