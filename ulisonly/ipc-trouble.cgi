@@ -111,9 +111,9 @@ sub print_pages() {
     print "<p>¥Ú¡¼¥¸:\n";
     for (my $i = 0; $i*$MAX < @problems; $i++) {
 	if ($i == $page) {
-	    print $i+1, "\n";
+	    print "[", $i+1, "]\n";
 	} else {
-	    print "<a href=\"$base_url;page=$i\">", $i+1, "</a>\n";
+	    print "<a href=\"$base_url;page=$i\">[", $i+1, "]</a>\n";
 	}
     }
     print "</p>\n";
