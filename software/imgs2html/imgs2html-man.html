@@ -15,6 +15,7 @@
 	<LI><A HREF="#SYNOPSIS">SYNOPSIS</A>
 	<LI><A HREF="#DESCRIPTION">DESCRIPTION</A>
 	<LI><A HREF="#OPTIONS">OPTIONS</A>
+	<LI><A HREF="#COMMENT">COMMENT</A>
 	<LI><A HREF="#PREREQUISITES">PREREQUISITES</A>
 	<LI><A HREF="#COREQUISITES">COREQUISITES</A>
 	<LI><A HREF="#AUTHOR">AUTHOR</A>
@@ -159,6 +160,25 @@ HTML 出力のみ行い、サムネイルを生成しません。
 このヘルプを表示します。
 
 </DL>
+<P>
+<HR>
+<H1><A NAME="COMMENT">COMMENT</A></H1>
+<P>
+画像ファイルと同じディレクトリに <EM>.comment</EM> ファイルを置くことで画像 に対するコメントを付与することができます。<EM>.comment</EM> ファイルの書式は
+
+<P>
+<PRE>  ファイル名/...コメント...
+</PRE>
+<P>
+です。以下に例を示します。
+
+<P>
+<PRE>  foo.gif/コメント1
+  bar.gif/コメント2
+</PRE>
+<P>
+また、ファイル <EM>.comment</EM> が存在しない場合は、実行時に自動的に作られ ます。
+
 <P>
 <HR>
 <H1><A NAME="PREREQUISITES">PREREQUISITES</A></H1>
