@@ -1,109 +1,94 @@
 <HTML>
 <HEAD>
 <TITLE>imgs2html - generate HTML files from images files</TITLE>
-<LINK REL="stylesheet" HREF="../../default.css" TYPE="text/css">
-<LINK REV="made" HREF="mailto:masao@cosmo.ulis.ac.jp">
+<LINK REV="made" HREF="mailto:root@nile.ulis.ac.jp">
 </HEAD>
 
 <BODY>
-<!-- MENU -->
-<!-- -*-html-helper-*- -->
-<table cellpadding="4">
-  <tr valign="top">
-  <td bgcolor="#dcdcdc" nowrap="nowrap" style="line-height: 200%">
-  <a href="./">(Top)</a><br>
-  &nbsp;&nbsp;<a href="INSTALL">インストール方法</a><br>
-  &nbsp;&nbsp;<a href="./#manual">マニュアル</a><br>
-  &nbsp;&nbsp;<a href="./#download">ダウンロード</a><br>
-  &nbsp;&nbsp;<a href="./#news">更新情報</a><br>
-  &nbsp;&nbsp;<a href="./#links">類似ソフトウェア</a><br>
-  <hr>
-  <a href="../">ソフトウェアのページ</a><br>
-  </td>
-  <td>
 
-<!-- MENU -->
-
-
-<A NAME="__index__"></A>
 <!-- INDEX BEGIN -->
 <!--
 
 <UL>
 
-	<LI><A HREF="#name">NAME</A></LI>
-	<LI><A HREF="#synopsis">SYNOPSIS</A></LI>
-	<LI><A HREF="#description">DESCRIPTION</A></LI>
-	<LI><A HREF="#options">OPTIONS</A></LI>
-	<LI><A HREF="#prerequisites">PREREQUISITES</A></LI>
-	<LI><A HREF="#corequisites">COREQUISITES</A></LI>
-	<LI><A HREF="#author">AUTHOR</A></LI>
+	<LI><A HREF="#NAME">NAME</A>
+	<LI><A HREF="#SYNOPSIS">SYNOPSIS</A>
+	<LI><A HREF="#DESCRIPTION">DESCRIPTION</A>
+	<LI><A HREF="#OPTIONS">OPTIONS</A>
+	<LI><A HREF="#PREREQUISITES">PREREQUISITES</A>
+	<LI><A HREF="#COREQUISITES">COREQUISITES</A>
+	<LI><A HREF="#AUTHOR">AUTHOR</A>
 </UL>
 -->
 <!-- INDEX END -->
 
 <P>
-<H1><A NAME="name">NAME</A></H1>
-<P>imgs2html - generate HTML files from images files</P>
+<H1><A NAME="NAME">NAME</A></H1>
+<P>
+imgs2html - generate HTML files from images files
+
 <P>
 <HR>
-<H1><A NAME="synopsis">SYNOPSIS</A></H1>
-<P>imgs2html [<STRONG>--suffix</STRONG>=SUFFIX] [<STRONG>--thumbnail-ratio</STRONG>=SIZE]
-[<STRONG>--homepage-url</STRONG>=URL] [<STRONG>--icon-dir</STRONG>=DIR] [<STRONG>--style</STRONG>=URL]
-[<STRONG>--icon-<EM>role</EM>-file</STRONG>=FILE] [<STRONG>--nav-<EM>role</EM>-str</STRONG>=STR] [<STRONG>--logo</STRONG>]
-[<STRONG>--notitle</STRONG>] [<STRONG>--version</STRONG>] [<STRONG>--help</STRONG>]</P>
+<H1><A NAME="SYNOPSIS">SYNOPSIS</A></H1>
+<P>
+imgs2html [<STRONG>--suffix</STRONG>=SUFFIX] [<STRONG>--thumbnail-ratio</STRONG>=SIZE] [<STRONG>--homepage-url</STRONG>=URL] [<STRONG>--icon-dir</STRONG>=DIR] [<STRONG>--style</STRONG>=URL] [<STRONG>--icon-<EM>role</EM>-file</STRONG>=FILE] [<STRONG>--nav-<EM>role</EM>-str</STRONG>=STR] [<STRONG>--logo</STRONG>] [<STRONG>--notitle</STRONG>] [<STRONG>--version</STRONG>] [<STRONG>--help</STRONG>]
+
 <P>
 <HR>
-<H1><A NAME="description">DESCRIPTION</A></H1>
-<P>imgs2htmlは複数の画像ファイルを元にHTMLファイルを作成します。</P>
-<P>このスクリプトを実行するとカレントディレクトリにある画像ファイルを探し、
-それらの一覧と各画像からなるHTMLファイル群を生成します。</P>
-<P>生成されるHTMLファイルの文字コードはISO-2022-JPです。</P>
+<H1><A NAME="DESCRIPTION">DESCRIPTION</A></H1>
+<P>
+imgs2htmlは複数の画像ファイルを元にHTMLファイルを作成します。
+
+<P>
+このスクリプトを実行するとカレントディレクトリにある画像ファイルを探し、
+それらの一覧と各画像からなるHTMLファイル群を生成します。
+
+<P>
+生成されるHTMLファイルの文字コードはISO-2022-JPです。
+
 <P>
 <HR>
-<H1><A NAME="options">OPTIONS</A></H1>
-<P>以下のオプションを指定できます。</P>
+<H1><A NAME="OPTIONS">OPTIONS</A></H1>
+<P>
+以下のオプションを指定できます。
+
 <DL>
-<DT><STRONG><A NAME="item_%2Ds%2C_%2D%2Dsuffix%3DSUFFIX"><STRONG>-s</STRONG>, <STRONG>--suffix=SUFFIX</STRONG></A></STRONG><BR>
-<DD>
-対象とする画像の拡張子を指定します。
-（デフォルトは gif です）
-<P></P>
-<DT><STRONG><A NAME="item_%2Dr%2C_%2D%2Dthumbnail%2Dratio%3DSIZE"><STRONG>-r</STRONG>, <STRONG>--thumbnail-ratio=SIZE</STRONG></A></STRONG><BR>
-<DD>
-サムネール画像の元画像からの比率を指定します。
-（デフォルトは 15% です）
-<P></P>
-<DT><STRONG><A NAME="item_%2Du%2C_%2D%2Dhomepage%2Durl%3DURL"><STRONG>-u</STRONG>, <STRONG>--homepage-url=URL</STRONG></A></STRONG><BR>
-<DD>
-ホームのURLを指定します。
-（デフォルトは ../ を指します。）
-<P></P>
-<DT><STRONG><A NAME="item_%2D%2Dicon%2Ddir%3DDIR"><STRONG>--icon-dir=DIR</STRONG></A></STRONG><BR>
-<DD>
-ナビゲーション・アイコンのディレクトリ
-（デフォルトは ../image/ です）
-<P></P>
-<DT><STRONG><A NAME="item_%2D%2Dstyle%3DURL"><STRONG>--style=URL</STRONG></A></STRONG><BR>
-<DD>
+<DT><STRONG><A NAME="item__s_">-s, --suffix=SUFFIX</A></STRONG><DD>
+<P>
+対象とする画像の拡張子を指定します。 （デフォルトは gif です）
+
+<DT><STRONG><A NAME="item__r_">-r, --thumbnail-ratio=SIZE</A></STRONG><DD>
+<P>
+サムネール画像の元画像からの比率を指定します。 （デフォルトは 15% です）
+
+<DT><STRONG><A NAME="item__u_">-u, --homepage-url=URL</A></STRONG><DD>
+<P>
+ホームのURLを指定します。 （デフォルトは ../ を指します。）
+
+<DT><STRONG><A NAME="item__icon_dir_DIR">--icon-dir=DIR</A></STRONG><DD>
+<P>
+ナビゲーション・アイコンのディレクトリ （デフォルトは ../image/ です）
+
+<DT><STRONG><A NAME="item__style_URL">--style=URL</A></STRONG><DD>
+<P>
 HTMLファイルで利用するスタイルシートのURLを指定します。
 （デフォルトではスタイルシートは使いません）
-<P></P>
-<DT><STRONG><A NAME="item_%2D%2Dlogo"><STRONG>--logo</STRONG></A></STRONG><BR>
-<DD>
-ロゴを表示します。
-（デフォルトでは表示しません）
-<P></P>
-<DT><STRONG><A NAME="item_%2D%2Dnotitle"><STRONG>--notitle</STRONG></A></STRONG><BR>
-<DD>
-タイトル（○枚目）を表示しません。
-（デフォルトでは表示します）
-<P></P>
-<DT><STRONG><A NAME="item_%28%A5%CA%A5%D3%A5%B2%A1%BC%A5%B7%A5%E7%A5%F3%A5%D">(ナビゲーションバーの設定)</A></STRONG><BR>
-<DD>
+
+<DT><STRONG><A NAME="item__logo">--logo</A></STRONG><DD>
+<P>
+ロゴを表示します。 （デフォルトでは表示しません）
+
+<DT><STRONG><A NAME="item__notitle">--notitle</A></STRONG><DD>
+<P>
+タイトル（○枚目）を表示しません。 （デフォルトでは表示します）
+
+<DT><STRONG><A NAME="item__">(ナビゲーションバーの設定)</A></STRONG><DD>
+<P>
 ナビゲーションバーの部分のアイコンや文字列などを変更するには、以下のオ
 プションが利用できます。
-<P><EM>role</EM>の部分にはそれぞれ、
+
+<P>
+<EM>role</EM>の部分にはそれぞれ、
 <STRONG>first</STRONG>,
 <STRONG>prev</STRONG>, 
 <STRONG>next</STRONG>,
@@ -111,76 +96,67 @@ HTMLファイルで利用するスタイルシートのURLを指定します。
 <STRONG>logo</STRONG>, 
 <STRONG>index</STRONG>,
 <STRONG>home</STRONG>
-のいずれかが入ります。</P>
+のいずれかが入ります。
+
 <DL>
-<DT><STRONG><A NAME="item_%2D%2Dicon%2Drole%2Dfile%3DFILE"><STRONG>--icon-</STRONG><EM>role</EM><STRONG>-file=FILE</STRONG></A></STRONG><BR>
-<DD>
+<DT><STRONG><A NAME="item__icon_role_file_FILE">--icon-role-file=FILE</A></STRONG><DD>
+<P>
 ナビゲーションバーの各位置のアイコンのファイル名を指定します。
 （ファイルが存在しない場合はアイコンは表示しません）
-<P></P>
-<DT><STRONG><A NAME="item_%2D%2Dnav%2Drole%2Dstr%3DSTR"><STRONG>--nav-</STRONG><EM>role</EM><STRONG>-str=STR</STRONG></A></STRONG><BR>
-<DD>
+
+<DT><STRONG><A NAME="item__nav_role_str_STR">--nav-role-str=STR</A></STRONG><DD>
+<P>
 ナビゲーションバーの各位置の説明文字列を設定します。
-<P>デフォルトの設定は以下の通り：</P>
+
+<P>
+デフォルトの設定は以下の通り：
+
 <DL>
-<DT><STRONG><A NAME="item_%2D%2Dicon%2Dfirst%2Dfile_first%2Egif"><STRONG>--icon-first-file</STRONG>	first.gif</A></STRONG><BR>
-<DD>
-<DT><STRONG><A NAME="item_%2D%2Dicon%2Dprev%2Dfile_prev%2Egif"><STRONG>--icon-prev-file</STRONG>	prev.gif</A></STRONG><BR>
-<DD>
-<DT><STRONG><A NAME="item_%2D%2Dicon%2Dnext%2Dfile_next%2Egif"><STRONG>--icon-next-file</STRONG>	next.gif</A></STRONG><BR>
-<DD>
-<DT><STRONG><A NAME="item_%2D%2Dicon%2Dlast%2Dfile_last%2Egif"><STRONG>--icon-last-file</STRONG>	last.gif</A></STRONG><BR>
-<DD>
-<DT><STRONG><A NAME="item_%2D%2Dicon%2Dhome%2Dfile_home%2Egif"><STRONG>--icon-home-file</STRONG>	home.gif</A></STRONG><BR>
-<DD>
-<DT><STRONG><A NAME="item_%2D%2Dicon%2Dindex%2Dfile_info%2Egif"><STRONG>--icon-index-file</STRONG>	info.gif</A></STRONG><BR>
-<DD>
-<DT><STRONG><A NAME="item_%2D%2Dicon%2Dlogo%2Dfile_logo%2Egif"><STRONG>--icon-logo-file</STRONG>	logo.gif</A></STRONG><BR>
-<DD>
-<DT><STRONG><A NAME="item_%2D%2Dnav%2Dfirst%2Dstr_%BA%C7%BD%E9%A4%CE%A5%DA%A"><STRONG>--nav-first-str</STRONG>	最初のページ</A></STRONG><BR>
-<DD>
-<DT><STRONG><A NAME="item_%2D%2Dnav%2Dprev%2Dstr_%C1%B0%A4%CE%A5%DA%A1%BC%A5"><STRONG>--nav-prev-str</STRONG>		前のページ</A></STRONG><BR>
-<DD>
-<DT><STRONG><A NAME="item_%2D%2Dnav%2Dnext%2Dstr_%BC%A1%A4%CE%A5%DA%A1%BC%A5"><STRONG>--nav-next-str</STRONG>		次のページ</A></STRONG><BR>
-<DD>
-<DT><STRONG><A NAME="item_%2D%2Dnav%2Dlast%2Dstr_%BA%C7%B8%E5%A4%CE%A5%DA%A1"><STRONG>--nav-last-str</STRONG>		最後のページ</A></STRONG><BR>
-<DD>
-<DT><STRONG><A NAME="item_%2D%2Dnav%2Dhome%2Dstr_%A5%DB%A1%BC%A5%E0%A5%DA%A1"><STRONG>--nav-home-str</STRONG>		ホームページ</A></STRONG><BR>
-<DD>
-<DT><STRONG><A NAME="item_%2D%2Dnav%2Dindex%2Dstr_%B0%EC%CD%F7"><STRONG>--nav-index-str</STRONG>	一覧</A></STRONG><BR>
-<DD>
-<DT><STRONG><A NAME="item_%2D%2Dnav%2Dlogo%2Dstr_%A5%ED%A5%B4"><STRONG>--nav-logo-str</STRONG>		ロゴ</A></STRONG><BR>
-<DD>
+<DT><STRONG><A NAME="item__icon_first_file">--icon-first-file	first.gif</A></STRONG><DD>
+<DT><STRONG><A NAME="item__icon_prev_file">--icon-prev-file	prev.gif</A></STRONG><DD>
+<DT><STRONG><A NAME="item__icon_next_file">--icon-next-file	next.gif</A></STRONG><DD>
+<DT><STRONG><A NAME="item__icon_last_file">--icon-last-file	last.gif</A></STRONG><DD>
+<DT><STRONG><A NAME="item__icon_home_file">--icon-home-file	home.gif</A></STRONG><DD>
+<DT><STRONG><A NAME="item__icon_index_file">--icon-index-file	info.gif</A></STRONG><DD>
+<DT><STRONG><A NAME="item__icon_logo_file">--icon-logo-file	logo.gif</A></STRONG><DD>
+<DT><STRONG><A NAME="item__nav_first_str">--nav-first-str	最初のページ</A></STRONG><DD>
+<DT><STRONG><A NAME="item__nav_prev_str">--nav-prev-str		前のページ</A></STRONG><DD>
+<DT><STRONG><A NAME="item__nav_next_str">--nav-next-str		次のページ</A></STRONG><DD>
+<DT><STRONG><A NAME="item__nav_last_str">--nav-last-str		最後のページ</A></STRONG><DD>
+<DT><STRONG><A NAME="item__nav_home_str">--nav-home-str		ホームページ</A></STRONG><DD>
+<DT><STRONG><A NAME="item__nav_index_str">--nav-index-str	一覧</A></STRONG><DD>
+<DT><STRONG><A NAME="item__nav_logo_str">--nav-logo-str		ロゴ</A></STRONG><DD>
 </DL>
 </DL>
-<DT><STRONG><A NAME="item_%2D%2Dversion"><STRONG>--version</STRONG></A></STRONG><BR>
-<DD>
+<DT><STRONG><A NAME="item__version">--version</A></STRONG><DD>
+<P>
 バージョンを表示します。
-<P></P>
-<DT><STRONG><A NAME="item_%2Dh%2C_%2D%2Dhelp"><STRONG>-h</STRONG>, <STRONG>--help</STRONG></A></STRONG><BR>
-<DD>
+
+<DT><STRONG><A NAME="item__h_">-h, --help</A></STRONG><DD>
+<P>
 このヘルプを表示します。
-<P></P></DL>
-<P>
-<HR>
-<H1><A NAME="prerequisites">PREREQUISITES</A></H1>
-<P>このスクリプトは、画像の処理にImageMagickを利用します。
-また、日本語のコード変換にnkfを利用します。</P>
-<P>
-<HR>
-<H1><A NAME="corequisites">COREQUISITES</A></H1>
-<P><STRONG>ps2imgs</STRONG>スクリプトと一緒に使うと効果的かもしれませんね。</P>
-<P>
-<HR>
-<H1><A NAME="author">AUTHOR</A></H1>
-<P>高久 雅生 &lt;<A HREF="mailto:masao@ulis.ac.jp">masao@ulis.ac.jp</A>&gt;, 江草 由佳 &lt;<A HREF="mailto:yuka@ulis.ac.jp">yuka@ulis.ac.jp</A>&gt;</P>
 
-<!-- FOOT -->
-<!-- -*-html-helper-*- -->
-</td></tr></table>
+</DL>
+<P>
+<HR>
+<H1><A NAME="PREREQUISITES">PREREQUISITES</A></H1>
+<P>
+このスクリプトは、画像の処理にImageMagickを利用します。
+また、日本語のコード変換にnkfを利用します。
 
-<!-- FOOT -->
+<P>
+<HR>
+<H1><A NAME="COREQUISITES">COREQUISITES</A></H1>
+<P>
+<STRONG>ps2imgs</STRONG>スクリプトと一緒に使うと効果的かもしれませんね。
+
+<P>
+<HR>
+<H1><A NAME="AUTHOR">AUTHOR</A></H1>
+<P>
+高久 雅生 &lt;<A HREF="mailto:masao@ulis.ac.jp">masao@ulis.ac.jp</A>&gt;,
+江草 由佳 &lt;<A HREF="mailto:yuka@ulis.ac.jp">yuka@ulis.ac.jp</A>&gt;
+
 </BODY>
-
 
 </HTML>

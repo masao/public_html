@@ -1,95 +1,85 @@
 <HTML>
 <HEAD>
 <TITLE>ps2imgs - generate images files from PostScript file</TITLE>
-<LINK REL="stylesheet" HREF="../../default.css" TYPE="text/css">
-<LINK REV="made" HREF="mailto:masao@cosmo.ulis.ac.jp">
+<LINK REV="made" HREF="mailto:root@nile.ulis.ac.jp">
 </HEAD>
 
 <BODY>
-<!-- MENU -->
-<!-- -*-html-helper-*- -->
-<table cellpadding="4">
-  <tr valign="top">
-  <td bgcolor="#dcdcdc" nowrap="nowrap" style="line-height: 200%">
-  <a href="./">(Top)</a><br>
-  &nbsp;&nbsp;<a href="INSTALL">インストール方法</a><br>
-  &nbsp;&nbsp;<a href="./#manual">マニュアル</a><br>
-  &nbsp;&nbsp;<a href="./#download">ダウンロード</a><br>
-  &nbsp;&nbsp;<a href="./#news">更新情報</a><br>
-  &nbsp;&nbsp;<a href="./#links">類似ソフトウェア</a><br>
-  <hr>
-  <a href="../">ソフトウェアのページ</a><br>
-  </td>
-  <td>
 
-<!-- MENU -->
-
-
-<A NAME="__index__"></A>
 <!-- INDEX BEGIN -->
 <!--
 
 <UL>
 
-	<LI><A HREF="#name">NAME</A></LI>
-	<LI><A HREF="#synopsis">SYNOPSIS</A></LI>
-	<LI><A HREF="#description">DESCRIPTION</A></LI>
-	<LI><A HREF="#options">OPTIONS</A></LI>
-	<LI><A HREF="#prerequisites">PREREQUISITES</A></LI>
-	<LI><A HREF="#corequisites">COREQUISITES</A></LI>
-	<LI><A HREF="#author">AUTHOR</A></LI>
+	<LI><A HREF="#NAME">NAME</A>
+	<LI><A HREF="#SYNOPSIS">SYNOPSIS</A>
+	<LI><A HREF="#DESCRIPTION">DESCRIPTION</A>
+	<LI><A HREF="#OPTIONS">OPTIONS</A>
+	<LI><A HREF="#PREREQUISITES">PREREQUISITES</A>
+	<LI><A HREF="#COREQUISITES">COREQUISITES</A>
+	<LI><A HREF="#AUTHOR">AUTHOR</A>
 </UL>
 -->
 <!-- INDEX END -->
 
 <P>
-<H1><A NAME="name">NAME</A></H1>
-<P>ps2imgs - generate images files from PostScript file</P>
+<H1><A NAME="NAME">NAME</A></H1>
+<P>
+ps2imgs - generate images files from PostScript file
+
 <P>
 <HR>
-<H1><A NAME="synopsis">SYNOPSIS</A></H1>
-<P>ps2imgs [<STRONG>--help</STRONG>] [<STRONG>--format</STRONG>=FORMAT] file.ps ...</P>
+<H1><A NAME="SYNOPSIS">SYNOPSIS</A></H1>
+<P>
+ps2imgs [<STRONG>--help</STRONG>] [<STRONG>--format</STRONG>=FORMAT] file.ps ...
+
 <P>
 <HR>
-<H1><A NAME="description">DESCRIPTION</A></H1>
-<P>ps2imgs は、PostScriptファイルを画像ファイルに変換します。</P>
-<P>生成する画像のファイル名は、PostScriptファイルの拡張子を除いた部分＋3
-桁の連番が自動的にふられます。例えば、ex.psというファイルを変換すると、
-ex001.gif, ex002.gif, ...のようなファイルが生成されます。</P>
+<H1><A NAME="DESCRIPTION">DESCRIPTION</A></H1>
+<P>
+ps2imgs は、PostScript ファイルを画像ファイルに変換します。
+
+<P>
+生成する画像のファイル名は、PostScript ファイルの拡張子を除いた部分＋
+３桁の連番が自動的にふられます。例えば、ex.ps というファイルを変換する と、
+ex001.gif, ex002.gif, ... のようなファイルが生成されます。
+
 <P>
 <HR>
-<H1><A NAME="options">OPTIONS</A></H1>
-<P>以下のオプションを指定できます。</P>
+<H1><A NAME="OPTIONS">OPTIONS</A></H1>
+<P>
+以下のオプションを指定できます。
+
 <DL>
-<DT><STRONG><A NAME="item_%2D%2Dformat%3DFORMAT"><STRONG>--format=FORMAT</STRONG></A></STRONG><BR>
-<DD>
-生成する画像ファイルの形式を指定します。
-（デフォルトは gif です）
-<P></P>
-<DT><STRONG><A NAME="item_%2D%2Dhelp"><STRONG>--help</STRONG></A></STRONG><BR>
-<DD>
+<DT><STRONG><A NAME="item__format_FORMAT">--format=FORMAT</A></STRONG><DD>
+<P>
+生成する画像ファイルの形式を指定します。 （デフォルトは gif です）
+
+<DT><STRONG><A NAME="item__help">--help</A></STRONG><DD>
+<P>
 このへルプを表示します。
-<P></P></DL>
-<P>
-<HR>
-<H1><A NAME="prerequisites">PREREQUISITES</A></H1>
-<P>このスクリプトは、PostScriptの処理にGhostscriptを、画像の処理に
-ImageMagickを利用しています。</P>
-<P>
-<HR>
-<H1><A NAME="corequisites">COREQUISITES</A></H1>
-<P>生成した画像は、<STRONG>imgs2html</STRONG>を使うとWWWですぐに公開できます。</P>
-<P>
-<HR>
-<H1><A NAME="author">AUTHOR</A></H1>
-<P>高久 雅生 &lt;<A HREF="mailto:masao@ulis.ac.jp">masao@ulis.ac.jp</A>&gt;, 江草 由佳 &lt;<A HREF="mailto:yuka@ulis.ac.jp">yuka@ulis.ac.jp</A>&gt;</P>
 
-<!-- FOOT -->
-<!-- -*-html-helper-*- -->
-</td></tr></table>
+</DL>
+<P>
+<HR>
+<H1><A NAME="PREREQUISITES">PREREQUISITES</A></H1>
+<P>
+このスクリプトは、PostScriptの処理にGhostscriptを、画像の処理に
+ImageMagickを利用しています。
 
-<!-- FOOT -->
+<P>
+<HR>
+<H1><A NAME="COREQUISITES">COREQUISITES</A></H1>
+<P>
+生成した画像は、<STRONG>imgs2html</STRONG>を使うとWWWですぐに公開できます。
+
+<P>
+<HR>
+<H1><A NAME="AUTHOR">AUTHOR</A></H1>
+<P>
+高久 雅生 &lt;<A HREF="mailto:masao@ulis.ac.jp">masao@ulis.ac.jp</A>&gt;,
+江草 由佳 &lt;<A HREF="mailto:yuka@ulis.ac.jp">yuka@ulis.ac.jp</A>&gt;
+
 </BODY>
-
 
 </HTML>
