@@ -2,16 +2,25 @@
 	"http://www.w3.org/TR/html4/strict.dtd">
 <html lang="ja">
 <head>
+<meta name="keyword" content="Google cache WWW Perl Wget">
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-JP">
 <link rel="stylesheet" href="../default.css" type="text/css">
 <link rev="made" href="mailto:masao@ulis.ac.jp">
 <title>google-cache.pl</title>
 </head>
 <body>
-
 <h1>google-cache.pl</h1>
+<ul>
+  <li><a href="#overview">概要</a>
+  <li><a href="#example">例</a>
+  <li><a href="#download">ダウンロード</a>
+  <li><a href="#notes">注意事項</a>
+  <li><a href="#bugs">BUGS? (TODO)</a>
+  <li><a href="#links">類似品</a>
+</ul>
+<hr>
 
-<h2 name="overview">概要</h2>
+<h2><a name="overview">概要</a></h2>
 <p>
 2001年5月に、マシンのトラブルによって
 自分のつくっていたWebページのデータがすべて消えてしまいました。
@@ -26,7 +35,7 @@
 （動作確認は手元のSolaris7でしか行っていません。）
 </p>
 
-<h2 name="example">例</h2>
+<h2><a name="example">例</a></h2>
 <pre>
 perl google-r.pl -l 5 http://cosmo.ulis.ac.jp/~masao/ 
 </pre>
@@ -44,13 +53,13 @@ Googleのキャッシュを5レベルまで再帰的に取得します。
 出力するディレクトリを指定できます）
 </p>
 
-<h2 name="download">ダウンロード</h2>
+<h2><a name="download">ダウンロード</a></h2>
 <dl>
   <dt><a href="google-cache.pl">google-cache.pl</a>
   <dd>初期公開版
 </dl>
 
-<h2 name="notes">注意事項</h2>
+<h2><a name="notes">注意事項</a></h2>
 <p>
 <strong>大量のコンテンツを持つURLを出発点にして再帰的に取得することは、
 ネットワークに大きな負荷をかけますので、
@@ -67,7 +76,7 @@ Googleでキャッシュされていないファイルは取得できません。
 うまくいかなくなります。当面は動くと思うけど…。
 </p>
 
-<h2 name="bugs">BUGS (TODO)</h2>
+<h2><a name="bugs">BUGS? (TODO)</a></h2>
 <ul>
   <li>application/pdf
       <p>
@@ -83,7 +92,7 @@ Googleでキャッシュされていないファイルは取得できません。
       <code>&lt;a href="..."&gt;...&lt;/a&gt;</code>
       という感じでハイパーリンクが張られるようなタグが付加されている。
       </p>
-  <li>
+  <li>（<a href="http://search.cpan.org/search?dist=WWW-Cache-Google">WWW::Cache::Google</a>を使う!?）
 </ul>
 <p>
 不具合などありましたら、
@@ -91,7 +100,7 @@ Googleでキャッシュされていないファイルは取得できません。
 お気軽にお知らせ下さい。
 </p>
 
-<h2 name="links">類似品</h2>
+<h2><a name="links">類似品</a></h2>
 <p>
 類似のソフトウェアなどあれば、教えてください。
 </p>
