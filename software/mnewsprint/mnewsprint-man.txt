@@ -3,7 +3,7 @@ NAME
 
 SYNOPSIS
     mnewsprint [--printer=PRINTER] [--file=FILE] [--header=LIST] [--
-    psnup=OPTION] [--help] [--version]
+    psnup=OPTION] [--gray=NUM] [--help] [--version]
 
 DESCRIPTION
     mnewsprintはE-mailメッセージを整形して印刷するスクリプトです。
@@ -28,9 +28,16 @@ OPTIONS
         （デフォルトでは "auto" です）
 
         "auto" の場合は、ページ数に応じて、-2, -4
-        などのレイアウトを自動的に行
-        います。常に一定のレイアウトを指定したい場合は、--psnup=-2
-        などのよう に指定してください。
+        などのレイアウトを自動的に行 います。また、 "none"
+        の場合は、psnup コマンドを利用しません。それ以外
+        の場合は、そのまま psnup
+        コマンドのオプションになります。常に一定のレ
+        イアウトを指定したい場合は、--psnup=-2
+        などのように指定してください。
+
+    --gray=NUM
+        引用部分のグレースケールの濃さを 0 〜 1 の数値（0:白,
+        1:黒）で示します。 （デフォルトでは 0.4 です）
 
 PREREQUISITES
     このスクリプトはメールの整形に LaTeX2e を利用します。
