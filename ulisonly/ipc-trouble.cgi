@@ -142,7 +142,7 @@ sub get_contents () {
     } else {
 	return undef;
     }
-    my $date = scalar gmtime $res->headers->last_modified;
-    print "<p><a href=\"$ORIG_URL\">元のページ</a>（最終更新日: $date）</p>\n";
+    my $date = scalar localtime $res->headers->last_modified;
+    print "<p><a href=\"$ORIG_URL\">元のページ</a>（最終更新日: <strong>$date</strong>）</p>\n";
     return @entries;
 }
