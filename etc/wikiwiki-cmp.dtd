@@ -4,20 +4,21 @@
 <!--                  DTD               -->
 <!--************************************-->
 
-<!ELEMENT wikiwiki-cmp (engine+)>
+<!ELEMENT wikiwiki-cmp (engine*)>
 
 <!ELEMENT engine (description,
 		  implementation,
 		  backend,
 		  japanese,
 		  history,
-		  interwikiname,
-		  link-in-page,
-		  table,
-		  html,
-		  upload,
+		  changelog,
 		  acl,
 		  notify,
+		  upload,
+		  table,
+		  html,
+		  interwikiname,
+		  link-in-page,
 		  plugin
 		  )>
 
@@ -28,6 +29,7 @@
 <!ELEMENT implementation (#PCDATA|link)*>
 <!ELEMENT japanese (#PCDATA|link)*>
 <!ELEMENT history (#PCDATA|link)*>
+<!ELEMENT changelog (#PCDATA|link)*>
 <!ELEMENT interwikiname (#PCDATA|link)*>
 <!ELEMENT link-in-page (#PCDATA|link)*>
 <!ELEMENT table (#PCDATA|link)*>
@@ -48,6 +50,7 @@
 <!ATTLIST backend label CDATA #REQUIRED>
 <!ATTLIST japanese label CDATA #REQUIRED>
 <!ATTLIST history label CDATA #REQUIRED>
+<!ATTLIST changelog label CDATA #REQUIRED>
 <!ATTLIST interwikiname label CDATA #REQUIRED>
 <!ATTLIST link-in-page label CDATA #REQUIRED>
 <!ATTLIST table label CDATA #REQUIRED>

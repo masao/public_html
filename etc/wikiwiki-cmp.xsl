@@ -31,9 +31,9 @@
         <ul>
           <li><a name="implementation">実装</a>:
           どんな言語・環境で構築されているか。</li>
-          <li><a name="backend">バックエンド</a>:
+          <li><a name="backend">保存形式</a>:
           Wikiのデータ保持にどのような機構を用いているか。</li>
-          <li><a name="japanese">日本語化</a>:
+          <li><a name="japanese">日本語対応</a>:
           日本語に対応しているか。特にWikiNameとして日本語を使えるか。</li>
           <li><a name="history">履歴</a>:
           過去の編集履歴を閲覧できるか。</li>
@@ -135,8 +135,8 @@
         <tr>
           <th>名称</th>
           <th><a href="#implementation">実装</a></th>
-          <th><a href="#backend">バックエンド</a></th>
-          <th><a href="#japanese">日本語化</a></th>
+          <th><a href="#backend">保存形式</a></th>
+          <th><a href="#japanese">日本語</a></th>
           <th><a href="#history">履歴</a></th>
           <th><a href="#interwikiname">InterWikiName</a></th>
           <th><a href="#link-in-page">ページ内リンク</a></th>
@@ -194,14 +194,14 @@
     </li>
   </xsl:template>
   <xsl:template match="backend">
-    <li>バックエンド: <xsl:value-of select="@label"/>
+    <li>保存形式: <xsl:value-of select="@label"/>
     <xsl:if test="string-length(.)">
       <br/><xsl:apply-templates/>
     </xsl:if>
     </li>
   </xsl:template>
   <xsl:template match="japanese">
-    <li>日本語WikiName: <xsl:value-of select="@label"/>
+    <li>日本語対応: <xsl:value-of select="@label"/>
     <xsl:if test="string-length(.)">
       <br/><xsl:apply-templates/>
     </xsl:if>

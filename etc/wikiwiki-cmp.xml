@@ -25,13 +25,14 @@
     <backend label="DBM"></backend>
     <japanese label="○">WikiNameを作るには[[日本語]]とする。</japanese>
     <history label="○">過去一回の履歴を保持している。（差分表示機能）</history>
-    <interwikiname label="○"><link href="http://www.hyuki.com/yukiwiki/wiki.cgi?InterWiki%A5%C6%A5%AF%A5%CB%A5%AB%A5%EB">InterWikiNameテクニカル</link></interwikiname>
-    <link-in-page label="○">見出しを使った目次生成機能のみ</link-in-page>
-    <table label="○">,を行頭に置く</table>
-    <html label="×"></html>
-    <upload label="×"></upload>
+    <changelog label="×"></changelog>
     <acl label="△">管理者による凍結機能あり</acl>
     <notify label="○"></notify>
+    <upload label="×"></upload>
+    <table label="○">,を行頭に置く</table>
+    <html label="×"></html>
+    <interwikiname label="○"><link href="http://www.hyuki.com/yukiwiki/wiki.cgi?InterWiki%A5%C6%A5%AF%A5%CB%A5%AB%A5%EB">InterWikiNameテクニカル</link></interwikiname>
+    <link-in-page label="○">見出しを使った目次生成機能のみ</link-in-page>
     <plugin label="×"></plugin>
   </engine>
 
@@ -44,11 +45,7 @@
     <backend label="ファイル"></backend>
     <japanese label="○">WikiNameの定義は[[WikiName]]という形式で行う。</japanese>
     <history label="○">バックアップ機能として実装</history>
-    <interwikiname label="○">InterWikiNameページにリストを追加するだけで簡単に定義できる。<link href="http://www.pukiwiki.org/index.php?%5B%5BInterWiki%A5%C6%A5%AF%A5%CB%A5%AB%A5%EB%5D%5D">InterWikiNameテクニカル</link></interwikiname>
-    <link-in-page label="○">見出しを参照して目次を付ける機能のみ</link-in-page>
-    <table label="○"><link href="http://www.pukiwiki.org/index.php?%5B%5B%A5%D8%A5%EB%A5%D7%5D%5D#content:12">表組み</link></table>
-    <html label="○">プラグインでの実装</html>
-    <upload label="○">添付ファイル機能</upload>
+    <changelog label="×"></changelog>
     <acl label="△">
 	管理者によるページ凍結機能あり。
 	<link href="http://www.pukiwiki.org/index.php?%5B%5B%BC%C1%CC%E4%C8%A2%5D%5D#content:32">アクセス制限について</link>
@@ -56,6 +53,11 @@
     <notify label="×">
 	<link href="http://www.pukiwiki.org/index.php?%5B%5BBugTrack%2F111%5D%5D">BugTrack/111</link>
     </notify>
+    <upload label="○">添付ファイル機能</upload>
+    <table label="○"><link href="http://www.pukiwiki.org/index.php?%5B%5B%A5%D8%A5%EB%A5%D7%5D%5D#content:12">表組み</link></table>
+    <html label="○">プラグインでの実装</html>
+    <interwikiname label="○">InterWikiNameページにリストを追加するだけで簡単に定義できる。<link href="http://www.pukiwiki.org/index.php?%5B%5BInterWiki%A5%C6%A5%AF%A5%CB%A5%AB%A5%EB%5D%5D">InterWikiNameテクニカル</link></interwikiname>
+    <link-in-page label="○">見出しを参照して目次を付ける機能のみ</link-in-page>
     <plugin label="○">
 	たくさんある。
 	<link href="http://www.pukiwiki.org/index.php?%5B%5B%A5%D7%A5%E9%A5%B0%A5%A4%A5%F3%5D%5D">プラグイン</link>
@@ -73,15 +75,57 @@
     <backend label="ファイル"></backend>
     <japanese label="○">((&lt;日本語&gt;))という形式で参照する</japanese>
     <history label="×"></history>
+    <changelog label="×"></changelog>
+    <acl label="×"></acl>
+    <notify label="○"></notify>
+    <upload label="×"></upload>
+    <table label="×"></table>
+    <html label="×">RD形式なので…。</html>
     <interwikiname label="×">
 	参照の記述がRD形式なので、WikiNameの機構そのものを持たない…。
     </interwikiname>
     <link-in-page label="×"></link-in-page>
-    <table label="×"></table>
-    <html label="×">RD形式なので…。</html>
-    <upload label="×"></upload>
-    <acl label="×"></acl>
-    <notify label="○"></notify>
     <plugin label="○"></plugin>
+  </engine>
+
+  <engine id="moinmoin" title="MoinMoin" href="http://www.gembook.jp/html/moin/moin.cgi/FrontPage">
+    <description>
+	Pythonで書かれた海外で作られている実装。
+	Python自体が、*日本では*マイナーなので、あまり使われていない模様…。
+	<link href="http://moin.sourceforge.net/">本家サイト</link>
+    </description>
+    <implementation label="Python"></implementation>
+    <backend label="ファイル"></backend>
+    <japanese label="○">WikiNameは["日本語"]の形式</japanese>
+    <history label="○">全履歴および差分を参照可</history>
+    <changelog label="×"></changelog>
+    <acl label="×"><link href="http://purl.org/wiki/moin/PasswordProtectedEditing">PasswordProtectedEditing</link></acl>
+    <notify label="○"></notify>
+    <upload label="○"></upload>
+    <table label="○"><link href="http://purl.net/wiki/moin/HelpOnTables"></link></table>
+    <html label="○"><link href="http://purl.net/wiki/moin/HelpMiscellaneous_2fFrequentlyAskedQuestions#head-76e09d14a9f98113ce8a9fbbce0435c8eba4cab5">Can I add HTML to the wiki?</link></html>
+    <interwikiname label="○"></interwikiname>
+    <link-in-page label="○"></link-in-page>
+    <plugin label="○"></plugin>
+  </engine>
+
+  <engine id="usemod" title="UseModWiki" href="http://www.usemod.com/cgi-bin/wiki.pl?UseModWiki">
+    <description>
+	EmacsWiki.orgが採用するなど、海外では結構人気があるみたい。
+	日本語はそのままでは通らない（日本語対応パッチあり）。
+    </description>
+    <implementation label="Perl"></implementation>
+    <backend label="ファイル"></backend>
+    <japanese label="×"><link href="http://p5ee.net/wiki.pl?WikiName">p5ee:WikiName</link></japanese>
+    <history label="○">全履歴および差分を参照可</history>
+    <changelog label="○"></changelog>
+    <acl label=""></acl>
+    <notify label=""></notify>
+    <table label=""></table>
+    <html label=""></html>
+    <upload label=""></upload>
+    <interwikiname label="○"></interwikiname>
+    <link-in-page label=""></link-in-page>
+    <plugin label=""></plugin>
   </engine>
 </wikiwiki-cmp>

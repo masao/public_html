@@ -22,8 +22,8 @@
 <thead><tr>
 <th>名称</th>
 <th><a href="#implementation">実装</a></th>
-<th><a href="#backend">バックエンド</a></th>
-<th><a href="#japanese">日本語化</a></th>
+<th><a href="#backend">保存形式</a></th>
+<th><a href="#japanese">日本語</a></th>
 <th><a href="#history">履歴</a></th>
 <th><a href="#interwikiname">InterWikiName</a></th>
 <th><a href="#link-in-page">ページ内リンク</a></th>
@@ -79,6 +79,36 @@
 <td>○</td>
 <td>○</td>
 </tr>
+<tr>
+<td><a href="#moinmoin">MoinMoin</a></td>
+<td>Python</td>
+<td>ファイル</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>×</td>
+<td>○</td>
+<td>○</td>
+</tr>
+<tr>
+<td><a href="#usemod">UseModWiki</a></td>
+<td>Perl</td>
+<td>ファイル</td>
+<td>×</td>
+<td>○</td>
+<td>○</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
 </table>
 
   <hr>
@@ -89,17 +119,17 @@
     </p>
 <ul>
 <li>実装言語: Perl</li>
-<li>日本語WikiName: ○<br>WikiNameを作るには[[日本語]]とする。</li>
+<li>日本語対応: ○<br>WikiNameを作るには[[日本語]]とする。</li>
 <li>履歴管理: ○<br>過去一回の履歴を保持している。（差分表示機能）</li>
+<li>アクセス制御: △<br>管理者による凍結機能あり</li>
+<li>変更通知: ○</li>
+<li>アップロード: ×</li>
+<li>表組み: ○<br>,を行頭に置く</li>
+<li>HTML: ×</li>
 <li>InterWikiName: ○<br><div>関連リンク: <a href="http://www.hyuki.com/yukiwiki/wiki.cgi?InterWiki%A5%C6%A5%AF%A5%CB%A5%AB%A5%EB" title="">InterWikiNameテクニカル</a>
 </div>
 </li>
 <li>ページ内リンク: ○<br>見出しを使った目次生成機能のみ</li>
-<li>表組み: ○<br>,を行頭に置く</li>
-<li>HTML: ×</li>
-<li>アップロード: ×</li>
-<li>アクセス制御: △<br>管理者による凍結機能あり</li>
-<li>変更通知: ○</li>
 <li>プラグイン: ×</li>
 </ul>
 
@@ -111,17 +141,8 @@
     </p>
 <ul>
 <li>実装言語: PHP</li>
-<li>日本語WikiName: ○<br>WikiNameの定義は[[WikiName]]という形式で行う。</li>
+<li>日本語対応: ○<br>WikiNameの定義は[[WikiName]]という形式で行う。</li>
 <li>履歴管理: ○<br>バックアップ機能として実装</li>
-<li>InterWikiName: ○<br>InterWikiNameページにリストを追加するだけで簡単に定義できる。<div>関連リンク: <a href="http://www.pukiwiki.org/index.php?%5B%5BInterWiki%A5%C6%A5%AF%A5%CB%A5%AB%A5%EB%5D%5D" title="">InterWikiNameテクニカル</a>
-</div>
-</li>
-<li>ページ内リンク: ○<br>見出しを参照して目次を付ける機能のみ</li>
-<li>表組み: ○<br><div>関連リンク: <a href="http://www.pukiwiki.org/index.php?%5B%5B%A5%D8%A5%EB%A5%D7%5D%5D#content:12" title="">表組み</a>
-</div>
-</li>
-<li>HTML: ○<br>プラグインでの実装</li>
-<li>アップロード: ○<br>添付ファイル機能</li>
 <li>アクセス制御: △<br>
 	管理者によるページ凍結機能あり。
 	<div>関連リンク: <a href="http://www.pukiwiki.org/index.php?%5B%5B%BC%C1%CC%E4%C8%A2%5D%5D#content:32" title="">アクセス制限について</a>
@@ -131,6 +152,15 @@
 	<div>関連リンク: <a href="http://www.pukiwiki.org/index.php?%5B%5BBugTrack%2F111%5D%5D" title="">BugTrack/111</a>
 </div>
     </li>
+<li>アップロード: ○<br>添付ファイル機能</li>
+<li>表組み: ○<br><div>関連リンク: <a href="http://www.pukiwiki.org/index.php?%5B%5B%A5%D8%A5%EB%A5%D7%5D%5D#content:12" title="">表組み</a>
+</div>
+</li>
+<li>HTML: ○<br>プラグインでの実装</li>
+<li>InterWikiName: ○<br>InterWikiNameページにリストを追加するだけで簡単に定義できる。<div>関連リンク: <a href="http://www.pukiwiki.org/index.php?%5B%5BInterWiki%A5%C6%A5%AF%A5%CB%A5%AB%A5%EB%5D%5D" title="">InterWikiNameテクニカル</a>
+</div>
+</li>
+<li>ページ内リンク: ○<br>見出しを参照して目次を付ける機能のみ</li>
 <li>プラグイン: ○<br>
 	たくさんある。
 	<div>関連リンク: <a href="http://www.pukiwiki.org/index.php?%5B%5B%A5%D7%A5%E9%A5%B0%A5%A4%A5%F3%5D%5D" title="">プラグイン</a>
@@ -148,18 +178,65 @@
     </p>
 <ul>
 <li>実装言語: Ruby</li>
-<li>日本語WikiName: ○<br>((&lt;日本語&gt;))という形式で参照する</li>
+<li>日本語対応: ○<br>((&lt;日本語&gt;))という形式で参照する</li>
 <li>履歴管理: ×</li>
+<li>アクセス制御: ×</li>
+<li>変更通知: ○</li>
+<li>アップロード: ×</li>
+<li>表組み: ×</li>
+<li>HTML: ×<br>RD形式なので…。</li>
 <li>InterWikiName: ×<br>
 	参照の記述がRD形式なので、WikiNameの機構そのものを持たない…。
     </li>
 <li>ページ内リンク: ×</li>
-<li>表組み: ×</li>
-<li>HTML: ×<br>RD形式なので…。</li>
-<li>アップロード: ×</li>
-<li>アクセス制御: ×</li>
-<li>変更通知: ○</li>
 <li>プラグイン: ○</li>
+</ul>
+
+  <hr>
+<h2><a name="moinmoin" href="http://www.gembook.jp/html/moin/moin.cgi/FrontPage">MoinMoin</a></h2>
+<p>
+	Pythonで書かれた海外で作られている実装。
+	Python自体が、*日本では*マイナーなので、あまり使われていない模様…。
+	本家サイト
+    </p>
+<ul>
+<li>実装言語: Python</li>
+<li>日本語対応: ○<br>WikiNameは[&quot;日本語&quot;]の形式</li>
+<li>履歴管理: ○<br>全履歴および差分を参照可</li>
+<li>アクセス制御: ×<br><div>関連リンク: <a href="http://purl.org/wiki/moin/PasswordProtectedEditing" title="">PasswordProtectedEditing</a>
+</div>
+</li>
+<li>変更通知: ○</li>
+<li>アップロード: ○</li>
+<li>表組み: ○</li>
+<li>HTML: ○<br><div>関連リンク: <a href="http://purl.net/wiki/moin/HelpMiscellaneous_2fFrequentlyAskedQuestions#head-76e09d14a9f98113ce8a9fbbce0435c8eba4cab5" title="">Can I add HTML to the wiki?</a>
+</div>
+</li>
+<li>InterWikiName: ○</li>
+<li>ページ内リンク: ○</li>
+<li>プラグイン: ○</li>
+</ul>
+
+  <hr>
+<h2><a name="usemod" href="http://www.usemod.com/cgi-bin/wiki.pl?UseModWiki">UseModWiki</a></h2>
+<p>
+	EmacsWiki.orgが採用するなど、海外では結構人気があるみたい。
+	日本語はそのままでは通らない（日本語対応パッチあり）。
+    </p>
+<ul>
+<li>実装言語: Perl</li>
+<li>日本語対応: ×<br><div>関連リンク: <a href="http://p5ee.net/wiki.pl?WikiName" title="">p5ee:WikiName</a>
+</div>
+</li>
+<li>履歴管理: ○<br>全履歴および差分を参照可</li>
+<li>アクセス制御: </li>
+<li>変更通知: </li>
+<li>表組み: </li>
+<li>HTML: </li>
+<li>アップロード: </li>
+<li>InterWikiName: ○</li>
+<li>ページ内リンク: </li>
+<li>プラグイン: </li>
 </ul>
 <hr>
 <h2><a name="field">比較項目</a></h2>
@@ -168,10 +245,10 @@
 <a name="implementation">実装</a>:
           どんな言語・環境で構築されているか。</li>
 <li>
-<a name="backend">バックエンド</a>:
+<a name="backend">保存形式</a>:
           Wikiのデータ保持にどのような機構を用いているか。</li>
 <li>
-<a name="japanese">日本語化</a>:
+<a name="japanese">日本語対応</a>:
           日本語に対応しているか。特にWikiNameとして日本語を使えるか。</li>
 <li>
 <a name="history">履歴</a>:
