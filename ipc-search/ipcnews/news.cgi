@@ -26,6 +26,7 @@ class CGI
 <link rev=made href="mailto:masao@ulis.ac.jp">
 <title>#{title}</title>
 <style type="text/css">
+img { border: 0px; }
 .lastmodified { text-align: center }
 .notice {
   font-weight: bold;
@@ -61,6 +62,11 @@ EOF
 <a href="http://nile.ulis.ac.jp/~masao/">http://nile.ulis.ac.jp/~masao/</a>,
 <a href="mailto:masao@ulis.ac.jp">masao@ulis.ac.jp</a>
 </address>
+<div class="validator">
+<a href="http://validator.w3.org/check/referer"><img src="http://www.w3.org/Icons/valid-html401" alt="Valid HTML 4.01!" height="31" width="88"></a>
+<a href="http://jigsaw.w3.org/css-validator/check/referer"><img width="88" height="31" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!"></a>
+<a href="http://feeds.archive.org/validator/check?url=http%3A%2F%2Fnile.ulis.ac.jp%2F%7Emasao%2Fipc-search%2Fipcnews%2Fipcnews-rss.rdf"><img src="valid-rss.png" width="88" height="31" alt="Valid RSS!"></a>
+</div>
 </body>
 </html>
 EOF
@@ -123,18 +129,18 @@ else
    end
    cgi.out() do
       cgi.html_header("センターニュースの閲覧") +
-	 "<h2>月別一覧</h2>" +
-	 "<div class=\"monthly-list\">" + monthlist_html + "</div>" +
-	 # cgi.pre {
-	 #    monthlist.uniq.sort.join("\n")
-         # } +
-	 "<h2>最新ニュース <a href=\"ipcnews-rss.rdf\"><img src=\"rdf.png\" alt=\"RDF\" width=\"36\" height=\"14\" border=\"0\"</a></h2>" +
+	 "<h2>最新ニュース <a href=\"ipcnews-rss.rdf\"><img src=\"rdf.png\" alt=\"RDF\" width=\"36\" height=\"14\"></a></h2>" +
 	 "<ol>" +
 	 items[0, 15].collect do |item|
 	    "<li><a href=\"#{cgi.script_name}?#{encode64(item).tr("\n","")}\">#{item}</a>" +
 	    " [#{db[item].lastmodified}]\n"
          end.join +
 	 "</ol>" +
+	 "<h2>月別一覧</h2>" +
+	 "<div class=\"monthly-list\">" + monthlist_html + "</div>" +
+	 # cgi.pre {
+	 #    monthlist.uniq.sort.join("\n")
+         # } +
 	 cgi.html_footer
    end
 end
