@@ -1,5 +1,725 @@
+2002-12-19  Masao Takaku  <masao@ulis.ac.jp>
+
+	* [RFE] stripping URI-parts of fragment, query:
+	http://mozdev.org/bugs/show_bug.cgi?id=2711
+	  cf. [2002-12-04]
+
+	* IPCニュースのRSSフィード:
+	使えるかもね。
+
+	ただ、あの変態HTMLのパースが難点。
+	手法はいくつか考えられる。
+	・HTMLパーサ
+	・行単位処理
+	・w3m 経由
+
+	... 6時間くらいかけて、ようやく完成した。
+	見出しの抽出は "＜...＞" を対象とした。
+
+	* デニーズ:
+	隣に座ってた女の子二人組の会話
+	「あたし、女の子はダメ。チューまではできるけど、それ以上はダメ。」
+	「あ、フラれた。（笑）」
+
+	そんな会話を大きな声でしないで。お願いだから…。
+
+2002-12-18  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 天文台マダム日記: http://madam.atmark.gr.jp/
+	おもろい。
+
+	* Ruby/RSS:
+	トップに置いているニュースの部分をなんとか RSS ベースの方式でキレ
+	イに処理（記述）・更新していきたいと考えた。
+
+	関連リンク:
+	・RSS -- サイト情報の要約と公開:
+	  http://www.kanzaki.com/docs/sw/rss.html
+	・日本で配布されているRSSファイルの一覧: http://rss-jp.net/
+	・RSS 1.0 spec:	http://web.resource.org/rss/1.0/spec
+
+	最近のマイブームはRubyなので、使うと思ったけど、一時配布元に行けな
+	い。どうすっぺかな。
+
+	とりあえず、HTML or YAMLで書いてRDFに自動変換するか…。
+	  
+	* CGI プログラムの改良案:
+	http://hp.vector.co.jp/authors/VA014833/CGI/index.html
+	HTTPヘッダの使い方などに言及している。
+
+	ただし、ヘッダを頭（かしら）と呼ぶなど独特の用語法を使っているので
+	注意。
+
+2002-12-17  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 夢:
+	久々に中学の時の時の陸上部の人々が出てくる夢を見た。
+
+	特にこまりんとか懐しい…。
+
+	* 日本語を勉強したいの？:
+	http://www.faireal.net/articles/6/23/#d21203
+	おもしろい。
+
+	* Make クイックリファレンス:
+	http://cl.aist-nara.ac.jp/~daiti-m/doc/make_qref.html
+	Make 特有の大域変数名とかよく忘れるのでメモ。
+
+	* chalow: bug reported.
+
+	* ブルースクリーン:
+	http://nile.ulis.ac.jp/~masao/photo/2002-12-16T22%3A56%3A38.html
+	どうやらグラフィックスドライバが原因のように思うので、再度現象が起
+	こるようなら、以下にあるドライバの更新を当てると良いかも…。
+
+	現在:
+	  - バージョン: 6.13.1.3006
+	  - 日付: 2002/01/15
+	最新版:
+	  - バージョン: 6.13.01.3162
+	  - 日付: 2002/08/16
+	
+	  cf. http://support.jp.dell.com/jp/jp/download/search.asp?sid=INS_PNT_P4_2600&os=Windows+XP+Home+Edition
+
+	* 「３」はドコまで円周率か？:
+	http://binoculars.tripod.co.jp/zakki9.htm
+	面白い。
+
+	同じサイトの「理系学会の歩き方」も面白い。
+	  cf. http://binoculars.tripod.co.jp/zakki5.htm
+
+2002-12-15  Masao Takaku  <masao@ulis.ac.jp>
+
+	* robot はぢきについて: h ttp://c-moon.jp/robots.shtml
+	悪質な Web Crawler 各種についての記述とその対策。
+
+	* 翻訳SFファン度調査:
+	http://www2s.biglobe.ne.jp/~ttsyhysh/enq/osSFenq.cgi?mode=sort
+	--
+	既読は250作品中 36 作品です（平均は 39.38 作品）。
+	2160 人中 837 位でした。
+	
+	  - 『カウント・ゼロ』(87) ウィリアム・ギブスン
+	  - 『たったひとつの冴えたやりかた』(87) ジェイムズ・ティプトリー・Jr.
+	  - 『エンダーのゲーム』(87) オースン・スコット・カード
+	  - 『悪夢機械』(87) フィリップ・K・ディック
+	  - 『空を飛んだ少年』(87) ルーディ・ラッカー
+	  - 『ポストマン』(88) デイヴィッド・ブリン
+	  - 『ゲイトウェイ』(88) フレデリック・ポール
+	  - 『竜の歌い手』(88) アン・マキャフリイ
+	  - 『大いなる天上の河』(89) グレゴリイ・ベンフォード
+	  - 『ソフトウェア』(89) ルーディ・ラッカー
+	  - 『ウェットウェア』(89) ルーディ・ラッカー
+	  - 『知性化戦争』(90) デイヴィッド・ブリン
+	  - 『リプレイ』(90) ケン・グリムウッド
+	  - 『永劫回帰』(91) バリントン・J・ベイリー
+	  - 『ジュラシック・パーク』(91) マイクル・クライトン
+	  - 『アイヴォリー　ある象牙の物語』(92) マイク・レズニック
+	  - 『セックス・スフィア』(92) ルーディ・ラッカー
+	  - 『ガイア　−母なる地球−』(92) デイヴィッド・ブリン
+	  - 『2001年宇宙の旅　決定版』(93) アーサー・C・クラーク
+	  - 『重力の虹』(93) トマス・ピンチョン
+	  - 『タンジェント』(93) グレッグ・ベア
+	  - 『天の筏』(93) スティーヴン・バクスター
+	  - 『ヴァーチャル・ガール』(94) エイミー・トムスン
+	  - 『旅立つ船』(94) マキャフリー＆ラッキー
+	  - 『時間的無限大』(95) スティーヴン・バクスター
+	  - 『竜の反逆者』(95) アン・マキャフリイ
+	  - 『虚空のリング』(96) スティーヴン・バクスター
+	  - 『ハッカーと蟻』(96) ルーディ・ラッカー
+	  - 『さよならダイノサウルス』(96) ロバート・J・ソウヤー
+	  - 『火星転移』(97) グレッグ・ベア
+	  - 『タイム・シップ』(98) スティーヴン・バクスター
+	  - 『ダスト』(98) チャールズ・ペレグリーノ
+	  - 『宇宙消失』(99) グレッグ・イーガン
+	  - 『順列都市』(99) グレッグ・イーガン
+	  - 『模造世界』(00) ダニエル・F・ガロイ
+	  - 『祈りの海』(00) グレッグ・イーガン 
+
+	* 国内SFファン度調査: http://www.unitera.jp/cgi-bin/enq/enq2.cgi
+	--
+	あなたの既読作品は以下の通りです
+	・『ガイア伝説』(99) 半村良
+	・『バトル・ロワイアル』(99) 高見広春
+	・『パワー・オフ』(96) 井上夢人
+	・『パラサイト・イヴ』(95) 瀬名秀明
+	・『ガダラの豚』(93) 中島らも
+	・『パプリカ』(93) 筒井康隆
+	・『朝のガスパール』(92) 筒井康隆
+	・『十二国記』(92) 小野不由美
+	・『竜は眠る』(91) 宮部みゆき
+	・『リング』(91) 鈴木光司
+	・『治療塔』(90) 大江健三郎
+	・『竜の柩』(89) 高橋克彦
+	・『クラインの壺』(89) 岡嶋二人
+	・『岬一郎の抵抗』(88) 半村良
+	
+	300作品中14作品読了
+	--
+
+	* diff:
+	論文を書いていて、前回の個人指導からの差分を見やすい形で整形して出
+	力しておきたい、とか思ったのでちょっと探す。
+
+	・wdiff: http://www.gnu.org/software/wdiff/
+	  diff のフロントエンド。
+	  ただし日本語には未対応。
+
+	  使い方:
+	    % wdiff -w \\diffdel\{ -x\} -y \\diffinc\{ -z\} oldfile newfile
+	  として、\diffdel{}, \diffinc{} マクロを定義すべし。
+	    cf. http://xpt.sourceforge.net/techdocs/Latex/Packages/latex21.000.html
+	・cdiff: http://www.srekcah.org/~utashiro/perl/scripts/cdif/
+	  歌代さんによる Perl での実装。日本語対応。
+
+	・texdiff: http://www.robmar.net/TexDiff/
+	  wdiff のフロントエンド。
+
+	・changebar.sty:
+	http://www.ctan.org/tex-archive/macros/latex/contrib/supported/changebar/changebar.dtx
+	  変更を管理するための LaTeX マクロ。
+
+	・DocDiff: http://www.kt.rim.or.jp/~hisashim/ruby/docdiff/
+	  Ruby での実装。
+
+	あと、昔の fj の記事も参考になる。
+	  cf. 「テキストの差分をとるツール」から始まるスレッド。
+	      http://queen.heart.ne.jp/cgi-bin/browse?msgid=%3C3A83C0E4.12431000@ht.sakura.ne.jp%3E
+
+2002-12-14  Masao Takaku  <masao@ulis.ac.jp>
+
+	* skk-article-mode:
+	論文書きの時だけ ，． を使うのが面倒なので、skk-insert-hyphen と同
+	様に skk-insert-comma, skk-insert-period 関数を定義して、バッファ
+	毎に制御できるようにしてみた。
+
+	これで快適になるかな？
+
+2002-12-13  Masao Takaku  <masao@ulis.ac.jp>
+
+	* Momonga-Document-HOWTOM:
+	http://www.momonga-linux.org/docs/Document-HOWTO/ja/index.html
+	DocBook と CVS による文書管理手法。
+
+	* 横断検索システム: http://www.jah.ne.jp/~takanori/
+	がんばって各種検索サービスへの検索フォームを作りこんでる…。
+
+2002-12-11  Masao Takaku  <masao@ulis.ac.jp>
+
+	* SKK on Windows (NTEmacs):
+	Win2k に入れた NTEmacs 上で SKK を使う方法。
+
+	Cygwin の Bash から以下のようにする。
+	  $ tar zxvf apel-10.4.tar.gz
+	  $ cd apel-10.4
+	  $ make EMACS="C:/emacs-21.2/bin/emacs" \
+	  	 LISPDIR="C:/emacs-21.2/site-lisp" \
+	  	 VERSION_SPECIFIC_LISPDIR="C:/emacs-21.2/site-lisp" elc
+	  $ make EMACS="C:/emacs-21.2/bin/emacs" \
+	  	 LISPDIR="C:/emacs-21.2/site-lisp" \
+	  	 VERSION_SPECIFIC_LISPDIR="C:/emacs-21.2/site-lisp" install
+
+	 （SKKはあらかじめCVS最新版をとりよせておく）
+	  $ cd ~/cvswork/skk/main
+	  $ cp ../dic/SKK-JISYO.* ./dic
+	  $ cp ../dic/zipcode/SKK-JISYO.* ./dic
+	  $ make EMACS="C:/emacs-21.2/bin/emacs" \
+		 SKK_DATADIR="C:/emacs-21.2/etc" elc
+	  $ make EMACS="C:/emacs-21.2/bin/emacs" \
+		 SKK_DATADIR="C:/emacs-21.2/etc" install
+		 
+	* W3C Home Page Table-less Layout:
+	http://www.w3.org/2002/11/homepage
+	W3C のホームページのレイアウトがテーブルベースから CSS によるもの
+	に変更になった。（実際の表示は以前と同じ3カラムのもの）
+
+	* Compelling example of Unicode usage for business applications:
+	http://www.i18nguy.com/unicode-example.html
+	各言語における人名を例とした Unicode 文字の実例。
+
+	日本人名の紹介の中に「林原めぐみ」という声優がまじっているのはなん
+	で？っていうかこの人知らないし…。
+	宮崎駿もあるし、そういう趣味の人なのか。
+
+2002-12-10  Masao Takaku  <masao@ulis.ac.jp>
+
+	* XUL games: http://games.mozdev.org/
+	xultris とかが普通にネイティブなのと変わらない速度で普通に動くのに
+	ビックリ。すごいね。
+
+	* 「CSSバグ辞典スレッド」: http://cssbug.tripod.co.jp/index.html
+	2ch のスレッドの要約。
+	各UA毎のCSS解釈のバグを詳細にリストしてあって良い。
+
+	* pixory: http://www.pixory.org/
+	Java ベースの写真管理ソフト。
+	機能: Exif対応、Webベースの管理、HTTPD内蔵。
+
+	* Mutt QuickStart HOWTO:
+	http://www.momonga-linux.org/docs/Mutt-QuickStart-HOWTO/ja/index.html
+	とりあえずメモ。
+
+	いいかげん mnews から移行したいので…。
+
+2002-12-09  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 初雪: 今年は早い気がする。
+
+2002-12-08  Masao Takaku  <masao@ulis.ac.jp>
+
+	* wikiwiki-cmp:
+	だいたい枠組みは完成。
+
+	タブブラウザ推奨委員会をイメージして作った。
+	  http://members.tripod.co.jp/TabBrowser/
+
+	tDiary の「謎JavaScript。最終形態」も拝借した。
+
+	機能比較表に汎用的に適用可能な風にも作れるかも…。
+	比較項目のボキャブラリを定義して CGI ？
+
+2002-12-07  Masao Takaku  <masao@ulis.ac.jp>
+
+	* ○/〇 : 「マル」はどっち？
+	なんだか似たような文字がいろいろあるみたい。どれを使えばいいの？
+
+	Mozilla1.0RC2 で、font-family に "Helvetica" が指定されていると、
+	「○」はちっちゃなマルになってしまった。
+
+	とりあえずテストページを作って、Mozilla1.2b でも再現するようなら
+	Bugzilla-jp もしくは bbs へ。
+	
+	* Resources For Translation: とりあえずメモ。
+	http://rwiki.jin.gr.jp/cgi-bin/rw-cgi.rb?cmd=view;name=ResourcesForTranslation
+
+2002-12-05  Masao Takaku  <masao@ulis.ac.jp>
+
+	* GULF WARS - EPISODE II: from kitaj.
+	http://www2.warnerbros.com/madmagazine/files/onthestands/ots_424/gulfwars.html
+	ちょっと笑った。
+
+	オリジナルの方はこんな感じ。
+	http://www.starwars.com/episode-ii/news/2002/03/news20020312_0.html
+
+	* 小泉内閣メールマガジン 第73号:
+
+	「UFOなど宇宙の話にわくわく」ってところでしらけちゃうね。
+	だいたい、彼がこどもの頃に UFO の話ってそんなに有名だったの？
+
+	ちょっと調べてみると、
+	http://homepage3.nifty.com/FLARE/UFOHistory.html
+	に UFO 事件などの年表があるが、1947 年に初の UFO 事件が起き、いわ
+	ゆるロズウェル事件もこの年。
+	一方、小泉首相は 1942 年生まれなので、ちょうど子供のころに UFO 関
+	連の報道や特集記事を見たのだろう。
+
+2002-12-04  Masao Takaku  <masao@ulis.ac.jp>
+
+	* diggler: fragment, query を strip するモードも欲しい。
+
+	暇な時に要望を出しておこう。
+
+	* iesrcview: http://www.ganaware.jp/S/iesrcview/
+	とりあえず使ってみた。
+
+	Emacs21 を代替にするようにした。
+
+	* アメリカに査察隊を:
+	http://www.rootingoutevil.org/index.php3/MissionUSA
+
+	http://6113.teacup.com/lifestudies2/bbs から引用:	
+	【カナダの団体が米国に武器査察隊派遣へ 】というIndymediaの12月2日
+	の記事を翻訳家の萩谷良さんが訳してくださいました。紹介します。
+	＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
+	
+	「Canadians to lead weapons inspections team into USA」
+	
+	　2002年11月21日　トロント
+	
+	カナダの平和団体の連合体「巨悪の根絶」(Rooting Our Evil 「我らの悪
+	を根こそぎに」)が、きょう、ボランティアの国際的兵器査察チームをこ
+	の冬に米国に送るとの意向を公表した。同隊ではウェブサイト
+	<http://www.rootingoutevil.org >をたちあげて、査察員を募集している。
+	
+	「ブッシュ氏のしていることがヒントです」と、同グループのスポークス
+	パーソン、クリスティ・ファーガソンは語る。
+	
+	「ブッシュ政権は、最も危険なならず者国家とは、次のようなものだ、と
+	繰り返し言ってきました。
+	1)　大量の化学・生物・核兵器を持っており、
+	2)　国連の正当な手続を無視しており、
+	3)　国際条約に調印したり、それを尊重することを拒んでいる。
+	ですから、ブッシュ大統領の示した基準にもとづくなら、今の米国政権が
+	全世界の安全保障にとって大変な脅威であることは明らかです」
+	
+	「私たちは、あのならず者国家にある大量破壊兵器を確認できるよう、ブッ
+	シュの手本に従って、米国に対し、即座に我々の査察員が大統領公邸を含
+	め米国の任意の場所に自由に立ち入ることをを認めるよう、要求します」
+	と、デヴィッド・ランギルも述べた。
+	
+	「巨悪の根絶」のウェブサイトでは、アクセスした人に、兵器査察チーム
+	名誉メンバーとして登録するよう呼び掛けている。名誉査察員は、査察に
+	参加することがもできるし、署名運動のように名前を貸すだけでもよい。
+	実際に米国入りする査察隊には、カナダその他諸国の著名人が参加するだ
+	ろう。
+	
+	「巨悪の根絶」には、グリーンピース・カナダ、社会的公正を目指すセン
+	ター、トロント反戦反イラク制裁委員会などが参加しており、米国からは、
+	イラク戦争を終らせるための全米ネットワーク、グローバル・エクスチェ
+	ンジ、平和と自由をめざす国際女性連盟米国支部が加わっていて、いかな
+	る国であれ大量破壊兵器を開発、保管、使用することに反対している。
+	〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜
+
+	そうだよね。
+	全くもって、その通り。
+	
+	* XHTML でページ内参照:
+	Ruby のリファレンスマニュアルを頻繁に参照するようになって、Mozilla
+	だと「添付ライブラリ」などのページにあるページ内参照をうまく参照し
+	てくれない問題があることに気付いた。
+
+	http://bugzilla.mozilla.gr.jp/show_bug.cgi?id=2647#c6
+
+	とりあえず Bugzilla-jp を検索したら、該当のモノがあったので、以下
+	の内容を追加コメントしておいた。
+
+	---
+	まず、規格上 a 要素の name 属性の値は URI では無いので、
+	URI エスケープを解釈する必然性はまったくありません。
+	
+	HTML4 では CDATA、一方、XHTML1 では NMTOKEN のようです。
+	  cf. http://www.asahi-net.or.jp/~sd5a-ucd/rec-html401j/struct/links.html#adef-name-A
+	  cf. http://www.w3.org/TR/xhtml1/#C_8
+	
+	ややこしいことに HTML4 と XHTML でデータモデルが違うので、
+	おそらく別に論じる必要があるでしょう。
+	
+	1. XHTML に限っては、（互換性の問題も無いので）
+	   結論：「URI参照を使った fragment 参照はまったく許されません。」
+	   で良いと思います。
+	
+	2. HTML4 or それ以前については、
+	   IE や NN4 などと動作をあわせたモードを追加した方が良いのではな
+	   いかと思います。
+	---
+
+	これで間違いがなさそうなら、rubyist ML に修正の要望を出しておこう。
+
+	ちなみに、W3C の XHTML Validator もエラーを報告してる。
+	  cf. http://validator.w3.org/check?uri=http%3A%2F%2Fwww.ruby-lang.org%2Fja%2Fman-1.6%2F%3Fcmd%3Dview%3Bname%3D%25C5%25BA%25C9%25D5%25A5%25E9%25A5%25A4%25A5%25D6%25A5%25E9%25A5%25EA%23%25A5%25C6%25A5%25AD%25A5%25B9%25A5%25C8
+
+	* toro でピンボール:
+	久々に toro にログインして気付いたけど、toro ではゲームの内、ピン
+	ボールだけ実行できないようにしているみたい…。
+	負荷が高かったのかな？
+
+2002-12-03  Masao Takaku  <masao@ulis.ac.jp>
+
+	* TeXからPostScript及びPDFを作るときのコツ:
+	http://www.rmatsumoto.org/tex-ps-pdf/
+	細かいテクニックが載っていて、良い。
+
+	* 丁字路:
+	「Ｔ字路」はもともとこういう表記だったらしい…。
+	  cf. http://www.nhk.or.jp/bunken/yougo/b3302-j.html#207
+	  from skk ML
+
+	* 「教えて君」実例観察:
+	http://aglaia.c.u-tokyo.ac.jp/~yamamoto/oshiete/
+	vine-users ML に出現した「教えて君」についての考察。
+
+	同様に、
+	・Ｍ女史の遺したもの: http://members.tripod.co.jp/ms_mzn/
+	も参考になる。
+
+	* cygwin/XFree86:
+	Astec-X の試用版の期間が切れたので rootless モードを使ってみている。
+
+	Fvwm でとりあえずそこそこは動く。
+
+	疑問点:
+	・ホイールが効かない。
+	・仮想デスクトップのせいで勝手にウィンドウが動く。
+	・アイコン化すると戻せない。
+
+	rootless モードの作者のページに、-multiwindow モードなるものもあっ
+	たけど、こっちのバイナリは libfreetype.dll が必要とか言われた動か
+	せなかった。
+	  cf. http://peppermint.jp/
+
+	などと思っていたら、mwm に変えてみたら、こっちならアイコン化しても
+	OK みたい…。
+
+	* Scarab: Issue Tracking System:
+	http://goas.no-ip.org/~koichiro/scarab/
+	日本語化や設定、運用についてのチュートリアル。
+
+2002-12-01  Masao Takaku  <masao@ulis.ac.jp>
+
+	* Scarlet: http://www.jin.gr.jp/~nahi/Ruby/ruby.shtml#Scarlet
+	メール転送用の処理系。
+
+	これを使って、J-Phone などのカメラ付携帯からの写真を Web アルバム
+	として公開しているものもある。
+	  http://www.jin.gr.jp/~nahi/d.cgi
+
+	疑問: カメラ付携帯は Exif を採用してないの？
+
+2002-11-29  Masao Takaku  <masao@ulis.ac.jp>
+
+	* sitetm.net: http://www.sitetm.net/ 
+	日記や PhotoGallery がとても良い感じ。
+	U10 の批評記事あり。
+
+	* GImageView:
+	p-album の検証その他を考えると、画像ビューワとしての display コマ
+	ンドは操作性が悪いので、いろいろ機能のありそうな GImageView をイン
+	ストールしてみる。
+
+	まず、gdk-pixbuf がうまく入っていなかった（jpegに対応してなかった）
+	ので、入れなおす。
+
+	  % env LDFLAGS="-L/usr/local/lib" CPPFLAGS="-I/usr/local/include/libpng" ./configure
+	  % make
+	  % make check
+	  % sudo make install
+
+	次に、GImageView を入れる。
+
+	  % env CPPFLAGS="-I/usr/local/include/libpng" ./configure
+	  % make
+	  % make check
+	  % sudo make install
+	  
+	* Scout Portal Toolkit: http://scout.wisc.edu/research/SPT/
+	リソースの検索、メタデータ付与、ランク付けなどの機能を備えたポータ
+	ルサイト構築ツール。
+	  cf. http://www.dlib.org/dlib/november02/almasy/11almasy.html
+
+	* Visual Interfaces to Digital Libraries: とりあえずメモ。
+	http://link.springer.de/link/service/series/0558/tocs/t2539.htm
+
+	* ZING（Z39.50 International Next Generation）:
+	SRW（Search/Retrieve for the Web）、CQL（Common Query Language）の
+	Version1.0 が発表された。
+
+	SRW は、SOAP ベース + URLアクセスベースの2者からなる。
+
+	International とはいうものの、相変わらず欧米の組織しか参加していな
+	いようなので、アジア系言語への対応はまたダメなのでは？という疑念が
+	拭えない…。
+
+	* 未踏ユース: http://www.ipa.go.jp/NBP/14nendo/14youth/index.html
+	公募結果が出た。
+
+	提案はいろいろ。
+	あと PM のコメントも面白い。:)
+
+	* p-album refactoring:
+	Ruby の本を読んでちょっと勉強中。
+
+	PhotoAlbum, PhotoFile という 2つのクラスに隠蔽するように書き直した。
+	テンプレートは Amrita を使うかどうか検討中。
+	
+	* Subversion Book:
+	http://subversion.tigris.org/servlets/ProjectDocumentList?folderID=256
+	「Subversion Definitive Guide」というタイトルのドラフトが公開され
+	ている。
+
+	CVS Migration に関する記述もあるので、使ってみたい場合には眺めてお
+	いた方が良いかも…。
+
+2002-11-28  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 杉本先生の講演 「Dublin Coreの最近の話題から」:
+	知的基盤センターの研究談話会。
+
+	だいぶ Dublin Core も変わってきたみたい…。
+	何よりも Qualifier がどんどん追加され、16番目のエレメント Audience
+	も追加されたらしい。
+	
+	疑問点:
+	 - DC2 はいつ？ or DC のバージョン管理は？
+	 - Application Profile の流通に関する疑問は？
+
+	1つ目は質問してみたが、DCMI 自体はそういう雰囲気には無いみたい。
+	2つ目は何かの機会にでも聞いてみよう。
+
+	* 茨城バスロケーションシステム: http://www.bus.nilim.go.jp/
+	つくば〜東京駅などの高速バスの運行状況がリアルタイムでわかる。
+
+	自分が使うバス路線が表示されると、なんだか楽しいね。
+	ITSの情報を使ってるらしい…。
+
+2002-11-27  Masao Takaku  <masao@ulis.ac.jp>
+
+	* メタデータデッドロック:
+	http://www.net.intap.or.jp/INTAP/s-web/data/conference2002/tsuda.pdf
+	「メタデータがあればこんな良いサービスが作れるのに…」 VS 「こんな
+	サービスがあるのだったら、ちょっと大変だけどメタデータを作っても良
+	いのに…」
+	のことらしい。
+
+	あまり一般的な用語ではないかも…。
+
+	* memoma: http://www.jaist.ac.jp/~tetsu/memoma/memoma.html
+	MH 形式でメモを蓄積していく。
+	検索は Namazu、ブラウジングは MUA(Mewなど) と外部ツールにまかせる。
+
+	もうちょっと作りこめば良くなると思う。
+	あと、Wiki みたいな手法との比較もほしいね。
+
+2002-11-25  Masao Takaku  <masao@ulis.ac.jp>
+
+	* NARUTO:
+	今気付いたけど、「サスケ→流川」などのスラムダンク系はそのままハマ
+	るけど、「リー→ラーメンマン」「我愛羅→ウォーズマン」のキン肉マン
+	系もハマる気がする。
+
+2002-11-24  Masao Takaku  <masao@ulis.ac.jp>
+
+	* p-album: 一応、完成。
+	撮りためていたものをまとめて公開した。
+
+	* 図書館映画データベース:
+	http://www02.so-net.ne.jp/~ichi/cgi-bin/libmovie.cgi
+	結構まとまってて良い。
+
+2002-11-23  Masao Takaku  <masao@ulis.ac.jp>
+
+	* p-album:
+	YAML + Exif 対応させることを考えて、スクリプトを Perl → Ruby に手
+	で変換しまくり。ただ、Ruby はいちいちリファレンスを引きながら書く
+	ので、スピード上がらず。
+	Ruby の方が行数は減るのね…。
+
+	* cygwin/XFree86:
+	-rootless モードとして、Astec-X でいう所のマルチウィンドウモードの
+	実装が行われているらしい…。
+	こいつが安定すれば Astex-X いらなくなるかもね。
+	  cf. http://www.cygwin.com/xfree/
+
+	* dcdiary - Web 写真日記用スクリプト -:
+	http://fromto.cc/hosokawa/software/dcdiary/
+	Exif の情報は使っていないものの、画像の取り込み、編集、日記の作成、
+	トピック毎の一覧など、多くの機能がある。
+
+2002-11-22  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 図書館企画委員会:
+	http://www6.ocn.ne.jp/~lib/index.html
+	図書館サービスに関するさまざまな企画を集めてるページ。
+
+	「館内アナウンスで名乗ってみる」「統計を１００人の村風にアレンジ」
+	とか面白そうなアイデアもあって良い。
+
+	* 小論文の道具箱: http://page.freett.com/y_yabuki/index.html
+	予備校の講義で使用した小論文テキスト。
+
+	非常に細やかなテキストで一度眺めておくと良さそう。
+	テキスト全体がGFDL準拠なのも良い。
+
+2002-11-20  Masao Takaku  <masao@ulis.ac.jp>
+
+	* Ontology editor survey results:
+	http://xml.com/2002/11/06/Ontology_Editor_Survey.html
+	オントロジ・エディタの比較表。
+
+	比較項目は以下の通り。気になるのは、GraphView+Merging。
+	Version, Release Date, Source, Modeling Features/Limitations, Base
+	Language, Web Support & Use, Import/Export Formats, Graph View,
+	Consistency Checks, Multi-user Support, Merging, Lexical Support,
+	Information Extraction, Comments, More Information, Contact
+ 
+	* 「CJKV日中韓越情報処理」 by Ken Lunde: http://www.oreilly.co.jp/
+	ついに日本語訳版が出るらしい…。
+
+	* zlib & Java2:
+	なんか今頃になって、Java2 が zlib の脆弱性に影響があるっていう Sun
+	の Security Bulletin が流れてきたんですが…。なんか遅くないですか？
+	  cf. http://www.cert.org/advisories/CA-2002-07.html
+
+	* ドライアイ:
+	ここ数日、ドライアイ気味。
+	朝、目が覚めた時になんだかイヤな感じがする。涙が出てくれない…。
+
+	* p-album:
+	基本的な機能はほぼできた。（一枚毎、月毎、最新でのスライド表示）
+
+	あとは、タイトル・コメントをどうつけていくかを検討中。
+	・記述が容易という点を考慮すると、RFC2822 形式か。
+	・再利用などを考えると、XML/RDF 形式をある程度自動生成して、追記し
+	ていく形式が良さそう…。
+
+	* Bill Biggart's Final Exposures:
+	http://digitaljournalist.org/issue0111/biggart_intro.htm
+	WTCの北棟の崩壊に巻き込まれて亡くなったプロのカメラマン、ビル・ビ
+	ガードのカメラから見つかった最後の写真。
+
+2002-11-19  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 富士通ウェブ・アクセシビリティ指針 - 日本語サイト向け 第1.01版:
+	http://jp.fujitsu.com/webaccessibility/
+	とりあえずメモ。
+
+	* ChangeLog メモを試してみよう:
+	http://pop-club.hp.infoseek.co.jp/emacs/changelog.html
+	エントリ名の補完などの話題あり。
+
 2002-11-18  Masao Takaku  <masao@ulis.ac.jp>
 
+	* 起業への道（同時進行ドキュメント）:
+	http://dnd.rieti.go.jp/kigyo/index.html
+	経緯がリアルに描かれていて、なんだか面白い。
+
+	あと、この「ディジタル・ニューディール」っていうサイトもちょっと眺
+	めたけど、なんかクリックするたびに新規ウィンドウが立ち上がるのがうっ
+	とうしかった。
+
+	* Perl で mkdir -p:
+	ちょっと作ったけど、使わなくなったので、こちらにメモ。
+	
+	# mkdir -p dir
+	sub mkdir_p($$) {
+	    my ($basedir, $dir) = @_;
+	    $basedir =~ s/\/$//;
+	    foreach my $d (split(/\//, $dir)) {
+	        $basedir .= "/$d";
+	        unless (-d $basedir) {
+	            print "\tmkdir $basedir\n";
+	            mkdir($basedir, 0777) || die "mkdir fail: $dir: $!"
+	        }
+	    }
+	    return $basedir;
+	}
+
+	* 日本産アリ類カラー画像データベース:
+	http://ant.edb.miyakyo-u.ac.jp/
+	いろんな検索手法が用意されているのが良い感じ。
+
+	* bibtexml: http://bibtexml.sourceforge.net/
+	以前（[2001-11-06]）見たサイトが sf.net に移っていた。
+
+	"related work" へのリンクがいろいろあって、参考になりそう。
+
+	* SmartBib: SmartDoc における参考文献。
+	http://www.asahi-net.or.jp/~dp8t-asm/java/xmlcon/html4/AugTech_s4.html
+
+	Relax スキーマもあり。
+	http://www.cmt.phys.kyushu-u.ac.jp/~M.Sakurai/java/sdoc/sdocusersj/msg02477.html
+
+	* 山下清美さんの書き物:
+	http://www3.psy.senshu-u.ac.jp/~yamasita/work.html
+	個人のWebサイトやWeb日記・掲示板におけるコミュニケーション、電子ア
+	ルバムなどについての研究報告などがある。
+	参考になるかも…。
+
+	* Dspace: http://dspace.org/
+	MIT Library と HP の共同プロジェクト。
+	DL System を構築する試み？
+
+	オープンソース・ソフトウェアとして公開されている。
+	
 	* キーの無効化:
 	ノートPCで Enter キーの隣に Home, End, PgUp, PgDown キーが並んでい
 	る配列のキーボードは使いづらい（編集中に間違えて Home などを押して
@@ -6650,7 +7370,7 @@
 
 2001-07-04  Masao Takaku  <masao@ulis.ac.jp>
 
-	* dvpdfm-jpatch: すばらしい。
+	* dvipdfm-jpatch: すばらしい。
 	cf. http://hamilcar.phys.kyushu-u.ac.jp/~hirata/dvipdfm/index.html
 
 	さっそく nile に入れてみました。
