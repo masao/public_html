@@ -392,8 +392,8 @@ document from which the prefetching hint was extracted.<br></span>
 このことは、多くのサイトで広く行われている参照元の追跡に影響するかもしれません。
 このため、リンクの先読みは全てのコンテンツに対して向くものではないかもしれません。
 そこで、"<span style="font-family: monospace;">Cache-control:
-must-revalidate</span>" HTTP レスポンスヘッダを指定することにより、ユーザが先読みされた文書へのリンクを辿った際に、Mozilla にその先読みされた文書を検証させることが可能になります。
-このヘッダによりキャッシュが有効になりますが、ブラウザのキャッシュから文書を取り出す前に、"<span style="font-family: monospace;">If-Modified-Since</span>" もしくは "<span style="font-family: monospace;">If-None-Match</span>" の検証用リクエストが必要になります。<br>
+must-revalidate</span>" HTTP レスポンスヘッダを指定することにより、ユーザが先読みされた文書へのリンクを辿った際に、Mozilla にその先読みされた文書を検証させることができるようにしています。
+このヘッダが使われると、キャッシュは有効なままですが、ブラウザのキャッシュから文書を取り出す前には、"<span style="font-family: monospace;">If-Modified-Since</span>" もしくは "<span style="font-family: monospace;">If-None-Match</span>" の検証用リクエストが必要になります。<br>
 <span class="orig">This may impact referrer tracking that is commonly used on many sites.
 &nbsp;For this reason, link prefetching may not be appropriate for all
 content. &nbsp;However, it is possible to instruct Mozilla to validate a
