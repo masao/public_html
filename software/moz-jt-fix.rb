@@ -26,7 +26,7 @@ JTP_NOTE = <<EOF
 </font></div>
 EOF
 
-META_CHARSET = %Q[<meta name="http-equiv" content="text/html;charset=EUC-JP">]
+META_CHARSET = %Q[<meta http-equiv="Content-Type" content="text/html;charset=EUC-JP">]
 
 JT_STYLE = <<EOF
 <style type="text/css">
