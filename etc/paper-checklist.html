@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-JP">
+<link rel="stylesheet" href="../default.css" type="text/css">
+<link rev="made" href="mailto:masao@ulis.ac.jp">
+<title>論文投稿前のチェックリスト</title>
+</head>
+<body>
+<!-- hhmts start -->
+<div class="last-update">最終更新日: 2002年12月14日</div>
+<!-- hhmts end -->
+<h1>論文投稿前のチェックリスト</h1>
+<p>
+論文を投稿する前にチェックすべき項目のメモです。
+</p>
+<p>
+なお、以下は個人的なメモなので、
+研究分野や指導教官などの方針によって、
+あてはまらない項目も多数あると思いますので、
+<a href="#reference">参考文献</a>も参照してください。
+</p>
+<h2>基本的なチェック</h2>
+<ul>
+  <li>誤字・脱字
+  <li>変換ミス
+  <li>句読点
+  <li>[英文について]
+      <ul>
+	<li>スペルチェッカーに掛ける
+	    <ul>
+	      <li>UNIX上なら<code>ispell</code>コマンド
+	    </ul>
+	<li>自動詞・他動詞 (自動詞は受身にならない、前置詞のつき方が異なる)
+	<li>3単元の s
+      </ul>
+
+  <li>参照文献
+      <ul>
+	<li>指定の書式に従っているか？(SIST-02など)
+	<li>URLは辿れるか？
+      </ul>
+
+  <li>使用している用語の統一
+      <ul>
+	<li>インデックス・インデクス
+	<li>インターネット・インタネット
+	<li>関わる・かかわる・係わる
+	<li>持つ・もつ
+	<li>異なる・ことなる
+	<li>齋藤・斉藤・斎藤
+	<li>従って・したがって
+      </ul>
+
+  <li>好ましくない用法 or 言い換えをチェック
+      <ul>
+	<li>〜することができる・〜できる
+	<li>〜的な…
+	<li>〜のような…
+	<li>〜することで（〜することに{より,よって}）
+      </ul>
+</ul>
+
+<h2>TeX環境特有のもの</h2>
+<ul>
+  <li>図の出力位置の確認
+      <ul>
+	<li>フロート環境で出力している図は意図しない位置に出力されることがある。
+      </ul>
+
+  <li>マクロのチェック
+      <ul>
+	<li><code>\if草稿</code>などの条件コンパイル用のマクロは
+	    <code>false</code>にする。
+      </ul>
+
+  <li>Makefile
+     <ul>
+       <li><code>make distclean &amp;&amp; make</code>
+	   (一度、既存のdviファイルを消してから作り直す)
+     </ul>
+
+ <li>インデント
+     <ul>
+       <li>LaTeXのverbatim環境はソースファイルのタブを無視するので、
+	   プログラムのソースなどは<code>expand</code>コマンドなどで
+	   空白に展開してからコンパイルする。
+     </ul>
+</ul>
+<hr>
+<h2><a name="reference">参考文献</a></h2>
+<ul>
+  <li>「理科系の作文技術」
+</ul>
+<hr>
+<address>
+高久雅生 (Takaku Masao)<br>
+<a href="http://nile.ulis.ac.jp/~masao/">http://nile.ulis.ac.jp/~masao/</a>, 
+<a href="mailto:masao@ulis.ac.jp">masao@ulis.ac.jp</a>
+</address>
+<div class="id">$Id$</div>
+</body>
+</html>
