@@ -2,11 +2,10 @@
         "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-<link rev=made href="mailto:masao@ulis.ac.jp">
-<title>ULIS-IPC Search Engine</title>
-<link rel="stylesheet" href="../default.css" type="text/css">
-<link rel="help" href="namazu.cgi">
-<link rel="start" href="./">
+<!-- LINK-REV-MADE -->
+<link rev=made href="mailto:webmaster@nile.ulis.ac.jp">
+<!-- LINK-REV-MADE -->
+<title>Namazu: a Full-Text Search Engine</title>
 <style type="text/css"><!--
   strong.keyword { color: Red; }
   p.example      { text-indent: 1em; 
@@ -24,25 +23,26 @@
 --></style>
 </head>
 <body lang="ja">
-<h1>ULIS-IPC Search Engine</h1>
+<h1>Namazu による全文検索システム</h1>
 <p>
-現在、<!-- FILE --> 4 <!-- FILE --> の文書がインデックス化され、
-<!-- KEY --> 64,708 <!-- KEY --> 個のキーワードが登録されています。
+現在、<!-- FILE --> 1,189 <!-- FILE --> の文書がインデックス化され、
+<!-- KEY --> 49,315 <!-- KEY --> 個のキーワードが登録されています。
 </p>
 <p>
-<strong>インデックスの最終更新日: <!-- DATE --> 2004-04-02 <!-- DATE --></strong>
+<strong>インデックスの最終更新日: <!-- DATE --> 2004-04-07 <!-- DATE --></strong>
 </p>
 <hr>
-<form method="get" action="namazu.cgi">
-<div>
-検索式:
+<form method="GET" action="{cgi}">
+<p>
+<strong>検索式:</strong> 
 <input type="text" name="query" size="40">
-<input type="submit" name="submit" value="Search!">
+<input type="submit" value="Search!">
 <input type="hidden" name="whence" value="0">
-<a href="namazu.cgi">[検索方法]</a>
-</div>
-<div>
-表示件数:
+<!-- <input type="hidden" name="idxname" value="foobar"> -->
+<a href="{cgi}">[検索方法]</a>
+</p>
+<p>
+<strong>表示件数:</strong>
 <select name="max">
 <option value="10">10
 <option selected value="20">20
@@ -50,25 +50,38 @@
 <option value="50">50
 <option value="100">100
 </select>
-表示形式:
+<strong>表示形式:</strong>
 <select name="result">
 <option selected value="normal">標準
 <option value="short">簡潔
 </select>
-ソート:
+<strong>ソート:</strong>
 <select name="sort">
 <option selected value="score">スコア
 <option value="date:late">日付 (新しい順)
 <option value="date:early">日付 (古い順)
 <option value="field:subject:ascending">題名 (昇順)
 <option value="field:subject:descending">題名 (降順)
+<option value="field:from:ascending">著者 (昇順)
+<option value="field:from:descending">著者 (降順)
 <option value="field:size:ascending">サイズ (昇順)
 <option value="field:size:descending">サイズ (降順)
 <option value="field:uri:ascending">URI (昇順)
 <option value="field:uri:descending">URI (降順)
 </select>
-</div>
+</p>
+<!--
+<p>
+<strong>検索対象:</strong>
+<ul>
+<li><input type="checkbox" name="idxname" value="foo" checked>foo 
+<li><input type="checkbox" name="idxname" value="bar">bar
+<li><input type="checkbox" name="idxname" value="baz">baz
+</ul>
+</p>
+-->
 </form>
+
 <!-- -*-html-helper-*- -->
 <hr>
 <h2>概要</h2>
@@ -112,6 +125,8 @@
 <h2>お知らせ</h2>
 <dl>
 <!-- What's New -->
+  <dt>2004-04-07
+  <dd>インデックスを更新。全 1,189 URL。（追加 1,189）
   <dt>2004-04-02
   <dd>インデックスを更新。全 4 URL。（更新 2、削除 1,546）
   <dt>2004-03-26
@@ -234,9 +249,15 @@
 </dl>
 <p><a href="history.html">昔のお知らせ</a></p>
 <hr>
+<p>
+この全文検索システムは
+<strong><a href="http://www.namazu.org/">Namazu</a> <!-- VERSION --> v2.0.10 <!-- VERSION --></strong>
+によって構築されています。
+</p>
 <address>
-<a href="./">ULIS-IPC Search Engine</a><br>
-<a href="mailto:masao@ulis.ac.jp">masao@ulis.ac.jp</a> (Masao Takaku)
+<!-- ADDRESS -->
+<a href="mailto:webmaster@nile.ulis.ac.jp">webmaster@nile.ulis.ac.jp</a>
+<!-- ADDRESS -->
 </address>
 </body>
 </html>
