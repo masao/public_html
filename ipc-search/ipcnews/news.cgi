@@ -37,7 +37,8 @@ class CGI
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-JP">
 <link rel="stylesheet" href="#{self.base_path}../../default.css" type="text/css">
-<link rev=made href="mailto:masao@ulis.ac.jp">
+<link rev="made" href="mailto:masao@ulis.ac.jp">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="ipcnews-rss.rdf">
 <title>#{title}</title>
 <style type="text/css">
 img { border: 0px; }
