@@ -1,11 +1,1325 @@
+2002-06-14  Masao Takaku  <masao@ulis.ac.jp>
+
+	* Unicode-based TrueType font:
+
+	拡張Watanabe明朝Habian2000なるものが公開された模様。
+	http://www.asahi-net.or.jp/~sd5a-ucd/freefonts/xWatanabe-min-Habian2000/
+
+	ただ、フォントエンコーディングが Shift_JIS ベースであるため、UTF-8
+	文字列を GD ライブラリで画像化するのに、そのままでは使えないみたい。
+
+	とりあえず、フォントエンコーディングを変更する方法:
+	・TTEditを起動
+	・「ファイル」→「一括コピー...」を選択する、
+	・「コピー元ファイル」に xWatanabeMinHabian2000.ttf を選択する、
+	・「コピー先ファイル」に適当なファイル名を入力する。
+	・「コード種別」に「Unicode」を選ぶ。
+	・「OK」する。
+
+	コピーされたファイルは Unicode ベースになっているので、それを使え
+	ば大丈夫みたい…。
+
+	* インストールメモ: http://www1.plala.or.jp/fukafuka/install/
+
+	うまく整理していて、いい感じ。	
+
+2002-06-13  Masao Takaku  <masao@ulis.ac.jp>
+
+	* convert (-draw):
+
+	convert -draw 'rectangle 100,100,150,150' foo.png bar.png
+
+	のようにして、画像の任意の部分にプリミティブをそのまま記述できる。
+
+	この際の色指定は、輪郭の色には -stroke オプションで、塗り潰しの色
+	には -fill オプションで行う。また、塗り潰しをしない場合は、
+	-fill none とする。
+
+	例: convert -fill none -stroke red -draw 'rectangle 100,100 150,150' foo.png bar.png
+
+	* graphviz (imapgen):
+
+	イメージマップ生成用ドライバの出力する座標値が変更されていたみたい。
+
+	from ChangeLog:
+	April 19, 2002
+        - Coords of rectangles changed to left/top right/bottom in -Timap.
+
+2002-06-12  Masao Takaku  <masao@ulis.ac.jp>
+
+	* <form>自動生成: CPAN で似たものが無いか調査。
+
+	相当いっぱいあった。
+	どれがどれやらワケわからん…。
+	
+	・HTML::FillInForm
+	http://search.cpan.org/search?dist=HTML-FillInForm
+
+	HTMLを解析して、CGI パラメータの上書きを行う。
+
+	・CGI::EZForm
+	http://search.cpan.org/search?dist=CGI-EZForm
+
+	CGI.pm フォーム部品生成部分の簡易版。
+	
+	・CGI::Form2XML
+	http://search.cpan.org/search?dist=CGI-Form2XML
+
+	CGIパラメータをXMLとして出力するためのもの。
+	
+	・CGI::QuickForm
+	http://search.cpan.org/search?dist=CGI-QuickForm
+
+	検証機能付き。
+
+	・CGI::FormMagick
+	http://search.cpan.org/search?dist=CGI-FormMagick
+
+	XMLでフォームの情報を定義し、それを読み込む。
+	検証機能付き。
+	非標準モジュール多数。
+
+	・CGI::FormBuilder
+	http://search.cpan.org/search?dist=CGI-FormBuilder
+
+	フォームを容易に作れる。
+	検証機能付き。
+	
+	・HTML::StickyForms
+	http://search.cpan.org/search?dist=HTML-StickyForms
+
+	<form>タグの生成を CGI.pm のよりも軽量化したもの。
+	（mod_perl を考慮）
+
+	・HTML::FormWizard
+	http://search.cpan.org/search?dist=HTML-FormWizard
+
+	パラメータの定義と同時に検証(validate)コードも書ける。
+
+	・HTML::FormTemplate
+	http://search.cpan.org/search?dist=HTML-FormTemplate
+
+	<table>ベースのフォームを容易に作れる。
+	非標準モジュール多数必要。
+
+	・その他
+
+	なお、統合的な Web Framework としては、Apache::PageKit もある。
+	http://search.cpan.org/search?dist=Apache-PageKit
+
+	* 「パスワード破りでノルウェーを救え」: 
+	http://slashdot.jp/article.pl?sid=02/06/07/171218&mode=nested
+
+	http://www.hotwired.co.jp/news/news/Technology/story/20020607301.html
+	
+	死者に口なし…。
+
+	* CGIWrap: http://sourceforge.net/projects/cgiwrap
+
+	suExec 以外では、CGIwrap という環境もあるみたい…。
+	これは Apache 以外でも動作する。
+
+	* 「Walrus - Graph Visualization Tool」: とりあえずメモ。
+	http://www.caida.org/tools/visualization/walrus/
+
+	・Walrus is a tool for interactively visualizing large directed
+	  graphs in three-dimensional space.
+	・Walrus computes its layout based on a user-supplied spanning
+	  tree.
+	・Walrus uses 3D hyperbolic geometry to display graphs under a
+	  fisheye-like distortion
+	・Walrus requires Java3D v1.2.1 (or later) and JDK 1.3.0 (or
+	  later).
+
+	面白そう。
+
+	* 「セキュアなWebサーバーの構築と運用に関するコンテンツ」: 
+	http://www.ipa.go.jp/security/awareness/administrator/secure-web/index.html
+
+	IPA のこの手のセキュリティ関係の文書は良いものが多い気がする。
+
+	* CGIにおける認証方式:
+	http://www.jin.gr.jp/~nahi/kb/doc/v10r7/COLUMN.html
+
+	CGIにおける認証方式の解説として興味深い。
+
+2002-06-11  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 「home.hiroshima-u.ac.jp での suEXEC サービスの導入について」:
+	http://www.media.hiroshima-u.ac.jp/announce/2001/suEXEC.html
+
+	教育システムでの suExec の導入例。
+	大規模ユーザ環境での導入みたいなので、興味深い。
+
+	http://www.media.hiroshima-u.ac.jp/announce/2001/suEXEC_lesson.html
+	にある方言バリバリの口語調の入門編も面白い。
+
+2002-06-10  Masao Takaku  <masao@ulis.ac.jp>
+
+	* SEPATA: とりあえずメモ。
+	http://www.sepata.com/index.html
+
+	WebベースのPIMツールか。
+
+	* OpenSSH / SSH1 / SSH2 相互運用のための鍵管理: とりあえずメモ。
+	http://masy.families.jp/documents/secsh_key.html
+
+	* Unicode フォント: UTF-8 ベースのデータを表示させようとして気付い
+	たけど、Unicode のほとんどの範囲をカバーする TrueType フォントって
+	「Arial Unicode MS」くらいしか無いみたい…。
+
+	Unicode のコードポイントとフォントの対応表:
+	http://www.hclrss.demon.co.uk/unicode/fontsbyrange.html
+
+	東風フォントとかはエンコーディングが、Unicode ベースだからてっきり
+	対応してるのかと思ったけど、繁体字、簡体字、ハングルすら表示できな
+	いみたい。う〜んアホやね、オレ。
+
+	あと、UNIX 系でライセンスフリーなフォントとしては、Caslon があるみ
+	たい。
+	http://bibliofile.mc.duke.edu/gww/fonts/Caslon/Caslon.html#Unicode
+
+	ただし、CJK の部分はひらがなとカタカナしか対応していないので実質使
+	えないね。
+
+2002-06-07  Masao Takaku  <masao@ulis.ac.jp>
+
+	* graphviz-1.8.6 (clover): とりあえず入れておいた。
+
+	freetype-1.3.1-5.i386.rpm, freetype-devel-1.3.1-5.i386.rpm,
+	freetype-utils-1.3.1-5.i386.rpm を入れたあとで、
+
+	% ./configure; make
+	# make install
+
+	* 東風フォント: 小文字の t がちょっと変。
+
+	明朝: 太すぎ？
+	ゴシック: ベースラインが下がりすぎ？
+
+	* 名前辞書: ホスト名を「あ」から順番につけていけば…。
+
+	女の子の名前辞書: http://www.dd.iij4u.or.jp/~ume20/f_name/
+	モンスターの名前辞書: http://www.dd.iij4u.or.jp/%7Eume20/m_name/
+
+	* graphviz-1.8.6: とりあえずコンパイルまで終わり。
+
+	% ./configure --with-pngincludedir=/usr/local/include/libpng \
+		--with-iconvlibdir=/usr/local/lib \
+		--with-iconvincludedir=/usr/local/include
+	% make ICONV_LIBS="-L/usr/local/lib -liconv"
+	% make install
+
+2002-06-06  Masao Takaku  <masao@ulis.ac.jp>
+
+	* \documentclass{jsarticle} + \footnote{} + verbatim 環境:
+	http://www.matsusaka-u.ac.jp/~okumura/texfaq/qa/{8824,8825}.html
+
+	文書化してあったようだ。jsclasses.dtx の以下の記述らしい。
+
+	    脚注で |\verb| が使えるように改変してあります。Jeremy Gibbons,
+	    \textit{\TeX\ and TUG NEWS}, Vol.~2, No.~4 (1993), p.~9）
+	→ http://www.ctan.org/tex-archive/usergrps/tug/ttn/ttn2n4.sty
+
+	* ODP データの不思議:
+
+	<narrow> が無いのに <narrow1> があるものがあった。
+
+	想像していたものと違うかも…。
+
+	例:
+	・Top/World/Deutsch/Regional/Europa/Regionen
+	→ <narrow1> が無いのに、<narrow2> があった。
+
+	・Top/Computers/Programming/Languages/C/Compilers
+	→ <narrow1> が1つだけ。
+
+	* ODP データの更新: ファイルサイズ、要素数の増え方を記録しておくと
+	良いかもね。
+
+	・kt-structure.rdf.u8 (2002-06-01 11:32:26 GMT)
+	ファイルサイズ: 1175578 byte
+	要素数:
+	   2443	d:Title
+	   2059	catid
+	   2059	Topic
+	   2007	lastUpdate
+	   1791	narrow
+	   1279	d:Description
+	   1130	altlang
+	    384	symbolic
+	    384	Target
+	    384	Alias
+	    228	editor
+	    187	related
+	    133	narrow1
+	     71	letterbar
+	     63	narrow2
+	     40	symbolic1
+	     24	newsGroup
+	      5	symbolic2
+
+	・structure.rdf.u8 (2002-05-30 03:12:41 GMT):
+	ファイルサイズ: 322529225 byte
+	要素数:
+	 714008 d:Title
+	 446926 catid
+	 446926 Topic
+	 427041 lastUpdate
+	 388183 narrow
+	 327001 symbolic
+	 267082 Target
+	 267082 Alias
+	 255821 related
+	 204339 altlang
+	 144875 d:Description
+	  31306 symbolic1
+	  31003 editor
+	  23984 narrow1
+	  19841 letterbar
+	  18779 symbolic2
+	  15405 newsGroup
+	  14920 narrow2
+	     60 d:charset
+
+	* MySQL - 日本語対応について:
+	http://www.tmtm.org/mysql/japanese.html
+
+	これを読むかぎりではちょっと弱い気がする。最新の情報なのかはわから
+	んけど…。
+
+	* ２００２年度画像電子学会第３０回年次大会:
+	http://wwwsoc.nii.ac.jp/iieej/trans/30nennjikaisai.html
+
+	Z39.50 とかインフォコムとかの名前も見える…。
+
+	* 「大学資料としての卒業論文」:
+	http://project.aichi-u.ac.jp/kosai/
+
+	卒論は一種のレポートであるとの観点が欠けていているものの、アンケー
+	トのデータなどは貴重かな。
+
+	* mnews にセキュリティ上の問題: [mnews:03248]
+
+	http://www.securiteam.com/unixfocus/5CP030A7FA.html によれば、
+
+	"If you look at the source code of Mnews, you will see that this
+	package is very outdated and dangerous to use on today's
+	Internet."
+	
+	"We strongly recommend to no longer use Mnews."
+
+	とのこと…。
+
+	* clover: なんか dump がささっているようだ。
+
+	とりあえず crontab からはずしておく。
+
+	* ODP: <letterbar> 問題。
+
+	A 〜 Z のように alphabetical に並べているだけの関係を示す要素。
+
+	どうやって対応しようかな…。
+
+2002-06-05  Masao Takaku  <masao@ulis.ac.jp>
+
+	* uni の pLaTeX2e 環境: 
+
+	This is pTeX, Version p2.1.8, based on TeX, Version 3.14159 (EUC) (Web2C 7.2)
+	pLaTeX2e <1999/08/09>+0 (based on LaTeX2e <2001/06/01> patch level 0)
+
+	っていうふざけた環境です。
+	なんで LaTeX2e のベース環境の方が2年ほど新しいんですか？
+
+	パッケージを入れておしまいにするのは止めましょうよ…。
+
+	ちなみに nile のバージョン表示だと、
+
+	This is pTeX, Version p2.1.10, based on TeX, Version 3.14159 (EUC) (Web2C 7.3.1)
+	pLaTeX2e <2000/11/03>+0 (based on LaTeX2e <1999/12/01> patch level 1)
+
+	となっている。
+
+	* W杯:
+
+	・日本 vs ベルギー
+
+	なんだか家で一人でテレビ観戦してただけなんだけど、筋肉痛になったみ
+	たい…。悲しい。
+
+	・韓国 vs ポーランド
+
+	韓国は圧倒的だった。やっぱ決定力のある FW がいるのは良いね。
+	うらやましい。
+
+2002-06-04  Masao Takaku  <masao@ulis.ac.jp>
+
+	* メールアドレスの補完: [2002-04-30] の続き。
+
+	http://www.gnu.org/manual/emacs/html_chapter/emacs_29.html#SEC366
+
+	そもそも Emacs 自体の持っている標準パッケージでも実現できそう…。
+	（~/.mailrc に書けば）
+
+	あと、エイリアスの形式によっては、
+	・sendmail: ftp://ftp.splode.com/pub/users/friedman/emacs-lisp/sendmail-alias.el
+	・mh-e: http://people.debian.org/~psg/elisp/e-mh-alias.el
+	・mutt: http://www.davep.org/emacs/mutt-alias.el
+	とかもあるみたい。
+
+2002-06-03  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 日本Apache XMLプロジェクト: ja-jakarta プロジェクトと姉妹関係？
+	http://www2.xml.gr.jp/1ml_main.html?MLID=jaxml-dev
+
+2002-05-31  Masao Takaku  <masao@ulis.ac.jp>
+
+	* XML Resume Library: http://xmlresume.sourceforge.net/
+
+	XMLで履歴書（業績リスト）を書くためのライブラリ。
+
+	* Visual Transformation Machine: 可視化のためのツールキット。
+	http://www.xrce.xerox.com/competencies/contextual-computing/vtm/
+
+	ズーム、アニメーションを行うインタフェースが容易に作れる。
+	「2.5D/zoomable user interface」ってどんなのだろ…。
+
+2002-05-30  Masao Takaku  <masao@ulis.ac.jp>
+
+	* Klez: 最近大量にきているのがうっとおしかったが、どうも父親の関係
+	者らしきアドレスからも masao@ulis.ac.jp 宛に一つ来ている。
+
+	Subject: Spice girls' vocal concert
+	Date: Thu, 30 May 2002 13:19:31 JST
+
+	http://www.symantec.com/region/jp/sarcj/data/w/w32.klez.h%40mm.html
+	にあるパターンにもろハマっている。
+
+	父親のノート PC が感染した確率が高そうなんだけど、どうしようか…。
+
+2002-05-29  Masao Takaku  <masao@ulis.ac.jp>
+
+	* Ghostview + x11alpha でエラー？:
+
+	GhostScript のバージョンを上げた後、~/.Xdefaults に、
+
+	Ghostview*arguments: -sDEVICE=x11alpha
+
+	と書いてあると、「Error: PostScript interpreter failed in main
+	window.」というエラーが出て、一部のPSファイル（a2ps.plが出力する）
+	で表示できないという現象がおきている。
+
+	どうやら core を吐いているみたいなので、dbx にかけてみると、↓みた
+	いな感じ。（でもどこが悪いのかわからん）
+
+	=>[1] __align_cpy_1(0x0, 0x0, 0x0, 0x0, 0x0, 0x0), at 0xfefd0cec
+	  [2] __align_cpy_1(0x4fd4c0, 0x51238c, 0x12, 0x380, 0x38, 0x4fd2d8), at 0xfefd0884
+	  [3] NoSwap(0x30, 0x4fd2d8, 0x632, 0x8c4, 0x634, 0xa5), at 0xff24874c
+	  [4] SendZImage(0x3ff84, 0x4d0348, 0x25647c, 0x632, 0x634, 0x4d249c), at 0xff249cfc
+	  [5] PutImageRequest(0x2576b8, 0x400048, 0x2ed2f0, 0x0, 0x0, 0x339), at 0xff249e30
+	  [6] PutSubImage(0x2576b8, 0x0, 0x10, 0x20, 0x339, 0x319), at 0xff24a0a0
+	  [7] PutSubImage(0x2576b8, 0x0, 0x10, 0x20, 0x339, 0x319), at 0xff249fac
+	  [8] XPutImage(0x319, 0x462, 0x20, 0x25647c, 0x10, 0x0), at 0xff219fc0
+	  [9] x_copy_image(0x2562b0, 0x30e4f8, 0x0, 0x8c4, 0x0, 0x0), at 0xc3624
+	  [10] update_do_flush(0x2562b0, 0x0, 0x0, 0x319, 0x462, 0xffff), at 0xc4658
+	  [11] x_sync(0x2562b0, 0xc2bb0, 0x0, 0x319, 0x462, 0x2562b0), at 0xc2bb4
+	  [12] gs_fillpage(0x213b78, 0x2145f0, 0xe00, 0x218ae0, 0x3ff00000, 0x0), at 0x148308
+	  [13] zfillpage(0x21aee8, 0x1905a8, 0x9f738, 0x110, 0x443, 0x3), at 0x9f73c
+	  [14] interp(0x203960, 0x20fafa, 0xffbeebc0, 0x206408, 0x1ee000, 0x135014), at 0x81010
+	  [15] gs_call_interp(0x203960, 0xffbeea60, 0x1, 0xffbeebbc, 0xffbeebc0, 0x1260), at 0x7fa88
+	  [16] gs_interpret(0x203960, 0xffbeea60, 0x1, 0xffbeebbc, 0xffbeebc0, 0xff00), at 0x7f9a4
+	  [17] gs_main_run_string_end(0x203908, 0x1, 0xffbeebbc, 0xffbeebc0, 0xffbeebbc, 0xffbeebc0), at 0x797d0
+	  [18] gs_main_run_string_with_length(0x203908, 0x18af70, 0x9, 0x1, 0xffbeebbc, 0xffbeebc0), at 0x796e0
+	  [19] gs_main_run_string(0x203908, 0x18af70, 0x1, 0xffbeebbc, 0xffbeebc0, 0x0), at 0x79680
+	  [20] run_string(0x203908, 0x18af70, 0x2, 0x1470e0, 0x61, 0x204500), at 0x7b008
+	  [21] swproc(0x203908, 0xffbefaaa, 0xffbeef80, 0x0, 0x2d00484f, 0x2d2d7665), at 0x7a0d0
+	  [22] gs_main_init_with_args(0x203908, 0x7, 0xffbef924, 0x0, 0x0, 0x0), at 0x79fa4
+	  [23] main(0x7, 0xffbef924, 0xffbef944, 0x203fb0, 0x0, 0x0), at 0x332bc
+
+	* 名古屋大学・情報メディア教育センターアシスタントスタッフ:
+	http://www.assist.media.nagoya-u.ac.jp/
+
+	・現役は4名しかいないけど、どうやってメンバを確保しているのか？
+	・この制度においてのセンターの公式運営側との関係は？
+	あたりが気になる…。
+
+	* Kartoo: http://www.kartoo.com/
+
+	検索結果をマップ風に可視化するもの。
+	日本語には対応していない。
+
+	* Mikiforce Homepage: Gnome 関連の説明が非常に詳しい。
+	http://cj3134981-a.kkbnj1.kt.home.ne.jp/index.html
+
+2002-05-28  Masao Takaku  <masao@ulis.ac.jp>
+
+	* Solaris7 & 非PostScriptプリンタ: 昨日の続き。
+
+	GhostScript をとりあえずインストールし直してみる。
+	cf. http://www.matsusaka-u.ac.jp/~okumura/linux/gs653.html
+
+	インストール方法:
+		（念のため、以前のバージョンを退避しておく）
+	% cd /usr/local/bin
+	% sudo cp gs gs.old
+	% cd /usr/local/share/ghostscript
+	% sudo mv fonts fonts.old
+		（必要なファイルの展開）
+	% bzip2 -cd ~/src/ghostscript-6.53.tar.bz2 | tar xvf -
+	% cd ghostscript-6.53
+	% bzip2 -cd ~/src/libpng-1.2.2.tar.bz2 | tar xvf -
+	% mv libpng-1.2.2/ libpng
+	% tar zxvf ~/src/jpegsrc.v6b.tar.gz
+	% mv jpeg-6b/ jpeg
+		（EPSONプリンタドライバの展開）
+	% cd src/
+	% tar zxvf ~/src/eplaser-3.0.1-651.tgz
+	% cat eplaser-3.0.1/gdevesmv6.mak >> contrib.mak
+		（コンパイルとインストール）
+	% cd ..
+	% cp src/unix-gcc.mak Makefile
+	% vi Makefile
+		## 以下の各変数を以下のように修正する
+	SHARE_ZLIB=1
+	XINCLUDE=-I/usr/openwin/include
+	XLIBDIRS=-L/usr/openwin/lib
+	DEVICE_DEVS2=$(DD)lp8100.dev $(DD)lp9400.dev
+	% make
+	% sudo make install
+		（フォントのインストール）
+	% cd /usr/local/share/ghostscript
+	% sudo tar zxvf ~/src/gnu-gs-fonts-std-6.0.tar.gz
+	% sudo tar zxvf ~/src/gnu-gs-fonts-other-6.0.tar.gz
+	% sudo mkdir Resource
+	% cd Resource
+	% sudo tar xvzf ~/src/adobe-cmaps-200109.tar.gz
+	% sudo tar xvzf ~/src/acro4-cmaps-1999.tar.gz
+	% cd ../6.53/lib
+	% sudo vi CIDFnmap
+	% diff -u CIDFnmap.orig CIDFnmap
+--- CIDFnmap.orig	Tue May 28 17:58:12 2002
++++ CIDFnmap	Tue May 28 18:22:29 2002
+@@ -139,6 +139,13 @@
+ %(CIDFnmap.ARP) .runlibfile
+ %(CIDFnmap.Bae) .runlibfile
+ %(CIDFnmap.Koc) .runlibfile
+-%(CIDFnmap.Sol) .runlibfile
++(CIDFnmap.Sol) .runlibfile
+ 
+ %(CIDFnmap.CJK) .runlibfile
++
++/Ryumin-Light           /HG-MinchoL	  ;
++/GothicBBB-Medium       /HG-GothicB	  ;
++/HeiseiMin-W3           /HeiseiMin-W3H	  ;
++/HeiseiKakuGo-W5        /GothicBBB-Medium ;
++/HeiseiMin-W3-Acro      /Ryumin-Light	  ;
++/HeiseiKaKuGo-W5-Acro   /GothicBBB-Medium ;
+
+	% sudo vi gs_res.ps
+	% diff -u gs_res.ps.orig gs_res.ps
+--- gs_res.ps.orig	Tue May 28 18:24:29 2002
++++ gs_res.ps	Tue May 28 18:25:30 2002
+@@ -248,8 +248,8 @@
+   /pssystemparams 10 dict readonly def
+ } if
+ pssystemparams begin
+-  /FontResourceDir (/Resource/Font/) readonly .forcedef	% pssys'params is r-o
+-  /GenericResourceDir (/Resource/) readonly .forcedef	% pssys'params is r-o
++  /FontResourceDir (/usr/local/share/ghostscript/Resource/Font/) readonly .forcedef	% pssys'params is r-o
++  /GenericResourceDir (/usr/local/share/ghostscript/Resource/) readonly .forcedef	% pssys'params is r-o
+   /GenericResourcePathSep (/) readonly .forcedef	% pssys'params is r-o
+ end
+ end
+
+2002-05-27  Masao Takaku  <masao@ulis.ac.jp>
+
+	* Solaris7 & 非PostScriptプリンタ:
+
+	3時間ほど nile から 2kou8100 へプリントアウトする方法を模索してい
+	た。結局 gs から入れなおしになりそうなので、また明日。
+
+	* win-ssh-askpass: Windows 用の ssh-askpass。
+	http://www.ganaware.jp/S/win-ssh-askpass/index.html
+
+	cygwin 環境の SSH はあまり使わないから関係ないけど…。
+
+	* JGraph: http://www.jgraph.com/
+
+	Java の Swing コンポーネントとしてのグラフ実装。
+	グラフレイアウトはこれからみたい…。
+
+	GXL（Graph Exchange Language）という表現形式を SVG に変換するユー
+	ティリティも付いている。
+
+	cf. http://www.gupro.de/GXL/
+
+	* nile の UPS:
+
+	どうやら、Matlab Webserver の起動スクリプトがささっていた模様…。
+
+2002-05-24  Masao Takaku  <masao@ulis.ac.jp>
+
+	* PHP4: configure がゴチャゴチャしすぎだよ…。
+
+	% ./configure  --enable-mbstring --enable-mbstr-enc-trans \
+		--enable-mbregex --with-apxs=/usr/local/apache/bin/apxs \
+		--with-openssl --with-db3 --with-gd --enable-gd-native-ttf \
+		--with-png --with-jpeg-dir=/usr/local --with-zlib \
+		--with-zlib-dir=/usr/local --with-png-dir=/usr/local \
+		--with-ttf --with-gettext --with-iconv --with-dom \
+		--with-dom-xslt --with-dom-exslt --with-bz2
+	% make
+	% sudo make install
+
+	make install 時に httpd.conf に自動的に
+
+	  LoadModule php4_module        libexec/libphp4.so
+
+	の一行を挿入してくれるみたい。
+
+	* バグ:
+
+	昨夜やっていたODPデータの索引付けで、ループを回す際に変数を再初期
+	化しなおしていなかったという問題が発覚。
+
+	おかげで、数秒で終わるはずの処理が数時間もかかっていた…。
+
+	* インストールしておきたいモノ:
+
+	・Perl5-DBI
+	・PHP4
+
+2002-05-23  Masao Takaku  <masao@ulis.ac.jp>
+
+	* Netscape Messenger のメールのパスワード保存について:
+	http://packetstorm.dnsi.info/new-exploits/ns4.5-mail-passwd.txt
+
+	"user_pref password" で Google を検索した。
+
+2002-05-22  Masao Takaku  <masao@ulis.ac.jp>
+
+	* ODP: ODP インデックスの内容を表示する one-liner。
+
+	perl -e 'dbmopen(%hash, "odp_children", 0444) || die "error: $!"; while(($k, $v) = each %hash) { print "$k\t$v\n"; }' | less
+
+	* 影舞: http://www.daifukuya.com/kagemai/
+
+	ちょっと触ってみたけど、eRuby のセキュリティの問題の方がちょっと怖
+	いので、どうしようか悩む…。
+	cf. http://www.modruby.net/ml/archive/modruby-ja/200205.month/287.html
+
+	あ、mod_ruby 環境なら大丈夫か。
+	…いや、今度は影舞自体が動かなそう。
+
+	でも、影舞自体は結構使えそう。
+	スケーラビリティはどうだろう。▽すうまんけん
+
+	* Ruby version-up: eruby を入れてみたかったので、ついでに Ruby の
+	バージョンを上げてみた。
+
+	migemo が動かなくなったので、Ruby/Bsearch のバージョンを上げて解決。
+
+	他にもありそうなので、ちょっと心配だけど、様子見ておこう。
+
+	* lynx & putty: putty 上で lynx を動かすと、必ず文字化けする。
+
+	ちょっと調べてみたところ、terminfo のエントリとの相性が悪いらしい…。
+	cf. http://lists.debian.or.jp/debian-users/199804/msg00571.html
+	cf. http://lists.debian.or.jp/debian-users/199709/msg00086.html
+
+	* upsd: nile の upsd がうまく動いていないみたい。
+
+	どうしてだろう…。とりあえず、週末の停電時にテストしてみよう。
+
+2002-05-21  Masao Takaku  <masao@ulis.ac.jp>
+
+	* PuTTY:
+
+	日本語化パッチのバージョンが上がっていて、設定ダイアログの部分の表
+	示も日本語になったようなので、使ってみる。
+
+	PuTTY 上で w3m を使うと、マウスでの操作が効くようになっていた。
+	今まで使ったことがなかったので、ちょっと感動。
+
+	しばらく、TTSSH の代わりに使ってみよう。
+
+	あと、設定内容をレジストリに登録するようなので、toro だと動かない
+	かも…。
+
+	* XHTML & Mozilla: Mozilla 1.0 Party [jp] での発表。
+	http://www.w3.org/2002/Talks/0518-mozilla.party.jp-3.0/
+
+	* Common SQL Environment: http://www.hi-ho.ne.jp/tsumiki/
+
+	RDBMS を GUI でいじるツール。（DB 設計含む）
+
+	* Perl ドキュメント日本語訳 ML: 
+	http://www.freeml.com/ctrl/html/MessageListForm/perldocjp@freeml.com
+
+	貢献してみたいけど、どうなんだろう…。
+
+2002-05-17  Masao Takaku  <masao@ulis.ac.jp>
+
+	* TuxTyping: SDL ライブラリベースのタイピングソフト。
+	http://www.geekcomix.com/dm/tuxtype/
+
+	ちょっとやってみたけど、nile だと遅くて使えない…。
+	Windows版もあったので、こちらは快適。
+
+	とりあえず、インストールの過程をメモ。
+
+	% tar zxvf ~/src/SDL-1.2.4.tar.gz
+	% cd SDL-1.2.4
+	% ./configure
+	% make
+	% sudo make install
+
+	% tar zxvf ~/src/SDL_image-1.2.2.tar.gz
+	% cd SDL_image-1.2.2
+	% env CFLAGS=-I/usr/local/include/libpng ./configure --disable-shared
+	% make
+	% sudo make install
+
+	% tar zxvf ~/src/SDL_mixer-1.2.3.tar.gz
+	% cd SDL_mixer-1.2.3
+	% make
+	% sudo make install
+
+	% tar zxvf ~/src/tuxtype-1.0.1.tar.gz
+	% cd tuxtype-1.0.1
+	% ./configure
+	% make
+	% sudo make install
+
+	* 個人指導:
+
+	・UTF-8 ベースでデータを持つ。
+	・symbolic の表示を narrow とは別にする。
+
+	などのアイデアが出た。
+
+	* {sut,tus}.ac.jp:
+
+	なんか最近になって英語名称を変えたので、ドメイン名もついでに(?)変
+	えたらしい。
+
+	統合するわけでもないのに(?)、ご苦労なことで…。
+
+2002-05-16  Masao Takaku  <masao@ulis.ac.jp>
+
+	* Mozilla1.0RC2 & Acrobat Reader:
+
+	セキュリティ上の問題から、Mozilla1.0RC2 にバージョンを上げたところ、
+	Acrobat Reader がプラグインとして実行されるようになった。
+
+	mozilla.gr.jp の掲示板で聞いたところ、このバージョンからプラグイン
+	を探しにいくルーチンが加わったとのこと。
+
+	一応、Bugzilla で検索してみると、
+
+	・Scan for plugins in their installation folders
+	  http://bugzilla.mozilla.org/show_bug.cgi?id=133282
+	でこの実装についての議論が行われている模様。
+
+	このプラグイン設定を制御するやり方については、
+	・Plug-In Manager (ui for choosing mimetype-plugin associations)
+	  http://bugzilla.mozilla.org/show_bug.cgi?id=19118
+	・[RFE]Need pref UI for plugins
+	  http://bugzilla.mozilla.org/show_bug.cgi?id=141402
+	などで議論されている模様。
+
+	せめてリリースノートに書いておいて欲しいよ。
+
+	* NetPBM-9.25 on uni:
+
+	ちょっと面倒だったのでメモ。
+	（Autoconfベースになっていない（古めの）ツールはこれだからイヤ…）
+
+	./configure して質問に答えたあと、
+
+	% make PNGLIB_DIR=/opt/ULIS/local/lib PNGHDR_DIR=/opt/ULIS/local/include JPEGLIB_DIR=/opt/ULIS/local/lib JPEGHDR_DIR=/opt/ULIS/local/include TIFFLIB_DIR=/home/x/masao/lib TIFFHDR_DIR=/home/x/masao/include
+
+	として適当にライブラリの位置を教えてコンパイルする。
+
+2002-05-15  Masao Takaku  <masao@ulis.ac.jp>
+
+	* メインシステム定例会: 2時間半…。ちょい疲れた。
+
+	来月くらいからは、なんとか残件数も減りだすのではないだろうか!?
+	（希望的観測）
+
+2002-05-14  Masao Takaku  <masao@ulis.ac.jp>
+
+	* tidy: とりあえずメモ。
+
+	EUC-JP の HTML ファイルに対しては、↓のようにする。
+
+	% tidy -c -raw ipcnews_new.html > z.html
+
+	* dmoz.org の RDF: 全くスキーマがわからん。
+
+	・どこが決めたタグなの？
+	・何が書いてあるの？
+	くらいの情報は欲しい。
+
+	とりあえず、現在使われているタグの種類は以下のとおり。
+	（対象は「Generated at 2002-05-02 03:05:28 GMT」）
+
+	% gzip -cd ~/src/structure.rdf.u8.gz | perl -nle 's/<([^\/\s>]+)/print $1/ge;' | sort | uniq -c | sort -nr
+
+	698242 d:Title
+	438593 catid
+	438593 Topic
+	417768 lastUpdate
+	382783 narrow
+	319910 symbolic
+	259649 Target
+	259649 Alias
+	244574 related
+	192432 altlang
+	139016 d:Description
+	30444 editor
+	29914 symbolic1
+	23332 narrow1
+	19371 letterbar
+	18103 symbolic2
+	15173 newsGroup
+	13109 narrow2
+	60 d:charset
+	1 RDF
+	1 ?xml
+	1 !--
+
+	だいたいが narrow{,1,2} とか symbolic{,1,2} とか意味不明だよ…。
+
+	とりあえず、www-rdf-interest ML を検索してみると、RDF-M&S に準拠す
+	るようにするスクリプトが、
+	http://www-diglib.stanford.edu/diglib/ginf/download/dmoz/
+	にあるみたい。
+
+	あと、
+	http://www.lans.ece.utexas.edu/~guest/project/dmozrdf-doc.txt
+	には、簡単な説明があった。
+
+	* Xalan-J での &minus;: 昨日の続き。
+
+	http://xml.apache.org/xalan-j/usagepatterns.html#outputprops
+
+	によれば、独自の実体参照用のリソースファイルを作って、<xsl:output>
+	要素に、
+
+	   xalan:entities="MyHTMLEntities.res"
+
+	と属性で指定するのが正統派のようだ。
+
+	* 「テーマ潰れてしもたがな」:
+	http://wwwacty.phys.sci.osaka-u.ac.jp/~atom11/front/theme.html
+
+	興味深い…。
+
+	* Terrarium: http://www.microsoft.com/japan/msdn/net/terrarium/
+
+	けっこう面白そう。 .Net + C# ってどんな感じだろう。
+
+	卒研で誰かこんなのやってなかってけ？
+
+	* Sylpheed with OpenSSL:
+
+	せっかくなので、SSL対応の Sylpheed を作り直そうと思ったのだが、
+	configure スクリプトに OpenSSL の prefix をうまく伝える方法がよく
+	わからん。
+
+	Linux 系のディストリビューションなどだと /usr 配下だから良いのだろ
+	うけど、手でソースからインストールしてあるやつを使おうとすると、指
+	定方法がわからん。
+
+	とりあえず、↓でごまかす。
+
+	% env CFLAGS="-g -O2 -I/usr/local/ssl" LIBS="-L/usr/local/ssl/lib" ./configure --enable-ssl
+
+2002-05-13  Masao Takaku  <masao@ulis.ac.jp>
+
+	* access_log: [2002-04-20] の Apache バージョンアップ時の
+	httpd.conf にアホな間違いを見つけた。
+
+	CustomLog /usr/local/apache/logs/access_log common
+	CustomLog /usr/local/apache/logs/access_log combined
+
+	の2行を両方有効にしていた。おかげで、1回アクセスされるたびに、ログ
+	が2行増えるようになっていたみたい…。
+
+	もうちょっと早く気付いてもいいものだがなぁ…。
+	あとで、適当に時間を見計らって修正しておこう。
+
+	* Xalan-J での &minus;:
+
+	Xalan-J である XML 文書を HTML4.01 に変換していて、文字「−」が
+	「&minus;」になってしまっており、NN4.X ではちゃんと表示されないと
+	いう問題を指摘された。
+
+	XSLT仕様書より:
+
+	  html 出力メソッドは、ある文字に対するキャラクターエンティティリ
+	  ファレンスが使用中の HTML のバージョンで定義されていれば、キャラ
+	  クターエンティティリファレンスを使用してその文字を出力してもよい。
+
+	とのことなので、Xalan-J の仕様かと思われる。しかし、『してもよい』
+	という実装依存な機能に頼るのはよろしくないと思うので、要検討。
+
+	* Xalan-J のバージョン:
+
+	ちょっと古めの xalan.jar からバージョンを見る方法。
+
+	% java -classpath xalan.jar org.apache.xalan.processor.XSLProcessorVersion
+
+	てな感じ（Xalan Java 2.2.D10で確認）。
+	もっと新しいモノでは、「org.apache.xalan.Version」でOK。
+
+	* 原稿: 入学生向けの大学紹介の原稿を頼まれた…。
+
+	何書こうかな？
+
+	* Graphviz-ja:
+
+	ひさびさに最新版 graphviz-1.8.5 をダウンロードして触ってみると、フォ
+	ントサイズの計算部分のコードに変更が入っていた。
+	dotneat/common/fontmetrics.c に独立しておかれており、umlaut などを
+	考慮した数値も加っていた。
+
+	しかしながら、相変わらず符号化方式は考慮していない。
+	どうしようかしら…。
+
+	あ、しかも気付いたらフォントサイズの指定部分に EUC-JP を考慮したハー
+	ドコード無しでも、ラベル幅の計算がうまくいくようになっている。
+
+	これは、GDライブラリの機能で、
+
+	err = gdImageStringFT(NULL, brect, -1, fontlist,
+	                fontsz, 0, 0, 0, gd_string(str,buf));
+
+	上のようにすると、レンダリングに必要な幅が brect[] に入るのを利用
+	しているみたい。
+	cf. gd_textsize()
+
+	ただ、これまでのバージョンでもこのコードは入っているみたいなのに、
+	何でうまくいっていなかったんだろう…。
+
+	あと、ビットマップ（PNG, JPEG, VRML, イメージマップ）以外の出力形
+	式はこのコードを利用しないようなので、それも考慮する必要アリかもね。
+
+2002-05-10  Masao Takaku  <masao@ulis.ac.jp>
+
+	* CVSTrac: http://www.hwaci.com/sw/cvstrac/
+
+	CVS と SQLite を利用した bug tracking system。
+	面白そう。
+
+	* iPlanet-WebServer-Enterprise/4.1:
+
+	  SERVER_SOFTWARE=iPlanet-WebServer-Enterprise/4.1
+
+	では、STDERR と STDOUT を区別しないらしい…。
+
+	cf. http://www.google.co.jp/search?q=cache:L6akm81KODAC:books.roots-hell.net/webserver_bookshelf/cgi/ch03_01.htm+iplanet+stderr+stdout&hl=ja
+
+	不便でしかたがない…。
+	perl -w で CGI を動かせない。
+
+2002-05-09  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 環境情報: 興味深い話をうかがった。
+
+	・オントロジー/シソーラス
+	・総合DB（クリアリングハウス）
+
+	* All About Color: 色彩に関する入門ほか。
+	http://www.d2.dion.ne.jp/~yoshih/color_index.html
+
+	非常にためになるかも。
+
+2002-05-08  Masao Takaku  <masao@ulis.ac.jp>
+
+	* nile バックアップ:
+
+	ずっとうまく nile のバックアップ（/home）がとれていないと悩んでい
+	たが、単に前回の起動時にオートローダの電源を投入するのが遅れただけ
+	だったみたい。リブートしたら直った。
+
+2002-05-07  Masao Takaku  <masao@ulis.ac.jp>
+
+	* OpenSSL: 結局、一番楽な解決法を選んだ。
+
+	e_os.h にある DEVRANDOM マクロを /dev/random に変更しただけ。
+
+	* メタデータ表示:
+
+	だいぶ前に頼まれていたバイトの仕上げをした。
+
+2002-05-03  Masao Takaku  <masao@ulis.ac.jp>
+
+	* ワン切り: 最近、au のケータイによくワン切りがかかってくる。
+
+	特に深夜。やめてほしい…。
+	気付かないときも多いから、まだマシだけど…。
+
+	* zlib セキュリティ: OpenSSL や ImageMagick などのパッケージをイン
+	ストールしようとしていて気付いたけど、zlib にセキュリティホールが
+	見付かってたよね。
+
+	cf. http://www.gzip.org/zlib/advisory-2002-03-11.txt
+	cf. http://www.cert.org/advisories/CA-2002-07.html
+
+	zlib に依存しているものを片っ端からインストールし直さないといけな
+	いかなあ。面倒だな…。
+
+	  http://cert.uni-stuttgart.de/files/fw/find-zlib
+
+	に zlib を使っているバイナリを見つける Perl プログラムあり。
+
+	* Ejen: http://ejen.sourceforge.net/
+
+	Java ベースで、XML/DOM/XSLT の技術を使ったコード生成系。
+
+	* AWStats: http://awstats.sourceforge.net/
+
+	他のログ解析ツールとの比較表を見た感じでは、ちょっと良さげだと思っ
+	たけど、日本語の文字コードなどを考慮していないので使えない。
+
+	Shift_JIS の ASCII コードの範囲のものも含めて uc() しちゃうとか…。
+	（「訪問」→「北問」になっちゃった）
+
+2002-05-02  Masao Takaku  <masao@ulis.ac.jp>
+
+	* OpenSSL 再び:
+
+	http://www.cosy.sbg.ac.at/~andi/ に Solaris 用の /dev/random パッ
+	ケージがあるみたい。
+
+	あと、/etc/init.d/cryptorand のスクリプトを直接いじって、FIFO ファ
+	イル名を /dev/urandom に変えるだけでも動くのでは？
+	という報告もあった。
+
+	参考URL:
+
+	・「Building and Deploying OpenSSH for the Solaris」
+	http://wwwwswest.sun.com/blueprints/0701/openSSH.pdf
+
+	あと、
+	  http://memo.st.ryukoku.ac.jp/archive/200110.month/1564.html
+	から始まる記事も参考になる。
+
+	* mnewsprint: Version 0.4 をリリース。
+
+	Solaris7 の mail コマンドが出すメッセージは、Content-Type ヘッダが
+	"text" だけなので、テキストとみなされていなかったのに対応しておい
+	た。
+
+	しかし、"text" だけだと、 RFC2045 には従ってないんだけどなあ。本当
+	は、Mime-Version ヘッダとかも考慮して決めた方が良いんでしょうけど…。
+
+	と思ったら、Content-Type ヘッダが無い場合の処理を間違えた…。
+	だれも取っている人はいないみたいなので、差し替えた。
+	
+	* nile バックアップ:
+
+	一番重要な nile:/home のバックアップがうまくいっていない模様。
+
+	オートチェンジャにテープがロードされているか、確認すること。
+
+	* CVS (LA 研究会):
+
+	本サイト（phase）上で、`cvs update`をかけたら、コンフリクトした。
+
+	解決策:
+	1. welcome.html をレポジトリから消す。
+	2. cvs update してから、ファイルをアップロードする。
+	3. 長谷川先生が cvs commit する。
+
+	この方針のどれかで、ちょっとテストしてみる。
+
+2002-05-01  Masao Takaku  <masao@ulis.ac.jp>
+
+	* ImageMagick bug?:
+
+	% convert -crop 30x45+10+20 zzz.bmp bababa.bmp
+
+	モノクロ画像を↑としたら、白黒反転してしまった。
+	また、ImageMagick のバグか…。
+
+	なお、最新（CVS）のものを試したら、直っていた。
+	今、nile にインストールしてあるものは、
+
+	Version: @(#)ImageMagick 5.2.4 00/10/01 Q:8 cristy@mystic.es.dupont.com
+
+	という代物。
+
+	* OpenSSL: インストールはしてみた。
+	しかし、なんだかうまくいかない…。
+
+	Sylpheed で IMAP4/SSL 対応で接続すると、以下のメッセージが出る。
+
+	Sylpheed-WARNING **: SSL の接続に失敗しました (error:24064064:random number generator:SSLEAY_RAND_BYTES:PRNG not seeded)
+	Sylpheed-WARNING **: Can't establish IMAP4 session with: imap.ipc.ulis.ac.jp:993
+
+	openssl.org の FAQ を読むと、/dev/random が十分なランダム性を提供
+	しない OS で出るエラーらしいが、ちゃんと nile には /dev/random が
+	あるんだけど…。
+	cf. http://www.openssl.org/support/faq.html#USER1
+
+	とりあえず、FAQ にのってるパッチをインストールしてみても良いかも…。
+	http://marc.theaimsgroup.com/?l=openssl-users&w=2&r=1&s=105710-01&q=b
+
+	* Archive Webserver: from freshmeat.
+	http://www.verelst.net/software/archserv.php
+
+	ファイルが事故で失なわれた際に、Web サーバとして Google や
+	archive.org へのリダイレクトだけを行う簡易サーバ。
+
+	* OpenSSH & パスワードエージング: Bugzilla を探すと、最近になって
+	ちょっと変更があった模様。
+
+	http://bugzilla.mindrot.org/buglist.cgi?product=Portable+OpenSSH&component=sshd&long_desc=expir&long_desc_type=allwordssubstr
+
+	PAM を使えば、Expire された時にパスワード変更を求めることができる
+	ようになるかも!?
+
+2002-04-30  Masao Takaku  <masao@ulis.ac.jp>
+
+	* Email アドレス補完計画:
+
+	いや、単に To: Cc: などを記入する際に Aliases の情報を元に TAB な
+	どで自動補完してくれると嬉しいな、ということ。
+	っていうか、アホな間違いをしないで済むよね。
+
+	手法:
+	1. mnews のソースをいじる。
+	2. mutt を使う。
+	3. BBDB を使う。
+
+	のどれを使うか検討中。
+
+	阪口先生は「sendmail.cf をいじる」を教えてくれたが、そいつはさすが
+	に…。
+
+	* ショッピングサイト:
+
+	できるだけ無作為にショッピングサイトを抜き出したいので、売上高別の
+	ランキングなどの情報が欲しかったのだが、あまり見当たらない。
+
+	参考サイト:
+
+	・｢インターネット・ショッピング利用実態調査｣:
+	http://www.commerce.or.jp/enq/report/enq11/2.html
+
+	実際の利用サイト名がわかる貴重な資料。
+	ただし、ちょい情報が古いのが難点か。（翌年度からは、この情報が無く
+	なってるんだよね…）
+
+	・電子商取引推進協議会: http://www.ecom.or.jp/
+
+	「平成13年度電子商取引に関する市場規模・実態調査」
+	http://www.ecom.or.jp/press/20020219_1.html
+	→ ちょっと概況すぎ。
+
+	・JADMA 日本通信販売協会: http://www.jadma.org/
+
+	「オンラインマーク付与事業者一覧リスト」 http://www.jadma.org/ost/
+	→ 2002-04-29 現在で 255 と多いけど、そこそこ使えるかも…。
+
+	* 影舞: http://www.daifukuya.com/kagemai/
+	eRuby による実装。
+
+	インストールとカスタマイズの容易さが大きな特徴か。
+	結構前から気にはなってるので、あとで見てみよう。
+
+	* Web ベースのメールクライアント: メモ。
+	http://www.matsusaka-u.ac.jp/~okumura/networking/webmail.html
+
+	* 同姓同名？:
+
+	M1 の Elena さんのエントリが 3 つもあったので、センターに聞いてみ
+	たところ、「登録ミス」とのこと。
+
+	一応、確認用に作った /etc/passwd から同姓同名を抜きだすスクリプト。
+
+	use strict;
+	my %uinfo = ();
+	while (<>) {
+	    my @tmp = split(/:/);
+	        if (defined($uinfo{$tmp[4]})) {
+		    $uinfo{$tmp[4]} .= " $tmp[0]";
+		} else {
+		    $uinfo{$tmp[4]} = $tmp[0];
+		}
+	    }
+	}
+	for my $gcos (keys %uinfo) {
+	    print "$gcos\t=> $uinfo{$gcos}\n" if ($uinfo{$gcos} =~ /\s/);
+	}
+
+	なにげに、"Hitomi Saito" が複数あったりして、おもろかった。
+
+	* Webalizer:
+
+	何度かインストールしてみているものの、検索文字列にNKF相当の処理を
+	加えていないのが気になってしまっている。
+
+	SearchEngine ディレクティブに Encoding 情報を付加して、解析時に
+	iconv() で変換できるように改造すれば、良いかも…。
+
+	とりあえず、Perl で検索文字列を access_log から抜き出すには、↓。
+
+	use Text::ParseWords;
+	while (<>) {
+	    @f=quotewords(" ",0,$_);
+	    $referer = $f[8];
+	    if (/[pq]=([^;&]+)) {
+	    	$search_string = $1;
+		$search_string =~ s/%([A-F0-9][A-F0-9])/chr(hex($1))/gie;
+		$search_string =~ s/\+/\ /g;
+		print $s
+	    }
+	}
+
+2002-04-29  Masao Takaku  <masao@ulis.ac.jp>
+
+	* emerald: [2002-04-24]に IAA をインストールしたら、ウソのように快
+	調になってしまった。
+
+2002-04-26  Masao Takaku  <masao@ulis.ac.jp>
+
+	* シソーラス:
+
+	ちょっと OPAC とか Google あたりで検索してみたら、いくつか見つけた。
+
+	・http://www.ipa.go.jp/STC/NIHONGO/IPAL/ipal.html
+
+	IPAL 辞書にもそれっぽいのがありそう…。
+
+	・http://lang.is.kyushu-u.ac.jp/~itimaru/dist/xthes/
+
+	xthes は Perl/Tk で書かれたシソーラスブラウザ。
+	昔から知ってるけど、念のため再掲。
+
+	・『ニュース・シソーラス』中国新聞社編なるものもあるらしい。
+
+	けっこう網羅的に集めている。ただ、電子版はなさそう…。
+
+	* 個人指導:
+
+	・サブカテゴリの追加時に、ID の番号付与がおかしくなるかもね。
+
+	→ もう一度、XMLの構造を一から作りなおしてもらうことにしましょう。
+
+	・シソーラス管理システム
+
+	→ 金を取ってきて、独自システムを作らせる。 RDB もあるかも…。
+
+	・色の対応（体系が増えた場合にどうする？）
+
+	→ 色鉛筆の 12 色 （-2）
+
+	・多くの用語体系を入れる
+
+	→ ショッピングサイト、サーチエンジンのカテゴリを使う。
+
+	・追加情報
+
+	→ URLでリンク、複数の情報を入れるという手もあるから慎重に…。
+
+	・SVG
+
+	→ 山島さんが詳しい。
+
+	・新聞の用語体系
+
+	→ 毎日新聞一年分に UDC を付与した例あり。
+
+2002-04-25  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 高橋くん（卒研生）のデータ利用:
+
+	1. まず、Word のデータをプレインテキストに落とす。
+
+	・ごみ・リサイクルカテゴリver.2.0.doc
+	・エコビジネスカテゴリver.2.0.doc
+	・エネルギーカテゴリver.2.0.doc
+	・健康・化学物質カテゴリver.2.0.doc
+	・地球環境カテゴリver2.0.doc
+	・大気環境カテゴリver.2.0.doc
+	・水・土壌環境カテゴリver2.0.doc
+	・環境一般カテゴリver.2.0.doc
+	・環境学習カテゴリver.2.0.doc
+	・環境行政カテゴリver.2.0.doc
+	・自然環境カテゴリver.2.0.doc
+
+	2. テキストデータは、eic.txt というファイルにする。
+	（先頭の空白を除去した。）
+
+	% perl -pe 's/^\s+//g' z > eic.txt
+
+	3. eic2xml.pl を作成して、XML形式にする。
+
+	% ./eic2xml.pl eic.txt > eic.xml
+
+	4. インデックスの作成
+
+	% ./mkindex.pl -s eic.xml
+
+	5. 見出し語検索のインデックスを作成
+
+	% ./mkwordlist.pl eic > eic_words
+	% ./mksary-wrapper.pl eic_words
+
+	6. CGI プログラムを修正
+
+	CGIプログラムの %index_strings ハッシュに以下を追加。
+
+	  'eic' => 'EIC'
+
+	* レファレンスケースDB:
+	http://web.lib.kumamoto-u.ac.jp/ref/edu/ref.html
+
+	生のおもろいデータがそろっている。
+
+	* 過去問データベース: http://www.ulis.ac.jp/~j108/index.html
+
+	作ってる人は常にいるんだけど、これだけ整理して量をそろえたのは、う
+	ちの大学はじまって以来ではないかな…。
+
+	* 「UNIX 用語 由来/読み方辞書 version 1.6 (Feb 13 1995)」:
+	http://www.cjn.or.jp/docs/dic/unix-term-dic.html
+
+	単にメモ。
+
+	* CVS ブランチ: ブランチの作りかた。
+	http://www.sodan.org/~penny/vc/cvs-ja_5.html そのまんまだけど…。
+
+	edr-ndc レポジトリを IPSJ-FI での発表時点（2001-11）の内容に固定し、
+	新しい内容は Main-Trunk だけに反映させる。
+	（http://clover.ulis.ac.jp/~masao/edr-ndc/）
+
+	・ブランチを作る
+
+	% cd public_html/edr-ndc
+	% cvs tag -b ipsj-fi-2001-11
+
+	・ブランチのアクセス
+
+	% cd public_html/edr-ndc
+	% cvs update -r ipsj-fi-2001-11
+
+	念のため、元に戻したくなった時のために ~/.cvsroot/ndc-edr.orig を
+	残しておく。
+
 2002-04-24  Masao Takaku  <masao@ulis.ac.jp>
 
 	* Wiki Way: WikiWikiWeb の書籍。
-
-	Amazon.co.jp から買おうかと一瞬思ったけど、YukiWiki にある情報によ
-	ると翻訳中らしいので、やめておく。
-
 	http://www.amazon.co.jp/exec/obidos/ASIN/020171499X/wwwhyukcomhir-22/250-8557369-0853839
+
+	Amazon から買おうかと一瞬思ったけど、YukiWiki にある情報によると、
+	現在、翻訳中らしいので、やめておく。
+
 	http://www.hyuki.com/yukiwiki/yukiwiki.cgi?mycmd=read&mypage=WikiWay
 
 	* Web 掲示板: 一応、気になったものを書いておく。
@@ -73,7 +1387,6 @@
 
 	暇ができたら、読んでみる。
 
-	
 	* emerald 不調: とりあえず IAA（Intel Application Accelerator）を
 	インストールしてみた。
 
@@ -108,8 +1421,16 @@
 
 	・httpd.conf の退避
 
-	% diff -u httpd.conf-dist httpd.conf.20020420 > /tmp/httpd.conf.diff
+	% cd /usr/local/apache/conf
+	% diff -u httpd.conf.default httpd.conf > /tmp/httpd.conf.diff
 	% sudo cp httpd.conf httpd.conf.20020420
+
+	・Apache のコンパイル
+
+	% tar zxvf ~/src/apache_1.3.24.tar.gz
+	% cd apache_1.3.24
+	% ./configure --enable-module=all --disable-rule=EXPAT
+	% make
 
 	・既存 Apache の停止
 
@@ -130,10 +1451,9 @@
 	% sudo mv error_log error_log.20020420
 	% sudo gzip -9 error_log.20020420
 
-	・Apache のコンパイル、インストール
+	・Apache のインストール
 
-	% ./configure --enable-module=all
-	% make
+	% make -n install | less
 	% sudo make install
 
 	・httpd.conf の編集
@@ -141,6 +1461,7 @@
 	/tmp/httpd.conf.diff を見て、ひとつずつ設定項目を確認しながら編集
 	していく。
 
+	% cd /usr/local/apache/conf
 	% sudo vi httpd.conf
 
 	・httpd.conf のテスト
