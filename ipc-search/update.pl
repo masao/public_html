@@ -48,7 +48,7 @@ sub main {
 	# 次に、Indexingする。
 	print "Indexing を行います。\n";
 	$ENV{'LANG'} = "ja";
-	system "$Mknmz --all --checkpoint -f ${HtmlDir}/mknmzrc --replace='s#${BaseDir}/#http://#; s#/index.html$#/#;' *.ac.jp";
+	system "$Mknmz --all --checkpoint -f ${HtmlDir}/mknmzrc --replace='s#${BaseDir}/#http://#; s#/index.html\$#/#;' *.ac.jp";
     } else {
 	die "収集した文書が $BaseDir/www.slis.tsukuba.ac.jp にありません。";
     }
