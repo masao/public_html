@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!-- Converted with jLaTeX2HTML 98.1p1 release (March 2nd, 1998) + JP patch 2.0 (March 16th, 1998)
+patched by Kenshi Muto (mutou@three-a.co.jp), Three-A Systems,Co.,Ltd.
+LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others  -->
+<HTML>
+<HEAD>
+<TITLE>Implementation Skeleton（実装スケルトン）</TITLE>
+<META NAME="description" CONTENT="Implementation Skeleton（実装スケルトン）">
+<META NAME="keywords" CONTENT="2">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-2022-jp">
+<LINK REL="STYLESHEET" HREF="2.css">
+<LINK REL="previous" HREF="node9.html">
+<LINK REL="up" HREF="node2.html">
+<LINK REL="next" HREF="node11.html">
+</HEAD>
+<BODY >
+<!-- Navigation Panel -->
+<A NAME="tex2html112"
+ HREF="node11.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/~masao/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html110"
+ HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/~masao/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html106"
+ HREF="node9.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/~masao/icons.gif/previous_motif.gif"></A>   
+<BR>
+<STRONG> Next:</STRONG> <A NAME="tex2html113"
+ HREF="node11.html">この文書について...</A>
+<STRONG> Up:</STRONG> <A NAME="tex2html111"
+ HREF="node2.html">Structure of an Object</A>
+<STRONG> Previous:</STRONG> <A NAME="tex2html107"
+ HREF="node9.html">Dynamic Invocation Interface（動的起動インタフェース）</A>
+<BR>
+<BR>
+<!-- End of Navigation Panel -->
+
+<H3><A NAME="SECTION00021800000000000000">
+Implementation Skeleton（実装スケルトン）</A>
+</H3>
+
+<P>
+ある特定の言語マッピングと
+おそらくオブジェクトアダプタに依存する部分については、
+オブジェクトの各型を実現するメソッドへのインタフェースがあるだろう。
+このインタフェースは一般的にup-callインタフェースとなる。
+つまり、オブジェクト実装ではそのインタフェースに従ったルーチンを書き、
+ORBはスケルトンを通じてそれらを呼び出す。
+
+<P>
+スケルトンの存在は対応するクライアントスタブの存在を示すものではない
+（クライアントは動的起動インタフェースを通じても要求を出せる）。
+
+<P>
+実装のメソッドを起動するのにスケルトンを利用しないオブジェクトアダプタを
+書くことができる。
+例えば、
+Smalltalkのような言語では実装を動的に生成することも可能かも知れない。
+
+<P>
+<BR><HR>
+<ADDRESS>
+Masao Takaku
+平成11年3月12日
+</ADDRESS>
+</BODY>
+</HTML>

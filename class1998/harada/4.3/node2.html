@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!-- Converted with jLaTeX2HTML 98.1p1 release (March 2nd, 1998) + JP patch 2.0 (March 16th, 1998)
+patched by Kenshi Muto (mutou@three-a.co.jp), Three-A Systems,Co.,Ltd.
+LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others  -->
+<HTML>
+<HEAD>
+<TITLE>N-Gram Data Stractures</TITLE>
+<META NAME="description" CONTENT="N-Gram Data Stractures">
+<META NAME="keywords" CONTENT="4.3">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-2022-jp">
+<LINK REL="STYLESHEET" HREF="4.3.css">
+<LINK REL="next" HREF="node5.html">
+<LINK REL="previous" HREF="node1.html">
+<LINK REL="next" HREF="node3.html">
+</HEAD>
+<BODY >
+<!-- Navigation Panel -->
+<A NAME="tex2html18"
+ HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/~masao/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/~masao/icons.gif/up_motif_gr.gif"> 
+<A NAME="tex2html12"
+ HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/~masao/icons.gif/previous_motif.gif"></A>   
+<BR>
+<STRONG> Next:</STRONG> <A NAME="tex2html19"
+ HREF="node3.html">History</A>
+<STRONG> Previous:</STRONG> <A NAME="tex2html13"
+ HREF="node1.html">Inverted File Structure</A>
+<BR>
+<BR>
+<!-- End of Navigation Panel -->
+
+<H2><A NAME="SECTION00044000000000000000">
+N-Gram Data Stractures</A>
+</H2>
+
+<P>
+N-グラム (N-Grams) は合成のための特殊な手法、
+情報システムにおける独特のデータ構造とみなされている。
+N-グラムはある決まった長さ``n''文字からなる文字列である。
+一般的に語の意味を表す語幹を決定しようとするステミングとは違い、
+N-グラムは意味を考慮しない。
+その代わりに、
+ある一定の数の文字列に基づいたアルゴリズムを持っている。
+検索可能なデータ構造は、N-グラムを重ねたものに変換され、
+それがデータベースを構築するのに使われる。
+図4.7に2-、3-、5-グラムによる「sea colony」という語句に対する例を示す。
+Nが2以上のN-グラムでは、
+N-グラムの一部として普通は語間記号の1文字を除いているが、
+語間記号を採用するシステムもある。
+記号#は何らかの記号である語間記号（空白、ピリオド、セミコロン、コロンなど）を
+表現している。
+作成されたN-グラムは独立した処理トークンとなり、検索可能となる。
+一つの単語から同一のN-グラムが複数回作成されることもあり得る。
+
+<P>
+<BR><HR>
+<!-- Table of Child-Links -->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html20"
+ HREF="node3.html">History</A>
+<LI><A NAME="tex2html21"
+ HREF="node4.html">N-Gram Data Structure</A>
+</UL>
+<!-- End of Table of Child-Links -->
+<BR><HR>
+<ADDRESS>
+Masao Takaku
+平成11年3月11日
+</ADDRESS>
+</BODY>
+</HTML>

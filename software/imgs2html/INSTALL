@@ -1,0 +1,51 @@
+<html><body><pre>			☆ インストール方法 ☆
+
+							たかくまさお
+							masao@ulis.ac.jp
+
+1. このパッケージでは Perl5, ImageMagick, Ghostscript を利用しています。
+
+  ・Perl5
+	以下から入手できます。
+	<a href="http://www.perl.com/">http://www.perl.com/</a>
+
+	また、Perl5のモジュールPod::Usageを利用していますので、これも
+	インストールしておいてください。（Perl version 5.6.0からは標準
+	モジュールに含まれています）
+	Pod::Usage は PodParser-X.XX.tar.gz に含まれています。（CPAN
+	&lt;<a href="http://cpan.perl.com/">http://cpan.perl.com/</a>&gt; などから入手できます）
+
+  ・ImageMagick
+	以下から入手できます。
+	<a href="http://www.wizards.dupont.com/cristy/ImageMagick.html">http://www.wizards.dupont.com/cristy/ImageMagick.html</a>
+
+
+  ・nkf (Network Kanji Filter)
+	以下から入手できます。
+	<a href="ftp://ftp.ie.u-ryukyu.ac.jp/pub/software/kono/">ftp://ftp.ie.u-ryukyu.ac.jp/pub/software/kono/</a>
+
+  ・Ghostscript
+	日本語対応したものを入れておいてください。以下から入手できます。
+	<a href="http://www.cs.wisc.edu/~ghost/">http://www.cs.wisc.edu/~ghost/</a>
+	
+2. configureスクリプトを動かす。
+
+	% ./configure	[RETURN]
+
+  configureスクリプトでは、Perl5プログラムの位置を明示的に指定できます。
+	% ./configure --with-perl5=/opt/free/bin/perl	[RETURN]
+
+3. make installする。
+
+	% su	[RETURN]
+	Password: ******	[RETURN]
+	# make install	[RETURN]
+
+	デフォルトでは以下の場所にインストールされます。
+	  /usr/local/bin/imgs2html
+	                 ps2imgs
+
+	  /usr/local/man/man1/imgs2html.1
+			      ps2imgs.1
+以上です。
+</pre></body></html> 

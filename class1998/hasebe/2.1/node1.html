@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!-- Converted with jLaTeX2HTML 98.1p1 release (March 2nd, 1998) + JP patch 2.0 (March 16th, 1998)
+patched by Kenshi Muto (mutou@three-a.co.jp), Three-A Systems,Co.,Ltd.
+LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others  -->
+<HTML>
+<HEAD>
+<TITLE>Dynamic Skelton Interface （動的起動インタフェース）</TITLE>
+<META NAME="description" CONTENT="Dynamic Skelton Interface （動的起動インタフェース）">
+<META NAME="keywords" CONTENT="2.1">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-2022-jp">
+<LINK REL="STYLESHEET" HREF="2.1.css">
+<LINK REL="next" HREF="node2.html">
+<LINK REL="previous" HREF="2.1.html">
+<LINK REL="next" HREF="node2.html">
+</HEAD>
+<BODY >
+<!-- Navigation Panel -->
+<A NAME="tex2html9"
+ HREF="node2.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/~masao/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/~masao/icons.gif/up_motif_gr.gif"> 
+<A NAME="tex2html3"
+ HREF="2.1.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/~masao/icons.gif/previous_motif.gif"></A>   
+<BR>
+<STRONG> Next:</STRONG> <A NAME="tex2html10"
+ HREF="node2.html">この文書について...</A>
+<STRONG> Previous:</STRONG> <A NAME="tex2html4"
+ HREF="2.1.html">無題</A>
+<BR>
+<BR>
+<!-- End of Navigation Panel -->
+
+<H3><A NAME="SECTION000211000000000000000">
+Dynamic Skelton Interface （動的起動インタフェース）</A>
+</H3>
+
+<P>
+オブジェクト起動を動的に扱えるインタフェースも利用できる。
+つまり、
+特定のオペレーションを指定したスケルトンを通じてアクセスするのではなく、
+クライアント側の動的起動インタフェースに似たやりかたで、
+オペレーション名とそのパラメータへのアクセスを提供するインタフェースを通じて
+オブジェクトの実装が扱われる。
+パラメータを決定するために、
+純粋にこれらのパラメータに関する静的な知識が利用されることもあれば、
+（おそらくインタフェースレポジトリを通じて決定される）
+動的知識が利用されることもある。
+
+<P>
+実装コードはORBへの全オペレーションパラメータの記述を
+提供しなければならず、
+ORBはオペレーション実行時に使われる入力パラメータの値を提供する。
+実装コードは出力パラメータの値や例外の値をオペレーションの実行後に
+ORBに提供する。
+動的スケルトンインタフェースの性質は
+プログラミング言語のマッピングやオブジェクトアダプタが別のものになると
+非常に異なるものとなるが、
+これは典型的なup-callインタフェースである。
+
+<P>
+動的スケルトンはクライアントスタブ・動的起動インタフェースの両者から
+起動されうるものである。
+つまり、クライアントのリクエスト構造インタフェースの
+両方の形式で同一の結果を返す。
+
+<P>
+<BR><HR>
+<ADDRESS>
+Masao Takaku
+平成11年3月12日
+</ADDRESS>
+</BODY>
+</HTML>

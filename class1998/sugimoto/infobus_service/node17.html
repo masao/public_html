@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!-- Converted with jLaTeX2HTML 98.1p1 release (March 2nd, 1998) + JP patch 2.0 (March 16th, 1998)
+patched by Kenshi Muto (mutou@three-a.co.jp), Three-A Systems,Co.,Ltd.
+LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others  -->
+<HTML>
+<HEAD>
+<TITLE>問題領域とアプローチ</TITLE>
+<META NAME="description" CONTENT="問題領域とアプローチ">
+<META NAME="keywords" CONTENT="infobus_service">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-2022-jp">
+<LINK REL="STYLESHEET" HREF="infobus_service.css">
+<LINK REL="next" HREF="node18.html">
+<LINK REL="previous" HREF="node16.html">
+<LINK REL="up" HREF="node15.html">
+<LINK REL="next" HREF="node18.html">
+</HEAD>
+<BODY >
+<!-- Navigation Panel -->
+<A NAME="tex2html205"
+ HREF="node18.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/~masao/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html203"
+ HREF="node15.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/~masao/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html197"
+ HREF="node16.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/~masao/icons.gif/previous_motif.gif"></A>   
+<BR>
+<STRONG> Next:</STRONG> <A NAME="tex2html206"
+ HREF="node18.html">考察</A>
+<STRONG> Up:</STRONG> <A NAME="tex2html204"
+ HREF="node15.html">STARTS : Managing Search</A>
+<STRONG> Previous:</STRONG> <A NAME="tex2html198"
+ HREF="node16.html">目的</A>
+<BR>
+<BR>
+<!-- End of Navigation Panel -->
+
+<H2><A NAME="SECTION00052000000000000000">
+問題領域とアプローチ</A>
+</H2>
+
+<P>
+メタサーチは現在で困難な作業である。
+なぜなら、異なるサーチエンジンは全体的に非互換で、相互運用性がないからである。
+メタサーチは次の3つの問題に直面している。
+
+<P>
+<DL COMPACT>
+<DT>1.
+<DD>情報資源のメタデータの問題
+<BR>
+メタサーチの検索は数多くの情報資源が対象なので、
+       検索式の実行に最適の情報資源を選ぶための情報資源のコンテンツに関する情報が必要となる。
+
+<P>
+<U>アプローチ</U>
+
+<P>
+STARTSでは情報資源自身について送るべき情報を定義している。
+       この情報は最適の情報資源の選択を支援する
+       自動生成されたコンテンツの要約を含んでいる。
+       また、検索質問の機能も記述している。
+
+<P>
+<DT>2.
+<DD>検索質問の問題
+<BR>
+       メタサーチは複数の情報資源にまたがって検索式を与えるが、
+       各情報資源のインタフェースと機能は大きく異なるので、元の検索式を各情報資源の文法と機能に合わせなければならない。
+
+<P>
+<U>アプローチ</U>
+       
+STARTSは情報資源がサポートすべき単純な検索質問言語を定義している。
+これはZ39.50の単純なサブセットである。
+STARTSの検索質問は2つの要素からなっている。
+検索式を満たす文書を示すブール式と、
+文書にスコアを付け、これに従ってランク付けを行なうランキング式の2つである。
+また、STARTSはフィールド（author、titleなど）を指示するセットや
+修飾子（シソーラス、ステミングなど）を指示するセットも定義している。
+
+<P>
+<DT>3.
+<DD>ランクのマージの問題
+<BR>
+       多くの商用システムでは検索式と文書の類似度によって文書をランク付けしている。
+       メタサーチでは異なる情報資源で文書のランクがどのように算出されたかについての情報が手に入らないので、検索結果をマージするのは困難となる。
+
+<P>
+<U>アプローチ</U>
+       
+STARTSでは情報資源が検索式に対する結果と一緒に何らかの統計情報を返すことを必要としている。
+この方法では、メタサーチャは情報資源が文書に付けたスコアを無視し、
+この統計情報からスコアを計算できる。
+メタサーチャはこの新しいスコアをもとに文書をランキングできる。
+例えば、統計情報には文書中の検索キーワードの出現回数が含まれる。
+</DL>
+<P>
+<BR><HR>
+<ADDRESS>
+Masao Takaku
+平成11年3月12日
+</ADDRESS>
+</BODY>
+</HTML>

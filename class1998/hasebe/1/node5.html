@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!-- Converted with jLaTeX2HTML 98.1p1 release (March 2nd, 1998) + JP patch 2.0 (March 16th, 1998)
+patched by Kenshi Muto (mutou@three-a.co.jp), Three-A Systems,Co.,Ltd.
+LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others  -->
+<HTML>
+<HEAD>
+<TITLE>Requests （リクエスト）</TITLE>
+<META NAME="description" CONTENT="Requests （リクエスト）">
+<META NAME="keywords" CONTENT="1">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-2022-jp">
+<LINK REL="STYLESHEET" HREF="1.css">
+<LINK REL="previous" HREF="node4.html">
+<LINK REL="up" HREF="node3.html">
+<LINK REL="next" HREF="node6.html">
+</HEAD>
+<BODY >
+<!-- Navigation Panel -->
+<A NAME="tex2html59"
+ HREF="node6.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/~masao/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html57"
+ HREF="node3.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/~masao/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html53"
+ HREF="node4.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/~masao/icons.gif/previous_motif.gif"></A>   
+<BR>
+<STRONG> Next:</STRONG> <A NAME="tex2html60"
+ HREF="node6.html">この文書について...</A>
+<STRONG> Up:</STRONG> <A NAME="tex2html58"
+ HREF="node3.html">Object Semantics （オブジェクトセマンティクス）</A>
+<STRONG> Previous:</STRONG> <A NAME="tex2html54"
+ HREF="node4.html">Objects （オブジェクト）</A>
+<BR>
+<BR>
+<!-- End of Navigation Panel -->
+
+<H3><A NAME="SECTION00012200000000000000">
+Requests （リクエスト）</A>
+</H3>
+
+<P>
+クライアントはリクエストを発することによりサービスを要求する。
+<B>リクエスト</B>はイベントである（つまり、ある時刻に発生した何らかの事象）。
+リクエストに結び付いた情報は、
+オペレーション（命令）、ターゲットオブジェクト、
+0個以上のパラメータ、任意のリクエストコンテクストから構成される。
+
+<P>
+<B>リクエスト形式</B>はリクエストを発する度に
+評価・実行される記述もしくはパターンである。
+OMG IDLの``Syntax and Semantics''に記述されているとおり、
+リクエスト形式は特定の言語バインディングにより定義されている。
+リクエスト形式のもう1つのものは
+動的起動インタフェースを呼び出しから構成されている。
+このインタフェースは起動構造を生成し、引数を構造に追加し、起動させるものである（このリクエスト形式の記述は動的起動インタフェース
+(Dynamic Invocation Interface)の章を参照のこと）。
+
+<P>
+<B>値</B>はリクエスト中の実際のパラメータである。
+もう少し言うと、
+値とはOMG IDLのデータ型のインスタンスである。
+非オブジェクトの値と、オブジェクトを参照している値の両方がある。
+
+<P>
+<B>オブジェクトリファレンス</B>はある特定のオブジェクトを確実に示す値である。
+特に、オブジェクトリファレンスは
+リクエスト中でそのリファレンスが利用される度に同一のオブジェクトを識別する
+（実装上の効率の制限を受けるが）。
+オブジェクトは複数のことなるオブジェクトリファレンスにより示される。
+
+<P>
+リクエストはターゲットオブジェクトにデータを渡すのに使う
+パラメータを持つこともある。
+また、
+リクエストに関する追加の情報であるリクエストコンテクストを持つこともある。
+リクエストコンテクストは文字列から文字列へのマッピングである。
+
+<P>
+リクエストによりクライアントのために実行されるべきサービスが起動する。
+サービスを実行した結果として、リクエストで定義されていれば
+クライアントにその結果を返す。
+
+<P>
+リクエストの実行中に異常が起こったら、例外を返す。
+例外にはその例外特有の戻り値が追加されることもある。
+
+<P>
+リクエストパラメータは位置により識別される。
+パラメータは入力値や出力値、入出力値であったりする。
+リクエストは、出力値・入出力値に結果を入れて返すこともあれば、
+戻り値を返すこともある。
+
+<P>
+全てのリクエストに対して以下のようなセマンティクスが保たれる。
+<UL>
+<LI>パラメータ値の別名化は削除・保護いずれも保証されていない。
+<LI>別名化された出力値の書きこまれる順序は保証されない。
+<LI>例外が発生した場合、戻り値と出力値・入出力値に入る値は定義されない。
+</UL>許されている値と例外の記述法に関しては、
+1-4ページの``Types''と1-7ページの``Exceptions''を見よ。
+<BR><HR>
+<ADDRESS>
+Masao Takaku
+平成11年3月12日
+</ADDRESS>
+</BODY>
+</HTML>

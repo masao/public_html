@@ -1,0 +1,133 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!-- Converted with jLaTeX2HTML 98.1p1 release (March 2nd, 1998) + JP patch 2.0 (March 16th, 1998)
+patched by Kenshi Muto (mutou@three-a.co.jp), Three-A Systems,Co.,Ltd.
+LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others  -->
+<HTML>
+<HEAD>
+<TITLE>Overview （概説）</TITLE>
+<META NAME="description" CONTENT="Overview （概説）">
+<META NAME="keywords" CONTENT="1">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-2022-jp">
+<LINK REL="STYLESHEET" HREF="1.css">
+<LINK REL="next" HREF="node3.html">
+<LINK REL="previous" HREF="node1.html">
+<LINK REL="up" HREF="node1.html">
+<LINK REL="next" HREF="node3.html">
+</HEAD>
+<BODY >
+<!-- Navigation Panel -->
+<A NAME="tex2html31"
+ HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/~masao/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html29"
+ HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/~masao/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html23"
+ HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/~masao/icons.gif/previous_motif.gif"></A>   
+<BR>
+<STRONG> Next:</STRONG> <A NAME="tex2html32"
+ HREF="node3.html">Object Semantics （オブジェクトセマンティクス）</A>
+<STRONG> Up:</STRONG> <A NAME="tex2html30"
+ HREF="node1.html">The Object Model （オブジェクトモデル）</A>
+<STRONG> Previous:</STRONG> <A NAME="tex2html24"
+ HREF="node1.html">The Object Model （オブジェクトモデル）</A>
+<BR>
+<BR>
+<!-- End of Navigation Panel -->
+
+<H2><A NAME="SECTION00011000000000000000">
+Overview （概説）</A>
+</H2>
+
+<P>
+オブジェクトモデルはオブジェクトの概念とその用語法について
+組織化された表現を与えるものである。
+このモデルは計算機の処理のための部分モデルを定義する。
+この部分モデルは付随する技術により実現される
+オブジェクトの鍵となる特徴を具体的に示す。
+OMGのオブジェクトモデルは<B>抽象的</B>なもので、
+ある特定の技術で直に実現されるものではない。
+これから述べるモデルはある<B>実在する</B>オブジェクトモデルである。
+このオブジェクトモデルは抽象的なモデルとは
+以下のような様々な面で異なる。
+<UL>
+<LI>より特定することにより抽象オブジェクトモデルを<B>詳細化する</B>。
+       例えば、リクエストパラメータの形式や
+       タイプを特定するのに使われる言語を定義すること。
+<LI>モデルで定義された実体の特定のインスタンスを導入することにより
+       モデルを<B>実体化する</B>。
+       例えば、特定オブジェクト、特定オペレーション、特定タイプ。
+<LI>実体を削除したり利用時に制限を付加することによりモデルを<B>制限する</B>。
+</UL>
+<P>
+オブジェクトシステムはオブジェクトの集まりであり、
+この集まりがサービスの要求者（クライアント）とサービスの提供者とを
+うまく定義されカプセル化したインタフェースによって分離している。
+特に、
+クライアントはデータ表現や実行コードのような
+サービスの実装から分離されている。
+
+<P>
+オブジェクトモデルとして、まずクライアントにとって意味のある概念を記述する。
+つまり、オブジェクト生成・識別、
+リクエスト・オペレーション、型・シグネイチャのような
+概念を含むものである。
+次に、オブジェクトの実装に関係する概念を記述する。
+つまり、メソッドや実行エンジン、活性化のような概念を含むものである。
+
+<P>
+オブジェクトモデルはクライアントに意味のある概念を定義する上で
+最も明確・規定的である。
+オブジェクトの実装の議論はより暗示的で、
+異なるオブジェクト技術ではできるだけ
+オブジェクトの実装を違うやりかたで提供できるよう示唆している。
+
+<P>
+その他のオブジェクトシステムの特徴としては
+オブジェクトモデルの領域外にあるものもある。
+これらの概念にはアプリケーションアーキテクチャの側面を持つものもあり、
+また、オブジェクト技術が適用される特定の領域に結び付いているものもある。
+このような概念はアーキテクチャのリファレンスモデル中で
+扱った方が適切である。
+このような除外した概念の例は、
+複合オブジェクトやリンク、オブジェクトの複写、
+更新管理、トランザクションである。
+制御構造の詳細もオブジェクトモデルの範囲外となる。
+（つまり、オブジェクトモデルはクライアントやサーバが
+シングルスレッド／マルチスレッドであるかどうか考慮しないし、
+イベントループがどのようにプログラムされているか、
+スレッドがどのように生成・破棄・同期されるかを明確にしない。）
+
+<P>
+ここで言うオブジェクトモデルは、
+クライアントがオブジェクトにメッセージを送るという
+伝統的なオブジェクトモデルの一例である。
+概念的には、
+オブジェクトはメッセージを解析してどんなサービスを実行するか決定する。
+伝統的なモデルでは、
+メッセージはオブジェクトとゼロ以上のパラメータを識別する。
+このような多くの伝統的なモデルと同様に、
+分類されている初期パラメータが必要とされ、
+これが実行されるべき命令を識別する。
+つまり、オブジェクトによるメッセージの解析は
+指定された命令に基づくメソッドの選択を行なう。
+もちろん命令としてのメソッドの選択はオブジェクトやORBによっても実行されうる。
+
+<P>
+<BR><HR>
+<ADDRESS>
+Masao Takaku
+平成11年3月12日
+</ADDRESS>
+</BODY>
+</HTML>

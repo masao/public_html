@@ -1,0 +1,156 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!-- Converted with jLaTeX2HTML 98.1p1 release (March 2nd, 1998) + JP patch 2.0 (March 16th, 1998)
+patched by Kenshi Muto (mutou@three-a.co.jp), Three-A Systems,Co.,Ltd.
+LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others  -->
+<HTML>
+<HEAD>
+<TITLE>PAT Data Structure</TITLE>
+<META NAME="description" CONTENT="PAT Data Structure">
+<META NAME="keywords" CONTENT="4.3">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-2022-jp">
+<LINK REL="STYLESHEET" HREF="4.3.css">
+<LINK REL="next" HREF="node6.html">
+<LINK REL="previous" HREF="node2.html">
+<LINK REL="next" HREF="node6.html">
+</HEAD>
+<BODY >
+<!-- Navigation Panel -->
+<A NAME="tex2html46"
+ HREF="node6.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/~masao/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/~masao/icons.gif/up_motif_gr.gif"> 
+<A NAME="tex2html40"
+ HREF="node4.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/~masao/icons.gif/previous_motif.gif"></A>   
+<BR>
+<STRONG> Next:</STRONG> <A NAME="tex2html47"
+ HREF="node6.html">この文書について...</A>
+<STRONG> Previous:</STRONG> <A NAME="tex2html41"
+ HREF="node4.html">N-Gram Data Structure</A>
+<BR>
+<BR>
+<!-- End of Navigation Panel -->
+
+<H2><A NAME="SECTION00045000000000000000">
+PAT Data Structure</A>
+</H2>
+
+<P>
+処理トークン間に語間記号を置くN-グラムを使うことは、
+テキスト入力を連続したN文字のトークンで索引づけする
+データ構造に等しいものとなる。
+断続的なテキスト入力のデータ構造を配置することへの
+異なる観点はPAT木やPAT配列に由来するものである。
+入力ストリームは部分文字列からなる検索可能なデータ構造に変換される。
+PAT木データ構造の元々の概念はパトリシア木として記述され
+(Flajolet-86, Frakes-92, Gonnet-83, Knuth-73, Morrison-69)、
+テキストや画像の検索(Gonnet-88)や遺伝子データベースへの適用(Manber-90)と、
+応用可能な構造として新たな力を得ている。
+PATという名前はPAtricia Treesの省略形である。
+（PATRICIAはPractical Algorithm To Retrieve Information Coded In Alphanumericsを意味する）
+
+<P>
+PAT木の生成時には、
+入力文字列中の各ポジションはその位置から始まる部分文字列 (substring) のくさびとなるもので、
+入力の終端までの全ての新しいテキストを含んでいる。
+全ての部分文字列はuniqueなものである。
+テキストをこのように見ると、多くの異なる検索処理構造に適用できる。
+それは文書検索マシンや並列処理演算装置のハードウェアの
+一般的な構造によく適合するものである。（9章参照）
+部分文字列はテキスト中のどこからでも開始でき、
+開始した位置とその長さによって一意に索引づけできる。
+もし、全ての文字列が入力の終端までのものであるなら、
+その長さは位置とアイテム全体の長さによって差が出るので、
+開始位置の情報だけが必要とされる情報となる。
+部分文字列にnull文字を付け加えて、入力文字列の長さを越えさせることもできる。
+これらの部分文字列はsistring(ssemi-infinite string)と呼ばれる。
+図4.9で入力テキストに対するsistringの例をいくつか示す。
+
+<P>
+PAT木はsistringで定義される
+不均衡な、数字からなる2分木である。
+sistringの個々のビットはゼロなら左へ、他は右へという
+分岐を決定している。
+PAT木は親ノードからツリー中の各ノードに
+ビット位置やビット数で分岐を決定する際に、
+どちらのビットを使うかを指定することもできる。
+これは分岐のない階層を越えて移る際に有効である。
+
+<P>
+キーはPAT木中の葉ノード（bottomノード）に蓄積される。
+大きさ<I>n</I>のテキスト入力に対しては、
+<I>n</I>個の葉ノードと最大<I>n</I>-1の上位のノードが存在する。
+葉ノードにあたるsistringに制限を加えることもできる。
+wordの範囲に検索を限ることに関心があれば、
+例えば語間記号のすぐ後にあるsistringに限るということもできるだろう。
+図4.10にPAT木の生成に用いられるsistringsの一例を示す。
+hが100、oが110、mが001、eが101という2進表現であるとき、
+``home''という語は100110001101…となるだろう。
+これらのsistringを用いたPAT木を図4.11に示す。
+さらに中間ノードにスキップする値を入れて簡略化したツリーを図4.12に示す。
+ここでの（長方形で表されている）中間ノード中の値は、
+似た語と相違点があり比較を行なう次のビットまでの
+スキップするべきビット数である。
+この最終バージョンによって、
+スペースは節約できるが、
+スキップしたビットが検索語にマッチしていることを保証するために
+検索値を（円の中の）葉ノードの中身と比較する必要がある。
+（つまりスキップしたビットは比較されない。）
+
+<P>
+検索語も2進表現で表され、
+sistringを持つPAT木に対して適合するものを探す検索語を比較する。
+
+<P>
+2章で触れたように、もっとも一般的な検索の種類の一つとして
+前方一致検索がある。
+PAT木はこの目的のための理想的なものとして構成されている。
+なぜなら、各サブツリーは木構造中のそのノードまでで規定されている
+prefixに対応する全てのsistringを含んでいるからである。
+したがって、prefixノード以降の全ての葉ノードは
+前方一致検索の基準を満たすsistringを定義しているのである。
+このようなPAT木の論理的な並び方は、
+範囲値によって限られたサブツリーを決定することが容易なので、
+範囲検索をも助けるものとなる。
+もし、全入力文字列がPAT木の生成に使われれば、
+後方一致、中間一致、固定長によるワイルドカードを用いた検索（2.1.5参照）は
+全て容易である。
+なぜなら、与えられた文字列によって
+根ノードから適切なsistringの存在するノードへの道筋が一意に決定するからである。
+候補となるサブツリーの多数のものが検索語にマッチするので、
+曖昧検索は非常に困難となる。
+
+<P>
+PAT木の検索および配列としてのその表現に関する詳細な議論は、
+Gonnet、Baeza-Yates、Sniderによって行なわれている。(Gonnet-92)
+Signatureファイルや転置ファイルに対する比較の結果、
+GonnetらはPAT配列はSignatureファイルより正確性があり、
+転置ファイルにおいては効率の悪い文字列探索機能
+（後方一致検索、近接文字列検索、最長繰り返し検索）
+を有すると結論付けている。
+
+<P>
+文字列検索を目標とするならば、PAT木（とPAT配列）は候補となりうる構造である。
+PAT木（配列）はテキストを文字列操作を行なえる代わりとなる構造に蓄積する。
+その構造はより抽象的な概念や
+アイテムと結び付くそれらの関係を蓄積できない。
+その構造は興味深い応用への可能性を持ってはいるが、
+現時点では主要な商用の製品で使われていない。
+
+<P>
+<BR><HR>
+<ADDRESS>
+Masao Takaku
+平成11年3月11日
+</ADDRESS>
+</BODY>
+</HTML>

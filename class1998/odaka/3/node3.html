@@ -1,0 +1,205 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!-- Converted with jLaTeX2HTML 98.1p1 release (March 2nd, 1998) + JP patch 2.0 (March 16th, 1998)
+patched by Kenshi Muto (mutou@three-a.co.jp), Three-A Systems,Co.,Ltd.
+LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others  -->
+<HTML>
+<HEAD>
+<TITLE>A. 事前確率のみがわかっている場合</TITLE>
+<META NAME="description" CONTENT="A. 事前確率のみがわかっている場合">
+<META NAME="keywords" CONTENT="3">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-2022-jp">
+<LINK REL="STYLESHEET" HREF="3.css">
+<LINK REL="next" HREF="node4.html">
+<LINK REL="previous" HREF="node2.html">
+<LINK REL="up" HREF="node2.html">
+<LINK REL="next" HREF="node4.html">
+</HEAD>
+<BODY >
+<!-- Navigation Panel -->
+<A NAME="tex2html42"
+ HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/~masao/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html40"
+ HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/~masao/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html34"
+ HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/~masao/icons.gif/previous_motif.gif"></A>   
+<BR>
+<STRONG> Next:</STRONG> <A NAME="tex2html43"
+ HREF="node4.html">B. 事後確率がわかっている場合</A>
+<STRONG> Up:</STRONG> <A NAME="tex2html41"
+ HREF="node2.html">ベイズ識別法</A>
+<STRONG> Previous:</STRONG> <A NAME="tex2html35"
+ HREF="node2.html">ベイズ識別法</A>
+<BR>
+<BR>
+<!-- End of Navigation Panel -->
+
+<H3><A NAME="SECTION00031100000000000000">
+A. 事前確率のみがわかっている場合</A>
+</H3>
+
+<P>
+<B>[例]</B>&nbsp;&nbsp;&nbsp;&nbsp;
+入力パターンは英文字パターンで、その識別を行なう。
+各英字の事前生起確率は次の表の通り。
+
+<P>
+<DIV ALIGN="CENTER">
+ 表3.1 英字に対する事前生起確率
+<BR>
+<TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="CENTER"><FONT SIZE="-1">英字</FONT></TD>
+<TD ALIGN="RIGHT"><FONT SIZE="-1">確率(%)</FONT></TD>
+<TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="CENTER"><FONT SIZE="-1">英字</FONT></TD>
+<TD ALIGN="RIGHT"><FONT SIZE="-1">確率(%)</FONT></TD>
+<TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="CENTER"><FONT SIZE="-1">英字</FONT></TD>
+<TD ALIGN="RIGHT"><FONT SIZE="-1">確率(%)</FONT></TD>
+<TD ALIGN="LEFT">&nbsp;</TD></TR>
+<TR><TD ALIGN="CENTER">A</TD>
+<TD ALIGN="RIGHT">8.29</TD>
+<TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="CENTER">J</TD>
+<TD ALIGN="RIGHT">0.21</TD>
+<TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="CENTER">S</TD>
+<TD ALIGN="RIGHT">6.33</TD>
+<TD ALIGN="LEFT">&nbsp;</TD></TR>
+<TR><TD ALIGN="CENTER">B</TD>
+<TD ALIGN="RIGHT">1.43</TD>
+<TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="CENTER">K</TD>
+<TD ALIGN="RIGHT">0.48</TD>
+<TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="CENTER">T</TD>
+<TD ALIGN="RIGHT">9.27</TD>
+<TD ALIGN="LEFT">&nbsp;</TD></TR>
+<TR><TD ALIGN="CENTER">C</TD>
+<TD ALIGN="RIGHT">3.68</TD>
+<TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="CENTER">L</TD>
+<TD ALIGN="RIGHT">3.68</TD>
+<TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="CENTER">U</TD>
+<TD ALIGN="RIGHT">2.53</TD>
+<TD ALIGN="LEFT">&nbsp;</TD></TR>
+<TR><TD ALIGN="CENTER">D</TD>
+<TD ALIGN="RIGHT">4.29</TD>
+<TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="CENTER">M</TD>
+<TD ALIGN="RIGHT">3.23</TD>
+<TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="CENTER">V</TD>
+<TD ALIGN="RIGHT">1.03</TD>
+<TD ALIGN="LEFT">&nbsp;</TD></TR>
+<TR><TD ALIGN="CENTER">E</TD>
+<TD ALIGN="RIGHT">12.08</TD>
+<TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="CENTER">N</TD>
+<TD ALIGN="RIGHT">7.16</TD>
+<TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="CENTER">W</TD>
+<TD ALIGN="RIGHT">1.62</TD>
+<TD ALIGN="LEFT">&nbsp;</TD></TR>
+<TR><TD ALIGN="CENTER">F</TD>
+<TD ALIGN="RIGHT">2.20</TD>
+<TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="CENTER">O</TD>
+<TD ALIGN="RIGHT">7.28</TD>
+<TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="CENTER">X</TD>
+<TD ALIGN="RIGHT">0.20</TD>
+<TD ALIGN="LEFT">&nbsp;</TD></TR>
+<TR><TD ALIGN="CENTER">G</TD>
+<TD ALIGN="RIGHT">1.71</TD>
+<TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="CENTER">P</TD>
+<TD ALIGN="RIGHT">2.93</TD>
+<TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="CENTER">Y</TD>
+<TD ALIGN="RIGHT">1.57</TD>
+<TD ALIGN="LEFT">&nbsp;</TD></TR>
+<TR><TD ALIGN="CENTER">H</TD>
+<TD ALIGN="RIGHT">4.54</TD>
+<TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="CENTER">Q</TD>
+<TD ALIGN="RIGHT">0.11</TD>
+<TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="CENTER">Z</TD>
+<TD ALIGN="RIGHT">0.09</TD>
+<TD ALIGN="LEFT">&nbsp;</TD></TR>
+<TR><TD ALIGN="CENTER">I</TD>
+<TD ALIGN="RIGHT">7.16</TD>
+<TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="CENTER">R</TD>
+<TD ALIGN="RIGHT">6.90</TD>
+<TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="CENTER">&nbsp;</TD>
+<TD ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="LEFT">&nbsp;</TD></TR>
+</TABLE></DIV>
+<P>
+もし入力パターンを見ずに識別する場合は、
+英字Eが最大の確率を示すことから、つねに
+入力パターンのカテゴリ名は``E''である。
+とすると誤り率をもっとも少なくする。
+
+<P>
+以上の例は次のように一般化できる。
+
+<P>
+今カテゴリを
+<!-- MATH: $\omega_l, (l = 1, 2, \cdots , L)$ -->
+<IMG
+ WIDTH="134" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.gif"
+ ALT="$\omega_l, (l = 1, 2, \cdots , L)$">とし、
+その事前生起確率を
+<!-- MATH: $P(\omega_l)$ -->
+<IMG
+ WIDTH="44" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$P(\omega_l)$">とする。
+この時、ある入力パターン<B><I>x</I></B>のカテゴリを
+<IMG
+ WIDTH="19" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.gif"
+ ALT="$\omega_l$">に識別した時の誤り率は
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+誤り率＼colon\qquad 1-P(\omega_l)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="149" HEIGHT="33"
+ SRC="img5.gif"
+ ALT="\begin{displaymath}誤り率＼colon\qquad 1-P(\omega_l)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+となる。
+
+<P>
+<HR>
+<!-- Navigation Panel -->
+<A NAME="tex2html42"
+ HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/~masao/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html40"
+ HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/~masao/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html34"
+ HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/~masao/icons.gif/previous_motif.gif"></A>   
+<BR>
+<STRONG> Next:</STRONG> <A NAME="tex2html43"
+ HREF="node4.html">B. 事後確率がわかっている場合</A>
+<STRONG> Up:</STRONG> <A NAME="tex2html41"
+ HREF="node2.html">ベイズ識別法</A>
+<STRONG> Previous:</STRONG> <A NAME="tex2html35"
+ HREF="node2.html">ベイズ識別法</A>
+<!-- End of Navigation Panel -->
+<ADDRESS>
+Masao Takaku
+平成11年3月12日
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!-- Converted with jLaTeX2HTML 98.1p1 release (March 2nd, 1998) + JP patch 2.0 (March 16th, 1998)
+patched by Kenshi Muto (mutou@three-a.co.jp), Three-A Systems,Co.,Ltd.
+LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others  -->
+<HTML>
+<HEAD>
+<TITLE>DLIOP : Managing Items and Collections</TITLE>
+<META NAME="description" CONTENT="DLIOP : Managing Items and Collections">
+<META NAME="keywords" CONTENT="infobus_service">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-2022-jp">
+<LINK REL="STYLESHEET" HREF="infobus_service.css">
+<LINK REL="next" HREF="node8.html">
+<LINK REL="previous" HREF="node2.html">
+<LINK REL="up" HREF="infobus_service.html">
+<LINK REL="next" HREF="node4.html">
+</HEAD>
+<BODY >
+<!-- Navigation Panel -->
+<A NAME="tex2html55"
+ HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/~masao/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html53"
+ HREF="infobus_service.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/~masao/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html47"
+ HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/~masao/icons.gif/previous_motif.gif"></A>   
+<BR>
+<STRONG> Next:</STRONG> <A NAME="tex2html56"
+ HREF="node4.html">コレクション</A>
+<STRONG> Up:</STRONG> <A NAME="tex2html54"
+ HREF="infobus_service.html">無題</A>
+<STRONG> Previous:</STRONG> <A NAME="tex2html48"
+ HREF="node2.html">The Stanford InfoBus Architecture</A>
+<BR>
+<BR>
+<!-- End of Navigation Panel -->
+
+<H1><A NAME="SECTION00030000000000000000">
+DLIOP : Managing Items and Collections</A>
+</H1>
+
+<P>
+DLIOP (Digital Library Interoperability Protocol) は
+アイテム（文書など）とコレクションの管理の
+基本的なサービスを行なうプロトコルである。
+
+<P>
+<BR>
+<DIV ALIGN="CENTER"><A NAME="dliop">&#160;</A><A NAME="33">&#160;</A>
+<TABLE WIDTH="50%">
+<CAPTION><STRONG>図 2:</STRONG>
+DLIOPサービス層</CAPTION>
+<TR><TD><IMG
+ WIDTH="452" HEIGHT="203"
+ SRC="img3.gif"
+ ALT="\begin{figure}
+\begin{center}
+\epsfile{file=2.ps,width=10cm}
+\end{center}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+<BR>
+<P>
+DLIOPは
+HTTPのようなステートレスなプロトコルの利点と
+Z39.50のようなステートフルなプロトコルの利点を結合するものである。
+プロトコルは動的な資源の確保も提供している。
+文書や処理結果は
+クライアントとサービスの間のやりとりが続行中でもマシン間を行き来できる。
+さらに、DLIOPでは
+クライアントが後から要求するであろう情報を
+事前にとってきておくキャッシュ (Cache) 戦略について異なるものを採用できる。
+
+<P>
+DLIOPプロトコルは2つの基本要素（クライアントとコレクション）の間で
+起動されるメソッドを取り決めている。
+クライアントはコレクションにアクセスするアプリケーションプログラムである。
+アイテムはInfoBusでの情報オブジェクトの最も一般的な形式である。
+アイテムのサブクラスは
+文書やサービス、アトリビュートモデル、権利、契約などがある。
+コレクションはアイテムの集合を管理するオブジェクトである。
+
+<P>
+DLIOPの基本的な目標は、
+サーバ上のアイテムのコレクションをクライアント側からアクセスできるようにする
+柔軟な転送機構を用意することである。
+DLIOPは外部のサービスプロクシがサービス要求（例えば、検索式）への返答としてInfoBusクライアントへアイテムのコレクションを返せるような方法を管理して、クライアントとプロクシ間とのやりとりを促進する。
+次にDLIOPのサービス層の特徴を概説する。
+
+<P>
+<BR><HR>
+<!-- Table of Child-Links -->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html57"
+ HREF="node4.html">コレクション</A>
+<LI><A NAME="tex2html58"
+ HREF="node5.html">検索のやりとり</A>
+<LI><A NAME="tex2html59"
+ HREF="node6.html">考察</A>
+<LI><A NAME="tex2html60"
+ HREF="node7.html">実装の状況</A>
+</UL>
+<!-- End of Table of Child-Links -->
+<BR><HR>
+<ADDRESS>
+Masao Takaku
+平成11年3月12日
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,135 @@
+<html>
+<head>
+<title>VRML2.0ガイド</title>
+</head>
+
+<body bgcolor="#aaffaa">
+<h1>VRML2.0とは、</h1>
+<h2>概説</h2>
+<p>VRML2.0は、静的な3次元仮想世界を記述するVRML1.0をよりインタラクティブで面白いものにしたいという要求に答えるために出てきました。VRML1.0からの主な拡張は、以下の点です。</p>
+<ul>
+<li>静的な世界の記述の拡張</li>
+<p>おもに、新たな形状ノードの追加(Background,ElebationGrid,Fogなど)と、マルチメディアへの対応(Sound,MovieTextureなど)です。</p>
+<li>応答性(Interaction)</li>
+<p>ユーザーの行動に応答するような世界を記述できます。センサノードは、ユーザのクリックなどでイベントを発生させ、そのイベントを他のオブジェクトに渡していくことによって、変化する世界を記述できます。</p>
+<p>また、時間の経過などにあわせて、イベントを発生させることもできます。</p>
+<li>アニメーション</li>
+<p>新たに設けられたインターポレイタ(Interpolator)ノードは、ある時間内でのアニメーションを容易に記述できるようにします。雲や太陽、鳥などの自然に動く物体を記述できます。</p>
+<li>Scripting</li>
+<p>Scriptノードを使って、単純なアニメーションだけではなくて、条件判断による動きなども記述可能です。</p>
+<li>プロトタイプ</li>
+<p>複数のノードを組み合わせて、新たなノードを自分で定義することができます。このことで、オブジェクトにパラメータを付けて、カプセル化する事ができます。</p>
+</ul>
+<h3>例1</h3>
+<p>では、まず簡単なVRML2.0の例から見ていきたいと思います。赤い球を表示するものです。</p>
+<pre>
+#VRML V2.0 utf8
+Shape {
+	appearance Appearance {
+		material Material {
+			diffuseColor 1 0 0
+	  	}
+	}
+	geometry Sphere {}
+}
+</pre>
+<p>まず、ヘッダは、
+<pre>#VRML V2.0 utf8</pre>
+に変わりました。
+</p>
+<p>また、Shapeノードのapperanceフィールドとgeometryフィールドによって、形状と見え方をカプセル化して記述できるようになりました。
+</p>
+<h2>「動き」(Behavior)</h2><p>
+VRML2.0からノードは、field, exposedField, eventIn, eventOutといった、イベントで受け渡しを行うインタフェースとしてのフィールド値(パラメータ)を持つようになりました。fieldは、単に固定的なパラメータです。eventIn, eventOutは、イベントで受け渡されるパラメータです。exposedFieldは、field,eventIn,eventOutを全て持つフィールドタイプです。つまり、デフォルト値を与えながら、イベントの受け渡しもおこなえるパラメータです。exposedFieldは、eventIn名として、<i>set_</i>を接頭辞をつけたものをもち、eventOut名として、<i>_changed</i>を接尾辞としてつけたものになります。例えば、Viewpointノードは、
+<pre>
+Viewpoint {
+	eventIn      SFBool     set_bind
+	exposedField SFFloat    fieldOfView 0.785398
+	exposedField SFBool     jump        TRUE
+	exposedField SFRotation orientation 0 0 1 0
+	exposedField SFVec3f    position    0 0 10
+	field        SFString   description ""
+	eventOut     SFTime     bindtime
+	eventOut     SFBool     isBound
+}
+</pre>
+のように定義されています。ここで、positionは、eventInとしてset_position、eventOutとしてposition_changed、fieldとしてpositionを持つことを表しています。
+</p>
+<p>
+ノード間のイベントの受け渡しは、全てROUTE文を使って定義されます。ROUTE文は、eventInとeventOutを結びつけます。あるノードで発生したイベントで、eventOutが送られると、ROUTEで結ばれたノードのeventInにその値が、送られます。例えば、あるviewpointとあるオブジェクトの位置を結び付けたければ、
+<pre>ROUTE Object1.translation_changed TO Viewpoint1.set_position</pre>
+とします。Object1のtranslationフィールドの値が変化を起こすと(イベントが発生)、Viewpoint1のpositionフィールドの値にそれがセットされることを表します。
+</p>
+<h3>例2</h3>
+<p>インターポレイタを使った動きの記述の例です。(赤い球が、クリックされると、画面の奥にいって戻ってくるという、世界を表現しています。)</p>
+<pre>
+#VRML V2.0 utf8
+Group {
+	children [
+		DEF CLICK TouchSensor {},
+		DEF SPHERE Transform {
+			children Shape {
+				appearance Appearance {
+					material Material {
+						diffuseColor 1 0 0
+					}
+				}
+				geometry Sphere {}
+			}
+		}
+	]
+}
+DEF TIME TimeSensor {
+	cycleInterval 5
+}
+DEF POS PositionInterpolator {
+	key [ 0, 0.5, 1 ]
+	keyValue [ 0 0 0, 0 0 -20, 0 0 0 ]
+}
+ROUTE CLICK.touchTime TO TIME.set_startTime
+ROUTE TIME.fraction_changed TO POS.set_fraction
+ROUTE POS.value_changed TO SPHERE.set_translation
+</pre>
+<p>
+最後の3つのROUTE文で、イベントの受け渡しが行われています。球がクリックされると、TimeSensorが作動し、TimeSensorの発生させる分数値をインターポレイタに渡し、PositionInterporatorが、適切な位置情報を補完して、球の位置を変更させてアニメーションが行われます。
+</p>
+<p>TimeSensorの仕様は、次の通りです。
+<pre>
+TimeSensor {
+	exposedField SFTime  cycleInterval 1
+	exposedField SFBool  enabled       TRUE
+	exposedField SFBool  loop          FALSE
+	exposedField SFTime  startTime     0
+	exposedField SFTime  stopTime      0
+	eventOut     SFTime  cycleTime
+	eventOut     SFFloat fraction_changed
+	eventOut     SFBool  isActive
+	eventOut     SFTime  time
+}
+</pre>
+</p>
+<p>Transformノードの仕様は次の通りです。
+<pre>
+Transform {
+	eventIn      MFNode     addChildren
+	eventIn      MFNode     removeChildren
+	exposedField SFVec3f    center           0 0 0
+	exposedField MFNode     chidren          []
+	exposedField SFRotation rotation         0 0 1 0
+	exposedField SFVec3f    scale            0 0 0
+	exposedField SFRotation scaleOrientation 0 0 1 0
+	exposedField SFVec3f    translation      0 0 0
+	field        SFVec3f    bboxcenter       0 0 0
+	field        SFVec3f    bboxSize         -1 -1 -1
+}
+</pre>
+</p>
+<hr>
+<address>
+高久雅生<br>
+<a href="http://cosmo.ulis.ac.jp/~masao/">http://cosmo.ulis.ac.jp/~masao/</a><br>
+<a href="mailto:masao@ulis.ac.jp">masao@ulis.ac.jp</a>
+</address>
+</body>
+
+</html>

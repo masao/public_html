@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!-- Converted with jLaTeX2HTML 98.1p1 release (March 2nd, 1998) + JP patch 2.0 (March 16th, 1998)
+patched by Kenshi Muto (mutou@three-a.co.jp), Three-A Systems,Co.,Ltd.
+LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others  -->
+<HTML>
+<HEAD>
+<TITLE>B. 事後確率がわかっている場合</TITLE>
+<META NAME="description" CONTENT="B. 事後確率がわかっている場合">
+<META NAME="keywords" CONTENT="3">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-2022-jp">
+<LINK REL="STYLESHEET" HREF="3.css">
+<LINK REL="next" HREF="node5.html">
+<LINK REL="previous" HREF="node3.html">
+<LINK REL="up" HREF="node2.html">
+<LINK REL="next" HREF="node5.html">
+</HEAD>
+<BODY >
+<!-- Navigation Panel -->
+<A NAME="tex2html52"
+ HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/~masao/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html50"
+ HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/~masao/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html44"
+ HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/~masao/icons.gif/previous_motif.gif"></A>   
+<BR>
+<STRONG> Next:</STRONG> <A NAME="tex2html53"
+ HREF="node5.html">C. 正規分布型条件付確率</A>
+<STRONG> Up:</STRONG> <A NAME="tex2html51"
+ HREF="node2.html">ベイズ識別法</A>
+<STRONG> Previous:</STRONG> <A NAME="tex2html45"
+ HREF="node3.html">A. 事前確率のみがわかっている場合</A>
+<BR>
+<BR>
+<!-- End of Navigation Panel -->
+
+<H3><A NAME="SECTION00031200000000000000">
+B. 事後確率がわかっている場合</A>
+</H3>
+
+<P>
+<B>[例]</B>&nbsp;&nbsp;&nbsp;&nbsp;
+前項の英字パターンの識別について、事後確率がわかった場合。
+
+<P>
+入力パターンの観測結果から左上に弧状の線分を持ったパターンであることが判明し、
+これは英字では``C'', ``G'', ``O'', ``Q''の場合のみ現れる。
+
+<P>
+そこで、ベイズの定理による式を元に事後確率が求まる。
+たとえば、 ``C''について、
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="377" HEIGHT="76"
+ SRC="img6.gif"
+ ALT="\begin{eqnarray*}\displaystyle P(\omega_l\vert\mbox{\boldmath$x$ })_{\omega_{l}=...
+... 0.11 \cdot 1}\\
+& = \displaystyle \frac{3.68}{12.78} = 0.2879
+\end{eqnarray*}">
+</DIV><P></P>
+<BR CLEAR="ALL">と算出できる。
+同様に各カテゴリの事後確率を以下に示す。
+<DIV ALIGN="CENTER">
+<FONT SIZE="-1">表3.2&nbsp;&nbsp;&nbsp;&nbsp;観測後の各カテゴリに対する事後生起確率値</FONT>
+<BR>
+ <TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="CENTER"><FONT SIZE="-1">英字</FONT></TD>
+<TD ALIGN="RIGHT"><FONT SIZE="-1">確率(%)  </FONT></TD>
+<TD ALIGN="LEFT">&nbsp;</TD></TR>
+<TR><TD ALIGN="CENTER">C</TD>
+<TD ALIGN="RIGHT">28.79</TD>
+<TD ALIGN="LEFT">&nbsp;</TD></TR>
+<TR><TD ALIGN="CENTER">G</TD>
+<TD ALIGN="RIGHT">13.38</TD>
+<TD ALIGN="LEFT">&nbsp;</TD></TR>
+<TR><TD ALIGN="CENTER">O</TD>
+<TD ALIGN="RIGHT">56.97</TD>
+<TD ALIGN="LEFT">&nbsp;</TD></TR>
+<TR><TD ALIGN="CENTER">Q</TD>
+<TD ALIGN="RIGHT">0.86</TD>
+<TD ALIGN="LEFT">&nbsp;</TD></TR>
+<TR><TD ALIGN="CENTER">その他</TD>
+<TD ALIGN="RIGHT">0</TD>
+<TD ALIGN="LEFT">&nbsp;</TD></TR>
+</TABLE></DIV>
+<P>
+以上から事後生起率は ``O''で最大値を持つことがわかる。
+したがって、誤り率を最小とする識別結果は ``O''となる。
+A.での ``E''とは異なっており、
+誤り率は87.92%から43.03%に改善される。
+
+<P>
+<BR><HR>
+<ADDRESS>
+Masao Takaku
+平成11年3月12日
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!-- Converted with jLaTeX2HTML 98.1p1 release (March 2nd, 1998) + JP patch 2.0 (March 16th, 1998)
+patched by Kenshi Muto (mutou@three-a.co.jp), Three-A Systems,Co.,Ltd.
+LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others  -->
+<HTML>
+<HEAD>
+<TITLE>A. 統計的学習の分類</TITLE>
+<META NAME="description" CONTENT="A. 統計的学習の分類">
+<META NAME="keywords" CONTENT="3">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-2022-jp">
+<LINK REL="STYLESHEET" HREF="3.css">
+<LINK REL="next" HREF="node10.html">
+<LINK REL="previous" HREF="node8.html">
+<LINK REL="up" HREF="node8.html">
+<LINK REL="next" HREF="node10.html">
+</HEAD>
+<BODY >
+<!-- Navigation Panel -->
+<A NAME="tex2html100"
+ HREF="node10.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/~masao/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html98"
+ HREF="node8.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/~masao/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html92"
+ HREF="node8.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/~masao/icons.gif/previous_motif.gif"></A>   
+<BR>
+<STRONG> Next:</STRONG> <A NAME="tex2html101"
+ HREF="node10.html">B. 最尤推定学習法</A>
+<STRONG> Up:</STRONG> <A NAME="tex2html99"
+ HREF="node8.html">統計的学習</A>
+<STRONG> Previous:</STRONG> <A NAME="tex2html93"
+ HREF="node8.html">統計的学習</A>
+<BR>
+<BR>
+<!-- End of Navigation Panel -->
+
+<H3><A NAME="SECTION00033100000000000000">
+A. 統計的学習の分類</A>
+</H3>
+
+<P>
+ここまで述べてきたベイズ識別法や最尤法を適用するには、
+確率分布の具体的な形や、平均や分散などのパラメータ値が必要であった。
+
+<P>
+しかし、時によってはそのようなデータが存在せず、
+対象パターンの一部を利用して
+分布の形やパラメータ値を求めなければならないこともある。
+このための処理を一種の学習と呼び、
+学習のために使うパターンを学習パターンと呼ぶ。
+
+<P>
+統計学習には、
+2つの側面からの分類ができる。
+
+<P>
+<DL COMPACT>
+<DT>1.
+<DD>パラメトリック・ノンパラメトリック
+<P>
+パターンである確率変数が
+       正規分布のような確定した分布系をなせば、
+       パラメトリック、そうでなければノンパラメトリックとなる。
+       分布形状を決定するパラメータ値
+       （正規分布では平均や分散）を決めれば良いのでこの名がついた。
+
+<P>
+<DT>2.
+<DD>教師つき・教師なし
+
+<P>
+利用する学習パターンがあらかじめどのカテゴリに属するかが
+       わかっている場合を教師付きと呼ぶ。
+       逆にこのような情報がわからない時には教師なしと呼ぶ。
+</DL>
+<P>
+学習の複雑さと難しさは使用できる情報がどれだけあるかによる。
+最大の情報不足はノンパラメトリックな教師なし学習である。
+
+<P>
+以下ではこの内、
+最もわかりやすいパラメトリックで教師つきの学習である、
+最尤推定とベイズ推定学習法を紹介する。
+
+<P>
+<BR><HR>
+<ADDRESS>
+Masao Takaku
+平成11年3月12日
+</ADDRESS>
+</BODY>
+</HTML>

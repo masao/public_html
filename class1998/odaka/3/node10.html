@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!-- Converted with jLaTeX2HTML 98.1p1 release (March 2nd, 1998) + JP patch 2.0 (March 16th, 1998)
+patched by Kenshi Muto (mutou@three-a.co.jp), Three-A Systems,Co.,Ltd.
+LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others  -->
+<HTML>
+<HEAD>
+<TITLE>B. 最尤推定学習法</TITLE>
+<META NAME="description" CONTENT="B. 最尤推定学習法">
+<META NAME="keywords" CONTENT="3">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-2022-jp">
+<LINK REL="STYLESHEET" HREF="3.css">
+<LINK REL="previous" HREF="node9.html">
+<LINK REL="up" HREF="node8.html">
+<LINK REL="next" HREF="node11.html">
+</HEAD>
+<BODY >
+<!-- Navigation Panel -->
+<A NAME="tex2html108"
+ HREF="node11.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/~masao/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html106"
+ HREF="node8.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/~masao/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html102"
+ HREF="node9.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/~masao/icons.gif/previous_motif.gif"></A>   
+<BR>
+<STRONG> Next:</STRONG> <A NAME="tex2html109"
+ HREF="node11.html">この文書について...</A>
+<STRONG> Up:</STRONG> <A NAME="tex2html107"
+ HREF="node8.html">統計的学習</A>
+<STRONG> Previous:</STRONG> <A NAME="tex2html103"
+ HREF="node9.html">A. 統計的学習の分類</A>
+<BR>
+<BR>
+<!-- End of Navigation Panel -->
+
+<H3><A NAME="SECTION00033200000000000000">
+B. 最尤推定学習法</A>
+</H3>
+
+<P>
+カテゴリ条件付確率の分布形を想定し、
+そのパラメータ<IMG
+ WIDTH="12" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img14.gif"
+ ALT="$\theta$"><B><SUB><I>l</I></SUB></B>を推定する場合を考える。
+その際に使用する<B><I>K</I></B>個からなる個々の学習パターンを
+<B><I>x</I></B><B><SUB><I>k</I></SUB><SUP>(<I>l</I>)</SUP></B>とする。
+すると、
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\mbox{カテゴリ条件付確率}\colon\qquad P(\mbox{\boldmath {$x$ }}_k^{(l)}|\ \omega_l, \mbox{\boldmath {$\theta$ }}_l)\qquad (k = 1, 2, \cdots, K)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="421" HEIGHT="34"
+ SRC="img15.gif"
+ ALT="\begin{displaymath}\mbox{カテゴリ条件付確率}\colon\qquad P(\mbox{\boldmath {$x$ ...
+...l, \mbox{\boldmath {$\theta$ }}_l)\qquad (k = 1, 2, \cdots, K)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+となる。
+
+<P>
+分布型を正規分布と考えた場合、
+推定すべきパラメータは平均値<IMG
+ WIDTH="14" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.gif"
+ ALT="$\mu$">と分散
+<!-- MATH: $\mit\Sigma$ -->
+<IMG
+ WIDTH="18" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img17.gif"
+ ALT="$\mit\Sigma$">になる。
+各々の推定値
+<!-- MATH: $\hat{\mbox{\boldmath {$\mu$ }}}, \hat{\mit\Sigma}$ -->
+<IMG
+ WIDTH="41" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.gif"
+ ALT="$\hat{\mbox{\boldmath {$\mu$ }}}, \hat{\mit\Sigma}$">を求めると、
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+\hat{\mbox{\boldmath {$\mu$ }}}=\frac{1}{K}\sum_{k=1}^{K}\mbox{\boldmath {$x$ }}_k, \qquad
+\hat{\mit\Sigma}=\frac1K\sum_{k=1}^{K}(\mbox{\boldmath {$x$ }}_k-\hat{\mbox{\boldmath {$\mu$ }}})(\mbox{\boldmath {$x$ }}_k-\hat{\mbox{\boldmath {$\mu$ }}})^T
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="379" HEIGHT="56"
+ SRC="img19.gif"
+ ALT="\begin{displaymath}\hat{\mbox{\boldmath {$\mu$ }}}=\frac{1}{K}\sum_{k=1}^{K}\mbo...
+...)(\mbox{\boldmath {$x$ }}_k-\hat{\mbox{\boldmath {$\mu$ }}})^T
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(1)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>となる。
+こうして求められたパラメータを使って、
+ベイズ識別法や最尤識別法を適用できる。
+
+<P>
+<BR><HR>
+<ADDRESS>
+Masao Takaku
+平成11年3月12日
+</ADDRESS>
+</BODY>
+</HTML>

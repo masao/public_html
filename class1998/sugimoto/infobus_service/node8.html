@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!-- Converted with jLaTeX2HTML 98.1p1 release (March 2nd, 1998) + JP patch 2.0 (March 16th, 1998)
+patched by Kenshi Muto (mutou@three-a.co.jp), Three-A Systems,Co.,Ltd.
+LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others  -->
+<HTML>
+<HEAD>
+<TITLE>SMA : Managing Metadata</TITLE>
+<META NAME="description" CONTENT="SMA : Managing Metadata">
+<META NAME="keywords" CONTENT="infobus_service">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-2022-jp">
+<LINK REL="STYLESHEET" HREF="infobus_service.css">
+<LINK REL="next" HREF="node15.html">
+<LINK REL="previous" HREF="node3.html">
+<LINK REL="up" HREF="infobus_service.html">
+<LINK REL="next" HREF="node9.html">
+</HEAD>
+<BODY >
+<!-- Navigation Panel -->
+<A NAME="tex2html107"
+ HREF="node9.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/~masao/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html105"
+ HREF="infobus_service.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/~masao/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html99"
+ HREF="node7.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/~masao/icons.gif/previous_motif.gif"></A>   
+<BR>
+<STRONG> Next:</STRONG> <A NAME="tex2html108"
+ HREF="node9.html">アトリビュートモデルプロクシ</A>
+<STRONG> Up:</STRONG> <A NAME="tex2html106"
+ HREF="infobus_service.html">無題</A>
+<STRONG> Previous:</STRONG> <A NAME="tex2html100"
+ HREF="node7.html">実装の状況</A>
+<BR>
+<BR>
+<!-- End of Navigation Panel -->
+
+<H1><A NAME="SECTION00040000000000000000">
+SMA : Managing Metadata</A>
+</H1>
+
+<P>
+SMA (Stanford Metadata Architecture)は、
+InfoBusサービスの探索、
+サービスへの検索質問、
+返ってくる構造化された検索結果に必要なメタデータの交換と管理のための
+サービス層を定義している。
+このアーキテクチャが現れるまでは
+InfoBusではサービス毎のメタデータに
+非互換性（例えばauthorとcreatorなど）が生じていた。
+
+<P>
+SMAは特に2種類のメタデータの相互運用性を考慮している。
+<DL COMPACT>
+<DT>1.
+<DD>検索サービスから取得されるオブジェクト（文書など）を記述したメタデータ
+<DT>2.
+<DD>サービス自体を記述したメタデータ
+</DL>
+<P>
+SMAは4つの基本クラスから成っている（図<A HREF="node8.html#sma">4</A>）。
+<DL COMPACT>
+<DT>1.
+<DD>アトリビュートモデルプロクシ (Attribute Model Proxy)
+<DT>2.
+<DD>アトリビュートモデル変換サービス (Attribute Model Translator)
+ <DT>3.
+<DD>検索プロクシ用のメタデータ機能 (Metadata Facility for Search Proxy)
+ <DT>4.
+<DD>メタデータレポジトリ (Metadata Repository)
+</DL>
+<P>
+<BR>
+<DIV ALIGN="CENTER"><A NAME="sma">&#160;</A><A NAME="62">&#160;</A>
+<TABLE WIDTH="50%">
+<CAPTION><STRONG>図 4:</STRONG>
+メタデータサービス層</CAPTION>
+<TR><TD><IMG
+ WIDTH="452" HEIGHT="208"
+ SRC="img5.gif"
+ ALT="\begin{figure}
+\begin{center}
+\epsfile{file=6.ps,width=10cm}
+\end{center}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+<BR>
+<P>
+<BR><HR>
+<!-- Table of Child-Links -->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html109"
+ HREF="node9.html">アトリビュートモデルプロクシ</A>
+<LI><A NAME="tex2html110"
+ HREF="node10.html">アトリビュートモデル変換サービス</A>
+<LI><A NAME="tex2html111"
+ HREF="node11.html">検索プロクシ用のメタデータ機能</A>
+<LI><A NAME="tex2html112"
+ HREF="node12.html">メタデータレポジトリ</A>
+<LI><A NAME="tex2html113"
+ HREF="node13.html">考察</A>
+<LI><A NAME="tex2html114"
+ HREF="node14.html">実装の状況</A>
+</UL>
+<!-- End of Table of Child-Links -->
+<BR><HR>
+<ADDRESS>
+Masao Takaku
+平成11年3月12日
+</ADDRESS>
+</BODY>
+</HTML>

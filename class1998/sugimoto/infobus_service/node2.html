@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!-- Converted with jLaTeX2HTML 98.1p1 release (March 2nd, 1998) + JP patch 2.0 (March 16th, 1998)
+patched by Kenshi Muto (mutou@three-a.co.jp), Three-A Systems,Co.,Ltd.
+LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others  -->
+<HTML>
+<HEAD>
+<TITLE>The Stanford InfoBus Architecture</TITLE>
+<META NAME="description" CONTENT="The Stanford InfoBus Architecture">
+<META NAME="keywords" CONTENT="infobus_service">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-2022-jp">
+<LINK REL="STYLESHEET" HREF="infobus_service.css">
+<LINK REL="next" HREF="node3.html">
+<LINK REL="previous" HREF="node1.html">
+<LINK REL="up" HREF="infobus_service.html">
+<LINK REL="next" HREF="node3.html">
+</HEAD>
+<BODY >
+<!-- Navigation Panel -->
+<A NAME="tex2html45"
+ HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/~masao/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html43"
+ HREF="infobus_service.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/~masao/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html37"
+ HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/~masao/icons.gif/previous_motif.gif"></A>   
+<BR>
+<STRONG> Next:</STRONG> <A NAME="tex2html46"
+ HREF="node3.html">DLIOP : Managing Items</A>
+<STRONG> Up:</STRONG> <A NAME="tex2html44"
+ HREF="infobus_service.html">無題</A>
+<STRONG> Previous:</STRONG> <A NAME="tex2html38"
+ HREF="node1.html">Introduction</A>
+<BR>
+<BR>
+<!-- End of Navigation Panel -->
+
+<H1><A NAME="SECTION00020000000000000000">
+The Stanford InfoBus Architecture</A>
+</H1>
+
+<P>
+<BR>
+<DIV ALIGN="CENTER"><A NAME="infobus">&#160;</A><A NAME="24">&#160;</A>
+<TABLE WIDTH="50%">
+<CAPTION><STRONG>図 1:</STRONG>
+InfoBusとそのサービス層</CAPTION>
+<TR><TD><IMG
+ WIDTH="452" HEIGHT="235"
+ SRC="img2.gif"
+ ALT="\begin{figure}
+\begin{center}
+\epsfile{file=1.ps,width=10cm}
+\end{center}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+<BR>
+<P>
+Stanford InfoBusは
+クライアントに分散した異種の (heterogeneous) 情報資源やサービスへの
+統一したアクセスができるようにするアーキテクチャである。
+コレクションやサービスをInfoBusの上にのせるには、
+InfoBusプロトコルの一つを利用するか、
+そのサービス用のInfoBusプロクシ (Proxy) を利用する（図<A HREF="node2.html#infobus">1</A>）。
+
+<P>
+InfoBusプロクシはサービス自身または他のサービス提供者により運用される
+wrapperである。
+このやり方が相互運用性を実現するための柔軟性を与えている。
+例えば、WebサーチエンジンのAltavistaへのサービスを提供する場合、
+誰かがInfoBusへのwrapperを稼働させれば良く、
+DEC社自身がサービスをする必要はない。
+
+<P>
+もちろんサービス提供者自身が直接InfoBusプロクシを運用することもできる。
+そうすれば、より良いサービスの機能を直に利用できるので、
+サービスの質が保証されることとなる。
+このように、
+プロクシを利用してサービスを標準化しなくても良いことが
+InfoBusの接続性の良さとなっている。
+
+<P>
+InfoBusはクライアントやサービスの増加にともなって、
+wrapperを提供するのが容易なように設計されている。
+ちょうどハードウェア機器が線 (bus) に繋げられるように、
+単にシステム自体に組み込むだけで、
+クライアントやサービスは自由にやりとりできる。
+
+<P>
+クライアントは論文執筆・回覧の発行・製品開発の確認といった
+複雑な仕事を行なうためにInfoBusの資源を利用する。
+情報資源はオンライン目録・株価情報・国勢調査のデータ・新聞記事などの
+情報の集積を含んでいる。
+さらに、情報資源は情報に関する操作を行なうサービス
+--文書翻訳・文書要約・遠隔索引作業・課金サービス・著作権の認可などを
+含んでいる。
+
+<P>
+実装のレベルでは、InfoBusの構造はCORBAやDCOMのような分散環境でのオブジェクト指向設計を支援する技術とうまく融合している。
+我々の試験台となるInfoBusシステムのプロトタイプの開発では、
+CORBA（特にXerox PARCのILUシステム）を利用した。
+CORBAの利用により、
+異なるプラットフォーム上に異なるプログラミング言語でプロクシを構築することが可能となった。
+実際には様々なオブジェクトはPython・Java・C++を利用している。
+
+<P>
+InfoBusのプロクシとしてTelnetやZ39.50、HTTPなどのプロトコルでの
+サービスとやりとりできるものも可能で、
+InfoBusクライアントはこのようなプロクシにアクセスしても
+その違いを意識せずにやりとりできる。
+我々がこのようなプロクシを介してInfoBusでアクセスできるようにしたサービスには、
+Dialogサービス、Webのサーチエンジン、自動文書要約サービス、書誌変換ツール、
+OCRサービスなどがある。
+
+<P>
+
+<P>
+<BR><HR>
+<ADDRESS>
+Masao Takaku
+平成11年3月12日
+</ADDRESS>
+</BODY>
+</HTML>

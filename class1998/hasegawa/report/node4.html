@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!-- Converted with jLaTeX2HTML 98.1p1 release (March 2nd, 1998) + JP patch 2.0 (March 16th, 1998)
+patched by Kenshi Muto (mutou@three-a.co.jp), Three-A Systems,Co.,Ltd.
+LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others  -->
+<HTML>
+<HEAD>
+<TITLE>データ形式</TITLE>
+<META NAME="description" CONTENT="データ形式">
+<META NAME="keywords" CONTENT="report">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-2022-jp">
+<LINK REL="STYLESHEET" HREF="report.css">
+<LINK REL="next" HREF="node5.html">
+<LINK REL="previous" HREF="node3.html">
+<LINK REL="up" HREF="node2.html">
+<LINK REL="next" HREF="node5.html">
+</HEAD>
+<BODY >
+<!-- Navigation Panel -->
+<A NAME="tex2html63"
+ HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/~masao/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html61"
+ HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/~masao/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html55"
+ HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/~masao/icons.gif/previous_motif.gif"></A>   
+<BR>
+<STRONG> Next:</STRONG> <A NAME="tex2html64"
+ HREF="node5.html">Matrix Homepage</A>
+<STRONG> Up:</STRONG> <A NAME="tex2html62"
+ HREF="node2.html">Matrix Market</A>
+<STRONG> Previous:</STRONG> <A NAME="tex2html56"
+ HREF="node3.html">概要</A>
+<BR>
+<BR>
+<!-- End of Navigation Panel -->
+
+<H2><A NAME="SECTION00022000000000000000">
+データ形式</A>
+</H2>
+
+<P>
+Matrix Marketで提供されている行列のデータファイルの形式には次の3種類がある。
+<DL COMPACT>
+<DT>1.
+<DD>Matrix Market Exchange Formats[<A
+ HREF="node13.html#mm:format">3</A>]（<a href="../mmformat/mmformat.html">資料1</a>参照）
+<P>
+Matrix Marketで利用するために開発されたデータ形式で、
+行列データのやりとりするためのテキスト形式のファイルフォーマットである。
+表現が簡単にでき、解析しやすいように設計されている。
+
+<P>
+Matrix Market Exchange Formatsには次の2種類の表現法がある。
+<DL COMPACT>
+<DT>(a)
+<DD>Coordinate Format：疎行列の表現に用いる。
+<DT>(b)
+<DD>Array Format：密行列の表現に用いる。
+</DL>
+<P>
+<DT>2.
+<DD>Harwell-Boeing Exchange Format（<a href="../hb/hb.html">資料2</a>参照）
+
+<P>
+疎行列の表現用の形式で固定長フィールドを持つテキスト形式のファイルフォーマットである。
+特に、Fortranでの扱いに適した形式になっている。
+
+<P>
+<DT>3.
+<DD>Coordinate Text File Format （廃止予定）
+</DL>
+<P>
+さらに、これらのデータファイルはgzip形式で圧縮されて提供される。
+
+<P>
+<BR><HR>
+<ADDRESS>
+Masao Takaku
+平成11年3月16日
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-JP">
+<link rel="stylesheet" href="../default.css" type="text/css">
+<link rev="made" href="mailto:masao@ulis.ac.jp">
+<title>RPMの使い方</title>
+</head>
+<body>
+<h1>RPMの使い方</h1>
+<p>
+実は、Linuxはめったに管理したことが無いので、
+管理の仕方を知らなかったり、忘れたりすることが多いので、
+まずはRPMの使い方から書いておきましょう。
+</p>
+<h2>RPMとは</h2>
+<p>
+RedHat Linuxが採用したパッケージ管理システムで、
+多くのディストリビューションが採用している。
+これを使うとソフトウェアの依存関係に基づく管理が簡単に行え、
+ソフトウェアのインストール作業が便利になるというもの。
+また、ソフトウェアの配布を行う側でも
+多くのサイトでRPM形式でのバイナリ配布が行われている。
+</p>
+
+<h2>RPMを使ったインストール</h2>
+<p>
+例えば、hogehoge-1.0.0-k1.rpm を入手したら、
+インストール権限を持つユーザ（root）になって、
+以下のコマンドを打つ。<br>
+<code># rpm -ivh hogehoge-1.0.0-k1.i386.rpm</code><br>
+以上だけで、インストールは完了となる。
+</p>
+
+<p>
+もし、依存関係などに問題がでた場合は、
+必要とされるソフトをインストールしておく。
+もしも、強制的にインストールしたいときは、
+<code>--nodeps</code>オプションをつける。
+</p>
+<p>
+また、ソフトウェアを更新したい場合は、<br>
+<code># rpm -Fvh hogehoge-2.0.0-k1.i386.rpm</code><br>
+とする。
+（<code>-F</code>オプションは更新を表す）
+</p>
+<h2>SRPMを使ったインストール</h2>
+<p>
+sparcなどintel系以外のアーキテクチャ用のRPMは提供されていないことがある。
+その場合の配布方法がSRPMのようだ。
+これは「ソースファイル＋パッチ＋Specファイル」からなっており、
+実際にソフトウェアをその計算機上でコンパイルし、
+そのアーキテクチャ用のRPMを独自に作れるようにしたもの。
+</p>
+<p>
+SRPMからインストールしたい場合は、
+例えば、hogehoge-1.0.0-k1.src.rpm を入手したら、
+インストール権限を持つユーザ（root）になって、
+以下のコマンドを打つ。<br>
+<code># rpm --rebuild hogehoge-1.0.0-k1.src.rpm</code><br>
+これで、そのアーキテクチャ向きのRPMパッケージがつくられ、
+<code>/usr/src/redhat/RPMS</code>に置かれる。
+あとは、先ほどと同様に、<br>
+<code># cd /usr/src/redhat/RPMS</code><br>
+<code># rpm -ivh hogehoge-1.0.0-k1.sparc.rpm</code><br>
+とすれば、インストールが完了する。
+</p>
+
+<hr>
+<p>
+参考URLなど:<br>
+<a href="http://aglaia.c.u-tokyo.ac.jp/~yamamoto/aglaia/rpm.html">RPMの変更など</a>
+<a href="http://www.rpmfind.net/">rpmfind.net</a>
+</p>
+
+<hr>
+<address>
+高久雅生 (Takaku Masao)<br>
+<a href="http://cosmo.ulis.ac.jp/~masao/">http://cosmo.ulis.ac.jp/~masao/</a>, 
+<a href="mailto:masao@ulis.ac.jp">masao@ulis.ac.jp</a>
+</address>
+<div class="id">$Id$</div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3O//DTD W3 HTML 2.0//EN">
+<!Converted with LaTeX2HTML 95 (Thu Jan 19 1995) by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds >
+<!Actually with its Japanized version JLaTeX2HTML 95 (Wed Mar 1 1995) by Masahiro Kitagawa (kitagawa@ee.es.osaka-u.ac.jp), Osaka University >
+<HEAD>
+<TITLE> 試作システム</TITLE>
+</HEAD>
+<BODY>
+<meta name="description" value=" 試作システム">
+<meta name="keywords" value="report">
+<meta name="resource-type" value="document">
+<meta name="distribution" value="global">
+<P>
+ <BR> <HR><A NAME=tex2html53 HREF="node5.html"><IMG ALIGN=BOTTOM ALT="next" SRC="http://cbl.leeds.ac.uk/nikos/figs//next_motif.gif"></A>   <A NAME=tex2html51 HREF="report.html"><IMG ALIGN=BOTTOM ALT="up" SRC="http://cbl.leeds.ac.uk/nikos/figs//up_motif.gif"></A>   <A NAME=tex2html45 HREF="node3.html"><IMG ALIGN=BOTTOM ALT="previous" SRC="http://cbl.leeds.ac.uk/nikos/figs//previous_motif.gif"></A>         <BR>
+<B> Next:</B> <A NAME=tex2html54 HREF="node5.html"> おわりに</A>
+<B>Up:</B> <A NAME=tex2html52 HREF="report.html">VRMLと仮想図書館 
+ --- システム構成論I（情報システム構築論）レポート課題</A>
+<B> Previous:</B> <A NAME=tex2html46 HREF="node3.html"> （VRMLによる）仮想図書館の実現・実装例</A>
+<BR> <HR> <P>
+<H1><A NAME=SECTION00040000000000000000> 試作システム</A></H1>
+<P>
+ここでは前節で述べた研究とは別に自分なりにVRMLで仮想図書館を
+構成するための仮想世界を記述した。
+そのVRML表現と実際のVRMLファイルのソースを添付する。
+また、これらを<BR> 
+<tt> <A NAME=tex2html1 HREF="http://www.ulis.ac.jp/%7Emasao/vrml-bookshelf/">&lt;http://www.ulis.ac.jp/&#126;masao/vrml-bookshelf/&gt;</A></tt>で
+試験的に公開する。
+<P>
+これはポリゴンで本・本棚・壁・天井などの形を作成し、
+あらかじめスキャナで読みとった本の背表紙をテクスチャとして張り付けた。
+<P>
+ここで構築したVRMLの特長は本の持つ大きさと厚みを表現した点である。
+全節で示した例はいずれも全ての本を同一の大きさと厚さで表現していた。
+実際に行なった本の表現を付録として添付した。
+--- Windows95(PC)上の WWW ブラウザ Netscape Navigator 4.04 で
+VRMLブラウザ（Plug-In）Cosmo Player 2.0 を使用した際のもの。
+<P>
+従来の本という形態では欲しい情報を見つける際に
+本の大きさや厚さ、装丁、といった要素は重要であり、
+これらの外面的な要素によって内容を察することもある程度までは可能である。
+つまり、背表紙をみれば本のタイトルや著者名など主題情報などが書かれていて、
+本の大きさや厚みなどは本の内容の情報量がどの程度かということを
+推測し判断する元となった。
+この本の視覚的な情報を元に欲しい本を探す原理を
+応用できないかと考えた。
+<P>
+現在の本のように物理的な形態で情報が流通している際に
+使われてきたこのような要素・尺度（本の大きさや厚み）は、
+電子的な形態で情報を流通させていくであろう電子図書館システムでは
+どのようになっていくかについて考えてみると、
+ユーザに対してある文書がどのような情報量や種類を持っているか
+といったものをうまく提示させるシステムが重要になってくると考える。
+その一つとして、VRMLなどにより3次元で表現する提示方法は
+非常に有効ではないかと考える。
+<P>
+VRMLの利点としては既にWWW上で標準的に流通していて利用が非常に簡単である点や
+拡張性が高い点、Javaなどのプログラミング言語と組み合わせることができる点
+がある。
+<P>
+今回試作してみたシステムでは
+VRMLがWWWで標準的に流通しているという利点を生かすことができた。
+一方、実現しなかった機能としては、
+VRMLによる3次元表現の自動生成や
+VRMLの拡張機能やスクリプト機能の導入がある。
+たとえば、検索結果のスコア順に本を並べ直して表示できる。
+また、検索を通じれば好きなように本の配架のやりかたを変えられる。
+これをうまく処理すれば、
+ユーザは様々な組織化をした図書館を仮想的に利用することができる。
+これは物理的な図書館では利用できない機能の一つであり、
+仮想図書館の特色の一つとなるものである。
+<P>
+
+<P>
+ 
+<P>
+<BR> <HR>
+<P><ADDRESS>
+<I>Masao Takaku <BR>
+Fri Aug  7 02:04:53 1998</I>
+</ADDRESS>
+</BODY>

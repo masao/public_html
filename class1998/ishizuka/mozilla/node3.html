@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!-- Converted with jLaTeX2HTML 98.1p1 release (March 2nd, 1998) + JP patch 2.0 (March 16th, 1998)
+patched by Kenshi Muto (mutou@three-a.co.jp), Three-A Systems,Co.,Ltd.
+LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others  -->
+<HTML>
+<HEAD>
+<TITLE>XMLの処理</TITLE>
+<META NAME="description" CONTENT="XMLの処理">
+<META NAME="keywords" CONTENT="mozilla">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-2022-jp">
+<LINK REL="STYLESHEET" HREF="mozilla.css">
+<LINK REL="next" HREF="node4.html">
+<LINK REL="previous" HREF="node2.html">
+<LINK REL="up" HREF="mozilla.html">
+<LINK REL="next" HREF="node4.html">
+</HEAD>
+<BODY >
+<!-- Navigation Panel -->
+<A NAME="tex2html49"
+ HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/~masao/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html47"
+ HREF="mozilla.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/~masao/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html41"
+ HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/~masao/icons.gif/previous_motif.gif"></A>   
+<BR>
+<STRONG> Next:</STRONG> <A NAME="tex2html50"
+ HREF="node4.html">RDF in Mozilla</A>
+<STRONG> Up:</STRONG> <A NAME="tex2html48"
+ HREF="mozilla.html">XML In Mozilla</A>
+<STRONG> Previous:</STRONG> <A NAME="tex2html42"
+ HREF="node2.html">XMLの利用形態</A>
+<BR>
+<BR>
+<!-- End of Navigation Panel -->
+
+<H1><A NAME="SECTION00030000000000000000">
+XMLの処理</A>
+</H1>
+
+<P>
+実際のXMLの処理は以下のようなモジュールが個々におこなっている。
+
+<P>
+<UL>
+<LI>XML パーサ
+
+<P>
+James ClarkによるC言語で書かれているexpatパーサ
+<A NAME="tex2html5"
+ HREF="footnode.html#foot107"><SUP>5</SUP></A>を利用する。
+このパーサはMozillaの他のモジュール中のどこからでも呼び出し可能となっている。
+
+<P>
+<LI>DOM構造
+      
+DOM
+<A NAME="tex2html6"
+ HREF="footnode.html#foot108"><SUP>6</SUP></A>
+はJavascript（もしくはその他のプラグイン）によるAPIの準備が計画されている。
+
+<P>
+<LI>スタイルシート
+
+<P>
+現在はCSS、XML-Link、HTMLネームスペースでの要素を
+利用したXMLページを表示できる（図4参照）。
+今後はCSS・XSL・DSSSL
+<A NAME="tex2html7"
+ HREF="footnode.html#foot53"><SUP>7</SUP></A>
+などのスタイルシート別の処理ができる
+「スタイルシートプラグインAPI」を準備する計画が進められている。
+
+<P>
+<LI>その他（計画）
+      
+      <UL>
+<LI>Mozillaのコード中からXMLパーサ、Netlibコード、RDFモジュールなどの独立性を高める。
+<LI>MathML
+<A NAME="tex2html8"
+ HREF="footnode.html#foot109"><SUP>8</SUP></A>の実現。
+<LI>XMLに基づいたベクトル図形表示。（VML?）
+      </UL></UL>
+<P>
+<BR><HR>
+<ADDRESS>
+Masao Takaku
+平成11年3月11日
+</ADDRESS>
+</BODY>
+</HTML>

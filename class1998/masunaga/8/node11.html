@@ -1,0 +1,189 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!-- Converted with jLaTeX2HTML 98.1p1 release (March 2nd, 1998) + JP patch 2.0 (March 16th, 1998)
+patched by Kenshi Muto (mutou@three-a.co.jp), Three-A Systems,Co.,Ltd.
+LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others  -->
+<HTML>
+<HEAD>
+<TITLE>プログラムとデータベースの融合</TITLE>
+<META NAME="description" CONTENT="プログラムとデータベースの融合">
+<META NAME="keywords" CONTENT="8">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-2022-jp">
+<LINK REL="STYLESHEET" HREF="8.css">
+<LINK REL="next" HREF="node12.html">
+<LINK REL="previous" HREF="node10.html">
+<LINK REL="up" HREF="node9.html">
+<LINK REL="next" HREF="node12.html">
+</HEAD>
+<BODY >
+<!-- Navigation Panel -->
+<A NAME="tex2html123"
+ HREF="node12.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/~masao/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html121"
+ HREF="node9.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/~masao/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html115"
+ HREF="node10.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/~masao/icons.gif/previous_motif.gif"></A>   
+<BR>
+<STRONG> Next:</STRONG> <A NAME="tex2html124"
+ HREF="node12.html">エンタープライズモデルの到来</A>
+<STRONG> Up:</STRONG> <A NAME="tex2html122"
+ HREF="node9.html">ソフトウェアの未来</A>
+<STRONG> Previous:</STRONG> <A NAME="tex2html116"
+ HREF="node10.html">混合・適合型ソフトウェア</A>
+<BR>
+<BR>
+<!-- End of Navigation Panel -->
+
+<H2><A NAME="SECTION00092000000000000000">
+プログラムとデータベースの融合</A>
+</H2>
+
+<P>
+オブジェクト指向技術によってもたらされるもう一つの変化は
+プログラムとデータベースのゆるやかな融合である。
+
+<P>
+<BR>
+<BR>
+<DIV ALIGN="CENTER"><A NAME="program-db">&#160;</A><A NAME="73">&#160;</A>
+<TABLE WIDTH="50%">
+<CAPTION><STRONG>図:</STRONG>
+プログラムとデータベース</CAPTION>
+<TR><TD><IMG
+ WIDTH="423" HEIGHT="271"
+ SRC="img2.gif"
+ ALT="\begin{figure}
+\begin{center}
+\epsfile{file=OODB92.ps,height=6cm}
+\end{center}
+\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+<BR> 
+
+<P>
+<BR>
+<BR>
+<DIV ALIGN="CENTER"><A NAME="procedure-db">&#160;</A><A NAME="81">&#160;</A>
+<TABLE WIDTH="50%">
+<CAPTION><STRONG>図:</STRONG>
+オブジェクトデータベース内のプロシージャ</CAPTION>
+<TR><TD><IMG
+ WIDTH="428" HEIGHT="271"
+ SRC="img3.gif"
+ ALT="\begin{figure}
+\begin{center}
+\epsfile{file=OODB93.ps,height=6cm}
+\end{center}
+\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+<BR> 
+
+<P>
+最近までプロシージャとデータは完全に分離されてきた。
+プロシージャはプログラムの中に、データはデータベース中におかれていた
+（図<A HREF="node11.html#program-db"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="/~masao/icons.gif/cross_ref_motif.gif"></A>）。
+しかし、
+この分離は
+関係するプロシージャとデータを一緒にパッケージ化する必要のある
+モジュール化プログラミングに違反している。
+この違反の影響はデータベースの構造を変更しようとするたびに現れる。
+共有しているデータベースを利用するいくつものプログラムがあると、
+データ構造のちょっとした変更でも
+不都合や悪い時には全面的な障害までをも生むことだろう。
+
+<P>
+この問題を解消するためには
+プログラムとデータの分離をやめ、
+関連する全てのアプリケーションについて
+プロシージャとデータをカプセル化する必要がある。
+この融合を果たすものがオブジェクトデータベースである。
+これはプログラミング言語自体を含んでいて、
+データベース内で直接メソッドを実行することができる。
+従って、データとプロシージャを一緒にした
+アプリケーション全体をデータベースに格納できる（図<A HREF="node11.html#procedure-db"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="/~masao/icons.gif/cross_ref_motif.gif"></A>）。
+
+<P>
+オブジェクトデータベースにプロシージャを格納することは
+他にも多くの恩恵をもたらす。
+単なるプログラムと違い、
+データベースでは複数ユーザでの共用、アクセス制限、
+同時アクセスによる衝突の回避、事故による損失の保護、
+検索の容易性といった多くの重要なサービスを提供している。
+オブジェクトデータベースに格納していることでプロシージャがこれらの機能を
+自動的に利用できるようになる。
+データとプロシージャをパッケージ化しているだけではなく、
+オブジェクトデータベースはいわば「プロシージャベース」となる。
+
+<P>
+<BR>
+<BR>
+<DIV ALIGN="CENTER"><A NAME="distributed">&#160;</A><A NAME="91">&#160;</A>
+<TABLE WIDTH="50%">
+<CAPTION><STRONG>図:</STRONG>
+オブジェクトデータベース内の分散データベース</CAPTION>
+<TR><TD><IMG
+ WIDTH="423" HEIGHT="271"
+ SRC="img4.gif"
+ ALT="\begin{figure}
+\begin{center}
+\epsfile{file=OODB94.ps,height=6cm}
+\end{center}
+\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+<BR> 
+
+<P>
+さらに、単なる「プロシージャベース」以上の機能として、
+いつでもプロシージャをオブジェクトデータベース内で
+実行できるというものがある。
+オブジェクトデータベースで実行中のアプリケーションは
+サブルーチンを呼び出すように、
+別のアプリケーションのプロシージャを直接呼び出せる。
+混合・適合型プログラミングと組み合わせれば、
+このやりかたは非常に柔軟な環境を生み出すこととなる。
+
+<P>
+最新のオブジェクトデータベースは
+多くの異なる機種上で分散させることができる（図<A HREF="node11.html#distributed"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="/~masao/icons.gif/cross_ref_motif.gif"></A>）。
+このことにより、
+プログラマはアプリケーションをローカルのコンピュータ上で
+一見独立したアプリケーションのよう作成し実行できる。
+しかし、このアプリケーションはデータベース内に直接構築されているので、
+データベース内の他の全アプリケーションのリソースも利用できる。
+
+<P>
+オブジェクトデータベース内にプロシージャを埋め込むことの利点は
+非常に大きいので、
+アプリケーションプログラムは分散オブジェクトデータベースへと
+着実に移行していくことだろう。
+プログラムとデータの融合が進行していくと、
+企業データベースの役割も変化するだろう。
+受動的なデータの集積所から、
+データだけでなく企業運営の方針と進め方を管理する
+活動的なメディアに成長していくだろう。
+
+<P>
+<BR><HR>
+<ADDRESS>
+Masao Takaku
+平成11年3月11日
+</ADDRESS>
+</BODY>
+</HTML>

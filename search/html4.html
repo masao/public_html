@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+        "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>HTML 4.01 Specification</title>
+<link rev=made href="mailto:masao@ulis.ac.jp">
+<link rel="stylesheet" href="../default.css" type="text/css">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  strong.keyword { color: Red; }
+  p.example      { text-indent: 1em; 
+                   color: Navy;
+		   font-weight: bold;
+                   font-family: monospace; }
+  code           { color: Navy;
+                   font-family: monospace; }
+  code.example   { color: Navy;
+		   font-weight: bold;
+                   font-family: monospace; }
+  code.operator  { color: Navy;
+                   font-family: monospace; 
+		   font-weight: bold; }
+--></style>
+</head>
+<body lang="ja">
+<h1>HTML 4 仕様書の全文検索</h1>
+<p>
+現在、<!-- FILE --> 2,364 <!-- FILE --> URLがインデックス化され、
+<!-- KEY --> 19,755 <!-- KEY --> 個のキーワードが登録されています。
+</p>
+<p>
+<strong>インデックスの最終更新日: <!-- DATE --> 2000-05-23 <!-- DATE --></strong>
+</p>
+<hr>
+<form method="get" action="namazu.cgi">
+<p>
+<strong>検索式:</strong> 
+<input type="text" name="query" size="40">
+<input type="submit" name="submit" value="Search!">
+<input type="hidden" name="whence" value="0">
+<input type="hidden" name="idxname" value="html4">
+<a href="namazu.cgi?idxname=html4">[検索方法]</a>
+</p>
+<p>
+<strong>表示件数:</strong>
+<select name="max">
+<option value="10">10
+<option selected value="20">20
+<option value="30">30
+<option value="50">50
+<option value="100">100
+</select>
+<strong>要約:</strong>
+<select name="result">
+<option selected value="normal">あり
+<option value="short">なし
+</select>
+<strong>ソート:</strong>
+<select name="sort">
+<option selected value="score">スコア
+<option value="field:subject:ascending">題名 (昇順)
+<option value="field:subject:descending">題名 (降順)
+<option value="field:size:ascending">サイズ (昇順)
+<option value="field:size:descending">サイズ (降順)
+<option value="field:uri:ascending">URI (昇順)
+<option value="field:uri:descending">URI (降順)
+</select>
+</p>
+</form>
+<hr>
+<h2>概要</h2>
+<p>
+HTML4 の仕様書 (以下) を対象にしています。
+</p>
+<ul>
+  <li><a href="http://www.w3.org/TR/html4">HTML 4 Specification</a> (W3C)
+  <li><a href="http://www.asahi-net.or.jp/~sd5a-ucd/rec-html401j/">HTML 4.01 仕様書邦訳</a> (日本語版)
+</ul>
+<p>
+この全文検索システムは
+<a href="http://www.namazu.org/">Namazu</a> <!-- VERSION --> v2.0.5 <!-- VERSION -->
+によって構築されています。
+</p>
+<hr>
+<address>
+<a href="mailto:masao@ulis.ac.jp">高久雅生</a> (Takaku Masao)<br>
+<a href="http://cosmo.ulis.ac.jp/~masao/search/html4.html">http://cosmo.ulis.ac.jp/~masao/search/html4.html</a>
+</address>
+</body>
+</html>

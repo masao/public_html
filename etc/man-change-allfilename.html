@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=ISO-2022-JP">
+<title>ファイル名の一括変換の方法</title>
+</head>
+
+<body bgcolor="#aaffaa">
+
+<!-- hhmts start -->
+<p>最終更新日： <b>Fri Sep  4 17:03:03 1998</b></p>
+<!-- hhmts end -->
+<hr>
+<h1>ファイル名一括置換の方法</h1>
+<p>
+filename.txtをfilename.bakに拡張子を変換する方法です。きちんと確認はしていません。
+</p>
+<h2>csh版</h2>
+foreach file (*.txt); mv $file $file:r.bak; end;
+<h2>sh版</h2>
+for file in *.txt; do mv $file `basename $file .txt`.bak; done;
+<h2>sed版</h2>
+ls | sed -e 's/\(\(.\)\.txt\)$/mv \1 \2.bak/' | sh
+<hr>
+<address>
+高久雅生 (Takaku Masao)<br>
+<a href="http://cosmo.ulis.ac.jp/~masao/">http://cosmo.ulis.ac.jp/~masao/</a><br>
+<a href="mailto:masao@ulis.ac.jp">masao@ulis.ac.jp</a></address>
+
+</body></html>

@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+        "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<!-- LINK-REV-MADE -->
+<link rev=made href="mailto:masao@ulis.ac.jp">
+<!-- LINK-REV-MADE -->
+<title>Full-Text Search engine for Java2 Document</title>
+<link rel="stylesheet" href="../default.css" type="text/css">
+<style type="text/css"><!--
+  strong.keyword { color: Red; }
+  p.example      { text-indent: 1em; 
+                   color: Navy;
+		   font-weight: bold;
+                   font-family: monospace; }
+  code           { color: Navy;
+                   font-family: monospace; }
+  code.example   { color: Navy;
+		   font-weight: bold;
+                   font-family: monospace; }
+  code.operator  { color: Navy;
+                   font-family: monospace; 
+		   font-weight: bold; }
+--></style>
+</head>
+<body lang="ja">
+<h1>Java2 ドキュメントの全文検索</h1>
+<p>
+現在、<!-- FILE --> 5,559 <!-- FILE --> の文書がインデックス化され、
+<!-- KEY --> 132,708 <!-- KEY --> 個のキーワードが登録されています。
+</p>
+<p>
+<strong>インデックスの最終更新日: <!-- DATE --> 2000-11-19 <!-- DATE --></strong>
+</p>
+<hr>
+<form method="get" action="namazu.cgi">
+<p>
+<strong>検索式:</strong> 
+<input type="text" name="query" size="40">
+<input type="submit" name="submit" value="Search!">
+<input type="hidden" name="whence" value="0">
+<input type="hidden" name="idxname" value="java">
+<a href="namazu.cgi?idxname=java">[検索方法]</a>
+</p>
+<p>
+<strong>表示件数:</strong>
+<select name="max">
+<option value="10">10
+<option selected value="20">20
+<option value="30">30
+<option value="50">50
+<option value="100">100
+</select>
+<strong>表示形式:</strong>
+<select name="result">
+<option selected value="normal">標準
+<option value="short">簡潔
+</select>
+<strong>ソート:</strong>
+<select name="sort">
+<option selected value="score">スコア
+<option value="field:subject:ascending">題名 (昇順)
+<option value="field:subject:descending">題名 (降順)
+<option value="field:size:ascending">サイズ (昇順)
+<option value="field:size:descending">サイズ (降順)
+<option value="field:uri:ascending">URI (昇順)
+<option value="field:uri:descending">URI (降順)
+</select>
+</p>
+</form>
+<hr>
+<h2>概要</h2>
+<p>
+<a href="http://java.sun.com/j2se/1.3/ja/docs/ja/">Java2のドキュメント</a>（http://java.sun.com/j2se/1.3/ja/docs/ja/）全体を対象に全文検索できます。
+</p>
+<p>
+この全文検索システムは
+<a href="http://www.namazu.org/">Namazu</a> <!-- VERSION --> v2.0.5 <!-- VERSION -->
+によって構築されています。
+</p>
+<hr>
+<address>
+<a href="mailto:masao@ulis.ac.jp">高久雅生</a> (Takaku Masao)<br>
+<a href="http://cosmo.ulis.ac.jp/~masao/search/java.html">http://cosmo.ulis.ac.jp/~masao/search/java.html</a>
+</address>
+</body>
+</html>

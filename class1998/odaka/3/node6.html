@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!-- Converted with jLaTeX2HTML 98.1p1 release (March 2nd, 1998) + JP patch 2.0 (March 16th, 1998)
+patched by Kenshi Muto (mutou@three-a.co.jp), Three-A Systems,Co.,Ltd.
+LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others  -->
+<HTML>
+<HEAD>
+<TITLE>D. 条件付危険量による定式化</TITLE>
+<META NAME="description" CONTENT="D. 条件付危険量による定式化">
+<META NAME="keywords" CONTENT="3">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-2022-jp">
+<LINK REL="STYLESHEET" HREF="3.css">
+<LINK REL="previous" HREF="node5.html">
+<LINK REL="up" HREF="node2.html">
+<LINK REL="next" HREF="node7.html">
+</HEAD>
+<BODY >
+<!-- Navigation Panel -->
+<A NAME="tex2html70"
+ HREF="node7.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/~masao/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html68"
+ HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/~masao/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html64"
+ HREF="node5.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/~masao/icons.gif/previous_motif.gif"></A>   
+<BR>
+<STRONG> Next:</STRONG> <A NAME="tex2html71"
+ HREF="node7.html">最尤法</A>
+<STRONG> Up:</STRONG> <A NAME="tex2html69"
+ HREF="node2.html">ベイズ識別法</A>
+<STRONG> Previous:</STRONG> <A NAME="tex2html65"
+ HREF="node5.html">C. 正規分布型条件付確率</A>
+<BR>
+<BR>
+<!-- End of Navigation Panel -->
+
+<H3><A NAME="SECTION00031400000000000000">
+D. 条件付危険量による定式化</A>
+</H3>
+
+<P>
+これまでのベイズ識別法の説明では誤り率最小という条件を使用してきたが、
+厳密には損失量という概念を使い、
+条件付危険量の最小化を要求する。
+
+<P>
+損失量は本来カテゴリ<IMG
+ WIDTH="19" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.gif"
+ ALT="$\omega_l$">に属するパターン<B><I>x</I></B>を、
+誤って別のカテゴリ
+<!-- MATH: $\omega_\nu$ -->
+<IMG
+ WIDTH="22" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.gif"
+ ALT="$\omega_\nu$">に属すると決めてしまった時に生じる量である。
+一般にある<B><I>x</I></B>を
+<!-- MATH: $\omega_\nu$ -->
+<IMG
+ WIDTH="22" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.gif"
+ ALT="$\omega_\nu$">であると決めた時の条件付危険量
+<!-- MATH: $R(\omega_\nu|\mbox{\boldmath {$x$ }})$ -->
+<IMG
+ WIDTH="67" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.gif"
+ ALT="$R(\omega_\nu\vert\mbox{\boldmath {$x$ }})$">は式(3.6)で与えられる。
+本来のベイズ識別法は、これを最小とするカテゴリ名を出力する。
+すなわち、
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+R(\omega_\nu|\mbox{\boldmath {$x$ }})=\min_{1\leq l'\leq L}R(\omega_\nu|\mbox{\boldmath {$x$ }})\mbox{ならば、{\boldmath {$x$ }}のカテゴリ名は$l_0$ である。}
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="441" HEIGHT="43"
+ SRC="img12.gif"
+ ALT="\begin{displaymath}R(\omega_\nu\vert\mbox{\boldmath {$x$ }})=\min_{1\leq l'\leq ...
+...)\mbox{ならば、{\boldmath {$x$ }}のカテゴリ名は$l_0$ である。}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+この時、決定が正しければ損失0、誤りならば1とする単純なモデルの場合には、
+前項まで使ってきたベイズ識別法とおなじものになる。
+
+<P>
+<BR><HR>
+<ADDRESS>
+Masao Takaku
+平成11年3月12日
+</ADDRESS>
+</BODY>
+</HTML>

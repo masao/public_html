@@ -1,0 +1,168 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!-- Converted with jLaTeX2HTML 98.1p1 release (March 2nd, 1998) + JP patch 2.0 (March 16th, 1998)
+patched by Kenshi Muto (mutou@three-a.co.jp), Three-A Systems,Co.,Ltd.
+LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others  -->
+<HTML>
+<HEAD>
+<TITLE>無題</TITLE>
+<META NAME="description" CONTENT="無題">
+<META NAME="keywords" CONTENT="mmformat">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-2022-jp">
+<LINK REL="STYLESHEET" HREF="mmformat.css">
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+<BODY >
+<!-- Navigation Panel -->
+<A NAME="tex2html1"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/~masao/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/~masao/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/~masao/icons.gif/previous_motif_gr.gif">   
+<BR>
+<STRONG> Next:</STRONG> <A NAME="tex2html2"
+ HREF="node1.html">この文書について...</A>
+<BR>
+<BR>
+<!-- End of Navigation Panel -->
+
+<P>
+<DIV ALIGN="CENTER">
+<FONT SIZE="+1"><B>Matrix Market Exchange Formats の例
+</B></FONT></DIV>
+<P>
+<BR>
+<BR>
+<BR>
+
+<P>
+例：<U>Coodinate Format</U>（疎行列の表現に用いる）
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\left(
+\begin{array}{ccccc}
+1& 0& 0& 6& 0 \\
+ 0& 10.5& 0& 0& 0 \\
+ 0& 0& .015& 0& 0 \\
+ 0& 250.5& 0& -280& 33.32 \\
+ 0& 0& 0& 0& 12\\
+\end{array}
+\right)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="244" HEIGHT="126"
+ SRC="img1.gif"
+ ALT="\begin{displaymath}\left(
+\begin{array}{ccccc}
+1& 0& 0& 6& 0 \\
+0& 10.5& 0& 0...
+...0.5& 0& -280& 33.32 \\
+0& 0& 0& 0& 12\\
+\end{array}\right)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+上の5×5の疎行列は以下のように表現される。
+
+<P>
+<BLOCKQUOTE><PRE>
+%%MatrixMarket matrix coordinate real general
+% A 5x5 sparse matrix with 8 nonzeros
+5 5  8
+1 1	1.0
+2 2	10.5
+4 2	250.5
+3 3	0.015
+1 4	6.0
+4 4	-280.0
+4 5	33.32
+5 5	12.0
+</PRE></BLOCKQUOTE>
+<P>
+<BR>
+<BR>
+<BR>
+例：<U>Array Format</U>（主に密行列の表現に用いる）
+       
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\left(
+\begin{array}{ccc}
+1.0& 5.0& 9.0\\
+ 2.0& 6.0& 10.0\\
+ 3.0& 7.0& 11.0\\
+ 4.0& 8.0& 12.0\\
+\end{array}
+\right)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="136" HEIGHT="102"
+ SRC="img2.gif"
+ ALT="\begin{displaymath}\left(
+\begin{array}{ccc}
+1.0& 5.0& 9.0\\
+2.0& 6.0& 10.0\\
+3.0& 7.0& 11.0\\
+4.0& 8.0& 12.0\\
+\end{array}\right)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+上の4×3の密行列は以下のように表現される。
+
+<P>
+<BLOCKQUOTE><PRE>
+%%MatrixMarket matrix array real general
+% A 4x3 dense matrix
+4 3
+1.0
+2.0
+3.0
+4.0
+5.0
+6.0
+7.0
+8.0
+9.0
+10.0
+11.0
+12.0
+</PRE></BLOCKQUOTE>
+<P>
+<BR><HR>
+<!-- Table of Child-Links -->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html3"
+ HREF="node1.html">この文書について... </A>
+</UL>
+<!-- End of Table of Child-Links -->
+<BR><HR>
+<ADDRESS>
+Masao Takaku
+平成11年3月16日
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!-- Converted with jLaTeX2HTML 98.1p1 release (March 2nd, 1998) + JP patch 2.0 (March 16th, 1998)
+patched by Kenshi Muto (mutou@three-a.co.jp), Three-A Systems,Co.,Ltd.
+LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others  -->
+<HTML>
+<HEAD>
+<TITLE>History</TITLE>
+<META NAME="description" CONTENT="History">
+<META NAME="keywords" CONTENT="4.3">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-2022-jp">
+<LINK REL="STYLESHEET" HREF="4.3.css">
+<LINK REL="next" HREF="node4.html">
+<LINK REL="previous" HREF="node2.html">
+<LINK REL="up" HREF="node2.html">
+<LINK REL="next" HREF="node4.html">
+</HEAD>
+<BODY >
+<!-- Navigation Panel -->
+<A NAME="tex2html30"
+ HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/~masao/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html28"
+ HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/~masao/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html22"
+ HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/~masao/icons.gif/previous_motif.gif"></A>   
+<BR>
+<STRONG> Next:</STRONG> <A NAME="tex2html31"
+ HREF="node4.html">N-Gram Data Structure</A>
+<STRONG> Up:</STRONG> <A NAME="tex2html29"
+ HREF="node2.html">N-Gram Data Stractures</A>
+<STRONG> Previous:</STRONG> <A NAME="tex2html23"
+ HREF="node2.html">N-Gram Data Stractures</A>
+<BR>
+<BR>
+<!-- End of Navigation Panel -->
+
+<H3><A NAME="SECTION00044100000000000000">
+History</A>
+</H3>
+
+<P>
+N-グラムの最初の利用は、第2次世界大戦で暗号に使われたものに遡る。
+Fltcher Prattは次のように述べている。
+「2-グラムや3-グラム表を利用すれば、誰でも単純な暗号を解読できる。」 (Pratt-42)
+また、用語の合成法として2-グラムを用いることがAdamsonに述べられていた。
+(Adamson-74)
+しかし、それはステミングの一般的な定義を導いてはいない。
+なぜなら、N-グラムの生成するものは、意味のある語幹とは対照的に、
+単語の断片であるからである。
+データ構造の処理としてステミングよりもより適切に
+分類されているように思われるのは、
+この長い単語をより短い単語の断片にマッピングするという特徴によるものである。
+
+<P>
+N-グラム（特に3-グラム）のもう一つの主要な利用は、
+スペルエラーの検出と修正の領域において行なわれている。
+(Angell-83, McIllroy-82, Morris-75, Peterson-80,
+Thorelli-62, Wang-77, Zamora-81)
+ほとんどの研究は、英語の語彙におけるN-グラム（大抵は3-グラムだが）の
+出現の可能性の統計的な値に注目し、
+N-グラムに全く含まれないか、滅多に現れない単語を
+誤りを含む単語の可能性があるとしている。
+Damerauはスペルエラーを図4.8に示すような4つの範疇に分類した。 (Damerau-64)
+Zamoraは分類表を用いて、
+3-グラムによる解析がミススペルや転換した文字列を認識できる
+有効なデータ構造を提供することを示した。
+このことは、情報システムにとっては
+正規化処理（第1章参照）中での訂正のために、
+入力誤りを判別するための基礎となった。
+N-グラムパターンの頻出度は資料の言語を判別するのにも使われる。
+(Damashek-95, Cohen-95)
+
+<P>
+情報検索においては、
+3-グラムはテキスト圧縮 (Wisn-87) と索引用語の長さを操作する (Will-79, Sheck-78) ために用いられている。
+D'AmoreとMahは実装した転置ファイルシステムの索引要素として
+さまざまな異なるN-グラムを用いた。 (D'Amore-85)
+それらは、SDIで利用されるLogicon LMDSシステム(Yochum-95)のためのプロファイルを
+符合化する重要なデータ構造でもあった。
+遡及検索では、
+Acquaintanceシステムが大規模文書データベース用の
+検索文書ファイルを蓄積するのにN-グラムを使用している。(Damashek-95, Huffman-95)
+
+<P>
+<BR><HR>
+<ADDRESS>
+Masao Takaku
+平成11年3月11日
+</ADDRESS>
+</BODY>
+</HTML>

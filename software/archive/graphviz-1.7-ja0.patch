@@ -1,0 +1,102 @@
+<html><body><pre>? dot
+? Makefile.in
+? Makefile
+? .deps
+? .libs
+? neato
+? common/Makefile.in
+? common/Makefile
+? common/.deps
+? common/color_lib
+? common/colortbl.h
+? common/colxlate.lo
+? common/emit.lo
+? common/figgen.lo
+? common/gdgen.lo
+? common/globals.lo
+? common/hpglgen.lo
+? common/imapgen.lo
+? common/input.lo
+? common/ismapgen.lo
+? common/mifgen.lo
+? common/mpgen.lo
+? common/output.lo
+? common/postproc.lo
+? common/picgen.lo
+? common/psgen.lo
+? common/shapes.lo
+? common/svggen.lo
+? common/utils.lo
+? common/vrmlgen.lo
+? common/vtxgen.lo
+? common/.libs
+? common/libdotneato.la
+? dotgen/Makefile.in
+? dotgen/Makefile
+? dotgen/.deps
+? dotgen/acyclic.lo
+? dotgen/class1.lo
+? dotgen/class2.lo
+? dotgen/cluster.lo
+? dotgen/compound.lo
+? dotgen/conc.lo
+? dotgen/decomp.lo
+? dotgen/fastgr.lo
+? dotgen/flat.lo
+? dotgen/init.lo
+? dotgen/mincross.lo
+? dotgen/ns.lo
+? dotgen/position.lo
+? dotgen/rank.lo
+? dotgen/routespl.lo
+? dotgen/sameport.lo
+? dotgen/splines.lo
+? dotgen/timing.lo
+? dotgen/.libs
+? dotgen/libdot.la
+? neatogen/Makefile.in
+? neatogen/Makefile
+? neatogen/.deps
+? neatogen/adjust.lo
+? neatogen/edges.lo
+? neatogen/find_ints.lo
+? neatogen/geometry.lo
+? neatogen/heap.lo
+? neatogen/hedges.lo
+? neatogen/info.lo
+? neatogen/init.lo
+? neatogen/intersect.lo
+? neatogen/legal.lo
+? neatogen/memory.lo
+? neatogen/poly.lo
+? neatogen/printvis.lo
+? neatogen/site.lo
+? neatogen/solve.lo
+? neatogen/splines.lo
+? neatogen/stuff.lo
+? neatogen/voronoi.lo
+? neatogen/.libs
+? neatogen/libneato.la
+Index: common/shapes.c
+===================================================================
+RCS file: /home/cvs/graphviz/dotneato/common/shapes.c,v
+retrieving revision 1.2
+diff -u -r1.2 shapes.c
+--- common/shapes.c	2000/10/06 16:34:55	1.2
++++ common/shapes.c	2000/11/04 02:29:18
+@@ -86,7 +86,13 @@
+   0.5366,  0.3442,  0.3240,  0.3564,  0.8018,  0.0     /* &quot;z{|}~&quot;  */
+ };
+ static float *Fontwidth;
+-#define FONTWIDTH(c) (isprint(c)?Fontwidth[c-32]:0.0)
++#define FONTWIDTH(c) (iseuc(c)? 0.7 : (isprint(c)?Fontwidth[c-32]:0.0))
++
++/* following code is derived from Namazu: 
++ * Copyright (C) 1997-1999 Satoru Takabayashi All rights reserved.
++ * Copyright (C) 2000 Namazu Project All rights reserved.
++ */
++#define iseuc(c)  ((unsigned char)(c) &gt;= 0xa1 &amp;&amp; (unsigned char) (c) &lt;= 0xfe)
+ 
+ static port_t	Center = { {0,0}, -1, 0, 0, 0};
+ 
+</pre></body></html> 

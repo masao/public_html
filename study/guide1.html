@@ -1,0 +1,156 @@
+<html>
+<head>
+<title>VRML1.0ガイド</title>
+</head>
+
+<body bgcolor="#aaffaa">
+<h1>VRML(Virtual Reality Modeling Language)とは、</h1>
+<p>
+VRMLは、WWW上で3次元物体を表現するための言語です。
+</p>
+<p>
+以下では、VRMLの基礎を理解するために、まず、VRML1.0についてのみ述べます。
+</p>
+<h2>VRMLの考え方(思想・背景・特徴)</h2>
+<p>
+VRMLは、WWW上のハイパーリンクされた仮想世界を記述するための言語です。最終的な目標は、多人数参加のインタラクティブなシミュレーションを行う、インターネット上の標準的な言語となることです。つまり、現在WWW上で展開されている、HTMLによるハイパーリンクの相互関係を、VRMLは、より視覚的(感覚的)に理解できる(認識できる)ように表現します。
+</p>
+<p>
+1994年春、第1回WWW会議でWWW上での3次元データの標準的な利用法について、議論され、メーリングリストを中心として、仕様の提案・検討が行われました。その結果、1995年5月に最終的にVRML1.0の仕様が決定しました。
+</p>
+<p>
+VRML1.0では、ネットワーク言語としての特性を考慮して、以下の点を満たすように設計されました。
+<ul>
+<li>プラットフォームに独立
+<li>拡張性
+<li>バンド幅の狭いコネクションでの処理能力の高さ
+</ul>
+</p>
+<p>
+VRML1.0は、ハイパーリンクの機能を除いては、インタラクティブな振る舞いをサポートしないと決定されました。これは、柔軟性の高い設計と早期の実装を考慮したものです。
+</p>
+<h2>VRMLの基本的文法</h2>
+<p>
+実際のフォーマットは、以下の通りです。
+<ul>
+<li>まず、ファイルの先頭行に、
+<pre>
+#VRML V1.0 ascii
+</pre>
+と書くことが必要です。
+
+<li>次にファイルの拡張子は、".wrl" です。(これは、"world" の略です。)
+
+<li>'#' は、コメントです。改行までは、読み捨てられます。
+
+<li>VRMLの座標系は、ディスプレイに向かって、上がX軸の、右がY軸の、手前がZ軸の、それぞれ正方向になります。
+</ul>
+</p>
+<h2>ノードとフィールド</h2>
+<p>
+VRMLは3次元のオブジェクトを表現するために、標準的なオブジェクトの集合を定義しています。このオブジェクトは、ノード(Nodes)と呼ばれます。
+</p>
+<p>
+ノードは、シーングラフ(Scene Graphs)と呼ばれる、階層構造の中に配置されます。前に現れるノードは後にでてくるノードに影響を与えられます。たとえば、MaterialノードやRotationノードは、後に現れるノードに作用します。シーングラフはこれらのノードの累積状態を保持します。
+</p>
+<p>
+ノードの特徴は以下の通りです。
+<ul>
+<li>[ノードの種類]:ノードには、立方体、球、テクスチャ、幾何変換などがあります。
+<li>[フィールド]:同じタイプのノードであっても、フィールド(Fields)と呼ばれるパラメータを与えることで、さまざまなオブジェクトが表現できます。ノードは、フィールドを1つ以上持つこともまったく持たないことも可能です。
+<li>[再利用]:ノードには、名前をつけて、ほかの場所でも同じオブジェクトを再利用することができます。
+<li>[子ノード]:オブジェクトの階層構造は、ノードがほかのノードを含むことで実現されます。子のノードを持つノードはグループ化ノード(group nodes)と呼ばれ、0または1個以上のノードを持つことができます。
+</ul>
+</p>
+<p>
+ノードは、以下の形式で記述されます。
+<pre>
+DEF <i>objectname nodename</i> { <i>fields children</i> }
+</pre>
+この内、<i>nodename</i>と中がっこだけが必須のもので、残りのものはすべて省略可能です。
+</p>
+<h2>例1</h2>
+<p>
+では、実際のVRMLの記述の例です。
+<pre>
+#VRML V1.0 ascii
+Sphere {}	# 球
+</pre>
+上の記述は、半径が 1.0 の球を表現しています。
+</p>
+<p>
+VRMLは、指定されないフィールドの値は、あらかじめ決められた値になります。Sphere ノードのフィールド(値)は仕様で以下のように決められています。
+<pre>
+Sphere {
+	radius 1.0	# SFFloat
+}
+</pre>
+</p>
+<h2>例2</h2>
+<p>
+次に、この球に色をつけてみましょう。
+<pre>
+#VRML V1.0 ascii
+Material {
+	diffuseColor 1 0 0	# 赤
+}
+Sphere {}
+</pre>
+Materialノードがオブジェクトの材質を決定するノードです。Materialノードのデフォルトのフィールド値は次のようになっています。
+<pre>
+Material {
+	ambientColor  0.2 0.2 0.2	# MFColor  :環境光の反射成分
+	diffuseColor  0.8 0.8 0.8	# MFColor  :反射光の反射成分
+	specularColor 0.0 0.0 0.0	# MFColor  :拡散光の反射成分
+	emissiveColor 0.0 0.0 0.0	# MFColor  :放射光の反射成分
+	shiness       0.2		# MFFloat  :鏡面光の指数
+	transparency  0.0		# MFFloat  :透明度
+}
+</pre>
+</p>
+<h2>例3</h2>
+<p>
+今度は、複数のオブジェクトをシーングラフに配置する例です。
+<pre>
+#VRML V1.0 ascii
+
+Separator {
+	DirectionalLight {}
+	Separator {
+		Material {
+			diffuseColor 1 0 0
+		}
+		Translation { translation 3 0 1 }
+		Sphere { radius 2.3 }
+	}
+	Separator {
+		Material {
+			diffuseColor 0 0 1
+		}
+		Transform {
+			translation -2.4 0.2 1
+			rotation 0 1 1 0.9
+		}
+		Cube{}
+	}
+}
+</pre>
+ここでは、指向性の光に照らされた、赤い球と、青い立方体が、配置されています。
+</p>
+<p>
+Separatorノードは、重要なグループ化ノードの一つで、子ノードをシーングラフのほかの部分から分離します。
+</p>
+<h2>参照文献</h2>
+<ul>
+<li><a href="http://www.webcity.co.jp/info/andoh/vrml/vrml1.0j.html">http://www.webcity.co.jp/info/andoh/vrml/vrml1.0j.html -- [VRML1.0 Specification 日本語版]</a>
+<li>三浦健二郎. VRML2.0 : 3Dサイバースペース構築言語. 東京, 朝倉書店, 1996, 272p.
+</ul>
+<hr>
+<address>
+高久雅生<br>
+<a href="http://cosmo.ulis.ac.jp/~masao/">http://cosmo.ulis.ac.jp/~masao/</a><br>
+<a href="mailto:masao@ulis.ac.jp">masao@ulis.ac.jp</a>
+</address>
+</body>
+
+</html>

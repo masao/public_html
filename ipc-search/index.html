@@ -1,0 +1,160 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+        "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<link rev=made href="mailto:masao@ulis.ac.jp">
+<link rel="stylesheet" href="../default.css" type="text/css">
+<link rel="help" href="namazu.cgi">
+<link rel="start" href="./">
+<title>ULIS-IPC Search Engine</title>
+<style type="text/css"><!--
+  strong.keyword { color: Red; }
+  p.example      { text-indent: 1em; 
+                   color: Navy;
+		   font-weight: bold;
+                   font-family: monospace; }
+  code           { color: Navy;
+                   font-family: monospace; }
+  code.example   { color: Navy;
+		   font-weight: bold;
+                   font-family: monospace; }
+  code.operator  { color: Navy;
+                   font-family: monospace; 
+		   font-weight: bold; }
+--></style>
+</head>
+<body lang="ja">
+<h1>ULIS-IPC Search Engine</h1>
+<p>
+現在、<!-- FILE --> 840 <!-- FILE --> の文書がインデックス化され、
+<!-- KEY --> 43,221 <!-- KEY --> 個のキーワードが登録されています。
+</p>
+<p>
+<strong>インデックスの最終更新日: <!-- DATE --> 2001-04-29 <!-- DATE --></strong>
+</p>
+<hr>
+<form method="get" action="namazu.cgi">
+<p>
+<strong>検索式:</strong> 
+<input type="text" name="query" size="40">
+<input type="submit" name="submit" value="Search!">
+<a href="namazu.cgi">[検索方法]</a>
+</p>
+<p>
+<strong>表示件数:</strong>
+<select name="max">
+<option value="10">10
+<option selected value="20">20
+<option value="30">30
+<option value="50">50
+<option value="100">100
+</select>
+<strong>表示形式:</strong>
+<select name="result">
+<option selected value="normal">標準
+<option value="short">簡潔
+</select>
+<strong>ソート:</strong>
+<select name="sort">
+<option selected value="score">スコア
+<option value="date:late">日付 (新しい順)
+<option value="date:early">日付 (古い順)
+<option value="field:subject:ascending">題名 (昇順)
+<option value="field:subject:descending">題名 (降順)
+<option value="field:size:ascending">サイズ (昇順)
+<option value="field:size:descending">サイズ (降順)
+<option value="field:uri:ascending">URI (昇順)
+<option value="field:uri:descending">URI (降順)
+</select>
+</p>
+</form>
+
+<!-- -*-html-helper-*- -->
+<hr>
+<h2>お知らせ</h2>
+<dl>
+<!-- What's New -->
+  <dt>2001-04-29
+  <dd>インデックスを更新。全 840 URL。（追加 1、更新 9）
+  <dt>2001-04-22
+  <dd>インデックスを更新。全 839 URL。（追加 2、更新 9）
+  <dt>2001-04-15
+  <dd>インデックスを更新。全 837 URL。（追加 1、削除 1、更新 6）
+  <dt>2001-04-08
+  <dd>インデックスを更新。全 837 URL。（追加 3、更新 14）
+  <dt>2001-04-01
+  <dd>インデックスを更新。全 834 URL。（追加 2、更新 6）
+  <dt>2001-03-25
+  <dd>インデックスを更新。全 832 URL。（追加 5、更新 7）
+  <dt>2001-03-11
+  <dd>インデックスを更新。全 827 URL。（追加 1、更新 6）
+  <dt>2001-03-04
+  <dd>インデックスを更新。全 826 URL。（追加 4、更新 10）
+  <dt>2001-02-25
+  <dd>インデックスを更新。全 822 URL。（追加 1、更新 6）
+  <dt>2001-02-18
+  <dd>インデックスを更新。全 821 URL。（追加 3、更新 12）
+  <dt>2001-02-11
+  <dd>インデックスを更新。全 818 URL。（追加 1、更新 8）
+  <dt>2001-02-04
+  <dd>インデックスを更新。全 817 URL。（追加 190、削除 3、更新 10）
+  <dt>2001-01-28
+  <dd>インデックスを更新。全 630 URL。（追加 1、更新 5）
+  <dt>2001-01-21
+  <dd>インデックスを更新。全 629 URL。（追加 2、削除 161、更新 9）
+  <dt>2001-01-14
+  <dd>インデックスを更新。全 788 URL。（追加 58、削除 51、更新 13）
+  <dt>2000-12-31
+  <dd>インデックスを更新。全 781 URL。
+  <dt>2000-12-24
+  <dd>インデックスを更新。全 781 URL。（追加 5、削除 1、更新 11）
+  <dt>2000-12-17
+  <dd>インデックスを更新。全 777 URL。（追加 2、更新 9）
+  <dt>2000-12-10
+  <dd>インデックスを更新。全 775 URL。（追加 8、更新 10）
+  <dt>2000-12-03
+  <dd>インデックスを更新。全 767 URL。（追加 3、更新 10）
+  <dt>2000-11-26
+  <dd>インデックスを更新。全 764 URL。（追加 1、削除 2、更新 14）
+</dl>
+<p><a href="history.html">昔のお知らせ</a></p>
+
+<h2>概要</h2>
+<p>
+本学の総合情報処理センターが提供している文書群の全文検索サービスを提供しています。
+センターが電子的に提供しているマニュアルなどの検索に有用だと思います。
+</p>
+<p>
+検索対象は
+</p>
+<ul>
+  <li><a href="http://www.ulis.ac.jp/ipc/">総合情報処理センター</a>
+     （http://www.ulis.ac.jp/ipc/）
+  <li><a href="http://www.ulis.ac.jp/newsys/">メインコンピュータシステム</a>
+     （http://www.ulis.ac.jp/newsys/）
+</ul>
+<p>
+の各ページからリンクのたどれるHTML、テキスト文書です。
+</p>
+<p>
+検索システムの構築には以下のソフトウェアを利用しています。
+</p>
+<ol>
+  <li>WWW巡回取得ツール<a href="http://www.gnu.org/software/wget/">GNU Wget</a>
+  <li>全文検索システム<a href="http://www.namazu.org/">Namazu</a>
+  <li>日本語形態素解析システム<a href="http://chasen.aist-nara.ac.jp/">茶筌</a>
+</ol>
+<p>
+なお、<strong>学外からは検索できないよう設定しています。</strong>
+</p>
+<p>
+ちなみに、<a href="update.pl">こんなスクリプト</a>を使って、
+週に一度インデックスを更新してます。
+</p>
+<hr>
+<address>
+<a href="./">ULIS-IPC Search Engine</a><br>
+<a href="mailto:masao@ulis.ac.jp">masao@ulis.ac.jp</a> (Masao Takaku)
+</address>
+</body>
+</html>

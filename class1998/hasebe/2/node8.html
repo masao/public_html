@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!-- Converted with jLaTeX2HTML 98.1p1 release (March 2nd, 1998) + JP patch 2.0 (March 16th, 1998)
+patched by Kenshi Muto (mutou@three-a.co.jp), Three-A Systems,Co.,Ltd.
+LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others  -->
+<HTML>
+<HEAD>
+<TITLE>Client Stub（クライアントスタブ）</TITLE>
+<META NAME="description" CONTENT="Client Stub（クライアントスタブ）">
+<META NAME="keywords" CONTENT="2">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-2022-jp">
+<LINK REL="STYLESHEET" HREF="2.css">
+<LINK REL="next" HREF="node9.html">
+<LINK REL="previous" HREF="node7.html">
+<LINK REL="up" HREF="node2.html">
+<LINK REL="next" HREF="node9.html">
+</HEAD>
+<BODY >
+<!-- Navigation Panel -->
+<A NAME="tex2html94"
+ HREF="node9.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/~masao/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html92"
+ HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/~masao/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html86"
+ HREF="node7.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/~masao/icons.gif/previous_motif.gif"></A>   
+<BR>
+<STRONG> Next:</STRONG> <A NAME="tex2html95"
+ HREF="node9.html">Dynamic Invocation Interface（動的起動インタフェース）</A>
+<STRONG> Up:</STRONG> <A NAME="tex2html93"
+ HREF="node2.html">Structure of an Object</A>
+<STRONG> Previous:</STRONG> <A NAME="tex2html87"
+ HREF="node7.html">Mapping of OMG IDL</A>
+<BR>
+<BR>
+<!-- End of Navigation Panel -->
+
+<H3><A NAME="SECTION00021600000000000000">
+Client Stub（クライアントスタブ）</A>
+</H3>
+
+<P>
+非オブジェクト指向言語のマッピングでは、
+各インタフェース型に対するスタブへのプログラミングインタフェースがあるだろう。
+一般に、スタブは
+あるオブジェクトにおけるOMG IDLで定義されたオペレーションへのアクセスを与える。
+この方法は一度OMG IDLとその特定のプログラミング言語へのマッピングに精通した
+プログラマには予想することが容易である。
+スタブは残りのORBに対して、
+特定のORBコアに対して（おそらく最適化された）privateなインタフェースを使って
+呼び出しを行なう。
+もし複数のORBが取得できれば、
+異なったORBに対応する異なるスタブが存在することもある。
+この場合には、ORBと言語マッピングは特定のオブジェクトリファレンスに対して
+正しいスタブと結び付けるよう協調する必要がある。
+
+<P>
+C++やSmalltalkのようなオブジェクト指向言語は
+スタブインタフェースを必要としない。
+
+<P>
+<BR><HR>
+<ADDRESS>
+Masao Takaku
+平成11年3月12日
+</ADDRESS>
+</BODY>
+</HTML>

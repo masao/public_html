@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!-- Converted with jLaTeX2HTML 98.1p1 release (March 2nd, 1998) + JP patch 2.0 (March 16th, 1998)
+patched by Kenshi Muto (mutou@three-a.co.jp), Three-A Systems,Co.,Ltd.
+LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others  -->
+<HTML>
+<HEAD>
+<TITLE>N-Gram Data Structure</TITLE>
+<META NAME="description" CONTENT="N-Gram Data Structure">
+<META NAME="keywords" CONTENT="4.3">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-2022-jp">
+<LINK REL="STYLESHEET" HREF="4.3.css">
+<LINK REL="previous" HREF="node3.html">
+<LINK REL="up" HREF="node2.html">
+<LINK REL="next" HREF="node5.html">
+</HEAD>
+<BODY >
+<!-- Navigation Panel -->
+<A NAME="tex2html38"
+ HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/~masao/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html36"
+ HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/~masao/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html32"
+ HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/~masao/icons.gif/previous_motif.gif"></A>   
+<BR>
+<STRONG> Next:</STRONG> <A NAME="tex2html39"
+ HREF="node5.html">PAT Data Structure</A>
+<STRONG> Up:</STRONG> <A NAME="tex2html37"
+ HREF="node2.html">N-Gram Data Stractures</A>
+<STRONG> Previous:</STRONG> <A NAME="tex2html33"
+ HREF="node3.html">History</A>
+<BR>
+<BR>
+<!-- End of Navigation Panel -->
+
+<H3><A NAME="SECTION00044200000000000000">
+N-Gram Data Structure</A>
+</H3>
+
+<P>
+図4.7に示すように、N-グラムは語を無視し、
+（語間記号によってその処理は任意に制限できるが）
+入力を連続したデータとして扱うデータ構造である。
+データ構造は固定長の重複した記号の断片からなり、
+それが検索可能な処理トークンを定義している。
+これらのトークンは、
+トークンが見つかった全ての資料への論理的なリンクを保持している。
+転置リストや（第5章で述べる）文書ベクトルやその他の保持しているデータ構造は、
+リンクデータ構造を蓄積するのに使われ、検索処理過程において利用される。
+中には頻出するN-グラムの最小限のものが、
+検索過程の第1段階として保持されているものもある。(Yochum-85)
+このような実装の例は第5章で述べる。
+
+<P>
+固定長の単語片の大きさを決めることは、多くの文脈において研究されてきている。
+YochumとD'AmoreはNの異なる値での影響を研究した。
+Fatah Comlekogluは転置ファイルを使ったN-グラムデータ構造を、
+N=2からN=26まで調査した。
+3-グラム（長さ3のN-グラム）は、
+データ構造の大きさと対比して情報のトレードオフをとると、
+最適の長さであると結論付けられた。
+Aquaintanceシステムは単語の境目を無視する、より長いN-グラムを使用している。
+N-グラムの利点は、
+検索可能トークンにおける有限の限界を決定するというものである。
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+MaxSeg_{n} = ( \lambda )^{n}
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="119" HEIGHT="33"
+ SRC="img1.gif"
+ ALT="\begin{displaymath}MaxSeg_{n} = ( \lambda )^{n}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+生成されたN-グラムの一意のものの最大数<I>MaxSeg</I>は、
+N-グラムの長さ<I>n</I>と
+アルファベットによる処理可能記号（語間記号ではない）の数<IMG
+ WIDTH="14" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.gif"
+ ALT="$\lambda$">
+の関数として計算可能である。
+
+<P>
+一意の処理トークン数を減らすことや、
+限られた最小限の計算機上で高速の処理を行なう実装手法があるが、
+何らかの環境の下では誤った検索結果が起き得る。
+例えば、3-グラムを使用し、
+語間記号や資料中のN-グラムの文字位置情報を含まないシステムでは、
+``retail''の検索に対し、``retain detail''を含む資料を見つけるだろう。
+（つまり、``retail''に関連する3-グラムの全ては
+``retain detail''の処理中に生成される）
+語間記号の導入もこの例は防げないだろう。
+N-グラムの文字位置の導入によって、
+``retail''を定義する ``ret'', ``eta'', ``tai'', ``ail'' というN-グラムが
+全てそれぞれ1文字以内に連続的に存在していないということがわかるだろう。
+N-グラムが長ければ長いほど、
+単語片における情報は多くなるので、この種の誤りは少なくなるようである。
+しかし、N-グラムが長くなればなるほど、
+ほとんどの単語が一つのN-グラムに含まれるので、
+全単語のデータ構造と同じ結果を出すようになる。
+N-グラムのもう一つの欠点は、リンクデータ構造を蓄積している
+転置リスト（または別のデータ構造）のサイズの増大である。
+実際に、3-グラムの使用によって、
+もし語間記号を含まなければ、（図4.7によれば）
+処理トークン数は5の要素まで増大する。
+したがって転置リストは5つの要素まで増大する。
+
+<P>
+N-グラムデータ構造による処理トークンの限界から、
+資料をN-グラムの検索可能構造にマッピングすることや、検索質問の処理
+において、最適化された実行手法も適用することができる。
+ある特定のN-グラムには意味を持っていない。
+なぜなら、
+それは処理トークンの断片であり、概念を表現したものではないからである。
+したがって、N-グラムは概念とその関係をほとんど表現しない。
+しかし、N-グラムの併用は標準的な単語索引と同等に使いうるものであり、
+実行時に顕著な改良をもって85%以内の適合率と同等の再現率を達成している。
+(Adams-92)
+資料のN-グラムによるベクター表現も資料間の類似度を計算するのに
+利用することが可能である。
+
+<P>
+<BR><HR>
+<ADDRESS>
+Masao Takaku
+平成11年3月11日
+</ADDRESS>
+</BODY>
+</HTML>

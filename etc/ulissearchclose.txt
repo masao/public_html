@@ -1,0 +1,26 @@
+<html><body><pre>Date: Wed, 22 Mar 2000 22:59:22 JST
+Newsgroups: ulis.chat
+Subject: &quot;ulis search engine&quot; died
+From: masao@ulis.ac.jp (Masao Takaku)
+Path: masao
+Organization: University of Library and Information Science
+X-Newsreader: mnews [version 1.22PL2] 2000-02/25(Fri)
+Mime-Version: 1.0
+Content-Type: text/plain; charset=ISO-2022-JP
+
+たかく@M2です。
+
+もう一ヶ月以上過ぎたことだけど、一応お知らせしておきます。
+
+<a href="http://voyager.ulis.ac.jp/~masao/ulis-search/">http://voyager.ulis.ac.jp/~masao/ulis-search/</a>
+にて、
+ここ一年ほどやっていた「学内検索システム」ですが、
+主に利用していたマシンがディスクの障害でお亡くなりになったため、
+このたび閉鎖しました。
+
+他のマシンで再開する予定は今のところありません。
+--
+高久 雅生  // ULIS : University of Library and Information Science
+    図書館情報大学大学院 図書館情報学研究科 修士 2 年次  石塚研究室
+    <a href="mailto:masao@ulis.ac.jp">mailto:masao@ulis.ac.jp</a>  <a href="http://cosmo.ulis.ac.jp/~masao/">http://cosmo.ulis.ac.jp/~masao/</a>
+</pre></body></html> 

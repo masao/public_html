@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3O//DTD W3 HTML 2.0//EN">
+<!Converted with LaTeX2HTML 95 (Thu Jan 19 1995) by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds >
+<!Actually with its Japanized version JLaTeX2HTML 95 (Wed Mar 1 1995) by Masahiro Kitagawa (kitagawa@ee.es.osaka-u.ac.jp), Osaka University >
+<HEAD>
+<TITLE> （VRMLによる）仮想図書館の実現・実装例</TITLE>
+</HEAD>
+<BODY>
+<meta name="description" value=" （VRMLによる）仮想図書館の実現・実装例">
+<meta name="keywords" value="report">
+<meta name="resource-type" value="document">
+<meta name="distribution" value="global">
+<P>
+ <BR> <HR><A NAME=tex2html43 HREF="node4.html"><IMG ALIGN=BOTTOM ALT="next" SRC="http://cbl.leeds.ac.uk/nikos/figs//next_motif.gif"></A>   <A NAME=tex2html41 HREF="report.html"><IMG ALIGN=BOTTOM ALT="up" SRC="http://cbl.leeds.ac.uk/nikos/figs//up_motif.gif"></A>   <A NAME=tex2html35 HREF="node2.html"><IMG ALIGN=BOTTOM ALT="previous" SRC="http://cbl.leeds.ac.uk/nikos/figs//previous_motif.gif"></A>         <BR>
+<B> Next:</B> <A NAME=tex2html44 HREF="node4.html"> 試作システム</A>
+<B>Up:</B> <A NAME=tex2html42 HREF="report.html">VRMLと仮想図書館 
+ --- システム構成論I（情報システム構築論）レポート課題</A>
+<B> Previous:</B> <A NAME=tex2html36 HREF="node2.html"> WWWとVRML</A>
+<BR> <HR> <P>
+<H1><A NAME=SECTION00030000000000000000> （VRMLによる）仮想図書館の実現・実装例</A></H1>
+<P>
+
+<P>
+従来の図書館を3次元表現として計算機上に仮想的に実現し、
+仮想図書、仮想書架、仮想司書などを実現した例を以下に示す。
+<P>
+<UL><LI> 佐藤らによる「孫悟空」[<A HREF="node6.html#songoku">4</A>]
+<P>
+       後に示すシステム類の先駆的なシステムといえる。
+       まだインターネットの普及がない時期だったので、
+       VRMLは使用していないが3次元CGを駆使して
+       仮想図書館システムを作り上げている。
+       実際に利用者が現実の図書館で行なっている、
+       図書を眺め歩いて（歩き回りながら）本を探すといった検索プロセスの
+       実現を意図したもの。
+       （「電子開架検索」というサービスの実現を目指した）
+       図書館の外観・閲覧室・図書の表紙・めくられるページ
+       といったものをCG画像化し、利用者は3次元の表現中を歩き回りながら
+       見たい本を手にとって中身を見ることができる。
+       残念ながら図書の配列方式の変更（複数種類の分類法の適用）は
+       図書のモデルと配列処理をうまく組み合わせることができず、
+       実現できなかったとしている。
+       ネットワーク上での利用に関しては国立国会図書館の専用線を利用すれば
+       オフィスや家庭でも利用可能としている。
+<P>
+ <LI> 神谷らによる「検索可視化システム」[<A HREF="node6.html#kamiya">5</A>]
+<P>
+       3次元記述言語VRMLを利用してWWW上での検索システムの
+       検索結果を可視化するシステム。
+       データベースからの検索結果（書誌データ）を元に
+       VRMLを動的に生成し、検索結果を3次元で表示させるもの。
+       仮想図書と仮想書架をVRMLで表現した。
+<P>
+ <LI> 
+       石川らによる「分散イメージデータを利用する仮想図書館」[<A HREF="node6.html#isikawa">6</A>]
+<P>
+       イメージデータをはりつけた仮想図書などのVRMLを動的に生成する。
+       ブラウジング検索（歩き回りながらの検索）をできるようにする。
+       WWW上からの図書データの入力（登録）作業を行なえる。
+       LOD(Level of Details)により、ネットワークの負荷に考慮する。
+       仮想図書館を歩きながら目的の図書を探し、図書を選択したら、
+       ページをめくりながら内容を読む。
+       といったことが可能としている。
+<P>
+</UL><BR> <HR>
+<P><ADDRESS>
+<I>Masao Takaku <BR>
+Fri Aug  7 02:04:53 1998</I>
+</ADDRESS>
+</BODY>

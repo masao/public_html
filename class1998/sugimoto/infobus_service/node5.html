@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!-- Converted with jLaTeX2HTML 98.1p1 release (March 2nd, 1998) + JP patch 2.0 (March 16th, 1998)
+patched by Kenshi Muto (mutou@three-a.co.jp), Three-A Systems,Co.,Ltd.
+LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others  -->
+<HTML>
+<HEAD>
+<TITLE>検索のやりとり</TITLE>
+<META NAME="description" CONTENT="検索のやりとり">
+<META NAME="keywords" CONTENT="infobus_service">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-2022-jp">
+<LINK REL="STYLESHEET" HREF="infobus_service.css">
+<LINK REL="next" HREF="node6.html">
+<LINK REL="previous" HREF="node4.html">
+<LINK REL="up" HREF="node3.html">
+<LINK REL="next" HREF="node6.html">
+</HEAD>
+<BODY >
+<!-- Navigation Panel -->
+<A NAME="tex2html79"
+ HREF="node6.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/~masao/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html77"
+ HREF="node3.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/~masao/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html71"
+ HREF="node4.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/~masao/icons.gif/previous_motif.gif"></A>   
+<BR>
+<STRONG> Next:</STRONG> <A NAME="tex2html80"
+ HREF="node6.html">考察</A>
+<STRONG> Up:</STRONG> <A NAME="tex2html78"
+ HREF="node3.html">DLIOP : Managing Items</A>
+<STRONG> Previous:</STRONG> <A NAME="tex2html72"
+ HREF="node4.html">コレクション</A>
+<BR>
+<BR>
+<!-- End of Navigation Panel -->
+
+<H2><A NAME="SECTION00032000000000000000">
+検索のやりとり</A>
+</H2>
+
+<P>
+<BR>
+<DIV ALIGN="CENTER"><A NAME="dliop:search">&#160;</A><A NAME="44">&#160;</A>
+<TABLE WIDTH="50%">
+<CAPTION><STRONG>図 3:</STRONG>
+基本的な検索のやりとり</CAPTION>
+<TR><TD><IMG
+ WIDTH="453" HEIGHT="252"
+ SRC="img4.gif"
+ ALT="\begin{figure}
+\begin{center}
+\epsfile{file=3.ps,width=10cm}
+\end{center}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+<BR>
+<P>
+図<A HREF="node5.html#dliop:search">3</A>に基本的な検索のやりとりを示す。
+クライアントは絞り込み可能コレクションがプロクシとして動作している外部のサービスに検索を行なう。
+
+<P>
+<DL COMPACT>
+<DT>1.
+<DD>クライアントは結果を保持するローカルのコレクションオブジェクトを作成する。
+<DT>2.
+<DD>外部のサービスへのプロクシである絞り込み可能コレクションに検索質問を出す。
+       
+       検索質問は
+       欲しい情報を絞り込む条件（著者に「Smith」の語を含む）や、
+       すぐに取得する結果数（最初の10件）、
+       取得する結果に含まれるべき部分の指定（各結果のタイトルと抄録だけ）
+       などを含んでいる。
+ <DT>3.
+<DD>プロクシコレクションは
+       検索質問を外部のサービスに適したやりかた
+       （例えば、HTTP、Z39.50、Telnet、ローカルファイルシステム）で送る。
+ <DT>4.
+<DD>プロクシコレクションはヒット件数が分かると、
+       クライアントの結果コレクションに知らせる。
+ <DT>5.
+<DD>クライアントのコレクションへの呼びだしがあるたびに、
+       プロクシから結果が送られる。
+</DL>
+<P>
+<BR><HR>
+<ADDRESS>
+Masao Takaku
+平成11年3月12日
+</ADDRESS>
+</BODY>
+</HTML>
