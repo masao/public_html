@@ -13,16 +13,23 @@ $:.unshift "."
 require "ipcnews"
 
 class CGI
+   def base_path
+      if self.path_info
+	 return "../" * self.path_info.count("/")
+      else
+	 return ""
+      end
+   end
+   
    def html_header(title)
-      csspath = "../../default.css"
-      csspath = "../" * self.path_info.count("/") + csspath if self.path_info
+      csspath = self.base_path + "../../default.css"
       result = <<EOF
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
 "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="ja">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-JP">
-<link rel="stylesheet" href="#{csspath}" type="text/css">
+<link rel="stylesheet" href="#{self.base_path}../../default.css" type="text/css">
 <link rev=made href="mailto:masao@ulis.ac.jp">
 <title>#{title}</title>
 <style type="text/css">
@@ -46,6 +53,7 @@ img { border: 0px; }
 <h1>#{title}</h1>
 EOF
    end
+
    def html_footer
       result = <<EOF
 <p class="notice">
@@ -65,7 +73,7 @@ EOF
 <div class="validator">
 <a href="http://validator.w3.org/check/referer"><img src="http://www.w3.org/Icons/valid-html401" alt="Valid HTML 4.01!" height="31" width="88"></a>
 <a href="http://jigsaw.w3.org/css-validator/check/referer"><img width="88" height="31" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!"></a>
-<a href="http://feeds.archive.org/validator/check?url=http%3A%2F%2Fnile.ulis.ac.jp%2F%7Emasao%2Fipc-search%2Fipcnews%2Fipcnews-rss.rdf"><img src="valid-rss.png" width="88" height="31" alt="Valid RSS!"></a>
+<a href="http://feeds.archive.org/validator/check?url=http%3A%2F%2Fnile.ulis.ac.jp%2F%7Emasao%2Fipc-search%2Fipcnews%2Fipcnews-rss.rdf"><img src="#{self.base_path}valid-rss.png" width="88" height="31" alt="Valid RSS!"></a>
 </div>
 </body>
 </html>
