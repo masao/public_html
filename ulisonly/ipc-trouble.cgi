@@ -58,7 +58,7 @@ EOF
 </form>
 EOF
     if (length($search)) {	# ¸¡º÷
-	@entries = grep(/$search/i, @entries);
+	@entries = grep(/\Q$search/i, @entries);
  	print "<p><font color=\"red\">¸¡º÷·ë²Ì: ", $#entries + 1, "·ï</font></p>\n";
     }
 
