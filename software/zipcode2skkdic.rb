@@ -4,7 +4,7 @@
 # 使い方:
 #   （以下のようにすると、未登録候補の集合が作れる）
 #   % nkf -SXe ken_all.csv | ./zipcode2skkdic.rb > tmp
-#   % skkdic-expr2 tmp + SKK-JISYO.geo SKK-JISYO.L > geo.new
+#   % skkdic-expr2 tmp - SKK-JISYO.geo SKK-JISYO.L > geo.new
 
 require 'jcode'
 
@@ -13,10 +13,43 @@ class ConvertZipcode
       @all = Hash::new
    end
 
-   def convert(entry, word)
+   def register(entry, word, annotation = nil)
+      if entry == word   # or entry.tr('ぁ-ん', 'ァ-ン') == word
+	 return false
+      end
+      
+      unless entry =~ /^[ぁ-んー#]+$/  # wrong entry
+	 return false
+      end
+
+      unless @all[entry + word]
+	 puts "#{entry} /#{word};#{annotation ? "[地名] " + annotation : ""}/"
+      end
+      @all[entry + word] = true
+   end
+
+   # 市区町村名の変換
+   def convert_city(entry, word, annotation = nil)
+      entry = entry.delete("\"").tr('ァ-ン', 'ぁ-ん')
+      word = word.delete("\"")
+      annotation = annotation.delete("\"")
+
+      # 「○○郡××町」の単位を2つに分割する
+      if (w = /^(.+郡)(.+)$/.match(word)) and (e = /^(.+ぐん)(.+)$/.match(entry))
+	 register(e[1], w[1], annotation)
+	 register(e[2], w[2], annotation + w[1])
+      end
+
+      register(entry, word, annotation)
+   end
+
+   # 町域名の変換
+   def convert_town(entry, word, annotation = nil)
       entry = entry.delete("\"").gsub(/\(.+\)/, "").sub(/\(.+$/, "").gsub(/-/, "ー").tr('ァ-ン', 'ぁ-ん')
 
       word = word.delete("\"").gsub(/（.+）/, "").sub(/（.+$/, "")
+
+      annotation = annotation.delete("\"")
 
       case word
       when "以下に掲載がない場合", /）$/, /、/, /〜/
@@ -47,16 +80,7 @@ class ConvertZipcode
 	 end
       end
 
-#        if entry == word or entry.tr('ぁ-ん', 'ァ-ン') == word
-#  	  return false
-#        end
-      
-      unless entry =~ /^[ぁ-んー#]+$/  # wrong entry
-	 return false
-      end
-
-      puts "#{entry} /#{word}/" unless @all[entry + word]
-      @all[entry + word] = true
+      register(entry, word, annotation)
    end
 end
 
@@ -66,8 +90,8 @@ if $0 == __FILE__
 
    ARGF.each_line do |line|
       array = line.split(/,/)
-      converter.convert(array[4], array[7])
-      converter.convert(array[5], array[8])
+      converter.convert_city(array[4], array[7], array[6])
+      converter.convert_town(array[5], array[8], array[7])
    end
 
 end
