@@ -1,4 +1,4 @@
-#!/usr/local/bin/ruby
+#!/usr/local/bin/ruby -wT
 # -*- Ruby -*-
 # $Id$
 
@@ -11,11 +11,6 @@ require 'kconv'
 
 cgi = CGI.new
 
-#  THIS_URI = 'http://' + cgi.server_name + cgi.script_name
-#  if cgi.has_key?('uri') then
-#    THIS_URI += '?' + cgi.query_string
-#  end
-
 # ´Á»úÁ´¤Æ¤Ë¥Ş¥Ã¥Á¤¹¤ëÀµµ¬É½¸½
 ALL_KANJI_REGEXP = /[°¡-üî]/
 
@@ -25,10 +20,33 @@ JOYO_KANJI = '°¡°¥°¦°­°®°µ°·°Â°Å°Æ°Ê°Ì°Í°Î°Ï°Ñ°Ò°Ó°Õ°Ö°×°Ù°Û°Ü°İ°Ş°ß°á°ã°ä°å°æ°è
 # ¿ÍÌ¾´Á»ú¤Ë¥Ş¥Ã¥Á
 JINMEI_KANJI = '±¯¾çÇµÇ·ÌéÏË°çËòµüÎ¼°Ë¸à´ìÎâ²ÀÍ¤´¦ĞÒ¸öÏÁ¼Å°ôºãÌêÎ¿ÑÛÆä³®Ò¦¶©±¬±ÃÂş³ğ¸ãÏ¤ºÈ±´Âï¶¬²Å·½¶ÆÆàÔ÷É²´òÌÒ¹¨Í¨ÆÒ½ÔÖÅÍò¿óº·Îæ´àÌ¦ÇÃÃ§¾±¹°Ìï×ÂÉ§É·ÉËÎç½úÄğÆ×°ÔÁÚ·ÅÆ´·ı¾¹ÆèÆØÈå±÷Ã¶°°²¢¹·¾»Úå¹¸¿¸ÚçÚğÚïÃÒÚöÄª½ìÊşºóÍû°ÉÅÎÉ¢Í®Ëï·ªÛÙ·Ë¶Í°´¾¿¸èÍüÌºÄÇÜ¿ÄØÍÌÉöÆï¿ºËêÄĞ³òµÌÃÉ¶Õ¶Öµ£İÜÄõ¼®ÂÁº»½§Ş­Ş«¹À½ß½í°¯Í¯ŞæŞûßºô¦·§ßù»¸à¢ÁÖ¼¤Ãö¶êÎèÎ°ÂöÎÖ¸ê±Í¿ğÎÜàöº¼ÍşÊã»©â«ÈıâÈËÓÎÆÆ·¶ëÊËÀÙ°ëÍ´Ï½Ä÷¿Áµ©Ì­ÎÇ¾÷½×ãùºû¼Ó¹ÉÄİ¸¾°¼ÁîåÅåº°½ÈìæÆ¿éÍÔÌíÁïÈ¥¸Õ°ıæû½Ø±ğÉç¶Ü±ñçı²Ø³ı°«è½´Ğ¾ÔèÁË¨Çë°ª¼¬ÁóÍÖÏ¡ÄÕ¾ÖÉùÍõÆ£Íö¸×ÆúÄ³¶Ş·¶ºÀëÎµÃëÙÎÊìâÊåÃ¤íìÍÚÎËÍ¸Æá°êÆÓ½æºÓ¶Ó³ù°¤È»¿÷²âÌ÷µÇ¿Üğóñ¥³¾¶ğ½Ù³¡°¾¸ñÂäÈ·Ë±¹ãË²ÄáÂë¼¯ÎÛËûóÕÂãµµ'
 
-# HTMLÉôÊ¬
-HTML_HEADER = <<EOF
+HTML_FOOTER = <<EOF
+<hr>
+<address>
+¹âµ×²íÀ¸ (Takaku Masao)<br>
+<a href="http://nile.ulis.ac.jp/~masao/">http://nile.ulis.ac.jp/~masao/</a>, 
+<a href="mailto:masao@ulis.ac.jp">masao@ulis.ac.jp</a>
+</address>
+<div class="id">$Id$</div>
+</body>
+</html>
+EOF
+
+# str Ê¸»úÎóÃæ¤Î´Á»ú¤Î¤¦¤Á¡¢dict ¤Ë´Ş¤Ş¤ì¤Ê¤¤¤â¤Î¤òÅ¬µ¹ÊÑ´¹¤¹¤ë
+def kanji_convert (str, dict)
+  converted_str = str.toeuc.gsub(ALL_KANJI_REGEXP) {|str|
+    dict.index(str) ? str : "<span title=\"#{str}\">¢®</span>"
+  }
+  return converted_str
+end
+
+# HTML ¤ÎÀèÆ¬ÉôÊ¬
+def html_header (cgi)
+  uri = CGI.escapeHTML(cgi['uri'][0] || 'http://')
+  data = CGI.escapeHTML(cgi['textarea'][0] || '')
+  html = <<EOF
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-	"http://www.w3.org/TR/html4/strict.dtd">
+"http://www.w3.org/TR/html4/strict.dtd">
 <html lang="ja">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-JP">
@@ -44,40 +62,62 @@ HTML_HEADER = <<EOF
 <p>
 ¾ïÍÑ´Á»úÉ½¤Ê¤É¤Î¥Ç¡¼¥¿¤Ï¡¢<a href="http://www.aozora.gr.jp/kanji_table/">http://www.aozora.gr.jp/kanji_table/</a>¡ÊÀÄ¶õÊ¸¸Ë¡Ë¤Ë¤¢¤ë¥â¥Î¤òÍøÍÑ¤µ¤»¤Æ¤¤¤¿¤À¤­¤Ş¤·¤¿¡£
 </p>
-EOF
-
-HTML_FOOTER = <<EOF
 <hr>
-<form action="#{cgi.script_name}" method="GET">
-URL: <input type="text" name="uri" value="http://" size="70">
-<select name="use_jinmei">
-<option value="on" checked>¾ïÍÑ¡Ü¿ÍÌ¾´Á»ú
-<option value="off">¾ïÍÑ´Á»ú¤Î¤ß
-</select>
-<input type="submit" value=" ¥Á¥§¥Ã¥¯¤¹¤ë ">
+<table border="0">
+<form action="#{cgi.script_name}" method="POST">
+<tr>
+<td><input type="radio" name="target" value="uri"
+EOF
+  html += "checked" if cgi['target'][0] == 'uri'
+  html += <<EOF
+>URL:</td>
+<td><input type="text" name="uri" value="#{uri}" size="70"></td>
+</tr>
+<tr>
+<td valign="top"><input type="radio" name="target" value="text"
+EOF
+  html += "checked" if cgi['target'][0] == 'text'
+  html += <<EOF
+>¥Ç¡¼¥¿:</td>
+<td><textarea name="textarea" rows="10" cols="70">#{data}</textarea></td>
+</tr>
+<td align="right">ÂĞ¾İ:</td>
+<td><select name="use_jinmei">
+<option value="on"
+EOF
+  html += "selected" if cgi['use_jinmei'] == 'on'
+  html += <<EOF
+>¾ïÍÑ¡Ü¿ÍÌ¾´Á»ú
+<option value="off"
+EOF
+  html += "selected" if cgi['use_jinmei'] == 'off'
+  html += <<EOF
+>¾ïÍÑ´Á»ú¤Î¤ß
+</select></td></tr>
+<tr><td colspan="2" align="center"><input type="submit" value=" ¥Á¥§¥Ã¥¯¤¹¤ë "></td></tr>
 </form>
-<hr>
-<address>
-¹âµ×²íÀ¸ (Takaku Masao)<br>
-<a href="http://nile.ulis.ac.jp/~masao/">http://nile.ulis.ac.jp/~masao/</a>, 
-<a href="mailto:masao@ulis.ac.jp">masao@ulis.ac.jp</a>
-</address>
-<div class="id">$Id$</div>
-</body>
-</html>
+</table>
 EOF
+  return html
+end
 
-if cgi.has_key?('uri') then
-  uri = URI.parse cgi['uri'][0]
-  content = Net::HTTP.get(uri.host, uri.request_uri)
-  JOYO_KANJI += JINMEI_KANJI if cgi['use_jinmei'][0] == 'on'
-  converted_str = content.toeuc.gsub(ALL_KANJI_REGEXP) {|str|
-    JOYO_KANJI.index(str) ? str : "<span title=\"#{str}\">¢®</span>"
-  }
-  print cgi.header("charset" => 'EUC-JP')
-  print "<base href=\"#{uri}\">"
-  print converted_str
+print cgi.header("charset" => 'EUC-JP')
+if cgi.has_key?('target') then
+  kanji_dict = JOYO_KANJI
+  kanji_dict += JINMEI_KANJI if cgi['use_jinmei'][0] == 'on'
+  if cgi['target'][0] == 'uri' then
+    uri = URI.parse cgi['uri'][0].untaint
+    content = Net::HTTP.get(uri.host, uri.request_uri)
+    print "<base href=\"#{uri}\">"
+    print kanji_convert(content, kanji_dict)
+  else
+    content = CGI.escapeHTML(cgi['textarea'][0])
+    print html_header(cgi)
+    print "<hr><pre style=\"border: solid 1px; padding: 4px; margin: 1em;\">"
+    print kanji_convert(content, kanji_dict)
+    print "</pre>" + HTML_FOOTER
+  end
 else
-  print cgi.header("charset" => 'EUC-JP')
-  print HTML_HEADER, HTML_FOOTER
+  print html_header(cgi)
+  print HTML_FOOTER
 end
