@@ -2,18 +2,17 @@
 # $Id$
 #
 # 使い方：
-# nkf -Se ken_all.csv | ruby zipcode.rb | sqlite zipcode.db
+# nkf -Se ken_all.csv | ruby zipcode.rb
 
-MAX = nil
+require 'dbi'
 
-puts <<EOF
-BEGIN;
+DBNAME = "zipcode.db"
+
+CREATE_TABLE = <<EOF
 CREATE TABLE zipcode (
        code	  TEXT,
-       zipcode5	  TEXT,
        zipcode7	  TEXT,
        pref	  TEXT,
-       pref_yomi  TEXT,
        city	  TEXT,
        city_yomi  TEXT,
        town	  TEXT,
@@ -21,14 +20,18 @@ CREATE TABLE zipcode (
        );
 EOF
 
-i = 0
-STDIN.each_line do |l|
-   i += 1
-   data = l.split(/,/)
-   STDERR.puts data[2]
-   puts "INSERT INTO zipcode VALUES(#{data[0]}, #{data[1]}, #{data[2]}, #{data[6]}, #{data[3]}, #{data[7]}, #{data[4]}, #{data[8]}, #{data[5]});"
-   if MAX and i > MAX
-      break;
+if FileTest.exist? DBNAME
+   File.unlink DBNAME
+end
+
+dbh = DBI.connect("dbi:SQLite:#{DBNAME}")
+dbh['AutoCommit'] = false
+
+dbh.transaction do
+   dbh.do(CREATE_TABLE)
+   sth = dbh.prepare("INSERT INTO zipcode VALUES(?, ?, ?, ?, ?, ?, ?)");
+   ARGF.each_line do |line|
+      data = line.split(/,/).map{|e| e.sub(/^\"(.*)\"$/, '\1'); }
+      sth.execute(data[0], data[2], data[6], data[7], data[4], data[8], data[5]);
    end
 end
-puts "COMMIT;"
