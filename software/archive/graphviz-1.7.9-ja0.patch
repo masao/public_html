@@ -1,0 +1,50 @@
+diff -ru graphviz-1.7.9.orig/dotneato/common/gdgen.c graphviz-1.7.9/dotneato/common/gdgen.c
+--- graphviz-1.7.9.orig/dotneato/common/gdgen.c	Fri Jul 27 09:16:10 2001
++++ graphviz-1.7.9/dotneato/common/gdgen.c	Tue Oct  9 09:15:38 2001
+@@ -452,6 +452,8 @@
+ 		fontlist = "Arial arial";
+ 	else if (strcasecmp(font,"Courier")==0)
+ 		fontlist = "Courier cour";
++
++	fontlist = "watanabe-mincho watanabe min wadalab-gothic wadalab goth";
+ 	return fontlist;
+ }
+ 
+diff -ru graphviz-1.7.9.orig/dotneato/common/imapgen.c graphviz-1.7.9/dotneato/common/imapgen.c
+--- graphviz-1.7.9.orig/dotneato/common/imapgen.c	Thu Jun 14 13:20:15 2001
++++ graphviz-1.7.9/dotneato/common/imapgen.c	Tue Oct  9 09:10:29 2001
+@@ -69,6 +69,7 @@
+ {
+ 	SP = 0;
+ 	cstk[0].color_ix = 0;           /* IMAP color index 0-7 */
++	/* cstk[0].fontfam = "Times";              /* font family name */
+ 	cstk[0].fontfam = "Times";              /* font family name */
+ 	cstk[0].fontopt = REGULAR;              /* modifier: REGULAR, BOLD or ITALIC */
+ 	cstk[0].pen = P_SOLID;          /* pen pattern style, default is sold */
+@@ -570,6 +571,7 @@
+ 	imap_set_color, imap_set_style,
+ 	imap_ellipse, imap_polygon,
+ 	imap_bezier, imap_polyline,
+-	0/* imap_arrowhead */, imap_user_shape
++	0/* imap_arrowhead */, imap_user_shape,
++	0, gd_textsize
+ };
+ 
+diff -ru graphviz-1.7.9.orig/dotneato/common/shapes.c graphviz-1.7.9/dotneato/common/shapes.c
+--- graphviz-1.7.9.orig/dotneato/common/shapes.c	Fri Jun 29 02:30:11 2001
++++ graphviz-1.7.9/dotneato/common/shapes.c	Tue Oct  9 09:12:17 2001
+@@ -92,7 +92,13 @@
+   0.5366,  0.3442,  0.3240,  0.3564,  0.8018,  0.0     /* "z{|}~"  */
+ };
+ static float *Fontwidth;
+-#define FONTWIDTH(c) (isprint(c)?Fontwidth[c-32]:0.0)
++#define FONTWIDTH(c) (iseuc(c)? 0.5 : (isprint(c)?Fontwidth[c-32]:0.0))
++
++/* following code is derived from Namazu: 
++ * Copyright (C) 1997-1999 Satoru Takabayashi All rights reserved.
++ * Copyright (C) 2000 Namazu Project All rights reserved.
++ */
++#define iseuc(c)  ((unsigned char)(c) >= 0xa1 && (unsigned char) (c) <= 0xfe)
+ 
+ static port_t	Center = { {0,0}, -1, 0, 0, 0};
+ 

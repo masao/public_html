@@ -7,27 +7,56 @@
 <link rev="made" href="mailto:masao@ulis.ac.jp">
 <title>Graphviz-ja</title>
 </head>
-
 <body>
-
+<!-- hhmts start -->
+<div class="last-update">最終更新日: <strong>Tue Oct  9 10:05:15 2001</strong></div>
+<!-- hhmts end -->
+<hr>
 <h1>Graphviz-ja</h1>
 <p>
 <a href="http://www.research.att.com/sw/tools/graphviz/">Graphviz</a>はグラフ構造の整形、描画、編集システムです。
 </p>
 <p>
 現在、まったく日本語などのASCII以外の言語コードに対応していないので、
-とりあえず、日本語は通したいなぁと思ってます。（道は長いけど…）
+とりあえず、日本語は通したいなぁと思ってパッチを作ってみました。
+<p>
+</p>
+このパッチをあてることにより、
+日本語EUC-JPコードの混じった dot 形式のファイルを
+GDライブラリを経由した画像形式（GIF, PNG, JPEGなど）で
+出力できるようになります。
+（ただし、フォントファイルとして、
+watanabe-mincho.ttf や wadalab-gothic.ttf が必要になります。）
 </p>
 <p>
-<a href="http://www.research.att.com/sw/tools/graphviz/packages/grappa.html">Grappa</a>(Java版)では日本語の表示が可能です。
-そのため、まずGraphvizで整形し、Grappaで表示を行うということを考えています。
-（<a href="/~yuka/game/ff9/graph.gif">描画例</a>）
+<strong>出来ないこと：</strong>
+PostscriptやPDFなどの日本語出力は未対応です。
 </p>
+
+<h2>描画例</h2>
 <ul>
-  <li><a href="archive/graphviz-1.7-ja0.patch">graphviz-1.7-ja0.patch</a> (2000-11-04 公開)<br>
-     とりあえず簡単なラベル幅の計算をEUC-JPに対応させてみました。（パッチをつくるまでも無いんですが）
+  <li><a href="ff9.png">PNG画像</a>, <a href="ff9.dot">ソース</a>:  元となるデータは<a href="http://ff-11.com/9ff/9ff.html">９−ＦＦいっしょにＴＡＬＫ！</a>から抽出したものです。
+  <li><a href="info.png">PNG画像</a>, <a href="info.dot">ソース</a>: 元となるデータは<a href="http://www.ulis.ac.jp/~chinatsu/">伊東千夏さん</a>からいただいたものです。
 </ul>
 
+<h2>ダウンロード</h2>
+<ul>
+  <li><a href="archive/graphviz-1.7.9-ja0.patch">graphviz-1.7.9-ja0.patch</a> (2001-10-09 公開)<br>
+      主な変更点は、
+      <ul>
+	<li>ラベル幅の計算をEUC-JPに対応させた。
+	<li>GDライブラリのフォント探索を優先させるようにした。
+	<li>IMAP生成用フィルタのフォント幅計算のバグ修正。
+      </ul>
+      です。
+</ul>
+<h2>参考URL</h2>
+<ul>
+  <li><a href="http://www.research.att.com/sw/tools/graphviz/">GraphViz</a>: 本家サイト （ドキュメントなど）
+  <li><a href="http://www.graphviz.org/">Welcome to GraphViz</a>: 開発者向けサイト（CVSレポジトリなど）
+  <li><a href="http://www.research.att.com/sw/tools/graphviz/packages/grappa.html">Grappa</a>: グラフ描画エンジンのJava実装。
+  <li><a href="http://ma2tak.dyndns.org:8888/ma2tak/974">GraphVizで日本語を使いたい</a>: 似たようなことを考えていた方がいました。
+</ul>
 <hr>
 <address>
 高久雅生 (Takaku Masao)<br>
