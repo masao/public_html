@@ -10,6 +10,7 @@ require 'jcode'
 
 class ConvertZipcode
    attr_accessor :duplicate, :annotation, :kana, :split_city
+
    def initialize(duplicate = false, annotation = false, kana = false, split_city = true)
       @duplicate = duplicate	# 重複するエントリを出力？
       @annotation = annotation	# アノテーションを出力？
@@ -35,6 +36,7 @@ class ConvertZipcode
    end
 
    # 市区町村名中の項目を正しく分けるための例外テーブル
+   # （正規表現で分割に失敗する分）
    SPLIT_TABLE = {
       '群馬郡群馬町' => [['群馬郡', '群馬町'], ['ぐんまぐん', 'ぐんままち']],
       '赤穂郡上郡町' => [['赤穂郡', '上郡町'], ['あこうぐん', 'かみごおりちょう']],
