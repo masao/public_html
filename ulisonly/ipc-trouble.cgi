@@ -42,7 +42,7 @@ my @problems = ();
 main();
 sub main {
     print $q->header('text/html; charset=EUC-JP');
-    print print_html_head();
+    print_html_head();
 
     my @entries = get_contents();
 
@@ -125,7 +125,7 @@ sub print_pages() {
 }
 
 sub print_html_head() {
-    return <<EOF;
+    print <<EOF;
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="ja"><head><title>$TITLE</title></head><body>
 <h1>$TITLE</h1>
@@ -134,7 +134,7 @@ EOF
 
 sub print_html_foot() {
     my $id = '$Id$';
-    return <<EOF;
+    print <<EOF;
 <hr><address>
 <a href="http://nile.ulis.ac.jp/~masao/ulisonly/ipc-trouble.cgi">http://nile.ulis.ac.jp/~masao/ulisonly/ipc-trouble.cgi</a><br>
 $id
