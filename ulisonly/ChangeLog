@@ -1,3 +1,11 @@
+2001-07-12  Masao Takaku  <masao@ulis.ac.jp>
+
+	* UML: Etaのコードが汚くなってきたので、UMLかなにかでちょっと整理
+	して考え直したい感じ。
+
+	* Eta: データベースリストのXMLを読み込んで接続ウィンドウに表示し、
+	各項目をクリックすると、URLをエントリに入力させる分を作成。
+
 2001-07-11  Masao Takaku  <masao@ulis.ac.jp>
 
 	* Etaの移植性: clover で確認しようとして気づいたこと。
