@@ -1,3 +1,20 @@
+2001-10-11  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 画面キャプチャ: Windows98 IE5.5 上で イメージマップ付きの Web ペー
+	ジを閲覧している画面を画像取り込みしたかったのだが、Windows標準の
+	「Alt + PrintScreen」ではマウスカーソルの形状とかも含めて取り込め
+	なかった。Windows.FAQサイトで聞いてみたところ、
+
+	「Vectorとかにいっぱい転がっている」
+	「WinShotがお奨め」
+
+	という意見をいただいたので、さっそく使ってみる。→ 見事に成功。
+	cf. WinShot: http://www.masa.ac/winshot.html
+
+	* シソーラスの可視化: システム構築は一段落。
+
+	後は、論文に仕上げるのみ。
+
 2001-10-10  Masao Takaku  <masao@ulis.ac.jp>
 
 	* GraphViz-ja: ついでに、GraphViz もパッチを作り直しました。
