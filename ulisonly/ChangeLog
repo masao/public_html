@@ -1,3 +1,128 @@
+2001-07-20  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 外字?: 三浦さんにNACSISの典拠ファイル中の外字(?)の文字コードにつ
+	いて相談を受ける。
+
+	『外字の扱い』:
+	http://www.nii.ac.jp/CAT-ILL/MAN2/KIJUN3/kijun3.11.2.html
+
+	『6.2　特殊文字・記号』:
+	http://www.nii.ac.jp/CAT-ILL/MAN2/KENSAKU4/006_2.html
+
+	『EXC-JIS7変換表』:
+	http://www.nii.ac.jp/CAT-ILL/INFO/newcat/jissou_siyo/excjis.html
+
+	あたりの情報を元に、最終的には、
+
+	『EXCのJIS7上のコード（変換ロジック）』:
+	http://www.nii.ac.jp/CAT-ILL/INFO/newcat/jissou_siyo/jissou.html#exc
+
+	を確認して、NACSIS由来のEXC文字のJISコードをEUC変換したものである
+	ことが判明した。
+
+	とりあえず、同定を行うだけなので、先頭バイトが
+	/^[a-zA-Z0-9\xF5-\xFE]/
+	という正規表現で判定可能でだった。
+
+	* 本購入: 一昨日買った本。
+
+	「Namazuシステムの構築と活用」
+	cf. http://homepage2.nifty.com/baba_hajime/namazubook/
+
+	「GNOMEプログラミング」
+	cf. http://www.serendip.co.jp/
+
+	* CD購入: 昨日買ったCD。
+	Mr.Children 「MR.CHILDREN 1992-1995」
+	cf. http://www.toysfactory.co.jp/artist/artist_top.cfm?artistcode=1009
+	
+	倉木麻衣 「Perfect Crime」
+	cf. http://mai-kuraki.com/
+
+	* Google: 日本語が検索できなくなっているです。ハイ。
+	ムカついたので、英語でメール送ってしまいました。ハイ。
+	早く直してもらいたいものです。ハイ。
+	以上。
+
+	‥‥‥もう直ってます。ハイ。
+	
+	ひょっとしたら、うちの環境のせいだったかもです。ハイ。
+	次回からは学外からの接続も確かめてみます。ハイ。
+
+	* 飲み会（IT打ち上げ）: 打ち上げに行ってきました。（於ミューズガー
+	デン）
+	相変わらず最後の方の記憶がないのですが、大丈夫だったかな…。(^_^;;
+
+2001-07-16  Masao Takaku  <masao@ulis.ac.jp>
+
+	* パスポート: ちょっと観光してこようかな、と思ったので取る。
+	必要な書類は以下の通り。
+
+	一般旅券発給申請書…１通
+	戸籍抄本または戸籍謄本…１通
+	住民票…１通
+	パスポート用の写真…１枚
+	未使用の５０円の官製はがき…１枚
+	身元を確認するための書類…１点または２点
+		<保険証 + 学生証>
+
+	* 宗教: 今日、学校に来るときに（キリスト教系）宗教の勧誘に出会った。
+	つくばでは珍しいので、ちょっとびっくり。
+
+	個人的には宗教は嫌いでは無く尊敬してる面も多いのだけれども、町に出
+	て勧誘とかするくらいなら、その熱意をもうちょっと建設的なことに向け
+	てほしいと思う。
+
+2001-07-15  Masao Takaku  <masao@ulis.ac.jp>
+
+	* Sylpheed: 最近人気のある MUA。
+
+	ずっと Slypsheed （スライプシード）だと思っていた。
+	Googleで検索しても全然出てこなくって気づいた…。
+	
+	名前の由来って、シルフィードのミススペルが由来だったのね…。
+
+2001-07-14  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 本: 「GNU Autoconf, Automake, and Libtool」を購入。
+
+	Eta の開発に参考になるかと思って…。
+
+	* 上棟式: 上棟式をやるから顔を出せというメールが父からあった。
+
+	「行く」と返事したけど、上棟式っていったい何するの？？
+
+	* Z39.50-NG: ZNG というサブジェクトでアナウンスがあった。
+	cf. http://www.loc.gov/z3950/agency/zng.html
+
+	賛成・反対の両派が入り乱れて、だいぶ議論が盛り上がっている。たぶん、
+	
+	利点： mainstream protocol
+	欠点： backward compatibility
+
+	の2点に集約されてる模様。
+
+	具体的な実装としては SOAP で Web Service 化を目指す感じ。
+
+2001-07-13  Masao Takaku  <masao@ulis.ac.jp>
+
+	* Wget: GNU Wget を Solaris2.7 (gcc-2.95.2) 上で CFLAGS="-g -O2"
+	付きでコンパイルすると再帰取得(-r)時にうまく取得できないバグがあっ
+	たようなので、再インストールする。
+
+	% make CFLAGS="-g -O" LDFLAGS="-L/usr/local/lib -R/usr/local/lib -lintl -liconv"
+
+	として wget-1.7 をインストールする。
+
+	cf. [SUBJECT: RE:  wget gcc -O2/Solaris Recursive Problem]
+	http://www.geocrawler.com/archives/3/409/2000/10/200/4442754/
+
+	* 猛暑: もう夏全開って感じ。
+
+	アツイ。暑すぎる!!
+
+	徒歩で学校につくまでに死にそう…。
+
 2001-07-12  Masao Takaku  <masao@ulis.ac.jp>
 
 	* UML: Etaのコードが汚くなってきたので、UMLかなにかでちょっと整理
