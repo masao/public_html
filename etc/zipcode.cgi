@@ -13,15 +13,6 @@ rescue LoadError
    require 'erb/erbl'
 end
 
-# escapeHTML のラッパー
-def e(str)
-   if str
-      CGI.escapeHTML(str)
-   else
-      ""
-   end
-end
-
 class String
    def format_zipcode
       self.sub(/^(\d\d\d)(\d?\d?\d?\d?)$/) {
@@ -95,6 +86,7 @@ class ZipcodeCGI
       @search_time = Time.now - @search_time
    end
 
+   include ERbLight::Util
    def do_eval_rhtml
       ERbLight::new( open( @rhtml ).read ).result( binding )
    end

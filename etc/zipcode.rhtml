@@ -5,7 +5,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-JP">
 <link rel="stylesheet" href="../default.css" type="text/css">
 <link rev="made" href="mailto:masao@ulis.ac.jp">
-<title>郵便番号検索<% @keyword ? ": " + e(@keyword) : "" %></title>
+<title>郵便番号検索<%=
+if @keyword then
+   h(@keyword)
+elsif @city then
+   h(@pref + " " + @city)
+elsif @pref then
+   h(@pref)
+else
+   ""
+end
+%></title>
 <style type="text/css">
 div.form { text-align: center; }
 </style>
@@ -15,12 +25,21 @@ div.form { text-align: center; }
 <form action="./zipcode.cgi" method="GET">
 <div class="form">
 キーワード:
-<input type="text" name="keyword" value="<%=e @keyword %>" size="40">
+<input type="text" name="keyword" value="<%=h @keyword %>" size="40">
 <input type="submit" value="検索">
 </div>
 </form>
 <% if @result then %>
-<p><strong><%=e @keyword || @city || @pref %></strong>:
+<p><strong>
+<%=
+if @keyword
+   h(@keyword)
+elsif @city
+   %Q[<a href="./zipcode.cgi?pref=#{u(@pref)}">#{h(@pref)}</a> #{h(@city)}]
+elsif @pref
+   h(@pref)
+end
+%></strong>:
 <%= @result.size %> 件ヒットしました</p>
 <ul>
 <% @result.sort.each do |e| %>
@@ -120,6 +139,6 @@ div.form { text-align: center; }
 高久雅生 (Takaku Masao)<br>
 <a href="http://nile.ulis.ac.jp/~masao/">http://nile.ulis.ac.jp/~masao/</a>,
 <a href="mailto:masao@ulis.ac.jp">masao@ulis.ac.jp</a>
-<div class="id"><%=e ID %></div>
+<div class="id"><%=h ID %></div>
 </address>
 </body></html>
