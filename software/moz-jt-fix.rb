@@ -14,14 +14,13 @@ TRANSLATOR = "高久雅生"
 TRANSLATOR_ADDRESS = "masao@ulis.ac.jp"
 
 JTP_NOTE = <<EOF
-<p>
+<p class="docinfo">
 訳者： #{TRANSLATOR} &lt;<a href="mailto:#{TRANSLATOR_ADDRESS}">#{TRANSLATOR_ADDRESS}</a>&gt;<br>
-<a href="THIS_URI">このドキュメントのオリジナルは mozilla.org において英語で公布されています。</a><br>
-またドキュメントの管理の言語は現在も英語です。この日本語訳は、<br>
-利用者の利便のためにもじら組和訳プロジェクトによって提供されたものです。<br>
-フィードバックは英語で、元の著者に送って下さい。<br>
-翻訳された文書の一覧は、現在以下のURLで見ることが出来ます。<br>
-<a href="http://www.mozilla.gr.jp/jt/index.html">http://www.mozilla.gr.jp/jt/index.html</a>
+<a href="THIS_URI">
+このドキュメントのオリジナルは、mozilla.org において、英語で管理・公開されています。</a><br>
+この和訳は、利用者の利便のために <a href="http://www.mozilla.gr.jp/jt/">もじら組和訳プロジェクト</a> によって提供されています。<br>
+ドキュメントの内容に関するフィードバックは、英語で、原文の著者に送ってください。<br>
+和訳ドキュメント一覧など、詳しい情報は <a href="http://www.mozilla.gr.jp/jt/index.html">www.mozilla.gr.jp/jt</a> をご覧ください。
 </p>
 EOF
 
@@ -67,7 +66,7 @@ if contents then
    } or contents.sub!(/<body/i) { "<head>#{META_CHARSET}</head>\n<body" }
 
    # スタイル追加
-   contents.sub!(/<head([^>]*>)/im) {|head| head + JT_STYLE }
+   contents.sub!(/<head[^>]*>/im) {|head| head + JT_STYLE }
 
    # リンク修正
    contents.gsub!(/<(a|link)([^>]*)href=(["']?)http:\/\/(www.)?mozilla.org([!~*'();\/?:\@&=+\$,%#\w.-]+)\3/i) {|href|
