@@ -61,6 +61,8 @@ if (-f "$BaseDir/NMZ.head.ja" &&
     -f "$HtmlDir/body.txt" &&
     -f "$BaseDir/NMZ.foot.ja") {
     system "cat $BaseDir/NMZ.head.ja $HtmlDir/body.txt $BaseDir/NMZ.foot.ja > $HtmlDir/index.html";
+    chdir $HtmlDir;
+    system "cvs commit -m 'regularly update.' body.txt index.html";
     print "完了 - " . `date` ."\n";
 } else {
     warn "必要なファイルが見つかりません。";
