@@ -10,10 +10,10 @@
 <body>
 <h1>mnews用killfile追加スクリプト</h1>
 <p>
-mnewsの設定ファイルに<code>killfile</code>の項目を追加するスクリプトです。
+mnewsの設定ファイルに<code>kill_subject, kill_from</code>の項目を追加するスクリプトです。
 </p>
 <p>
-ダウンロードファイル： <a href="killfile">killfile</a>
+ダウンロードファイル： <code><a href="killfile.pl">killfile.pl</a></code>
 </p>
 <h2>使い方</h2>
 <p>
@@ -22,10 +22,10 @@ mnewsの設定ファイルに<code>killfile</code>の項目を追加するスクリプトです。
 </p>
 <p>
 mnewsの記事選択モードで
-<code>|</code>(パイプ)を押して、
+<code>|</code>(パイプ実行)を押して、
 <code>| killfile -from</code>もしくは<code>| killfile -subject</code>と入力して使います。
 自動的に設定ファイルの末尾に、
-その記事の<code>From: </code>もしくは<code>Subject: </code>での<code>killfile</code>が記録されます。
+その記事の<code>From: </code>もしくは<code>Subject: </code>が<code>kill_*</code>として記録されます。
 </p>
 <hr>
 <address>
