@@ -1,208 +1,162 @@
-<HTML>
-<HEAD>
-<TITLE>imgs2html - generate HTML files from images files</TITLE>
-<LINK REV="made" HREF="mailto:root@nile.ulis.ac.jp">
-</HEAD>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-JP">
+<link rel="stylesheet" href="../../default.css" type="text/css">
+<link rev="made" href="mailto:masao@ulis.ac.jp">
+<title>imgs2html - generate HTML files from images files
 
-<BODY>
+</title>
+</head>
+<body>
+<div><a href="./">[Up]</a></div><hr>
+<h1>imgs2html - generate HTML files from images files
 
-<!-- INDEX BEGIN -->
-<!--
+</h1>
+<h2>NAME</h2>
+<p>imgs2html - generate HTML files from images files</p>
+<h2>SYNOPSIS</h2>
+<p>imgs2html [<b>--interactive</b>] [<b>--suffix</b>=SUFFIX] [<b>--thumbnail-ratio</b>=SIZE]
+[<b>--reverse</b>] [<b>--homepage-url</b>=URL] [<b>--icon-dir</b>=DIR] [<b>--style</b>=URL]
+[<b>--icon-<i>role</i>-file</b>=FILE] [<b>--nav-<i>role</i>-str</b>=STR] [<b>--logo</b>]
+[<b>--notitle</b>] [<b>--unit-str</b>=STR] [<b>--version</b>] [<b>--help</b>]</p>
+<h2>DESCRIPTION</h2>
+<p>imgs2htmlは複数の画像ファイルを元にHTMLファイルを作成します。</p>
+<p>このスクリプトを実行するとカレントディレクトリにある画像ファイルを探し、
+それらの一覧と各画像からなるHTMLファイル群を生成します。</p>
+<p>生成されるHTMLファイルの文字コードはISO-2022-JPです。</p>
+<h2>OPTIONS</h2>
+<p>以下のオプションを指定できます。</p>
+<ul>
+<li><a name="item__b__i__b____b___interactive__b_"></a><b><b>-i</b>, <b>--interactive</b></b>
+<p>対話的に設定事項の指定を行ってから実行できます。
+（デフォルトは対話実行しません）</p>
+<p>なお、対話実行時に設定した値は、 .imgs2html.options ファイルに保存され、
+再度実行した際にはその値が使われるようになります。</p>
+</li>
+<li><a name="item__b__s__b____b___suffix_SUFFIX__b_"></a><b><b>-s</b>, <b>--suffix=SUFFIX</b></b>
+<p>対象とする画像の拡張子を指定します。
+（デフォルトは gif です）</p>
+</li>
+<li><a name="item__b__r__b____b___thumbnail_ratio_SIZE__b_"></a><b><b>-r</b>, <b>--thumbnail-ratio=SIZE</b></b>
+<p>サムネール画像の元画像からの比率を指定します。
+（デフォルトは 15% です）</p>
+</li>
+<li><a name="item__b___reverse__b_"></a><b><b>--reverse</b></b>
+<p>画像をファイル名の逆順に並べます。</p>
+</li>
+<li><a name="item__b__u__b____b___homepage_url_URL__b_"></a><b><b>-u</b>, <b>--homepage-url=URL</b></b>
+<p>ホームのURLを指定します。
+（デフォルトは ../ を指します。）</p>
+</li>
+<li><a name="item__b___icon_dir_DIR__b_"></a><b><b>--icon-dir=DIR</b></b>
+<p>ナビゲーション・アイコンのディレクトリ
+（デフォルトは ../image/ です）</p>
+</li>
+<li><a name="item__b___style_URL__b_"></a><b><b>--style=URL</b></b>
+<p>HTMLファイルで利用するスタイルシートのURLを指定します。
+（デフォルトではスタイルシートは使いません）</p>
+</li>
+<li><a name="item__b___logo__b_"></a><b><b>--logo</b></b>
+<p>ロゴを表示します。
+（デフォルトでは表示しません）</p>
+</li>
+<li><a name="item__b___notitle__b_"></a><b><b>--notitle</b></b>
+<p>タイトル（○枚目）を表示しません。
+（デフォルトでは表示します）</p>
+<p>指定された場合、<code>&lt;title&gt;</code> 要素には画像ファイル名が入ります。</p>
+</li>
+<li><a name="item__b___htmlonly__b_"></a><b><b>--htmlonly</b></b>
+<p>HTML 出力のみ行い、サムネイルを生成しません。
+（デフォルトではサムネイル生成を常に行います）</p>
+</li>
+<li><a name="item__b___unit_str__b__STR"></a><b><b>--unit-str</b>=STR</b>
+<p>「〜枚目」の出力を変更します。
+（デフォルトでは"枚"）</p>
+</li>
+<li><a name="item___________________________"></a><b>(ナビゲーションバーの設定)</b>
+<p>ナビゲーションバーの部分のアイコンや文字列などを変更するには、以下のオ
+プションが利用できます。</p>
+<p><i>role</i>の部分にはそれぞれ、
+<b>first</b>,
+<b>prev</b>,
+<b>next</b>,
+<b>last</b>,
+<b>logo</b>,
+<b>index</b>,
+<b>home</b>
+のいずれかが入ります。</p>
+<ul>
+<li><a name="item__b___icon___b__i_role__i__b__file_FILE__b_"></a><b><b>--icon-</b><i>role</i><b>-file=FILE</b></b>
+<p>ナビゲーションバーの各位置のアイコンのファイル名を指定します。
+（ファイルが存在しない場合はアイコンは表示しません）</p>
+</li>
+<li><a name="item__b___nav___b__i_role__i__b__str_STR__b_"></a><b><b>--nav-</b><i>role</i><b>-str=STR</b></b>
+<p>ナビゲーションバーの各位置の説明文字列を設定します。</p>
+<p>デフォルトの設定は以下の通り：</p>
+<ul>
+<li><a name="item__b___icon_first_file__b__first_gif"></a><b><b>--icon-first-file</b>	first.gif</b>
+</li>
+<li><a name="item__b___icon_prev_file__b__prev_gif"></a><b><b>--icon-prev-file</b>	prev.gif</b>
+</li>
+<li><a name="item__b___icon_next_file__b__next_gif"></a><b><b>--icon-next-file</b>	next.gif</b>
+</li>
+<li><a name="item__b___icon_last_file__b__last_gif"></a><b><b>--icon-last-file</b>	last.gif</b>
+</li>
+<li><a name="item__b___icon_home_file__b__home_gif"></a><b><b>--icon-home-file</b>	home.gif</b>
+</li>
+<li><a name="item__b___icon_index_file__b__info_gif"></a><b><b>--icon-index-file</b>	info.gif</b>
+</li>
+<li><a name="item__b___icon_logo_file__b__logo_gif"></a><b><b>--icon-logo-file</b>	logo.gif</b>
+</li>
+<li><a name="item__b___nav_first_str__b______________"></a><b><b>--nav-first-str</b>	最初のページ</b>
+</li>
+<li><a name="item__b___nav_prev_str__b_____________"></a><b><b>--nav-prev-str</b>		前のページ</b>
+</li>
+<li><a name="item__b___nav_next_str__b_____________"></a><b><b>--nav-next-str</b>		次のページ</b>
+</li>
+<li><a name="item__b___nav_last_str__b_______________"></a><b><b>--nav-last-str</b>		最後のページ</b>
+</li>
+<li><a name="item__b___nav_home_str__b_______________"></a><b><b>--nav-home-str</b>		ホームページ</b>
+</li>
+<li><a name="item__b___nav_index_str__b______"></a><b><b>--nav-index-str</b>	一覧</b>
+</li>
+<li><a name="item__b___nav_logo_str__b_______"></a><b><b>--nav-logo-str</b>		ロゴ</b>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a name="item__b___version__b_"></a><b><b>--version</b></b>
+<p>バージョンを表示します。</p>
+</li>
+<li><a name="item__b__h__b____b___help__b_"></a><b><b>-h</b>, <b>--help</b></b>
+<p>このヘルプを表示します。</p>
+</li>
+</ul>
+<h2>COMMENT</h2>
+<p>画像ファイルと同じディレクトリに .comment ファイルを置くことで画像
+に対するコメントを付与することができます。.comment ファイルの書式は</p>
+<pre>  ファイル名	...コメント...</pre>
 
-<UL>
+<p>となり、ファイル名とコメントの間はタブ（"\t"）で区切られます。以下に例を
+示します。</p>
+<pre>  foo.gif	コメント1
+  bar.gif	コメント2</pre>
 
-	<LI><A HREF="#NAME">NAME</A>
-	<LI><A HREF="#SYNOPSIS">SYNOPSIS</A>
-	<LI><A HREF="#DESCRIPTION">DESCRIPTION</A>
-	<LI><A HREF="#OPTIONS">OPTIONS</A>
-	<LI><A HREF="#COMMENT">COMMENT</A>
-	<LI><A HREF="#PREREQUISITES">PREREQUISITES</A>
-	<LI><A HREF="#COREQUISITES">COREQUISITES</A>
-	<LI><A HREF="#AUTHOR">AUTHOR</A>
-</UL>
--->
-<!-- INDEX END -->
-
-<P>
-<HR>
-<H1><A NAME="NAME">NAME</A></H1>
-<P>
-imgs2html - generate HTML files from images files
-
-<P>
-<HR>
-<H1><A NAME="SYNOPSIS">SYNOPSIS</A></H1>
-<P>
-imgs2html [<STRONG>--interactive</STRONG>] [<STRONG>--suffix</STRONG>=SUFFIX] [<STRONG>--thumbnail-ratio</STRONG>=SIZE] [<STRONG>--reverse</STRONG>] [<STRONG>--homepage-url</STRONG>=URL] [<STRONG>--icon-dir</STRONG>=DIR] [<STRONG>--style</STRONG>=URL] [<STRONG>--icon-<EM>role</EM>-file</STRONG>=FILE] [<STRONG>--nav-<EM>role</EM>-str</STRONG>=STR] [<STRONG>--logo</STRONG>] [<STRONG>--notitle</STRONG>] [<STRONG>--unit-str</STRONG>=STR] [<STRONG>--version</STRONG>] [<STRONG>--help</STRONG>]
-
-<P>
-<HR>
-<H1><A NAME="DESCRIPTION">DESCRIPTION</A></H1>
-<P>
-imgs2htmlは複数の画像ファイルを元にHTMLファイルを作成します。
-
-<P>
-このスクリプトを実行するとカレントディレクトリにある画像ファイルを探し、
-それらの一覧と各画像からなるHTMLファイル群を生成します。
-
-<P>
-生成されるHTMLファイルの文字コードはISO-2022-JPです。
-
-<P>
-<HR>
-<H1><A NAME="OPTIONS">OPTIONS</A></H1>
-<P>
-以下のオプションを指定できます。
-
-<DL>
-<DT><STRONG><A NAME="item__i_">-i, --interactive</A></STRONG><DD>
-<P>
-対話的に設定事項の指定を行ってから実行できます。
-（デフォルトは対話実行しません）
-
-<P>
-なお、対話実行時に設定した値は、 <EM>.imgs2html.options</EM> ファイルに保存され、 再度実行した際にはその値が使われるようになります。
-
-<DT><STRONG><A NAME="item__s_">-s, --suffix=SUFFIX</A></STRONG><DD>
-<P>
-対象とする画像の拡張子を指定します。 （デフォルトは gif です）
-
-<DT><STRONG><A NAME="item__r_">-r, --thumbnail-ratio=SIZE</A></STRONG><DD>
-<P>
-サムネール画像の元画像からの比率を指定します。 （デフォルトは 15% です）
-
-<DT><STRONG><A NAME="item__reverse">--reverse</A></STRONG><DD>
-<P>
-画像をファイル名の逆順に並べます。
-
-<DT><STRONG><A NAME="item__u_">-u, --homepage-url=URL</A></STRONG><DD>
-<P>
-ホームのURLを指定します。 （デフォルトは ../ を指します。）
-
-<DT><STRONG><A NAME="item__icon_dir_DIR">--icon-dir=DIR</A></STRONG><DD>
-<P>
-ナビゲーション・アイコンのディレクトリ （デフォルトは ../image/ です）
-
-<DT><STRONG><A NAME="item__style_URL">--style=URL</A></STRONG><DD>
-<P>
-HTMLファイルで利用するスタイルシートのURLを指定します。
-（デフォルトではスタイルシートは使いません）
-
-<DT><STRONG><A NAME="item__logo">--logo</A></STRONG><DD>
-<P>
-ロゴを表示します。 （デフォルトでは表示しません）
-
-<DT><STRONG><A NAME="item__notitle">--notitle</A></STRONG><DD>
-<P>
-タイトル（○枚目）を表示しません。 （デフォルトでは表示します）
-
-<P>
-指定された場合、&lt;title&gt; 要素には画像ファイル名が入ります。
-
-<DT><STRONG><A NAME="item__htmlonly">--htmlonly</A></STRONG><DD>
-<P>
-HTML 出力のみ行い、サムネイルを生成しません。
-（デフォルトではサムネイル生成を常に行います）
-
-<DT><STRONG><A NAME="item__unit_str_STR">--unit-str=STR</A></STRONG><DD>
-<P>
-「〜枚目」の出力を変更します。 （デフォルトでは``枚''）
-
-<DT><STRONG><A NAME="item__">(ナビゲーションバーの設定)</A></STRONG><DD>
-<P>
-ナビゲーションバーの部分のアイコンや文字列などを変更するには、以下のオ
-プションが利用できます。
-
-<P>
-<EM>role</EM>の部分にはそれぞれ、
-<STRONG>first</STRONG>,
-<STRONG>prev</STRONG>,
-<STRONG>next</STRONG>,
-<STRONG>last</STRONG>,
-<STRONG>logo</STRONG>,
-<STRONG>index</STRONG>,
-<STRONG>home</STRONG>
-のいずれかが入ります。
-
-<DL>
-<DT><STRONG><A NAME="item__icon_role_file_FILE">--icon-role-file=FILE</A></STRONG><DD>
-<P>
-ナビゲーションバーの各位置のアイコンのファイル名を指定します。
-（ファイルが存在しない場合はアイコンは表示しません）
-
-<DT><STRONG><A NAME="item__nav_role_str_STR">--nav-role-str=STR</A></STRONG><DD>
-<P>
-ナビゲーションバーの各位置の説明文字列を設定します。
-
-<P>
-デフォルトの設定は以下の通り：
-
-<DL>
-<DT><STRONG><A NAME="item__icon_first_file">--icon-first-file	first.gif</A></STRONG><DD>
-<DT><STRONG><A NAME="item__icon_prev_file">--icon-prev-file	prev.gif</A></STRONG><DD>
-<DT><STRONG><A NAME="item__icon_next_file">--icon-next-file	next.gif</A></STRONG><DD>
-<DT><STRONG><A NAME="item__icon_last_file">--icon-last-file	last.gif</A></STRONG><DD>
-<DT><STRONG><A NAME="item__icon_home_file">--icon-home-file	home.gif</A></STRONG><DD>
-<DT><STRONG><A NAME="item__icon_index_file">--icon-index-file	info.gif</A></STRONG><DD>
-<DT><STRONG><A NAME="item__icon_logo_file">--icon-logo-file	logo.gif</A></STRONG><DD>
-<DT><STRONG><A NAME="item__nav_first_str">--nav-first-str	最初のページ</A></STRONG><DD>
-<DT><STRONG><A NAME="item__nav_prev_str">--nav-prev-str		前のページ</A></STRONG><DD>
-<DT><STRONG><A NAME="item__nav_next_str">--nav-next-str		次のページ</A></STRONG><DD>
-<DT><STRONG><A NAME="item__nav_last_str">--nav-last-str		最後のページ</A></STRONG><DD>
-<DT><STRONG><A NAME="item__nav_home_str">--nav-home-str		ホームページ</A></STRONG><DD>
-<DT><STRONG><A NAME="item__nav_index_str">--nav-index-str	一覧</A></STRONG><DD>
-<DT><STRONG><A NAME="item__nav_logo_str">--nav-logo-str		ロゴ</A></STRONG><DD>
-</DL>
-</DL>
-<DT><STRONG><A NAME="item__version">--version</A></STRONG><DD>
-<P>
-バージョンを表示します。
-
-<DT><STRONG><A NAME="item__h_">-h, --help</A></STRONG><DD>
-<P>
-このヘルプを表示します。
-
-</DL>
-<P>
-<HR>
-<H1><A NAME="COMMENT">COMMENT</A></H1>
-<P>
-画像ファイルと同じディレクトリに <EM>.comment</EM> ファイルを置くことで画像 に対するコメントを付与することができます。<EM>.comment</EM> ファイルの書式は
-
-<P>
-<PRE>  ファイル名    ...コメント...
-</PRE>
-<P>
-となり、ファイル名とコメントの間はタブ（``\t''）で区切られます。以下に例を
-示します。
-
-<P>
-<PRE>  foo.gif       コメント1
-  bar.gif       コメント2
-</PRE>
-<P>
-また、ファイル <EM>.comment</EM> が存在しない場合は、実行時に自動的に作られ ます。
-
-<P>
-<HR>
-<H1><A NAME="PREREQUISITES">PREREQUISITES</A></H1>
-<P>
-このスクリプトは、画像の処理にImageMagickを利用します。
-また、日本語のコード変換にnkfを利用します。
-
-<P>
-<HR>
-<H1><A NAME="COREQUISITES">COREQUISITES</A></H1>
-<P>
-<STRONG>ps2imgs</STRONG>スクリプトと一緒に使うと効果的かもしれませんね。
-
-<P>
-<HR>
-<H1><A NAME="AUTHOR">AUTHOR</A></H1>
-<P>
-高久 雅生 &lt;<A HREF="mailto:masao@ulis.ac.jp">masao@ulis.ac.jp</A>&gt;,
-江草 由佳 &lt;<A HREF="mailto:yuka@ulis.ac.jp">yuka@ulis.ac.jp</A>&gt;
-
-</BODY>
-
-</HTML>
+<p>また、ファイル .comment が存在しない場合は、実行時に自動的に作られ
+ます。</p>
+<h2>PREREQUISITES</h2>
+<p>このスクリプトは、画像の処理にImageMagickを利用します。
+また、日本語のコード変換にnkfを利用します。</p>
+<h2>COREQUISITES</h2>
+<p><b>ps2imgs</b>スクリプトと一緒に使うと効果的かもしれませんね。</p>
+<h2>AUTHOR</h2>
+<p>高久 雅生 &lt;masao@ulis.ac.jp&gt;, 江草 由佳 &lt;yuka@ulis.ac.jp&gt;</p>
+<hr>
+<address>
+高久雅生 (Takaku Masao)<br>
+<a href="http://nile.ulis.ac.jp/~masao/">http://nile.ulis.ac.jp/~masao/</a>,
+<a href="mailto:masao@ulis.ac.jp">masao@ulis.ac.jp</a>
+</address>
+</body></html>

@@ -1,85 +1,49 @@
-<HTML>
-<HEAD>
-<TITLE>ps2imgs - generate images files from PostScript file</TITLE>
-<LINK REV="made" HREF="mailto:root@nile.ulis.ac.jp">
-</HEAD>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-JP">
+<link rel="stylesheet" href="../../default.css" type="text/css">
+<link rev="made" href="mailto:masao@ulis.ac.jp">
+<title>ps2imgs - generate images files from PostScript file
 
-<BODY>
+</title>
+</head>
+<body>
+<div><a href="./">[Up]</a></div><hr>
+<h1>ps2imgs - generate images files from PostScript file
 
-<!-- INDEX BEGIN -->
-<!--
-
-<UL>
-
-	<LI><A HREF="#NAME">NAME</A>
-	<LI><A HREF="#SYNOPSIS">SYNOPSIS</A>
-	<LI><A HREF="#DESCRIPTION">DESCRIPTION</A>
-	<LI><A HREF="#OPTIONS">OPTIONS</A>
-	<LI><A HREF="#PREREQUISITES">PREREQUISITES</A>
-	<LI><A HREF="#COREQUISITES">COREQUISITES</A>
-	<LI><A HREF="#AUTHOR">AUTHOR</A>
-</UL>
--->
-<!-- INDEX END -->
-
-<P>
-<H1><A NAME="NAME">NAME</A></H1>
-<P>
-ps2imgs - generate images files from PostScript file
-
-<P>
-<HR>
-<H1><A NAME="SYNOPSIS">SYNOPSIS</A></H1>
-<P>
-ps2imgs [<STRONG>--help</STRONG>] [<STRONG>--format</STRONG>=FORMAT] file.ps ...
-
-<P>
-<HR>
-<H1><A NAME="DESCRIPTION">DESCRIPTION</A></H1>
-<P>
-ps2imgs は、PostScript ファイルを画像ファイルに変換します。
-
-<P>
-生成する画像のファイル名は、PostScript ファイルの拡張子を除いた部分＋
-３桁の連番が自動的にふられます。例えば、ex.ps というファイルを変換する と、
-ex001.gif, ex002.gif, ... のようなファイルが生成されます。
-
-<P>
-<HR>
-<H1><A NAME="OPTIONS">OPTIONS</A></H1>
-<P>
-以下のオプションを指定できます。
-
-<DL>
-<DT><STRONG><A NAME="item__format_FORMAT">--format=FORMAT</A></STRONG><DD>
-<P>
-生成する画像ファイルの形式を指定します。 （デフォルトは gif です）
-
-<DT><STRONG><A NAME="item__help">--help</A></STRONG><DD>
-<P>
-このへルプを表示します。
-
-</DL>
-<P>
-<HR>
-<H1><A NAME="PREREQUISITES">PREREQUISITES</A></H1>
-<P>
-このスクリプトは、PostScriptの処理にGhostscriptを、画像の処理に
-ImageMagickを利用しています。
-
-<P>
-<HR>
-<H1><A NAME="COREQUISITES">COREQUISITES</A></H1>
-<P>
-生成した画像は、<STRONG>imgs2html</STRONG>を使うとWWWですぐに公開できます。
-
-<P>
-<HR>
-<H1><A NAME="AUTHOR">AUTHOR</A></H1>
-<P>
-高久 雅生 &lt;<A HREF="mailto:masao@ulis.ac.jp">masao@ulis.ac.jp</A>&gt;,
-江草 由佳 &lt;<A HREF="mailto:yuka@ulis.ac.jp">yuka@ulis.ac.jp</A>&gt;
-
-</BODY>
-
-</HTML>
+</h1>
+<h2>NAME</h2>
+<p>ps2imgs - generate images files from PostScript file</p>
+<h2>SYNOPSIS</h2>
+<p>ps2imgs [<b>--help</b>] [<b>--format</b>=FORMAT] file.ps ...</p>
+<h2>DESCRIPTION</h2>
+<p>ps2imgs は、PostScript ファイルを画像ファイルに変換します。</p>
+<p>生成する画像のファイル名は、PostScript ファイルの拡張子を除いた部分＋
+３桁の連番が自動的にふられます。例えば、ex.ps というファイルを変換する
+と、 ex001.gif, ex002.gif, ... のようなファイルが生成されます。</p>
+<h2>OPTIONS</h2>
+<p>以下のオプションを指定できます。</p>
+<ul>
+<li><a name="item__b___format_FORMAT__b_"></a><b><b>--format=FORMAT</b></b>
+<p>生成する画像ファイルの形式を指定します。
+（デフォルトは gif です）</p>
+</li>
+<li><a name="item__b___help__b_"></a><b><b>--help</b></b>
+<p>このへルプを表示します。</p>
+</li>
+</ul>
+<h2>PREREQUISITES</h2>
+<p>このスクリプトは、PostScriptの処理にGhostscriptを、画像の処理に
+ImageMagickを利用しています。</p>
+<h2>COREQUISITES</h2>
+<p>生成した画像は、<b>imgs2html</b>を使うとWWWですぐに公開できます。</p>
+<h2>AUTHOR</h2>
+<p>高久 雅生 &lt;masao@ulis.ac.jp&gt;, 江草 由佳 &lt;yuka@ulis.ac.jp&gt;</p>
+<hr>
+<address>
+高久雅生 (Takaku Masao)<br>
+<a href="http://nile.ulis.ac.jp/~masao/">http://nile.ulis.ac.jp/~masao/</a>,
+<a href="mailto:masao@ulis.ac.jp">masao@ulis.ac.jp</a>
+</address>
+</body></html>
