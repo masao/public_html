@@ -91,16 +91,17 @@ EOF
     for (my $i = $page * $MAX; $i < @problems && $i < ($page+1) * $MAX; $i++) {
 	print "<tr valign=\"top\">\n";
 	foreach my $cont (@{$problems[$i]}) {
-	    $cont =~ s#((https?|ftp)://[;\/?:@&=+\$,A-Za-z0-9\-_.!~*'()]+)#<a href="$1">$1</a>#gi;
+	    $cont =~ s/^\s+//g;
+	    $cont =~ s/\s+$//g;
+	    ## とりあえず様子見。
+	    # $cont =~ s#((https?|ftp)://[;\/?:@&=+\$,A-Za-z0-9\-_.!~*'()]+)#<a href="$1">$1</a>#gi;
 	    print "<td>$cont</td>\n";
 	}
 	print "</tr>\n";
     }
     print "</table>\n";
     print_pages();
-
     print_html_foot();
-
 }
 
 # 数字を考慮したソート

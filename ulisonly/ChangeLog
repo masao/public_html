@@ -1,3 +1,218 @@
+2002-04-17  Masao Takaku  <masao@ulis.ac.jp>
+
+	* メインシステム・ユーザ定例会:
+
+	いつも2講部屋でだべっているのとあんまり変わらないのね…。
+
+2002-04-13  Masao Takaku  <masao@ulis.ac.jp>
+
+	* emerald 不調:
+
+	休止状態にするときに、IE が固まってしまうことが頻発している。
+
+	とりあえず試してみると良いこと。
+	・BIOS アップデート
+	・IAA を入れてみる。
+	・Dell からデバイスドライバが出ていないか、確認。
+
+2002-04-12  Masao Takaku  <masao@ulis.ac.jp>
+
+	* つかれた…:
+
+	明日（今日）は alice で JAPAN/MARC の MT をすいだしておこう。
+
+	* IE の FTP 機能にパスワードが見えてしまう問題: 発見してしまった。
+	cf. http://www.securiteam.com/windowsntfocus/6E00N003GA.html
+
+	やな感じ。
+	まだフィックスは見当たらないけど、ナゼ!?
+
+2002-04-11  Masao Takaku  <masao@ulis.ac.jp>
+
+	* felipe2: 無事に引退させた。
+
+	* DBD::CSV: 面白そう。
+
+	* Active!mail:
+
+	問題点:
+
+	1. HTMLメールの <script></script> を認識してしまう。
+	2. メール検索などのパラメータを適切にエスケープしていない。
+
+	により、ブラウザの cookie が盗みだされる可能性がある。
+	cookie が漏曳すると、以下の危険が生じる。
+
+	・パスワードの漏曳
+	・セッション・ハイジャック
+
+2002-04-10  Masao Takaku  <masao@ulis.ac.jp>
+
+	* Active! mail にCSS問題が発覚。
+
+	* SQLite: http://www.hwaci.com/sw/sqlite/
+	from Apache-Users ml.
+
+	C ライブラリにリンクするだけで RDMS アプリケーションになるらしい。
+	結構おもしろそう。
+
+	* Java で gettext ってどうやるんだろう。
+
+2002-04-08  Masao Takaku  <masao@ulis.ac.jp>
+
+	* clover テープドライブエラー:
+
+	昨夜の作業時はうまくいったと思ったのだが、フルダンプのスクリプトを
+	走らせるとうまくいかないことが判明。
+	怪しいのは以下のコマンド出力。
+
+	% mt -f /dev/nst0 status
+	SCSI 2 tape drive:
+	File number=0, block number=0, partition=0.
+	Tape block size 0 bytes. Density code 0x26 (unknown to this mt).
+	Soft error count since last status=0
+	General status bits on (41010000):
+	 BOT ONLINE IM_REP_EN
+
+	「Density code 0x26 (unknown to this mt).」
+	となっているあたりがあやしい。
+
+	* アツイ: 気温が上がってさっそく半袖一枚になるような陽気。
+
+	* 日本人英語学習者コーパス:
+	http://www.lb.u-tokai.ac.jp/lcorpus/index-j.html
+
+	ちょっとおもしろそう。あとでいじってみると良いかも…。
+
+	* clover のテープデバイス: おかしな状態だったのをちょっと確認。
+
+	一度 clover を停止させて、SCCI ケーブルの配線をつなぎなおしたら、
+	dd, dump コマンドではエラーは出なくなり、データの復元ができた。
+
+	以下、確認したコマンド:
+	% dd if=/home/masao/zzz of=/dev/st0
+	% dd if=/dev/st0 of=/tmp/zzz
+
+	% dump -0au /boot/
+	% mkdir /tmp/test-dump; cd /tmp/test-dump
+	% restore -rf /dev/st0
+
+	あと、確認すべき項目は、以下の2点。
+	  - /dev/nst0 でも動作するか
+	  - tar コマンドも動作するか
+	  - データ量が大きいファイルシステムでも動作するか
+
+	あ、ついでに阪口さんに言われた chmod o-rw /dev/n?st0 をしておいた。
+	（これは、nile も見ておかないと…。）
+
+	次は nile かな。。。
+
+2002-04-07  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 全国書誌 Web 版: 国立国会図書館がこの 4 月から公開しはじめた。
+	http://www.ndl.go.jp/publications/zenkoku/jnb_top.html
+
+	分類番号ごとに排列して表示している。
+	
+	JAPAN/MARCのデータそのものを提供するわけではないようだ。
+	良かったような、悪かったような。。。
+
+	* IE の挙動: ちょっと変な IE の挙動。
+
+	Content-Type: application/octet-stream
+	Content-Disposition-Type: attachment; filename=hoge.pdf
+
+	の場合、Acrobat Reader のプラグインが起動。
+
+	Content-Type: application/pdf
+	Content-Disposition-Type: attachment; filename=hoge.pdf
+
+	の場合、hoge.pdf を保存しようとする。
+
+
+	前者はいままでの経験からそうではないかと思っていたから想定内だった
+	けど、後者の挙動はちょっと意外だった。
+
+2002-04-01  Masao Takaku  <masao@ulis.ac.jp>
+
+	* バイト: 長谷川先生の依頼は2つのものがまざっていたらしい。
+
+	もう片方の依頼内容は、「翻訳のお仕事」関係。
+
+	数人のメンバと原稿をやりとりしたい。
+	アクセス制御は PDF（Acrobat）のものを使う!?
+
+	* WikiClone: 2講・システム分野のページで使えるかもって思って、
+	WikiWikiWeb をちょっと調べてみた。
+
+	・Tiki: http://www.todo.org/
+	Ruby。バックエンドはプレインテキストのファイル群。
+
+	・YukiWiki: http://www.hyuki.com/yukiwiki/
+	Perl。バックエンドは DBM 形式。掲示板風？
+
+	・PukiWiki: http://factage.com/sng/pukiwiki/
+	PHP。高機能？
+
+	・RWiki: http://www.jin.gr.jp/~nahi/RWiki/
+	Ruby。RD 形式で記述する。
+
+	cf. 本家のサイト: http://c2.com/cgi/wiki?WikiEngines
+
+	* 「超」メモ術: http://www.kirari.com/amz/note/
+
+	「超」整理法とは関係ないんだろうなあ。
+
+	* ServerAdmin: nile の Apache の管理者情報を変更。
+
+	ServerAdmin admin@nile.ulis.ac.jp
+
+	* /etc/sudoers: nile の sudoers に林さん（kanpan）を追加。
+
+2002-03-31  Masao Takaku  <masao@ulis.ac.jp>
+
+	* ELBIS − 論文・演題投稿システム:
+	https://endai.umin.ac.jp/endai/soukai/
+
+	学会運営 + CGI で検索したらたどりついた。
+
+	国内の医学・生物学分野の総合ポータルサイトっぽい。
+
+	* 「これから人文系大学院へ進む人のために」:
+	http://www5a.biglobe.ne.jp/~teorema/
+
+	読んでると、ちょっと暗くなるね。
+
+2002-03-30  Masao Takaku  <masao@ulis.ac.jp>
+
+	* emerald 導入:
+
+	新しい Dell の PC を「emerald」と名付けてセットアップした。
+
+	・Windows2000 の初期セットアップ
+	・masao ユーザ登録
+	  - Administrator 権限付与
+	  - 以後、このユーザで作業。
+	・Lhaplus インストール
+	・Windows Update
+	・Norton AntiVirus
+	・WinSCP
+	・Astex-X
+	・TeraTerm Pro (TTSSH)
+	・Mozilla 0.9.8 (ja)
+	・MS Office 2000
+	・プリンタ設定 (2koups,  2kou8100)
+	・Ghostscript + GSView
+	・MS Bookshelf Basic
+
+2002-03-29  Masao Takaku  機能を持ってる。<masao@ulis.ac.jp>
+
+	* nile: すこしづつ整備していこう。
+
+	とりあえず、
+	・/etc/aliases の root エントリに masao@ulis.ac.jp を追加した。
+	・nile の Web 文書を自分の CVS に登録した。
+
 2002-03-28  Masao Takaku  <masao@ulis.ac.jp>
 
 	* 新システム: sshd warning?
