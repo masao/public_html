@@ -59,6 +59,7 @@ my $DEFAULT_STYLESHEET = <<EOF;
 EOF
 
 ### CGI 引数
+my $display = param('display') || 'preview';
 my $source = param('source') || $DEFAULT_SOURCE;
 my $source_f = param('source_f') || '';
 my $stylesheet = param('stylesheet') || $DEFAULT_STYLESHEET;
@@ -69,20 +70,28 @@ my $xslt = length(param("stylesheet_f")) ? read_data($stylesheet_f) : $styleshee
 
 main();
 sub main {
-    print header("text/html; charset=EUC-JP");
-    print $HTML_HEAD;
     if (defined param('submit')) {
-	my $result = exec_xslt();
-	$result = escape_html($result);
-	print <<EOF;
+	my ($type, $result) = exec_xslt();
+	if ($display eq 'preview') {
+	    print header("text/html; charset=EUC-JP");
+	    print $HTML_HEAD;
+	    $result = escape_html($result);
+	    print <<EOF;
 <h2>変換結果</h2>
 <pre style="border: solid thin; padding: 2px;">$result</pre>
 EOF
-	print "<hr>", html_form();
+	    print "<hr>", html_form();
+	    print html_foot();
+	} else {
+	    print header($type);
+	    print $result;
+	}
     } else {
+	print header("text/html; charset=EUC-JP");
+	print $HTML_HEAD;
 	print html_form();
+	print html_foot();
     }
-    print html_foot();
 }
 
 sub exec_xslt($$) {
@@ -96,9 +105,10 @@ sub exec_xslt($$) {
     my $style_doc = $parser->parse_string($xslt);
 
     my $style_obj = $xslt_parser->parse_stylesheet($style_doc);
+    my $type = $style_obj->media_type();
     my $result = $style_obj->transform($source_doc);
 
-    return $style_obj->output_string($result);
+    return ($type, $style_obj->output_string($result));
 }
 
 sub read_data ($) {
@@ -137,6 +147,10 @@ sub html_form () {
 <h2>XSLTスタイルシート</h2>
 <label for="stylesheet_f">ファイル: <input type="file" name="stylesheet_f" id="stylesheet_f" value="$stylesheet_f" size="40"></label><br>
 <textarea name="stylesheet" rows="10" cols="60">$stylesheet</textarea><br>
+<fieldset><legend>表示方式</legend>
+<label><input type="radio" name="display" value="preview" checked>変換結果のソースをプレビュー表示する</label><br>
+<label><input type="radio" name="display" value="raw">変換結果のみをそのまま表示する</label>
+</fieldset>
 <input type="submit" name="submit" value=" 送 信 ">
 </div>
 </form>
