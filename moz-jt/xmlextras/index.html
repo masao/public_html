@@ -1,6 +1,17 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <HTML>
-<HEAD>
+<HEAD><style type="text/css">
+.comment {
+    color: #20A040;
+    font-size: 80%;
+}
+.draft-comment {
+    color: #20A040;
+    font-size: 80%;
+}
+.orig { color:gray; }
+</style>
+<meta name="http-equiv" content="text/html;charset=EUC-JP">
 
    <title>XML Extras</title>
 <LINK REL="stylesheet" HREF="../persistent-style.css" TYPE="text/css">
@@ -10,7 +21,7 @@
 <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%">
 <TR>
 <TD VALIGN="TOP" class="bannercell">
-<A HREF="http://www.mozilla.org/" CLASS="bannerlink">
+<a href="/" CLASS="bannerlink">
 <IMG SRC="../images/mozilla-banner.gif" ALT=""
 CLASS="mozillaorgbanner" WIDTH="600" HEIGHT="58">
 </A>
@@ -48,10 +59,10 @@ CLASS="mozillaorgbanner" WIDTH="600" HEIGHT="58">
 <TR><TD></TD><TD class="linkcell"><A HREF="http://bugzilla.mozilla.org/"> Bugzilla</A></TD></TR>
 <TR><TD></TD><TD class="linkcell"><A HREF="http://tinderbox.mozilla.org/showbuilds.cgi?tree=SeaMonkey"> Tinderbox</A></TD></TR>
 <TR><TD></TD><TD class="linkcell"><A HREF="http://bonsai.mozilla.org/cvsqueryform.cgi?"> Bonsai</A></TD></TR>
-<TR><TD></TD><TD class="linkcell"><A HREF="http://lxr.mozilla.org/seamonkey/"> LXR</A></TD></TR>
+<TR><TD></TD><TD class="linkcell"><a href="/lxr/seamonkey/"> LXR</A></TD></TR>
 <TR><TD class="spacercell"></TD></TR>
 <TR><TD class="linkcell" COLSPAN=2><A HREF="../faq.html"><B> FAQ</B></A></TD></TR>
-<TR><TD class="linkcell" COLSPAN=2><A HREF="http://www.mozilla.org/search.html"><B> Search</B></A></TD></TR>
+<TR><TD class="linkcell" COLSPAN=2><a href="/search.html"><B> Search</B></A></TD></TR>
 </TABLE>
 </TD></TR></TABLE>
 </TD></TR></TABLE>
@@ -132,7 +143,7 @@ installers so it is available in the nightly builds.</p>
 </tr>
 
 <tr>
-<td><a href="http://www.mozilla.org/newlayout/xml/#linking">FIXptr and XPointer</a></td>
+<td><a href="/newlayout/xml/#linking">FIXptr and XPointer</a></td>
 
 <td>Available since 1.4alpha in the core Mozilla. Moved to
 XMLExtras during 1.4beta.</td>
@@ -144,9 +155,9 @@ XMLExtras during 1.4beta.</td>
 <p>
 See also:</p>
 <ul>
-<li><a href="http://lxr.mozilla.org/seamonkey/source/extensions/xml-rpc/">XML-RPC</a></li>
-<li><a href="http://www.mozilla.org/newlayout/xml/#load">document.load()</a></li>
-<li><a href="http://www.mozilla.org/newlayout/xml/">XML in Mozilla</a></li>
+<li><a href="/lxr/seamonkey/source/extensions/xml-rpc/">XML-RPC</a></li>
+<li><a href="/newlayout/xml/#load">document.load()</a></li>
+<li><a href="/newlayout/xml/">XML in Mozilla</a></li>
 </ul>
 
 <h4>
@@ -156,7 +167,7 @@ See also:</p>
 HTTP GET method via XMLHttpRequest.</p>
 
 <p>Other test cases for each of the implemented components listed above
-exist in <a href="http://lxr.mozilla.org/seamonkey/source/extensions/xmlextras/tests/">mozilla/extensions/xmlextras/tests/</a>.
+exist in <a href="/lxr/seamonkey/source/extensions/xmlextras/tests/">mozilla/extensions/xmlextras/tests/</a>.
 More exhaustive test suites need to be created, however. If you'd like to 
 help out with QA, you can do one of the
 following:
@@ -169,7 +180,7 @@ for related bugs and help with regression testing.</li>
 <li>
 Contribute a test suite or individual tests that use the implemented components.
 Tests can be sent to the QA owner (<a href="mailto:heikki@netscape.com">heikki@netscape.com</a>
-is the default owner) and/or checked into <a href="http://lxr.mozilla.org/seamonkey/source/extensions/xmlextras/tests/">mozilla/extensions/xmlextras/tests/</a>.</li>
+is the default owner) and/or checked into <a href="/lxr/seamonkey/source/extensions/xmlextras/tests/">mozilla/extensions/xmlextras/tests/</a>.</li>
 
 <li>
 File bugs against the implemented components. Bugs should be filed against
@@ -181,7 +192,7 @@ the XML component in the Browser product.</li>
 
 <p>Probably the best way to learn how to use these technologies is through examples.
 There are some in 
-<a href="http://lxr.mozilla.org/seamonkey/source/extensions/xmlextras/tests/">mozilla/extensions/xmlextras/tests/</a>.
+<a href="/lxr/seamonkey/source/extensions/xmlextras/tests/">mozilla/extensions/xmlextras/tests/</a>.
 If you follow that link to look at the examples you will need to look at page source for the HTML documents.</p>
 
 <p>For <b>XMLHttpRequest</b> object you can mostly rely on the 
@@ -220,7 +231,7 @@ a flexible shopping cart with XML and ASP</a>"</p>
 <td>ok</td>
 <td>ok starting with milestone 0.9.7 (actually nightly 2001-11-28). 
 With older builds, passing strings to send() works only in chrome, see 
-<a href="http://lxr.mozilla.org/seamonkey/source/extensions/xmlextras/tests/post.html">post.html</a> 
+<a href="/lxr/seamonkey/source/extensions/xmlextras/tests/post.html">post.html</a> 
 sample. The "workaround" is to use DOMParser object's parseFromString() method to create
 a document from string, and pass the temporary document into send().</td>
 </tr>
@@ -229,7 +240,7 @@ a document from string, and pass the temporary document into send().</td>
 <td>ok</td>
 <td>file:// documents can access http:// documents but you need to
 enable <tt>UniversalBrowserRead</tt> privilege in your scripts - 
-see the <a href="http://www.mozilla.org/projects/security/components/signed-scripts.html#privs">JavaScript Security: Signed Scripts</a> document for more details.
+see the <a href="/projects/security/components/signed-scripts.html#privs">JavaScript Security: Signed Scripts</a> document for more details.
 Normally your files should reside on a webserver so this shouldn't
 pose a problem (there you do not need that line either).
 Additionally, "foo.com:80" and "foo.com:313" are considered different hosts for
@@ -259,7 +270,7 @@ IDL files should be sent to <a href="mailto:heikki@netscape.com">heikki@netscape
 (Currently, the JavaScript constructor is <i>DOM</i>Parser())
 <br><a href="http://unstable.elemental.com/mozilla/build/latest/mozilla/extensions/dox/interfacensIXMLHttpRequest.html">nsIXMLHttpRequest</a>
 
-<p>Please see the <a href="http://www.mozilla.org/newlayout/xml/#linking">XML Linking and Pointing</a>
+<p>Please see the <a href="/newlayout/xml/#linking">XML Linking and Pointing</a>
 section in XML in Mozilla document for FIXptr and XPointer documentation.</p>
 
 <h4>
@@ -295,6 +306,16 @@ Last modified July 11,  2003
 <A HREF="http://doctor.mozilla.org/?file=mozilla-org/html/xmlextras/index.html">Edit this Page</A>
 (or <A HREF="/README-cvs.html">via CVS</A>)
 </div>
+<div align="right"><font size="-1">
+訳者： 高久雅生 &lt;<a href="mailto:masao@ulis.ac.jp">masao@ulis.ac.jp</a>&gt;<br>
+<a href="http://www.mozilla.org/xmlextras/">このドキュメントのオリジナルは mozilla.org において英語で公布されています。</a><br>
+またドキュメントの管理の言語は現在も英語です。この日本語訳は、<br>
+利用者の利便のためにもじら組和訳プロジェクトによって提供されたものです。<br>
+フィードバックは英語で、元の著者に送って下さい。<br>
+翻訳された文書の一覧は、現在以下のURLで見ることが出来ます。<br>
+<a href="http://www.mozilla.gr.jp/jt/index.html">http://www.mozilla.gr.jp/jt/index.html</a>
+</font></div>
+
 </TD>
 </TR>
 </TABLE>
