@@ -10,10 +10,11 @@
 </style>
 <!--
 
-私家版和訳用用語集(masao): （この文書中でできるだけ統一して使いたい用語）
+私家版用語集(masao): （この文書中でできるだけ統一して使いたい用語）
 
 ・Mozilla 1.4beta → 「Mozilla 1.4 ベータ版」
 ・call → 「呼び出し」「呼び出す」
+・example → 「動作例」
 
 -->
   <meta http-equiv="content-type"
@@ -77,14 +78,14 @@ CLASS="mozillaorgbanner" WIDTH="600" HEIGHT="58">
 
 
 
-<big style="font-weight: bold;"><big><big>Mozilla WSDL Example</big></big></big><br>
-<span class="orig"><big style="font-weight: bold;"><big><big>Mozilla WSDL 動作例</big></big></big><br></span>
+<big style="font-weight: bold;"><big><big>Mozilla WSDL の動作例</big></big></big><br>
+<span class="orig"><big style="font-weight: bold;"><big><big>Mozilla WSDL Example</big></big></big><br></span>
 <br>
 <a href="mailto:doron@netscape.com">Doron Rosenberg</a>
 (doron@netscape.com)<br>
 <br>
 Mozilla 1.4 ベータ版で Gecko は WSDL に対応し、Web サービスと容易にやりとりできるようになりました。
-以下の例では、ユーザが入力した文字列にマッチする書籍を探すために Amazon Web サービスに検索質問を投げます。<br>
+ここの動作例では、ユーザが入力した文字列にマッチする書籍を探すために Amazon Web サービスに検索質問を投げます。<br>
 <span class="orig">With Mozilla 1.4beta, Gecko has WSDL (Web Service Description Language)
 capabilities that allows it to easily communicate with web
 services.&nbsp; In this example, the Amazon web services will be queried
@@ -92,10 +93,10 @@ for books matching the string the user entered.<br>
 </span><br>
 <big><span style="font-weight: bold;">セキュリティに関する注意</span></big><br>
 <span class="orig"><big><span style="font-weight: bold;">Note about Security</span></big><br></span>
-以下の例では別のドメインを呼び出す（mozilla.org <span class="comment">[ 訳注: mozilla.gr.jp ]</span> から amazon.com へ）必要があるため、Mozilla のドメイン間セキュリティモデルに違反します。
+本動作例では、（mozilla.org から amazon.com へ）別のドメインに対して呼び出しを行う必要があるため、Mozilla のドメイン間セキュリティモデルに違反します。
 Mozilla 1.4 ベータ版には、特に Web サービス用に開発された<a href="/lxr/mozilla/source/extensions/webservices/docs/New_Security_Model.html">新しいセキュリティモデル</a>があります。
 これを使えば、Web サービスを呼び出す権限をブラウザに与えることができるようになります。
-しかし、これは非常に新しい機能なので、以下で示すような公開の Web サーバはまだ対応していません。
+しかし、これは非常に新しい機能なので、現在公開されている Web サービスにはまだ対応していません。
 従って、代わりに以下のユーザ設定を行うことにより、<a href="http://devedge.netscape.com/viewsource/2002/bypassing-security-restrictions/">このセキュリティの制限を回避しなければなりません</a>。<br>
 <span class="orig">Since this example needs to call another domain (mozilla.org to
 amazon.com), it breaks the cross-domain security model that Mozilla
@@ -117,12 +118,12 @@ user_pref("signed.applets.codebase_principal_support",       true);<br>
 access amazon.com.<br></span>
 <br>
 </small><span style="font-weight: bold;">
-例題<br>
+動作例<br>
 <span class="orig">Example<br></span>
 </span><small>
-以下の例題では、ユーザが Amazon Web サービスに与えたキーワードにマッチする書籍を検索できます。
-例えば、"Mozilla" と打ち込んだ場合、この悪名高いトカゲ<span class=""> [ 訳注: Mozilla のこと ] </span>に関連する本がヒットするでしょう。
-この例題を実行するには<a href="amazonwsdl.html">ここ</a>をクリックしてください。<br>
+動作例では、ユーザが Amazon Web サービスに与えたキーワードにマッチする書籍を検索できます。
+例えば、"Mozilla" と打ち込んだ場合、この悪名高いトカゲ <span class="comment">[ 訳注: Mozilla のこと ]</span> に関連する本がヒットするでしょう。
+この動作例を実行するには<a href="amazonwsdl.html">ここ</a>をクリックしてください。<br>
 <span class="orig">The example allows the user to search the Amazon web
 service for books matching a given keyword.&nbsp; For example, typing in
 "Mozilla" will match books related to the infamous lizard.&nbsp; To run
@@ -134,10 +135,10 @@ the example, click <a href="amazonwsdl.html">here</a>.<br></span>
 まず、Amazon 側の <a href="http://soap.amazon.com/schemas2/AmazonWebServices.wsdl">WSDL ファイル</a>を使って "Amazon" オブジェクトを初期化します。
 これにより、ブラウザでは Amazon Web サービス用のプロキシオブジェクトが生成され、Amazon のサービスがまるでローカルのリソースであるかのようにスクリプトから扱えるようになります。
 WSDL ファイルにはインタフェースが記述されています。
-これは、どのようなメソッドが呼び出せるか、どんな引数を渡すのか、どんな返り値が返ってくるのかなどが詳細に記述されています。
+これには、どのようなメソッドが呼び出せるか、どんな引数を渡すのか、どんな返り値が返ってくるのかなどが詳細に記述されています。
 プロキシオブジェクトに対してあるメソッドが呼び出されると、Mozilla はこの WSDL ファイルに基づいた SOAP エンベロープを生成し、それを Amazon に送信します。
 Amazon が返答を返すと、Mozilla は SOAP レスポンスを JavaScript のオブジェクトに変換します。
-今回の場合は、タイトル・著者名の配列・定価・Amazon 価格などのような各書籍についての情報を含む "book" オブジェクトの配列が対象になります。
+今回の場合は、タイトル・著者名の配列・定価・Amazon 価格などのような各書籍についての情報を含む "book" オブジェクトの配列が対象となります。
 <br>
 <span class="orig">First, we instantiate an "Amazon" object
 using their <a
@@ -153,7 +154,7 @@ into a JavaScript object.&nbsp; In this case, an array of "book"
 objects, where each book contains information such as the title, an
 array of the authors, the retail and amazon's price and more.&nbsp; <br></span>
 <br>
-例題では、この情報を受け取り、それをそのページの DOM に追加することで表示を行います（新たにページを読み込むわけではありません）。<br>
+動作例では、この情報を受け取って、それをそのページの DOM に追加することで表示を行います（新たにページを読み込むわけではありません）。<br>
 <span class="orig">The example then takes this information and displays it by adding it to
 the page's DOM - no new page has to be loaded.<br></span>
 <br>
