@@ -1,8 +1,11 @@
-#!/opt/free/bin/perl -w
+#!/opt/free/bin/perl -wT
 # -*- CPerl -*-
 # $Id$
 
 use strict;
+use CGI::Carp 'fatalsToBrowser';
+
+$| = 1;
 
 main();
 sub main {
@@ -11,12 +14,39 @@ sub main {
     chomp @tmp;
     close(PASSWD);
 
-    srand;
-    my $user = undef;
     while (1) {
-	my @entry = split(/:/, $tmp[int(rand($#tmp))]);
-	$user = $entry[0];
-	last if ($entry[6] eq "1");
+	my @uinfo = split(/:/, $tmp[int(rand($#tmp))]);
+	if (defined($uinfo[6]) && $uinfo[6] eq '1') {
+	    my $url = is_gaibu_ok($uinfo[0], $uinfo[1]);
+	    if (defined $url) {
+		print "Location: http://www.ulis.ac.jp/~$uinfo[0]/$url\n\n";
+		exit;
+	    }
+	}
     }
-    print "Location: http://www.ulis.ac.jp/~$user/\n\n";
+}
+
+# 外部公開を On にしているか？
+sub is_gaibu_ok ($$) {
+    my ($user, $attr) = @_;
+    my $csvfile = "/www_a/http/docs/people/table/$attr";
+    open(CSV, $csvfile) || die "open fail: $csvfile: $!";
+    while (defined(my $line = <CSV>)) {
+	chomp($line);
+	my ($auser, $ename, $jname, $yomi, $mail,
+	    $nai_url, $gai_url, $path) = split(/:/, $line);
+	if ($user eq $auser) {
+	    if ((split(/,/, $auser))[1] == 1 ||
+		(split(/,/, $ename))[1] == 1 ||
+		(split(/,/, $jname))[1] == 1 ||
+		(split(/,/, $yomi))[1] == 1 ||
+		(split(/,/, $mail))[1] == 1 ||
+		length($gai_url)) {
+		return $gai_url;
+	    } else {
+		return undef;
+	    }
+	}
+    }
+    return undef;
 }
