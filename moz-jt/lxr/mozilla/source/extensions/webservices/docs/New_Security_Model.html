@@ -18,7 +18,7 @@ compromise → 脅威になる、危険にさらす、不正使用する、攻撃する、
 </head>
 <body>
 <h1 style="text-align: center;">
-ファイアウォール越しの信頼できないスクリプトからリソースを守る
+ファイアウォール越しの信頼できないスクリプトからのリソースの保護
 <span class="orig"><br>Securing Resources from Untrusted
 Scripts Behind Firewalls</span></h1>
 <h1 style="text-align: center;"><small><small><big><span
@@ -47,7 +47,7 @@ the script. &nbsp;If the file is not there, access is denied.<br>
 <h2>問題</h2>
 <h2 class="orig">The Problem</h2>
 ファイアウォール越しにロードされた外部の信頼できないスクリプトは、サンドボックス内で実行されます。
-これらのスクリプトは、合法的に外部リソースへのアクセスを要求できます。
+これらのスクリプトは、正当に外部リソースへのアクセスを要求できます。
 しかし、内部リソースへのアクセス許可を与えることは、通常はファイアウォールの外のアプリケーションが利用できないようなこれら内部リソースに対する不正利用を許すことになってしまいます。
 サンドボックスにおいては、内部リソースを区別し、保護しなければなりません。
 <div class="orig">
@@ -69,8 +69,8 @@ other resources protected  behind the firewall.
 </div>
 <h3>同一ソース制限</h3>
 <h3 class="orig"> Same Source Restriction.</h3>
-サンドボックス内のスクリプトがアクセスできるリソースをそのスクリプトがロードされたドメイン内にあるリソースのみに制限することにより、あるドメインから別のドメインにロードされた全てのスクリプトにおいて、そのスクリプトがロードされたドメイン内のリソースにアクセスできなくなるようにします。
-この方針は、Web 上の JavaScript および Java アップレットのサンドボックス化においても広く成功しているものです。<br>
+サンドボックス内のスクリプトがアクセスできるリソースをそのスクリプトのロード元のドメイン内にあるリソースのみに制限することにより、あるドメインから別のドメインにロードされた全てのスクリプトにおいて、そのスクリプトがロード先のドメイン内のリソースにアクセスできなくなるようにします。
+この方針は、Web 上の JavaScript および Java アプレットのサンドボックス化においても広く成功しているものです。<br>
 <span class="orig">
 By restricting sandboxed scripts to access only resources in the domain
 from which they were loaded, any script loaded from one domain into
@@ -79,7 +79,7 @@ into which it has  been loaded. &nbsp;This policy has generally been
 successful in sandboxing  Javascript and Java applets across the web.<br>
 </span>
 <br>
-もしも、サンドボックスにおいて、信頼できないドメインの URI と信頼しうるドメインの URI の共通部分とに相違がなかった場合には、そのほぼ同一のドメインからロードされたスクリプトはファイアウォールに保護されているリソースを利用できるようになります。<br>
+もしも、サンドボックスにおいて、信頼できないドメインの URI と信頼しうるドメインの URI の共通部分とに相違がなかった場合には、その同一のドメインからロードされたスクリプトはファイアウォールに保護されているリソースを利用できるようになります。<br>
 <span class="orig">
 If the sandbox is unable to distinguish the common URI substring of the
  domain to be trusted from similar URIs of untrusted domains, then it
@@ -141,8 +141,8 @@ might now have access to internal resources.<br>
 サンドボックス上において、実行しているスクリプトが当該リソースへのアクセスを許可されているかどうかを他の方法で判定できなかった場合には、ユーザに特別に権限を許可するかどうか尋ねるダイアログが出る場合もあります。
 これは現在、ローカルに保存されているスクリプトと署名付きスクリプトに許されています。
 また、上記で述べたホワイトリストや署名付きスクリプトなどといった他のオプションとの組み合わせになることもありえます。
-しかし、この方式の大きな問題は、会社のファイアウォールにうっかり穴を開けることになるかもしれないという影響について、典型的なブラウザ利用者は理解していなかったり、気付かったりするという点にあります。
-ユーザが他のリソースを危険にさらすことなく、希望の外部のサービスへのアクセスを許可できるようにするためには、非常に複雑な設定が必要になるかもしれません。<br>
+しかし、この方式の大きな問題は、会社のファイアウォールにうっかり穴を開けることになるかもしれないという影響について、典型的なブラウザ利用者は理解していなかったり、気付かなかったりするという点にあります。
+ユーザが他のリソースを危険にさらすことなく、希望の外部のサービスへのアクセスを許可できるようにするためには、非常に複雑な設定が必要になることでしょう。<br>
 <span class="orig">
 Where the sandbox cannot otherwise determine whether the executing
 script  should be permitted access to the resource, a dialog box may
@@ -245,7 +245,7 @@ then that access  file also handles all resources in subdirectories.<br>
 </span>
 <br>
 アクセスファイルになんらかの文法エラーがある場合は、ファイルの残りの部分も無視されることになります。
-コマンドはアクセスを許可することだけができるため、"<code>allow</code>" コマンドをパースする処理順序は重要ではありません。
+コマンドはアクセスを許可することだけができるため、パースした "<code>allow</code>" コマンドの処理順序は重要ではありません。
 <br>
 <span class="orig">
 Any syntax error in the document will result in the rest of the file to
@@ -324,7 +324,7 @@ access to the server that the script wishes to communicate.<br>
   <ul>
     <li>aTransportURI -- サービス URI</li>
     <li class="orig">aTransportURI - The service URI&nbsp;</li>
-    <li>aType -- スクリプトによってリクエストされるタイプ</li>
+    <li>aType -- スクリプトによってリクエストされるタイプ（例: soapv, soap, load など）</li>
     <li class="orig">aType - Type requested &nbsp;by the script ( ex. soapv, soap,
 load, etc. )</li>
     <li>アクセスが許可されたら PR_TRUE を返し、許可されない場合は PR_FALSE を返す</li>
@@ -396,7 +396,7 @@ access file into the root directory of the web server to allow access.<br>
 </span>
 <h3>混合所有に伴う委譲</h3>
 <h3 class="orig">Delegation with Mixed Ownership</h3>
-ルートディレクトリの所有者が委譲宣言を行ったアクセスファイルをルートディレクトリに置かない限り、サブディレクトリ毎の所有者が独立にそのサブディレクトリへの Web スクリプトのアクセスを許可することはできません。
+ルートディレクトリの所有者が委譲宣言を行ったアクセスファイルをルートディレクトリに置かない限り、サブディレクトリ毎の所有者が個別にそのサブディレクトリへの Web スクリプトのアクセスを許可することはできません。
 通常は、サーバがファイルウォールの外側か内側のどちらにあるかは自明のことでしょうから、このことはさほど問題にはならないでしょう。
 サーバの所有者が複数に渡る場合に、Web スクリプトのアクセスファイルを探して全てのディレクトリをスキャンするなどという別の方法を取るのは、望ましくないものと思われます。
 その一方で、トップの所有者が Web サービスへのアクセスを提供している場所についてさほど考慮していないようなドメインでも、独立した運用が可能なこの手法は、おそらくそんなに悪い選択肢ではないと思います。<br>
