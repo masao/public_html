@@ -47,6 +47,8 @@ else
    newslist += parse_news(content)
 end
 
+modified = false
+
 db = PStore.new("ipcnews.db")
 newslist.each do |item|
    db.transaction do
@@ -56,6 +58,7 @@ newslist.each do |item|
       elsif item.lastmodified >= db[item.title].lastmodified &&
 	    item.description != db[item.title].description
 	 db[item.title] = item
+	 modified = true
 	 puts "#{item.lastmodified}\t#{item.title}"
       end
    end
@@ -63,4 +66,4 @@ end
 
 db.transaction do
    puts "#{db.path} has #{db.roots.size} items."
-end
+end if modified
