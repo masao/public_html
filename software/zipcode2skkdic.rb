@@ -1,6 +1,11 @@
 #!/usr/local/bin/ruby -Ke
 # $Id$
 
+# 使い方:
+#   （以下のようにすると、未登録候補の集合が作れる）
+#   % nkf -SXe ken_all.csv | ./zipcode2skkdic.rb > tmp
+#   % skkdic-expr2 tmp + SKK-JISYO.geo SKK-JISYO.L > geo.new
+
 require 'jcode'
 
 class ConvertZipcode
