@@ -42,6 +42,8 @@ end
 
 class ZipcodeCGI
    attr_reader :keyword, :pref, :city
+   ID = '$Id$'
+
    def initialize( cgi, rhtml )
       @cgi, @rhtml = cgi, rhtml
       @keyword = @cgi.params['keyword'][0] if @cgi.valid?( 'keyword' )
