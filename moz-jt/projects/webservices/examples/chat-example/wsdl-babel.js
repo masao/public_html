@@ -44,11 +44,16 @@
     {
       if (proxy) {
 	var parambabel="en_pt";
-	if (document.forms[0].optionto[0].checked) parambabel="en_pt";
-	if (document.forms[0].optionto[1].checked) parambabel="en_fr";
-	if (document.forms[0].optionto[2].checked) parambabel="en_de";
-    proxy.BabelFish(parambabel, value);
-	      }
+	for (var i = 0; i < document.forms[0].optionto.length; i++) {
+	  if (document.forms[0].optionto[i].checked) {
+	    parambabel = document.forms[0].optionto[i].value;
+	  }
+	}
+//	if (document.forms[0].optionto[0].checked) parambabel="en_pt";
+//	if (document.forms[0].optionto[1].checked) parambabel="en_fr";
+//	if (document.forms[0].optionto[2].checked) parambabel="en_de";
+	proxy.BabelFish(parambabel, value);
+      }
       else {
         alert("Error: Proxy set up not complete!");
       }
