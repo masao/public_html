@@ -1,7 +1,9 @@
 body {
   background-color: #aaffaa;
-  line-height: 120%;
   font-family: helvetica, sans-serif;
+}
+p, dl, ul, ol {
+  line-height: 120%;
 }
 h1 {
   text-align: center;
