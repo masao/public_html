@@ -1,0 +1,13 @@
+body {
+  background-color: #aaffaa;
+  line-height: 120%;
+  font-family: verdana, arial, helvetica, Sans-Serif;
+}
+h1 {
+  text-align: center;
+}
+
+div.id {
+  font-style: italic;
+  font-size: small;
+}
