@@ -13,6 +13,8 @@ rescue LoadError
    require 'erb/erbl'
 end
 
+VERSION = '$Id$'
+
 class String
    def format_zipcode
       self.sub(/^(\d\d\d)(\d?\d?\d?\d?)$/) {
@@ -33,7 +35,6 @@ end
 
 class ZipcodeCGI
    attr_reader :keyword, :pref, :city
-   ID = '$Id$'
 
    def initialize( cgi, rhtml )
       @cgi, @rhtml = cgi, rhtml
@@ -96,7 +97,7 @@ begin
    @cgi = CGI.new
    zipcode_app = ZipcodeCGI.new(@cgi, "zipcode.rhtml")
 
-   if zipcode_app.keyword or zipcode_app.pref or zipcode_app.city
+   if zipcode_app.keyword or zipcode_app.pref
       zipcode_app.do_search
    end
 
