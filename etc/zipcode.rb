@@ -10,7 +10,6 @@ DBNAME = "zipcode.db"
 
 CREATE_TABLE = <<EOF
 CREATE TABLE zipcode (
-       code	  TEXT,
        zipcode7	  TEXT,
        pref	  TEXT,
        city	  TEXT,
@@ -29,9 +28,10 @@ dbh['AutoCommit'] = false
 
 dbh.transaction do
    dbh.do(CREATE_TABLE)
-   sth = dbh.prepare("INSERT INTO zipcode VALUES(?, ?, ?, ?, ?, ?, ?)");
+   sth = dbh.prepare("INSERT INTO zipcode VALUES(?, ?, ?, ?, ?, ?)");
    ARGF.each_line do |line|
       data = line.split(/,/).map{|e| e.sub(/^\"(.*)\"$/, '\1'); }
-      sth.execute(data[0], data[2], data[6], data[7], data[4], data[8], data[5]);
+      sth.execute(data[2], data[6], data[7], data[4], data[8], data[5]);
+      puts [ data[2], data[6], data[7], data[8] ].join(" ")
    end
 end
