@@ -26,3 +26,9 @@ div.id {
   font-style: italic;
   font-size: small;
 }
+.news {
+  /*border: medium solid red;*/
+  font-size: small;
+  margin-left: 40px;
+  margin-right: 40px;
+}
