@@ -1,6 +1,271 @@
+2002-01-21  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 香辛飯屋: ひさびさに夕飯を食いに「香辛飯屋」に行った。
+
+	以前のバカバカしいゲームなどの趣向が消え、メニューもトッピング中心
+	でなくなっていた。
+
+	どうも「香辛飯屋」っぽくなくなった雰囲気。
+
+	* 研究: XMLボキャブラリ設計の前提となる、システムの処理モデルを詰
+	めていないことが判明した。
+	とりあえず、これを検討する。
+
+	つまり、「どこで共通ボキャブラリを使うのか？」について。
+
+	・モデル1: Indexerでの共通化。
+	・モデル2: 事前に共通化する。
+	・モデル3: 名前空間を用いた共通化。
+	  （つまり、単一のボキャブラリへの統一を行わない）
+
+	あとは、「追加情報は必要か？」についても。
+	（NDCなら標数、EDRなら説明など!?）
+	→ 拡張可能性なども考慮して考えるべし。
+
+	* 研究: とりあえず考えていること。
+
+	・IDREF(S?)を使ったXMLボキャブラリの設計
+	・WordNetなどでの
+	   - XMLの利用
+	   - 可視化技術の利用
+	  を確認。
+	・論文書き
+	  - IPSJ-FI
+	  - 中間発表
+	  - Dゼミでの資料
+
+	* 図描きソフトウェア: /.-Jで紹介されてたグラフ描きツール。
+	http://www.molips.com/jp/index.html
+
+	デモムービーを見るかぎりでは良さげな感じ。
+
+	* ULIS OPAC: なにげなく Mozilla で検索してみたら、検索できるように
+	なっていた。
+
+	以前、苦情（要望）を出したものへは報告くらいしてほしいよね。
+
+	これができるようになると、ますます NC4.x を勧める必然性がなくなる。
+
+2002-01-20  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 長谷川アルバイト:
+
+	今度は、NAS2002という数値解析シンポジウムの受付を行うWebページ・
+	CGIプログラムなどの作成の依頼あり。
+
+	昨年度のCGIをもらって手抜きでできるやりかたを考えよう。。。
+
+2002-01-19  Masao Takaku  <masao@ulis.ac.jp>
+
+	* センター試験: で院生室の目の前に受験生を満載した大型バスが停まっ
+	ている。ちょっと変な光景。
+
+	高校生の声のするキャンパスはちょっと異様かも。
+
+	* 体調: 正月あけからひいていた風邪がやっと全快。
+
+2002-01-12  Masao Takaku  <masao@ulis.ac.jp>
+
+	* URLメモ: http://www2g.biglobe.ne.jp/~stakasa/spam-j.html
+
+	最近、SPAMの被害がものすごいのだが、このサイトの情報はためになるか
+	も。
+
+2002-01-11  Masao Takaku  <masao@ulis.ac.jp>
+
+	* Anthy: ベータ版が出たそうなので、触ってみた。
+
+	まだ（）などの記号類の文字種の変更機能などが無いので実用とは言えな
+	いと感じる。
+
+2002-01-06  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 体系XML: 『Relaxer』を読みながら思った。
+
+	IDREFSを使ってみようかな。
+
+2002-01-05  Masao Takaku  <masao@ulis.ac.jp>
+
+	* Relaxer: 本屋で見かけて買ってみた。
+	cf. http://www.asahi-net.or.jp/~dp8t-asm/java/articles/RelaxerWeb_ja.html
+
+	以下、気になったこと。
+	・Relaxそのものの仕様をある程度知っている人向けの説明が多い。
+	  → 例：「hedgeRuleは扱いません。」→なぜ？（理由の説明が欲しい）
+	・「シンタックスシュガー」とは？
+	・p.96: <ref>...</ref> → <refComplex>...</refComplex>
+	・<element>...</element>で表現されうる部分は最適化する。
+
+2001-12-30  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 雑談: 帰省の高速バスでの会話。
+
+	バスの運転手:「年末は混むの？」
+	料金所のおっさん:「ええ、暴走族対策がね〜。」
+	運転手:「大変だね。」
+	料金所:「ええ、暴走族は怖いからね〜。」
+
+2001-12-29  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 筆ぐるめ: 父より電話あり。
+
+	  知り合いから年賀状作りを頼まれたのだが、筆ぐるめでの使い方がよく
+	  わからない。
+	とのこと。
+
+	さすがに電話のみで状況を把握して解決法を言うのは無理だよ…。
+
+	* 文字鏡フォント:
+
+	論文に文字鏡フォントを使い、LaTeX 校正をしている情報知識学会に投稿
+	する場合、向こうに文字鏡環境がないとダメそう。
+
+	とりあえず、今回は
+
+	* 不在票: 家に帰ったら、クロネコヤマトの不在票が入っていた。
+
+	でも、差出人を見たら、「春名」様となっていた。
+
+	そう、東大野ハイツ A-108 と B-108 を間違えた模様。
+
+	とりあえず、春名くんの家のポストに入れなおしておく。
+
+2001-12-28  Masao Takaku  <masao@ulis.ac.jp>
+
+	* バイト?: from hasegawa...
+
+	・CGI(or Servlet)でファイルをサーバにアップロードして、計算結果を
+	返すというような仕組みは用意できるか？
+
+	ちょっと、暇な時に試してほしい。
+
+	* hotlink.pl: Ruby のサイトにある Hot Links! もどきを作るスクリプ
+	トを書き始めた。
+
+	書き終わってから、
+	RSS（Rich Site Summary）用のスクリプトが流用できる（多分）ことに気
+	付いた。
+
+	まぁそれはそれとして、
+	あとは表示方法をちょっと検討してから、2講で使う予定。
+
+2001-12-27  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 晩飯: 平塚線のところの本格っぽい中華料理屋が満席だったので、バー
+	ミヤンへ行った。
+
+	平塚線の方へは、また今度行こう。
+
+2001-12-26  Masao Takaku  <masao@ulis.ac.jp>
+
+	* UNIX MAGAZINE: 高林さんの『メモ道』が本当に素晴しいです。
+	もっとこういう記事が読みたい!!!!
+
+	つ〜か、日常生活のための「道具」としての計算機の活用法って、なんで
+	みんな取り上げないのだろうか。
+	すごく不満。
+
+	（待望の）tatuo氏の chalow も公開された模様。
+	http://www.nais.to/~yto/tools/chalow/
+
+	* Walrus: 『Linux Japan』誌を立読みして知った。
+	cf. http://walrus-ruby.hoops.ne.jp/walrus/
+
+	概要と機能紹介を読むかぎりでは、けっこう良さそうな感じ。
+
+	ちょっと触ってみようかな。
+
+	他にもフリーフォントのお話とかあって、「買い」だろう…。
+	けど、雑誌は収納（保存）に困るので、やめた。
+	でも、結局は買っちゃうかも…。(^_^;;
+
+	* Mozilla 0.9.7:
+
+	気づいた変更点は：
+	・動作がさらに軽快に!!
+	・インストーラがちょっと変わった。
+	・リンク時のカーソル形状が IE のと同じものに。（指の形）
+	・「JavaScriptを有効にする」の詳細な設定が可能。
+	・DOM Inspector って何？
+	・「Print Preview」で表示が乱れる!?
+	などなど。
+
+	* NDL著者名典拠ファイル: 三浦さんが持ってきたモノを一緒に解読した。
+
+	かなり大変だったが、一日かけて解析およびテキストファイルへの変換を
+	完了した。（Perlスクリプト）
+
+	ポイントは、
+	・コード値をそのまま使う。（'d' => 100）
+	  - しかも、複数バイトをLittle-Endianとして計算すべし。
+	・文字列のバイト長を複数バイトで表現。
+	などなど。
+
+	思ったよりもうまくいって、良かった!!
+	JAPAN/MARCの経験が生きて、良かった!!
+
+	* クリスマス: ちょっと家でゴロゴロ。
+
+2001-12-22  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 学内 模様替え:
+
+	1月中旬までに部屋のレイアウトを決めて、事務に提出するらしい…。
+
+	（独り言：やめてほしいなぁ〜）
+	
+	* Zope: ちょっと触ってみた。
+
+	結構、面白い。
+
+	* Content Management System:
+
+	・Midgard: http://www.midgard-project.org/
+	・OpenCms: http://www.opencms.org/opencms/opencms/index.html
+	あたりがオープンソースものでは定番か。
+
+	・Zope: http://www.zope.org/
+	も多少毛色が違うけど、役に立ちそう。
+
+	http://www.cmswatch.com/
+	http://directory.google.com/Top/Computers/Software/Internet/Site_Management/Content_Management/
+	あたりから辿れる。
+
+	* Google holiday?: 今回のロゴはは何だろうか？
+	http://www.google.com/doodle4.html
+
+	「ハッピーホリデー」というんだから、Google 自体の休日かしら？
+
+	* BibTeX2XML:
+
+	btOOL: A Programmer's Interface to BibTeX Files
+	cf. http://starship.python.net/~gward/btOOL/
+	なるものを発見。参考になる。
+
+	strudel という Content Management System を見ていて知った。
+	cf. http://www.research.att.com/sw/tools/strudel/
+
+	こちらは、
+	XML（ソース） + sitegraph （サイト構造） + HTML雛型 +
+	StruQL（query language）
+	というわけの分からない構成。
+	一応、bib2xml という BibTeX を使ったサンプル有り。
+
+	* XML Draw: XML の木構造を可視化するプログラム。
+	http://cl.aist-nara.ac.jp/~yuuta-t/dist/prog/xmldraw/
+	参考になるかも。
+
+	Ruby + REXML (XML Parser) + Graphviz + GraphR (Ruby Graph library)
+	のような構成。
+
+	前から作ってみたかったので、とりあえず（安直に）再発明してみようか
+	しら。
+
 2001-12-21  Masao Takaku  <masao@ulis.ac.jp>
 
 	* 忘年会: 急遽、行くことになった。
+
+	「たけし」が満席だったので、「つぼ八」へ。
 
 2001-12-20  Masao Takaku  <masao@ulis.ac.jp>
 
