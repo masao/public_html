@@ -4,6 +4,7 @@
 
 use strict;
 use CGI;
+use CGI::Carp 'fatalsToBrowser';
 use LWP::UserAgent;
 use HTTP::Request;
 
@@ -58,7 +59,8 @@ EOF
 </form>
 EOF
     if (length($search)) {	# 検索
-	@entries = grep(/\Q$search/i, @entries);
+	@entries = grep(/$search/oi, @entries);
+	print "<p>Perl で /$search/oi しています。grep -i とほぼ同じです。</p>";
  	print "<p><font color=\"red\">検索結果: ", $#entries + 1, "件</font></p>\n";
     }
 
@@ -91,9 +93,9 @@ EOF
     print_pages();
     print <<EOF;
 <hr><address>
-<a href="http://nile.ulis.ac.jp/~masao/ulisonly/ipc-trouble.cgi">http://nile.ulis.ac.jp/~masao/ulisonly/ipc-trouble.cgi</a><br>
-本ページは個人的に作成しているものです。
-お問い合わせは<a href="mailto:$address">$address</a>までお願いします。
+<a href="http://nile.ulis.ac.jp/~masao/ulisonly/ipc-trouble.cgi">http://nile.ulis.ac.jp/~masao/ulisonly/ipc-trouble.cgi</a>
+<!-- 本ページは個人的に作成しているものです。
+お問い合わせは<a href="mailto:$address">$address</a>までお願いします。-->
 </address>
 </body></html>
 EOF
