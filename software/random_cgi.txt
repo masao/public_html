@@ -1,4 +1,6 @@
 #!/opt/free/bin/perl -w
+# -*- CPerl -*-
+# $Id$
 
 use strict;
 
@@ -6,17 +8,15 @@ main();
 sub main {
     open(PASSWD, "/etc/passwd") || die "open fail: $!";
     my @tmp = <PASSWD>;
+    chomp @tmp;
     close(PASSWD);
 
     srand;
     my $user = undef;
     while (1) {
-	$user = $tmp[int(rand($#tmp))];
-	my @entry = split(/:/, $user);
+	my @entry = split(/:/, $tmp[int(rand($#tmp))]);
 	$user = $entry[0];
-	my $dir = "$entry[5]/public_html";
-	last if (-d $dir && -f "$dir/on-people-page");
-	#(-f "$dir/index.html" || -f "$dir/index.shtml" || -f "$dir/index.cgi")
+	last if ($entry[6] eq "1");
     }
     print "Location: http://www.ulis.ac.jp/~$user/\n\n";
 }
