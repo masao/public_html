@@ -4,9 +4,11 @@
 # 使い方：
 # nkf -Se ken_all.csv | ruby zipcode.rb
 
+require 'ftools'
 require 'dbi'
 
 DBNAME = "zipcode.db"
+DBNAME_TMP = DBNAME + ".tmp"
 
 CREATE_TABLE = <<EOF
 CREATE TABLE zipcode (
@@ -20,10 +22,10 @@ CREATE TABLE zipcode (
 EOF
 
 if FileTest.exist? DBNAME
-   File.unlink DBNAME
+   File.cp(DBNAME, DBNAME + ".old", true)
 end
 
-dbh = DBI.connect("dbi:SQLite:#{DBNAME}")
+dbh = DBI.connect("dbi:SQLite:#{DBNAME_TMP}")
 dbh['AutoCommit'] = false
 
 dbh.transaction do
@@ -35,3 +37,5 @@ dbh.transaction do
       puts [ data[2], data[6], data[7], data[8] ].join(" ")
    end
 end
+
+File.mv(DBNAME_TMP, DBNAME, true)
