@@ -55,6 +55,8 @@ img { border: 0px; }
   border: solid thin gray;
   padding: 1em;
 }
+span.date { font-size: smaller; color: maroon; }
+.navbar { text-align: right; }
 </style>
 </head>
 <body>
@@ -66,7 +68,7 @@ EOF
       result = <<EOF
 <p class="notice">
 本ページは個人的に運営しているものです。<br>
-また、<a href="http://www.ulis.ac.jp/ipc/ipnews/ipcnews_new.html">センターニュース</a>を機械的に解析して生成しているため、内容に不正確な情報が含まれている可能性があります。より正確な情報については、<a href="http://www.ulis.ac.jp/ipc/">公式サイト</a>をご覧ください。
+<a href="http://www.ulis.ac.jp/ipc/ipnews/ipcnews_new.html">センターニュース</a>を機械的に解析して生成しているため、内容に不正確な情報が含まれている可能性があります。より正確な情報については、<a href="http://www.ulis.ac.jp/ipc/">公式サイト</a>をご覧ください。
 </p>
 <hr>
 <address>
@@ -84,20 +86,46 @@ EOF
 </html>
 EOF
    end
+
+   # 月別一覧HTMLを生成する
+   def monthlist_html(db)
+      list = db.values.collect do |item|
+	 "%04d-%02d" % [ item.lastmodified.year, item.lastmodified.month ]
+      end
+      result = "<div class=\"monthly-list\">"
+      this_year = false
+      list.uniq.sort.each do |m|
+	 year, month = m[0, 4], m[5, 2]
+	 if this_year != year
+	    result += "<br>" if this_year
+	    result += "#{year}: "
+	    this_year = year
+	 end
+	 result += " <a href=\"#{self.script_name}/#{m}\">#{month}</a>"
+      end
+      result += "</div>"
+   end
 end
 
 db = Marshal.load(open("ipcnews.db"))
-cgi = CGI.new("html4")
-found = false
+cgi = CGI.new
 
 if cgi.query_string && cgi.query_string.length > 0
    title = decode64(cgi.query_string)
-   found = db.has_key?(title)
-   if found
+   if db.has_key?(title)
       cgi.out() do
+	 month = "%04d-%02d" % [db[title].lastmodified.year,
+	    			db[title].lastmodified.month]
 	 cgi.html_header(CGI.escapeHTML(title)) +
-	    "<p class=\"lastmodified\">最終更新日: #{db[title].lastmodified}</p>" +
+	    "<p class=\"lastmodified\">" +
+	    "最終更新日: #{db[title].lastmodified}" +
+	    "</p>" +
 	    "<p>#{CGI.escapeHTML(db[title].description).auto_link}</p>" +
+	    "<div class=\"navbar\">" +
+	    "<a href=\"#{cgi.script_name}\">[最新]</a>" +
+	    " <a href=\"#{cgi.script_name}/#{month}\">[#{month}]</a>" +
+	    "</div>" +
+	    # cgi.monthlist_html(db) +
 	    cgi.html_footer
       end
    else
@@ -114,43 +142,29 @@ elsif cgi.path_info && cgi.path_info.length > 0
       item.lastmodified.year == year &&
 	 item.lastmodified.month == month
    end
+   result.sort!{|a, b| a.lastmodified <=> b.lastmodified }
    cgi.out() do
       cgi.html_header(CGI.escapeHTML("%04d-%02d" % [year, month])) +
-	 "<ol>" +
+	 "<ul>" +
 	 result.collect do |item|
-	    "<li><a href=\"#{cgi.script_name}?#{encode64(item.title).tr("\n","")}\">#{CGI.escapeHTML(item.title)}</a>" +
-	    " [#{item.lastmodified}]\n"
+	    "<li><a href=\"#{cgi.script_name}?#{encode64(item.title).tr("\n","")}\">#{CGI.escapeHTML(item.title)}</a> <span class=\"date\">[#{item.lastmodified}]</span>"
          end.join +
-	 "</ol>" +
+	 "</ul>" +
 	 cgi.html_footer
    end
 else
    items = db.keys.sort {|a, b| db[b].lastmodified <=> db[a].lastmodified }
-   monthlist_html = ""
-   monthlist = db.values.collect do |item|
-      "%04d-%02d" % [ item.lastmodified.year, item.lastmodified.month ]
-   end
-   this_year = false
-   monthlist.uniq.sort.each do |m|
-      year, month = m[0, 4], m[5, 2]
-      if this_year != year
-	 monthlist_html += "<br>" if this_year
-	 monthlist_html += "#{year}: "
-	 this_year = year
-      end
-      monthlist_html += " <a href=\"#{cgi.script_name}/#{m}\">#{month}</a>"
-   end
    cgi.out() do
       cgi.html_header("センターニュースの閲覧") +
 	 "<h2>最新ニュース <a href=\"ipcnews-rss.rdf\"><img src=\"rdf.png\" alt=\"RDF\" width=\"36\" height=\"14\"></a></h2>" +
 	 "<ol>" +
 	 items[0, 15].collect do |item|
 	    "<li><a href=\"#{cgi.script_name}?#{encode64(item).tr("\n","")}\">#{item}</a>" +
-	    " [#{db[item].lastmodified}]\n"
+	    " <span class=\"date\">[#{db[item].lastmodified}]</span>\n"
          end.join +
 	 "</ol>" +
 	 "<h2>月別一覧</h2>" +
-	 "<div class=\"monthly-list\">" + monthlist_html + "</div>" +
+	 cgi.monthlist_html(db) +
 	 # cgi.pre {
 	 #    monthlist.uniq.sort.join("\n")
          # } +
