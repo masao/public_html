@@ -44,7 +44,7 @@ print "完了 - " . `date` ."\n";
 print "Indexing を行います。\n";
 if (-d "www.ulis.ac.jp") {
     $ENV{'LANG'} = "ja";
-    system "$Mknmz --all --checkpoint --use-chasen --replace='s#${BaseDir}/#http://#;' ${BaseDir}/www.ulis.ac.jp/";
+    system "$Mknmz --all --checkpoint -f ${HtmlDir}/mknmzrc --replace='s#${BaseDir}/#http://#;' ${BaseDir}/www.ulis.ac.jp/";
 } else {
     die "収集した文書が $BaseDir/www.ulis.ac.jp にありません。";
 }
