@@ -18,7 +18,7 @@ compromise → 脅威になる、危険にさらす、不正使用する、攻撃する、
 </head>
 <body>
 <h1 style="text-align: center;">
-ファイアウォール越しの信頼できないスクリプトからのリソースを守る
+ファイアウォール越しの信頼できないスクリプトからリソースを守る
 <span class="orig"><br>Securing Resources from Untrusted
 Scripts Behind Firewalls</span></h1>
 <h1 style="text-align: center;"><small><small><big><span
@@ -30,11 +30,11 @@ Scripts Behind Firewalls</span></h1>
 </h1>
 <h2>はじめに</h2>
 <h2 class="orig">Introduction</h2>
-このページでは、サンドボック内のスクリプトからの要求に対して全ての内部リソースを保護するのに使用される代替的な手法について説明します。
+このページでは、サンドボック内のスクリプトからの要求に対して全ての内部リソースを保護するのに使用される代替的な機構について説明します。
 これは特に、信頼できないスクリプトによる SOAP 呼び出し用に実装されたものです。
-予め知らされていない URL のリソースへアクセス要求があった場合、
-サンドボックスは、そのスクリプトがアクセス許可を持っているかどうかを判定するために、そのドメインに置いてある宣言ファイルを読み込みます。
-もしもそのファイルが無い場合、アクセスは拒否されます。
+予め知らされていない URL のリソースへのアクセス要求があった場合、
+サンドボックスは、そのスクリプトがアクセス許可を持っているかどうかを判定するために、そのドメインに置いてある宣言ファイルを読みにいきます。
+もしそのファイルが無い場合、アクセスは拒否されます。
 <div class="orig">
 This page describes an alternative mechanism which can be used to
 protect  all internal resources against requests from sandboxed
@@ -48,7 +48,7 @@ the script. &nbsp;If the file is not there, access is denied.<br>
 <h2 class="orig">The Problem</h2>
 ファイアウォール越しにロードされた外部の信頼できないスクリプトは、サンドボックス内で実行されます。
 これらのスクリプトは、合法的に外部リソースへのアクセスを要求できます。
-しかし、内部リソースへのアクセス許可を与えることは、通常はファイアウォールの外のアプリケーションが利用できないようなこれらのリソースに対する不正利用を許すことになってしまいます。
+しかし、内部リソースへのアクセス許可を与えることは、通常はファイアウォールの外のアプリケーションが利用できないようなこれら内部リソースに対する不正利用を許すことになってしまいます。
 サンドボックスにおいては、内部リソースを区別し、保護しなければなりません。
 <div class="orig">
 External untrusted scripts loaded behind a firewall are executed in a
@@ -61,7 +61,7 @@ distinguish and protect internal resources.
 
 <h2>クライアント側の制御による解決策</h2>
 <h2 class="orig">Client-controlled Solutions</h2>
-ファイアウォール越しにロードされたサンドボックス内のアプリケーションと、ファイアウォール越しに保護されている他のリソースとが、やり取りできないようにするために設計されたクライアント側の解決策がいくつか存在します。
+ファイアウォール越しにロードされたサンドボックス内のアプリケーションと、ファイアウォール内で保護されている他のリソースとが、やり取りできないようにするために設計された、クライアント側の制御による解決策がいくつか存在します。
 <div class="orig">
 Several client-controlled solutions have been designed to prevent
 sandboxed  applications loaded behind a firewall from compromising
@@ -69,8 +69,8 @@ other resources protected  behind the firewall.
 </div>
 <h3>同一ソース制限</h3>
 <h3 class="orig"> Same Source Restriction.</h3>
-サンドボックス内のスクリプトはそのスクリプトがロードされたドメイン内にあるリースのみにアクセスを制限することにより、あるドメインから別のドメインにロードされた全てのスクリプトは、そのスクリプトがロードされたドメイン内のリソースにアクセスできなくなります。
-この方針は、Web 上の JavaScript と Java アップレットのサンドボックス化においても広く成功しているものです。<br>
+サンドボックス内のスクリプトがアクセスできるリソースをそのスクリプトがロードされたドメイン内にあるリソースのみに制限することにより、あるドメインから別のドメインにロードされた全てのスクリプトにおいて、そのスクリプトがロードされたドメイン内のリソースにアクセスできなくなるようにします。
+この方針は、Web 上の JavaScript および Java アップレットのサンドボックス化においても広く成功しているものです。<br>
 <span class="orig">
 By restricting sandboxed scripts to access only resources in the domain
 from which they were loaded, any script loaded from one domain into
@@ -79,7 +79,7 @@ into which it has  been loaded. &nbsp;This policy has generally been
 successful in sandboxing  Javascript and Java applets across the web.<br>
 </span>
 <br>
-もしも、サンドボックスにおいて、信頼できないドメインの URI と信頼しうるドメインの URI の共通部分とに相違がなかった場合には、その区別できなかったドメインからロードされたスクリプトはファイアウォールに保護されているリソースを利用できるようになります。<br>
+もしも、サンドボックスにおいて、信頼できないドメインの URI と信頼しうるドメインの URI の共通部分とに相違がなかった場合には、そのほぼ同一のドメインからロードされたスクリプトはファイアウォールに保護されているリソースを利用できるようになります。<br>
 <span class="orig">
 If the sandbox is unable to distinguish the common URI substring of the
  domain to be trusted from similar URIs of untrusted domains, then it
@@ -100,8 +100,8 @@ published from any  domain besides its own.<br>
 <h3 class="orig">White-listing</h3>
 信頼できる URL のホワイトリストを作成し、そこから来たスクリプトを信頼して内部リソースを危険にさらさないようにするという方法もあります。
 これにより、厳しい同一ソース制限のサンドボックス内からドメインを解放することができるようになります。
-ホワイトリストは、常に信頼可能なドメインを含むのには良いツールになります。
-しかし、Web 上では、内部ドメインを危険にさらさずに、他の信頼できないドメインへのアクセスを許可する必要があるのは、たいていの場合は比較的信頼できないドメインからのスクリプトです。<br>
+ホワイトリストは、常に信頼できるドメインを含むのには良いツールになります。
+しかし、Web 上では、内部ドメインを危険にさらさずに、他の信頼できないドメインへのアクセスを許可する必要があるのは、たいていの場合はあまり信頼できないドメインからのスクリプトです。<br>
 <span class="orig">
 By creating a white list of trusted URIs from which scripts are trusted
  to not compromise internal resources, it is possible to release domains
@@ -113,8 +113,8 @@ to other untrusted domains, without compromising  internal domains.<br>
 <br>
 どのドメインへアクセス可能で、他のどのドメインから許可されているかといったような、もっと粒度の細かい複雑なアクセスリストを作成することも可能かもしれません。
 しかし、これには大規模な管理が必要になります。
-つまり、良くてもエンドユーザの間違いの元になりますし、簡単にファイアウォールに穴を開けることにもなります。
-これにより、外部のサービスにアクセスしようとしてブラウザを設定し直したユーザが直接攻撃を受けることはないかもしれませんが、そのファイアウォール内の他のサービスの提供者が攻撃を受ける可能性があります。<br>
+つまり、良くてもエンドユーザの間違いの元、さらには簡単にファイアウォールに穴を開けることにもなります。
+これにより、外部のサービスにアクセスしようとしてブラウザを設定し直したユーザが直接被害を受けることはないかもしれませんが、そのファイアウォール内の他のサービスの提供者が被害を受ける可能性があります。<br>
 <span class="orig">
 More-complex access lists could be created to try to establish, with
 finer  granularity, which domains are to be accessible or permitted
@@ -126,8 +126,8 @@ other services behind the firewall.<br>
 </span>
 <h3>署名付きスクリプト</h3>
 <h3 class="orig">Signed Scripts</h3>
-スクリプトの作者がスクリプトに電子的な署名を行うことにより、ある程度追加の信頼に役立つこと場合もあるでしょう。
-しかし、署名付きのスクリプトは本当に定着してはいません。
+スクリプトの作者がスクリプトに電子的な署名を行うことにより、ある程度の追加の信頼を与える助けになる場合もあるでしょう。
+しかし、署名付きのスクリプトは現実には定着してはいません。
 なぜなら、署名付きスクリプトには証明書が必要ですが、このことによって、完全に見知らぬ相手が内部リソースにアクセスしようとするスクリプトを書いていたという根本的な問題は何も変わらないからです。<br>
 <span class="orig">
 A certain degree of additional trust may be lent to a script by having
@@ -142,7 +142,7 @@ might now have access to internal resources.<br>
 これは現在、ローカルに保存されているスクリプトと署名付きスクリプトに許されています。
 また、上記で述べたホワイトリストや署名付きスクリプトなどといった他のオプションとの組み合わせになることもありえます。
 しかし、この方式の大きな問題は、会社のファイアウォールにうっかり穴を開けることになるかもしれないという影響について、典型的なブラウザ利用者は理解していなかったり、気付かったりするという点にあります。
-ユーザが他のリソースを危険にさらすことなく、希望の外部のサービスへのアクセスを許せるようにするためには、非常に複雑な設定が必要になるかもしれません。<br>
+ユーザが他のリソースを危険にさらすことなく、希望の外部のサービスへのアクセスを許可できるようにするためには、非常に複雑な設定が必要になるかもしれません。<br>
 <span class="orig">
 Where the sandbox cannot otherwise determine whether the executing
 script  should be permitted access to the resource, a dialog box may
@@ -158,7 +158,7 @@ other resources.<br>
 </span>
 <h2>サーバ上でのリソースへのアクセス制御</h2>
 <h2 class="orig">Controlling Resource Access on the Server</h2>
-あるリソースをファイアウォールの外側からロードした Web アプリケーションから隔離すべきかどうかを決定するために、信頼できないスクリプトによるアクセスを、（ユーザという立場ではなく）リソースとサーバ双方の所有者であるような直接の関係者の制御下に置く必要がある場合もあります。<br>
+あるリソースをファイアウォールの外側からロードした Web アプリケーションから隔離すべきかどうかを決定するために、信頼できないスクリプトによるアクセスを、（ユーザという立場ではなく）リソースとサーバ双方の所有者であるような直接の関係者の制御下に置く必要があります。<br>
 <span class="orig">
 Access by untrusted scripts really needs to be under the control of the
  stake holder, which is the resource and server owner -- not the user --
@@ -182,7 +182,7 @@ the Mozilla implementation of SOAP today.<br>
 <br>
 残念ながら、この機能により SOAP メッセージが非 SOAP アドレスに送られなくなるという訳ではありません。
 このこと自体も十分に大きな問題になります。
-つまり、この検証機能では、信頼できないサービス要求はファイアウォールにより保護されるべきサービスによって常に適切に拒否されるという保証ができないとことになります。<br>
+つまり、この検証機能では、ファイアウォールにより保護されるべきサービスが、信頼できないリクエストを常に適切に拒否するという保証がされないことになります。<br>
 <span class="orig">
 Unfortunately, this does not prevent SOAP messages from being sent to
 non-SOAP addresses, which is a big enough problem that the verification
@@ -190,7 +190,7 @@ cannot stand  alone to guarantee that untrusted service requests are
 always properly rejected  by services that should be firewall-protected.<br>
 </span>
 <br>
-SOAP サービスが特定の検証ヘッダを無視するように変更することは、トラブルの元にもなるかもしれません。
+SOAP サービスが特定の検証ヘッダを無視するように変更することは、トラブルの元にもなるかもしれません。<br>
 <span class="orig">
 It may also be inconvenient to modify a SOAP service to ignore the
 specific  verification header.<br>
@@ -199,7 +199,7 @@ specific  verification header.<br>
 <h3 class="orig">Using a Declarations File</h3>
 もっと確実な解決策は、<code>web-scripts-access.xml</code> という名前のファイルの取得に頼る方法です。
 このファイルを、サンドボックス内のスクリプトがリクエストするサーバのルートディレクトリに置きます。
-この手法は、大半のの公開リソースを作成している提供者にとって、かなり容易な選択肢となるでしょう。<br>
+この手法は、公開リソースを作成しているたいていの提供者にとって、かなり容易な選択肢となるでしょう。<br>
 <span class="orig">
 A more robust solution is to rely on getting a file named "<code>web-scripts-access.xml</code>"
 in the root directory of the server that the sandboxed script requests
@@ -228,7 +228,7 @@ xmlns:wsa="http://www.mozilla.org/2002/soap/security</code>"&gt;<br>
 もし &lt;<code>delegate</code>/&gt; 要素が存在する場合は、その URI に対応するサブディレクトリに "<code>web-scripts-access.xml</code>" が必要になります。
 例えば、問題になっているスクリプトが <code>http://www.example.com/foo/bar.xml</code> にあって、宣言ファイル <code>http://www.example.com/web-scripts-access.xml</code> に "<code>delegate</code>" キーワードが含まれる場合、<code>http://www.example.com/foo/web-scripts-access.xml</code> へその権限を委譲します。
 もしも URI がサブディレクトリにあって、ルートディレクトリのアクセスファイルが委譲しているのにサブディレクトリにアクセスファイルが無い場合には、アクセスは許されません。
-また、アクセスファイルが委譲していない場合には、そのアクセスがサブディレクトリに渡って全てのリソースを扱うことになります。
+また、ルートのアクセスファイルが委譲していない場合には、そのアクセスファイルがサブディレクトリに渡って全てのリソースを扱うことになります。
 <br>
 <span class="orig">
 If the &lt;<code>delegate</code>/&gt; element is present then "<code>web-scripts-access.xml</code>"
@@ -243,7 +243,7 @@ then that access  file also handles all resources in subdirectories.<br>
 </span>
 <br>
 アクセスファイルになんらかの文法エラーがある場合は、ファイルの残りの部分も無視されることになります。
-コマンドだけがアクセスを許可するため、"<code>allow</code>" コマンドをパースした処理順序は重要ではありません。
+コマンドはアクセスを許可することだけができるため、"<code>allow</code>" コマンドをパースする処理順序は重要ではありません。
 <br>
 <span class="orig">
 Any syntax error in the document will result in the rest of the file to
@@ -261,10 +261,10 @@ following  command:<br>
 <br>
 <code>&lt;wsa:allow type="<em>&lt;request-type&gt;</em>" from="<em>&lt;uri-prefix&gt;</em>"/&gt;</code><br>
 <br>
-リクエストのタイプは、指定されている場合、スクリプトによるリクエストのタイプをチェックします。
-"<code>soap</code>" や "<code>soapv</code>" や "<code>any</code>" などが指定できます。
+リクエストタイプが指定されている場合、スクリプトによるリクエストのタイプをチェックします。
+"<code>soap</code>" や "<code>soapv</code>" や "<code>load</code>" などが指定できます。
 リクエストタイプにスペースを含むことはできません。
-アクセスタイプに "<code>any</code>" が指定されると、リソースへの全ての種類のアクセス許可されます。
+リクエストタイプに "<code>any</code>" が指定されると、リソースへの全ての種類のアクセスが許可されます。
 <br>
 <span class="orig">
 The type of request, if specified, will be checked against the type of
@@ -310,7 +310,7 @@ http://komodo.mozilla.org, etc. will be granted access.<br>
 <h2>実装</h2>
 <h2 class="orig">Implementation</h2>
 <span style="font-weight: bold;">nsIWebScriptsAccessService</span><br>
-このインタフェースは実行中のスクリプトが通信したいサーバへアクセスしたかどうかをチェックする機能を提供します。
+このインタフェースは実行中のスクリプトが通信したいサーバへアクセスできるかどうかをチェックする機能を提供します。<br>
 <span class="orig">
 This interface provides a way to check whether the running script has
 access to the server that the script wishes to communicate.<br>
@@ -330,7 +330,7 @@ load, etc. )</li>
   </ul>
   <li> void invalidateCache(in string aTransportURI);</li>
   <ul>
-    <li>与えられた転送 URI に対するキャッシュエントリを無効にする</li>
+    <li>与えられたサービス URI に対するキャッシュエントリを無効にする</li>
     <li class="orig">Invalidate cached entry for the given transport uri.</li>
     <li>空文字列を渡すことによりキャッシュを空にできます</li>
     <li class="orig">Empty the cache by passing in a empty string<br>
@@ -343,11 +343,11 @@ nsIWebScriptsAccessService)<br>
 </span>
 サーバに対するアクセス情報をアクセス情報キャッシュ（ハッシュテーブル）として管理します。
 エントリがキャッシュ内に見つからない場合、宣言ファイル（web-scripts-access.xml）をロードして、その情報を取り出してキャッシュを生成します。
-<span class="font-style:italic;">リクエストタイプ</span>と<span style="font-style:italic;">プレフィックス</span>とを、アクセスを判定するために、許可されているタイプとプレフィックスと比較します。
+まず、アクセスを判定するために、<span style="font-style:italic;">リクエストタイプ</span>と<span style="font-style:italic;">プレフィックス</span>を許可されているタイプとプレフィックスと比較します。
 宣言ファイルが妥当（上記で述べた文法に基づき検証）だった場合に限り、エントリが作成されます。
 妥当でない文書だった場合には、アクセスは拒否されることになります。
 XML の整形式エラー、妥当性検証エラー、または、宣言ファイルがアクセスを許していない場合には、スクリプトのアクセスを拒否します。
-nsIConsoleService を通じてコンソールにエラー（検証、整形式、ファイルが見つからない、など）を表示します。
+nsIConsoleService を通じてコンソールにエラー（検証、整形式、ファイルが見つからない、など）を報告します。
 <br>
 <span class="orig">
 Maintains access information, for servers, in an
@@ -392,12 +392,12 @@ user needs to do to open access, and  nothing that can go wrong to
 make a hole in his firewall. &nbsp;It seems fairly easy to drop an
 access file into the root directory of the web server to allow access.<br>
 </span>
-<h3>様々な所有者間における委譲</h3>
+<h3>混合所有に伴う委譲</h3>
 <h3 class="orig">Delegation with Mixed Ownership</h3>
 ルートディレクトリの所有者が委譲宣言を行ったアクセスファイルをルートディレクトリに置かない限り、サブディレクトリ毎の所有者が独立にそのサブディレクトリへの Web スクリプトのアクセスを許可することはできません。
 通常は、サーバがファイルウォールの外側か内側のどちらにあるかは自明のことでしょうから、このことはさほど問題にはならないでしょう。
-サーバの所有者が複数に渡る場合で、Web スクリプトのアクセスファイルを探して全てのディレクトリをスキャンするなどという別の手法を取るのは、望ましくないものと思われます。
-その一方で、トップの所有者が Web サービスへのアクセスを提供している場所についてさほど考慮しないようなドメインでも、独立した運用が可能なこの手法は、おそらくそんなに悪い選択肢ではないと思います。<br>
+サーバの所有者が複数に渡る場合に、Web スクリプトのアクセスファイルを探して全てのディレクトリをスキャンするなどという別の方法を取るのは、望ましくないものと思われます。
+その一方で、トップの所有者が Web サービスへのアクセスを提供している場所についてさほど考慮していないようなドメインでも、独立した運用が可能なこの手法は、おそらくそんなに悪い選択肢ではないと思います。<br>
 <span class="orig">
 Independent owners of subdirectories cannot grant web script access to
 these subdirectories without getting the owner of the root directory to
@@ -422,7 +422,7 @@ bypass, because  it is not clear that this is always secure.
 </span>
 <h2>フィードバック</h2>
 <h2 class="orig">Feedback?</h2>
-本提案についてご意見などありましたら、私の方までお送りください。<br>
+本提案についてのご意見などありましたら、私の方までお送りください。<br>
 <span class="orig">
 Please send me some feedback on this proposal.<br>
 </span>
