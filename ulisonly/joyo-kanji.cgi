@@ -36,18 +36,28 @@ HTML_FOOTER = <<EOF
 EOF
 
 # str 文字列中の漢字のうち、dict に含まれないものを適宜変換する
+# 2003-01-31: HTML タグ内は変換しないように修正した。
 def kanji_convert (str, dict)
-  converted_str = NKF.nkf("-eX", str).gsub(ALL_KANJI_REGEXP) {|str|
-    dict.index(str) ? str : "<span title=\"#{str}\">〓</span>"
-  }
-  return converted_str
+   retstr = ""
+   str.split(/(<.+?>)/).each do |tmp|
+      if tmp =~ /^</
+	 retstr += NKF.nkf("-eX", tmp).gsub(ALL_KANJI_REGEXP) {|kanji|
+	    dict.index(kanji) ? kanji : "〓"
+	 }
+      else
+	 retstr += NKF.nkf("-eX", tmp).gsub(ALL_KANJI_REGEXP) {|kanji|
+	    dict.index(kanji) ? kanji : "<span title=\"#{kanji}\">〓</span>"
+	 }
+      end
+   end
+   return retstr
 end
 
 # HTML の先頭部分
 def html_header (cgi)
-  uri = CGI.escapeHTML(cgi['uri'][0] || 'http://')
-  data = CGI.escapeHTML(cgi['textarea'][0] || '')
-  html = <<EOF
+   uri = CGI.escapeHTML(cgi['uri'][0] || 'http://')
+   data = CGI.escapeHTML(cgi['textarea'][0] || '')
+   html = <<EOF
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
 "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="ja">
@@ -71,16 +81,16 @@ def html_header (cgi)
 <tr>
 <td><input type="radio" name="target" value="uri"
 EOF
-  html += "checked" if cgi['target'][0] == 'uri'
-  html += <<EOF
+   html += "checked" if cgi['target'][0] == 'uri'
+   html += <<EOF
 >URL:</td>
 <td><input type="text" name="uri" value="#{uri}" size="70"></td>
 </tr>
 <tr>
 <td valign="top"><input type="radio" name="target" value="text"
 EOF
-  html += "checked" if cgi['target'][0] == 'text'
-  html += <<EOF
+   html += "checked" if cgi['target'][0] == 'text'
+   html += <<EOF
 >データ:</td>
 <td><textarea name="textarea" rows="10" cols="70">#{data}</textarea></td>
 </tr>
@@ -88,39 +98,39 @@ EOF
 <td><select name="use_jinmei">
 <option value="on"
 EOF
-  html += "selected" if cgi['use_jinmei'] == 'on'
-  html += <<EOF
+   html += "selected" if cgi['use_jinmei'][0] == 'on'
+   html += <<EOF
 >常用＋人名漢字
 <option value="off"
 EOF
-  html += "selected" if cgi['use_jinmei'] == 'off'
-  html += <<EOF
+   html += "selected" if cgi['use_jinmei'][0] == 'off'
+   html += <<EOF
 >常用漢字のみ
 </select></td></tr>
 <tr><td colspan="2" align="center"><input type="submit" value=" チェックする "></td></tr>
 </form>
 </table>
 EOF
-  return html
+   return html
 end
 
 print cgi.header("charset" => 'EUC-JP')
 if cgi.has_key?('target') then
-  kanji_dict = JOYO_KANJI
-  kanji_dict += JINMEI_KANJI if cgi['use_jinmei'][0] == 'on'
-  if cgi['target'][0] == 'uri' then
-    uri = URI.parse cgi['uri'][0].untaint
-    content = Net::HTTP.get(uri.host, uri.request_uri)
-    print "<base href=\"#{uri}\">"
-    print kanji_convert(content, kanji_dict)
-  else
-    content = CGI.escapeHTML(cgi['textarea'][0])
-    print html_header(cgi)
-    print "<hr><pre style=\"border: solid 1px; padding: 4px; margin: 1em;\">"
-    print kanji_convert(content, kanji_dict)
-    print "</pre>" + HTML_FOOTER
-  end
+   kanji_dict = JOYO_KANJI
+   kanji_dict += JINMEI_KANJI if cgi['use_jinmei'][0] == 'on'
+   if cgi['target'][0] == 'uri' then
+      uri = URI.parse cgi['uri'][0].untaint
+      content = Net::HTTP.get(uri.host, uri.request_uri)
+      print "<base href=\"#{uri}\">"
+      print kanji_convert(content, kanji_dict)
+   else
+      content = CGI.escapeHTML(cgi['textarea'][0])
+      print html_header(cgi)
+      print "<hr><pre style=\"border: solid 1px; padding: 4px; margin: 1em;\">"
+      print kanji_convert(content, kanji_dict)
+      print "</pre>" + HTML_FOOTER
+   end
 else
-  print html_header(cgi)
-  print HTML_FOOTER
+   print html_header(cgi)
+   print HTML_FOOTER
 end
