@@ -1,35 +1,38 @@
-body {
-  background-color: #aaffaa;
-  font-family: "Helvetica", sans-serif;
-  margin: 2%;
-  line-height: 1.2;
-}
-h1 {
-  text-align: center;
-}
-p, dd {
-  text-indent: 1em;
-}
-dt {
-  font-weight: bold;
-}
-code, pre {
-  color: navy;
-  white-space: pre;
-  text-indent: 0;
-}
-
-div.id {
-  font-style: italic;
-  font-size: small;
-}
-.news {
-  padding: 5px;
-  border: medium solid #bbb;
-  font-size: smaller;
-  float: right;
-  width: 45%;
-}
-div.last-update {
-  text-align: right;
+@media screen, print {
+  body {
+    background-color: #aaffaa;
+    font-family: "Helvetica", sans-serif;
+    margin: 2%;
+    line-height: 1.2;
+  }
+  h1 {
+    text-align: center;
+  }
+  p, dd {
+    text-indent: 1em;
+  }
+  dt {
+    font-weight: bold;
+  }
+  code, pre {
+    color: navy;
+    text-indent: 0;
+  }
+  div.id {
+    font-style: italic;
+    font-size: smaller;
+  }
+  div.news {
+    padding: 5px;
+    border: medium solid #bbb;
+    font-size: smaller;
+    float: right;
+    width: 45%;
+  }
+  div.last-update {
+    text-align: right;
+  }
+  div.validator img {
+    border: 0px;
+  }
 }
