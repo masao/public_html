@@ -43,6 +43,7 @@ class CGI
 img { border: 0px; }
 .lastmodified { text-align: center }
 .notice {
+  font-size: smaller;
   font-weight: bold;
   text-align: center;
   border: thin dotted gray;
@@ -64,13 +65,8 @@ EOF
    def html_footer
       result = <<EOF
 <p class="notice">
-本ページは個人的に運営しているもので、
-<a href="http://www.ulis.ac.jp/ipc/">センター</a>
-とは一切関係ありません。<br>
-また、本ページの内容は
-<a href="http://www.ulis.ac.jp/ipc/ipnews/ipcnews_new.html">センターニュース</a>
-を機械的に解析して生成したものなので、ノイズが含まれる可能性があります。
-より正確な情報については、上記の公式サイトをご覧ください。
+本ページは個人的に運営しているものです。<br>
+また、内容については、<a href="http://www.ulis.ac.jp/ipc/ipnews/ipcnews_new.html">センターニュース</a>を機械的に解析して生成したものなので、不正確な情報が含まれる可能性があります。より正確な情報については、<a href="http://www.ulis.ac.jp/ipc/">公式サイト</a>をご覧ください。
 </p>
 <hr>
 <address>
