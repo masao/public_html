@@ -68,46 +68,76 @@ CLASS="mozillaorgbanner" WIDTH="600" HEIGHT="58">
 
 
 
-<h2>Mozilla WebServices Demos - Translation WebService Demo, HTTP-based Chat extended with Translation Add-on</h2>
+<h2>Mozilla の Web サービスデモ : 翻訳 Web サービスデモ、翻訳アドオンの拡張による HTTP ベースのチャット</h2>
+<h2 class="orig">Mozilla WebServices Demos - Translation WebService Demo, HTTP-based Chat extended with Translation Add-on</h2>
 
 <a href="mailto:mgalli@netscape.com">Marcio Galli (mgalli @ mgalli.com)</a><br />
 <a href="mailto:roger@livesidebar.com">Roger Soares (roger @ livesidebar.com)</a>
 
-<p>This demo showcases a Web based application that interoperates with Web Services. The demo is a simple HTTP chat where you can log on and have a chat conversation with other buddies. Thanks to Mozilla WSDL implementation, this chat was extended to support auto-translation using Babelfish web service. 
+<p>
+ここでは、Web サービスとやりとりをする Web ベースアプリケーションのデモを示します。
+このデモは、お友達とチャットをしたり、そのログを記録するシンプルな HTTP チャットです。
+Mozilla の WSDL 実装のおかげで、このチャットには Babelfish Web サービスを使った自動翻訳機能が付きました。
+</p>
+<p class="orig">This demo showcases a Web based application that interoperates with Web Services. The demo is a simple HTTP chat where you can log on and have a chat conversation with other buddies. Thanks to Mozilla WSDL implementation, this chat was extended to support auto-translation using Babelfish web service. 
 </p>
 
-<h3>Installation Requirements</h3>
-	
+<h3>インストールの条件</h3>
+<h3 class="orig">Installation Requirements</h3>
 <p>
+このデモは Mozilla の WSDL/SOAP 対応に依存していますので、最新の <a href="/">Mozilla ブラウザ</a>をダウンロードすることをお勧めします。
+</p>
+<p class="orig">
 The demo depends on Mozilla WSDL/SOAP support so it's recommended to download <a href="http://www.mozilla.org">recent Mozilla web browser</a>. 
 </p>
-<h3>Testing the Translator Service</h3>
+<h3>翻訳サービスを試す</h3>
+<h3 class="orig">Testing the Translator Service</h3>
 <div style="margin-left:2em;">
-	<h3>Inline Sample: Testing the Translation Service</h3>
-	You can use the following widget to test the translation service. Type a sentence in english and click Translate. The JavaScript code will call a remote method on xmethods.com and the translation results should appear on the page. Note that this page comes from mozilla.org however Mozilla connects to xmethods.com without security alerts. This process is smooth and safe because of the <a href="http://lxr.mozilla.org/mozilla/source/extensions/webservices/docs/New_Security_Model.html">New Security Model</a> in Mozilla.
+	<h3>インラインの例: 翻訳サービスを試す</h3>
+	<h3 class="orig">Inline Sample: Testing the Translation Service</h3>
+以下のフォームで翻訳サービスを使えます。
+英語で文を入力して「翻訳」をクリックしてください。
+JavaScript コードが xmethods.com のリモートのメソッドを呼び出し、翻訳結果がページ上に表示されます。
+このページは mozilla.org にありますが、Mozilla は xmethods.com にセキュリティ警告無しに接続しています。
+この処理は Mozilla の<a href="/lxr/mozilla/source/extensions/webservices/docs/New_Security_Model.html">新しいセキュリティモデル</a>により、素早く安全に行われます。
+	<span class="orig"><br>
+	You can use the following widget to test the translation service. Type a sentence in english and click Translate. The JavaScript code will call a remote method on xmethods.com and the translation results should appear on the page. Note that this page comes from mozilla.org however Mozilla connects to xmethods.com without security alerts. This process is smooth and safe because of the <a href="http://lxr.mozilla.org/mozilla/source/extensions/webservices/docs/New_Security_Model.html">New Security Model</a> in Mozilla.</span>
 		<br /><br />
 <div style="margin-left:2em;background-color:#eeeeee;padding:10px;-moz-border-radius:12px;">
 	<form onsubmit="Translate(document.getElementById('TEXT').value);return false">
-	<input type="radio" name="optionto" value="en_pt" checked="checked">English&gt;portuguese | 
-	<input type="radio" name="optionto" value="en_fr">English&gt;French | 
-	<input type="radio" name="optionto" value="en_de">English&gt;German
-	<br>
-	<br>
+        <input type="radio" name="optionto" value="en_ja" checked="checked">英語→日本語 |
+        <input type="radio" name="optionto" value="en_pt">英語→ポルトガル語 |
+        <input type="radio" name="optionto" value="en_fr">英語→フランス語 |
+        <input type="radio" name="optionto" value="en_de">英語→ドイツ語<br>
+<span class="orig">
+        <input type="radio" name="optionto" value="en_pt">English&gt;portuguese
+|
+        <input type="radio" name="optionto" value="en_fr">English&gt;French |
+        <input type="radio" name="optionto" value="en_de">English&gt;German
+        <br></span>
+        <br>
 
 	<input type="text" id="TEXT" size="60">
-	<input id="BUTTON" type="button" value="Translate" onclick="Translate(document.getElementById('TEXT').value)">
+	<input id="BUTTON" type="button" value="翻訳" onclick="Translate(document.getElementById('TEXT').value)">
 	</form>
 	
 	<div style="background-color:#dddddd;padding:10px;">
-	<strong>Results:</strong>
+<strong>翻訳結果:</strong>
+	<strong class="orig"><br>Results:</strong>
 	<div id="results"></div>
 	</div>
 	
 
 </div>
 </div>
-<h3>Running the demonstration</h3>
+<h3>デモを動かす</h3>
+<h3 class="orig">Running the demonstration</h3>
 <p>
+BitPapo の HTTP チャットアプリケーションにアクセスするには、<a href="http://www.intelinet.com.br/bitchat/">ここ</a><span class="comment">（英語）</span>をクリックしてください。
+いったんログインすれば、チャットセッションにメッセージを送信できます。
+右側にあるボタンをクリックするだけで、メッセージの文章を自動翻訳して送ることができます。
+</p>
+<p class="orig">
 	<a href="http://www.intelinet.com.br/bitchat/">Click here to access the BitPapo HTTP chat application</a>. Once you log on, you can send messages into the chat session. Note the buttons on the right side, you can simply click a button that will send the text message auto-translated. 
 </p>
 
@@ -129,17 +159,13 @@ Last modified June 16,  2003
 (or <A HREF="/README-cvs.html">via CVS</A>)
 </div>
 <div align="right"><font size="-1">
-訳者： 高久雅生 &lt;<a href="mailto:masao@ulis.ac.jp">masao@ulis.ac.jp</a>&gt;<b
-r>
-<a href="http://www.mozilla.org/projects/webservices/examples/mozilla-wsdl/index
-.html">このドキュメントのオリジナルは mozilla.org において英語で公布されています
-。</a><br>
+訳者： 高久雅生 &lt;<a href="mailto:masao@ulis.ac.jp">masao@ulis.ac.jp</a>&gt;<br>
+<a href="http://www.mozilla.org/projects/webservices/examples/mozilla-wsdl/index.html">このドキュメントのオリジナルは mozilla.org において英語で公布されています。</a><br>
 またドキュメントの管理の言語は現在も英語です。この日本語訳は、<br>
 利用者の利便のためにもじら組和訳プロジェクトによって提供されたものです。<br>
 フィードバックは英語で、元の著者に送って下さい。<br>
 翻訳された文書の一覧は、現在以下のURLで見ることが出来ます。<br>
-<a href="http://www.mozilla.gr.jp/jt/index.html">http://www.mozilla.gr.jp/jt/ind
-ex.html</a>
+<a href="http://www.mozilla.gr.jp/jt/index.html">http://www.mozilla.gr.jp/jt/index.html</a>
 </font></div>
 </TD>
 </TR>
