@@ -1,6 +1,7 @@
 body {
   background-color: #aaffaa;
   font-family: verdana, sans-serif;
+  margin: 2%;
 }
 p, dl, ul, ol {
   line-height: 120%;
