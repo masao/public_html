@@ -1,3 +1,55 @@
+2001-06-15  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 電話: 土肥からいきなり連絡あり。
+	同じく高校時代の友だちの結婚式のプレゼントについての相談とのこと。
+	（ごめんなさい。私、行けませんので、適当によろしく。
+	と答えておいた。）
+
+	しかし、携帯電話の伝言メモを何度聞いても、土肥の声には聞こえなかっ
+	たんだけどな〜。
+	あと、声大きくない？＞土肥。
+
+	そうそう、B組関連の連絡は何もありません。
+
+	* 着手: 明日は着手発表会なので、早めに帰ることにする。
+
+	* GTK+: とりあえず、LD_LIBRARY_PATH を /usr/local/lib に設定する前
+	提でインストールする予定。
+
+	ref. [Program Library HOWTO]
+	http://www.linux.or.jp/JF/JFdocs/Program-Library-HOWTO/index.html
+
+	ref. [Why LD_LIBRARY_PATH is bad]
+	http://www.visi.com/~barr/ldpath.html
+
+	ここらへんを読んでポリシーを決めれば良いのかな？
+
+	* データ救出: cosmo のデータ救出だが、はじめて光が見えてきた。
+
+	以前、DDS3時代のテープの最新の一本前のテープに救出可能なデータがあ
+	るらしい。2000-04-30 日付のフル・データだった…。
+
+	まあ、何も無いよりはましでしょう。
+
+	* GNU gettext: 最新の GNU gettext は GNU libiconv を使って文字コー
+	ドの自動変換を行うようだが、
+
+	* LD_LIBRARY_PATH: 一般的に LD_LIBRARY_PATH=/usr/local/lib は設定
+	させる方が良いのか？
+	それともきちんと各種ソフトウェアのコンパイル時に
+
+	  make LDFLAGS="-R/usr/local/lib -L/usr/local/lib"
+
+	とすべきか？
+	まあ、一般解は無いのかも…。
+
+	* 歯医者: なかなか前歯の治療にかからない。
+
+	虫歯が多すぎるみたい…。
+
+	しっかし、歯医者に行くのは久々なので、口の開け方とか、舌の置場所と
+	か、よくわからなくなって迷惑をかけている気がする。
+
 2001-06-14  Masao Takaku  <masao@ulis.ac.jp>
 
 	* GTK+: よりあえずインストールしようとするが、nileにはいろいろ前提
@@ -15,8 +67,9 @@
 
 	* 研究: とりあえずカスタマイズ容易なZ39.50クライアントを書いてみよ
 	うということになりました。名前は「zeta」が第一候補だったんだけど、
-	どうも他にあるようなので、変える。（<a
-	href="http://zeta.tlcpi.finsiel.it/zetasuite/">ZETA Suite</a>）
+	どうも他にあるようなので、変える。
+	  ZETA Suite:
+	  http://zeta.tlcpi.finsiel.it/zetasuite/
 
 	第二候補は「maple」だったかな？「geta」だったかな？それともシンプ
 	ルに「gKappa」だったかな？
