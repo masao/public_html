@@ -159,7 +159,7 @@ sub get_contents () {
 	my $tmp = $res->content;
 	$tmp =~ s/\s+/ /go;
 	$tmp =~ s#<!--(.*?)-->##go;
-	$tmp =~ s#<tr>(.+?)</tr>#push(@entries,$1)#geio;
+	$tmp =~ s#<tr[^>]*>(.+?)</tr>#push(@entries,$1)#geio;
     } else {
 	return undef;
     }
