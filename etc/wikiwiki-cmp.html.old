@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-JP">
+<link rel="stylesheet" href="default.css" type="text/css">
+<link rev="made" href="mailto:masao@ulis.ac.jp">
+<title>WikiCloneの比較</title>
+</head>
+<body>
+<!-- hhmts start -->
+<div class="last-update">最終更新日: 2002年12月07日</div>
+<!-- hhmts end -->
+<h1>WikiCloneの比較</h1>
+
+<table summary="WikiCloneの比較表">
+  <thead>
+  <tr>
+    <th>名称</th>
+    <th><a href="#implementation">実装言語</a></th>
+    <th><a href="#japanese">日本語WikiName</a></th>
+    <th><a href="#history">履歴</a></th>
+    <th><a href="#interwikiname">InterWikiName</a></th>
+    <th><a href="#link-in-page">ページ内リンク</a></th>
+    <th><a href="#world-link">外部リンク</a></th>
+    <th><a href="#table">表組み</a></th>
+    <th><a href="#html">HTML</a></th>
+    <th><a href="#upload">アップロード</a></th>
+    <th><a href="#acl">アクセス制御</a></th>
+    <th><a href="#notify">メール通知</a></th>
+    <th><a href="#plugin)>"プラグイン</a></th>
+  </tr>
+  </thead>
+  <tr>
+    <th><a href="#pukiwiki">PukiWiki</a></th>
+    <td>Ruby</td>
+    <td>○</td>
+    <td>○</td>
+    <td>○</td>
+    <td>×</td>
+    <td>○</td>
+    <td>○</td>
+    <td>○</td>
+    <td>○</td>
+  </tr>
+</table>
+
+<p>
+WikiCloneの比較をします。比較の項目は以下の通り。
+</p>
+<ul>
+  <li><a name="implementation">実装</a>:
+      どんな言語・環境で構築されているか。
+  <li><a name="japanize">日本語化</a>:
+      日本語に対応しているか。特にWikiNameとして日本語を使えるか。
+  <li><a name="history">履歴</a>:
+      過去の編集履歴を閲覧できるか。
+  <li><a name="interwikiname">InterWikiName</a>:
+      外部のWikiなどへのWiki参照が可能か。
+  <li><a name="link-in-page">ページ内リンク</a>:
+      ページ内の一部分へのリンクを張れるか。
+  <li><a name="world-link">外部リンクの区別</a>:
+      外部へのリンクを区別して表示するか。
+  <li><a name="table">テーブル</a>:
+      表組みに対応しているか。
+  <li><a name="html">生HTML</a>:
+      HTMLをそのまま記述できるか。
+  <li><a name="upload">アップロード</a>:
+      任意のファイルをアップロードして、ページに添付できるか。
+  <li><a name="changelog">編集ログ</a>:
+      編集した際に、その変更内容についてのコメントを付けられるか。
+  <li><a name="acl">アクセス制御</a>:
+      ユーザのアクセス状況を管理できるか。ロック機能
+  <li><a name="notify">変更通知</a>:
+      ページが編集された場合に、メールなどでの通知がされるか。
+  <li><a name="plugin">プラグイン</a>:
+      特殊な書式・機能をプラグインなどとして、追加できるか。
+</ul>
+<hr>
+<h2><a name="pukiwiki">PukiWiki</a></h2>
+<ul>
+  <li>実装
+  <li>
+</ul>
+
+
+
+<hr>
+<address>
+高久雅生 (Takaku Masao)<br>
+<a href="http://nile.ulis.ac.jp/~masao/">http://nile.ulis.ac.jp/~masao/</a>, 
+<a href="mailto:masao@ulis.ac.jp">masao@ulis.ac.jp</a>
+</address>
+<div class="id">$Id$</div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Id$ -->
+<!--************************************-->
+<!--                  DTD               -->
+<!--************************************-->
+
+<!ELEMENT wikiwiki-cmp (engine+)>
+
+<!ELEMENT engine (description,
+		  implementation,
+		  backend,
+		  japanese,
+		  history,
+		  interwikiname,
+		  link-in-page,
+		  table,
+		  html,
+		  upload,
+		  acl,
+		  notify,
+		  plugin
+		  )>
+
+<!ELEMENT link (#PCDATA)>
+
+<!ELEMENT description (#PCDATA|link)*>
+<!ELEMENT backend (#PCDATA|link)*>
+<!ELEMENT implementation (#PCDATA|link)*>
+<!ELEMENT japanese (#PCDATA|link)*>
+<!ELEMENT history (#PCDATA|link)*>
+<!ELEMENT interwikiname (#PCDATA|link)*>
+<!ELEMENT link-in-page (#PCDATA|link)*>
+<!ELEMENT table (#PCDATA|link)*>
+<!ELEMENT html (#PCDATA|link)*>
+<!ELEMENT upload (#PCDATA|link)*>
+<!ELEMENT acl (#PCDATA|link)*>
+<!ELEMENT notify (#PCDATA|link)*>
+<!ELEMENT plugin (#PCDATA|link)*>
+
+<!ATTLIST engine id ID #REQUIRED
+		 title CDATA #REQUIRED
+		 href CDATA #REQUIRED>
+
+<!ATTLIST link title CDATA #IMPLIED
+	       href CDATA #REQUIRED>
+
+<!ATTLIST implementation label CDATA #REQUIRED>
+<!ATTLIST backend label CDATA #REQUIRED>
+<!ATTLIST japanese label CDATA #REQUIRED>
+<!ATTLIST history label CDATA #REQUIRED>
+<!ATTLIST interwikiname label CDATA #REQUIRED>
+<!ATTLIST link-in-page label CDATA #REQUIRED>
+<!ATTLIST table label CDATA #REQUIRED>
+<!ATTLIST html label CDATA #REQUIRED>
+<!ATTLIST upload label CDATA #REQUIRED>
+<!ATTLIST acl label CDATA #REQUIRED>
+<!ATTLIST notify label CDATA #REQUIRED>
+<!ATTLIST plugin label CDATA #REQUIRED>
