@@ -47,44 +47,44 @@ class ZipcodeCGI
    def do_search
       dbh = DBI.connect("dbi:SQLite:zipcode.db")
       @result = []
-      @search_time = Time.now
-      if @keyword
-	 sql = ""
-	 case @keyword
-	 when /^[0-9\-]+$/
-	    sql << "where zipcode7 like '#{ @keyword.delete("-") }%'"
-	 when /^[ぁ-ん]+$/
-	    escaped_keyword = @keyword.tr('ぁ-ん', 'ァ-ン').gsub('\'', '\'\'')
-	    sql << "where city_yomi like '%#{ escaped_keyword }%' or town_yomi like '%#{ escaped_keyword }%'"
-	 when /^[ァ-ン]+$/
-	    escaped_keyword = @keyword.gsub('\'', '\'\'')
-	    sql << "where city_yomi like '%#{ escaped_keyword }%' or town_yomi like '%#{ escaped_keyword }%'"
-	 else
-	    sql << "where town like '%#{ @keyword.gsub('\'', '\'\'') }%'"
-	 end
-	 sth = dbh.prepare("select zipcode7, pref, city, town from zipcode #{sql}")
-	 sth.execute
-	 sth.each do |row|
-	    zipcode7 = row.shift
-	    @result.push(zipcode7.format_zipcode << " " << row.join(" "))
-	 end
-	 sth.finish
-      elsif @pref and @city
-	 sth = dbh.prepare("select zipcode7, pref, city, town from zipcode where pref = ? and city = ?")
-	 sth.execute(@pref, @city)
-	 sth.each do |row|
-	    zipcode7 = row.shift
-	    @result.push(zipcode7.format_zipcode << " " << row.join(" "))
-	 end
-      elsif @pref
-	 sth = dbh.prepare("select distinct city from zipcode where pref = ?")
-	 sth.execute(@pref)
-	 sth.each do |row|
-	    STDERR.puts row.inspect
-	    @result.push "<a href=\"./zipcode.cgi?pref=#{CGI.escape(@pref)};city=#{CGI.escape(row['city'])}\">#{row.join(" ")}</a>\n"
+      @search_time = DBI::Utils.measure do
+	 if @keyword
+	    sql = ""
+	    case @keyword
+	    when /^[0-9\-]+$/
+	       sql << "where zipcode7 like '#{ @keyword.delete("-") }%'"
+	    when /^[ぁ-ん]+$/
+	       escaped_keyword = @keyword.tr('ぁ-ん', 'ァ-ン').gsub('\'', '\'\'')
+	       sql << "where city_yomi like '%#{ escaped_keyword }%' or town_yomi like '%#{ escaped_keyword }%'"
+	    when /^[ァ-ン]+$/
+	       escaped_keyword = @keyword.gsub('\'', '\'\'')
+	       sql << "where city_yomi like '%#{ escaped_keyword }%' or town_yomi like '%#{ escaped_keyword }%'"
+	    else
+	       sql << "where town like '%#{ @keyword.gsub('\'', '\'\'') }%'"
+	    end
+	    sth = dbh.prepare("select zipcode7, pref, city, town from zipcode #{sql}")
+	    sth.execute
+	    sth.each do |row|
+	       zipcode7 = row.shift
+	       @result.push(zipcode7.format_zipcode << " " << row.join(" "))
+	    end
+	    sth.finish
+	 elsif @pref and @city
+	    sth = dbh.prepare("select zipcode7, pref, city, town from zipcode where pref = ? and city = ?")
+	    sth.execute(@pref, @city)
+	    sth.each do |row|
+	       zipcode7 = row.shift
+	       @result.push(zipcode7.format_zipcode << " " << row.join(" "))
+	    end
+	 elsif @pref
+	    sth = dbh.prepare("select distinct city from zipcode where pref = ?")
+	    sth.execute(@pref)
+	    sth.each do |row|
+	       STDERR.puts row.inspect
+	       @result.push "<a href=\"./zipcode.cgi?pref=#{CGI.escape(@pref)};city=#{CGI.escape(row['city'])}\">#{row.join(" ")}</a>\n"
+	    end
 	 end
       end
-      @search_time = Time.now - @search_time
    end
 
    include ERbLight::Util
