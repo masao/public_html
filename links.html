@@ -616,6 +616,17 @@
 	      <dt><a href="http://www.fsinet.or.jp/~emonoya/">得物屋24時間 BOLTAC'S TRADING POST</a>
 	      <dd>Wizardryシリーズ攻略情報。
 	    </dl>
+
+      </dl>
+
+  <dt><a name="bookmarklet">Bookmarklet</a>
+  <dd>
+      <dl>
+	<dt><a href="javascript:if (location.hash) location.hash = ''; else if (location.search) location.search = ''; else if (location.pathname.charAt(location.pathname.length-1) == %22/%22) location = %22..%22; else if (location.pathname) location = %22.%22; void 0">上</a>
+	<dd>閲覧中のURI内のディレクトリを上位へ辿るブックマーク。
+	<dt><a href="javascript:var d=document;var url=location.href;var title=document.title;var str=d.selection?d.selection.createRange().text:d.getSelection();var linkTag =title+': '+url; if (str != '') { linkTag += '\t'+str.replace(/[\r\n]+/g, '\t');};var x = prompt('',linkTag);">RakuCopy</a>
+	<dd>閲覧中のページのタイトルとURLをコピーするためのブックマーク。
+	    from <a href="http://a-h.parfe.jp/rakucopy/rakucopy.html">RakuCopy</a>
       </dl>
 </dl>
 <hr>
