@@ -6,7 +6,7 @@
     color: #20A040;
     font-size: 80%;
 }
-.orig { font-size:smaller; color:gray; }
+.orig { font-size:80%; color:gray; }
 </style>
   <title>リンクの先読み機能 FAQ</title>
   <meta http-equiv="content-type"
@@ -92,7 +92,7 @@ prefetched?</a><br></span>
 <a href="#Is_link_prefetching_standards_compliant">リンクの先読み機能は標準に準拠していますか？</a><br>
 <span class="orig"><a href="#Is_link_prefetching_standards_compliant">Is link prefetching
 standards compliant?</a><br></span>
-<a href="#How_is_browser_idle_time_determined">ブラウザが使われていない時（アイドルタイム）をどのように判定しますか？</a><br>
+<a href="#How_is_browser_idle_time_determined">ブラウザのアイドル時間はどのように判定されますか？</a><br>
 <span class="orig"><a href="#How_is_browser_idle_time_determined">How is browser idle time
 determined?</a><br></span>
 <a href="#What_happens_if_I_click_on_a_link_while">先読みの取得中に別のリンクをクリックするとどうなりますか？</a><br>
@@ -132,7 +132,7 @@ support link prefetching?</a><br></span>
 <a name="What_is_link_prefetching"></a>
 リンクの先読みとは？</span><br>
 <span class="orig">What is link prefetching?<br></span>
-リンクの先読みとはブラウザの機能の一つで、ブラウザの使われていない時間を使って、ユーザが近い将来に訪問するであろう文書をダウンロードして、<span style="font-style: italic;">予め読み込んでおく</span>ことを指します。
+リンクの先読みとはブラウザの機能の一つで、ブラウザのアイドル時間を使って、ユーザが近い将来に訪問するであろう文書をダウンロードして、<span style="font-style: italic;">予め読み込んでおく</span>ことを指します。
 先読みのヒントをブラウザに渡すウェブページでは、そのページをロードし終わると、ブラウザは黙って指定された文書を先読みし、キャッシュに蓄積しておきます。
 ユーザが先読みされている文書を訪問すると、ブラウザのキャッシュからすぐに提供できます。<br>
 <span class="orig">Link prefetching is a browser mechanism, which utilizes browser idle
@@ -228,7 +228,8 @@ prefetched?<br></span></span>
 いいえ。
 <span style="font-family: monospace;">next</span> か <span style="font-family: monospace;">prefetch</span> のリンク形式を持つ <span style="font-family: monospace;">&lt;link&gt;</span> タグだけが先読みの対象です。
 しかし、要望が多いようなら、<span style="font-family: monospace;">next</span> や <span style="font-family: monospace;">prefetch</span> の関係を含む &lt;a&gt; タグのリンクの先読みを将来的にはサポートするようになるかもしれません。
-その場合には、古くさい先読みリンクの問題をコンテンツ提供者が避けられるようになるかもしれません。<span class="comment">[ 「the problem of stale prefetching links」って何？ ]</span><br>
+そうすれば、コンテンツ提供者が先読みリンクを更新し忘れるという問題を回避しやすくなるでしょう。
+<br>
 <span class="orig">No, only <span style="font-family: monospace;">&lt;link&gt;</span> tags
 w/ a relation type of <span style="font-family: monospace;">next</span>
 or <span style="font-family: monospace;">prefetch</span> are prefetched.
@@ -260,13 +261,13 @@ standardized. &nbsp;An Internet-Draft is in the works.<br>
 </span><br>
 <span style="font-weight: bold;"><a
  name="How_is_browser_idle_time_determined"></a>
-ブラウザが使われていない時（アイドルタイム）をどのように判定しますか？<br>
+ブラウザのアイドル時間はどのように判定されますか？<br>
 <span class="orig">How is browser idle
 time determined?<br></span>
 </span>
-現在の実装（Mozilla 1.2）では、アイドルタイムは <span style="font-family: monospace;">nsIWebProgressListener</span> API を用いて判定されます。
+現在の実装（Mozilla 1.2）では、アイドル時間は <span style="font-family: monospace;">nsIWebProgressListener</span> API を用いて判定されます。
 トップレベルの <span style="font-family: monospace;">nsIWebProgress</span> オブジェクトにリスナーを追加しました（<span style="font-family: monospace;">"@mozilla.org/docloaderservice;1"</span>）。
-このリスナーから、文書の開始と停止の通知を受け取って、前の文書の停止と次の文書の開始の間の時間をアイドルタイムとして概算します。
+このリスナーから、文書の開始と停止の通知を受け取って、前の文書の停止と次の文書の開始の間の時間をアイドル時間として概算します。
 前の文書の停止通知は、大まかに言って、トップレベル文書の onLoad ハンドラが起動した時に行われます。
 この時が先読みリクエストを行う時になります。
 サブフレームが先読みのヒントを含む場合にも、先読みは最上位のフレームとその「子」フレームの読み込みが終了するまで始まりません。<br>
@@ -316,7 +317,7 @@ compete for bandwidth?<br></span></span>
 まず、Mozilla を使って何かをダウンロードしている場合は、全てのダウンロードが終わるまでリンクの先読み機能を遅らせます。
 例えば、ブックマーク・グループを読み込んでいる（複数のタブを開く）場合には、そのブックマークされたページで発生した先読みリクエストは、全てのタブがロードし終わるまで、開始されません。
 また、もしも、別のアプリケーションがネットワークを使っている場合は、Mozilla のリンクの先読みはその他のアプリケーションと回線容量を奪い合います。
-将来的には、ネットワークのアイドルタイムを監視するオペレーティングシステムのサービスを利用して、この問題を解決したいと思っています<br>
+将来的には、ネットワークのアイドル時間を監視するオペレーティングシステムのサービスを利用して、この問題を解決したいと思っています<br>
 <span class="orig">Yes and no. &nbsp;If you are downloading something using Mozilla, link
 prefetching will be delayed until any background downloads complete.
 &nbsp;For example, if you load a bookmark group (which opens several
