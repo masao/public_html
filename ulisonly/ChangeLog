@@ -1,3 +1,84 @@
+2001-10-19  Masao Takaku  <masao@ulis.ac.jp>
+
+	* かねき: 久々にかねきに行った。たらふく食った。
+
+	今回は、市川さん似のアルバイトはいなかった。
+
+	* Komodo: ActiveState.com が出しているMozillaベースのIDEである
+	Komodoをインストールして使ってみた。
+
+	XML/XSLTの編集機能が搭載されているのが面白そうで使ってみようとした
+	が、なぜか日本語が入力できない。ちゅうわけで、実験終わり。
+
+	XMLのタグ名の補完機能は結構使いやすいんだけどね。
+	残念…。
+
+2001-10-18  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 産総研オープンハウス: Emacs21とか、音声入力補完とかみてきました。
+	おもしろかったです。
+
+	* 紅葉: 学内の並木が色付きはじめた…と思っていたら、昨日からの雨で
+	もう散りはじめている。
+	ことしは、例年に比べて	
+
+	* 保育所申請書類: 姪の保育所入所申請のために浦和の保育係あてに学生
+	証のコピーをFAXで送った。
+
+	セブン・イレブンってFAXのサービスやってないんだ…。初めて知った。
+	しょうがないので、学園都市では少なくなりつつあるスパーでFAXを送っ
+	た。
+	
+	でも、FAXが手元にないと不便な事ってたまにあるよね。
+
+2001-10-17  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 桜時計: PCの時刻がずれていて make がうまく動かないときがあったの
+	で、「桜時計」というNTPソフトをいれて、PCの起動時にNTPの問い合わせ
+	に行くように変更した。
+
+	* 名刺: ちなっちゃんが名刺ラベル用シートを買ってきてくれたので、そ
+	れを使って名刺作りをした。
+	意外と簡単に作れた。
+
+2001-10-16  Masao Takaku  <masao@ulis.ac.jp>
+
+	* Conceptual Graph: CG(Conceptual Graph)なるものを見つけた。
+	RDF, Semantic Web とも絡んでいるそこそこ古い分野のようだ。
+	（何からこれにたどり着いたかは不明!?）
+
+	* Web site/page management system: 新たに、XML/XSLTベースのものを
+	発見。（Brave-GNU-Worldでも紹介）
+
+	・XWeb
+	すべてXML/XSLTベースでサイトの構成、管理を行える!?
+	cf. http://xweb.sourceforge.net/
+
+	このサイトの「Related Project」からも参考になるリンクが結構ある。
+	http://xweb.sourceforge.net/links/related.html
+	
+	* ドクターゼミ: 急遽、発表の順番が回ってきた。
+
+	とりあえず、今までやってきた文献リストなどを見直してみることにする。
+
+2001-10-15  Masao Takaku  <masao@ulis.ac.jp>
+
+	* PostScriptリファレンスマニュアル: 図書館に入っていたので、借りて
+	みたら、英語・日本語全文のPDFファイルがCD-ROMで付いてきた。
+
+	買う必要がなくなったので大助かり。
+	（私的利用のためだから、コピーOKだよね）
+
+2001-10-12  Masao Takaku  <masao@ulis.ac.jp>
+
+	* アルバイト (UCMETA): 書類をもらった。
+
+	週明けにうかがって、話を聞いて打ち合わせをしたい。
+
+	* 可視化システム: ひととおり文章を書き終えた。
+
+	あんまり詳細（XMLとかの）は書けなかったので、あとは論文に書くか…。
+
 2001-10-11  Masao Takaku  <masao@ulis.ac.jp>
 
 	* 画面キャプチャ: Windows98 IE5.5 上で イメージマップ付きの Web ペー
@@ -9,6 +90,7 @@
 	「WinShotがお奨め」
 
 	という意見をいただいたので、さっそく使ってみる。→ 見事に成功。
+	cf. http://www.ah.wakwak.com/~winfaq/bbs98/275.html
 	cf. WinShot: http://www.masa.ac/winshot.html
 
 	* シソーラスの可視化: システム構築は一段落。
