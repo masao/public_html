@@ -75,7 +75,10 @@ EOF
 	$cont =~ s#<td>(.+?)</td>#push(@tmp,$1)#gei;
 	push(@problems, \@tmp);
     }
-    @problems = sort { fncmp($a->[$sort], $b->[$sort]) } @problems;
+
+    my $sortby = 0;
+    $sortby = $1 if $sort =~ /(\d+)/;
+    @problems = sort { fncmp($a->[$sortby], $b->[$sortby]) } @problems;
     @problems = reverse @problems if defined $REVERSE;
 
     print <<EOF;
