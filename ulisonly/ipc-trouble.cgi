@@ -9,7 +9,7 @@ use LWP::UserAgent;
 use HTTP::Request;
 
 # 本家のURL
-my $ORIG_URL = 'http://www.ulis.ac.jp/ipc/main2002/troublelist.shtml';
+my $ORIG_URL = 'http://www.slis.tsukuba.ac.jp/ipc/main2002/troublelist.shtml';
 
 # タイトル
 my $TITLE = '「問題と対策」改';
