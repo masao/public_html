@@ -1,3 +1,36 @@
+2001-07-11  Masao Takaku  <masao@ulis.ac.jp>
+
+	* Etaの移植性: clover で確認しようとして気づいたこと。
+
+	・実は、 yaz-config が近代的なスクリプトになったのは、yaz-1.6 リリー
+	ス以降だった。	
+	とりあえず、CVS版をrequirementとする。
+
+	・なぜか、
+
+	dblist.o: In function `parse_dblistfile':
+/home/masao/FreeSoftware/eta/src/dblist.c:59: undefined reference to `xmlDocGetRootElement'
+
+	↑なメッセージが出る。libxmlも互換性がないのかな？
+
+	[解決]
+	そうではなくって、単に /usr/lib にも libxml.so があったので混乱し
+	ていただけ。
+
+	・gettext が働かない…。
+
+2001-07-10  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 院生室ドア: よく考えたら、便利さとセキュリティはトレードオフの関
+	係にあるので、便利さを求めて要望書をだすというのは、ものすごく変な
+	気がしてきた…。
+
+	さらに言うと、要望書に沿ってセキュリティポリシーを変更するというの
+	も変な話。
+
+	まあ、もともと学内で院生室のセキュリティポリシーだけを高めるという
+	のもおかしな話だから、気にしてもしょうがないのだけれども。
+
 2001-07-09  Masao Takaku  <masao@ulis.ac.jp>
 
 	* 院生室ドア: セキュリティの強化に対して、話をしてみる。
@@ -26,7 +59,7 @@
 	こんな感じのアンケートでも取るかな…。
 
 	もしくは、要望趣意書＆賛同者名簿の形式を取るか…。
-	
+
 	* 「ユニバーサルHTML/XHTML」: ずっと前に買ってあったのだが、やっと
 	読んでみた。
 
