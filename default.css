@@ -22,15 +22,19 @@
     font-style: italic;
     font-size: smaller;
   }
+  div.last-update {
+    text-align: right;
+    font-size: smaller;
+  }
+  div.date {
+    font-size: smaller;
+  }
   div.news {
     padding: 5px;
     border: medium solid #bbb;
     font-size: smaller;
     float: right;
     width: 45%;
-  }
-  div.last-update {
-    text-align: right;
   }
   div.validator img {
     border: 0px;
