@@ -19,7 +19,7 @@ OPTIONS
         印刷すべきファイルを指定します。
         （デフォルトでは標準入力から読み込みます）
 
-    -H, --header=LIST
+    -H, ---header=LIST
         出力すべきメール・ヘッダを指定します。 （デフォルトでは
         "date,from,to,cc,newsgroups,subject" です）
 
