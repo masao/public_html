@@ -34,6 +34,10 @@ JT_STYLE = <<EOF
     color: #20A040;
     font-size: 80%;
 }
+.draft-comment {
+    color: #20A040;
+    font-size: 80%;
+}
 .orig { color:gray; }
 </style>
 EOF
@@ -67,7 +71,7 @@ if contents then
 	contents.sub!(/<head([^>]*>)/im) {|head| head + JT_STYLE }
 
 	# リンク修正
-	contents.gsub!(/<a([^>]*)href=(")?http:\/\/(www.)?mozilla.org([!~*'();\/?:\@&=+\$,%#\w.-]+)\2/i) {|ahref|
+	contents.gsub!(/<a([^>]*)href=(["']?)http:\/\/(www.)?mozilla.org([!~*'();\/?:\@&=+\$,%#\w.-]+)\2/i) {|ahref|
 		attr = $1
 		path = $4
 		if path =~ /^\/webtools\/bonsai\/\w+\.cgi/
@@ -78,7 +82,7 @@ if contents then
 			"<a#{attr}href=\"#{path}\""
 		end
 	}
-	contents.gsub!(/<a([^>]*)href=(")?http:\/\/lxr.mozilla.org([!~*'();\/?:\@&=+\$,%#\w.-]+)\2/i) {|ahref|
+	contents.gsub!(/<a([^>]*)href=(["']?)http:\/\/lxr.mozilla.org([!~*'();\/?:\@&=+\$,%#\w.-]*)\2/im) {|ahref|
 		"<a#{$1}href=\"/lxr#{$3}\""
 	}
 
