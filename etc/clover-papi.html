@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-JP">
+<link rel="stylesheet" href="../default.css" type="text/css">
+<link rev="made" href="mailto:masao@ulis.ac.jp">
+<title>Clover上でPAPI(Performance API)を動作させる</title>
+</head>
+<body>
+<!-- hhmts start -->
+<div class="last-update">最終更新日: <strong>Tue Nov 13 01:34:31 2001</strong></div>
+<!-- hhmts end -->
+<hr>
+<h1>Clover上でPAPI(Performance API)を動作させる</h1>
+<p>
+RedHat Linux(<a href="http://www.ulis.ac.jp/~hasegawa/DELL/">clover</a>)上に
+<a href="http://icl.cs.utk.edu/projects/papi/">PAPI</a>ソフトウェアを導入する際のメモです。
+</p>
+<h2>前準備</h2>
+<p>
+作業の前にシステムのバックアップを作成しておきます。
+バックアップは以下の要領で作成します。
+</p>
+<p>
+まず、cloverの置いてある机の引き出しにDDS4のテープが入っています。
+今回はこの中から新しいものを使いました。
+DDS4ドライブにテープを挿入し、定期バックアップ用のスクリプトを走らせます。
+(バックアップ終了までの時間は42分程度)
+</p>
+<pre>
+# /root/dump_cron.sh 
+</pre>
+
+<h2>インストール</h2>
+<p>
+インストールに必要なファイルは以下の通りです。
+予めダウンロードしておき、${work}に置いておきます。
+</p>
+<dl>
+  <dt>PAPI
+  <dd><a href="http://icl.cs.utk.edu/projects/papi/downloads/papi-1.1.5.tar.gz">papi-1.1.5.tar.gz</a>
+  <dt>PerfCtr
+  <dd><a href="http://icl.cs.utk.edu/projects/papi/downloads/perfctr-papi-1.1.4.tar.gz">perfctr-papi-1.1.4.tar.gz</a>
+</dl>
+<p>
+まず、PerfCtrのパッチをLinux kernelに当てます。
+</p>
+<pre>
+# cd $work
+# tar zxvf perfctr-papi-1.1.4.tar.gz
+
+(まずドライバファイルを移動する)
+# cd perfctr/linux
+# tar cf - . | tar -C /usr/src/linux-2.2.12 xvf -
+
+(デバイスファイルを作成する)
+# mknod /dev/perfctr c 10 182
+# chmod 644 /dev/perfctr
+
+(カーネルにパッチを当てる)
+# cd /usr/src/linux-2.2.12
+# patch -p1 &lt; ${work}/perfctr/patches/patch-kernel-2.2.13
+
+(カーネルを設定する)
+# make xconfig
+	「General setup」を選択する。
+	  「Performance-monitering counters」の項目を「y」に変更する。
+	  「Virtual performance counters support」の項目を「y」に変更する。
+	  「Global performance counters support」の項目を「y」に変更する。
+	  （<a href="xconfig.png">設定画面</a>）
+	「Save and Exit」する。
+
+(カーネルを再構築する)
+# make dep
+# make clean
+# make bzImage
+
+(新しいカーネルをインストールして再起動)
+# cp arch/i386/boot/bzImage /boot/vmlinuz-2.2.12-new
+# vi /etc/lilo.conf
+	以下のエントリを追加する。
+
+image=/boot/vmlinuz-2.2.12-32smp-shm.new
+	label=linux-new-test
+	read-only
+	root=/dev/sda5
+
+# lilo
+# lilo -q
+# reboot
+
+起動時の `LILO: 'プロンプトの際にTABを押し、新しいカーネル `linux-new-test' を選択する。
+
+(ちゃんと起動できるのを確認したら、デフォルトの起動カーネルにする)
+# cp /boot/vmlinuz-2.2.12-32smp-shm.new /boot/vmlinuz-2.2.12-32smp-shm
+# lilo
+# lilo -q
+</pre>
+<p>
+引き続きPAPI本体のインストールに移ります。
+</p>
+<pre>
+% cd $work
+% tar zxvf papi-1.1.5.tar.gz
+% cd papi/src/perfctr
+% ./configure --incldir=/usr/src/linux/include
+% cd ..
+% make -f Makefile.linux-perfctr
+% ./run_test.sh
+% su
+Password: ***********
+# make -f Makefile.linux-perfctr DESTDIR=/usr/local/papi install
+</pre>
+<h2>参照文献</h2>
+<ul>
+  <li><a href="http://icl.cs.utk.edu/projects/papi/">PAPI</a>:
+      本家サイト。
+      必要なファイルや文書などあります。
+  <li><a href="http://www.linuxdoc.org/HOWTO/Kernel-HOWTO.html">The Linux Kernel HOWTO</a>:
+      Linuxカーネルの構築方法についての文書。
+      (ちょっと古いけど、<a href="http://www.linux.or.jp/JF/JFdocs/Kernel-HOWTO.html">日本語訳</a>もあり)
+</ul>
+<hr>
+<address>
+高久雅生 (Takaku Masao)<br>
+<a href="http://nile.ulis.ac.jp/~masao/">http://nile.ulis.ac.jp/~masao/</a>, 
+<a href="mailto:masao@ulis.ac.jp">masao@ulis.ac.jp</a>
+</address>
+<div class="id">$Id$</div>
+</body>
+</html>
