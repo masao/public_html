@@ -31,7 +31,7 @@ imgs2html - generate HTML files from images files
 <HR>
 <H1><A NAME="SYNOPSIS">SYNOPSIS</A></H1>
 <P>
-imgs2html [<STRONG>--suffix</STRONG>=SUFFIX] [<STRONG>--thumbnail-ratio</STRONG>=SIZE] [<STRONG>--homepage-url</STRONG>=URL] [<STRONG>--icon-dir</STRONG>=DIR] [<STRONG>--style</STRONG>=URL] [<STRONG>--icon-<EM>role</EM>-file</STRONG>=FILE] [<STRONG>--nav-<EM>role</EM>-str</STRONG>=STR] [<STRONG>--logo</STRONG>] [<STRONG>--notitle</STRONG>] [<STRONG>--version</STRONG>] [<STRONG>--help</STRONG>]
+imgs2html [<STRONG>--interactive</STRONG>] [<STRONG>--suffix</STRONG>=SUFFIX] [<STRONG>--thumbnail-ratio</STRONG>=SIZE] [<STRONG>--reverse</STRONG>] [<STRONG>--homepage-url</STRONG>=URL] [<STRONG>--icon-dir</STRONG>=DIR] [<STRONG>--style</STRONG>=URL] [<STRONG>--icon-<EM>role</EM>-file</STRONG>=FILE] [<STRONG>--nav-<EM>role</EM>-str</STRONG>=STR] [<STRONG>--logo</STRONG>] [<STRONG>--notitle</STRONG>] [<STRONG>--unit-str</STRONG>=STR] [<STRONG>--version</STRONG>] [<STRONG>--help</STRONG>]
 
 <P>
 <HR>
@@ -53,6 +53,11 @@ imgs2htmlは複数の画像ファイルを元にHTMLファイルを作成します。
 以下のオプションを指定できます。
 
 <DL>
+<DT><STRONG><A NAME="item__i_">-i, --interactive</A></STRONG><DD>
+<P>
+対話的に設定事項の指定を行ってから実行できます。
+（デフォルトは対話実行しません）
+
 <DT><STRONG><A NAME="item__s_">-s, --suffix=SUFFIX</A></STRONG><DD>
 <P>
 対象とする画像の拡張子を指定します。 （デフォルトは gif です）
@@ -60,6 +65,10 @@ imgs2htmlは複数の画像ファイルを元にHTMLファイルを作成します。
 <DT><STRONG><A NAME="item__r_">-r, --thumbnail-ratio=SIZE</A></STRONG><DD>
 <P>
 サムネール画像の元画像からの比率を指定します。 （デフォルトは 15% です）
+
+<DT><STRONG><A NAME="item__reverse">--reverse</A></STRONG><DD>
+<P>
+画像をファイル名の逆順に並べます。
 
 <DT><STRONG><A NAME="item__u_">-u, --homepage-url=URL</A></STRONG><DD>
 <P>
@@ -82,9 +91,9 @@ HTMLファイルで利用するスタイルシートのURLを指定します。
 <P>
 タイトル（○枚目）を表示しません。 （デフォルトでは表示します）
 
-<DT><STRONG><A NAME="item__reverse">--reverse</A></STRONG><DD>
+<DT><STRONG><A NAME="item__unit_str_STR">--unit-str=STR</A></STRONG><DD>
 <P>
-画像をファイル名の逆順に並べます。
+「〜枚目」の出力を変更します。 （デフォルトでは``枚''）
 
 <DT><STRONG><A NAME="item__">(ナビゲーションバーの設定)</A></STRONG><DD>
 <P>
@@ -94,10 +103,10 @@ HTMLファイルで利用するスタイルシートのURLを指定します。
 <P>
 <EM>role</EM>の部分にはそれぞれ、
 <STRONG>first</STRONG>,
-<STRONG>prev</STRONG>, 
+<STRONG>prev</STRONG>,
 <STRONG>next</STRONG>,
 <STRONG>last</STRONG>,
-<STRONG>logo</STRONG>, 
+<STRONG>logo</STRONG>,
 <STRONG>index</STRONG>,
 <STRONG>home</STRONG>
 のいずれかが入ります。
