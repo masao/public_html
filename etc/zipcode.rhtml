@@ -7,27 +7,30 @@
 <link rev="made" href="mailto:masao@ulis.ac.jp">
 <title>郵便番号検索<%=
 if @keyword then
-   h(@keyword)
+   ": " + h(@keyword)
 elsif @city then
-   h(@pref + " " + @city)
+   ": " + h(@pref + " " + @city)
 elsif @pref then
-   h(@pref)
+   ": " + h(@pref)
 else
    ""
 end
 %></title>
 <style type="text/css">
-div.form { text-align: center; }
+*.form {
+  text-align: center;
+  text-indent: 0; /* For buggy mozilla */
+}
 </style>
 </head>
 <body>
 <h1>郵便番号検索</h1>
 <form action="./zipcode.cgi" method="GET">
-<div class="form">
+<p class="form">
 キーワード:
 <input type="text" name="keyword" value="<%=h @keyword %>" size="40">
 <input type="submit" value="検索">
-</div>
+</p>
 </form>
 <% if @result then %>
 <p><strong>
@@ -42,7 +45,7 @@ end
 %></strong>:
 <%= @result.size %> 件ヒットしました</p>
 <ul>
-<% @result.sort.each do |e| %>
+<% @result.each do |e| %>
   <li><%= e %>
 <% end %>
 </ul>
@@ -56,7 +59,7 @@ end
   <dt>地域選択</dt>
   <dd>以下の選択欄から都道府県を選択して、表示します。
       <form action="./zipcode.cgi" method="GET">
-      <div>
+      <div class="form">
       <select name="pref">
 	<option<%= " selected" if @pref == "北海道"%>>北海道
 	<option<%= " selected" if @pref == "青森県"%>>青森県
@@ -139,6 +142,6 @@ end
 高久雅生 (Takaku Masao)<br>
 <a href="http://nile.ulis.ac.jp/~masao/">http://nile.ulis.ac.jp/~masao/</a>,
 <a href="mailto:masao@ulis.ac.jp">masao@ulis.ac.jp</a>
-<div class="id"><%=h VERSION %></div>
+<div class="id"><%=h ZIPCODECGI_VERSION %></div>
 </address>
 </body></html>
