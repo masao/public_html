@@ -1,3 +1,77 @@
+2001-09-28  Masao Takaku  <masao@ulis.ac.jp>
+
+	* BBQ: 高校の時の連中がバーベキューをやるというので、矢部ちゃんに
+	ついていくことにした。
+
+2001-09-27  Masao Takaku  <masao@ulis.ac.jp>
+
+	* アルバイト (UCMETA): 永森さん曰く
+
+	付属図書館の福井さんに会いに行って、アルバイト関係の書類をもらう。
+	さらに、システムのインタフェースなどもそちらの窓口と検討すべし。
+
+	* UCMETA: 検討すべき事柄。
+
+	☆ 表示すべき項目
+	
+	読み情報は表示に含めるべきか？
+	→ 含めたくない場合は NMZ.field.title-desc etc. を作る方法を検討す
+	る。（ファイルサイズの確認など必要）
+	
+
+	☆ 検索式の指定方法
+	
+	GUIタイプの検索フィールドの検討は？
+	→（標準では対応していない）
+
+2001-09-26  Masao Takaku  <masao@ulis.ac.jp>
+
+	* Emacs/XML: Emacs上で動作するXML関連パッケージ。
+	[PSGML] http://www.sourceforge.net/projects/psgml
+	[xslide] http://www.menteith.com/xslide/
+	[tdtd] http://www.menteith.com/tdtd/
+	[xslt-process] http://xslt-process.sourceforge.net/
+	[XAE] http://xae.sunsite.dk/
+
+	* LA研究会: ZIP形式でダウンロードファイルを作成。(Lhaplus)
+
+	* LD_LIBRARY_PATH: cf. [2001-06-15]
+	せっかく調べていたのにお知らせをしていなかったので、聞かれてしまっ
+	た。
+	~/.cshrc で設定するように頼んだ。
+
+2001-09-25  Masao Takaku  <masao@ulis.ac.jp>
+
+	* LA研究会: 「これまでの研究会」の英語版ページも同じ XML+XSLT の構
+	造で作った。
+
+	CD-RのデータのダウンロードCGIを作成。
+
+2001-09-22  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 報復: どんどん戦争が近づいているようだ。
+
+	社会秩序に対するテロへの「報復としての戦争」は、テロそのものの肯定
+	につながると思う。
+
+	何かやりたくて、 Web 上で探してみた。
+	まずは、簡単にできる署名：
+	「Call for Peace & Justice」:
+	http://www.thepetitionsite.com/takeaction/224622495
+	…坂本龍一のサイトからもリンクが張られていた。
+
+	「No More Violence」: http://www.flora.org/coat/appeal/
+	…アピールの日本語訳がある。
+	
+	* Imagine: ジョン・レノンの「Imagine」を一部のラジオ曲でかけないよ
+	うにしているらしい。
+
+	こういう時だからこそ彼の曲をかけて欲しいよね。
+
+2001-09-20  Masao Takaku  <masao@ulis.ac.jp>
+
+	* LA研究会: XML+XSLTで「これまでの研究会」を書き直した。
+
 2001-09-16  Masao Takaku  <masao@ulis.ac.jp>
 
 	* テロ: なんという出来事が起きたのだろう。
