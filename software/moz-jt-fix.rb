@@ -34,7 +34,7 @@ JT_STYLE = <<EOF
     color: #20A040;
     font-size: 80%;
 }
-.orig { font-size:smaller; color:gray; }
+.orig { color:gray; }
 </style>
 EOF
 
