@@ -30,9 +30,9 @@ Scripts Behind Firewalls</span></h1>
 </h1>
 <h2>はじめに</h2>
 <h2 class="orig">Introduction</h2>
-このページでは、サンドボック内のスクリプトからの要求に対して全ての内部リソースを保護するのに使用される代替的な機構について説明します。
+このページでは、サンドボックス内のスクリプトからの要求に対して全ての内部リソースを保護するのに使用される代替的な機構について説明します。
 これは特に、信頼できないスクリプトによる SOAP 呼び出し用に実装されたものです。
-予め知らされていない URL のリソースへのアクセス要求があった場合、
+予め知らされていない URI のリソースへのアクセス要求があった場合、
 サンドボックスは、そのスクリプトがアクセス許可を持っているかどうかを判定するために、そのドメインに置いてある宣言ファイルを読みにいきます。
 もしそのファイルが無い場合、アクセスは拒否されます。
 <div class="orig">
@@ -98,7 +98,7 @@ published from any  domain besides its own.<br>
 </span>
 <h3>ホワイトリスト</h3>
 <h3 class="orig">White-listing</h3>
-信頼できる URL のホワイトリストを作成し、そこから来たスクリプトを信頼して内部リソースを危険にさらさないようにするという方法もあります。
+信頼できる URI のホワイトリストを作成し、そこから来たスクリプトを信頼して内部リソースを危険にさらさないようにするという方法もあります。
 これにより、厳しい同一ソース制限のサンドボックス内からドメインを解放することができるようになります。
 ホワイトリストは、常に信頼できるドメインを含むのには良いツールになります。
 しかし、Web 上では、内部ドメインを危険にさらさずに、他の信頼できないドメインへのアクセスを許可する必要があるのは、たいていの場合はあまり信頼できないドメインからのスクリプトです。<br>
@@ -182,7 +182,9 @@ the Mozilla implementation of SOAP today.<br>
 <br>
 残念ながら、この機能により SOAP メッセージが非 SOAP アドレスに送られなくなるという訳ではありません。
 このこと自体も十分に大きな問題になります。
-つまり、この検証機能では、ファイアウォールにより保護されるべきサービスが、信頼できないリクエストを常に適切に拒否するという保証がされないことになります。<br>
+つまり、この検証機能では、
+信頼できないリクエストがファイアウォールにより保護されるべきサービスによって常に適切に拒否される、という保証がされないことになります。
+<br>
 <span class="orig">
 Unfortunately, this does not prevent SOAP messages from being sent to
 non-SOAP addresses, which is a big enough problem that the verification
@@ -206,7 +208,7 @@ in the root directory of the server that the sandboxed script requests
 to  communicate with. &nbsp;It should be fairly easy for most
 providers of public  resources to create.<br>
 </span>
-<h2>Web スクリプト・アクセスの表現</h2>
+<h2>Web スクリプト・アクセスの記述</h2>
 <h2 class="orig">Web Scripts Access Statements</h2>
 アクセスファイルの文法は以下の通りです。
 <span class="orig"><br>
@@ -379,9 +381,9 @@ security manager denies access.<span style="font-style: italic;"><span
 <h3>利点</h3>
 <h3 class="orig">Advantages</h3>
 ここで提案した宣言ファイルの手法は、信頼できないスクリプトによるサーバへのアクセス制御をクライアント側ではなくサーバ側で行うものです。
-このアクセスによる穴は当該サービスの穴よりも小さなものです。
+この手法によるアクセスの穴は、サービスにすでにある穴より大きくはなりません。 
 アクセスはデフォルトでは無効になっており、ユーザが必要としない限りアクセスをオープンにする必要はなく、間違ってユーザ側のファイルウォールに穴を開けてしまうことも無いでしょう。
-アクセスを許可するために、アクセス宣言ファイルを Web サーバのルートディレクトリに置くというのも、ずっと容易なことだと思われます。
+アクセスを許可するためのアクセス宣言ファイルを Web サーバのルートディレクトリに置くというのは、非常に容易なことでしょう。
 <br>
 <span class="orig">
 The proposed declaration file places the server operator, not the
