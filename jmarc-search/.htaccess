@@ -1,0 +1,4 @@
+Order deny,allow
+deny from all
+allow from .ulis.ac.jp
+allow from 133.51.

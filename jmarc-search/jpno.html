@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-JP">
+<link rev="made" href="mailto:masao@ulis.ac.jp">
+<title>全国書誌番号にもとづく表示</title>
+</head>
+<body>
+<h1>全国書誌番号にもとづく表示</h1>
+<p>
+国立国会図書館が『全国書誌』でつけているJP番号をもとに、
+Japan/MARCレコードを表示できます。
+</p>
+
+<form action="jpno.cgi" method="GET">
+JP番号： <input type="TEXT" name="jpno" size="8" value=""><br>
+表示形式：
+<select name="format">
+  <option value="HTML" selected>整形
+  <option value="MARC">MARC(タグ付)
+</select>
+<select name="display">
+  <option value="full" selected>詳細
+  <option value="brief">簡易
+</select>
+<input type="SUBMIT" value="表示!">
+</form>
+
+<p>
+実際の表示例： <a href="jpno.cgi?jpno=98000179&format=HTML">整形表示</a>、<a href="jpno.cgi?jpno=98000179&format=MARC">MARC（タグ付）レコード</a>
+</p>
+
+<hr>
+<address>
+高久雅生 (Takaku Masao)<br>
+<a href="http://nile.ulis.ac.jp/~masao/">http://nile.ulis.ac.jp/~masao/</a>, 
+<a href="mailto:masao@ulis.ac.jp">masao@ulis.ac.jp</a>
+</address>
+<div class="id">$Id$</div>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+        "http://www.w3.org/TR/REC-html401/strict.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-2022-JP">
+<link rev="made" href="mailto:masao@ulis.ac.jp">
+<title>JAPAN/MARC サーチエンジン</title>
+</head>
+<body>
+<h1>JAPAN/MARC検索システム</h1>
+<p>
+Z39.50-JAPAN/MARC検索システムに使ったサーチエンジンを実験的にWWW上で公開しています。<br>
+<strong>学内からのみ検索できます</strong>
+</p>
+<p>
+現在、<!-- FILE --> 1,019,696 <!-- FILE --> のレコード（1983年から1998年配布分のJAPAN/MARC）がインデックス化され、
+<!-- KEY --> 4,414,062 <!-- KEY --> 個のキーワードが登録されています。
+</p>
+<p>
+<strong>インデックスの最終更新日: <!-- DATE --> 1999-04-03 <!-- DATE --></strong>
+</p>
+<hr>
+<form method="GET" action="namazu.cgi">
+<p>
+<strong>検索式:</strong> 
+<input type="TEXT" name="key" size="40">
+<input type="SUBMIT" name="submit" value="Search!">
+<input type="HIDDEN" name="whence" value="0">
+</p>
+<p>
+<strong>表示件数:</strong>
+<select name="max">
+<option value="10">10
+<option selected value="20">20
+<option value="30">30
+<option value="50">50
+<option value="100">100
+</select>
+<strong>要約表示:</strong>
+<select name="format">
+<option selected value="long">ON
+<option value="short">OFF
+</select>
+</p>
+</form>
+
+<h2>検索の方法</h2>
+
+<p>
+大文字、小文字の区別はありません。<var>foo*</var> のように末尾にアスタリスクを指定することで前方一致検索が可能です。また、単語をスペース区切りで並べて書くとアンド検索になります。日本語は KAKASI/ChaSen によって分解され、「日本語情報処理」なら 「日本語」 「情報処理」 のように 2 つの単語に分かれてアンド検索されます。日本語の単語の分解は完全ではありません。品質は辞書によって決定されます。
+</p>
+
+<p>
+全角 (2 bytes) アルファベット・記号はすべて 1 byte として処理されます。記号を含む検索も可能で <code>TCP/IP</code> というような単語の検索も可能です。ただし、記号の処理は完全ではないので <code>TCP IP</code> のように分けてアンド検索をかけた方が取りこぼしがありません (その代わり余計なファイルまでヒットしてしまう可能性もありますが)。
+</p>
+
+<p>
+括弧を含めたアンド検索とオア検索およびノット検索が可能になっており検索式に <code>&amp;  |  ! ( )</code> を用います。記号の代わりに <code>and/or/not</code> で指定することも可能です。
+検索式はひとつづつスペース区切りで入力しなければなりません。
+たとえば
+</p>
+
+<ul>
+<li><code>( sed | awk ) ! perl &amp; regexp</code>
+<li><code>( sed or awk ) not perl and regexp</code>
+</ul>
+
+<p>
+のように指定します。
+</p>
+
+
+<p>
+これは「 sed または awk が含まれ、perl は含まれない、そして regexp が含まれる」文書を検索するという意味になります。
+括弧のネストもできるので、さらに複雑な検索式で検索することも可能です。
+</p>
+
+<p>フレーズをダブルクォーテーションまたは中括弧 '{' '}' で囲むこと
+でフレーズ検索ができます。ただし、精度は 100%ではありません。とき
+どきはずれます。たとえば</p>
+
+<ul>
+<li><code>"SIMPLE MAIL TRANSFER PROTOCOL"</code>
+<li><code>{SIMPLE MAIL TRANSFER PROTOCOL}</code>
+</ul>
+
+<p>
+のように指定します。
+</p>
+
+<p>正規表現および中間一致/後方一致の検索も可能です。ただしちょっと
+遅いです。これは日本語も使えます。</p>
+
+<ul>
+<li><code>*大学</code> (後方一致)
+<li><code>*ネット*</code>  (中間一致)
+<li><code>/インター?フェ[ーイ]ス/</code>  (正規表現)
+<li><code>"静岡県浜松市"</code>  (フレーズ)
+</ul>
+
+<p>
+のように指定します。
+</p>
+
+<p>フィールド指定の検索を行うことができます (ただし、遅いです)。
+   使えるフィールドは、書名、著儒貍、件名、出版社、注記です。</p>
+
+<ul>
+<li><code>+title:"坊っちゃん"</code>  (書名)
+<li><code>+author:大江健三郎</code>  (著儒貍)
+<li><code>+subject:"プログラミング"</code>  (件名を文字列で検索)
+<li><code>+subject:{プログラミング}</code>  (上と同じ)
+<li><code>+subject:/(バ|ヴァ)イオリン/</code>  (件名を正規表現で検索)
+<li><code>+isbn:4-87966-795-1</code>  (ISBN)
+<li><code>+publisher:東京</code>  (出版社)
+<li><code>+note:図表</code>  (注記)
+</ul>
+
+<p>
+のように指定します。
+</p>
+<hr>
+<p>
+この全文検索システムはJAPAN/MARC用に改造した<strong><a href="http://openlab.ring.gr.jp/namazu/">Namazu</a> <!-- VERSION --> 1.4.0.0-beta-5(jmarc-2.0) <!-- VERSION --></strong>によって構築されています。
+</p>
+
+<dl><dt>参考文献<dd>宇陀則彦, 江草由佳, 高久雅生, 石塚英弘. Z39.50による日本語書誌データ検索システム. 情報知識学会誌. Vol. 9, No. 2, p. 1 - 15. </dl>
+<hr>
+<address>
+高久雅生 (Takaku Masao)<br>
+<a href="http://nile.ulis.ac.jp/~masao/">http://nile.ulis.ac.jp/~masao/</a><br>
+<a href="mailto:masao@ulis.ac.jp">masao@ulis.ac.jp</a><br><br>
+Special thanks to: <a href="mailto:yuka@ulis.ac.jp">yuka@ulis.ac.jp</a>
+</address>
+</body>
+</html>
