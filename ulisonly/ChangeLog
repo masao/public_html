@@ -1,3 +1,208 @@
+2002-03-28  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 新システム: sshd warning?
+
+	ssh1 でログインすると、以下の警告メッセージが出る。
+
+	  Warning: Remote host denied X11 forwarding, perhaps xauth program could not be run on the server side.
+	  Last login: Thu Mar 28 09:40:50 2002 from nile.ulis.ac.jp
+	  /opt/ULIS/local/openssh/etc/sshrc: Syntax error at line 1 : `(' is not expected.
+
+	なんとかするようメールを出した。
+	ついでに、 ipc-trouble.cgi についても教えておいた。
+
+	* 研究ツール研究所: http://homepage1.nifty.com/rtool/
+
+	 趣旨自体は興味深いが、あまり更新されていない…。
+
+	* 睡眠: 昨日はほぼ丸1日寝ていた。疲れてたのかな？
+
+	* 視覚障害者のUNIX環境: とりあえずメモ。
+	http://www.watakatsu.com/index.html
+
+2002-03-26  Masao Takaku  <masao@ulis.ac.jp>
+
+	* Mantis: http://mantisbt.sourceforge.net/
+
+	日系アメリカ人が開発した PHP + MySQL ベースの bug tracking sysytem。
+
+2002-03-25  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 下取り:
+
+	昨日、院生室1-Dにあった冷蔵庫が古くて、ちなっちゃんが使っていた冷
+	蔵庫をくれるそうなので、石丸電気に持っていった。
+
+	家に来ていた葉書に、「下取りは不用品でも 100 円から承ります。」と
+	あったから。。。
+	持っていくと、「下取り」というのは新しい冷蔵庫を購入する場合のみだ
+	とのこと。
+
+	一応、買い取りしてもらえないか見てもらったところ、85 年製の冷蔵庫
+	だということが判明。
+	85年ということは、1期生あたりが寄贈していったものだよね…。
+	
+	* thebibliography 環境 → BibTeX:
+
+	文献リストのソートをしたいので、*とりあえず* BibTeX に変換した。
+
+	  % perl -pe 's#\s*\\bibitem{([^}]+)}#}}\n\@misc{$1, note= {#g' bib.tex > main.bib
+
+	* \baselinestretch:
+
+	LaTeX で文章中で改行幅を変えたい時は、指定した後にフォントサイズの
+	変更をしておかないと変更が有効にならない。
+	
+	\renewcommand{\baselinestretch}{0.9}\large\normalsize
+
+	cf. 「LaTeX スタイル・マクロ ポケットリファレンス」 p. 52
+	（技術評論社）
+
+2002-03-24  Masao Takaku  <masao@ulis.ac.jp>
+
+	* ipc-trouble.cgi: 検索、ソート機能はだいたいできた。
+
+	JitterBug 風のインタフェース。
+
+	* Call Center, Bug Tracking and Project Management Tools:
+
+	http://linas.org/linux/pm.html
+
+	とりあえずメモ。
+
+	* Widely Used Mailer: とりあえずメモ。
+	http://www.kaynet.ecc.u-tokyo.ac.jp/~taka/mailer/
+
+	* mutt: ちょっとだけ試してみた。
+
+	致命的なのは、フォルダを移るたびに全ファイルを読み込む点かな。
+
+2002-03-22  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 地形図閲覧システム: 国土地理院が試験的にサービスを始めたらしい。
+	http://mapbrowse.gsi.go.jp/cgi-bin/nph-mm.cgi?mesh=5339552&res=0&offset=0&method=d?1020,12
+	（浮間付近）
+
+	* xgolgo:
+	http://home2.highway.ne.jp/y_matsu/pc-unix-land/Amusement/xgolgo.html
+
+	一種のお笑いツールか。じわじわ「くる」ものがあった。
+
+2002-03-21  Masao Takaku  <masao@ulis.ac.jp>
+
+	* JIS X 0207:
+
+	「JAPAN/MARC マニュアル」によると、JIS X 0207 の制御文字コード（上
+	付き・下付き・合成）を使っているようなのだが、以下のサイトの情報に
+	よると、この規格は既に 1997 年に廃止されている様子。。。
+
+	http://www.geocities.com/mogukun/jis/jishist.html から引用。
+	┌──┬──────┬───┬──┬───────────────┐
+	│    │            │官報公│公示│                              │
+	│    │            │  示  │の種│   規格番号、規格名称の変化   │
+	│    │            │      │ 類 │                              │
+	...
+	├──┼──────┼───┼──┼───────────────┤
+	│    │1979        │6.16  │制定│C 6225-1979 情報交換用漢字符号│
+	│    │(S54).6.1   │      │    │系のための制御文字符号        │
+	│    ├──────┼───┼──┼───────────────┤
+	│    │1984        │11.6  │確認│                              │
+	│    │(S59).11.1  │      │    │                              │
+	│    ├──────┼───┼──┼───────────────┤
+	│    │1987        │3.4   │(*1)│規格番号変更 X 0207-1979      │
+	│JIS │(S62).3.1   │      │    │                              │
+	│ X  ├──────┼───┼──┼───────────────┤
+	│0207│1990(H2).2.1│2.2   │確認│                              │
+	│    ├──────┼───┼──┼───────────────┤
+	│    │1995(H7).2.1│2.1   │確認│                              │
+	│    ├──────┼───┼──┼───────────────┤
+	│    │1996(H8).7.1│7.1(* │(*2)│規格番号様式変更 X 0207:1979  │
+	│    │            │3)    │    │                              │
+	│    ├──────┼───┼──┼───────────────┤
+	│    │1997        │9.22  │廃止│                              │
+	│    │(H9).9.20   │      │    │                              │
+	├──┼──────┼───┼──┼───────────────┤
+
+	一応、日本規格協会の情報も。
+	http://www.jsa.or.jp/catalog/catalog03_d.asp?fn=wd005746.html
+	
+	一体、どうなってるのだろう…。
+
+	* HTML::FillInFrom:
+
+	NAS2002 でやったような <form> 内の部品の選択をそのまま埋めこんでく
+	れるモジュール。
+
+	* 「暗黒の火曜日：イスラマバードから」:
+	http://www.gakushuin.ac.jp/~881791/hoodbhoy/index-j.html
+
+	* 画面ダンプを取るツール:
+
+	WinShot を使っていたのだが、作者が急にWebページを閉鎖してしまった
+	ので、他のツールも探してみる。
+
+	しかし、Vector の以下のカテゴリのフリーのものは全部ダメそう…。
+	http://www.vector.co.jp/vpack/filearea/win95/art/graphics/saver/index.html
+	（要件は、カーソルもキャプチャできること）
+
+2002-03-20  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 購入検討: 昨日のリストに追加。
+
+	・VMWare: (アカデミック/パッケージ版) 22,000円
+	  http://www.networld.co.jp/products/vmware/vmware_pricing.htm
+
+	・Yggdrasill: http://www.mediafusion.co.jp/seihin/ygg/kakaku.html
+	  Windows 2-user なら 40,000 円。
+	  Linux 無制限なら 300,000 円。
+	
+2002-03-19  Masao Takaku  <masao@ulis.ac.jp>
+
+	* IsaViz: from W3C news.
+	http://www.w3.org/2001/11/IsaViz/
+
+	RDF モデルをグラフ構造として可視化・作成するツール。
+
+2002-03-18  Masao Takaku  <masao@ulis.ac.jp>
+
+	* セキュアプログラミング講座:
+	http://www.ipa.go.jp/security/awareness/vendor/programming/index.html
+
+	非常に参考になりそう。。。
+	ちょっと時間があいたら読んでおこう。
+
+	* 購入検討: 来年度の院生予算で買ってほしいもの。
+
+	・英辞郎: 1,800 円
+	  http://member.nifty.ne.jp/eijiro/index.html
+
+	・データ（コーパス？）:
+	   - 日本語語彙体系: 80,000 円
+	     http://www.iwanami.co.jp/hotnews/GoiTaikei/
+	   - シソーラス辞書: ??? 円
+	     http://www.ntt-at.co.jp/product/dictionary/dictionary_spec.html
+
+2002-03-14  Masao Takaku  <masao@ulis.ac.jp>
+
+	* 「VRMLがよみがえる？　後継仕様「X3D」の勝算は」:
+	http://www.zdnet.co.jp/news/0202/28/e_x3d_m.html
+
+	VRML って死んでたの？？
+	う〜ん。。。
+
+	* 無料Webスペース比較: とりあえずメモ。
+
+	http://kamakura.cool.ne.jp/oppama/misc/webspace.html
+
+	* バイト?: [2001-12-28] で言われた内容を再確認。
+
+	「Matrix Market のようなモノを作りたい !!」
+
+	IPSJ-HPS 研究会の査読システムを例として見せてもらった。（よくでき
+	ている）
+
+	とりあえず、upload するような CGI を書いてみよう。
+
 2002-03-13  Masao Takaku  <masao@ulis.ac.jp>
 
 	* TRIPLE: とりあえずメモ。
