@@ -41,7 +41,7 @@
 検索システムの構築には以下のソフトウェアを利用しています。
 </p>
 <ol>
-  <li>WWW巡回取得ツール<a href="http://www.gnu.org/software/wget/">GNU Wget</a>
+  <li>WWW巡回取得ツール<a href="http://wget.sunsite.dk/">GNU Wget</a>
   <li>全文検索システム<a href="http://www.namazu.org/">Namazu</a>
   <li>日本語形態素解析システム<a href="http://chasen.aist-nara.ac.jp/">茶筌</a>
 </ol>
