@@ -1,2 +1,39 @@
-#!/bin/sh
-bsfilter --sub-clean --add-spam --update --show-new-token $@
+#!/usr/bin/env ruby
+# $Id$
+
+require "date"
+require "mailread"
+require "kconv"
+require "yaml"
+
+require "~/public_html/software/bs-tokens"
+
+TOSPAM_LOG = "#{ENV["HOME"]}/.bsfilter/tospam.log"
+
+max_tokens = 20
+max_iterates = 10
+cutoff = 0.95
+result = []
+
+ARGV.each do |fname|
+   result = {}
+   m = Mail.new(open(fname))
+   ["from", "subject", "message-id"].each do |h|
+      if m[h]
+         result[h] = m[h].toeuc
+      end
+   end
+   result["log"] = []
+   result["now"] = Time.now
+   max_iterates.times do |i|
+      STDERR.puts "-- bs-tospam: #{i}"
+      probs = bsfilter_probs(fname)
+      probs["word"] = probs["word"][0..max_tokens-1].map{|e| e.join(" ") }
+      result["log"] << probs
+      system "bsfilter --sub-clean --add-spam --update --show-new-token #{fname}"
+      break if probs["all"] > cutoff
+   end
+   open(TOSPAM_LOG, "a") do |log|
+      log.puts result.to_yaml
+   end
+end
