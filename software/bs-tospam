@@ -26,12 +26,12 @@ ARGV.each do |fname|
    result["log"] = []
    result["now"] = Time.now
    max_iterates.times do |i|
-      STDERR.puts "-- bs-tospam: #{i}"
       probs = bsfilter_probs(fname)
       probs["word"] = probs["word"][0..max_tokens-1].map{|e| e.join(" ") }
       result["log"] << probs
+      STDERR.puts "-- bs-tospam: #{i} (#{probs["all"]})"
+      break if probs["all"] > cutoff && i != 0
       system "bsfilter --sub-clean --add-spam --update --show-new-token #{fname}"
-      break if probs["all"] > cutoff
    end
    open(TOSPAM_LOG, "a") do |log|
       log.puts result.to_yaml
