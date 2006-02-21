@@ -1,4 +1,8 @@
 #!/usr/local/bin/ruby
+
+# IMAPサーバに溜めてあるメールを1メール1ファイルのMH形式に落とすツール
+# cf. ~masao/ChangeLog:[2004-10-28]
+
 require 'net/imap'
 require 'ftools'
 
@@ -7,6 +11,9 @@ File.umask(0077)	# 所有者以外は見れないように。。。
 HOST	 = "mp.nii.ac.jp"
 UID	 =  "masao"
 PASSWORD = "XXXXXXXXX"
+
+USE_SSL = false # true
+PORT = USE_SSL ? 993 : 143
 
 OUTDIR	 = "/tmp/#{UID}-#{HOST}"
 File.makedirs OUTDIR unless File.directory? OUTDIR
