@@ -1,4 +1,4 @@
 INDEX	/project/jmarc/
 MAXHIT	1000000
 MAXMATCH	10000
-REPLACE	/project/jmarc/	http://nile.ulis.ac.jp/~masao/jmarc-search/jmarc/
+REPLACE	/project/jmarc/	http://masao.jpn.org/jmarc-search/jmarc/

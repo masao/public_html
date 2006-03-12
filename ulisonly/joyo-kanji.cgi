@@ -27,7 +27,7 @@ HTML_FOOTER = <<EOF
 <hr>
 <address>
 ¹âµ×²íÀ¸ (Takaku Masao)<br>
-<a href="http://nile.ulis.ac.jp/~masao/">http://nile.ulis.ac.jp/~masao/</a>, 
+<a href="http://masao.jpn.org/">http://masao.jpn.org/</a>, 
 <a href="mailto:masao@nii.ac.jp">masao@nii.ac.jp</a>
 </address>
 <div class="id">$Id$</div>

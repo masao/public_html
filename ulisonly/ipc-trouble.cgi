@@ -140,7 +140,7 @@ sub print_html_foot() {
     my $id = '$Id$';
     print <<EOF;
 <hr><address>
-<a href="http://nile.ulis.ac.jp/~masao/ulisonly/ipc-trouble.cgi">http://nile.ulis.ac.jp/~masao/ulisonly/ipc-trouble.cgi</a><br>
+<a href="http://masao.jpn.org/ulisonly/ipc-trouble.cgi">http://masao.jpn.org/ulisonly/ipc-trouble.cgi</a><br>
 $id<br>
 </address>
 </body></html>

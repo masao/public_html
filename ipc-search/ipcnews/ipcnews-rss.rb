@@ -9,7 +9,7 @@ require "base64"
 require "pstore"
 require "ipcnews"
 
-BASEURI = "http://nile.ulis.ac.jp/~masao/ipc-search/ipcnews/news.cgi"
+BASEURI = "http://masao.jpn.org/ipc-search/ipcnews/news.cgi"
 
 rss = []
 db = PStore.new("ipcnews.db")
