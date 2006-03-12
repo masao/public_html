@@ -9,7 +9,7 @@ use CGI::Carp qw(fatalsToBrowser);
 ### 大域変数
 
 my $TITLE = 'XSLT ゲートウェイ';
-my $FROM = 'masao@ulis.ac.jp';
+my $FROM = 'masao@nii.ac.jp';
 
 my $HTML_HEAD = <<EOF;
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"

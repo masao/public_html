@@ -64,7 +64,7 @@ if (strlen($text) > 0) {
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../default.css" type="text/css">
-<link rev="made" href="mailto:masao@ulis.ac.jp">
+<link rev="made" href="mailto:masao@nii.ac.jp">
 <title>TrueTypeフォントの表示テスト</title>
 </head>
 <body>
@@ -125,7 +125,7 @@ PHPに同梱されているGDライブラリの機能を使って、
 <address>
 高久雅生 (Takaku Masao)<br>
 <a href="http://nile.ulis.ac.jp/~masao/">http://nile.ulis.ac.jp/~masao/</a>, 
-<a href="mailto:masao@ulis.ac.jp">masao@ulis.ac.jp</a>
+<a href="mailto:masao@nii.ac.jp">masao@nii.ac.jp</a>
 </address>
 <div class="id">$Id$</div>
 </body>

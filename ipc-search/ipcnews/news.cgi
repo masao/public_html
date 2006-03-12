@@ -37,7 +37,7 @@ class CGI
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-JP">
 <link rel="stylesheet" href="#{base_path}../../default.css" type="text/css">
-<link rev="made" href="mailto:masao@ulis.ac.jp">
+<link rev="made" href="mailto:masao@nii.ac.jp">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="#{base_path}ipcnews-rss.rdf">
 <title>#{title}</title>
 <style type="text/css">
@@ -75,7 +75,7 @@ EOF
 <address>
 高久雅生 (Takaku Masao)<br>
 <a href="http://nile.ulis.ac.jp/~masao/">http://nile.ulis.ac.jp/~masao/</a>,
-<a href="mailto:masao@ulis.ac.jp">masao@ulis.ac.jp</a>
+<a href="mailto:masao@nii.ac.jp">masao@nii.ac.jp</a>
 </address>
 <div class="id">#{RCSID}</div>
 <div class="validator">

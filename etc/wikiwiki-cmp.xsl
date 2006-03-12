@@ -63,7 +63,7 @@
         <address>
           ¹âµ×²íÀ¸ (TAKAKU Masao)<br/>
           <a href="http://nile.ulis.ac.jp/~masao/">http://nile.ulis.ac.jp/~masao/</a>,
-          <a href="mailto:masao@ulis.ac.jp">masao@ulis.ac.jp</a>
+          <a href="mailto:masao@nii.ac.jp">masao@nii.ac.jp</a>
         </address>
         <script type="text/javascript">
           var hiliteStyle = new Object();

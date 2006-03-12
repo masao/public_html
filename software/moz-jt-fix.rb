@@ -11,7 +11,7 @@ require 'net/http'
 require 'uri'
 
 TRANSLATOR = "¹âµ×²íÀ¸"
-TRANSLATOR_ADDRESS = "masao@ulis.ac.jp"
+TRANSLATOR_ADDRESS = "masao@nii.ac.jp"
 
 JTP_NOTE = <<EOF
 <p class="docinfo">

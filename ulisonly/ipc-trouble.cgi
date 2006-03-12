@@ -24,7 +24,7 @@ my $bgcolor = '#ddddd0';
 my $bgcolor_head = '#00A020';
 
 # メールアドレス
-my $address = 'masao@ulis.ac.jp';
+my $address = 'masao@nii.ac.jp';
 
 # 項目のラベル
 my @TABLE_LABEL = ('項番', '問題点', '対策状況', '発生日', '対策日');
