@@ -4,8 +4,14 @@
 # 使い方：
 # nkf -Se ken_all.csv | ruby zipcode.rb
 
+# Data from: http://www.post.japanpost.jp/zipcode/download.html
+
 require 'ftools'
-require 'dbi'
+begin
+   require 'dbi'
+rescue LoadError
+   require 'sqlite3'
+end
 
 DBNAME = "zipcode.db"
 DBNAME_TMP = DBNAME + ".tmp"
@@ -25,11 +31,13 @@ if FileTest.exist? DBNAME
    File.cp(DBNAME, DBNAME + ".old", true)
 end
 
-dbh = DBI.connect("dbi:SQLite:#{DBNAME_TMP}")
-dbh['AutoCommit'] = false
+#dbh = DBI.connect("dbi:SQLite:#{DBNAME_TMP}")	# For DBI
+#dbh['AutoCommit'] = false
+dbh = SQLite3::Database.new(DBNAME_TMP)		# For SQLite3
 
 dbh.transaction do
-   dbh.do(CREATE_TABLE)
+   #dbh.do(CREATE_TABLE)	# For DBI
+   dbh.execute(CREATE_TABLE)	# For SQLite3
    sth = dbh.prepare("INSERT INTO zipcode VALUES(?, ?, ?, ?, ?, ?)");
    logfile = open("zipcode.log.#{Time.now.strftime("%Y%m%d")}", "w")
    ARGF.each_line do |line|

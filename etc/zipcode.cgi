@@ -4,7 +4,11 @@
 
 require 'jcode'
 require 'cgi'
-require 'dbi'
+begin
+   require 'dbi'
+rescue LoadError
+   require 'sqlite3'
+end
 
 begin
    require 'erb'
@@ -45,49 +49,52 @@ class ZipcodeCGI
 
    # 実際の検索を行う
    def do_search
-      dbh = DBI.connect("dbi:SQLite:zipcode.db")
+      #dbh = DBI.connect("dbi:SQLite:zipcode.db")	# For DBI
+      dbh = SQLite3::Database.new("zipcode.db")		# For SQLite3
       @result = []
-      @search_time = DBI::Utils.measure do
-	 if @keyword
-	    sql = ""
-	    args = []
-	    case @keyword
-	    when /^[0-9\-]+$/
-	       sql << "zipcode7 like ?"
-	       args << "#{ @keyword.delete("-") }%"
-	    when /^[ぁ-ん]+$/
-	       keyword_yomi = @keyword.tr('ぁ-ん', 'ァ-ン')
-	       sql << "city_yomi like ? or town_yomi like ?"
-	       args.push "%#{ keyword_yomi }%", "%#{ keyword_yomi }%"
-	    when /^[ァ-ン]+$/
-	       sql << "city_yomi like ? or town_yomi like ?"
-	       args.push "%#{ @keyword }%", "%#{ @keyword }%"
-	    else
-	       sql << "city like ? or town like ?"
-	       args.push "%#{ @keyword }%", "%#{ @keyword }%"
-	    end
-	    sth = dbh.prepare("select zipcode7, pref, city, town from zipcode where #{sql} order by zipcode7")
-	    sth.execute(*args)
-	    sth.each do |row|
-	       zipcode7 = row.shift
-	       @result.push(zipcode7.format_zipcode << " " << row.join(" "))
-	    end
-	    sth.finish
-	 elsif @pref and @city
-	    sth = dbh.prepare("select zipcode7, pref, city, town from zipcode where pref = ? and city = ? order by zipcode7")
-	    sth.execute(@pref, @city)
-	    sth.each do |row|
-	       zipcode7 = row.shift
-	       @result.push(zipcode7.format_zipcode << " " << row.join(" "))
-	    end
-	 elsif @pref
-	    sth = dbh.prepare("select distinct city from zipcode where pref = ? order by city_yomi")
-	    sth.execute(@pref)
-	    sth.each do |row|
-	       @result.push "<a href=\"./zipcode.cgi?pref=#{CGI.escape(@pref)};city=#{CGI.escape(row['city'])}\">#{h(row[0])}</a>\n"
-	    end
-	 end
+      # @search_time = DBI::Utils.measure do
+      @search_time = Time.now
+      if @keyword
+         sql = ""
+         args = []
+         case @keyword
+         when /^[0-9\-]+$/
+            sql << "zipcode7 like ?"
+            args << "#{ @keyword.delete("-") }%"
+         when /^[ぁ-ん]+$/
+            keyword_yomi = @keyword.tr('ぁ-ん', 'ァ-ン')
+            sql << "city_yomi like ? or town_yomi like ?"
+            args.push "%#{ keyword_yomi }%", "%#{ keyword_yomi }%"
+         when /^[ァ-ン]+$/
+            sql << "city_yomi like ? or town_yomi like ?"
+            args.push "%#{ @keyword }%", "%#{ @keyword }%"
+         else
+            sql << "city like ? or town like ?"
+            args.push "%#{ @keyword }%", "%#{ @keyword }%"
+         end
+         sth = dbh.prepare("select zipcode7, pref, city, town from zipcode where #{sql} order by zipcode7")
+         rows = sth.execute(*args)
+         rows.each do |row|
+            zipcode7 = row.shift
+            @result.push(zipcode7.format_zipcode << " " << row.join(" "))
+         end
+      elsif @pref and @city
+         sth = dbh.prepare("select zipcode7, pref, city, town from zipcode where pref = ? and city = ? order by zipcode7")
+         rows = sth.execute(@pref, @city)
+         rows.each do |row|
+            zipcode7 = row.shift
+            @result.push(zipcode7.format_zipcode << " " << row.join(" "))
+         end
+      elsif @pref
+         sth = dbh.prepare("select distinct city from zipcode where pref = ? order by city_yomi")
+         rows = sth.execute(@pref)
+         rows.each do |row|
+            @result.push "<a href=\"./zipcode.cgi?pref=#{CGI.escape(@pref)};city=#{CGI.escape(row[0])}\">#{h(row[0])}</a>\n"
+         end
       end
+      #sth.finish	# For DBI
+      #dbh.close	# For SQLite3
+      @search_time = Time.now - @search_time
    end
 
    include ERbLight::Util
