@@ -1,10 +1,13 @@
-#!/usr/local/bin/ruby -Ke
+#!/usr/bin/env LD_LIBRARY_PATH=/home/etk/lib ruby -Ke
 # -*- Ruby -*-
 # $Id$
 
 require 'jcode'
 require 'cgi'
 begin
+   ENV["LD_LIBRARY_PATH"] = "/home/etk/lib"
+   #STDERR.puts ENV["LD_LIBRARY_PATH"]
+   $:.unshift("/home/etk/lib/ruby")
    require 'sqlite3'
 rescue LoadError
    require 'dbi'

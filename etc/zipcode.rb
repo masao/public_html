@@ -8,6 +8,7 @@
 
 require 'ftools'
 begin
+   $:.unshift(ENV["HOME"] + "/lib/ruby")
    require 'sqlite3'
 rescue LoadError
    require 'dbi'
