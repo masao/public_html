@@ -8,9 +8,9 @@
 
 require 'ftools'
 begin
-   require 'dbi'
-rescue LoadError
    require 'sqlite3'
+rescue LoadError
+   require 'dbi'
 end
 
 DBNAME = "zipcode.db"

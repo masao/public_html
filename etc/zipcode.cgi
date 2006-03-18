@@ -5,9 +5,9 @@
 require 'jcode'
 require 'cgi'
 begin
-   require 'dbi'
-rescue LoadError
    require 'sqlite3'
+rescue LoadError
+   require 'dbi'
 end
 
 begin
