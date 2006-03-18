@@ -1,4 +1,4 @@
-Options +ExecCGI
+#Options +ExecCGI
 
 # if you run p-album2 with symbolic link, use settings below.
 #Options +FollowSymLinks
