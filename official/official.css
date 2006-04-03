@@ -4,6 +4,11 @@ body {
 }
 .last-update {
     float: right;
-    text-align: right;
     font-size: smaller;
+    margin: 0 1em;
+}
+.lang-switch {
+    float: right;
+    font-size: smaller;
+    margin: 0 1em;
 }

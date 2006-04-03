@@ -8,6 +8,7 @@
 <title>Masao Takaku</title>
 </head>
 <body>
+<div class="lang-switch"><a href="index.html.ja">[In Japanese]</a></div>
 <!-- hhmts start -->
 <div class="last-update">Updated: 2006-04-03</div>
 <!-- hhmts end -->
@@ -42,7 +43,7 @@
 </ul>
 <hr>
 <address>
-高久雅生 (Takaku Masao)<br>
+高久雅生 (Masao Takaku)<br>
 <a href="http://research.nii.ac.jp/~masao/">http://research.nii.ac.jp/~masao/</a>, 
 <a href="mailto:masao@nii.ac.jp">masao@nii.ac.jp</a>
 </address>
