@@ -17,7 +17,5 @@ sub load_sshenv() {
 }
 
 load_sshenv();
-system($RSYNC,
-       "-ar","--exclude=test/","--exclude=private/","--delete-after",
-       "./",
-       "etk:www/masao/");
+
+system($RSYNC, "-ar", @ARGV);
