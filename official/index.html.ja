@@ -8,17 +8,38 @@
 <title>高久雅生のページ</title>
 </head>
 <body>
+<div class="lang-switch"><a href="index.html.en">[In English]</a></div>
 <!-- hhmts start -->
 <div class="last-update">最終更新日: 2006年04月03日</div>
 <!-- hhmts end -->
 <h1>高久雅生のページ</h1>
-<p>
-</p>
+<dl>
+  <dt>氏名:
+  <dd>高久雅生 (Masao Takaku)
+  <dt>所属:
+  <dd>融合プロジェクト研究員
+  <dd><a href="http://www.rois.ac.jp/">情報・システム研究機構</a>
+      <a href="http://www.rois.ac.jp/tric/">新領域融合研究センター</a>
+  <dt>Email:
+  <dd><a href="mailto:masao@nii.ac.jp">masao@nii.ac.jp</a>
+  <dt>Web:
+  <dd><a href="http://research.nii.ac.jp/~masao/">http://research.nii.ac.jp/~masao/</a>
+  <dt>連絡先:
+  <dd>〒101-8430 東京都千代田区一ツ橋 2-1-2 国立情報学研究所内
+  <dd>Tel: +81-3-4212-2654
+  <dd>Fax: +81-3-3556-1916
+  <dt>生年月:
+  <dd>1976年1月生まれ
+</ul>
 
-
+<h2>Related links</h2>
+<ul>
+  <li><a href="http://research.nii.ac.jp/ntcir/">NTCIR</a>
+  <li><a href="http://www.nii.ac.jp/index-j.html">国立情報学研究所（NII）</a>
+</ul>
 <hr>
 <address>
-高久雅生 (Takaku Masao)<br>
+高久雅生 (Masao Takaku)<br>
 <a href="http://research.nii.ac.jp/~masao/">http://research.nii.ac.jp/~masao/</a>, 
 <a href="mailto:masao@nii.ac.jp">masao@nii.ac.jp</a>
 </address>
