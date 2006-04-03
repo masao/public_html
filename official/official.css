@@ -1,0 +1,9 @@
+body {
+    margin: 1%;
+    font-family: verdana, sans-serif;
+}
+.last-update {
+    float: right;
+    text-align: right;
+    font-size: smaller;
+}
