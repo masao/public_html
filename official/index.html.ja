@@ -1,12 +1,12 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-	"http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="ja">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-JP">
 <link rel="stylesheet" href="official.css" type="text/css">
-<link rev="made" href="mailto:masao@ulis.ac.jp">
+<link rev="made" href="mailto:masao@nii.ac.jp">
 <title>高久雅生のページ</title>
 </head>
+
 <body>
 <div class="lang-switch"><a href="index.html.en">[In English]</a></div>
 <!-- hhmts start -->
@@ -37,6 +37,7 @@
   <li><a href="http://research.nii.ac.jp/ntcir/">NTCIR</a>
   <li><a href="http://www.nii.ac.jp/index-j.html">国立情報学研究所（NII）</a>
 </ul>
+
 <hr>
 <address>
 高久雅生 (Masao Takaku)<br>
