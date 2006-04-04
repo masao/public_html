@@ -16,6 +16,7 @@ end
 
 DBNAME = "zipcode.db"
 DBNAME_TMP = DBNAME + ".tmp"
+File.rm_f(DBNAME_TMP) if FileTest.exist? DBNAME_TMP
 
 CREATE_TABLE = <<EOF
 CREATE TABLE zipcode (
