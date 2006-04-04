@@ -21,6 +21,15 @@ end
   text-align: center;
   text-indent: 0; /* For buggy mozilla */
 }
+h1, h2 {
+  clear: both;
+}
+.prefs-group {
+  float:left;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 </style>
 </head>
 <body>
@@ -56,8 +65,63 @@ end
 以下の3種類の検索が行えます。
 </p>
 <dl>
+  <dt>文字列（キーワード）検索</dt>
+  <dd>市区町村名、町域名に任意のキーワードが含まれるものを検索します。
+      なお、カナ書きした場合は読みも検索します。<br>
+      例: <var>気仙</var>, <var>けせん</var> など
+  <dt>郵便番号検索</dt>
+  <dd>「キーワード」欄に数字を打ち込めば、郵便番号として前方一致検索を行います。<br>
+      例: <var>305</var>, <var>115-0012</var> など
+
   <dt>地域選択</dt>
   <dd>以下の選択欄から都道府県を選択して、表示します。
+      <div class="prefs">
+      <ul class="prefs-group">
+	<li><a href="./zipcode.cgi?pref=<%=u "北海道" %>">北海道</a>
+      </ul>
+      <ul class="prefs-group"><!-- 東北 -->
+      <% %w[ 青森県 岩手県 宮城県 秋田県 山形県 福島県 ].each do |pref| %>
+        <li><a href="./zipcode.cgi?pref=<%=u pref %>"><%=h pref %></a>
+      <% end %>
+      </ul>
+      <ul class="prefs-group"><!-- 関東 -->
+      <% %w[ 東京都 神奈川県 埼玉県 千葉県 茨城県 栃木県 群馬県 山梨県 ].each do |pref| %>
+        <li><a href="./zipcode.cgi?pref=<%=u pref %>"><%=h pref %></a>
+      <% end %>
+      </ul>
+      <ul class="prefs-group"><!-- 信越・北陸 -->
+      <% %w[ 新潟県 長野県 富山県 石川県 福井県 ].each do |pref| %>
+        <li><a href="./zipcode.cgi?pref=<%=u pref %>"><%=h pref %></a>
+      <% end %>
+      </ul>
+      <ul class="prefs-group"><!-- 東海 -->
+      <% %w[ 愛知県 岐阜県 静岡県 三重県 ].each do |pref| %>
+        <li><a href="./zipcode.cgi?pref=<%=u pref %>"><%=h pref %></a>
+      <% end %>
+      </ul>
+      <ul class="prefs-group"><!-- 近畿 -->
+      <% %w[ 大阪府 兵庫県 京都府 滋賀県 奈良県 和歌山県 ].each do |pref| %>
+        <li><a href="./zipcode.cgi?pref=<%=u pref %>"><%=h pref %></a>
+      <% end %>
+      </ul>
+      <ul class="prefs-group"><!-- 中国 -->
+      <% %w[ 鳥取県 島根県 岡山県 広島県 山口県 ].each do |pref| %>
+        <li><a href="./zipcode.cgi?pref=<%=u pref %>"><%=h pref %></a>
+      <% end %>
+      </ul>
+      <ul class="prefs-group"><!-- 四国 -->
+      <% %w[ 徳島県 香川県 愛媛県 高知県 ].each do |pref| %>
+        <li><a href="./zipcode.cgi?pref=<%=u pref %>"><%=h pref %></a>
+      <% end %>
+      </ul>
+      <ul class="prefs-group"><!-- 九州・沖縄 -->
+      <% %w[ 福岡県 佐賀県 長崎県 熊本県 大分県 宮崎県 鹿児島県 沖縄県 ].each do |pref| %>
+        <li><a href="./zipcode.cgi?pref=<%=u pref %>"><%=h pref %></a>
+      <% end %>
+      </ul>
+      </div>
+
+      <!--
       <form action="./zipcode.cgi" method="GET">
       <div class="form">
       <select name="pref">
@@ -112,14 +176,9 @@ end
       <input type="submit" value="選択">
       </div>
       </form>
-  <dt>文字列（キーワード）検索</dt>
-  <dd>市区町村名、町域名に任意のキーワードが含まれるものを検索します。
-      なお、カナ書きした場合は読みも検索します。<br>
-      例: <var>気仙</var>, <var>けせん</var> など
-  <dt>郵便番号検索</dt>
-  <dd>「キーワード」欄に数字を打ち込めば、郵便番号として前方一致検索を行います。<br>
-      例: <var>305</var>, <var>115-0012</var> など
+      -->
 </dl>
+
 <h2>その他</h2>
 <p>
 このシステムは、個人的な用途に基づき運営しているものです。
@@ -136,7 +195,7 @@ end
   <li><a href="http://www.sqlite.org/">SQLite</a>
   <li><a href="http://rubyforge.org/projects/sqlite-ruby/">sqlite3-ruby</a> or
       <a href="http://ruby-dbi.sourceforge.net/">Ruby/DBI</a>
-  <li>データ: <a href="http://www.post.japanpost.jp/zipcode/index.html">郵便番号データ</a> （平成16年12月28日更新版）
+  <li>データ: <a href="http://www.post.japanpost.jp/zipcode/index.html">郵便番号データ</a> （平成17年2月28日更新版）
 </ul> 
 <hr>
 <address>
