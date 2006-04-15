@@ -18,6 +18,8 @@
 </p>
 <!--#config timefmt="<span class=\"lastmodified\">[%Y-%m-%d]</span>" -->
 <ul>
+  <li><a href="unihan-onkun.html">Unihan.txt - 音訓辞書</a>
+      <!--#flastmod file="unihan-onkun.html" -->
   <li><a href="zipcode.cgi">郵便番号検索</a>
       <!--#flastmod file="zipcode.db" -->
   <li><a href="test-ttf.php">TrueTypeフォントのテスト</a>
