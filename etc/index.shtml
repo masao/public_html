@@ -18,6 +18,8 @@
 </p>
 <!--#config timefmt="<span class=\"lastmodified\">[%Y-%m-%d]</span>" -->
 <ul>
+  <li><a href="ir-journal.html">情報検索関連の論文誌</a>
+      <!--#flastmod file="ir-journal.html" -->
   <li><a href="unihan-onkun.html">Unihan.txt - 音訓辞書</a>
       <!--#flastmod file="unihan-onkun.html" -->
   <li><a href="zipcode.cgi">郵便番号検索</a>
