@@ -34,8 +34,6 @@
       <!--#flastmod file="wikiwiki.html" -->
   <li><a href="windows-software.html">Useful Softwares on Windows</a>
       <!--#flastmod file="windows-software.html" -->
-  <li><a href="mozilla.html">Mozillaの不具合メモ</a>
-      <!--#flastmod file="mozilla.html" -->
   <li><a href="clover-papi.html">Clover上でPAPI(Performance API)を動作させる</a>
       <!--#flastmod file="clover-papi.html" -->
   <li><a href="rpm.html">RPMの使い方</a>
@@ -49,6 +47,7 @@
 以下のものはだいぶ昔に書いたもので、更新の予定はありません。
 </p>
 <ul>
+  <li><a href="mozilla.html">Mozillaの不具合メモ</a>
   <li><a href="man-change-allfilename.html">ファイル名の一括変換の方法</a>
   <li><a href="man-win95-trouble.html">Windows 95 トラブルシューティング</a>
   <li><a href="calc.html">電卓アップレット</a>
