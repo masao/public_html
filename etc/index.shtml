@@ -18,6 +18,8 @@
 </p>
 <!--#config timefmt="<span class=\"lastmodified\">[%Y-%m-%d]</span>" -->
 <ul>
+  <li><a href="firefox.html">Filefox: ブックマーク、拡張、設定など</a>
+      <!--#flastmod file="firefox.html" --> 
   <li><a href="ir-journal.html">情報検索関連の論文誌</a>
       <!--#flastmod file="ir-journal.html" -->
   <li><a href="unihan-onkun.html">Unihan.txt - 音訓辞書</a>
@@ -44,7 +46,7 @@
       <!--#flastmod file="config.html" -->
 </ul>
 <p>
-以下のものはだいぶ昔に書いたものです。
+以下のものはだいぶ昔に書いたもので、更新の予定はありません。
 </p>
 <ul>
   <li><a href="man-change-allfilename.html">ファイル名の一括変換の方法</a>
