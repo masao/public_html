@@ -10,7 +10,7 @@
 <body>
 <div class="last-update">初版公開日: 2006年04月19日</div>
 <!-- hhmts start -->
-<div class="last-update">最終更新日: 2006年04月19日</div>
+<div class="last-update">最終更新日: 2006年04月20日</div>
 <!-- hhmts end -->
 <h1>Filefox: ブックマーク、拡張、設定など</h1>
 <p>
@@ -18,17 +18,33 @@
 </p>
 
 <h2>ブックマーク</h2>
+<h3>ブックマーク・キーワード</h3>
 <ul>
-  <li>
+  <li><a href="http://www2.alc.co.jp/ejr/index.php?word_in=%s&word_in2=dummy&amp;word_in3=NaU3vePyqYpXJCYoYl">alc</a>
+  <li><a href="http://dictionary.goo.ne.jp/search.php?MT=%s&amp;kind=jn">goo</a>
+  <li><a href="http://encarta.msn.com/dictionary_/%s.html">en</a>
+</ul>
+<h3>Boolmarklet</h3>
+<ul>
+  <li><a href="javascript:if (location.hash) location.hash = ''; else if (location.search) location.search = ''; else if (location.pathname.charAt(location.pathname.length-1) == %22/%22) location = %22..%22; else if (location.pathname) location = %22.%22; void 0">上</a>
+  <li><a href="javascript:location.href='http://www.bloglines.com/sub/'+location.href">bloglines</a>
+  <li><a href="javascript:location.href='http://del.icio.us/new/masao?v=2&amp;url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title)">del.icio.us</a>
 </ul>
 
 <h2>拡張</h2>
 <ul>
-  <li>
+  <li><a href="http://mozilla.dorando.at/readme.html">UndoCloseTab</a>
+  <li><a href="http://diggler.mozdev.org/">Diggler</a>
+  <li><a href="http://livehttpheaders.mozdev.org/">LiveHttpHeaders</a>
+  <li><a href="http://ieview.mozdev.org/">IE View</a>
+  <li><a href="http://gemal.dk/mozilla/linky.html">Linky</a>
+  <li><a href="http://checky.sourceforge.net/">Checky</a>
 </ul>
 
 <h2>設定</h2>
 <ul>
+  <li>PDFファイルはAcrobat Readerを外部起動（プラグインは使わない）<br>
+
   <li>
 </ul>
 <hr>
