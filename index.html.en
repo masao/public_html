@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" 
+"http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="default.css" type="text/css">
+<link rev=made href="mailto:masao@nii.ac.jp">
+<title>Masao Takaku's homepage</title>
+</head>
+<body>
+<!-- img align="right" src="image/trim.jpg" alt="私の写真 : トリム着用時" width=200 height=440 -->
+
+<h1>Masao Takaku's homepage</h1>
+
+<div class="news">
+<h2>News</h2>
+<dl>
+  <dt>2006-03-12
+  <dd>I renewed this website, and made open to the public at <a href="http://masao.jpn.org/">http://masao.jpn.org/</a>.
+</dl>
+</div>
+
+<h2>Contents</h2>
+<dl>
+  <dt><a href="profile.html">Profile</a></dt>
+  <dd>About me; <em>Masao Takaku</em></dd>
+
+  <dt><a href="photo/">Web Album</a>
+  <dd>I took pictures with my daily life.
+
+  <dt><a href="software/">Softwares</a>
+  <dd>Scripts which I wrote.
+
+  <dt><a href="etc/">Miscerouce</a></dt>
+
+  <dt><a href="links.html">Related link</a></dt>
+</dl>
+
+<hr>
+<address>
+高久雅生 (Takaku Masao)<br>
+<a href="http://masao.jpn.org/">http://masao.jpn.org/</a>,
+<a href="mailto:masao@nii.ac.jp">masao@nii.ac.jp</a>
+</address>
+<div class="id">$Id$</div>
+<div class="validator">
+<a href="http://validator.w3.org/check/referer"><img src="http://www.w3.org/Icons/valid-html401" alt="Valid HTML 4.01!" height="31" width="88"></a>
+<a href="http://jigsaw.w3.org/css-validator/validator?uri=http://masao.jpn.org/"><img width="88" height="31" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!"></a>
+</div>
+</body>
+</html>
