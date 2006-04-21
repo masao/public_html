@@ -1,3 +1,6 @@
 *.ttf
 *.TTF
 zipcode.db
+.alias
+.emacs*
+.mnews_setup
