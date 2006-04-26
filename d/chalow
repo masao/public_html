@@ -401,7 +401,7 @@ my %inside_ref;			# 日付リンクによるリファラー
 # {XXXX-XX-XX}{1,2,3,...}{"h"} - アイテムヘッダ
 # {XXXX-XX-XX}{1,2,3,...}{"c"} - 中味
 
-my $cl = ChangeLogReader->new(stop_date => $stop_date);
+my $cl = ChangeLogReader->new(stop_date => $stop_date, use_category => 0);
 
 for my $fname (@ARGV) {
     print "reading \"$fname\"\n" if (!defined $quiet_mode);

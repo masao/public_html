@@ -6,7 +6,7 @@ use warnings;
 
 use ChangeLogReader;
 
-my $cl = ChangeLogReader->new;
+my $cl = ChangeLogReader->new( use_category => 0 );
 foreach my $file (@ARGV) {
     $cl->store_changelog_file($file);
 }
@@ -20,7 +20,7 @@ foreach my $ymd (reverse sort keys %{$cl->{all}}) {
 	    my $header = $ent->{$i}->{ho};
 	    my $cont = $ent->{$i}->{co};
 	    $cont =~ s/^/\t/gm;
-	    print "\t* $header\n";
+	    print "\t* $header:\n";
 	    print "$cont\n";
 	}
     }

@@ -10,7 +10,8 @@ sub new {
     my $class = shift;
     my $self = {};
     my %param = @_;
-    for (keys %param) { $self->{lc($_)} = $param{$_} } 
+    for (keys %param) { $self->{lc($_)} = $param{$_} }
+    $$self{use_category} = 1 if not exists $$self{use_category};
     return bless $self, $class;
 }
 
@@ -36,6 +37,15 @@ sub debug_print {
     }
 }
 
+sub use_category {
+    my $self = shift;
+    my ($val) = @_;
+    if (defined $val) {
+	$self->{use_category} = $val;
+    } else {
+    }
+    $self->{use_category};
+}
 
 sub store_changelog_file {
     my ($self, $fname) = @_;
@@ -150,7 +160,7 @@ sub store_item {
 #    $ih =~ s/(:|\s+)$//g;
     $ih =~ s/(:|\s*)$//sg;	# Triming trailing spaces and ":"
 #    print "[[[[$ih]]]\n";
-    if ($ih =~ s/\s*\[(.+)\]$//) { # category
+    if ($self->use_category && $ih =~ s/\s*\[(.+)\]$//) { # category
 	@cat = split(/\s*\]\s*\[\s*/, $1);
     }
 
