@@ -195,7 +195,6 @@ my $page_template = << "__TEMPLE"
 <form method="get" action="clsearch.cgi" 
     enctype="application/x-www-form-urlencoded">
 <input type="text" name="key" value="@{[$q->escapeHTML($key)]}" />
-<input type="checkbox" name="mode" value="1" @{[($mode)? "checked":""]}/>
 <!--
 <input type="radio" name="mode" value="0" @{[($mode==0)? "checked":""]}/>
 <input type="radio" name="mode" value="1" @{[($mode==1)? "checked":""]}/>
