@@ -1,40 +1,23 @@
-/*
-Title: chalow default
- */
+@import url("../default.css");
 
-/*
-ページ全体の基本的な設定。背景色や文字色など
-*/
-body {
-	background-color: White;
+/* Overwritten my default.css style */
+p {
+    text-indent: 0;
 }
-
-/*
-リンク文字列に関する設定
-*/
-a:link {
-        text-decoration: none;
-}
-
-a:visited {
-        text-decoration: none;
-}
-
 
 /*
 ページトップ (とか、下) にある操作ボタンの並ぶ行の設定
 */
 .adminmenu {
-        text-align: left;
+        text-align: right;
         margin: 0em;
-	font-size: small;
+	font-size: smaller;
 }
 
 /*
 日記タイトルの設定
 */
 h1 {
-	text-align: left;
         border-color: #808080;
         border-style: solid;
         border-width: 1px 0 1px 0;
@@ -81,43 +64,33 @@ item header の設定
 */
 /* memo: tDiary だと h3。chalow でも設定によって h3 を出すことが可能 */
 .clitemheader { 
-        color: #606060;
-	font-weight: bold;
+        color: #a00000;
         padding: 3px 3px 0px 3px;
 }
 
 h3 { 
-        color: #606060;
-	font-weight: bold;
+        color: #a00000;
 	margin: 0px;
-}
-
-/*
-イメージアンカーの設定
-*/
-/*div.day span.sanchor {*/
-span.sanchor {
-/*        background-image: url(dot-pink-16.png);
-        background-position: bottom left;
-	background-repeat: no-repeat;
-        padding: 0px 0px 0px 0px;
-        margin: 0px 0px 0px 0px;
-        color: #fff;
-        background-color: transparent;
-*/
-        font-size: xx-small;
 }
 
 /*
 サブタイトルを含むセクション (item) の設定
 */
 div.section { 
-        border-color: #ffffff;
+        background-color: white;
         border-style: solid;
-        border-width: 1px;
+        border-color: gray;
+	border-width: 1px;
 	line-height: 130%;
-        padding: 5px;
-	margin: 5px 0px 15px 0px;
+        margin: 5px 2em 5px 2em;
+        padding: 0.5em 2em;
+}
+
+div.section p {
+        margin-right: 2em;
+        margin-left: 2em;
+        padding: 0.5em 2em;
+	font-family: monospace;
 }
 
 /*
@@ -156,12 +129,11 @@ div.body p {
 */
 .calendar {
 	background-color: #fff8ff;
-        text-align: left;
-        font-size: x-small;
-}
-
-.calendar table {
-
+        text-align: center;
+        font-size: smaller;
+	margin-right: auto;
+	margin-left: auto;
+	width: 80%;
 }
 
 
@@ -170,12 +142,8 @@ div.body p {
 */
 .footer {
 	text-align: right;
-	font-size: x-small;
+	font-size: smaller;
 	margin: 0em;
-}
-
-p.footer a {
-	font-weight: bold;
 }
 
 /* ツッコミ関連 */
@@ -186,7 +154,7 @@ div.comment {
         border-width: 1px;
         margin: 0.5em;
         padding: 0.5em;
-        font-size: small;
+        font-size: smaller;
         background-color: #f0f0f0;
 }
 
@@ -202,7 +170,7 @@ div.day span.canchor {
         color: #fff;
         background-color: transparent;
 */
-        font-size: small;
+        font-size: smaller;
 }
 
 div.form {
@@ -223,8 +191,6 @@ div.commentbody {
 }
 
 
-
-
 /*
 いろいろ
 */
@@ -243,7 +209,7 @@ img {
 for chalow: Referrer by 日付リンク
 */
 div .referer { 
-  font-size: x-small;
+  font-size: smaller;
   color: #808080;
   background-color: #f8f8f8;
   margin-top: 0.5em;
@@ -260,48 +226,9 @@ div .itemauthor {
   padding: 0.3em 0 0 0;
 }
 div .itemauthor span {
-  font-size: small;
+  font-size: smaller;
   border-color: #b0b0b0;
   border-style: solid;
   border-width: 0px 5px 1px 0px;
   color: #606060;
 }
-
-#content {
-  position:relative;
-  margin-left: 230px;
-/*  margin-right: 180px;*/
-  padding: 0px;	
-}
-
-#links {
-  position:absolute;
-  top:8.5em;
-  left:5px;
-  width: 225px;	
-/*  float: left;
-  margin-right: 5px;*/
-  margin: 0px;
-  padding: 0px;	
-}
-
-
-#footer {
-  clear: both;
-  margin-top: 5px;
-}
-
-
-.stdbox table {width: 100%; margin: 0;}
-.stdbox a {text-decoration: none;}
-.stdbox td {border: solid 1px #808080; padding: 3px; font-size: x-small;line-height: 130%;}
-.stdbox ul {margin: 0; padding: 0}
-.stdbox li {margin: 0 0 0 1em}
-.stdbox dl {margin: 0;}
-.stdbox dd {margin: 0 0 0 1em; padding: 0;}
-.funcbox {border:solid 1px #808080;font-size:x-small;padding:3px;margin:2px;
-      line-height: 120%;
-}
-
-.section table {border-collapse: collapse;}
-.section td {border: solid 1px gray; padding: 3px;}
