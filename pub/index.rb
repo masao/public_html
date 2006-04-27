@@ -1,16 +1,32 @@
 #!/usr/bin/env ruby
 # $Id$
 
-require "yaml"
 require "cgi"
 require "erb"
 
+require "rexml/document"
+#require "yaml"
+
 class CGI
    attr_accessor :lang, :tmpl
+   SORT_ACCEPT = [:year, :type]
+   SORT_DEFAULT = SORT_ACCEPT[0]
+   def sort_mode
+      if self.params["sort_mode"][0] and self.params["sort_mode"][0].size > 0
+         mode = self.params["sort_mode"][0].intern
+         if SORT_ACCEPT.member? mode
+            mode
+         else
+            SORT_DEFAULT
+         end
+      else
+         SORT_DEFAULT
+      end
+   end
 end
 
 DEFAULT_LANG = "ja"
-PUBDATA = "pub.yaml"
+PUBDATA = "pub.xml"
 LASTUPDATE = File::mtime( PUBDATA )
 
 cgi = CGI::new
@@ -19,15 +35,13 @@ cgi.tmpl = "pub.rhtml.#{cgi.lang}"
 
 print cgi.header("text/html; charset=UTF-8")
 
-pubs = []
-YAML::load_documents(open(PUBDATA)){|e| pubs << e }
-#p pubs
-
-sort_mode = :year
-pubs.select{|e| not e.nil? }.sort_by do |e|
-   e[sort_mode.to_s]
+pubs = REXML::Document.new(open(PUBDATA)).elements.to_a("/publist/pub")
+pubs.sort_by do |e|
+   e.elements[cgi.sort_mode.to_s].text
 end
-all_keys = pubs.map{|e| e[sort_mode] }.uniq.sort
-all_keys.reverse! if sort_mode == :year
 
-puts result = ERB::new( open("pub.rhtml.ja"){|f| f.read } ).result( binding )
+#   pubs << e.elements[cgi.sort_mode.to_s]
+all_keys = pubs.map{|e| e.elements[cgi.sort_mode.to_s].text }.uniq.sort
+all_keys.reverse! if cgi.sort_mode == :year
+
+puts result = ERB::new(open(cgi.tmpl){|f|f.read}, $SAFE, 2).result( binding )

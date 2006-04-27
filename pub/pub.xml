@@ -1,0 +1,197 @@
+<publist>
+  <pub type="book">
+    <author role="editor">Masao Takaku</author>
+    <author role="editor">Noriko Kando</author>
+    <title>Proceedings of the Sixth NTCIR Workshop Meeting</title>
+    <publisher>National Institute of Informatics</publisher>
+    <year>2005</year>
+    <month>12</month>
+    <page>122</page>
+  </pub>
+
+  <pub referee="true" type="journal">
+    <author>高久雅生</author>
+    <author>江草由佳</author>
+    <author>石塚英弘</author>
+    <title>Webサービスによる用語体系データの提供とその応用システム</title>
+    <journal>情報知識学会誌</journal>
+    <volume>14</volume>
+    <number>1</number>
+    <year>2004</year>
+    <page>
+      <start>11</start>
+      <end>22</end>
+    </page>
+  </pub>
+
+  <pub referee="true" type="journal">
+    <author>江草由佳</author>
+    <author>高久雅生</author>
+    <author>石塚英弘</author>
+    <title>分散環境におけるデータベースに関する情報の共有システム</title>
+    <journal>情報知識学会誌</journal>
+    <volume>14</volume>
+    <number>3</number>
+    <year>2004</year>
+    <page>
+      <start>1</start>
+      <end>17</end>
+    </page>
+  </pub>
+
+  <pub referee="true" type="conference">
+    <lang>en</lang>
+    <author>Yuka EGUSA</author>
+    <author>Masao TAKAKU</author>
+    <author>Hidehiro ISHIZUKA</author>
+    <title>Network Community Oriented Information Sharing System for Databases</title>
+    <journal>International Symposium on Digital Libraries and Knowledge Communities in Networked Information Society 2004 (DLKC'04)</journal>
+    <year>2004</year>
+    <month>3</month>
+    <country>Japan</country>
+    <city>Tsukuba</city>
+    <page>
+      <start>64</start>
+      <end>71</end>
+    </page>
+  </pub>
+
+  <pub referee="true" type="journal">
+    <author>高久雅生</author>
+    <author>江草由佳</author>
+    <author>伊東千夏</author>
+    <author>石塚英弘</author>
+    <title>データの再利用が可能な複数用語体系ブラウジングシステムの構築</title>
+    <journal>情報知識学会誌</journal>
+    <volume>13</volume>
+    <number>1</number>
+    <year>2003</year>
+    <page>
+      <start>10</start>
+      <end>22</end>
+    </page>
+  </pub>
+
+  <pub referee="true" type="journal">
+    <author>江草由佳</author>
+    <author>高久雅生</author>
+    <author>宇陀則彦</author>
+    <author>石塚英弘</author>
+    <title>Z39.50データベース選択支援環境</title>
+    <journal>情報知識学会誌</journal>
+    <volume>11</volume>
+    <number>2</number>
+    <year>2001</year>
+    <page>
+      <start>1</start>
+      <end>10</end>
+    </page>
+  </pub>
+
+  <pub type="misc">
+    <author>伊東千夏</author>
+    <author>高久雅生</author>
+    <author>江草由佳</author>
+    <author>大懸晶子</author>
+    <author>宇陀則彦</author>
+    <author>石塚英弘</author>
+    <title>用語体系の統合及び可視化システムの試作</title>
+    <subtitle>用語体系の補完及び相違点の発見を目的として</subtitle>
+    <journal>情報処理学会 情報学基礎研究会 研究報告</journal>
+    <volume>101</volume>
+    <number>65</number>
+    <year>2001</year>
+    <page>
+      <start>1</start>
+      <end>8</end>
+    </page>
+  </pub>
+
+  <pub type="misc">
+    <author>江草由佳</author>
+    <author>高久雅生</author>
+    <author>宇陀則彦</author>
+    <author>石塚英弘</author>
+    <title>情報共有によるZ39.50データベース選択支援環境</title>
+    <journal>第9回研究報告会講演論文集</journal>
+    <org>情報知識学会</org>
+    <city>東京</city>
+    <year>2001</year>
+    <month>5</month>
+    <page>
+      <start>37</start>
+      <end>44</end>
+
+    </page>
+  </pub>
+
+  <pub type="misc">
+    <author>高久雅生</author>
+    <author>江草由佳</author>
+    <author>宇陀則彦</author>
+    <author>石塚英弘</author>
+    <title>Z39.50による書誌データ検索システムの構築</title>
+    <subtitle>Dublin Coreを共通スキーマとして</subtitle>
+    <conference>第16回ディジタル図書館ワークショップ</conference>
+    <city>つくば</city>
+    <year>1999</year>
+    <month>11</month>
+    <journal>ディジタル図書館</journal>
+    <number>16</number>
+    <year>1999</year>
+    <page>
+      <start>97</start>
+      <end>106</end>
+    </page>
+    <url>http://www.dl.slis.tsukuba.ac.jp/DLjournal/No_16/12-masao/12-masao.html</url>
+  </pub>
+
+  <pub type="misc">
+    <author>高久雅生</author>
+    <author>石塚英弘</author>
+    <title>VRMLとJavaを用いたオリエンテーリング教育用ゲームの作成</title>
+    <journal>第6回研究報告会講演論文集</journal>
+    <org>情報知識学会</org>
+    <city>東京</city>
+    <year>1998</year>
+    <month>5</month>
+    <year>1998</year>
+    <page>
+      <start>53</start>
+      <end>59</end>
+    </page>
+  </pub>
+
+  <pub type="thesis">
+    <author>高久雅生</author>
+    <title>オリエンテーリング教育用ゲームの作成</title>
+    <city>つくば</city>
+    <org>図書館情報大学</org>
+    <year>1998</year>
+    <page>57</page>
+    <note>卒業論文</note>
+  </pub>
+
+  <pub type="thesis">
+    <author>高久雅生</author>
+    <title>Z39.50に基づく書誌データ検索システムの構築</title>
+    <city>つくば</city>
+    <org>図書館情報大学</org>
+    <year>2000</year>
+    <page>73</page>
+    <note>修士論文</note>
+  </pub>
+
+  <pub type="thesis">
+    <author>高久雅生</author>
+    <title>相互連携可能な情報提供システムの研究</title>
+    <subtitle>用語体系および検索システムへの適用</subtitle>
+    <title xml:lang="en">A Study of Cooperative Information Service Systems</title>
+    <subtitle xml:lang="en">Applications to Terminological Systems and Information Retrieval Systems</subtitle>
+    <city>つくば</city>
+    <org>筑波大学</org>
+    <year>2004</year>
+    <page>78</page>
+    <note>博士論文</note>
+  </pub>
+</publist>

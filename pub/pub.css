@@ -1,0 +1,24 @@
+body { line-height: 1.3; }
+#publist {
+margin-right: 2em;
+}
+#publist em {
+  font-style: normal;
+  text-decoration: underline;
+}
+span.type {
+padding: 1px;
+border: 1px solid gray;
+background-color: white;
+color: #c33;
+}
+span.year {
+padding: 1px;
+border: 1px solid gray;
+background-color: white;
+color: #3c3;
+}
+
+dd.bibdata {
+font-size: smaller;
+}

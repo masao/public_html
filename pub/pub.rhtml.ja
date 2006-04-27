@@ -4,6 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-JP">
 <link rel="stylesheet" href="../default.css" type="text/css">
+<link rel="stylesheet" href="pub.css" type="text/css">
 <link rev="made" href="mailto:masao@nii.ac.jp">
 <title>発表資料など</title>
 </head>
@@ -11,18 +12,69 @@
 <div class="last-update">最終更新日: <%= LASTUPDATE.strftime("%Y年%m月%d日") %></div>
 <h1>発表資料など</h1>
 <p>掲載論文誌等</p>
-<ul>
-  <% pubs.each do |pub| %>
-<li><span class="author"><%= pub["author"].to_a.join(", ") %></span>:
-<span class="title"><%= pub["title"] %>
-<% if pub["subtitle"] %>
-    : <span><%= pub["subtitle"] %></span>
+<dl id="publist">
+<% pubs.each do |pub| %>
+<dt class="title"><span class="year"><%= pub.text("year") %></span>
+<span class="type"><%= pub.attributes["type"] %></span>
+<span class="title"><%= pub.text("title") %>
+<% if pub.text("subtitle") %>
+: <span><%= pub.text("subtitle") %></span>
 <% end %>
-.
-<%= pub["journal"] %>,
-<%= pub["year"] %>
-  <% end %>
-</ul>
+</span>
+<dd class="author"><span class="author"><%= pub.get_elements("author").to_a.map{|e|
+    #STDERR.puts e
+    author = e.text
+    if author == "高久雅生" or author == "Masao Takaku"
+      author = "<em>#{author}</em>"
+    end
+    if e.attributes["role"] == "editor"
+      author << "(編)"
+    end
+    #STDERR.puts author
+    author
+    }.join(", ")
+%>
+</span>
+<dd class="bibdata">
+<% if not pub.text("journal").nil? %>
+<span class="journal"><%= pub.text("journal") %>;</span>
+<% end %>
+<% if not pub.text("publisher").nil? %>
+<span class="publisher"><%= pub.text("publisher") %>;</span>
+<% end %>
+<% if not pub.text("city").nil? %>
+<span class="city"><%= pub.text("city") %>;</span>
+<% end %>
+<% if not pub.text("org").nil? %>
+<span class="org"><%= pub.text("org") %>;</span>
+<% end %>
+<% if not pub.text("volume").nil? %>
+<span class="volume">vol.<%= pub.text("volume") %>;</span>
+<% end %>
+<% if not pub.text("number").nil? %>
+<span class="number">no.<%= pub.text("number") %>;</span>
+<% end %>
+<% page = pub.elements["page"] %>
+<% if not page.nil? %>
+<% if page.has_elements? %>
+<span class="page">pp.<%= page.elements["start"].text %>-<%= page.elements["end"].text %>;</span>
+<% else %>
+<span class="page"><%= pub.text("page") %>p.</span>
+<% end %>
+<% end %>
+<% if not pub.text("year").nil? %>
+<span class="pubdate">(<%= pub.text("year") %><% if not pub.text("month").nil? %><span class="month">-<%= "%02d" % pub.text("month").to_i %></span><% end %>)
+</span>
+<% end %>
+<% if not pub.text("note").nil? %>
+<span class="note"><%= pub.text("note") %></span>
+<% end %>
+<dd class="url">
+<% if not pub.text("url").nil? %>
+<span class="url"><a href=""><%= pub.text("url") %></a></span>
+<% end %>
+<% end %>
+</dl>
 <hr>
 <address>
 高久雅生 (Masao Takaku)<br>
