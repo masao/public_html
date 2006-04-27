@@ -12,6 +12,12 @@
 <div class="last-update">最終更新日: <%= LASTUPDATE.strftime("%Y年%m月%d日") %></div>
 <h1>発表論文、講演資料など</h1>
 <p>これまでに執筆、発表した論文等の情報です。</p>
+<div id="sortby_list">
+<p>ソート方式:</p>
+<li><%= cgi.sort_mode == :year ? "発表年月" : "<a href=\"?sort_mode=year\">発表年月</a>" %>
+<li><%= cgi.sort_mode == :author ? "筆頭著者" : "<a href=\"?sort_mode=author\">筆頭著者</a>" %>
+</ul>
+</div>
 <ul id="toc">
 <% toc_keys.each do |k| %>
 <li><a href="#pubid<%= pubs.find{|e|

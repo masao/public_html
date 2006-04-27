@@ -9,7 +9,7 @@ require "rexml/document"
 
 class CGI
    attr_accessor :lang, :tmpl
-   SORT_ACCEPT = [:year, :type]
+   SORT_ACCEPT = [:year, :type, :author]
    SORT_DEFAULT = SORT_ACCEPT[0]
    def sort_mode
       if self.params["sort_mode"][0] and self.params["sort_mode"][0].size > 0
