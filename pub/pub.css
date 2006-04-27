@@ -37,12 +37,15 @@ margin-top: 0.5em;
     font-size: smaller;
 }
 
-#sortby_list p { display: inline; }
-#sortby_list ul {
+#sortby_list p {
+display: inline; 
+margin-left: 1em;
+}
+#sortby_list ul { 
 display: inline;
 list-style-type: none;
 }
-#sortby_list li {
-display: inline;
-padding: .1em .5em;
+#sortby_list li { 
+display: inline; 
+padding: .1em .5em; 
 }

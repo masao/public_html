@@ -11,7 +11,7 @@
 <body>
 <div class="last-update">最終更新日: <%= LASTUPDATE.strftime("%Y年%m月%d日") %></div>
 <h1>発表論文、講演資料など</h1>
-<p>これまでに執筆、発表した論文等の情報です。</p>
+<p>これまでに執筆、発表した論文等の情報です（全 <%= pubs.size %> 件）。</p>
 <div id="sortby_list">
 <p>ソート方式:</p>
 <li><%= cgi.sort_mode == :year ? "発表年月" : "<a href=\"?sort_mode=year\">発表年月</a>" %>
@@ -39,7 +39,7 @@
 <dd class="author"><span class="author"><%= pub.get_elements("author").to_a.map{|e|
     #STDERR.puts e
     author = e.text
-    if author == "高久雅生" or author == "Masao Takaku"
+    if author =~ /高久\s*雅生/ or author =~ /Masao Takaku/i
       author = "<em>#{author}</em>"
     end
     if e.attributes["role"] == "editor"
