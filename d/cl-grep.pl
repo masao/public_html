@@ -14,7 +14,7 @@ foreach my $file (@ARGV) {
 my $cl_new = ChangeLogReader->new;
 foreach my $ymd (reverse sort keys %{$cl->{all}}) {
     my $ent = $cl->{all}->{$ymd};
-    print $ymd,"  ",$ent->{"1"}->{a},"\n\n";
+    print $ymd,"  ",$ent->{1}->{a},"\n\n";
     for (my $i = $ent->{curid}; $i >= 1; $i--) {
 	if ($ent->{$i}->{ho} =~ s/\s*\[pub\]\s*//o) {
 	    my $header = $ent->{$i}->{ho};
