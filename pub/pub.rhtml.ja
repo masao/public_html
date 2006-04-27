@@ -22,8 +22,9 @@
 <ul id="toc">
 <% toc_keys.each do |k| %>
 <li><a href="#pubid<%= pubs.find{|e|
-    k == e.elements[cgi.sort_mode.to_s].text
+    k == cgi.get_sort_key(e)
     }.object_id %>"><%= k %></a>
+<span class="toc_size">(<%= pubs.find_all{|e| k == cgi.get_sort_key(e) }.size %>)</span>
 <% end %>
 </ul>
 <dl id="publist">
