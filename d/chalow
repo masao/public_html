@@ -939,7 +939,7 @@ sub make_month_page_list {
     my ($start_year) = ($month_list[0] =~ /^(\d\d\d\d)/);
     my ($end_year) = ($month_list[$#month_list] =~ /^(\d\d\d\d)/);
     my $month_page_list = "";
-    for (my $y = $end_year; $y >= $start_year; $y--) { # year loop
+    for (my $y = $start_year; $y <= $end_year; $y++) { # year loop
 	$month_page_list .= "$y : ";
 	for (my $m = 1; $m <= 12; $m++) { # month loop	
 	    my $m0 = sprintf "%02d", $m;
