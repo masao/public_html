@@ -19,6 +19,17 @@ background-color: white;
 color: #3c3;
 }
 
-dd.bibdata {
+dd.bibdata, dd.url {
 font-size: smaller;
+}
+dt {
+margin-top: 0.5em;
+}
+
+#toc {
+    list-style-type: none;
+}
+#toc li {
+    display: inline;
+    padding: 0px 5px;
 }

@@ -40,8 +40,8 @@ pubs.sort_by do |e|
    e.elements[cgi.sort_mode.to_s].text
 end
 
-#   pubs << e.elements[cgi.sort_mode.to_s]
-all_keys = pubs.map{|e| e.elements[cgi.sort_mode.to_s].text }.uniq.sort
-all_keys.reverse! if cgi.sort_mode == :year
+# pubs << e.elements[cgi.sort_mode.to_s]
+toc_keys = pubs.map{|e| e.elements[cgi.sort_mode.to_s].text }.uniq.sort
+toc_keys.reverse! if cgi.sort_mode == :year
 
 puts result = ERB::new(open(cgi.tmpl){|f|f.read}, $SAFE, 2).result( binding )
