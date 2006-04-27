@@ -1,4 +1,14 @@
 ---
+type: "conference"
+author:
+ - "Masao Takaku"
+ - "Noriko Kando"
+title: "Proceedings of the Sixth NTCIR Workshop Meeting"
+year: 2005
+month: 12
+page: 12
+
+---
 referee: true
 type:    "journal"
 author: 
