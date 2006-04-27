@@ -30,8 +30,8 @@ page:
 
 ---
 referee: true
-type:    "conference"
-lang:	 "en"
+type:  "conference"
+lang:  "en"
 author:
   - "Yuka EGUSA"
   - "Masao TAKAKU"
@@ -106,7 +106,7 @@ author:
  - "高久雅生"
  - "宇陀則彦"
  - "石塚英弘"
-title: 	"情報共有によるZ39.50データベース選択支援環境"
+title: "情報共有によるZ39.50データベース選択支援環境"
 journal: "第9回研究報告会講演論文集"
 org: "情報知識学会"
 city: "東京"
@@ -143,12 +143,11 @@ author:
  - "高久雅生"
  - "石塚英弘"
 title: "VRMLとJavaを用いたオリエンテーリング教育用ゲームの作成"
-conference: "第6回研究報告会講演論文集"
+journal: "第6回研究報告会講演論文集"
 org: "情報知識学会"
 city: "東京"
 year: 1998
 month: 5
-publisher: "情報知識学会"
 year: 1998
 page:
  start: 53
