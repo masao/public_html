@@ -141,9 +141,20 @@ sub store_item {
     # item header - case 2: "* AAA:\n"
     # item header - case 3: "* AAA: BBB\n"
     # item header - case 4: "* AAA\n"
-    my ($rest) = ($ih =~ s/:(\s.*)$/:/s) ? $1 : ""; # for case 1,2,3
-    $rest =~ s/^ +//;
-    my $cont = $rest.join("", @$linesp);
+    my $rest;
+    if ($ih =~ s/:\s*(.*)$/:/o) { # for case 1,2,3
+	$rest = $1;
+    } elsif ($$linesp[0] =~ /:/o) {
+	$ih .= shift @$linesp;
+	$ih =~ s!(.)\n\t(.)!"$1$2"=~m/^[\x00-x7f]+$/o ? "$1 $2" : "$1$2"!ge;
+	if ($ih =~ s/:\s*(.*)$/:/o) { # for case 1,2,3
+	    $rest = $1;
+	}
+    }
+    $rest =~ s/\s+/ /;
+    $rest =~ s/\s+$//;
+    $rest =~ s/^\s+//;
+    my $cont = "$rest\n".join("", @$linesp);
     if ($ih =~ /^p:/) { # Ignoring private items
 	return;
     } elsif ($ih =~ /^(message-top|message-bottom):/) {	# pragma items
