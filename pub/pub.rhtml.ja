@@ -15,6 +15,7 @@
 <div id="sortby_list">
 <p>ソート方式:</p>
 <li><%= cgi.sort_mode == :year ? "発表年月" : "<a href=\"?sort_mode=year\">発表年月</a>" %>
+<li><%= cgi.sort_mode == :type ? "論文種別" : "<a href=\"?sort_mode=type\">論文種別</a>" %>
 <li><%= cgi.sort_mode == :author ? "筆頭著者" : "<a href=\"?sort_mode=author\">筆頭著者</a>" %>
 </ul>
 </div>
