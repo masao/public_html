@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-JP">
+<link rel="stylesheet" href="../default.css" type="text/css">
+<link rev="made" href="mailto:masao@nii.ac.jp">
+<title>発表資料など</title>
+</head>
+<body>
+<div class="last-update">最終更新日: <%= LASTUPDATE.strftime("%Y年%m月%d日") %></div>
+<h1>発表資料など</h1>
+<p>掲載論文誌等</p>
+<ul>
+  <% pubs.each do |pub| %>
+<li><%= pub["author"].to_a.join(", ") %>:
+<%= pub["title"] %><%= if pub["subtitle"] then ": " + pub["subtitle"]; end %>
+  <% end %>
+</ul>
+<hr>
+<address>
+高久雅生 (Masao Takaku)<br>
+<a href="http://masao.jpn.org/">http://masao.jpn.org/</a>, 
+<a href="mailto:masao@nii.ac.jp">masao@nii.ac.jp</a>
+</address>
+<div class="id">$Id$</div>
+</body>
+</html>
