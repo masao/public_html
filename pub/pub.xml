@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <publist>
 
+  <pub type="misc">
+    <author>高久雅生</author>
+    <title>相互運用可能な用語体系の構築を目指して</title>
+    <subtitle>用語辞書，分類表，Web ディレクトリを対象として</subtitle>
+    <conference>第10回情報知識学フォーラム</conference>
+    <year>2005</year>
+    <month>10</month>
+    <city>東京</city>
+    <journal>情報知識学会誌</journal>
+    <volume>15</volume>
+    <number>4</number>
+    <page>
+      <start>47</start>
+      <end>56</end>
+    </page>
+  </pub>
+
   <pub type="conference">
     <author>Keizo Oyama</author>
     <author>Masao Takaku</author>
@@ -30,6 +47,7 @@
     <month>12</month>
     <day>6-9</day>
     <page>569</page>
+    <isbn>4-86049-033-9</isbn>
   </pub>
 
   <pub referee="true" type="journal">
