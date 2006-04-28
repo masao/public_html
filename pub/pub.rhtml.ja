@@ -22,9 +22,9 @@
 <ul id="toc">
 <% toc_keys.each do |k| %>
 <li><a href="#pubid<%= pubs.find{|e|
-    k == cgi.get_sort_key(e)
+    k == cgi.toc_key(e)
     }.object_id %>"><%= k %></a>
-<span class="toc_size">(<%= pubs.find_all{|e| k == cgi.get_sort_key(e) }.size %>)</span>
+<span class="toc_size">(<%= pubs.find_all{|e| k == cgi.toc_key(e) }.size %>)</span>
 <% end %>
 </ul>
 <dl id="publist">
@@ -35,7 +35,7 @@
 <% if pub.text("subtitle") %>
 : <span><%= pub.text("subtitle") %></span>
 <% end %>
-</span></a>
+</span></a></dt>
 <dd class="author"><span class="author"><%= pub.get_elements("author").to_a.map{|e|
     #STDERR.puts e
     author = e.text
@@ -49,7 +49,7 @@
     author
     }.join(", ")
 %>
-</span>
+</span></dd>
 <dd class="bibdata">
 <% if not pub.text("journal").nil? %>
 <span class="journal"><%= pub.text("journal") %>;</span>
@@ -81,12 +81,22 @@
 <span class="pubdate">(<%= pub.text("year") %><% if not pub.text("month").nil? %><span class="month">-<%= "%02d" % pub.text("month").to_i %></span><% end %>)
 </span>
 <% end %>
+<% if not pub.text("isbn").nil? %>
+<span class="isbn">(ISBN:<%= pub.text("isbn") %>)</span>
+<% end %>
 <% if not pub.text("note").nil? %>
 <span class="note"><%= pub.text("note") %></span>
 <% end %>
-<dd class="url">
+</dd>
 <% if not pub.text("url").nil? %>
-<span class="url"><a href=""><%= pub.text("url") %></a></span>
+<dd class="url">
+<span class="url"><a href="<%= pub.text("url") %>"><%= pub.text("url") %></a></span>
+</dd>
+<% end %>
+<% if not pub.text("doi").nil? %>
+<dd class="doi">
+<span class="doi"><a href="<%= pub.text("doi") %>"><%= pub.text("doi") %></a></span>
+</dd>
 <% end %>
 <% end %>
 </dl>
