@@ -1,12 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
 <publist>
-  <pub type="book">
-    <author role="editor">Masao Takaku</author>
-    <author role="editor">Noriko Kando</author>
-    <title>Proceedings of the Sixth NTCIR Workshop Meeting</title>
+
+  <pub type="conference">
+    <author>Keizo Oyama</author>
+    <author>Masao Takaku</author>
+    <author>Haruko Ishikawa</author>
+    <author>Akiko Aizawa</author>
+    <author>Hayato Yamana</author>
+    <title>Overview of the NTCIR-5 WEB Navigational Retrieval Subtask 2 (Navi-2)</title>
+    <journal>Proceedings of the Fifth NTCIR Workshop Meeting on Evaluation of Information Access Technologies: Informaion Retrieval, Question Answering and Cross-Lingual Information Access</journal>
     <publisher>National Institute of Informatics</publisher>
+    <city>Tokyo</city>
     <year>2005</year>
     <month>12</month>
-    <page>122</page>
+    <page>
+      <start>423</start>
+      <end>442</end>
+    </page>
+  </pub>
+
+  <pub type="book">
+    <author role="editor">Noriko Kando</author>
+    <author role="editor">Masao Takaku</author>
+    <title>Proceedings of the Fifth NTCIR Workshop Meeting on Evaluation of Information Access Technologies</title>
+    <subtitle>Informaion Retrieval, Question Answering and Cross-Lingual Information Access</subtitle>
+    <publisher>National Institute of Informatics</publisher>
+    <city>Tokyo</city>
+    <year>2005</year>
+    <month>12</month>
+    <day>6-9</day>
+    <page>569</page>
   </pub>
 
   <pub referee="true" type="journal">
