@@ -6,13 +6,13 @@ margin-right: 2em;
   font-style: normal;
   text-decoration: underline;
 }
-span.type {
+dt .type {
 padding: 1px;
 border: 1px solid gray;
 background-color: white;
 color: #c33;
 }
-span.year {
+dt .year {
 padding: 1px;
 border: 1px solid gray;
 background-color: white;
