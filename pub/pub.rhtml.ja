@@ -1,5 +1,5 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-	"http://www.w3.org/TR/html4/strict.dtd">
+"http://www.w3.org/TR/html4/strict.dtd">
 <html lang="ja">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-JP">
@@ -14,9 +14,21 @@
 <p>これまでに執筆、発表した論文等の情報です（全 <%= pubs.size %> 件）。</p>
 <div id="sortby_list">
 <p>ソート方式:</p>
-<li><%= cgi.sort_mode == :year ? "発表年月" : "<a href=\"?sort_mode=year\">発表年月</a>" %>
-<li><%= cgi.sort_mode == :type ? "論文種別" : "<a href=\"?sort_mode=type\">論文種別</a>" %>
-<li><%= cgi.sort_mode == :author ? "筆頭著者" : "<a href=\"?sort_mode=author\">筆頭著者</a>" %>
+<li><% if cgi.sort_mode == :year %>
+<strong>発表年月</strong>
+<% else %>
+<a href="./?sort_mode=year">発表年月</a>
+<% end %>
+<li><% if cgi.sort_mode == :type %>
+<strong>論文種別</strong>
+<% else %>
+<a href="./?sort_mode=type">論文種別</a>
+<% end %>
+<li><% if cgi.sort_mode == :author %>
+<strong>筆頭著者</strong>
+<% else %>
+<a href="./?sort_mode=author">筆頭著者</a>
+<% end %>
 </ul>
 </div>
 <ul id="toc">
