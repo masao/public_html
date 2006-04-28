@@ -6,6 +6,7 @@ margin-right: 2em;
   font-style: normal;
   text-decoration: underline;
 }
+
 dt .type {
 padding: 1px;
 border: 1px solid gray;
@@ -19,6 +20,7 @@ background-color: white;
 color: #3c3;
 }
 
+dd { text-indent: 0; }
 dd.bibdata, dd.url {
 font-size: smaller;
 }
