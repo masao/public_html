@@ -67,6 +67,9 @@ print "Content-type: text/html; charset=euc-jp\n\n";
 my $outstr = "";
 my $cnt = 0;
 
+my $ascii = '[\x00-\x7F]';
+my $twoBytes = '[\x8E\xA1-\xFE][\xA1-\xFE]';
+my $threeBytes = '\x8F[\xA1-\xFE][\xA1-\xFE]';
 
 sub clean {
     local ($_) = @_;
@@ -101,7 +104,8 @@ if (defined $key and $key !~ /^\s*$/) {
 		$match_num++ if ($c =~ /^.+\[$tmp\].*\t.*$/);
  	    } else {
 		my $tmp = clean($k);
-		$match_num++ if ($c =~ m|$tmp|i);
+		$match_num++
+		    if $c =~ /^(?:$ascii|$twoBytes|$threeBytes)*?(?:$tmp)/i;
 		push @regular_keys, $tmp;
 	    }
 	}
@@ -128,7 +132,7 @@ if (defined $key and $key !~ /^\s*$/) {
 		    $pos =~ s!^(([\x80-\xff]{2})*?)[\x80-\xff]$!$1!;
 		    $c = qq($pre$k$pos);
 		    my $p = join('|', @regular_keys);
-		    $c =~ s!($p)!$open_tag$1$close_tag!gi;
+		    $c =~ s!\G((?:$ascii|$twoBytes|$threeBytes)*?)($p)!$1$open_tag$2$close_tag!gi;
 		}
 	    } elsif ($mode == 1) { # アイテムモード
 		my ($file, $id) = ($date =~ /href="(.*?.html).*?">\[(.+?)\]/);
