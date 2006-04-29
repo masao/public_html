@@ -4,7 +4,7 @@
 #Options +FollowSymLinks
 
 AddHandler cgi-script .rb
-DirectoryIndex index.rb
+DirectoryIndex index.cgi
 
 <Files "*.rhtml*">
 	deny from all
