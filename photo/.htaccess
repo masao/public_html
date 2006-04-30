@@ -23,8 +23,8 @@ require user masao
 
 ## Redirect from old style:
 # 2003-01-02T08:44:23.html вк ./20030102t084423.html
-RedirectMatch permanent ^(.*)/([0-9][0-9][0-9][0-9])-([0-9][0-9])-([0-9][0-9])T([0-9][0-9]):([0-9][0-9]):([0-9][0-9])\.html$ $1/$2$3$4t$5$6$7.html
-RedirectMatch permanent ^(.*)/([0-9][0-9][0-9][0-9])-([0-9][0-9])\.html$ $1/$2$3.html
+#RedirectMatch permanent ^(.*)/([0-9][0-9][0-9][0-9])-([0-9][0-9])-([0-9][0-9])T([0-9][0-9]):([0-9][0-9]):([0-9][0-9])\.html$ $1/$2$3$4t$5$6$7.html
+#RedirectMatch permanent ^(.*)/([0-9][0-9][0-9][0-9])-([0-9][0-9])\.html$ $1/$2$3.html
 
 ## html_anchor:
 RewriteEngine on
