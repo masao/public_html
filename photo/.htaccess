@@ -28,6 +28,6 @@ require user masao
 
 ## html_anchor:
 RewriteEngine on
-RewriteBase /~masao/photo/
+RewriteBase /photo/
 RewriteRule ^([0-9]{8}t[0-9]{6})\.html$ ./?photo=$1
 RewriteRule ^([0-9]{6})\.html$ ./?date=$1
