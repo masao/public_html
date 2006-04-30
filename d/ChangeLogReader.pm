@@ -142,7 +142,7 @@ sub store_item {
     # item header - case 3: "* AAA: BBB\n"
     # item header - case 4: "* AAA\n"
     my $rest;
-    if ($ih =~ s/:\s*(.*)$/:/o) { # for case 1,2,3
+    if ($ih =~ s/:\s+(.*)$/:/o) { # for case 1,2,3
 	$rest = $1;
     } elsif ($$linesp[0] =~ /:/o) {
 	$ih .= shift @$linesp;
