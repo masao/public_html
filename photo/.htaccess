@@ -3,7 +3,7 @@
 # if you run p-album2 with symbolic link, use settings below.
 #Options +FollowSymLinks
 
-AddHandler cgi-script .rb
+#AddHandler cgi-script .rb
 DirectoryIndex index.cgi
 
 <Files "*.rhtml*">
