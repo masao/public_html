@@ -26,7 +26,7 @@
 alias :_orig_anchor :anchor
 
 def anchor( s )
-   if ENV["SERVER_NAME"] == "localhost" and ENV["SERVER_NAME"].nil?
+   if ENV["SERVER_NAME"] == "localhost" or ENV["SERVER_NAME"].nil?
       _orig_anchor( s )
    else
       case s
