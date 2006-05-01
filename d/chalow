@@ -498,7 +498,7 @@ sub okikae {
     s!^\-{4}!<hr>!gms;
 
     ### URL。Hiki の記法を採用。
-    s!\[\[(.+?)\s*\|\s*(.+?)\]\]!get_link_str($1, $2)!gmse;
+    s!\[\[(.+?)\s*\|\s*(.+?)\]\]!get_link_str($1, $2)!gme;
 
     ### 表。Hiki の記法を採用。
     s!(^(\|\|[^\n]+\n)+)!'<table><tr>'.
