@@ -240,3 +240,7 @@ code {
 	border-left: 1px solid gray;
 	line-height: 1.0;
 }
+
+a.delicious img {
+	border: none;
+}
