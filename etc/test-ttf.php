@@ -144,7 +144,7 @@ PHPに同梱されているGDライブラリの機能を使って、
 <a href="http://nais.to/~yto/doc/zb/0002.html">無償・無保証・著作権放棄</a>の扱いでご自由にどうぞ。
 </p>
 <ul>
-  <li><a href="test-ttf.php.txt">test-ttf.php.txt</a>
+  <li><a href="test-ttf_php.txt">test-ttf_php.txt</a>
 </ul>
 <h2>関連リンク</h2>
 <ul>
