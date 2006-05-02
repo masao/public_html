@@ -123,13 +123,12 @@ if (defined $key and $key !~ /^\s*$/) {
 	    my $tmp_tmpl = $simple_template;
 	    if ($mode == 0) { # シンプルモード
 		if (defined $pkey and 
-		    $c =~ m|^.*?(.{0,$clen})($pkey)(.{0,$clen}).*?$|i) {
+		    $c =~ m!^((?:$ascii|$twoBytes|$threeBytes)*?)($pkey)(.*)$!i) {
 		    my ($pre, $k, $pos) = ($1, $2, $3);
-		    # 80-ff が奇数だったら 1 バイト削除 (要ブラッシュ up)
-		    $pre =~ s!^[\x80-\xff](([\x80-\xff]{2})*[\x00-\x7f])!$1!;
-		    $pre =~ s!^[\x80-\xff](([\x80-\xff]{2})*)$!$1!;
-		    $pos =~ s!^(.*?[\x00-\x7f]([\x80-\xff]{2})*?)[\x80-\xff]$!$1!;
-		    $pos =~ s!^(([\x80-\xff]{2})*?)[\x80-\xff]$!$1!;
+		    $pre =~ s/^(?:$ascii|$twoBytes|$threeBytes)//
+			while length($pre) > $clen;
+		    $pos =~ s/(?:$ascii|$twoBytes|$threeBytes)$//
+			while length($pos) > $clen;
 		    $c = qq($pre$k$pos);
 		    my $p = join('|', @regular_keys);
 		    $c =~ s!\G((?:$ascii|$twoBytes|$threeBytes)*?)($p)!$1$open_tag$2$close_tag!gi;
