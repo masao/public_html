@@ -506,16 +506,16 @@ sub okikae {
 	    .'</table>'!gsme;
 
     ### 引用 (quote): ">>" と "<<" で囲む
-    s!^>>\n!<blockquote>!gm;
-    s!^<<\n!</blockquote>!gm;
+    s!^(>>|&lt;&lt;)\n!<blockquote>!gm;
+    s!^(<<|&gt;&gt;)\n!</blockquote>!gm;
 
     ### 引用 (quote): "| ..." か "> ..."
     if ($remove_quote_mark == 1) {
 	my $a;
-	s!((^((\||>)[^\n]*)\n)+)!'<blockquote>'.($a = $1,
+	s!((^((\||>|&lt;)[^\n]*)\n)+)!'<blockquote>'.($a = $1,
 	    $a =~ s{^(\||>)\s?}{}gm, $a).'</blockquote>'!gme;
     } else {
-	s!((^((\||>)[^\n]*)\n)+)!<blockquote>$1</blockquote>!gmx;
+	s!((^((\||>|&lt;)[^\n]*)\n)+)!<blockquote>$1</blockquote>!gmx;
     }
 
     ### 日付で参照リンク
