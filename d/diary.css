@@ -243,4 +243,5 @@ code {
 
 a.delicious img {
 	border: none;
+	vertical-align: middle;
 }
