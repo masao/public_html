@@ -478,11 +478,11 @@ sub okikae {
     }
 
     s/&/&amp;/go;
-    s/\]>/\]&gt;/go;
-#    s/>/&gt;/go;		# > が &.. になると、URL とか引用のマッチ狂う
-#    s/"/&quot;/go;		# ";
+    #s/\]>/\]&gt;/go;
+    s/>/&gt;/go;		# > が &.. になると、URL とか引用のマッチ狂う
+    s/"/&quot;/go;		# ";
     ### "<" は置き換える。
-    s|<(/?[a-z!]+)|&lt;$1|gio;
+    s|<|&lt;|go;
 #    s|<(/?[a-z]+)|&lt;$1|gio;	# コメント (<!-- -->) をのこしたい場合はこれ
     # カスタマイズのヒント: <s></s> を残す→ 
     # s|<(/?[a-rt-z]+)|&lt;$1|gi; <b> を残す→ 
@@ -527,7 +527,7 @@ sub okikae {
     # 正規表現は http://www.din.or.jp/~ohzaki/perl.htm#httpURL より。
     # バックスラッシュを用いたURL中での改行に対応 021025
     #my $URLCHARS = "[-_.!~*'()a-zA-Z0-9;/?:@&=+,%\#\$]";
-    my $URLCHARS = "[-_.!~*'a-zA-Z0-9;/?:@&=+,%\#\$]";
+    my $URLCHARS = "(&(?!(lt|gt|quot);)|[-_.!~*'a-zA-Z0-9;/?:@=+,%\#\$])";
     my $URLDELIM = "\\\\\\n *";
     s{(?<![\"\=|])((s?https?|ftp)://($URLCHARS+)($URLDELIM($URLCHARS+))*)}
     {'<a href="'.join('', split(/$URLDELIM/, $1)).'">'.
