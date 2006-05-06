@@ -7,7 +7,7 @@ ChangeLog: ../private/ChangeLog cl-grep.pl ChangeLogReader.pm
 	./cl-grep.pl ../private/ChangeLog > ChangeLog
 
 ping: index.html
-	curl -sS -X POST -H "Content-Type: text/xml; charset=UTF8" \
+	curl -sS -o ping -X POST -H "Content-Type: text/xml; charset=UTF8" \
 		-d @../private/ping.xml \
 		http://rpc.technorati.jp/rpc/ping \
 		http://api.my.yahoo.co.jp/RPC2 \
@@ -20,5 +20,4 @@ ping: index.html
 		http://rpc.technorati.com/rpc/ping \
 		http://rpc.technorati.jp/rpc/ping \
 		http://rpc.weblogs.com/RPC2 \
-		http://www.blogpeople.net/servlet/weblogUpdates > /dev/null
-	touch ping
+		http://www.blogpeople.net/servlet/weblogUpdates > .ping
