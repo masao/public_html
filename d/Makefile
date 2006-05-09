@@ -20,4 +20,6 @@ ping: index.html
 		http://rpc.technorati.com/rpc/ping \
 		http://rpc.technorati.jp/rpc/ping \
 		http://rpc.weblogs.com/RPC2 \
-		http://www.blogpeople.net/servlet/weblogUpdates > .ping
+		http://www.blogpeople.net/servlet/weblogUpdates \
+		http://r.hatena.ne.jp/rpc \
+		> ping
