@@ -22,5 +22,5 @@ ping: index.html
 		http://rpc.weblogs.com/RPC2 \
 		http://www.blogpeople.net/servlet/weblogUpdates \
 		http://r.hatena.ne.jp/rpc \
-		http://www.bloglines.com/ping \
+		http://rpc.bloglines.com/update \
 		> ping
