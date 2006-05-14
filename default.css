@@ -18,6 +18,11 @@
     color: navy;
     text-indent: 0;
   }
+  #navi {
+    margin: 0;
+    font-size: smaller;
+    float: left;
+  }
   div.id {
     font-style: italic;
     font-size: smaller;

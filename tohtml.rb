@@ -51,12 +51,15 @@ class ToHTML
    def initialize( content, opt )
       @content = content
       @opt = opt
+      @opt["title.short"] = @opt["title"] if not @opt["title.short"]
+      @opt["navi"] = true if not @opt["navi"] == "false"
       @opt["css"] = HierFilename.new( "default.css" ) if @opt["css"].nil?
    end
    def expand( template = "template.html.in" )
       body = HikiDoc.new( @content ).to_html
       body = expand_plugin( body )
-      ERB.new( open(HierFilename.new(template).to_s){|io| io.read } ).result( binding )
+      ERB.new( open(HierFilename.new(template).to_s){|io| io.read },
+               nil, "<>" ).result( binding )
    end
    def expand_plugin( text )
       #STDERR.puts text
@@ -67,10 +70,10 @@ class ToHTML
    end
    def method_missing( name, *args )
       name = name.to_s.gsub("_", ".")
-      if @opt.has_key?( name )
+      if @opt.has_key?( name ) or @opt.has_key?( name = name.split(/\./)[0] )
          @opt[ name ]
       else
-         raise "method missing: #{name}: #{args}"
+         ""
       end
    end
 end

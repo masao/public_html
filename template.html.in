@@ -9,6 +9,9 @@
 <title><%= title %></title>
 </head>
 <body>
+<% if not navi == "false" %>
+<div id="navi"><a href="./">HOME</a> &gt;&gt; <%= title_short %></div>
+<% end %>
 <div class="last-update">最終更新日: <%= date_modified %></div>
 <h1><%= title %></h1>
 <%= body %>
