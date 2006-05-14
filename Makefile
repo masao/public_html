@@ -1,7 +1,7 @@
 # $Id$
 #
 
-HTML =	index.html
+HTML =	index.html profile.html
 
 all: $(HTML) chalow rsync
 
@@ -20,5 +20,5 @@ rsync:
 lint:
 	./htmllint-all.rb
 
-%.html: %.html.in header.html.in tohtml.rb
+%.html: %.html.in template.html.in tohtml.rb
 	./tohtml.rb $< > $@
