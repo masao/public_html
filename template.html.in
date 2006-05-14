@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="EUC-JP"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-JP" />
+<link rev="made" href="mailto:masao@nii.ac.jp" />
+<link rel="stylesheet" href="<%= css %>" type="text/css" />
+<title><%= title %></title>
+</head>
+<body>
+<div class="last-update">最終更新日: <%= date_modified %></div>
+<h1><%= title %></h1>
+<%= body %>
+<hr />
+<address>高久雅生 (Takaku Masao)<br />
+<a href="http://masao.jpn.org/">http://masao.jpn.org/</a>,
+<a href="mailto:masao@nii.ac.jp">masao@nii.ac.jp</a></address>
+</body>
+</html>

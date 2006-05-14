@@ -53,7 +53,7 @@ class ToHTML
       @opt = opt
       @opt["css"] = HierFilename.new( "default.css" ) if @opt["css"].nil?
    end
-   def expand( template = "header.html.in" )
+   def expand( template = "template.html.in" )
       body = HikiDoc.new( @content ).to_html
       body = expand_plugin( body )
       ERB.new( open(HierFilename.new(template).to_s){|io| io.read } ).result( binding )

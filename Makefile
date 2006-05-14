@@ -1,7 +1,9 @@
 # $Id$
 #
 
-all: chalow rsync
+HTML =	index.html
+
+all: $(HTML) chalow rsync
 
 # chalow
 chalow:
@@ -17,3 +19,6 @@ rsync:
 #	% sort -nr score | less
 lint:
 	./htmllint-all.rb
+
+%.html: %.html.in header.html.in tohtml.rb
+	./tohtml.rb $< > $@
