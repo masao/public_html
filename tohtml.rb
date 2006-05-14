@@ -60,8 +60,8 @@ class ToHTML
    end
    def expand_plugin( text )
       #STDERR.puts text
-      text.gsub!(/<div class="plugin">\{\{\s*(\w+)\s*(.*?)\s*\}\}<\/div>(?=\n|$)/ms) do |match|
-         STDERR.puts match
+      text.gsub(/<div class="plugin">\{\{\s*(\w+)\s*(.*?)\s*\}\}<\/div>(?=\n|$)/ms) do |match|
+         #STDERR.puts match
          Plugin.const_get($1.capitalize).new.expand( $2 )
       end
    end
