@@ -1,12 +1,10 @@
 # $Id$
-#
 
 HTML	= index.html profile.html history.html etc/firefox.html etc/ir-journal.html
-SUBDIR	= etc
 
 all: $(HTML) chalow
 
-%.html: %.html.in template.html.in tohtml.rb tohtml.conf
+%.html: %.hikidoc template.html.in tohtml.rb tohtml.conf
 	./tohtml.rb $< > $@
 
 # chalow
