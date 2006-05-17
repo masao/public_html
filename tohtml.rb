@@ -64,7 +64,7 @@ class ToHTML
       if @conf["css"].nil?
          @conf["css"] = HierFilename.new( "default.css", File.dirname( file ) )
       end
-      STDERR.puts @rootdir
+      #STDERR.puts @rootdir
    end
    def parse( file )
       content = open(file){|io| io.readlines }
