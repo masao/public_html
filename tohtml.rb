@@ -41,8 +41,6 @@ class Plugin
    end
 
    class Div
-      def initialize
-      end
       def expand( args )
          lines = args.split(/\n/)
          attrs = lines.shift
