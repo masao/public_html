@@ -1,8 +1,9 @@
 #!/usr/local/bin/ruby
 # $Id$
 
+require "yaml"
+require "erb"
 require "hikidoc"
-require 'erb'
 
 # HierFilename:
 #
@@ -23,7 +24,6 @@ end
 
 class Plugin
    def initialize( content )
-      Plugin::Div.new
       content.gsub!(/\A<div class=(["'])plugin\1>\{\{\s*(.*)\s*\}\}<\/div>\Z/imso, '\2')
       content.gsub!(/\A\s*(\w+)\s*(.*)\Z/imso) do
          name = $1
@@ -47,8 +47,9 @@ class Plugin
 end
 
 class ToHTML
-   attr_reader :content
-   def initialize( content, opt )
+   attr_reader :content, :conf
+   def initialize( conf, content, opt )
+      @conf = conf
       @content = content
       @opt = opt
       @opt["title.short"] = @opt["title"] if not @opt["title.short"]
@@ -73,12 +74,27 @@ class ToHTML
       if @opt.has_key?( name ) or @opt.has_key?( name = name.split(/\./)[0] )
          @opt[ name ]
       else
-         ""
+         nil
       end
    end
 end
 
 if $0 == __FILE__
+   conf = YAML.load(open(HierFilename.new("tohtml.conf").to_s))
+
+   require "optparse"
+   conf["basedir"] = "."
+   ARGV.options do |o|
+      o.banner = "Usage: #$0 [OPTIONS] FILE"
+
+      # fragment mode
+      o.on( '--basedir=VAL',
+            'Specify base directory' ) do |v|
+         conf["basedir"] = v
+      end
+      o.parse!
+   end
+
    ARGV.each do |f|
       content = open(f){|io| io.readlines }
       header = {}
@@ -87,11 +103,19 @@ if $0 == __FILE__
          when /^$/
             break
          when /^([\w\.]+):\s*(.*)$/
-            header[$1] = $2
+            key, val = $1, $2
+            if /^date(\.|$)/ =~ key
+               val = DateTime.parse(val)
+            end
+            if header[key]
+               header[key] = [ header[key], val ]
+            else
+               header[key] = val
+            end
          else
             STDERR.puts "WARN: Unknown format: #{line}"
          end
       end
-      puts ToHTML.new( content.join, header ).expand
+      puts ToHTML.new( conf, content.join, header ).expand
    end
 end

@@ -1,9 +1,18 @@
 # $Id$
 #
 
-HTML =	index.html profile.html
+HTML	= index.html profile.html history.html
+SUBDIR	= etc
 
-all: $(HTML) chalow rsync
+all: $(HTML) chalow subdirs
+
+subdirs:
+	for d in $(SUBDIR); do \
+		cd $$d/ && make;\
+	done
+
+%.html: %.html.in template.html.in tohtml.rb
+	./tohtml.rb $< > $@
 
 # chalow
 chalow:
@@ -19,6 +28,3 @@ rsync:
 #	% sort -nr score | less
 lint:
 	./htmllint-all.rb
-
-%.html: %.html.in template.html.in tohtml.rb
-	./tohtml.rb $< > $@
