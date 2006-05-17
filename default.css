@@ -24,7 +24,6 @@
     float: left;
   }
   address, div.id {
-    float: right;
     text-align: right;
   }
   div.last-update {
