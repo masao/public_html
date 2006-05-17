@@ -10,23 +10,30 @@
 </head>
 <body>
 <% if not navi == "false" %>
-<div id="navi"><a href="./">HOME</a> &gt;&gt;
+<div class="navi"><a href="<%= rootdir %>">HOME</a> &gt;&gt;
 <% subject.to_a.each do |category| %>
-<%   label = conf["subject_label"][category] || category %>
-<a href="<%= conf["basedir"]%>/<%= category %>/"><%= label %></a>
-<% end %>
-<%= "&gt;&gt;" unless subject.to_a.empty? %>
+<%   label = subject_label[category] || category %>
+<a class="subject" href="<%= rootdir %>/<%= category %>/"><%= label %></a>
 <% end %>
 </div>
+<% end %>
 <% if date_available %>
-<div class="last-update">初版公開日: <%= date_available.strftime("%Y年%m月%d日") %></div>
+<div class="last-update">初版公開日: <%= date_available.strftime( date_format ) %></div>
 <% end %>
 <% if date_modified %>
-<div class="last-update">最終更新日: <%= date_modified.strftime("%Y年%m月%d日") %></div>
+<div class="last-update">最終更新日: <%= date_modified.strftime( date_format ) %></div>
 <% end %>
 <h1><%= title %></h1>
 <%= body %>
 <hr />
+<% if not navi == "false" %>
+<div class="navi"><a href="<%= rootdir %>/">HOME</a> &gt;&gt;
+<% subject.to_a.each do |category| %>
+<%   label = subject_label[category] || category %>
+<a class="subject" href="<%= rootdir %>/<%= category %>/"><%= label %></a>
+<% end %>
+</div>
+<% end %>
 <address>高久雅生 (Takaku Masao)<br />
 <a href="http://masao.jpn.org/">http://masao.jpn.org/</a>,
 <a href="mailto:masao@nii.ac.jp">masao@nii.ac.jp</a></address>

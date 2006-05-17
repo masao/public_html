@@ -18,14 +18,14 @@
     color: navy;
     text-indent: 0;
   }
-  #navi {
+  div.navi {
     margin: 0;
     font-size: smaller;
     float: left;
   }
-  div.id {
-    font-style: italic;
-    font-size: smaller;
+  address, div.id {
+    float: right;
+    text-align: right;
   }
   div.last-update {
     text-align: right;

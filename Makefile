@@ -1,17 +1,12 @@
 # $Id$
 #
 
-HTML	= index.html profile.html history.html
+HTML	= index.html profile.html history.html etc/firefox.html etc/ir-journal.html
 SUBDIR	= etc
 
-all: $(HTML) chalow subdirs
+all: $(HTML) chalow
 
-subdirs:
-	for d in $(SUBDIR); do \
-		cd $$d/ && make;\
-	done
-
-%.html: %.html.in template.html.in tohtml.rb
+%.html: %.html.in template.html.in tohtml.rb tohtml.conf
 	./tohtml.rb $< > $@
 
 # chalow
