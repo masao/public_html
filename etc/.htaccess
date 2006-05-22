@@ -1,1 +1,4 @@
 DirectoryIndex index.shtml
+<Files ~ "*.ttf">
+Deny from all
+</Files>
