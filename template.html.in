@@ -10,7 +10,7 @@
 </head>
 <body>
 <% if not navi == "false" %>
-<div class="navi"><a href="<%= rootdir %>">HOME</a> &gt;&gt;
+<div class="navi"><a href="<%= rootdir %>">HOME</a> &gt;
 <% subject.to_a.each do |category| %>
 <%   label = subject_label[category] || category %>
 <a class="subject" href="<%= rootdir %>/<%= category %>/"><%= label %></a>
