@@ -13,7 +13,12 @@
 <div class="navi"><a href="<%= rootdir %>">HOME</a> &gt;
 <% subject.to_a.each do |category| %>
 <%   label = subject_label[category] || category %>
-<a class="subject" href="<%= rootdir %>/<%= category %>/"><%= label %></a>
+<a class="subject" href="<%= rootdir %>/<%= category %>/"><%= label %></a> &gt;
+<% end %>
+<% if title_short %>
+<%= title_short %>
+<% else %>
+<%= title %>
 <% end %>
 </div>
 <% end %>
@@ -27,10 +32,15 @@
 <%= body %>
 <hr />
 <% if not navi == "false" %>
-<div class="navi"><a href="<%= rootdir %>/">HOME</a> &gt;&gt;
+<div class="navi"><a href="<%= rootdir %>">HOME</a> &gt;
 <% subject.to_a.each do |category| %>
 <%   label = subject_label[category] || category %>
-<a class="subject" href="<%= rootdir %>/<%= category %>/"><%= label %></a>
+<a class="subject" href="<%= rootdir %>/<%= category %>/"><%= label %></a> &gt;
+<% end %>
+<% if title_short %>
+<%= title_short %>
+<% else %>
+<%= title %>
 <% end %>
 </div>
 <% end %>
