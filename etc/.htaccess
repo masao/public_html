@@ -1,4 +1,5 @@
 DirectoryIndex index.shtml
-<Files ~ "*.ttf">
-Deny from all
-</Files>
+<FilesMatch "\.ttf$">
+order deny,allow
+deny from all
+</FilesMatch>
