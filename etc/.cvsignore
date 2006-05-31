@@ -5,3 +5,4 @@ zipcode.db
 .emacs*
 .mnews_setup
 test-ttf_php.txt
+*.html
