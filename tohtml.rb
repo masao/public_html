@@ -28,23 +28,25 @@ class HierFilename < Pathname
 end
 
 class Plugin
-   def initialize( content )
-      content.gsub!(/\A<div class=(["'])plugin\1>\{\{\s*(.*)\s*\}\}<\/div>\Z/imso, '\2')
-      content.gsub!(/\A\s*(\w+)\s*(.*)\Z/imso) do
-         name = $1
-         args = $2
-         search_plugin(name).expand( args )
+   def initialize( opts )
+      opts.each do |var, val|
+         var = var.to_s.sub(/^/, "@") unless /^@/ =~ var.to_s
+         instance_variable_set( var, val )
       end
    end
-   def search_plugin( name )
-      Plugin.const_get(name.capitalize).new
+   class Lastmodified < Plugin
+      def expand( *args )
+      file, format = args
+      format ||= '%Y-%d-%m' 
+      mtime = File.mtime( file )
+      %Q[<#{@style} class="lastmodified">#{mtime.strftime( format )}</#{@style}>]
+      end
    end
-
-   class Div
-      def expand( args )
-         lines = args.split(/\n/)
-         attrs = lines.shift
-         %Q[<div #{attrs}>#{ HikiDoc.new( lines.join("\n") ).to_html }</div>]
+   class Div < Plugin
+      def expand( *args )
+      lines = args.join("\n").split(/\n/)
+      attrs = lines.shift
+      %Q[<div #{attrs}>#{ HikiDoc.new( lines.join("\n") ).to_html }</div>]
       end
    end
 end
@@ -94,10 +96,17 @@ class ToHTML
                nil, "<>" ).result( binding )
    end
    def expand_plugin( text )
+      require "shellwords"
       #STDERR.puts text
-      text.gsub(/<div class="plugin">\{\{\s*(\w+)\s*(.*?)\s*\}\}<\/div>(?=\n|$)/ms) do |match|
+      text.gsub(/<(div|span) class="plugin">\{\{\s*(\w+)\s*(.*?)\s*\}\}<\/\1>/ms) do |match|
          #STDERR.puts match
-         Plugin.const_get($1.capitalize).new.expand( $2 )
+         style = $1
+         name = $2
+         args = $3
+         args.sub!(/\A\s*\(/, "") && args.sub!(/\)\s*\Z/, "")
+         args = Shellwords.shellwords( args )
+         plugin = Plugin.const_get( name.capitalize ).new(:style => style)
+         plugin.expand( *args )
       end
    end
    def method_missing( name, *args )
