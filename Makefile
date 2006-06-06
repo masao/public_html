@@ -1,6 +1,8 @@
 # $Id$
 
-HTML	= index.html profile.html history.html etc/firefox.html etc/ir-journal.html
+HTML	= 	index.html profile.html history.html \
+		etc/firefox.html etc/ir-journal.html \
+		software/mnewsprint/index.html
 
 all: $(HTML) chalow
 
