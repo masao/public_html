@@ -1,0 +1,83 @@
+title: mnewsprint
+date.modified:  2006-06-06
+date.available: 2001-08-31
+subject: software
+
+mnewsprint はメール記事を整形して印刷するためのツールです。
+整形にはLaTeX2eを利用します。
+
+!! お知らせ
+:2004-12-03:mnewsprint-0.9.1 を公開しました。
+::一文字でのオプション指定がうまく効いておらず、最新のPerl環境で警告表示される問題に対処しました。
+:2004-09-17:mnewsprint-0.9 を公開しました。
+::MIME形式のメール添付に対応し、より適切に整形するようにしました。
+:2003-09-26:mnewsprint-0.8 を公開しました。
+::--psnup, --grayオプションが正しく動作していなかったのを修正しました。
+:2003-04-02:mnewsprint-0.7 を公開しました。
+::Perl 5.6 以上の環境で警告メッセージが出るのに対処しました。
+:2002-06-03:mnewsprint-0.6 を公開しました。
+::--grayオプションを新設し、引用部分のグレースケールの濃さを指定できるようにしました。
+:2002-05-27:mnewsprint-0.5 を公開しました。
+::--psnupオプションを新設し、psnupコマンドへのオプションを渡せるようにしました。
+:2002-05-02:mnewsprint-0.4 を公開しました。
+::長い行は 78 文字ごとに折り返すように変更しました。（これまでは、80文字ごと）
+::Content-Type:ヘッダが「text」だけのメッセージも、テキストとして出力できるように修正しました。
+:2002-04-13:mnewsprint-0.3 を公開しました。
+::一部のマルチパート・メールの出力がうまくいかないことがあるバグを修正しました。
+:2002-03-13:mnewsprint-0.2 を公開しました。
+::psnup コマンドを利用した２分割での出力ができるようになりました。
+:2001-12-05:出力例のPostScriptを公開しました。
+:2001-10-28:mnewsprint-0.1 を公開しました。
+::Pod::Usageに依存していたのをやめました。
+::(バージョン番号の付け方を変更しました)
+:2001-10-26:mnewsprint-0.0.4 公開。
+::MIME multipart メールに対応しました。
+:2001-09-16:mnewsprint-0.0.3 公開。（X-Face に対応しました）
+:2001-08-31:mnewsprint-0.0.2 公開。（初期公開）
+
+!!特徴
+*LaTeX2eによる''比較的''きれいな出力。
+*出力するヘッダを指定可能。
+*メールの引用部分のみをグレイで色分けして出力。
+*X-Faceヘッダの画像を印刷出力できます。
+*multipartメールのテキストpartをデコードして出力できます。(Base64, quoted-printableに対応)
+
+!!出力例
+*[[mail.ps.gz]]
+
+!!インストール方法
+
+        % ./configure
+        % make
+        % make install
+
+としてインストールしてください。デフォルトでは、
+
+        /usr/local/bin/mnewsprint
+                   man/man1/mnewsprint.1
+
+にインストールされます。
+
+詳しいインストール方法は[[INSTALL]]をご覧下さい。
+
+!!使い方 & 設定
+
+[[mnewsprint(1)|mnewsprint-man.txt]]を参照してください。
+
+mnews で使うには ~/.mnews_setup 中に以下のような設定を加えて下さい。
+      lpr_command: nkf -em | mnewsprint
+
+その他のMUA（Muttなど）でも同様の設定を加えることで使えるようになると思います。
+
+!!ダウンロード
+
+mnewsprint は[[GNU Generic Public License version 2|http://www.gnu.org/copyleft/gpl.html]]に従ったフリーソフトウェアとします。
+
+*[[mnewsprint-0.9.1.tar.gz|../archive/mnewsprint-0.9.1.tar.gz]]
+
+!!類似ソフトウェア
+:[[muttprint|http://muttprint.sourceforge.net/]]:元々、muttprintを使いたかったんですが、日本語の処理などで不具合があったので、mnewsprintとして一から書き直しました。LaTeX2eの雛型などはmuttprintのものを頂いています。
+
+!!連絡先
+
+バグ報告・要望・感想などは[[mailto:masao@nii.ac.jp]]までお寄せ下さい。お気軽にどうぞ。
