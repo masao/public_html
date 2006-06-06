@@ -1,167 +1,101 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-	"http://www.w3.org/TR/html4/strict.dtd">
-<html lang="ja">
+<?xml version="1.0" encoding="EUC-JP"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-JP">
-<link rel="stylesheet" href="../../default.css" type="text/css">
-<link rev="made" href="mailto:masao@nii.ac.jp">
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-JP" />
+<link rev="made" href="mailto:masao@nii.ac.jp" />
+<link rel="stylesheet" href="../../default.css" type="text/css" />
 <title>mnewsprint</title>
 </head>
-
 <body>
+<div class="navi"><a href="./../..">HOME</a> &gt;
+<a class="subject" href="./../../software/">ソフトウェア</a> &gt;
+mnewsprint</div>
+<div class="last-update">初版公開日: 2001年08月31日</div>
+<div class="last-update">最終更新日: 2006年06月06日</div>
 <h1>mnewsprint</h1>
-<p>
-mnewsprint はメール記事を整形して印刷するためのツールです。
-整形にはLaTeX2eを利用します。
-</p>
-
-<h2>目次</h2>
-<ul>
-  <li><a href="#news">お知らせ</a>
-  <li><a href="#feature">特徴</a>
-  <li><a href="#example">出力例</a>
-  <li><a href="#install">インストール方法</a>
-  <li><a href="#usage">使い方 &amp; 設定</a>
-  <li><a href="#download">ダウンロード</a>
-  <li><a href="#similar">類似ソフトウェア</a>
-  <li><a href="#contact">連絡先</a>
-</ul>
-<hr>
-
-<h2><a name="news">お知らせ</a></h2>
+<p>mnewsprint はメール記事を整形して印刷するためのツールです。
+整形にはLaTeX2eを利用します。</p>
+<h2>お知らせ</h2>
 <dl>
-  <dt>2004-12-03
-  <dd>mnewsprint-0.9.1 を公開しました。
-  <dd>一文字でのオプション指定がうまく効いておらず、最新のPerl環境で警告表示される問題に対処しました。
-
-  <dt>2004-09-17
-  <dd>mnewsprint-0.9 を公開しました。
-  <dd>MIME形式のメール添付に対応し、より適切に整形するようにしました。
-
-  <dt>2003-09-26
-  <dd>mnewsprint-0.8 を公開しました。
-  <dd><code>--psnup</code>, <code>--gray</code>オプションが正しく動作していなかったのを修正しました。
-
-  <dt>2003-04-02
-  <dd>mnewsprint-0.7 を公開しました。
-  <dd>Perl 5.6 以上の環境で警告メッセージが出るのに対処しました。
-
-  <dt>2002-06-03
-  <dd>mnewsprint-0.6 を公開しました。
-  <dd><code>--gray</code>オプションを新設し、
-      引用部分のグレースケールの濃さを指定できるようにしました。
-
-  <dt>2002-05-27
-  <dd>mnewsprint-0.5 を公開しました。
-  <dd><code>--psnup</code>オプションを新設し、
-      <code>psnup</code>コマンドへのオプションを渡せるようにしました。
-
-  <dt>2002-05-02
-  <dd>mnewsprint-0.4 を公開しました。
-  <dd>長い行は 78 文字ごとに折り返すように変更しました。
-      （これまでは、80文字ごと）
-  <dd><code>Content-Type:</code>ヘッダが<code>text</code>だけのメッセージも、テキストとして出力できるように修正しました。
-  
-  <dt>2002-04-13
-  <dd>mnewsprint-0.3 を公開しました。
-  <dd>一部のマルチパート・メールの出力がうまくいかないことがあるバグを修正しました。
-
-  <dt>2002-03-13
-  <dd>mnewsprint-0.2 を公開しました。
-  <dd>psnup コマンドを利用した２分割での出力ができるようになりました。
-
-  <dt>2001-12-05
-  <dd>出力例のPostScriptを公開しました。
-
-  <dt>2001-10-28
-  <dd>mnewsprint-0.1 を公開しました。
-  <dd>Pod::Usageに依存していたのをやめました。
-  <dd>(バージョン番号の付け方を変更しました)
-
-  <dt>2001-10-26
-  <dd>mnewsprint-0.0.4 公開。
-  <dd>MIME multipart メールに対応しました。
-
-  <dt>2001-09-16
-  <dd>mnewsprint-0.0.3 公開。（X-Face に対応しました）
-
-  <dt>2001-08-31
-  <dd>mnewsprint-0.0.2 公開。（初期公開）
+<dt>2004-12-03</dt><dd>mnewsprint-0.9.1 を公開しました。</dd>
+<dd>一文字でのオプション指定がうまく効いておらず、最新のPerl環境で警告表示される問題に対処しました。</dd>
+<dt>2004-09-17</dt><dd>mnewsprint-0.9 を公開しました。</dd>
+<dd>MIME形式のメール添付に対応し、より適切に整形するようにしました。</dd>
+<dt>2003-09-26</dt><dd>mnewsprint-0.8 を公開しました。</dd>
+<dd>--psnup, --grayオプションが正しく動作していなかったのを修正しました。</dd>
+<dt>2003-04-02</dt><dd>mnewsprint-0.7 を公開しました。</dd>
+<dd>Perl 5.6 以上の環境で警告メッセージが出るのに対処しました。</dd>
+<dt>2002-06-03</dt><dd>mnewsprint-0.6 を公開しました。</dd>
+<dd>--grayオプションを新設し、引用部分のグレースケールの濃さを指定できるようにしました。</dd>
+<dt>2002-05-27</dt><dd>mnewsprint-0.5 を公開しました。</dd>
+<dd>--psnupオプションを新設し、psnupコマンドへのオプションを渡せるようにしました。</dd>
+<dt>2002-05-02</dt><dd>mnewsprint-0.4 を公開しました。</dd>
+<dd>長い行は 78 文字ごとに折り返すように変更しました。（これまでは、80文字ごと）</dd>
+<dd>Content-Type:ヘッダが「text」だけのメッセージも、テキストとして出力できるように修正しました。</dd>
+<dt>2002-04-13</dt><dd>mnewsprint-0.3 を公開しました。</dd>
+<dd>一部のマルチパート・メールの出力がうまくいかないことがあるバグを修正しました。</dd>
+<dt>2002-03-13</dt><dd>mnewsprint-0.2 を公開しました。</dd>
+<dd>psnup コマンドを利用した２分割での出力ができるようになりました。</dd>
+<dt>2001-12-05</dt><dd>出力例のPostScriptを公開しました。</dd>
+<dt>2001-10-28</dt><dd>mnewsprint-0.1 を公開しました。</dd>
+<dd>Pod::Usageに依存していたのをやめました。</dd>
+<dd>(バージョン番号の付け方を変更しました)</dd>
+<dt>2001-10-26</dt><dd>mnewsprint-0.0.4 公開。</dd>
+<dd>MIME multipart メールに対応しました。</dd>
+<dt>2001-09-16</dt><dd>mnewsprint-0.0.3 公開。（X-Face に対応しました）</dd>
+<dt>2001-08-31</dt><dd>mnewsprint-0.0.2 公開。（初期公開）</dd>
 </dl>
-<hr>
-
-<h2><a name="feature">特徴</a></h2>
+<h2>特徴</h2>
 <ul>
-  <li>LaTeX2eによる<em>比較的</em>きれいな出力。
-  <li>出力するヘッダを指定可能。
-  <li>メールの引用部分のみをグレイで色分けして出力。
-  <li>X-Faceヘッダの画像を印刷出力できます。
-  <li>multipartメールのテキストpartをデコードして出力できます。
-      (Base64, quoted-printableに対応)
+<li>LaTeX2eによる<em>比較的</em>きれいな出力。</li>
+<li>出力するヘッダを指定可能。</li>
+<li>メールの引用部分のみをグレイで色分けして出力。</li>
+<li>X-Faceヘッダの画像を印刷出力できます。</li>
+<li>multipartメールのテキストpartをデコードして出力できます。(Base64, quoted-printableに対応)</li>
 </ul>
-
-<h2><a name="example">出力例</a></h2>
+<h2>出力例</h2>
 <ul>
-  <li><a href="mail.ps.gz">mail.ps.gz</a>
+<li><a href="mail.ps.gz">mail.ps.gz</a></li>
 </ul>
-
-<h2><a name="install">インストール方法</a></h2>
+<h2>インストール方法</h2>
 <pre>
-        % ./configure
-        % make
-        % make install
+       % ./configure
+       % make
+       % make install
 </pre>
 <p>としてインストールしてください。デフォルトでは、</p>
 <pre>
-        /usr/local/bin/mnewsprint
-                   man/man1/mnewsprint.1
+       /usr/local/bin/mnewsprint
+                  man/man1/mnewsprint.1
 </pre>
-<p>
-にインストールされます。
-</p>
-<p>
-詳しいインストール方法は<a href="INSTALL">INSTALL</a>をご覧下さい。
-</p>
-
-<h2><a name="usage">使い方 &amp; 設定</a></h2>
-<p>
-<code><a href="mnewsprint-man.txt">mnewsprint(1)</a></code>を参照してください。
-</p>
-<p>
-mnews で使うには <code>~/.mnews_setup</code> 中に以下のような設定を加えて下さい。
-</p>
-<pre>      lpr_command: nkf -em | mnewsprint</pre>
-<p>
-その他のMUA（Muttなど）でも同様の設定を加えることで使えるようになると思います。
-</p>
-<h2><a name="download">ダウンロード</a></h2>
-<p>
-mnewsprint は <a href="http://www.gnu.org/copyleft/gpl.html">GNU Generic Public License version 2</a>に従ったフリーソフトウェアとします。
-</p>
+<p>にインストールされます。</p>
+<p>詳しいインストール方法は<a href="INSTALL">INSTALL</a>をご覧下さい。</p>
+<h2>使い方 &amp; 設定</h2>
+<p><a href="mnewsprint-man.txt">mnewsprint(1)</a>を参照してください。</p>
+<p>mnews で使うには ~/.mnews_setup 中に以下のような設定を加えて下さい。</p>
+<pre>
+     lpr_command: nkf -em | mnewsprint
+</pre>
+<p>その他のMUA（Muttなど）でも同様の設定を加えることで使えるようになると思います。</p>
+<h2>ダウンロード</h2>
+<p>mnewsprint は<a href="http://www.gnu.org/copyleft/gpl.html">GNU Generic Public License version 2</a>に従ったフリーソフトウェアとします。</p>
 <ul>
-  <li><a href="../archive/mnewsprint-0.9.1.tar.gz">mnewsprint-0.9.1.tar.gz</a>
+<li><a href="../archive/mnewsprint-0.9.1.tar.gz">mnewsprint-0.9.1.tar.gz</a></li>
 </ul>
-
-<h2><a name="similar">類似ソフトウェア</a></h2>
-<ul>
-  <li><a href="http://muttprint.sourceforge.net/">muttprint</a>:
-      元々、muttprintを使いたかったんですが、
-      日本語の処理などで不具合があったので、
-      mnewsprintとして一から書き直しました。
-      LaTeX2eの雛型などはmuttprintのものを頂いています。
-</ul>
-
-<h2><a name="contact">連絡先</a></h2>
-<p>
-バグ報告・要望・感想などは <a href="mailto:masao@nii.ac.jp">masao@nii.ac.jp</a> までお寄せ下さい。お気軽にどうぞ。
-</p>
-
-<hr>
-<address>
-高久雅生 (Takaku Masao)<br>
-<a href="http://masao.jpn.org/">http://masao.jpn.org/</a>, 
-<a href="mailto:masao@nii.ac.jp">masao@nii.ac.jp</a>
-</address>
-<div class="id">$Id$</div>
+<h2>類似ソフトウェア</h2>
+<dl>
+<dt><a href="http://muttprint.sourceforge.net/">muttprint</a></dt><dd>元々、muttprintを使いたかったんですが、日本語の処理などで不具合があったので、mnewsprintとして一から書き直しました。LaTeX2eの雛型などはmuttprintのものを頂いています。</dd>
+</dl>
+<h2>連絡先</h2>
+<p>バグ報告・要望・感想などは<a href="mailto:masao@nii.ac.jp">mailto:masao@nii.ac.jp</a>までお寄せ下さい。お気軽にどうぞ。</p>
+<hr />
+<div class="navi"><a href="./../..">HOME</a> &gt;
+<a class="subject" href="./../../software/">ソフトウェア</a> &gt;
+mnewsprint</div>
+<address>高久雅生 (Takaku Masao)<br />
+<a href="http://masao.jpn.org/">http://masao.jpn.org/</a>,
+<a href="mailto:masao@nii.ac.jp">masao@nii.ac.jp</a></address>
 </body>
 </html>
