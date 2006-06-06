@@ -494,7 +494,7 @@ sub okikae {
     ### 文字修飾と水平線。Hiki の記法を採用。
     s!'''(.+?)'''!<strong>$1</strong>!gms;
     s!''(.+?)''!<em>$1</em>!gms;
-    s!==(\S.+?)==!<s>$1</s>!gms;
+    #s!==(\S.+?)==!<s>$1</s>!gms;
     s!^\-{4}!<hr>!gms;
 
     ### URL。Hiki の記法を採用。
