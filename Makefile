@@ -1,12 +1,16 @@
 # $Id$
 
 HTML	= 	index.html profile.html history.html \
-		etc/firefox.html etc/ir-journal.html \
+		etc/index.shtml \
+		etc/firefox.html etc/ir-journal.html etc/unihan-onkun.html \
 		software/mnewsprint/index.html
 
 all: $(HTML) chalow
 
-%.html: %.hikidoc template.html.in tohtml.rb tohtml.conf
+%.html: %.hikidoc template.html.in
+	./tohtml.rb $< > $@
+
+%.shtml: %.hikidoc template.html.in
 	./tohtml.rb $< > $@
 
 # chalow

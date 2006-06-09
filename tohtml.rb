@@ -6,6 +6,7 @@ require "uri"
 require "yaml"
 require "erb"
 require "hikidoc"
+require "cgi"
 
 # HierFilename:
 #
@@ -36,10 +37,15 @@ class Plugin
    end
    class Lastmodified < Plugin
       def expand( *args )
-      file, format = args
-      format ||= '%Y-%d-%m' 
-      mtime = File.mtime( file )
-      %Q[<#{@style} class="lastmodified">#{mtime.strftime( format )}</#{@style}>]
+         file, format = args
+         format ||= '%Y-%m-%d'
+         mtime = File.mtime( file )
+         %Q[<#{@style} class="lastmodified">#{mtime.strftime( format )}</#{@style}>]
+      end
+   end
+   class Rawhtml < Plugin
+      def expand( *args )
+         args.map{|e| CGI.unescapeHTML(e) }.join("\n")
       end
    end
    class Div < Plugin
@@ -111,7 +117,9 @@ class ToHTML
    end
    def method_missing( name, *args )
       name = name.to_s.gsub("_", ".")
-      if @conf.has_key?( name ) or @conf.has_key?( name = name.split(/\./)[0] )
+      force, = args
+      if @conf.has_key?( name ) or
+            ( not force.nil? and @conf.has_key?( name = name.split(/\./)[0] ) )
          @conf[ name ]
       else
          nil
