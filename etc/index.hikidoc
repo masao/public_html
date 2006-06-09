@@ -1,0 +1,29 @@
+title: その他雑多なメモ類のページ
+title.short: 雑多
+date.modified: 2006-06-09
+css.content: .lastmodified { color: maroon; font-size: smaller; }
+
+{{ rawhtml '<!--#config timefmt="<span class=\"lastmodified\">[%Y-%m-%d]</span>" -->' }}
+
+雑多な覚え書きその他を置いてあります。  （{{ rawhtml('<span
+class="lastmodified">[日付]</span>') }}は更新日を示します）
+
+*[[Filefox: ブックマーク、拡張、設定など|firefox.html]] {{ rawhtml( '<!--#flastmod file="firefox.hikidoc" -->') }}
+*[[情報検索関連の論文誌|ir-journal.html]] {{ rawhtml( '<!--#flastmod file="ir-journal.hikidoc" -->' }}
+*[[Unihan.txt - 音訓辞書|unihan-onkun.html]] {{ rawhtml( '<!--#flastmod file="unihan-onkun.hikidoc" -->' }}
+*[[郵便番号検索|zipcode.cgi]] {{ rawhtml( '<!--#flastmod file="zipcode.db" -->' }}
+*[[TrueTypeフォントのテスト|test-ttf.php]] {{ rawhtml( '<!--#flastmod file="test-ttf.php" -->' }}
+*[[論文投稿前のチェックリスト|paper-checklist.html]] {{ rawhtml( '<!--#flastmod file="paper-checklist.html" -->' }}
+*[[WikiCloneについてのメモ|wikiwiki.html]] {{ rawhtml( '<!--#flastmod file="wikiwiki.html" -->' }}
+*[[Useful Softwares on Windows|windows-software.html]] {{ rawhtml( '<!--#flastmod file="windows-software.hikidoc" -->' }}
+*[[Clover上でPAPI(Performance API)を動作させる|clover-papi.html]] {{ rawhtml( '<!--#flastmod file="clover-papi.html" -->' }}
+*[[RPMの使い方|rpm.html]] {{ rawhtml( '<!--#flastmod file="rpm.html" -->' }}
+*[[Emacs20でUnicodeを使おう!|emacs20-unicode.html]] {{ rawhtml( '<!--#flastmod file="emacs20-unicode.html" -->' }}
+*[[各種設定ファイル|config.html]] {{ rawhtml( '<!--#flastmod file="config.html" -->' }}
+
+以下のものはだいぶ昔に書いたもので、更新の予定はありません。
+
+*[[Mozillaの不具合メモ|mozilla.html]]
+*[[ファイル名の一括変換の方法|man-change-allfilename.html]]
+*[[Windows 95 トラブルシューティング|man-win95-trouble.html]]
+*[[電卓アップレット|calc.html]]

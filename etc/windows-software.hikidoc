@@ -1,0 +1,30 @@
+title: Useful Softwares on Windows
+date.available: 2001-10-29
+date.modified: 2006-06-09
+
+私がMS Windows上で使っている主なソフトウェアをメモしておきます。
+
+!!商用ソフトウェア
+:[[Microsoft|http://www.microsoft.com/japan/]]:Windows, Internet Explorer, MS Office, etc.
+:[[Astec X|http://www.astec.co.jp/]]:Xサーバ
+:[[Norton AntiVirus|http://www.symantec.co.jp/]]:ウイルス対策
+
+!!(フリー/シェア)ウェア
+
+:[[Xming|http://freedesktop.org/wiki/Xming]]:Xサーバ（Cygwinベース）: Astec Xが使えない環境で重宝
+:[[WinSCP|http://winscp.sourceforge.net/eng/]]:ファイル転送ツール。（scpをGUIでできる）
+:[[FireFox|http://www.mozilla-japan.org/]] (Mozilla Browser):Webブラウザ
+:[[Cygwin|http://cygwin.com/]]:ユーティリティ
+:[[NTEmacs|http://www.gnu.org/software/emacs/windows/]]:エディタ
+:[[Lhaplus|http://www.vector.co.jp/soft/win95/util/se169348.html]]:圧縮・解凍ツール
+:[[PuTTY (日本語化版)|http://hp.vector.co.jp/authors/VA024651/#PuTTYkj_top]]:SSH/Telnetクライアント
+:[[Adobe Acrobat Reader|http://www.adobe.co.jp/]]:PDFリーダ
+:[[Seti@Home|http://setiathome.berkeley.edu/]]:ユーティリティ
+:[[Ghostscript, Ghostview and GSview|http://www.cs.wisc.edu/~ghost/]] （[[日本語対応版|http://auemath.aichi-edu.ac.jp/~khotta/ghost/]]）:PostScriptビューワ
+:[[WMF2EPS|http://www.wmf2eps.de.vu/]]:Windowsアプリケーションの出力をEPSへ変換
+:[[Java2|http://java.sun.com/]]:プログラミング環境
+:[[WinShot|http://www.woodybells.com/winshot.html]]:スクリーンキャプチャ。
+:[[De4Exif|http://www002.upp.so-net.ne.jp/candynag/digicam/de4exif.html]]:Exif 日付時刻情報復元ツール
+:[[Intel Application Accelerator|http://support.intel.co.jp/jp/support/chipsets/iaa/index.htm]]:CPU/IOのパフォーマンス向上ためのユーティリティ。
+:[[桜時計|http://www.venus.dti.ne.jp/~uno/index.html]]:時刻同期(NTP)。（Win9x系列のみ）
+:[[HLPRMON|http://www.vector.co.jp/soft/win95/writing/se048195.html]]:lpr/lpdでプリンタへの印刷。（Win9x系列のみ）

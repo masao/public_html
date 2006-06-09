@@ -1,0 +1,23 @@
+title: Unihan.txt - 音訓辞書
+date.available: 2006-04-15
+date.modified: 2006-06-09
+
+[[Unicode Unihan Database|http://www.unicode.org/Public/UNIDATA/Unihan.html]]には、Unicodeに含まれる文字のうち漢字類の規格種別、字義や由来、読み情報などが載っている。これをExcel等でそのまま処理しやすい音訓辞書として加工したものを以下に置いておきます。
+
+*[[Unihan-kJapaneseOnKun.txt.gz|Unihan-kJapaneseOnKun.txt.gz]] (121,264 bytes)
+
+単純変換をほどこしただけなので、Unihan.txtと[[同様のライセンス|http://www.unicode.org/copyright.html]]として自由にご利用ください。
+
+!!変換方法
+
+変換の際に使用したスクリプト
+[[unihan-onkun.rb|unihan-onkun.rb]]
+も公開しておきます。
+
+なお、このスクリプトを実行するには以下をインストールする必要があります:
+
+*[[Ruby|http://www.ruby-lang.org/]], 1.8以降
+*[[Ruby/Romkan: ローマ字とひらがなを相互に変換する Ruby用のライブラリ|http://0xcc.net/ruby-romkan/]]
+
+!!参考リンク
+*[[単漢字の読みをダウンロードできるサイトを教えて下さい．CSV,Exel形式などで，シフトJISの全ての漢字，できればJIS X0213の範囲までカバーしていると嬉しいです．|http://q.hatena.ne.jp/1144892483]]

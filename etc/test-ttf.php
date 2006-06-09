@@ -76,7 +76,7 @@ if (strlen($text) > 0) {
 <body>
 <div class="last-update">公開日: 2003年06月24日</div>
 <!-- hhmts start -->
-<div class="last-update">最終更新日: 2006年04月30日</div>
+<div class="last-update">最終更新日: 2006年06月09日</div>
 <!-- hhmts end -->
 <h1>TrueTypeフォントの表示テスト</h1>
 <form action="./test-ttf.php" method="POST">
@@ -159,6 +159,12 @@ PHPに同梱されているGDライブラリの機能を使って、
 <a href="mailto:masao@nii.ac.jp">masao@nii.ac.jp</a>
 </address>
 <div class="id">$Id$</div>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-389547-1";
+urchinTracker();
+</script>
 </body>
 </html>
 <?php } ?>
