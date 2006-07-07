@@ -6,7 +6,7 @@
     <author>Keizo Oyama</author>
     <author>Akiko Aizawa</author>
     <title>An Analysis on Topic Features and Difficulties in WEB Navigational Retrieval Experiments</title>
-    <journal>Proceedings of the Asia Information Retrieval Symposium (AIRS) 2006</journal>
+    <journal>Proceedings of the Third Asia Information Retrieval Symposium (AIRS) 2006</journal>
     <year>2006</year>
     <month>10</month>
     <city>Singapore</city>
@@ -99,6 +99,7 @@
       <start>1</start>
       <end>17</end>
     </page>
+    <url label="NII-ELS">http://nels.nii.ac.jp/els/contents_disp.php?id=ART0003785781&amp;type=abstract&amp;lang=jp&amp;host=cinii&amp;lang_sw=&amp;no=1152285407&amp;cp=</url>
   </pub>
 
   <pub referee="true" type="conference">

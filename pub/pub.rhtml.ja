@@ -102,7 +102,9 @@
 </dd>
 <% if not pub.text("url").nil? %>
 <dd class="url">
-<span class="url"><a href="<%= pub.text("url") %>"><%= pub.text("url") %></a></span>
+<span class="url"><a href="<%= pub.text("url") %>"><%=
+pub.elements["url"].attributes["label"] ? pub.elements["url"].attributes["label"] : pub.text("url")
+%></a></span>
 </dd>
 <% end %>
 <% if not pub.text("doi").nil? %>
