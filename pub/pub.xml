@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <publist>
 
+  <pub type="conference">
+    <author>Masao Takaku</author>
+    <author>Keizo Oyama</author>
+    <author>Akiko Aizawa</author>
+    <title>An Analysis on Topic Features and Difficulties in WEB Navigational Retrieval Experiments</title>
+    <journal>Proceedings of the Asia Information Retrieval Symposium (AIRS) 2006</journal>
+    <year>2006</year>
+    <month>10</month>
+    <city>Singapore</city>
+    <publisher>Springer</publisher>
+    <!--
+	<page>
+	  <start>423</start>
+	  <end>442</end>
+	</page>
+	-->
+    <note>(To appear in Springer "Lecture Notes in Computer Science (LNCS)"; 8 pages)</note>
+  </pub>
+
   <pub type="misc">
     <author>高久雅生</author>
     <title>相互運用可能な用語体系の構築を目指して</title>
@@ -25,7 +44,7 @@
     <author>Akiko Aizawa</author>
     <author>Hayato Yamana</author>
     <title>Overview of the NTCIR-5 WEB Navigational Retrieval Subtask 2 (Navi-2)</title>
-    <journal>Proceedings of the Fifth NTCIR Workshop Meeting on Evaluation of Information Access Technologies: Informaion Retrieval, Question Answering and Cross-Lingual Information Access</journal>
+    <journal>Proceedings of the Fifth NTCIR Workshop Meeting on Evaluation of Information Access Technologies: Information Retrieval, Question Answering and Cross-Lingual Information Access</journal>
     <publisher>National Institute of Informatics</publisher>
     <city>Tokyo</city>
     <year>2005</year>
