@@ -103,6 +103,13 @@
 <span class="note"><%= pub.text("note") %></span>
 <% end %>
 </dd>
+<% if not pub.text("file").nil? %>
+<dd class="url">
+<span class="url"><a href="<%= pub.text("file") %>"><%=
+pub.elements["file"].attributes["label"] ? pub.elements["file"].attributes["label"] : pub.text("file")
+%></a></span>
+</dd>
+<% end %>
 <% if not pub.text("url").nil? %>
 <dd class="url">
 <span class="url"><a href="<%= pub.text("url") %>"><%=
