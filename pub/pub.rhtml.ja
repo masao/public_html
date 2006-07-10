@@ -63,6 +63,9 @@
 %>
 </span></dd>
 <dd class="bibdata">
+<% if not pub.text("conference").nil? %>
+<span class="conference"><%= pub.text("conference") %>;</span>
+<% end %>
 <% if not pub.text("journal").nil? %>
 <span class="journal"><%= pub.text("journal") %>;</span>
 <% end %>
