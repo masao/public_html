@@ -86,6 +86,11 @@ div.section {
         margin: 5px 2em 5px 2em;
         padding: 0.5em 2em;
 }
+@media print {
+  div.section {
+    margin: 0;
+  }
+}
 
 /*
 item 中の引用の設定
