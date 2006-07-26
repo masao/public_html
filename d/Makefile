@@ -23,4 +23,5 @@ ping: index.html
 		http://www.blogpeople.net/servlet/weblogUpdates \
 		http://r.hatena.ne.jp/rpc \
 		http://rpc.bloglines.com/update \
+		http://ping.ask.jp/xmlrpc.m \
 		> ping
