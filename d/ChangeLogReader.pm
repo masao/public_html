@@ -146,7 +146,7 @@ sub store_item {
 	$rest = $1;
     } elsif ($$linesp[0] =~ /:/o) {
 	$ih .= shift @$linesp;
-	$ih =~ s!(.)\n\t(.)!"$1$2"=~m/^[\x00-x7f]+$/o ? "$1 $2" : "$1$2"!ge;
+	$ih =~ s!(.)\n\t(.)! ord($1) > 256 or ord($2) > 256 ? "$1$2" : "$1 $2"!ge;
 	if ($ih =~ s/:\s*(.*)$/:/o) { # for case 1,2,3
 	    $rest = $1;
 	}
