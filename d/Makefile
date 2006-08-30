@@ -7,7 +7,7 @@ ChangeLog: ../private/ChangeLog cl-grep.pl ChangeLogReader.pm
 	./cl-grep.pl ../private/ChangeLog > ChangeLog
 
 ping: index.html
-	curl -sS -o ping -X POST -H "Content-Type: text/xml; charset=UTF8" \
+	curl -sS -o ping -X POST -H "Content-Type: text/xml; charset=UTF-8" \
 		-d @../private/ping.xml \
 		http://rpc.technorati.jp/rpc/ping \
 		http://api.my.yahoo.co.jp/RPC2 \
