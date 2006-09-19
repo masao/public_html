@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <publist>
 
+  <pub type="techreport">
+    <author>Masao Takaku</author>
+    <author>Keizo Oyama</author>
+    <author>Akiko Aizawa</author>
+    <author>Haruko Ishikawa</author>
+    <author>Kengo Minamide</author>
+    <author>Shin Kato</author>
+    <author>Hayato Yamana</author>
+    <author>Junya Hayashi</author>
+    <title>Building a Terabyte-scale Web Data Collection "NW1000G-04" in the NTCIR-5 WEB Task</title>
+    <journal>NII Technical Report</journal>
+    <number>NII-2006-012E</number>
+    <institution>National Institute of Informatics</institution>
+    <year>2006</year>
+    <month>10</month>
+    <page>8</page>
+    <url>http://research.nii.ac.jp/TechReports/06-012E.html</url>
+  </pub>
+
   <pub type="conference">
     <author>Masao Takaku</author>
     <author>Keizo Oyama</author>

@@ -82,7 +82,10 @@
 <span class="volume">vol.<%= pub.text("volume") %>;</span>
 <% end %>
 <% if not pub.text("number").nil? %>
-<span class="number">no.<%= pub.text("number") %>;</span>
+<span class="number"><%= "no." unless pub.attributes["type"] == "techreport"%><%= pub.text("number") %>;</span>
+<% end %>
+<% if not pub.text("institution").nil? %>
+<span class="institution"><%= pub.text("institution") %>;</span>
 <% end %>
 <% page = pub.elements["page"] %>
 <% if not page.nil? %>

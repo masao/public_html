@@ -19,7 +19,7 @@ class PubList
 
    SORT_ACCEPT = {
       :year => (1998 .. Time.now.year+1).to_a.map{|e|e.to_s}.reverse,
-      :type => %w[ book journal conference thesis misc ],
+      :type => %w[ book journal conference thesis techreport misc ],
       :author => nil,
    }
    SORT_DEFAULT = :year
