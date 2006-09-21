@@ -1,6 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <publist>
 
+  <pub type="conference">
+    <author>Masao Takaku</author>
+    <author>Keizo Oyama</author>
+    <author>Akiko Aizawa</author>
+    <title>An Analysis on Topic Features and Difficulties Based on Web Navigational Retrieval Experiments</title>
+    <journal>Proceedings of the Third Asia Information Retrieval Symposium (AIRS) 2006</journal>
+    <year>2006</year>
+    <month>10</month>
+    <city>Singapore</city>
+    <publisher>Springer</publisher>
+	<page>
+	  <start>625</start>
+	  <end>632</end>
+	</page>
+    <note>(To appear in Springer LNCS 4182)</note>
+  </pub>
+
+  <pub type="misc">
+    <author>高久雅生</author>
+    <author>相澤彰子</author>
+    <author>大山敬三</author>
+    <title>科研費データベースにもとづく研究者情報ブラウジングツール</title>
+    <conference>「大規模データ・リンケージ、データマイニングと統計手法」研究会</conference>
+    <year>2006</year>
+    <month>10</month>
+    <city>東京, 統計数理研究所</city>
+<!--
+    <page>
+      <start>47</start>
+      <end>56</end>
+    </page>
+-->
+    <note>（印刷中; 8p.）</note>
+  </pub>
+
   <pub type="techreport">
     <author>Masao Takaku</author>
     <author>Keizo Oyama</author>
@@ -18,23 +53,6 @@
     <month>9</month>
     <page>8</page>
     <url>http://research.nii.ac.jp/TechReports/06-012E.html</url>
-  </pub>
-
-  <pub type="conference">
-    <author>Masao Takaku</author>
-    <author>Keizo Oyama</author>
-    <author>Akiko Aizawa</author>
-    <title>An Analysis on Topic Features and Difficulties Based on Web Navigational Retrieval Experiments</title>
-    <journal>Proceedings of the Third Asia Information Retrieval Symposium (AIRS) 2006</journal>
-    <year>2006</year>
-    <month>10</month>
-    <city>Singapore</city>
-    <publisher>Springer</publisher>
-	<page>
-	  <start>625</start>
-	  <end>632</end>
-	</page>
-    <note>(To appear in Springer LNCS 4182; 8 pages)</note>
   </pub>
 
   <pub type="misc">
