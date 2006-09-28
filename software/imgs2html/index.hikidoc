@@ -22,6 +22,7 @@ PostScriptファイルをWeb用の画像形式に変換するスクリプト（ps2imgs）、
 
 !!更新情報
 
+{{include(/home/masao/cvswork/imgs2html/NEWS)}}
 （元々は、[[LA研究会|http://phase.hpcc.jp/la/]]のために作成したスクリプトです。）
 
 !!類似ソフトウェア
