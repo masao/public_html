@@ -1,0 +1,44 @@
+title: imgs2html & ps2imgs
+date.modified: 2006-09-28
+subject: software
+
+PostScriptファイルをWeb用の画像形式に変換するスクリプト（ps2imgs）、
+たくさんの画像ファイルを一気にHTMLファイルへ変換するスクリプト（imgs2html）の2つのPerlスクリプトを置いています。
+
+例えば、プレゼンテーション資料を元に、[[複数の画像とその一覧からなるページ|http://phase.hpcc.jp/la/SLIDES/0012-hasegawa/index.html]]を作れます。
+
+バグ報告・要望・感想などは[[mailto:masao@nii.ac.jp]]までお寄せ下さい。お気軽にどうぞ。
+
+!!!マニュアル
+
+*[[imgs2html(1)|imgs2html-man.html]]
+*[[ps2imgs(1)|ps2imgs-man.html]]
+
+!!!ダウンロード
+
+*[[imgs2html-0.3.3.tar.gz|../archive/imgs2html-0.3.3.tar.gz]]
+
+ライセンスは[[GNU Generic Public License version 2|http://www.gnu.org/copyleft/gpl.html]]に従ったフリーソフトウェアとします。
+
+!!更新情報
+
+（元々は、[[LA研究会|http://phase.hpcc.jp/la/]]のために作成したスクリプトです。）
+
+!!類似ソフトウェア
+
+（他にもご存じの方は[[お知らせ|mailto:masao@nii.ac.jp]]いただければ幸いです）
+
+*[[WebMagick|http://www.simplesystems.org/WebMagick/]]
+*[[thumbnail_index|http://www.acme.com/software/thumbnail_index/]]
+*[[MagicPoint|http://www.mew.org/MagicPoint/]]: プレゼンテーションツール。
+*[[gPhoto|http://www.gphoto.org/]]: デジタルカメラ用ソフトウェア。サムネール画像を含むHTMLを出力する機能がある。
+*[[SWIGS: Structured Web Image Gallery system|http://swigs.sourceforge.net/]]
+*[[RubyPhoto|http://plig.net/~ture/rubyphoto/]]: SWIGSを参考にして作られたもの。XMLでのテンプレート記述。
+*[[BINS|http://bins.sautret.org/]]: SWIGSの拡張版。gettextを使った国際化など。
+*[[mkthum.pl|http://radar.sci.hokudai.ac.jp/~kato/computer/Util/mkthumb/index.html]]: デジカメ画像の整理用!?（Exif対応）
+*[[cthumb|http://cthumb.sourceforge.net/]]
+*[[Gallery.py|http://www.net-es.dk/~pj/python/]]
+*[[Gallery|http://gallery.menalto.com/]]
+*[[IDS|http://ids.sourceforge.net/]]
+*[[Gimp Gallery|http://skylab.org/~plumpy/gg/]]: HTMLを生成するGIMP。
+*[[iGal: online image gallery generator|http://www.stanford.edu/~epop/igal/]]
