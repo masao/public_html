@@ -8,6 +8,25 @@ require "erb"
 require "hikidoc"
 require "cgi"
 
+class HikiDoc
+   attr_reader :toc
+   # For ToC
+   def parse_header( text )
+      #STDERR.puts text
+      @toc ||= []
+      text.gsub( /^(#{HEADER_RE}{1,#{7-@level}})\s*(.*)\n?/ ) do |str|
+         level, title = $1.size + @level - 1, $2
+         if @toc.empty? or @toc[-1].first != level
+            @toc << [level, inline_parser(title)]
+         else
+            @toc[-1] << inline_parser(title)
+         end
+         #STDERR.puts @toc.inspect
+         %Q[\n<h#{level} id="#{@toc.size}_#{@toc[-1].size-1}" name="#{@toc.size}_#{@toc[-1].size-1}">%s</h#{level}>\n\n] % inline_parser(title)
+      end
+   end
+end
+
 # HierFilename:
 #
 #  If a file is not found, refer to parental directories with same
@@ -34,13 +53,31 @@ class Plugin
          var = var.to_s.sub(/^/, "@") unless /^@/ =~ var.to_s
          instance_variable_set( var, val )
       end
-   end
+   end 
+   class Toc < Plugin
+     def expand( *args )
+        result = "<ul class=\"toc\">\n"
+        @doc.toc.each_with_index do |bag, lidx|
+           level = bag.shift
+           bag.each_with_index do |title, idx|
+              result << %Q[<li><a href="##{lidx+1}_#{idx+1}">#{title}</a></li>\n]
+           end
+        end
+        result << "</ul>"
+     end
+  end
    class Lastmodified < Plugin
-      def expand( *args )
+     def expand( *args )
          file, format = args
          format ||= '%Y-%m-%d'
          mtime = File.mtime( file )
          %Q[<#{@style} class="lastmodified">#{mtime.strftime( format )}</#{@style}>]
+      end
+   end
+   class Include < Plugin
+      def expand( *args )
+         content = open(args[0]){|io| io.readlines }.join
+         HikiDoc.new( content ).to_html
       end
    end
    class Rawhtml < Plugin
@@ -96,7 +133,8 @@ class ToHTML
       [ content.join, header ]
    end
    def expand( template = "template.html.in" )
-      body = HikiDoc.new( @content ).to_html
+      @doc = HikiDoc.new( @content )
+      body = @doc.to_html
       body = expand_plugin( body )
       ERB.new( open(HierFilename.new(template)){|io| io.read },
                nil, "<>" ).result( binding )
@@ -111,7 +149,8 @@ class ToHTML
          args = $3
          args.sub!(/\A\s*\(/, "") && args.sub!(/\)\s*\Z/, "")
          args = Shellwords.shellwords( args )
-         plugin = Plugin.const_get( name.capitalize ).new(:style => style)
+         plugin = Plugin.const_get( name.capitalize ).new(:doc => @doc,
+                                                          :style => style)
          plugin.expand( *args )
       end
    end
