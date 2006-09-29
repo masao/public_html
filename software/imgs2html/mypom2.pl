@@ -28,11 +28,15 @@ sub view_pod {
 EOF
     my $footer = <<EOF;
 <hr>
-<address>
-¹âµ×²íÀ¸ (Takaku Masao)<br>
+<address>¹âµ×²íÀ¸ (Takaku Masao)<br />
 <a href="$home">$home</a>,
-<a href="mailto:$email">$email</a>
-</address>
+<a href="mailto:$email">$email</a></address>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-389547-1";
+urchinTracker();
+</script>
 </body></html>
 EOF
     return $header
