@@ -66,7 +66,7 @@ my $pom = $parser->parse_file($file)
 
 print Mypage::View->print($pom);
 
-sub usage() {
+sub usage {
     print "  USAGE: $0 file\n";
     exit;
 }
