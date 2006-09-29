@@ -3,7 +3,8 @@
 HTML	= 	index.html profile.html history.html \
 		etc/index.shtml \
 		etc/firefox.html etc/ir-journal.html etc/unihan-onkun.html \
-		software/mnewsprint/index.html
+		software/mnewsprint/index.html \
+		software/imgs2html/index.html \
 
 all: $(HTML) chalow
 
