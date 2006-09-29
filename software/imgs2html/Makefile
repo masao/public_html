@@ -1,6 +1,6 @@
 # $Id$
 
-CVSDIR = /home/masao/CVSwork/imgs2html
+CVSDIR = /home/masao/cvswork/imgs2html
 UPDATE_NEWS = ./update_news.pl
 POD2HTML = ./mypom2.pl
 
