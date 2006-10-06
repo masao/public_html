@@ -43,10 +43,15 @@
 <% pubs.each do |pub| %>
 <dt class="title"><a name="pubid<%= pub.object_id %>" id="pubid<%= pub.object_id %>"><span class="year"><%= pub.text("year") %></span>
 <span class="type"><%= pub.attributes["type"] %></span>
-<span class="title"><%= pub.text("title") %>
+<span class="title">
+<% if not pub.text("file").nil? %>
+<a href="<%= pub.text("file") %>">
+<% end %>
+<%= pub.text("title") %>
 <% if pub.text("subtitle") %>
 : <span><%= pub.text("subtitle") %></span>
 <% end %>
+<% if not pub.text("file").nil? %></a><% end %>
 </span></a></dt>
 <dd class="author"><span class="author"><%= pub.get_elements("author").to_a.map{|e|
     #STDERR.puts e
@@ -106,13 +111,6 @@
 <span class="note"><%= pub.text("note") %></span>
 <% end %>
 </dd>
-<% if not pub.text("file").nil? %>
-<dd class="url">
-<span class="url"><a href="<%= pub.text("file") %>"><%=
-pub.elements["file"].attributes["label"] ? pub.elements["file"].attributes["label"] : pub.text("file")
-%></a></span>
-</dd>
-<% end %>
 <% if not pub.text("url").nil? %>
 <dd class="url">
 <span class="url"><a href="<%= pub.text("url") %>"><%=
@@ -121,8 +119,13 @@ pub.elements["url"].attributes["label"] ? pub.elements["url"].attributes["label"
 </dd>
 <% end %>
 <% if not pub.text("doi").nil? %>
-<dd class="doi">
+<dd class="url">
 <span class="doi"><a href="<%= pub.text("doi") %>"><%= pub.text("doi") %></a></span>
+</dd>
+<% end %>
+<% if not pub.text("slide").nil? %>
+<dd class="url">
+<span class="slide">[Slides] <a href="<%= pub.text("slide") %>"><%= pub.text("slide") %></a></span>
 </dd>
 <% end %>
 <% end %>
