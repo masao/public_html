@@ -531,8 +531,14 @@ sub okikae {
     my $URLCHARS = "(&(?!(lt|gt|quot);)|[-_.!~*'a-zA-Z0-9;/?:@=+,%\#\$])";
     my $URLDELIM = "\\\\\\n *";
     s{(?<![\"\=|])((s?https?|ftp)://($URLCHARS+)($URLDELIM($URLCHARS+))*)}
-    {'<a href="'.join('', split(/$URLDELIM/, $1)).'">'.
-	 join('', split(/\\/, $1)).'</a>'}gem; #")};
+    {my $url = $1;
+     if (/<a\s+href=\"[^\"]+\Q$url/) {
+	$url;
+     } else {
+	'<a href="'.join('', split(/$URLDELIM/, $url)).'">'.
+	 join('', split(/\\/, $url)).'</a>'
+     }
+     }gem; #")};
 
     ### 行頭のスペースは &nbsp; に置き換える。
     s!^( +)!{"&nbsp;" x length($1)}!gme;
