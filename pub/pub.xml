@@ -242,6 +242,7 @@
       <end>106</end>
     </page>
     <url>http://www.dl.slis.tsukuba.ac.jp/DLjournal/No_16/12-masao/12-masao.html</url>
+    <slide>./1999/dlw16-slides.pdf</slide>
   </pub>
 
   <pub type="misc">
@@ -280,6 +281,7 @@
     <page>73</page>
     <note>修士論文</note>
     <file>./2000/master-thesis.pdf</file>
+    <slide>./2000/master-thesis-slides.pdf</slide>
   </pub>
 
   <pub type="thesis">
@@ -294,6 +296,6 @@
     <page>78</page>
     <note>博士論文</note>
     <file>./2004/phd-thesis.pdf</file>
-    <slides>./2004/phd-thesis-slides.pdf</slides>
+    <slide>./2004/phd-thesis-slides.pdf</slide>
   </pub>
 </publist>
