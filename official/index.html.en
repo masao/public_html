@@ -10,7 +10,7 @@
 <body>
 <div class="lang-switch"><a href="index.html.ja">[In Japanese]</a></div>
 <!-- hhmts start -->
-<div class="last-update">Updated: 2006-05-12</div>
+<div class="last-update">Updated: 2006-10-10</div>
 <!-- hhmts end -->
 <h1>Masao TAKAKU, Ph.D.</h1>
 <dl>
@@ -38,7 +38,12 @@
 <h2>Related links</h2>
 <ul>
   <li><a href="http://research.nii.ac.jp/ntcir/">NTCIR</a>
-  <li><a href="http://www.nii.ac.jp/">NII (National Institute of Informatics)</a>
+  <li><a href="http://www.nii.ac.jp/">National Institute of Informatics (NII)</a>
+  <li><a href="http://www.rois.ac.jp/">Research Organization of Information and Systems</a>
+      <ul>
+	<li><a href="http://www.rois.ac.jp/tric/">Transdisciplinary Research Integration Center</a>
+	<li><a href="http://www.nii.ac.jp/info_tric/">Information Space Infrastructure for Transdisciplinary Researches</a>
+      </ul>
 </ul>
 <hr>
 <address>
