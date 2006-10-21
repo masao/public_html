@@ -11,10 +11,11 @@
     <month>10</month>
     <city>Singapore</city>
     <publisher>Springer, LNCS 4182</publisher>
-	<page>
-	  <start>625</start>
-	  <end>632</end>
-	</page>
+    <page>
+      <start>625</start>
+      <end>632</end>
+    </page>
+    <doi>10.1007/11880592_55</doi>
   </pub>
 
   <pub type="misc">
