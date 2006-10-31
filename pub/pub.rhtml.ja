@@ -120,12 +120,17 @@ pub.elements["url"].attributes["label"] ? pub.elements["url"].attributes["label"
 <% end %>
 <% if not pub.text("doi").nil? %>
 <dd class="url">
-<span class="doi">DOI:<a href="http://dx.doi.org/<%= pub.text("doi") %>"><%= pub.text("doi") %></a></span>
+<span class="doi">DOI <a href="http://dx.doi.org/<%= pub.text("doi") %>"><%= pub.text("doi") %></a></span>
 </dd>
 <% end %>
 <% if not pub.text("slide").nil? %>
 <dd class="url">
 <span class="slide">[Slides] <a href="<%= pub.text("slide") %>"><%= pub.text("slide") %></a></span>
+</dd>
+<% end %>
+<% if not pub.text("poster").nil? %>
+<dd class="url">
+<span class="poster">[Poster] <a href="<%= pub.text("poster") %>"><%= pub.text("poster") %></a></span>
 </dd>
 <% end %>
 <% end %>
