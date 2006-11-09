@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="ja">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-JP">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" href="../default.css" type="text/css">
 <link rel="stylesheet" href="pub.css" type="text/css">
 <link rev="made" href="mailto:masao@nii.ac.jp">
@@ -123,15 +123,12 @@ pub.elements["url"].attributes["label"] ? pub.elements["url"].attributes["label"
 <span class="doi">DOI <a href="http://dx.doi.org/<%= pub.text("doi") %>"><%= pub.text("doi") %></a></span>
 </dd>
 <% end %>
-<% if not pub.text("slide").nil? %>
+<% %w[ slide poster ].each do |target| %>
+<% pub.elements.to_a(target).each do |e| %>
 <dd class="url">
-<span class="slide">[Slides] <a href="<%= pub.text("slide") %>"><%= pub.text("slide") %></a></span>
+<span class="<%= target %>">[<%= target.capitalize %>] <a href="<%= e.text %>"><%= e.text %></a></span>
 </dd>
 <% end %>
-<% if not pub.text("poster").nil? %>
-<dd class="url">
-<span class="poster">[Poster] <a href="<%= pub.text("poster") %>"><%= pub.text("poster") %></a></span>
-</dd>
 <% end %>
 <% end %>
 </dl>
