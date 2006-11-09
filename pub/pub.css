@@ -46,6 +46,8 @@ margin-left: 1em;
 #sortby_list ul { 
 display: inline;
 list-style-type: none;
+margin: 0;
+padding: 0;
 }
 #sortby_list li { 
 display: inline; 

@@ -14,6 +14,7 @@
 <p>これまでに執筆、発表した論文等の情報です（全 <%= pubs.size %> 件）。</p>
 <div id="sortby_list">
 <p>ソート方式:</p>
+<ul>
 <li><% if cgi.sort_mode == :year %>
 <strong>発表年月</strong>
 <% else %>
@@ -42,7 +43,7 @@
 <dl id="publist">
 <% pubs.each do |pub| %>
 <dt class="title"><a name="pubid<%= pub.object_id %>" id="pubid<%= pub.object_id %>"><span class="year"><%= pub.text("year") %></span>
-<span class="type"><%= pub.attributes["type"] %></span>
+<span class="type"><%= pub.attributes["type"] %></span></a>
 <span class="title">
 <% if not pub.text("file").nil? %>
 <a href="<%= pub.text("file") %>">
@@ -52,7 +53,7 @@
 : <span><%= pub.text("subtitle") %></span>
 <% end %>
 <% if not pub.text("file").nil? %></a><% end %>
-</span></a></dt>
+</span></dt>
 <dd class="author"><span class="author"><%= pub.get_elements("author").to_a.map{|e|
     #STDERR.puts e
     author = e.text
