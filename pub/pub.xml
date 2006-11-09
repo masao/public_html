@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist>
+
+<!--
+  <pub type="conference">
+    <author>Akiko Aizawa</author>
+    <author>Masao Takaku</author>
+    <author>Keizo Oyama</author>
+    <author>Jun Adachi</author>
+    <title>Information Linkage and Its Application</title>
+    <subtitle>Utilization of Large-Scale Academic Databases for Entity Identification</subtitle>
+    <journal>Proceedings of DBWeb 2006</journal>
+    <year>2006</year>
+    <month>11</month>
+    <city>京都</city>
+    <page>
+      <start>625</start>
+      <end>632</end>
+    </page>
+  </pub>
+-->
 <!--
   <pub type="misc">
     <author>相澤彰子</author>
