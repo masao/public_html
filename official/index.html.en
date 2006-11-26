@@ -10,7 +10,7 @@
 <body>
 <div class="lang-switch"><a href="index.html.ja">[In Japanese]</a></div>
 <!-- hhmts start -->
-<div class="last-update">Updated: 2006-10-10</div>
+<div class="last-update">Updated: 2006-11-26</div>
 <!-- hhmts end -->
 <h1>Masao TAKAKU, Ph.D.</h1>
 <dl>
@@ -24,6 +24,8 @@
   <dd><a href="mailto:masao@nii.ac.jp">masao@nii.ac.jp</a>
   <dt>Web:
   <dd><a href="http://research.nii.ac.jp/~masao/">http://research.nii.ac.jp/~masao/</a>
+  <dd><span class="role">[Personal website]</span>
+      <a href="http://masao.jpn.org/">http://masao.jpn.org/</a>
   <dt>Contact:
   <dd><!-- National Institute of Informatics, -->
       2-1-2 Hitotsubashi, Chiyoda-ku, Tokyo 101-8430, Japan
