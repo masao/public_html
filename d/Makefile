@@ -15,7 +15,6 @@ ping: index.html
 		http://bulkfeeds.net/rpc \
 		http://ping.blo.gs/ \
 		http://ping.bloggers.jp/rpc/ \
-		http://ping.cocolog-nifty.com/xmlrpc \
 		http://rpc.blogrolling.com/pinger/ \
 		http://rpc.technorati.com/rpc/ping \
 		http://rpc.technorati.jp/rpc/ping \
