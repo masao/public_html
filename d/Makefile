@@ -15,7 +15,6 @@ ping: index.html
 		http://bulkfeeds.net/rpc \
 		http://ping.blo.gs/ \
 		http://ping.bloggers.jp/rpc/ \
-		http://rpc.blogrolling.com/pinger/ \
 		http://rpc.technorati.com/rpc/ping \
 		http://rpc.technorati.jp/rpc/ping \
 		http://rpc.weblogs.com/RPC2 \
@@ -23,4 +22,6 @@ ping: index.html
 		http://r.hatena.ne.jp/rpc \
 		http://rpc.bloglines.com/update \
 		http://ping.ask.jp/xmlrpc.m \
+		http://blog.goo.ne.jp/XMLRPC \
+		http://blogsearch.google.co.jp/ping/RPC2 \
 		> ping
