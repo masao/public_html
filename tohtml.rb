@@ -55,8 +55,10 @@ class Plugin
       end
    end 
    class Toc < Plugin
-     def expand( *args )
-        result = "<ul class=\"toc\">\n"
+      def expand( *args )
+        label, = args
+        label = "Ã‹º°" unless label
+        result = "<h2>#{label}</h2><ul class=\"toc\">\n"
         @doc.toc.each_with_index do |bag, lidx|
            level = bag.shift
            bag.each_with_index do |title, idx|
@@ -90,6 +92,17 @@ class Plugin
       lines = args.join("\n").split(/\n/)
       attrs = lines.shift
       %Q[<div #{attrs}>#{ HikiDoc.new( lines.join("\n") ).to_html }</div>]
+      end
+   end
+   class Image < Plugin
+      def expand( *args )
+         STDERR.puts args.inspect
+         src, label, align = args
+         label_text = ""
+         label_text = %Q[ alt="#{label}" title="#{label}"] if label
+         align_text = ""
+         align_text = %Q[ style="display:#{align};clear:#{align}"] if align
+         %Q[<img src="#{src}"#{align_text}#{label_text}>]
       end
    end
 end
