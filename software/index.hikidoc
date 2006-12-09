@@ -5,6 +5,7 @@ css.content: div.obsolete { opacity:0.5; color:gray; }
 ここでは、私が書いた簡単なツールを紹介します。
 
 :[[mnewsprint|mnewsprint/]]:E-mailやNetNewsのメッセージを整形して印刷するスクリプト。
+:[[Yahoo!メッセンジャー・アーカイブ・ブラウザ|yim/]]:Yahoo!メッセンジャーでの会話内容を保存したメッセージアーカイブ・ファイルを簡単に閲覧・検索できるようにしたツール。
 :[[imgs2html & ps2imgs|imgs2html/]]:PostScriptファイルをWeb用の画像形式に変換する（ps2imgs）およびたくさんの画像ファイルを一気にHTMLファイルへ変換する（imgs2html）2つのPerlスクリプトです。
 :[[Graphviz日本語対応|graphviz-ja/]]:[[Graphviz|http://www.research.att.com/sw/tools/graphviz/]]を日本語に対応させたいなぁと思っております。
 
