@@ -96,7 +96,7 @@ class Plugin
    end
    class Image < Plugin
       def expand( *args )
-         STDERR.puts args.inspect
+         #STDERR.puts args.inspect
          src, label, align = args
          label_text = ""
          label_text = %Q[ alt="#{label}" title="#{label}"] if label
