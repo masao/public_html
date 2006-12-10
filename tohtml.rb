@@ -56,18 +56,32 @@ class Plugin
    end 
    class Toc < Plugin
       def expand( *args )
-        label, = args
-        label = "目次" unless label
-        result = "<h2>#{label}</h2><ul class=\"toc\">\n"
-        @doc.toc.each_with_index do |bag, lidx|
-           level = bag.shift
-           bag.each_with_index do |title, idx|
-              result << %Q[<li><a href="##{lidx+1}_#{idx+1}">#{title}</a></li>\n]
-           end
-        end
-        result << "</ul>"
-     end
-  end
+         label, = args
+         label = "目次" unless label
+         result = "<h2>#{label}</h2><ul class=\"toc\">\n"
+         pre_level = 2
+         @doc.toc.each_with_index do |bag, lidx|
+            level = bag.shift
+            gap = pre_level - level
+            if gap == 0
+               #
+            elsif gap > 0
+               gap.times do
+                  result << %Q[</ul>\n]
+               end
+            elsif gap < 0
+               gap.abs.times do
+                  result << %Q[<ul>\n]
+               end
+            end
+            bag.each_with_index do |title, idx|
+               result << %Q[<li><a href="##{lidx+1}_#{idx+1}">#{title}</a></li>\n]
+            end
+            pre_level = level
+         end
+         result << "</ul>"
+      end
+   end
    class Lastmodified < Plugin
      def expand( *args )
          file, format = args
