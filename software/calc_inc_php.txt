@@ -1,0 +1,27 @@
+<?php
+/////////////////////////////////////////////////
+// PukiWiki - Yet another WikiWikiWeb clone.
+//
+// $Id$
+//
+function plugin_calc_inline()
+{
+	if (func_num_args() < 1)
+	{
+		return FALSE;
+	}
+	$args = func_get_args();
+	$exp = $args[0];
+	$dot = is_numeric($args[1]) ? $args[1] : 0;
+	$comma = $args[2] == 'comma' ? ',' : '';
+
+	if (!preg_match('/^[\d\.\s\+\-\*\/%()]*$/', $exp))
+	{
+		return FALSE;
+	}
+
+	$result = 0;
+	eval("\$result = $exp;");
+	return number_format((float) $result, $dot, '.', $comma);
+}
+?>
