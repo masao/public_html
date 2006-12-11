@@ -1,5 +1,5 @@
 title: ソフトウェア
-date.modified: 2006-12-11
+date.modified: 2006-12-12
 css.content: div.obsolete { opacity:0.5; color:gray; }
 
 ここでは、私が書いた簡単なツールを紹介します。
@@ -12,7 +12,8 @@ css.content: div.obsolete { opacity:0.5; color:gray; }
 !! 小物
 以下はちょっとした仕事をするためのワンライナー的スクリプトです。
 
-:[[calc.inc.php.txt]]:PukiWikiで電卓風の簡易計算をするプラグイン。本家サイト:[[PukiWiki/1.4/自作プラグイン/calcプラグイン|http://pukiwiki.sourceforge.jp/dev/?PukiWiki%2F1.4%2F%BC%AB%BA%EE%A5%D7%A5%E9%A5%B0%A5%A4%A5%F3%2Fcalc%A5%D7%A5%E9%A5%B0%A5%A4%A5%F3]]
+:[[calc_inc_php.txt]]:PukiWiki上で電卓風の簡易計算をするプラグイン（使用される際は{{code calc.inc.php}}にリネームしてからご使用ください）。
+::本家サイト: [[PukiWiki/1.4/自作プラグイン/calcプラグイン|http://pukiwiki.sourceforge.jp/dev/?PukiWiki%2F1.4%2F%BC%AB%BA%EE%A5%D7%A5%E9%A5%B0%A5%A4%A5%F3%2Fcalc%A5%D7%A5%E9%A5%B0%A5%A4%A5%F3]]
 :[[mailer-stat.pl|mailer-stat.html]]:MH形式のメールファイルからMUAの情報を取得するスクリプト。
 :[[rename_ppt_imgs.pl|rename_ppt_imgs.pl]]:MS PowerPoint が生成するファイル名を（Unix上などで扱いやすいように）変更します。（例:「スライド1.GIF」→「001.gif」）
 
@@ -24,6 +25,6 @@ css.content: div.obsolete { opacity:0.5; color:gray; }
 :[[killfile|killfile.html]]:mnewsのkillfileを追加するスクリプト。
 :[[random.cgi|random_cgi.txt]]:[[学生サーバ|http://www-student.ulis.ac.jp/]]で使っている学内ランダムリンク用CGIスクリプト。
 :[[google-cache.pl|google-cache.html]]:[[Google|http://www.google.com/]]のキャッシュデータから、Webページを復元するスクリプトです。
-:[[gnujdoc-latest-only.pl|gnujdoc-latest-only.pl]]:[[gnujdocプロジェクト|http://openlab.ring.gr.jp/gnujdoc/]]の成果物をコンパイルする際に最新バージョンの文書だけを対象にして{{rawhtml(<code>./configure</code>)}}するためのスクリプト。
+:[[gnujdoc-latest-only.pl|gnujdoc-latest-only.pl]]:[[gnujdocプロジェクト|http://openlab.ring.gr.jp/gnujdoc/]]の成果物をコンパイルする際に最新バージョンの文書だけを対象にして{{code( './configure' )}}するためのスクリプト。
 
 {{rawhtml(</div>)}}
