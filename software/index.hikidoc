@@ -1,5 +1,5 @@
 title: ソフトウェア
-date.modified: 2006-12-09
+date.modified: 2006-12-11
 css.content: div.obsolete { opacity:0.5; color:gray; }
 
 ここでは、私が書いた簡単なツールを紹介します。
@@ -15,7 +15,7 @@ css.content: div.obsolete { opacity:0.5; color:gray; }
 :[[mailer-stat.pl|mailer-stat.html]]:MH形式のメールファイルからMUAの情報を取得するスクリプト。
 :[[rename_ppt_imgs.pl|rename_ppt_imgs.pl]]:MS PowerPoint が生成するファイル名を（Unix上などで扱いやすいように）変更します。（例:「スライド1.GIF」→「001.gif」）
 
-{{rawhtml(<div class="obsolete">}}
+{{rawhtml('<div class="obsolete">')}}
 !! Obsolete
 
 以下は既に使わなくなっており、保守される予定の無いモノです。
