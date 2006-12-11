@@ -124,6 +124,13 @@ class MHikiDoc < HikiDoc
             %Q[<div #{ attrs }>#{ text }</div>]
          end
       end
+      class Code < Plugin
+         def expand( *args )
+            str = args.join("\n")
+            #str = MHikiDoc.new( str ).to_html.gsub(/^<p>/,'').gsub(/<\/p>$/,'')
+            %Q[<code>#{ str }</code>]
+         end
+      end
       class Image < Plugin
          def expand( *args )
             #STDERR.puts args.inspect
