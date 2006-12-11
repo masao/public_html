@@ -8,25 +8,6 @@ require "erb"
 require "hikidoc"
 require "cgi"
 
-class HikiDoc
-   attr_reader :toc
-   # For ToC
-   def parse_header( text )
-      #STDERR.puts text
-      @toc ||= []
-      text.gsub( /^(#{HEADER_RE}{1,#{7-@level}})\s*(.*)\n?/ ) do |str|
-         level, title = $1.size + @level - 1, $2
-         if @toc.empty? or @toc[-1].first != level
-            @toc << [level, inline_parser(title)]
-         else
-            @toc[-1] << inline_parser(title)
-         end
-         #STDERR.puts @toc.inspect
-         %Q[\n<h#{level} id="#{@toc.size}_#{@toc[-1].size-1}" name="#{@toc.size}_#{@toc[-1].size-1}">%s</h#{level}>\n\n] % inline_parser(title)
-      end
-   end
-end
-
 # HierFilename:
 #
 #  If a file is not found, refer to parental directories with same
@@ -47,76 +28,112 @@ class HierFilename < Pathname
    alias :to_s :to_str
 end
 
-class Plugin
-   def initialize( opts )
-      opts.each do |var, val|
-         var = var.to_s.sub(/^/, "@") unless /^@/ =~ var.to_s
-         instance_variable_set( var, val )
-      end
-   end 
-   class Toc < Plugin
-      def expand( *args )
-         label, = args
-         label = "目次" unless label
-         result = "<h2>#{label}</h2><ul class=\"toc\">\n"
-         pre_level = 2
-         @doc.toc.each_with_index do |bag, lidx|
-            level = bag.shift
-            gap = pre_level - level
-            if gap == 0
-               #
-            elsif gap > 0
-               gap.times do
-                  result << %Q[</ul>\n]
-               end
-            elsif gap < 0
-               gap.abs.times do
-                  result << %Q[<ul>\n]
-               end
-            end
-            bag.each_with_index do |title, idx|
-               result << %Q[<li><a href="##{lidx+1}_#{idx+1}">#{title}</a></li>\n]
-            end
-            pre_level = level
+# My HikiDoc...
+#
+class MHikiDoc < HikiDoc
+   attr_reader :toc, :label
+   def initialize( content, options = {} )
+      @label = options[:label] || ''
+      super( content, options )
+   end
+
+   # For ToC
+   def parse_header( text )
+      #STDERR.puts text
+      @toc ||= []
+      text.gsub( /^(#{HEADER_RE}{1,#{7-@level}})\s*(.*)\n?/ ) do |str|
+         level, title = $1.size + @level - 1, $2
+         if @toc.empty? or @toc[-1].first != level
+            @toc << [level, inline_parser(title)]
+         else
+            @toc[-1] << inline_parser(title)
          end
-         result << "</ul>"
+         #STDERR.puts @toc.inspect
+         href_id = "toc#{@label}_#{@toc.size}_#{@toc[-1].size-1}"
+         %Q[\n<h#{level} id="#{href_id}">%s</h#{level}>\n\n] % inline_parser(title)
       end
    end
-   class Lastmodified < Plugin
-     def expand( *args )
-         file, format = args
-         format ||= '%Y-%m-%d'
-         mtime = File.mtime( file )
-         %Q[<#{@style} class="lastmodified">#{mtime.strftime( format )}</#{@style}>]
+
+   class Plugin
+      def initialize( opts )
+         opts.each do |var, val|
+            var = var.to_s.sub(/^/, "@") unless /^@/ =~ var.to_s
+            instance_variable_set( var, val )
+         end
+      end 
+      class Toc < Plugin
+         def expand( *args )
+            label, = args
+            label = "目次" unless label
+            result = %Q[<h2>#{label}</h2><ul class="toc">\n]
+            pre_level = nil
+            @doc.toc.each_with_index do |bag, lidx|
+               level = bag.shift
+               if pre_level.nil?
+                  gap = nil
+               else
+                  gap = pre_level - level
+               end
+               if gap.nil?
+               elsif gap == 0
+                  result << %Q[</li>\n]
+               elsif gap > 0
+                  result << %Q[</li>\n]
+                  gap.times do
+                     result << %Q[</ul></li>\n]
+                  end
+               elsif gap < 0
+                  gap.abs.times do
+                     result << %Q[<ul>\n]
+                  end
+               end
+               bag.each_with_index do |title, idx|
+                  result << %Q[<li><a href="#toc#{lidx+1}_#{idx+1}">#{title}</a>]
+                  result << %Q[</li>\n] unless idx == bag.size - 1
+               end
+               pre_level = level
+            end
+            result << "</li></ul>"
+         end
       end
-   end
-   class Include < Plugin
-      def expand( *args )
-         content = open(args[0]){|io| io.readlines }.join
-         HikiDoc.new( content ).to_html
+      class Lastmodified < Plugin
+         def expand( *args )
+            file, format = args
+            format ||= '%Y-%m-%d'
+            mtime = File.mtime( file )
+            %Q[<#{@style} class="lastmodified">#{mtime.strftime( format )}</#{@style}>]
+         end
       end
-   end
-   class Rawhtml < Plugin
-      def expand( *args )
-         args.map{|e| CGI.unescapeHTML(e) }.join("\n")
+      class Include < Plugin
+         def expand( *args )
+            content = open(args[0]){|io| io.readlines }.join
+            MHikiDoc.new( content, :label => args[0].gsub(/\W+/,'') ).to_html
+         end
       end
-   end
-   class Div < Plugin
-      def expand( *args )
-      lines = args.join("\n").split(/\n/)
-      attrs = lines.shift
-      %Q[<div #{attrs}>#{ HikiDoc.new( lines.join("\n") ).to_html }</div>]
+      class Rawhtml < Plugin
+         def expand( *args )
+            args.map{|e| CGI.unescapeHTML(e) }.join("\n")
+         end
       end
-   end
-   class Image < Plugin
-      def expand( *args )
-         #STDERR.puts args.inspect
-         src, label, align = args
-         label_text = ""
-         label_text = %Q[ alt="#{label}" title="#{label}"] if label
-         align_text = ""
-         align_text = %Q[ style="display:#{align};clear:#{align}"] if align
-         %Q[<img src="#{src}"#{align_text}#{label_text}>]
+      class Div < Plugin
+         def expand( *args )
+            lines = args.join("\n").split(/\n/)
+            attrs = lines.shift
+            text = MHikiDoc.new( lines.join("\n"),
+                                 :label => args[0].gsub(/\W+/,'') ).to_html
+            %Q[<div #{ attrs }>#{ text }</div>]
+         end
+      end
+      class Image < Plugin
+         def expand( *args )
+            #STDERR.puts args.inspect
+            src, label, align = args
+            label_text = ""
+            label_text = %Q[ alt="#{label}" title="#{label}"] if label
+            align_text = ""
+            align_text = %Q[ style="display:#{align};clear:#{align}"] if align
+            %Q[<img src="#{src}"#{align_text}#{label_text}/>]
+         end
       end
    end
 end
@@ -160,7 +177,7 @@ class ToHTML
       [ content.join, header ]
    end
    def expand( template = "template.html.in" )
-      @doc = HikiDoc.new( @content )
+      @doc = MHikiDoc.new( @content )
       body = @doc.to_html
       body = expand_plugin( body )
       ERB.new( open(HierFilename.new(template)){|io| io.read },
@@ -176,8 +193,8 @@ class ToHTML
          args = $3
          args.sub!(/\A\s*\(/, "") && args.sub!(/\)\s*\Z/, "")
          args = Shellwords.shellwords( args )
-         plugin = Plugin.const_get( name.capitalize ).new(:doc => @doc,
-                                                          :style => style)
+         plugin = MHikiDoc::Plugin.const_get( name.capitalize ).new(:doc => @doc,
+                                                                    :style => style)
          plugin.expand( *args )
       end
    end
