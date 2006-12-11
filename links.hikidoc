@@ -1,0 +1,357 @@
+date.modified: 2006-12-10
+title: リンク集
+
+ほとんど、ブックマークの代わりとしておいてました…が、ここ2・3年更新できてません。
+ご了承の上、ご覧ください。
+----
+{{toc}}
+----
+!!サーチエンジン
+まずは情報を集めよう!
+
+!!!国内
+:[[Goo|http://www.goo.ne.jp/]]:
+:[[Infoseek Japan|http://www.infoseek.co.jp/]]:
+:[[InfoNavigator|http://infonavi.infoweb.ne.jp/]]:
+:[[Yahoo! JAPAN|http://www.yahoo.co.jp/]]:
+//a href="http://www.jp.opentext.com/" Japanese Open Text/a
+
+!!!海外
+最近（Yahoo! JapanやGooができてから）急速に使わなくなったなー。
+:[[Google|http://www.google.com/]]:
+:[[Yahoo! USA|http://www.yahoo.com/]]:
+:[[AltaVista|http://www.altavista.com/]]:
+:[[Google Groups|http://groups.google.com/]]:NetNewsの記事検索サービス。（Deja.comからGoogleへ移行した）
+!!!その他
+:[[ULIS OPAC|http://uls03.ipc.ulis.ac.jp/cgi-bin/limedio/limewwwopac/]]:附属図書館のOPAC検索
+:[[CiteSeer: ResearchIndex|http://citeseer.nj.nec.com/cs]]:Computer Science分野の論文が相互参照付きで検索できる。
+:[[Queen NetNews Search|http://queen.heart.ne.jp/]]:fj.* などのアーカイブ・検索サービス
+:[[検索デスク - SearchDesk|http://www.searchdesk.com/]]:
+:[[Internet FAQ Consortium|http://www.faqs.org/]]:様々な分野のFAQ（Frequently Asked Questions）が蓄積されている。
+:[[Search Engines in Japan|http://www.ingrid.org/w3conf-bof/search.html]]:
+:[[各諸情報サービスへのリンク集|http://www.ingrid.org/w3conf-bof/infoservice.html]]:
+:[[BUBL Information Service Homepage|http://bubl.ac.uk/]]:
+:[[奈良先端科学技術大学院大学の電子図書館|http://dlw3.aist-nara.ac.jp/]]: 雑誌まで含めた全文検索システムは有用。
+:[[Request for Comments(RFC) Homepage|http://www.rfc-editor.org/]]:
+:[[日本語RFCリスト|http://www.se.hiroshima-u.ac.jp/~isaki/rfc/list.html]]:Web上にあるRFC日本語翻訳へのリンク集
+:[[The Spire Project|http://cn.net.au/]]:Information Resources on Internet etc.
+:[[Open Directory Project|http://dmoz.org/]]:
+:[[つくばタウン情報|http://www3.ocn.ne.jp/~townmag/]]:
+:[[無料サービスリンク集「タダなび」|http://www.tada-navi.com/]]:Web上で使える無料サービス・サイトなどへのリンクと解説など多数。
+!!電子図書館関連
+:[[杉本先生のDL関連リンク集|http://avalon.ulis.ac.jp/~sugimoto/J_index.html]]:
+:[[Dublin Core Metadata Initiative|http://purl.org/dc/]]:
+:[[The NSF/DARPA/NASA Digital Library Initiative (DLI)|http://dli.grainger.uiuc.edu/national.htm]]:
+:[[Stanford Digital Libraries Project|http://www-diglib.stanford.edu/diglib/]]:
+:[[D-Lib Magazine|http://www.dlib.org/]]:
+:[[Networked Computer Science Technical Reference Library (NCSTRL)|http://www.ncstrl.org/]]:
+:[[Open Source Digital Library System(OSDLS)|http://osdls.library.arizona.edu/]]:
+!!!Z39.50
+:[[Z39.50 Maintenance Agency (Libray of Congress)|http://lcweb.loc.gov/z3950/agency/]]:仕様書や実装に関する取り決めを行なっている。
+// a href="http://www-student.ulis.ac.jp/~anzai/z3950/" Z39.50の日本語による解説(安斎さん)/a
+:[[Index Data社|http://www.indexdata.dk/]]:YAZ他のZ39.50関連の開発ソフトウェアの開発を数多く行なっている。
+:[[ライブラリシステム研究会|http://libsys.lib.keio.ac.jp/]]:大学図書館・図書館システムのベンダ・研究者などが中心となってZ39.50など、図書館システムの標準化活動のために立ち上げた研究会。
+:[[Z39.50 Technical and Practical Information Home Page|http://z3950.isl.intec.co.jp/]]:インテックシステム研究所の石田さんによるZ39.50の技術的な情報を集めたページ。
+:[[Willow Information Center|http://www.washington.edu/willow/]]:
+:[[Internet Searching with Z39.50|http://www.ilrt.bris.ac.uk/discovery/z3950/resources/]]:
+:[[Dublin Core and Z39|http://cypress.dev.oclc.org:12345/~rrl/docs/dublincoreandz3950-v1.1.html]]:
+:[[Z+SQL|http://www.dstc.edu.au/Research/Projects/Z+SQL/]]:
+:[[ZETA Perl|http://zeta.tlcpi.finsiel.it/z3950/zetaperl/]]:Z39.50用のPerlモジュール
+:[[ZedKit for UNIX|http://www.crxnet.com/zedkit.php]]:
+:[[comp.client-server FAQ|http://www.faqs.org/faqs/client-server-faq/]]:
+:[[Oracle FAQ|http://www.orafaq.net/]]:
+
+!!WWW (World Wide Web)
+!!!WWW全般
+:[[W3C World Wide Web Consortium|http://www.w3.org/]]:
+:[[World Wide Web FAQ|http://www.nurs.or.jp/~asada/FAQ/WWW/www_faq_jp.html]]:
+:[[オンライン・ハイパーテキストのためのスタイルガイド|http://www.kanzaki.com/docs/Style/index.html]]（日本語版）:原文は[[Style Guide for online hypertext|http://www.w3.org/Provider/Style/]] by Tim BL
+:[[WWW Robot FAQ|http://ecfma.tmit.ac.jp/robofaq-j.html]]:
+:[[CGIのメカニズム (How a CGI Runs)|http://www.dais.is.tohoku.ac.jp/~kabe/WWW/cgimech/cgi-mechanism.html]]:
+:[[とほほのＷＷＷ入門|http://tohoho.wakusei.ne.jp/www.htm]]:
+:[[WWW Security FAQ|http://www.w3.org/Security/Faq/]]:
+:[[CSS1 Specification|http://www.w3.org/TR/REC-CSS1]] ([[日本語版|http://www.y-adagio.com/public/standards/css1/toc.htm]]):
+:[[CSS2 Specification|http://www.w3.org/TR/REC-CSS2/]] ([[日本語版|http://www.y-adagio.com/public/standards/tr_css2/toc.html]]):
+:[[useit.com: Jakob Nielsen's site (Usable Information Technology)|http://www.useit.com/]]:Web Usabilityなど
+:[[元祖G-TOOLホームページ|http://www.siliconcafe.com/gtool/]]:フリーのホームページ素材集
+!!!HTML
+:[[HTML 4.01 Specification|http://www.w3.org/TR/html4/]] ([[日本語版|http://www.asahi-net.or.jp/~sd5a-ucd/rec-html401j/cover.html]]):
+:[[HTML3.2 Complete Guide|http://www.astrum.ne.jp/html/index.htm]]:
+// dt a href="http://www-a2i.is.tokushima-u.ac.jp/~hino/about_html/" HTMLの文法チェック (gateway) /a
+:[[Another HTML-lint|http://openlab.ring.gr.jp/k16/htmllint/]]:
+:[[html-helper-mode|http://www.santafe.edu/~nelson/tools/]]:
+:[[html-helper-mode documentations|http://jeffcovey.net/web/html/html-helper-mode/html-helper-mode.html]]:
+!!Mozilla
+:[[mozilla.org|http://www.mozilla.org/]]:
+:[[mozilla.gr.jp|http://www.mozilla.gr.jp/]]:日本におけるMozilla情報の総本山。[[日本語パック|http://jlpmoz.sourceforge.net/]]や[[mozilla.org和訳プロジェクト|http://jt.mozilla.gr.jp/]]など。
+:[[MozillaZine 日本語版|http://ryuzi.dyndns.org/mozillazine/html/modules/news/]]:
+:[[Netscape Communicator for UNIX 日本語化|http://www.imasy.or.jp/~mistral/netscape/]]:
+:[[Unofficial Netscape FAQ|http://www.ufaq.org/]]:
+!!!アドオン
+:[[タブブラウザ拡張|http://white.sakura.ne.jp/~piro/xul/_tabextensions.html]]:
+:[[Diggler|http://diggler.mozdev.org/]]:
+:[[Checky|http://checky.mozdev.org/]]:
+:[[LiveHTTPHeaders|http://livehttpheaders.mozdev.org/]]:
+!!VRML
+!!!VRML全般
+:[[VRML Repository|http://www.web3d.org/vrml/vrml.htm]]:
+:[[VRML Repository in Japan|http://www.gimlay.org/~andoh/vrml/]]:
+:[[SGI社のVRMLサイト|http://vrml.sgi.com/intro.html]]:
+:[[WEB3D Consortium|http://www.web3d.org/]]:
+:[[www-vrml (VRML Forum)|http://www.web3d.org/www-vrml/]]:
+:[[VRML FAQ (日本語版)|http://www.gimlay.org/~andoh/vrml/vrmlfaq.html]]:
+:[[Sci.virtual-worlds Site|http://www.hitl.washington.edu/scivw/]]:ホントはここに入るんじゃない気がする…。
+!!!VRML Browsers
+:[[Cosmo Player|http://ca.com/cosmo/]]:
+:[[Community Place (Sony)|http://www.sony.co.jp/Products/CommunityPlace/]]:
+:[[Liquid Reality (Dimension X)|http://www.microsoft.com/dimensionx/lr/]]:
+:[[WorldView (intervista)|http://www.intervista.com/products/worldview/]]:
+:[[VRwave (iicm.edu)|http://www.iicm.edu/vrwave/]]:
+:[[CASUS Presenter|http://www.igd.fhg.de/CP/]]:
+:[[FreeWRL|http://www-ext.crc.ca/FreeWRL/]]:
+!!SGML/XML
+:[[The XML Cover Page|http://xml.coverpages.org/]]:SGML/XML関連の膨大なResourceへのリンク集。
+:[[XML.com|http://www.xml.com/]]:XML関連のニュースサイト。
+:[[Free XML software|http://www.garshol.priv.no/download/xmltools/]]:フリーのXMLソフトウェアへのリンク集（SGML関連も）
+:[[Japan XML User Group Web Page|http://www.xml.gr.jp/]]:日本語でのXMLリソースへのリンクなど
+:[[XML FAQ|http://www.ucc.ie:8080/cocoon/xmlfaq]]:
+:[[XML FAQ-J|http://db-www.aist-nara.ac.jp/xml/]]:
+:[[XML with UNIX|http://www.inac.co.jp/~maki/xml/xmlwithunix.html]]:
+:[[XSLT 1.0 仕様 邦訳|http://www.infoteria.com/jp/contents/xml-data/REC-xslt-19991116-jpn.htm]]:
+:[[Shu's Home: XML Lesson|http://www2.wbs.ne.jp/~skaga/index.htm]]:XSLT/XPathのチュートリアルとリファレンス。
+:[[Studying XML for beginners|http://www.asahi-net.or.jp/~ps8a-okzk/xml/index.html]]:XMLおよび周辺規格の詳細なチュートリアルあり。
+:[[XQL FAQ(XML Query Language - Freequently Asked Question)|http://www.ibiblio.org/xql/]]:
+:[[ST_ML Page|http://www.age.ne.jp/x/sf/HT/ST_ML.HTM]]:
+:[[XML for Astronomy|http://pioneer.gsfc.nasa.gov/public/xml/]]:天文学の情報をXMLで表現
+!!情報検索
+:[[Information Retrieval Links|http://www-a2k.is.tokushima-u.ac.jp/member/kita/NLP/IR.html]]:
+:[[日本語全文検索ソフトウェアのリスト|http://www.kusastro.kyoto-u.ac.jp/~baba/wais/other-system.html]]:日本語が扱える全文検索ソフトウェアのリスト集（by 馬場肇さん）
+:[[freeWAIS-sf 日本語化情報（by 馬場さん）|http://www.kusastro.kyoto-u.ac.jp/~baba/wais/]]:
+:[[全文検索ソフトウェアNamazu（by 高林哲さん）|http://www.namazu.org/]]:WWW上でのサーチエンジンが簡単に構築できる全文検索エンジンNamazuのページ
+:[[Web Site Search Tools|http://www.searchtools.com/]]:ツールだけでなくいろいろなチュートリアルなどの情報もいっぱい。
+:[[Search Engine Watch: News, Tips and More About Search Engines|http://www.searchenginewatch.com/]]:サーチエンジンに関する情報がいろいろ（海外）
+:[[Text REtrieval Conference (TREC) Home Page|http://trec.nist.gov/]]:
+:[[IR and IE on the Web using hypertext meta-data and structure|http://www.haifa.il.ibm.com/webir/]]:情報検索のConference,proceedingsへのリンク集
+:[[INFOSTA home page|http://www.infosta.or.jp/]]:
+:[[サーチャーの部屋(Searcher's Room)|http://www.bekkoame.ne.jp/~y_usui/search.htm]]:
+:[[Center for Networked Information Discovery and Retrieval (CNIDR)|http://www.cnidr.org/]]:
+:[[Berkeley DB|http://www.sleepycat.com/]]:
+:[[The Xapian Project|http://xapian.org/]]:
+:[[mifluz|http://www.gnu.org/software/mifluz/]]:
+:[[ASPSeek|http://www.aspseek.org/]]:
+!!プログラミング
+!!!Java
+:[[Official Java Site (Sun)|http://jp.sun.com/software/java/]]:
+:[[Java(tm) House Mailing List|http://java-house.jp/ml/]]:
+:[[http://www.ingrid.org/java/|http://www.ingrid.org/java/]]:
+:[[Java FAQ|http://www.gimlay.org/~javafaq/javafaq.html]]:
+:[[Java FAQ (What's New)|http://www.gimlay.org/~andoh/java/javanew.html]]:
+:[[Servletのお庭|http://www.t3.rim.or.jp/~yoko-k-h/java/servlet/]]:
+!!!C言語
+:[[Language C FAQ 日本語版|http://www.catnet.ne.jp/kouno/c_faq/]]:
+!!!Perl
+:[[PERL.COM|http://www.perl.com]]:
+:[[Perl FAQ|http://www.perl.com/language/faq/]]:
+:[[perl5.005_03のドキュメント|http://www.kt.rim.or.jp/~kbk/perl5.005/index.html]]:podの邦訳。
+:[[Perlの小技|http://member.nifty.ne.jp/hippo2000/perltips/]]:様々なモジュールのマニュアルの和訳など。
+:[[Perlメモ|http://www.din.or.jp/~ohzaki/perl.htm]]:ファイル入出力、正規表現、日本語処理などのサンプルコード多数あり（解説付き）。
+!!!Ruby
+:[[Ruby homepage|http://www.ruby-lang.org/ja/]]:一次配布元。
+:[[Rubyist Magazine|http://jp.rubyist.net/magazine/]]:Rubyに関するWeb雑誌
+:[[ruby-cvs|http://rrr.jin.gr.jp/rwiki?cmd=view;name=ruby-cvs]]:Ruby処理系の変更履歴の和訳版
+
+!!!オブジェクト指向
+:[[オブジェクト指向の入り口|http://www.zzz.or.jp/~iizuka/EOO/]]:
+:[[オブジェクト指向FAQ|http://www.zzz.or.jp/~iizuka/EOO/Japanese/oofaq-j/index.html]]:
+:[[Japanese CORBA FAQ|http://www.post.self.ne.jp/~gougi/papers/Corba-FAQ-J/index.html]]:
+
+!!!Tcl/Tk
+:[[Scriptics|http://www.scriptics.com/]]:Tcl/Tk開発元。最新版の入手など。
+:[[http://www.sra.co.jp/people/m-hirano/tcltkjp/|http://www.sra.co.jp/people/m-hirano/tcltkjp/]]:Tcl/Tk日本語化パッチのページ。
+:[[有限会社ビットウォーク|http://b2c-1.rocketbeach.com/~bitwalk/]]:「入門Tcl/Tk」著者のページ。Tcl/Tk、Perl/Tkなどの情報が充実。
+:[[なもなも|http://www.geocities.co.jp/SiliconValley/4137/dir4/namo.html]]:Tcl/TkとCを組み合わせたプログラミングについての説明が非常に詳しい。
+
+!!!PHP
+:[[PHP: Hypertext Preprocessor|http://www.php.net/]]:
+:[[日本PHPユーザ会|http://www.php.gr.jp/]]:
+
+!!!GTK+
+:[[GTK+ - The GIMP Toolkit|http://www.gtk.org/]]:本家。
+:[[GIMP For Windows|http://www.gimp.org/~tml/gimp/win32/]]:Windowsネイティブで動くGIMP, GTK+ライブラリなどを配布しています。
+:[[GTK Tutorial翻訳作業のページ|http://www.kitanet.ne.jp/~asler/linux/gtk/index.html]]:GTK v1.2 Tutorial の日本語訳が置いてあります。
+:[[GTK+ GUI Toolkit|http://www.globe.to/~oka326/?GTK%2B]]:GTK Tutorial (v1.0) 日本語訳など。
+:[[これが噂のGTK+|http://larse-gtk.hp.infoseek.co.jp/gtk.html]]:実際のコード例が多数。
+:[[Learning GTK+ for Win32|http://www.geocities.co.jp/SiliconValley/3097/learning_gtk_win/learning_gtk_index.html]]:Windows上でのGTK+プログラミング入門。
+:[[GLADE GTK+ User Interface Builder|http://glade.gnome.org/]]:ユーザインタフェースを簡単に作れる。
+
+!!LaTeX
+:[[CTAN(Comprehensive TeX Archive Network)|http://www.ctan.org/]]:
+:[[The publishing Tex|http://www.ascii.co.jp/pb/ptex/]] (Ascii):
+:[[日本語TeXについての情報|http://oku.edu.mie-u.ac.jp/~okumura/texfaq/]]:
+:[[@nifty TeXフォーラム(FTEX)公式Webページ|http://forum.nifty.com/fdtp/ftex.htm]]:
+:[[Bear-Collection's Page|http://mechanics.civil.tohoku.ac.jp/~bear/bear-collections/]]:
+:[[Macros of LaTeX|http://www.kusm.kyoto-u.ac.jp/~yosinaga/.tex/index-j.html]]:
+
+
+!!卒業研究関連
+!!!Orienteering関連
+:[[World of Orienteering|http://www.fi.uib.no/~jankoc/worldo/]]:
+:[[Orienteering Software|http://www.kauhajoki.fi/~kslotte/o-software/]]:
+:[[Navigate! Orienteering Simulation Software|http://members.iinet.net.au/~glawford/navigate.html]]:
+:[[WinOL|http://www.melin.nu/winol/indexe.html]]:
+:[[SRLM|http://www.hut.fi/~akuusist/srlm/]]:
+
+!!!数値地図関連
+:[[USGS (United States Geographic Servey)|http://www.usgs.gov/]]:
+:[[国土地理院|http://www.gsi.go.jp/]]:
+:[[Digital Map Page|http://homepage1.nifty.com/kragen/mov/Digitalmap.html]]:
+:[[GIS FAQ (comp.infosystems.gis)|http://www.census.gov/geo/www/faq-index.html]]:
+
+!!UNIX
+!!!UNIXシステム管理
+:[[UNIX FAQ|http://www.nurs.or.jp/~asada/FAQ/UNIX/UNIX.FAQ.html]]:
+:[[UNIX Magazine Index Search by PHP/FI|http://take.math.g.hkg.ac.jp/~ttks/UMindex/UMindexPHP-J.php3]]:
+:[[O'Reilly Japan Home Page|http://www.oreilly.co.jp/index.htm]]:
+:[[SGI FAQs (in Japanese)|http://FAQs.jmas.co.jp/FAQs/sgi-faq-j/]]:
+:[[Japan Linux Users Group|http://www.linux.or.jp/]]:
+:[[UltraLinux Homepage|http://www.ultralinux.org/]]:
+:[[セキュリティホール memo|http://www.st.ryukoku.ac.jp/~kjm/security/memo/]]:
+
+
+!!!インストール
+:[[日刊インストーラ、SGI情報など|http://www.ayamura.org/]]:
+:[[Install AIX|http://miso.ice.ous.ac.jp/docs/AIX/AIX.html]]:
+:[[Install Memo (for Tanaka Lab.)|http://www.db.cs.kobe-u.ac.jp/Lab/Rinkou/Admin/]]:
+:[[software|http://www.ridgecrest.ca.us/~jslayton/software.html]]:
+:[[Welcome to Silicon Surf JAPAN|http://www.sgi.co.jp/]]:
+:[[Silicon Graphics Inc.|http://www.sgi.com/]]:
+:[[いつも心に太陽を。|http://solaris.sunfish.suginami.tokyo.jp/]]（旧・SOLARIS 補完計画）:
+:[[日本語によるGNU情報サービス|http://www.gnu.org/japan/]]:
+:[[hacker's paradise|http://www.itojun.org/hack/]]:
+:[[LARSE|http://larse-gtk.hp.infoseek.co.jp/gtk.html]]:Autoconf/Automake, GTK+, gettextなどを使ったアプリケーションの開発の実際を多くの実例とともに解説している。
+:[[INOUE's Homepage|http://home.catv.ne.jp/pp/ginoue/]]:XIMメモ、Emacs20メモ、gettextメモなど有用な情報多し。
+
+!!!Cygwin
+Windows環境での開発環境(GNU gccなど)。
+:[[Cygwin|http://sources.redhat.com/cygwin/]]:Cygwinの開発・配布元。
+:[[Cygwin情報|http://www.jaist.ac.jp/~fujieda/cygwin/]]:Snapshot NEWSや関連のリンクが多数ある。
+:[[KSK's cygwin information|http://www.kt.rim.or.jp/~ksk/gnu-win32/indexj.html]]:Cygwin FAQ(日本語訳)など。
+
+!!!UNIX系のソフトウェア類
+!!!!Mule (or Emacs)
+:[[Mule FAQ|http://www.cjn.or.jp/docs/mule/FAQ-Mule-jp.html]]:
+:[[ELISPクラブ|http://netpassport-wc.netpassport.or.jp/~wtasami/elisp/index.html]]:主要なmajor-modeと設定例。
+:[[html-helper-mode|http://www.santafe.edu/~nelson/tools/]]:html-helper-modeの作者のページ。
+:[[html-helper-mode|http://jeffcovey.net/web/html/html-helper-mode/html-helper-mode.html]]:html-helper-modeベータ版のページ。
+:[[HTML Helper mode|http://www.gest.unipd.it/~saint/hth.html]]:ここで開発が続けられている模様。
+:[[Yet Another LaTeX mode for Emacs|http://www.yatex.org/]]:YaTeX（野鳥）の作者のページ。
+:[[A Home Page of VFlib Project|http://typehack.aial.hiroshima-u.ac.jp/VFlib/]]:
+:[[データの可視化と解析ツール|http://ayapin.film.s.dendai.ac.jp/~matuda/PlotUtils/]]:各種可視化ツールの紹介。著名なツールについて一通りサンプル付きで紹介している。
+:[[GNUPLOT 日本語化・機能拡張パッチ公式サイト|http://www.yama-ga.com/gnuplot/]]:
+:[[gnuplot FAQ|http://www.rz.uni-karlsruhe.de/~ig25/gnuplot-faq/]]:
+:[[GMT - The Generic Mapping Tools|http://www.soest.hawaii.edu/gmt/]]:
+:[[Mamoru Kato: GMT Tamago Club (J)|http://www.gaia.h.kyoto-u.ac.jp/~mkato/GMT/GMTtamago.html]]:
+:[[Window-GMT 入門|http://home.hiroshima-u.ac.jp/kojiok/wingmt/gmt.html]]:
+:[[Unidata netCDF|http://unidata.ucar.edu/packages/netcdf/index.html]]:
+:[[Drawing tools for scientific graphs|http://www.mirc.jha.or.jp/~suzuki/coollinks/Computers/scientific-graphs.html]]:
+:[[The Gri graphing language|http://www.phys.ocean.dal.ca/~kelley/gri/gri1.html]]:
+:[[日本Sambaユーザ会|http://www.samba.gr.jp/]]:
+:[[The JNetHack Home Page|http://nethack.at.infoseek.co.jp/]]:
+:[[The Design and Implementation of "fml" Mailing List Server|http://www.sapporo.iij.ad.jp/staff/fukachan/fml/]]:
+:[[GTK+ -- The GIMP Toolkit|http://www.gtk.org/]]:
+:[[Map Projection Overview|http://www.colorado.Edu/geography/gcraft/notes/mapproj/mapproj_f.html]]:
+:[[cfプロジェクト(仮称)|http://home.jp.freebsd.org/~koga/cf/]]:Sendmail 附属の設定ツールcfについての解説など、和訳。
+:[[KEKの計算機環境とSSH|http://research.kek.jp/people/yashiro/RepN/0011SSK/SSH-SSK.html]]:SSHに関する全般的な解説
+:[[ssh(Secure Shell)の使い方とインストール方法とOTP|http://www.araki.net/linux/ssh/]]:
+:[[wvWare|http://wvware.sourceforge.net/]]:MS-WordをUNIX上で見れるようにするプロジェクト。
+:[[xlHtml (Excel to HTML)|http://chicago.sourceforge.net/xlhtml/]]:
+:[[w3m homepage|http://w3m.sourceforge.net/]]:テーブルもきちんと見れるテキスト版WWWブラウザ（ページャ）。
+:[[SmartDoc|http://www.asahi-net.or.jp/~dp8t-asm/java/tools/SmartDoc/index_ja.html]]:XMLベースの文書処理システム。単一のXML→HTML, LaTeX, Helpなどの各種の形式に変換できる。
+:[[MHonArc|http://www.oac.uci.edu/indiv/ehood/mhonarc.html]]:
+:[[GNU Wget|http://wget.sunsite.dk/]]:
+:[[The Cxref Homepage|http://www.gedanken.demon.co.uk/cxref/]]:
+:[[GLOBAL source code tag system|http://www.gnu.org/software/global/]]:
+:[[Window-Managers!!|http://heuy.hp.infoseek.co.jp/html3/]]:
+:[[MH-plus project|http://www.chem.eng.himeji-tech.ac.jp/~hayashi/internet/mh-plus.html]]:
+//<!-- http://material.chem.eng.himeji-tech.ac.jp/~hayashi/htdocs/internet/mh-plus.html -->
+:[[GraphViz - Graph Drawing Software|http://www.research.att.com/sw/tools/graphviz/]]:
+:[[thumbnail_index|http://www.acme.com/software/thumbnail_index/]]:
+:[[LV Homepage|http://www.ff.iij4u.or.jp/~nrt/lv/]]:Unicode対応ページャ。(nkfの代わりとして使ってるけど…)
+:[[dia-0.8x_jp|http://dengaku.org/yasu/dia/]]:Diaの日本語化について
+:[[html2ps homepage|http://user.it.uu.se/~jan/html2ps.html]]:
+:[[TextCat Language Guesser|http://odur.let.rug.nl/~vannoord/TextCat/]]:任意の文字列からどの言語で書かれた文字列かを推定。77言語（Encoding違い含）をサポート。
+:[[MARC.pm: Machine Readable Cataloging Perl Module|http://marcpm.sourceforge.net/]]:US-MARCを解析するためのPerlモジュール。
+::開発のやり取りなどは[[Perl4Lib|http://www.vims.edu/perl4lib/]]で行われている。
+!!!!WWW掲示板ソフト
+:[[KINOBOARDS/きのぼず|http://www.jin.gr.jp/~nahi/kb/]]:開発自体は終了しているようですが、機能などすばらしい出来です。(GPL)
+:[[afbbs|http://www.funai.com/afbbs/afbbs.cgi]]:
+:[[RuBBS|http://www.spc.gr.jp/bbs/RuBBS.html]]:Rubyで書かれている。(GPL)
+:[[Web Applications|http://www.nslabs.jp/]]:Rubyで書かれた各種Web-applications。(non-free)
+:[[Sky Board|http://www.tms-px.co.jp/sky/sky.html]]:オープンソースのグループウェア。
+
+!!!!バージョン管理ツール
+:[[CVS Home|http://www.cvshome.org/]]:
+:[[RCS超入門|http://www.dais.is.tohoku.ac.jp/~kabe/vsd/rcs/rcs.html]]:バージョン管理ツールRCSの解説など。
+:[[RCSを使おう講座|http://www.proc.org.tohoku.ac.jp/~minatsu/guide/rcs0.html]]:
+:[[バージョン管理システムを使うCVSを使う|http://radiofly.to/nishi/cvs/]]:CVSのマニュアルなど。
+
+:[[GNUjdoc|http://openlab.ring.gr.jp/gnujdoc/]]:GNUソフトウェアの日本語マニュアル一式。
+
+!!翻訳
+:[[Translator's Internet Resources|http://www.kotoba.ne.jp/]]:翻訳家のためのリンク集、ポータルサイト。
+:[[Green and White (翻訳ソフトのページ)|http://homepage2.nifty.com/oto3/]]:翻訳ソフトの比較情報が詳しい。
+
+!!メール
+:[[メール関係 - 目次|http://www02.so-net.ne.jp/~hat/mailer/toc.ja.html]]:インターネットメールの注意点、RFC2822の和訳、ひたすらリンク集など。
+:[[Taki Internet Email lab.|http://www.emaillab.org/]]:Mutt日本語版、MUA評価など。
+:[[MIME FAQ|http://www.cs.uu.nl/wais/html/na-dir/mail/mime-faq/.html]]:
+
+
+!!時事ニュース
+:[[朝日新聞|http://www.asahi.com/]]:普段、読んでる新聞。
+:[[日経新聞|http://www.nikkei.co.jp/]]:たまに読んでる新聞。
+:[[ITmedia|http://www.itmedia.co.jp/]]:たま〜に読む計算機系ニュース。
+:[[農業気象情報システム|http://weather.info.tsukuba.ibaraki.jp/index.html]]（つくば市）:つくば市の気象情報。アメダスなど詳細な気象情報が手に入る。
+:[[Yahoo! 天気情報|http://weather.yahoo.co.jp/weather/]]:お天気予報。主に使うのは[[茨城県 南部|http://weather.yahoo.co.jp/weather/jp/8/4020.html]]とか。
+:[[スラッシュ ドット ジャパン|http://slashdot.jp/]]:アレゲなフォーラム。
+:[[Yendot.org |http://yendot.org/]]:アレゲなニュース。
+
+!!個人 ／ プライベート
+:[[ガクガクがっくりさん|http://homepage1.nifty.com/~gak/]]:ガクのページ
+:[[ゆか|http://momiji.mimoza.jp/]]:
+:[[上野|http://www.bekkoame.ne.jp/~ji-ya/]]:うわのです。高校の時の悪友。…ということにしておこう (^_^;
+:[[小石川高校陸上部ＯＢのページ|http://run.zive.net/]]:高校の時の部活のOBのページ。すごく懐かしいです。
+:[[浮間わいわいねっと|http://www.ukima.info/]]:浮間で育ちました。なんとなく地元ローカルなネタがあるとうれしくない？
+
+!!ULIS
+:[[学内の人々のページ|http://www.ulis.ac.jp/people/]]:
+// dt a href="http://voyager.ulis.ac.jp/ishizukalab/index_j.html" 石塚研究室 /a
+:[[図書館情報大学オリエンテーリングクラブ|http://www.ulis.ac.jp/~m165/olc/]]:
+:[[図書館情報大学公式ページ|http://www.ulis.ac.jp/jindex.html]]:
+:[[図書館情報大学学生サーバホームページ|http://www-student.ulis.ac.jp/]]:
+:[[情報メディアシステム分野のページ|http://nile.ulis.ac.jp/sys/]]:
+
+!!その他
+:[[日本の出版社|http://www.trc.co.jp/trc-japa/guide/publish.htm]]:日本国内の出版社を網羅したリンク集。
+:[[試写会に行こうよ！|http://home.interlink.or.jp/~backup21/cinema/]]:
+//<!-- a href="http://www.infotrans.or.jp/~htomi/" 映画試写会・劇場招待券 ： 50円ムービー局 /a -->
+//<dd>映画の試写会情報
+:[[Osakanizer|http://www.ash.or.jp/~take/osaka/]]:大阪弁にしてみよう。（おこちゃま語とかもある）
+:[[書道家|http://www.shodouka.com/]]:
+:[[青空文庫|http://www.aozora.gr.jp/]]:
+:[[The Monash Nihongo ftp Archive|ftp://ftp.cc.monash.edu.au/pub/nihongo/00INDEX.html]]:
+:[[窓の杜|http://www.forest.impress.co.jp/]]:
+:[[Windows.FAQ - ウィンドウズ処方箋|http://homepage2.nifty.com/winfaq/]]:
+:[[ウェブ同窓会「この指とまれ！」|http://www.yubitoma.or.jp/]]:
+:[[自動作成システム（対談、詩など）|http://web.sfc.keio.ac.jp/~iba/auto/]]:
+:[[図書館関係メーリングリスト・ホームページ一覧|http://www.libra.titech.ac.jp/ML.html]]:
+:[[The Libraries FAQ Homepage|http://www.geocities.com/Athens/Acropolis/2161/]]:
+:[[The Programmer's File Format Collection|http://www.wotsit.org/]]:
+:[[Complete Guide to the Chinese Language Computing|http://users.erols.com/eepeter/chinesecomputing/]]:
+:[[上手な歯医者のかかり方|http://www.sam.hi-ho.ne.jp/asukap/]]:基本的な性格が怖がりなので逃げてたけど、どうしょうもなく痛くなったので、行くことにしました。なんとなく歯医者通っぽくなったような気になるページ。
+:[[Exif 形式の画像ファイル解説|http://www.ba.wakwak.com/~tsuruzoh/Computer/Digicams/exif.html]]:ディジタルカメラの標準画像形式の解説です。[[imgs2html|./software/imgs2html/]]で利用してみたい、とか思ってますが…。
+:[[各種分散コンピューティングプロジェクトの紹介|http://www2.117.ne.jp/~mat/dcomp/shoukai.htm]]:
+
+!!ゲーム
+:[[俺の屍どこいった？|http://www.geocities.co.jp/Playtown-Dice/5103/]]:
+:[[得物屋24時間 BOLTAC'S TRADING POST|http://www.fsinet.or.jp/~emonoya/]]:Wizardryシリーズ攻略情報。

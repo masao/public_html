@@ -1,11 +1,12 @@
 # $Id$
 
-HTML	= 	index.html profile.html history.html \
+HTML	= 	index.html profile.html history.html links.html \
 		etc/index.shtml \
 		etc/firefox.html etc/ir-journal.html etc/unihan-onkun.html \
 		software/index.html \
 		software/mnewsprint/index.html \
 		software/imgs2html/index.html \
+		software/yim/index.html \
 
 all: $(HTML) chalow
 
