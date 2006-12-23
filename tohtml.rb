@@ -49,7 +49,7 @@ class MHikiDoc < HikiDoc
             @toc[-1] << inline_parser(title)
          end
          #STDERR.puts @toc.inspect
-         href_id = "toc#{@label}_#{@toc.size}_#{@toc[-1].size-1}"
+         href_id = "toc#{@label}#{@toc.size}_#{@toc[-1].size-1}"
          %Q[\n<h#{level} id="#{href_id}">%s</h#{level}>\n\n] % inline_parser(title)
       end
    end
