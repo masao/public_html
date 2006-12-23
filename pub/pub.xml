@@ -3,13 +3,26 @@
 <publist>
 
   <pub type="misc">
+    <author>高久雅生</author>
+    <title>研究者情報ブラウジングツールの開発とWeb情報資源の統合</title>
+    <conference>若手研究者クロストーク「e-scienceとfield scienceが築くこれからの学問」</conference>
+    <publisher>情報・システム研究機構 新領域融合研究センター</publisher>
+    <year>2006</year>
+    <month>12</month>
+    <city>伊東</city>
+    <note>ポスター・デモ発表</note>
+    <file>./2006/tric-wakate-abstract.pdf</file>
+    <poster>./2006/tric-wakate-poster.pdf</poster>
+  </pub>
+
+  <pub type="misc">
     <author>Akiko Aizawa</author>
     <author>Masao Takaku</author>
     <author>Keizo Oyama</author>
     <author>Jun Adachi</author>
     <title>Information Linkage and Its Application</title>
     <subtitle>Utilization of Large-Scale Academic Databases for Entity Identification</subtitle>
-    <journal>DBWeb 2006</journal>
+    <conference>DBWeb 2006</conference>
     <year>2006</year>
     <month>11</month>
     <city>京都</city>
