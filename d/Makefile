@@ -24,4 +24,5 @@ ping: index.html
 		http://ping.ask.jp/xmlrpc.m \
 		http://blog.goo.ne.jp/XMLRPC \
 		http://blogsearch.google.co.jp/ping/RPC2 \
+		http://rpc.reader.livedoor.com/ping \
 		> ping
