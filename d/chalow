@@ -401,7 +401,7 @@ my %inside_ref;			# 日付リンクによるリファラー
 # {XXXX-XX-XX}{1,2,3,...}{"h"} - アイテムヘッダ
 # {XXXX-XX-XX}{1,2,3,...}{"c"} - 中味
 
-my $cl = ChangeLogReader->new(stop_date => $stop_date, use_category => 0);
+my $cl = ChangeLogReader->new(stop_date => $stop_date, use_category => 1);
 
 for my $fname (@ARGV) {
     print "reading \"$fname\"\n" if (!defined $quiet_mode);
@@ -499,6 +499,7 @@ sub okikae {
 
     ### URL。Hiki の記法を採用。
     my $URL_REGEX = '(?:(?:https?|ftp:\/\/)|\.\.?\/|\/)[^\s\(\)\|<>"\'\0-\037]+?';
+    s!\[\[\s*($URL_REGEX)\s*\]\]!get_link_str($1, $1)!gme;
     s!\[\[(.+?)\s*\|\s*($URL_REGEX)\]\]!get_link_str($1, $2)!gme;
 
     ### 表。Hiki の記法を採用。
