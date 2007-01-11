@@ -169,11 +169,10 @@ sub store_item {
     # # If 1st line doesn't have ": ", it will become item header.
     my @cat;
 #    $ih =~ s/(:|\s+)$//g;
-    $ih =~ s/(:|\s*)$//sg;	# Triming trailing spaces and ":"
-#    print "[[[[$ih]]]\n";
-    if ($self->use_category && $ih =~ s/\s*\[(.+)\]$//) { # category
-	@cat = split(/\s*\]\s*\[\s*/, $1);
-    }
+    $ih =~ s/[:\s]*$//sg;	# Triming trailing spaces and ":"
+    #print "[[[[$ih]]]\n";
+    # category
+    $ih =~ s/^\s*\[([^\[\]]+)\]\s*/push(@cat,$1);""/ge if $self->use_category;
 
     # Processing item content
     $cont =~ s/^( {8}| {0,7}\t)//gsm; 
