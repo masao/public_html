@@ -2,7 +2,10 @@
 
 HTML	= 	index.html profile.html history.html links.html \
 		etc/index.shtml \
-		etc/firefox.html etc/ir-journal.html etc/unihan-onkun.html \
+		etc/firefox.html \
+		etc/ir-journal.html \
+		etc/unihan-onkun.html \
+		etc/wikiwiki.html \
 		software/index.html \
 		software/mnewsprint/index.html \
 		software/imgs2html/index.html \
