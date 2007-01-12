@@ -1,0 +1,33 @@
+title: WikiCloneについてのメモ
+date.available: 2002-04-24
+date.modified: 2007-01-12
+subject: etc
+
+情報提供システムの一種であるWikiWikiWebの実装に関するメモです。
+おもに、[[システム分野のページ|http://amazon.slis.tsukuba.ac.jp/sys/]]のような文書を複数人で管理するために採用できないかという検討を行うために調査した際のものです。以下、調査したWikiCloneの名称、開発元、コメントなどを書いておきます。
+
+なお、最近になって、[[日本発の wiki クローンリスト|http://www1.neweb.ne.jp/wa/yamdas/column/technique/clonelist.html]]というページを見つけました。こちらの方が私のリストよりもずっと網羅的で詳しいと思うので、こちらも参照してください。
+
+:[[Tiki|http://www.todo.org/]]:Rubyベース。バックエンドはプレインテキストのファイル群。
+::日本語が通るものとしては最古参（たぶん）。
+:[[YukiWiki|http://www.hyuki.com/yukiwiki/]]:Perlベース。バックエンドは DBM 形式。掲示板風？
+:[[PukiWiki|http://www.pukiwiki.org/]]:PHPベース。YukiWikiを参考にPHPで実装。高機能。
+:[[RWiki|http://rwiki.jin.gr.jp/cgi-bin/rw-cgi.rb?cmd=view;name=top]]:Rubyベース。RD 形式で記述する。
+::RD という標準フォーマットがきちんと定義されているのが魅力で、ちょっとインストールしてみようかと思ったけど、面倒だからやめる。なにせ、dRuby を使うので、デーモンを立ちあげておかないといけないらしい…。これでは、本運用するにはちょい問題あり。
+:[[MoinMoin|http://www.gembook.jp/html/moin/moin.cgi/FrontPage]]:Pythonベース。
+:[[Swiki|http://minnow.cc.gatech.edu/swiki]]:Squeakベース。
+::[[SqueakでWikiをたちあげよう!!|http://www.mars.dti.ne.jp/~umejava/smalltalk/squeak/swiki/index.html]]、[[Swiki-ml|http://ichijo.hn.org:8000/Swiki]]、[[ComSWiki|http://ma2tak.dyndns.org:8888/ma2tak/14]]などに情報がある。
+:[[vikky|http://vivi.dyndns.org/vikky2/vikky.phtml?title=TopPage]]:PHP + PostgreSQL ベース。
+::表組み、フォーム、ログインなど豊富な機能を持っていてかなり強力。
+:[[Wikiもどき|http://moonrock.jp/~don/wikimodoki/wikimodoki.cgi]]:Ruby ベース。RD 形式で記述する。
+::単純に言ってしまえば、RWiki の機能を dRuby 抜きで実現したもの。
+:[[EmacsWiki|http://www.gci-net.com/users/j/johnw/EmacsResources.html]]:Emacs-Lispベース。
+::Web上で編集できるというWikiの特徴はちょっと違うものの、<q>個人の情報管理ツールとしては有用</q>との[[報告|http://www.ops.dti.ne.jp/~cake-smd/wiki/EmacsWiki.html]]も。
+:[[TWiki|http://twiki.org/]]:Perlベース。海外ではけっこう有名みたい。高機能。
+::日本語は通らない。cf. [[TWiki.Codev.KanjiCharacterSet|http://twiki.org/cgi-bin/view/Codev/KanjiCharacterSet" title="TWikiにおける日本語処理についての議論]]
+::ただ、GPLなのにダウンロード時に登録しないといけないのがちょっとイヤ。
+:[[UseModWiki|http://www.usemod.com/cgi-bin/wiki.pl?UseModWiki]]:[[http://emacswiki.org/|http://emacswiki.org/]] が採用するなど、海外では結構人気のあるみたい。
+::日本語はそのままでは通らないが、[[p5eeWiki:WikiName|http://p5ee.net/wiki.pl?WikiName]]や[[WikiWiki clone - UseModWiki|http://www.ceres.dti.ne.jp/~george/jdiaryA11001.html#2001100502]]などに日本語対応パッチあり。
+
+!! 参照URL
+*[[本家のサイト|http://c2.com/cgi/wiki?WikiEngines]]
