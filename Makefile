@@ -26,7 +26,7 @@ chalow:
 
 # Rsync to http://masao.jpn.org/
 rsync:
-	./rsync.pl --exclude=test/ --exclude=private/ --delete-after \
+	./rsync.pl --exclude=test/ --exclude=private/ \
 		./ etk:www/masao/
 
 #	% make lint
