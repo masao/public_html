@@ -3,7 +3,7 @@
 use strict;
 
 ### 編集して下さい
-my $conf_file = "/home/yto/kuttukibbs.conf"; # ユーザ設定ファイルの場所
+my $conf_file = "kuttukibbs.conf"; # ユーザ設定ファイルの場所
 
 ### ユーザ設定項目 (kuttukibbs.conf で設定できます)
 my $log_dir = "kblog";		# コメントログファイルを置くディレクトリ
