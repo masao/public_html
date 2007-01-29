@@ -1,4 +1,5 @@
 #!/usr/bin/perl
+# -*-CPerl-*-
 # $Id$
 #
 # chalow - CHAngeLog On the Web - convert ChangeLog to HTML files
@@ -1444,4 +1445,3 @@ sub to_utf8_cl {
     use Jcode;
     $$sp = Jcode->new($$sp)->utf8;
 }
-
