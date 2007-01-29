@@ -1,1 +1,11 @@
 DirectoryIndex index.cgi
+
+<Files kuttukibbs.conf>
+order allow,deny
+deny from all
+</Files>
+
+<Files kblog/log.txt>
+order allow,deny
+deny from all
+</Files>
