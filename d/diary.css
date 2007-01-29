@@ -157,6 +157,9 @@ div.comment {
         padding: 0.5em;
         font-size: smaller;
         background-color: #f0f0f0;
+        margin-top: 0.5em;
+        margin-left: 2em;
+        margin-right: 1em;
 }
 
 div.comment p {
@@ -174,6 +177,14 @@ div.day span.canchor {
         font-size: smaller;
 }
 
+div.caption {
+        font-size: 90%;
+        border-style: solid;
+        border-color: #aaf;
+        border-width: 0px 0px 1px 0px;
+        margin: 0.5em;
+}
+
 div.form {
         border-style: solid;
         border-color: #d0d0d0;
@@ -182,9 +193,28 @@ div.form {
         padding: 0.5em;
         background-color: #f0f0f0;
 }
+div.form form {
+        margin: 0em 0em 0em 2em;
+}
 div.field {
         display: inline;
         margin-right: 2em;
+}
+div.form form.comment {
+        font-size: 90%;
+}
+div.form textarea {
+	display:block;
+        background-color: #eef;
+        color: #000;
+        margin-left: 3em;
+        width: 30em;
+        height: 5em;
+}
+form.comment input {
+        background-color: #eef;
+        color: #000;
+        margin-left: 1em;
 }
 
 div.commentshort {
