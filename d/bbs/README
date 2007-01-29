@@ -1,0 +1,124 @@
+= README - くっつき BBS 
+
+$Id$
+
+http://nais.to/~yto/tools/kuttukibbs/
+
+注意：v0.4 以前のログと互換性がありません。変換方法は QA をみて。
+
+
+== はじめに
+
+Web ページに簡単にくっつけることのできる BBS です。BBS に投稿された最
+近のコメントが JavaScript ファイルとしてサーバに保存されるので、それを 
+Web ページへ張りつけて表示することができます。コメントによって、もとの 
+Web ページの内容は変更されない、というのが特徴です。
+例えば、コメントされてもアンテナに更新情報が伝わらなくなります。
+この特徴、良いのか悪いのかは状況によりますが。
+
+
+== 用語
+
+* BBS CGI (kuttukibbs.cgi): くっつき BBS の CGI スクリプト。
+  ID により複数の BBS を扱うことができる。
+
+* ID: 複数の BBS は、ID で管理する。ID に使える文字は「a-zA-Z0-9.-#_」
+  のみ。
+
+* BBS デフォルトページ: ID で指定された BBS の全てのコメントが表示され、
+  コメントの投稿ができるページ。
+
+* 設定ファイル (kuttukibbs.conf): BBS CGI の挙動などを設定。
+
+* ログディレクトリ: ログ等を置くディレクトリ。デフォルトは kblog/
+
+* ログファイル (kblog/$ID.log): 投稿されたコメントを保管するファイル。
+
+* 管理者用ログファイル (kblog/log.txt): 投稿内容だけでなく、IP や 
+  E-mail も保存するファイル。管理者用。このファイルは外部から見えない
+  ようにすべし。設定ファイルで変更可能。
+
+* Feedファイル (kblog/$ID.js): JavaScript ファイルとして、ログディレクト
+  リに格納される。これを張りつけることにより、自分のページに掲示板のロ
+  グが表示される。後述。
+
+* 対象ページ: BBS を貼るページ。1 つのページに複数の BBS を貼ることも
+  できる。
+
+
+== 設置手順
+
+> mkdir kblog
+> chmod 777 kblog
+> touch kblog/log.txt
+> chmod 622 kblog/log.txt           # または chmod 222 kblog/log.txt
+> touch kblog/index.html            # しなくてもいいけど
+> cp -a package-dir/kuttukibbs.cgi .
+> cp -a package-dir/kuttukibbs.conf /home/yto/  # Webから見えない場所
+> cp -a package-dir/getlog.cgi .    #必要なら
+
+
+== 設定ファイルの編集
+
+まず、kuttukibbs.cgi の以下の箇所を設定ファイルのパスに変更して下さい。
+
+> my $conf_file = "/home/yto/kuttukibbs.conf"; # ユーザ設定ファイルの場所
+
+それから、kuttukibbs.conf を編集します。
+
+他はともかく、ID を URL に変換するルール (Perlの関数になっています) を
+カスタマイズする必要があります。
+申しわけございませんが、サンプルを見て試行錯誤してみて下さい。
+
+あと、管理者用パスワード。空だと CGI 経由での編集・削除ができません。
+
+
+== 対象ページへの BBS の設置
+
+まず、BBS の ID を決めます。ここでは ID = 2004-01-01 とします。
+
+* 掲示板へのリンクの書き方：
+> <a href="kuttukibbs.cgi?id=2004-01-01">コメントする / 全部見る</a>
+
+* Feedファイルの張りつけ方：
+> <script language="JavaScript" type="text/javascript" 
+> src="kblog/2004-01-01.js"></script>
+
+  Feedファイル名は、ID + ".js" となる (Ex. 2004-01-01.js)。
+
+
+== Q and A
+
+* Q: tDiary のテーマを使うには?
+
+* A: とりあえず、tDiary のクローバーのテーマを取ってきて、このディレク
+  トリで展開しておくとサンプル (index.html) がきれいに見えるでしょう。
+  あと、kuttukibbs.conf のテンプレートでの CSS 指定を変更してね。
+
+* Q: 最新のコメントの一覧を見るには?
+
+* A: kuttukibbs.cgi?mode=latest
+
+* Q: Web サーバのエラーログがうるさい。「*.js がない」ってさ。
+
+* A: getlog.cgi を使って下さい。使用例：
+> <script language="JavaScript" type="text/javascript" 
+> src="getlog.cgi?kblog/2004-01-01.js"></script>
+あまりおすすめしませんが...。
+
+* Q: v0.4 以前のログと互換性がないんだけど...?
+
+* A: convkblog.pl を使って下さい。使用例：
+> % ls kblog
+> 2001-05-25.html.js  2003-09-03.html.js  2003-11-03.html.js
+> ...
+> % convkblog.pl kblog kblog-new
+> COPY kblog-old/2001-05-25.html.js -> kblog-new/2001-05-25.log
+> NEW kblog-new/2001-05-25.js
+> COPY kblog-old/2002-04-25.html.js -> kblog-new/2002-04-25.log
+> NEW kblog-new/2002-04-25.js
+> ...
+> % cp -ra kblog/log.txt kblog-new/
+> % mv kblog kblog-old
+> % mv kblog-new kblog
+
