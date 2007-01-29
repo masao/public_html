@@ -182,6 +182,10 @@ div.form {
         padding: 0.5em;
         background-color: #f0f0f0;
 }
+div.field {
+        display: inline;
+        margin-right: 2em;
+}
 
 div.commentshort {
         margin: 0.3em;
