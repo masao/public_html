@@ -1,4 +1,5 @@
 #!/usr/bin/env perl
+# -*-CPerl-*-
 # $Id$
 use strict;
 
@@ -17,6 +18,9 @@ my $page_template_default;
 my $page_template_latest;
 my $page_template_edit;
 my $charset = "EUC-JP";		# 文字コード
+my $css = "diary.css";
+my $header = "";
+my $footer = "";
 
 ### グローバル変数
 my $latest_id = -1;		# 最新のコメントの ID
