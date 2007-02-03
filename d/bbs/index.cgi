@@ -325,8 +325,10 @@ sub output_latest {
 	    push @lalist, {d => $hash{$i}{'d'}, m => $hash{$i}{'m'},
 			   n => $hash{$i}{'n'}, i => $id};
 	}
+	my $last = $latest_comment_display_num - 1;
+	$last = $#lalist if $last > $#lalist;
 	@lalist = (sort {$b->{d} cmp $a->{d}}
-		   @lalist)[0..($latest_comment_display_num - 1)];
+		   @lalist)[0..$last];
     }
     foreach my $i (@lalist) {
 	last if $i eq "";
