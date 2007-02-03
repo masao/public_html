@@ -2,6 +2,7 @@
 # -*-CPerl-*-
 # $Id$
 use strict;
+use POSIX qw(strftime);
 
 ### 編集して下さい
 my $conf_file = "kuttukibbs.conf"; # ユーザ設定ファイルの場所
@@ -21,6 +22,7 @@ my $charset = "EUC-JP";		# 文字コード
 my $css = "diary.css";
 my $header = "";
 my $footer = "";
+my $rss_uri = "";
 
 ### グローバル変数
 my $latest_id = -1;		# 最新のコメントの ID
@@ -75,7 +77,11 @@ my $comments;
 my $page_html;
 
 
-if ($mode eq 'latest') {output_latest();}
+if ($mode eq 'latest') {
+    output_latest();
+} elsif ($mode eq 'rss') {
+    output_latest_rss();
+}
 
 # コメント対象の情報
 my $logid = $q->param('id'); # コメントの ID。ログファイル指定に利用
@@ -309,8 +315,7 @@ ADD
 }
 
 
-### 最近投稿されたコメントを表示
-sub output_latest {
+sub get_latest_list {
     my @fl = <$log_dir/*.log>;
     my @lalist;
     foreach my $f (@fl) {
@@ -323,13 +328,21 @@ sub output_latest {
 	set_comment_hash(\%hash, \$all);
 	foreach my $i (keys %hash) {
 	    push @lalist, {d => $hash{$i}{'d'}, m => $hash{$i}{'m'},
-			   n => $hash{$i}{'n'}, i => $id};
+			   n => $hash{$i}{'n'}, i => $id,
+			   ii => $i,
+			  };
 	}
 	my $last = $latest_comment_display_num - 1;
 	$last = $#lalist if $last > $#lalist;
 	@lalist = (sort {$b->{d} cmp $a->{d}}
 		   @lalist)[0..$last];
     }
+    return @lalist;
+}
+
+### 最近投稿されたコメントを表示
+sub output_latest {
+    my @lalist = get_latest_list();
     foreach my $i (@lalist) {
 	last if $i eq "";
 	$comments .= make_comment_html($i, 0);
@@ -339,5 +352,60 @@ sub output_latest {
 
     eval qq(\$page_html = << "FFF"\n$page_template_latest\nFFF\n);
     print $page_html;
+    exit;
+}
+sub output_latest_rss {
+    my @lalist = get_latest_list();
+    $cgi_url .= "?mode=latest";
+
+    my $mtime = (stat($admin_log_file))[9];
+    my $date = strftime("%y-%m-%dT%h:%M:%sZ", gmtime($mtime));
+    print <<RSS;
+<?xml version="1.0" encoding="$charset"?>
+<rdf:RDF
+ xmlns="http://purl.org/rss/1.0/"
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:content="http://purl.org/rss/1.0/modules/content/"
+ xmlns:admin="http://webns.net/mvcb/"
+ xml:lang="ja">
+<channel rdf:about="$rss_uri">
+ <title>Kuttuki BBS</title>
+ <link>$rss_uri</link>
+ <description>Kuttuki BBS</description>
+ <dc:language>ja</dc:language>
+ <dc:date>$date</dc:date>
+ <admin:generatorAgent rdf:resource="kuttukibbs"/>
+ <items>
+ <rdf:Seq>
+RSS
+    foreach my $item (@lalist) {
+	my $commentid = $item->{ii};
+	my $url = id2url($item->{i}) ."#c$commentid";
+	print qq{  <rdf:li rdf:resource="$url"/>\n};
+    }
+    print <<RSS;
+ </rdf:Seq>
+ </items>
+</channel>
+RSS
+    foreach my $item (@lalist) {
+	my $commentid = $item->{ii};
+	my $url = id2url($item->{i}) ."#c$commentid";
+	my $cont = $item->{m};
+	my $name = $item->{n};
+	my $time = $item->{d};
+	print <<RSS;
+<item rdf:about="$url">
+ <link>$url</link>
+ <description>$cont</description>
+ <dc:creator>$name</dc:creator>
+ <dc:date>$time</dc:date>
+</item>
+RSS
+    }
+    print <<RSS;
+</rdf:RDF>
+RSS
     exit;
 }
