@@ -10,6 +10,7 @@ HTML	= 	index.html profile.html history.html links.html \
 		software/mnewsprint/index.html \
 		software/imgs2html/index.html \
 		software/yim/index.html \
+		software/zipcode_cgi.html \
 
 all: $(HTML) chalow
 
@@ -26,6 +27,7 @@ chalow:
 
 # Rsync to http://masao.jpn.org/
 rsync:
+	./rsync.pl etk:www/masao/d/bbs/kblog/ ./d/bbs/kblog/
 	./rsync.pl --exclude=test/ --exclude=private/ \
 		./ etk:www/masao/
 
