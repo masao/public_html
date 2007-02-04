@@ -43,6 +43,15 @@ SQLiteデータベース利用の習作として作成した郵便番号検索のスクリプトです。
  % lha -x ken_all.lzh
  % nkf -Se ken_all.csv | ./zipcode-mkdb.rb 
 
-データベースの作成が完了したら、zipcode.rb を CGI スクリプトとして実行すれば、検索ができるようになると思います。
+データベースの作成が完了したら、{{code zipcode.rb}}を CGI スクリプトとして実行すれば、検索ができるようになると思います。
 
-表示方法などは、zipcode.rhtml を変更すればカスタマイズできます。
+表示方法などは、{{code zipcode.rhtml}}を変更すればカスタマイズできます。
+
+!! 謝辞
+
+本プログラムは、以下のソフトウェアなどにより実装されています。
+各ソフトウェアの作者の方々に感謝いたします。
+*[[Ruby|http://www.ruby-lang.org/ja/]]
+*[[ERB|http://www2a.biglobe.ne.jp/~seki/ruby/erb.html]]
+*[[SQLite|http://www.sqlite.org/]]
+*[[sqlite3-ruby|http://rubyforge.org/projects/sqlite-ruby/]] or [[Ruby/DBI|http://ruby-dbi.sourceforge.net/]]
