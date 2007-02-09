@@ -29,7 +29,7 @@ class="lastmodified">[日付]</span>は更新日を示します）</p>
 <li><a href="windows-software.html">Useful Softwares on Windows</a> <!--#flastmod file="windows-software.hikidoc" --></li>
 <li><a href="clover-papi.html">Clover上でPAPI(Performance API)を動作させる</a> <!--#flastmod file="clover-papi.html" --></li>
 <li><a href="rpm.html">RPMの使い方</a> <!--#flastmod file="rpm.html" --></li>
-<li><a href="emacs20-unicode.html">Emacs20でUnicodeを使おう!</a> <!--#flastmod file="emacs20-unicode.html" --></li>
+<li><a href="emacs20-unicode.html">Emacs20でUnicodeを使おう!</a> <!--#flastmod file="emacs20-unicode.hikidoc" --></li>
 <li><a href="config.html">各種設定ファイル</a> <!--#flastmod file="config.html" --></li>
 </ul>
 <p>以下のものはだいぶ昔に書いたもので、更新の予定はありません。</p>
