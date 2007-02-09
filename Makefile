@@ -6,6 +6,8 @@ HTML	= 	index.html profile.html history.html links.html \
 		etc/ir-journal.html \
 		etc/unihan-onkun.html \
 		etc/wikiwiki.html \
+		etc/emacs20-unicode.html \
+		etc/paper-checklist.html \
 		software/index.html \
 		software/mnewsprint/index.html \
 		software/imgs2html/index.html \
