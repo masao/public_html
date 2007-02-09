@@ -9,11 +9,14 @@ HTML	= 	index.html profile.html history.html links.html \
 		etc/emacs20-unicode.html \
 		etc/paper-checklist.html \
 		etc/rpm.html \
+		etc/config.html \
+		etc/windows-software.html \
 		software/index.html \
 		software/mnewsprint/index.html \
 		software/imgs2html/index.html \
 		software/yim/index.html \
 		software/zipcode_cgi.html \
+		software/graphviz-ja/index.html \
 
 all: $(HTML) chalow
 
