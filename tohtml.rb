@@ -193,7 +193,7 @@ class ToHTML
    def expand_plugin( text )
       require "shellwords"
       #STDERR.puts text
-      text.gsub(/<(div|span) class="plugin">\{\{\s*(\w+)\s*(.*?)\s*\}\}<\/\1>/ms) do |match|
+      text.gsub(/<(div|span) class="plugin">\{\{\s*(\w+)\s*(.*?)\s*\}\}<\/\1>/m) do |match|
          #STDERR.puts match
          style = $1
          name = $2
