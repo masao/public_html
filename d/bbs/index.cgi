@@ -22,7 +22,6 @@ my $charset = "EUC-JP";		# 文字コード
 my $css = "diary.css";
 my $header = "";
 my $footer = "";
-my $rss_uri = "";
 
 ### グローバル変数
 my $latest_id = -1;		# 最新のコメントの ID
@@ -54,6 +53,9 @@ my $name = $q->param('name');
 my $mail_or_url = $q->param('mail');
 my $body = $q->param('body');
 
+my $content_type = 'text/html';
+$content_type = 'text/xml' if $mode eq 'rss';
+
 # header
 if ($mode eq 'write') {
     escape_string(\$name);	
@@ -63,7 +65,7 @@ if ($mode eq 'write') {
 			    -expires=>'+30d');
     print $q->header(-cookie=>$cookie, -charset=>$charset);
 } else {
-    print $q->header(-charset=>$charset);
+    print $q->header(-type=>$content_type, -charset=>$charset);
     if (defined $q->cookie('kuttukibbs')) {
 	($name, $mail_or_url) = split(/\t/, $q->cookie('kuttukibbs')); 
     }
@@ -369,9 +371,9 @@ sub output_latest_rss {
  xmlns:content="http://purl.org/rss/1.0/modules/content/"
  xmlns:admin="http://webns.net/mvcb/"
  xml:lang="ja">
-<channel rdf:about="$rss_uri">
+<channel rdf:about="$cgi_url">
  <title>Kuttuki BBS</title>
- <link>$rss_uri</link>
+ <link>$cgi_url</link>
  <description>Kuttuki BBS</description>
  <dc:language>ja</dc:language>
  <dc:date>$date</dc:date>
@@ -381,7 +383,7 @@ sub output_latest_rss {
 RSS
     foreach my $item (@lalist) {
 	my $commentid = $item->{ii};
-	my $url = id2url($item->{i}) ."#c$commentid";
+	my $url = $q->url() ."?id=". $item->{i} ."#". $commentid;
 	print qq{  <rdf:li rdf:resource="$url"/>\n};
     }
     print <<RSS;
@@ -391,8 +393,9 @@ RSS
 RSS
     foreach my $item (@lalist) {
 	my $commentid = $item->{ii};
-	my $url = id2url($item->{i}) ."#c$commentid";
+	my $url = $q->url() ."?id=". $item->{i} ."#". $commentid;
 	my $cont = $item->{m};
+	$cont =~ s/<br>/\n/g;
 	my $name = $item->{n};
 	my $time = $item->{d};
 	print <<RSS;
