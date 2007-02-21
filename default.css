@@ -2,7 +2,7 @@
   body {
     background-color: #aaffaa;
     font-family: sans-serif;
-    margin: 2%;
+    margin: 2% 2% 0px;
     line-height: 1.2;
   }
   h1 {
@@ -53,9 +53,16 @@
   td {
     padding: 2px;
   }
+  div.google-ads {
+    text-align: center;
+    margin: 10px 0px 0px;
+  }
 }
 @media print {
   body {
     margin: 0;
+  }
+  div.google-ads {
+    display: none;
   }
 }
