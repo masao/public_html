@@ -7,7 +7,7 @@ use Class::Date qw( now date );
 my $BASEURI = "http://masao.jpn.org/d/";
 
 my %PRIORITY = (
-     7 => 0.4, # month
+     7 => 0.6, # month
      10 => 0.8,# day
      12 => 1.0,# item
     );
@@ -27,7 +27,9 @@ my $xml;
 foreach (reverse sort keys %hash) {
     my $p = $PRIORITY{ length($_) };
     my $freq;
-    my $reldate = $today - date $_;
+    my @tmp = split(/-/, $_);
+    my $reldate = $today - date[ @tmp ];
+    print join(" ", @tmp),"\n";
     if ($reldate->day > 365) {
 	$freq = "yearly";
     } elsif ($reldate->day > 31) {
