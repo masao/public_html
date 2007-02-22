@@ -1,4 +1,4 @@
-all: index.html ping
+all: index.html ping sitemap.xml
 
 index.html: ChangeLog chalow cl.conf ../private/ChangeLog.delicious
 	./chalow -q -u -c cl.conf ChangeLog ../private/ChangeLog.delicious
@@ -26,3 +26,6 @@ ping: index.html
 		http://blogsearch.google.co.jp/ping/RPC2 \
 		http://rpc.reader.livedoor.com/ping \
 		> ping
+
+sitemap.xml: index.html
+	./cli2sitemap.pl cl.itemlist > sitemap.xml
