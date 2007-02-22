@@ -6,19 +6,31 @@ use Class::Date qw( now date );
 
 my $BASEURI = "http://masao.jpn.org/d/";
 
+my %PRIORITY = (
+     7 => 0.4, # month
+     10 => 0.8,# day
+     12 => 1.0,# item
+    );
+
 my %hash;
 while (<>) {
-    $hash{$1} = $hash{$2} = $hash{$3} = 1
-if (/^<a href=\"(((\d+-\d+)-\d+)-\d+)/);
+    if (/^<a href=\"([\d\-]+).html/) {
+	my $f = $1;
+	$hash{ $f } = 1;
+	$hash{ substr($f, 0, 7) } = 1;
+	$hash{ substr($f, 0, 10) } = 1 if length($f) > 7;
+    }
 }
 
 my $today = now;
 my $xml;
-foreach (sort keys %hash) {
-    my $p = (length($_) == 7) ? 0.4 : ((length($_) == 10) ? 0.6 : "1.0");
+foreach (reverse sort keys %hash) {
+    my $p = $PRIORITY{ length($_) };
     my $freq;
     my $reldate = $today - date $_;
-    if ($reldate->day > 31) {
+    if ($reldate->day > 365) {
+	$freq = "yearly";
+    } elsif ($reldate->day > 31) {
 	$freq = "monthly";
     } elsif ($reldate->day > 7) {
 	$freq = "weekly";
@@ -27,7 +39,7 @@ foreach (sort keys %hash) {
     } else {
 	$freq = "hourly";
     }
-    $xml .= << "URL"
+    $xml .= <<URL;
    <url>
       <loc>$BASEURI$_.html</loc>
       <changefreq>$freq</changefreq>
@@ -36,7 +48,7 @@ foreach (sort keys %hash) {
 URL
 }
 
-print << "XML"
+print <<XML;
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.google.com/schemas/sitemap/0.84">
    <url>
