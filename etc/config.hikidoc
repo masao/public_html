@@ -1,0 +1,15 @@
+title: 各種設定ファイル
+date.available: 2001-06-11
+date.modified: 2007-02-09
+subject: etc
+
+主にUNIX系のツールの設定ファイルを置いておきます。
+大抵は、ツールのマニュアルに載っていたとか、
+Web or fj で見かけた設定例とかをパクっているだけなので、
+誤りや「ここはこう書いた方が良い」などありましたら、
+[[masao@nii.ac.jp]]まで
+ご指摘いただけるとありがたいです。
+
+:[[{{code .alias}}|.alias]]:シェルの設定ファイルです。主に{{code ${HOME}/.cshrc}}などから読み込むことを前提に書いている設定ファイルです。シェルはtcshを使っています。
+:[[{{code .emacs.el}}|.emacs.el]]:[[GNU Emacs|http://www.gnu.org/software/emacs/emacs.html]]の設定ファイルです。Mule2.3(Emacs19系)からの移行のために.elの方を使うようになり、Emacs20以降を使うようになってからは{{code .emacs}}の方は使わなくなりました。
+:[[{{code .mnews_setup}}|.mnews_setup]]:メーラ／ニュースリーダのmnewsの設定ファイルです。以前は馬鹿みたいにNetNewsを読んでいた時期もありましたが、もう読まなくなったので、メーラとしてのみ利用しています。
