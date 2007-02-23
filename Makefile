@@ -17,6 +17,7 @@ HTML	= 	index.html profile.html history.html links.html \
 		software/yim/index.html \
 		software/zipcode_cgi.html \
 		software/graphviz-ja/index.html \
+		private/memo.html \
 
 all: $(HTML) chalow
 
