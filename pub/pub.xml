@@ -4,6 +4,19 @@
 
   <pub type="misc">
     <author>高久雅生</author>
+    <author>相澤彰子</author>
+    <author>大山敬三</author>
+    <title>研究者情報サーバの構築</title>
+    <subtitle>ネットワーク構造可視化と解析の試み</subtitle>
+    <conference>「シンボリック・データ解析と周辺技法」研究会 </conference>
+    <city>東京, 統計数理研究所</city>
+    <year>2007</year>
+    <month>3</month>
+    <note>（印刷中）</note>
+  </pub>
+
+  <pub type="misc">
+    <author>高久雅生</author>
     <title>研究者情報ブラウジングツールの開発とWeb情報資源の統合</title>
     <conference>若手研究者クロストーク「e-scienceとfield scienceが築くこれからの学問」</conference>
     <publisher>情報・システム研究機構 新領域融合研究センター</publisher>
