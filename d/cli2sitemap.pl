@@ -29,7 +29,7 @@ foreach (reverse sort keys %hash) {
     my $freq;
     my @tmp = split(/-/, $_);
     my $reldate = $today - date[ @tmp ];
-    print join(" ", @tmp),"\n";
+    #print join(" ", @tmp),"\n";
     if ($reldate->day > 365) {
 	$freq = "yearly";
     } elsif ($reldate->day > 31) {
