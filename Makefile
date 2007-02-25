@@ -11,6 +11,7 @@ HTML	= 	index.html profile.html history.html links.html \
 		etc/rpm.html \
 		etc/config.html \
 		etc/windows-software.html \
+		namazu/index.html \
 		software/index.html \
 		software/mnewsprint/index.html \
 		software/imgs2html/index.html \
