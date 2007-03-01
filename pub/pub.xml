@@ -12,7 +12,12 @@
     <city>東京, 統計数理研究所</city>
     <year>2007</year>
     <month>3</month>
-    <note>（印刷中）</note>
+    <pages>
+      <start>35</start>
+      <end>41</end>
+    </pages>
+    <file>./2007/tric-symposium.pdf</file>
+    <slide>./2007/tric-symposium-slides.pdf</slide>
   </pub>
 
   <pub type="misc">
