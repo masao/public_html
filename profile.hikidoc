@@ -1,41 +1,91 @@
-title: 高久雅生の自己紹介
-title.short: 自己紹介
-date.modified: 2006-11-26
+title: 高久雅生の経歴
+date.modified: 2007-03-04
+date.available: 2007-03-04
 
-:氏名:高久雅生 (TAKAKU Masao)
-:性別:男
-:所属:国立大学共同利用機関法人 [[情報・システム研究機構|http://www.rois.ac.jp/]] [[新領域融合研究センター|http://www.rois.ac.jp/tric/]] 融合プロジェクト研究員
+:氏名:高久雅生 (Masao Takaku)
+:E-mail:masao@nii.ac.jp
+:URL:http://masao.jpn.org/
 :連絡先:〒101-8430 東京都千代田区一ツ橋 2-1-2 国立情報学研究所内
-::Tel:03-4212-2654  Fax:03-3556-1916
-:趣味:読書（昔は[[高橋克彦|http://act9.jp/]]とか[[David Brin|http://www.davidbrin.com/]]とか好きでした。）
-::音楽鑑賞（昔は[[Bon Jovi|http://www.bonjovi.com/]]とか[[Metallica|http://www.metallica.com/]]とか好きでした。）
-::運動（サイクリング、ウォーキング、ジョギング、オリエンテーリングなど）
-:所属学会:[[情報処理学会|http://www.ipsj.or.jp/]]
-::[[情報知識学会|http://www.jsik.jp/]]
+::(Tel) 03-4212-2654  (Fax) 03-3556-1916
 
-----
-// *[[名刺 (2001年10月時点)|namecard.lpd]]:[[ラベルプロデューサ|http://www.averymaxell.com/download/index.html]]形式のファイルです。
+!!研究テーマ
+情報検索システム, 電子図書館, 情報行動
 
-!! 略歴
+!!学歴
+:1998-03:[[国立図書館情報大学|http://www.ulis.ac.jp/jindex.html]] 図書館情報学部 卒業。図書館情報学学士
+:2003-03:[[国立図書館情報大学|http://www.ulis.ac.jp/jindex.html]]大学院 図書館情報学研究科 修了。修士（情報学）
+:2004-09:[[筑波大学|http://www.tsukuba.ac.jp/]]大学院 [[図書館情報メディア研究科|http://www.slis.tsukuba.ac.jp/]] 博士後期課程 （情報メディア専攻） 修了。博士（情報学）。
+::博士論文『[[相互連携可能な情報提供システムの研究: 用語体系および検索システムへの適用|./pub/2004/phd-thesis.pdf]]』
+::※''入学時は 図書館情報大学大学院 情報メディア研究科 博士後期課程。（2004年４月、国立大学法人化の法律により図書館情報大学が閉学し、 在校生は全員筑波大学に移籍することになったため移籍）''
 
-||1976-01||[[東京都|http://www.metro.tokyo.jp/]] [[北区|http://www.city.kita.tokyo.jp/]]にて誕生。（父-信行,母-行子）||
-||1982-04||[[北区立浮間小学校|http://www.kita-tky.ed.jp/~es30/]] 入学。||
-||1988-03||同上 卒業。||
-||1988-04||[[北区立浮間中学校|http://www.kita-tky.ed.jp/~jh64/]] 入学。||
-||1991-03||同上 卒業。||
-||1991-04-01||[[東京都立小石川高校|http://www.koishikawa-h.metro.tokyo.jp/]] 入学。||
-||1994-03-16||同上 卒業。||
-||1994-04-01||[[国立図書館情報大学|http://www.ulis.ac.jp/jindex.html]] 図書館情報学部 入学。（学籍番号 94206）||
-||1998-03-25||同上 卒業。 図書館情報学学士 取得||
-||1998-04-01||[[国立図書館情報大学|http://www.ulis.ac.jp/jindex.html]]大学院 図書館情報学研究科 入学。（学籍番号 98513）||
-||2000-03-24||同上 修了。修士（情報学）取得||
-||2000-04-20||[[国立図書館情報大学|http://www.ulis.ac.jp/jindex.html]]大学院 情報メディア研究科博士後期課程 入学。（学籍番号 2000612）||
-||2004-04-01||[[筑波大学|http://www.tsukuba.ac.jp/]]大学院 [[図書館情報メディア研究科|http://www.slis.tsukuba.ac.jp/]] 博士後期課程 （情報メディア専攻） 移籍。 ''（国立大学法人化の法律により図書館情報大学が閉学し、 在校生は全員筑波大学に移籍することになったため）''||
-||2004-09-30||同上 修了。 博士（情報学） 取得||
-||2004-10-01||[[国立情報学研究所|http://www.nii.ac.jp/]] 情報学資源研究センター プロジェクト研究員（非常勤）||
-||2006-01-01||[[情報・システム研究機構|http://www.rois.ac.jp/]] [[新領域融合研究センター|http://www.rois.ac.jp/tric/]] 融合プロジェクト研究員（非常勤）||
-||>…現在にいたる。||
+!!職歴
+:2006-01 -:
+::'''[[情報・システム研究機構|http://www.rois.ac.jp/]] [[新領域融合研究センター|http://www.rois.ac.jp/tric/]] （ポスドク研究員）''':
+::研究者情報サーバの構築（国内研究者のデータを一元化するプロトタイプシステムの構築）
+::（研究テーマ）電子図書館, 名寄せ, 書誌同定, 研究者ネットワーク, 可視化
+::（スキル）Perl, Web API, XML, Ruby
+:2004-09 - 2005-12:
+::'''[[国立情報学研究所|http://www.nii.ac.jp/]] 情報学資源研究センター （ポスドク研究員）''':
+::[[NTCIR-5 WEBタスク|http://research.nii.ac.jp/ntcweb/]]の運営。
+::（研究テーマ）Web検索システム, 情報検索評価, サーチエンジン
+::（スキル）Perl, Ruby, GETA, Web API, trec_eval
+
+!!教育歴
+:[[鶴見大学|http://www.tsurumi-u.ac.jp/]] 非常勤講師:
+::（2005年度・文学部）情報基礎演習II（インターネット） - WWW, HTMLの仕組みの解説とWebページ作成の演習
+::（2005年度・文学部）情報基礎演習III（アプリケーション） - Microsoft Windowsアプリケーションの一例として表計算ソフトウェアExcelの使用法を解説、演習
+:図書館情報大学 ティーチングアシスタント（TA）:
+::（2000年度・図書館情報学部）プログラミング言語演習I - C言語を使った演習
+::（2000年度・図書館情報学部）プログラミング言語演習II - C言語を使った演習
+::（2000年度・図書館情報学部）基礎情報処理 - HTMLの仕組みやPowerPoint/Excel/Photoshopなどのアプリケーションの使用法の解説と演習
+
+!!その他の活動
+:ULIS-DL検索システム （2002 - 2003年）:
+::Namazuによるメタデータ検索ツールの機能構築、開発。
+::（スキル）C言語, Perl, WWW/CGI, HTML, Unix, SGML, Dublin Core
+:つくば市IT懇話委員 （2001 - 2002年）:
+::つくば市IT事業推進のための学生諮問委員会。図書館相互利用システムやGISの活用等を提案。
+:[[LA研究会|http://phase.hpcc.jp/la/]] （1998 - 2004年）:
+::研究会資料のWeb公開、CD-ROM化、広報補助等を担当。
+::（スキル）HTML, PDF, 画像変換, Perl
+:[[Namazu Project|http://www.namazu.org/]]（全文検索エンジンNamazuの開発プロジェクト・コミッター） （1998 - 2000年）:
+::機能テストおよびアクセス機能の追加などを担当
+::（スキル）C言語, Perl, WWW/CGI, HTML, Unix
+:Japan/MARC閲覧システムの開発 （1998 - 2001年）:
+::日本書誌Japan/MARCデータ約13年分100万レコードを（学内限定）Web公開。
+::（スキル）Japan/MARC, DBM, C言語, Perl
+
+!!主な著作物
+*Masao Takaku, Keizo Oyama, Akiko Aizawa. An Analysis on Topic Features and Difficulties Based on Web Navigational Retrieval Experiments. Proceedings of the Third Asia Information Retrieval Symposium (AIRS) 2006; Springer, LNCS 4182; Singapore; pp.625-632; (2006-10) DOI:10.1007/11880592_55 （査読あり）
+*高久雅生, 江草由佳, 石塚英弘. Webサービスによる用語体系データの提供とその応用システム. 情報知識学会誌; vol.14; no.1; pp.11-22; (2004) （査読あり）
+*高久雅生, 江草由佳, 伊東千夏, 石塚英弘. データの再利用が可能な複数用語体系ブラウジングシステムの構築. 情報知識学会誌; vol.13; no.1; pp.10-22; (2003) （査読あり）
+*宇陀則彦, 江草由佳, 高久雅生, 石塚英弘. Z39.50による日本語書誌データ検索システム. 情報知識学会誌; vol.9; no.2; pp.1-15; (1999) （査読あり）
+全発表文献一覧は[[発表文献一覧|./pub/]]を参照のこと。
+
+!!所属学会
+*[[情報処理学会|http://www.ipsj.or.jp/]]
+*[[情報知識学会|http://www.jsik.jp/]]
+
+!!!学会等における活動
+:情報知識学フォーラム実行委員（2005年、2006年）:
+:The Fifth NTCIR Workshop Meeting Publication Co-Chair（2005年）:
+::[[第5回NTCIRワークショップ成果報告会|http://research.nii.ac.jp/ntcir-ws5/]]実行委員。プロシーディングス編集およびプレゼンテーションを担当。
+
+:論文査読:
+::情報知識学会誌（2006年）
+::SACSIS 2005 （2005年）
+
+!!研究助成金
+*2005-2007年度: 科学研究費補助金 若手研究(B) 「WWW上サイトマップの再利用促進のための分散型用語体系提供システムの研究」 研究代表者
+
+!!資格その他
+:英語:TOEICスコア 730点（2006年）
+:計算機スキル:
+::（プログラミング言語） C, Ruby, Perl, Unixシェル([kb]sh, [t]csh), Java
+::（OS）UNIX系 (Sun Solaris, Linux, IBM AIX, SGI IRIX)
+:情報処理技術者:国家2種（1996年）
+::初級システムアドミニストレータ（1997年）
 
 !!関連リンク
 *[[公式Webページ（勤務先）|http://research.nii.ac.jp/~masao/]]
-*[[JST ReaDデータベース・研究者情報|http://read.jst.go.jp/ddbs/plsql/KNKY_24?code=1000302228]]
+*[[JST ReaDデータベース・研究者情報|http://read.jst.go.jp/public/cs_ksh_008EventAction.do?action4=event&lang_act4=J&judge_act4=2&knkysh_name_code=1000302228]]
