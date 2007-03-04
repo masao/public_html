@@ -1,0 +1,93 @@
+title: Curriculum Vitae (Masao Takaku)
+date.modified: 2007-03-04
+date.available: 2007-03-04
+
+:Name:Masao Takaku
+:Contact:2-1-2 Hitotsubashi, Chiyoda-ku, Tokyo 101-8430, Japan
+::Tel: +81-3-4212-2654
+::Fax: +81-3-3556-1916
+::E-mail: masao@nii.ac.jp
+::URL: http://masao.jpn.org/
+
+!!Research interests
+Information retrieval system, Digital library, Information behaviour
+
+!!Education
+:1998-03:BSc in library and information science from [[University of Library and Information Science, Japan|http://www.ulis.ac.jp/]].
+:2003-03:MSc in Information Science from Graduate School of Information and Media Studies, [[University of Library and Information Science, Japan|http://www.ulis.ac.jp/]]
+:2004-09:PhD in Information Science from Graduate School of Library, Information and Media Studies, [[University of Tsukuba, Japan|http://www.tsukuba.ac.jp/]]
+::PhD dissertation: "[[A Study of Cooperative Information Service Systems: Applications to Terminological Systems and Information Retrieval Systems|./pub/2004/phd-thesis.pdf]] (in Japanese)"
+
+!!Work
+:2006-01 -:
+::'''[[Transdisciplinary Research Integration Center|http://www.rois.ac.jp/tric/]], [[Research Organization of Information and Systems|http://www.rois.ac.jp/]]  Post-doctoral researcher''':
+::Constructing a researcher information server (building prototype systems for integrating information on researchers in Japan)
+::(Keywords) digital library, identification, combining bibliographics, researcher network, visualization
+::(Skils) Perl, Web API, XML, Ruby
+:2004-09 - 2005-12:
+::'''[[National Institute of Informatics|http://www.nii.ac.jp/]] Post-doctoral researcher''':
+::One of organizers of [[NTCIR-5 WEB task|http://research.nii.ac.jp/ntcweb/]]
+::(Keywords) Web information retrieval, IR evaluation, search engine
+::(Skils) Perl, Ruby, GETA, Web API, trec_eval
+
+!!Teaching
+:[[University of Tsurumi|http://www.tsurumi-u.ac.jp/]] part-time lecturer:
+::(2005; Department of Literature) IT Basic Literacy II (Internet) - WWW, HTML
+::(2005; Department of Literature) IT Basic Literacy III (Application) - Microsoft Excel
+:[[University of Library and Information Science|http://www.ulis.ac.jp/]] Teaching Assistant (TA):
+::(2000; Department of Library and Information Science) Programming-Language-C I
+::(2000; Department of Library and Information Science) Programming-Language-C II
+::(2000; Department of Library and Information Science) IT Basic Literacy - HTML/PowerPoint/Excel/Photoshop
+
+!!Other activities
+:ULIS-DL metadata retrieval system (2002 - 2003):
+::Design and build a Web-based Metadata retrieval system by Namazu.
+::(Skils) C, Perl, WWW/CGI, HTML, Unix, SGML, Dublin Core
+:Tsukuba city IT (Student) special commettee (2001 - 2002):
+::Member of student commettee for new IT services by Tsukuba city. Proposed building inter-library service systems and utilization of GIS systems.
+:[[LA Seminar|http://phase.hpcc.jp/la/]] (1998 - 2004):
+::Website management for presentation materials. Conversion into CD-ROM for distribution. Assist for PR/communications for the seminar.
+::(Skils) HTML, PDF, Image format conversions, Perl
+:[[Namazu Project|http://www.namazu.org/]] (Open source full-text retrieval engine; committer) (1998 - 2000):
+::Tested features and added access-control feature.
+::(Skils) C, Perl, WWW/CGI, HTML, Unix
+:Building a Japan/MARC browsing system (1998 - 2001):
+::Building a web-based browsing system for Japanese national bibliographics Japan/MARC data including 1M-records from over 13 years.
+::(Skils) Japan/MARC, C, Perl, DBM, Magnetic tapes
+
+!!Selected publications
+*{{u "Masao Takaku"}}, Keizo Oyama, Akiko Aizawa. An Analysis on Topic Features and Difficulties Based on Web Navigational Retrieval Experiments. Proceedings of the Third Asia Information Retrieval Symposium (AIRS) 2006; Springer, LNCS 4182; Singapore; pp.625-632; (2006-10) DOI:10.1007/11880592_55 (refereed)
+*{{u "Masao Takaku"}}, Yuka Egusa, Hidehiro Ishizuka. Providing Data of Terminological Systems Based on Web Services and Its Application Systems. ''Joho-Chishiki-Gakkai-shi'' (Journal of Information and Knowledge of Japan); vol.14; no.1; pp.11-22; (2004) In Japanese. (refereed)
+*{{u "Masao Takaku"}}, Yuka Egusa, Chinatsu Ito, Hidehiro Ishizuka. A Browsing System Based on Reusable Data Format for Various Terminological Systems. ''Joho-Chishiki-Gakkai-shi'' (Journal of Information and Knowledge of Japan); vol.13; no.1; pp.10-22; (2003) In Japanese (refereed)
+*Norihiko Uda, Yuka Egusa, {{u "Masao Takaku"}}, Hidehiro Ishizuka. Information Retrieval System based on Z39.50 protocol for Japanese Bibliographic Data. ''Joho-Chishiki-Gakkai-shi'' (Journal of Information and Knowledge of Japan); vol.9; no.2; pp.1-15; (1999) In Japanese (refereed)
+
+A full list of publications are availabe at [./pub/]].
+
+!!Academic societies
+*[[Information Processing Society of Japan|http://www.ipsj.or.jp/]]
+*[[Japan Society of Information and Knowledge|http://www.jsik.jp/]]
+
+!!!Activities on academic societies
+:Organizing committee member for JSIK Forum (2005, 2006):
+:The Fifth NTCIR Workshop Meeting Publication Co-Chair (2005):
+::Organizing committee member for [[The Fifth NTCIR Workshop Meeting|http://research.nii.ac.jp/ntcir-ws5/]]. Publication co-chair and presentation area co-coordinator.
+
+:Reviewer:
+::''Joho-Chishiki-Gakkai-Shi'' (Jounal of Information and Knowledge of Japan) (2006)
+::SACSIS 2005 (2005)
+
+!!Research fund
+*2005-2007: '''Study on Distributed Terminological Systems for Utilizing and Reusing Web Sitemaps''' (Principal researcher) Grant-in-Aid for Scientific Research by the Ministry of Education, Culture, Sports, Science and Technology; Young Researcher B; No. 17700130
+
+!!Foreign language and other skils
+:English:TOEIC score 730 (2006)
+:Computer skills:
+::(Programming languages) C, Ruby, Perl, Unixシェル([kb]sh, [t]csh), Java
+::(OS) UNIX variants (Sun Solaris, Linux, IBM AIX, SGI IRIX)
+:Japan Information-Technology Engineers Examination:
+::Second Class certification (1996)
+::Junior System Administrator certification (1997)
+
+!!Related links
+*[[Official Web page|http://research.nii.ac.jp/~masao/]]
+*[[Researcher info. for JST ReaD DB|http://read.jst.go.jp/public/cs_ksh_008EventAction.do?action4=event&lang_act4=J&judge_act4=2&knkysh_name_code=1000302228]]
