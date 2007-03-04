@@ -64,13 +64,13 @@
   ul#interlang {
     list-style-type: none;
     font-size: smaller;
-    color: gray;
     right: 1em;
     text-align: right;
   }
   ul#interlang li {
     display: inline;
     padding: .1em .5em;
+    border: solid 1px;
   }
 }
 @media print {
