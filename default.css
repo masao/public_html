@@ -70,7 +70,7 @@
   ul#interlang li {
     display: inline;
     padding: .1em .5em;
-    border: solid 1px;
+    border: solid 1px gray;
   }
 }
 @media print {
