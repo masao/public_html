@@ -1,0 +1,21 @@
+title: Masao Takaku's Website
+date.modified: 2007-03-04
+date.available: 2007-03-04
+navi: false
+
+{{div 'class="news"' "
+!! News
+:2007-03-04:English version of my website has been opened.
+"
+}}
+
+!!Table of Contents
+:[[C.V.|profile.html]]:About me.
+:[[Publications|./pub/]]:A list of publications written by me.
+:[[Softwares|./software/]]:My software/scripts.
+
+!!! (mostly in Japanese contents)
+:[[Misc.|./etc/]]:Miscellaneous contents.
+:[[My favorite links|links.html]]:Links to my favorite websites.
+:[[Web album|./photo/]]:Photos taken by me.
+:[[My memo|./d/]]:My memo/diary.

@@ -1,9 +1,9 @@
 #$Id$
 navi: true
-language: "ja"
-interlang:
-  ja: "Japanese"
-  en: "English"
+date.format: "%Y-%m-%d"
+subject.label:
+   etc : misc.
+   software : software
 
 interwiki:
    amazon: "http://www.amazon.co.jp/exec/obidos/ASIN/%s/masaotakakush-22/ref=nosim"

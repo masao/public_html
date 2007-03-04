@@ -1,6 +1,7 @@
 # $Id$
 
-HTML	= 	index.html profile.html history.html links.html \
+HTML	= 	index.html.ja index.html.en \
+		profile.html history.html links.html \
 		etc/index.shtml \
 		etc/firefox.html \
 		etc/ir-journal.html \
@@ -22,7 +23,13 @@ HTML	= 	index.html profile.html history.html links.html \
 
 all: $(HTML) chalow
 
-%.html: %.hikidoc template.html.in
+%.html: %.hikidoc template.html.ja
+	./tohtml.rb $< > $@
+
+%.html.ja: %.hikidoc.ja template.html.ja
+	./tohtml.rb $< > $@
+
+%.html.en: %.hikidoc.en template.html.en
 	./tohtml.rb $< > $@
 
 %.shtml: %.hikidoc template.html.in
@@ -36,7 +43,7 @@ chalow:
 # Rsync to http://masao.jpn.org/
 rsync:
 	./rsync.pl etk:www/masao/d/bbs/kblog/ ./d/bbs/kblog/
-	./rsync.pl --exclude=test/ --exclude=private/ \
+	./rsync.pl --exclude=test/ --exclude=private/ --delete-after \
 		./ etk:www/masao/
 
 #	% make lint

@@ -20,7 +20,8 @@ class HierFilename < Pathname
          #STDERR.puts @file
          break if File.file?( @file )
       end
-      @file = Pathname.new( File.join( ".", [".."] * level,  @file ) ).cleanpath
+      #STDERR.puts @file
+      @file = Pathname.new( @file ).relative_path_from( Pathname.new(basedir) )
    end
    def to_str
       @file.to_s
@@ -178,8 +179,10 @@ end
 
 class ToHTML
    attr_reader :conf, :file, :content, :rootdir
-   def initialize( conf, file )
-      @conf = conf
+   def initialize( file )
+      @conf = YAML.load(open(HierFilename.new("tohtml.conf")))
+      @lang = (file =~ /\.([a-z][a-z])$/)? $1 : conf["language"]
+      @conf.update( YAML.load(open(HierFilename.new("tohtml.conf.#{@lang}"))) )
       @file = file
       @rootdir = File.join( ".", [ ".." ] * ( @file.split("/").size - 1 ) )
       @content, header = parse( @file )
@@ -189,7 +192,26 @@ class ToHTML
       if @conf["css"].nil?
          @conf["css"] = HierFilename.new( "default.css", File.dirname( file ) )
       end
-      #STDERR.puts @rootdir
+      #STDERR.puts @conf
+   end
+   def lang_file( lang = "ja" )
+      file = nil
+      case lang
+      when "ja"
+         file = @file.gsub( /\.\w+\.([a-z][a-z])$/, ".html.ja" )
+      when "en"
+         file = @file.gsub( /\.\w+\.([a-z][a-z])$/, ".html.en" )
+         file = @file.gsub( /\.\w+$/, ".html.en" ) if not File.file?( file )
+      end
+      file = nil if not File.file?( file )
+      file
+   end
+   def lang_switch
+      result = []
+      @conf["interlang"].keys.each do |lang|
+         result << lang if lang_file( lang )
+      end
+      result
    end
    def parse( file )
       content = open(file){|io| io.readlines }
@@ -214,7 +236,7 @@ class ToHTML
       end
       [ content.join, header ]
    end
-   def expand( template = "template.html.in" )
+   def expand( template = "template.html.#{@lang}" )
       @doc = MHikiDoc.new( @content, :interwiki => @conf["interwiki"] )
       body = @doc.to_html
       body = expand_plugin( body )
@@ -249,8 +271,7 @@ class ToHTML
 end
 
 if $0 == __FILE__
-   conf = YAML.load(open(HierFilename.new("tohtml.conf")))
    ARGV.each do |f|
-      puts ToHTML.new( conf, f ).expand
+      puts ToHTML.new( f ).expand
    end
 end
