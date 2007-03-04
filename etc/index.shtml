@@ -14,6 +14,10 @@
 <div class="navi"><a href="./..">HOME</a> &gt;
 雑多</div>
 <div class="last-update">最終更新日: 2006年06月09日</div>
+<ul id="interlang">
+<li id="il-ja">Japanese</li>
+<li id="il-en"><a href="etc/index.hikidoc">English</a></li>
+</ul>
 <h1>その他雑多なメモ類のページ</h1>
 <!--#config timefmt="<span class=\"lastmodified\">[%Y-%m-%d]</span>" -->
 <p>雑多な覚え書きその他を置いてあります。  （<span
@@ -42,7 +46,7 @@ class="lastmodified">[日付]</span>は更新日を示します）</p>
 <hr />
 <div class="navi"><a href="./..">HOME</a> &gt;
 雑多</div>
-<address>高久雅生 (Takaku Masao)<br />
+<address>高久雅生 (Masao Takaku)<br />
 <a href="http://masao.jpn.org/">http://masao.jpn.org/</a>,
 <a href="mailto:masao@nii.ac.jp">masao@nii.ac.jp</a></address>
 <div class="google-ads">
