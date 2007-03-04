@@ -26,13 +26,13 @@ all: $(HTML) chalow
 %.html: %.hikidoc template.html.ja
 	./tohtml.rb $< > $@
 
+%.shtml: %.hikidoc template.html.ja
+	./tohtml.rb $< > $@
+
 %.html.ja: %.hikidoc.ja template.html.ja
 	./tohtml.rb $< > $@
 
 %.html.en: %.hikidoc.en template.html.en
-	./tohtml.rb $< > $@
-
-%.shtml: %.hikidoc template.html.in
 	./tohtml.rb $< > $@
 
 # chalow
