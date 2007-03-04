@@ -24,7 +24,7 @@
 </div>
 <% end %>
 <% if date_available %>
-<div class="last-update">First edition available online on <%= date_available.strftime( date_format ) %></div>
+<div class="last-update">Created on <%= date_available.strftime( date_format ) %></div>
 <% end %>
 <% if date_modified %>
 <div class="last-update">Last modified on <%= date_modified.strftime( date_format ) %></div>
