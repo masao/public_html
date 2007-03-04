@@ -18,6 +18,7 @@
     </page>
     <file>./2007/tric-symposium.pdf</file>
     <slide>./2007/tric-symposium-slides.pdf</slide>
+    <language>ja</language>
   </pub>
 
   <pub type="misc">
@@ -31,6 +32,7 @@
     <note>ポスター・デモ発表</note>
     <file>./2006/tric-wakate-abstract.pdf</file>
     <poster>./2006/tric-wakate-poster.pdf</poster>
+    <language>ja</language>
   </pub>
 
   <pub type="misc">
@@ -46,6 +48,7 @@
     <city>京都</city>
     <note>ポスター・デモ発表</note>
     <poster>./2006/DBWeb2006-poster.pdf</poster>
+    <language>en</language>
   </pub>
 
   <pub type="misc">
@@ -57,6 +60,7 @@
     <month>11</month>
     <city>東京, 学術総合センター</city>
     <note>ポスター・デモ発表</note>
+    <language>ja</language>
   </pub>
 
   <pub type="conference">
@@ -76,6 +80,7 @@
     <doi>10.1007/11880592_55</doi>
     <poster>http://www.airs2006.org/papers.htm#P70</poster>
     <poster>./2006/airs2006-poster.pdf</poster>
+    <language>en</language>
   </pub>
 
   <pub type="misc">
@@ -93,6 +98,7 @@
     </page>
     <file>./2006/linkage-seminar.pdf</file>
     <slide>./2006/linkage-seminar-slides.pdf</slide>
+    <language>ja</language>
   </pub>
 
   <pub type="techreport">
@@ -112,6 +118,7 @@
     <month>9</month>
     <page>8</page>
     <url>http://research.nii.ac.jp/TechReports/06-012E.html</url>
+    <language>en</language>
   </pub>
 
   <pub type="misc">
@@ -130,6 +137,7 @@
       <end>56</end>
     </page>
     <slide>./2005/jsikforum-slides.pdf</slide>
+    <language>ja</language>
   </pub>
 
   <pub type="conference">
@@ -149,6 +157,7 @@
       <end>442</end>
     </page>
     <url>http://research.nii.ac.jp/ntcir/workshop/OnlineProceedings5/data/WEB/NTCIR5-OV-WEB-OyamaK.pdf</url>
+    <language>en</language>
   </pub>
 
   <pub type="book">
@@ -164,6 +173,7 @@
     <page>569</page>
     <isbn>4-86049-033-9</isbn>
     <url>http://research.nii.ac.jp/ntcir/workshop/OnlineProceedings5/</url>
+    <language>en</language>
   </pub>
 
   <pub referee="true" type="journal">
@@ -179,6 +189,7 @@
       <start>11</start>
       <end>22</end>
     </page>
+    <language>ja</language>
   </pub>
 
   <pub referee="true" type="journal">
@@ -194,10 +205,11 @@
       <start>1</start>
       <end>17</end>
     </page>
+    <language>ja</language>
   </pub>
 
   <pub referee="true" type="conference">
-    <lang>en</lang>
+    <language>en</language>
     <author>Yuka Egusa</author>
     <author>Masao Takaku</author>
     <author>Hidehiro Ishizuka</author>
@@ -228,6 +240,7 @@
       <start>10</start>
       <end>22</end>
     </page>
+    <language>ja</language>
   </pub>
 
   <pub referee="true" type="journal">
@@ -244,6 +257,7 @@
       <start>1</start>
       <end>10</end>
     </page>
+    <language>ja</language>
   </pub>
 
   <pub type="misc">
@@ -263,6 +277,7 @@
       <start>1</start>
       <end>8</end>
     </page>
+    <language>ja</language>
   </pub>
 
   <pub type="misc">
@@ -281,6 +296,7 @@
       <end>44</end>
 
     </page>
+    <language>ja</language>
   </pub>
 
   <pub type="journal">
@@ -297,6 +313,7 @@
       <end>15</end>
     </page>
     <year>1999</year>
+    <language>ja</language>
   </pub>
 
   <pub type="misc">
@@ -319,6 +336,7 @@
     </page>
     <url>http://www.dl.slis.tsukuba.ac.jp/DLjournal/No_16/12-masao/12-masao.html</url>
     <slide>./1999/dlw16-slides.pdf</slide>
+    <language>ja</language>
   </pub>
 
   <pub type="misc">
@@ -335,6 +353,7 @@
       <start>53</start>
       <end>59</end>
     </page>
+    <language>ja</language>
   </pub>
 
   <pub type="thesis">
@@ -346,6 +365,7 @@
     <page>57</page>
     <note>卒業論文</note>
     <file>./1998/grad-thesis.pdf</file>
+    <language>ja</language>
   </pub>
 
   <pub type="thesis">
@@ -358,6 +378,7 @@
     <note>修士論文</note>
     <file>./2000/master-thesis.pdf</file>
     <slide>./2000/master-thesis-slides.pdf</slide>
+    <language>ja</language>
   </pub>
 
   <pub type="thesis">
@@ -373,5 +394,6 @@
     <note>博士論文</note>
     <file>./2004/phd-thesis.pdf</file>
     <slide>./2004/phd-thesis-slides.pdf</slide>
+    <language>ja</language>
   </pub>
 </publist>
