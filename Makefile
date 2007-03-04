@@ -1,7 +1,8 @@
 # $Id$
 
 HTML	= 	index.html.ja index.html.en \
-		profile.html history.html links.html \
+		profile.html.ja profile.html.en \
+		history.html links.html \
 		etc/index.shtml \
 		etc/firefox.html \
 		etc/ir-journal.html \
