@@ -122,6 +122,7 @@ if $0 == __FILE__
       excerpt = entry[:content].toutf8
       blog_name = BLOG_NAME.toutf8
       url = ( BLOG_BASEURI + entry[:url] ).to_s
+      puts url
       p Trackback.send( ping_url, title, excerpt, url, blog_name )
    else
       urllist = parse_html( entry )
