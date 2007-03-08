@@ -2,15 +2,7 @@
 # $Id$
 
 require "net/http"
-require "nkf"
-require "cgi"
-require "erb"
-
-class CGI
-   def self_url
-      "http://" + server_name.to_s + script_name.to_s
-   end
-end
+require "kconv"
 
 module Trackback
    def self::auto_discovery(dest_url)
@@ -40,10 +32,10 @@ module Trackback
       path << "?" << uri.query if uri.query && !uri.query.empty?
       #
       formdata = ""
-      formdata << "title="     << CGI::escape(title)   << "&"
-      formdata << "excerpt="   << CGI::escape(excerpt) << "&"
-      formdata << "url="       << CGI::escape(url)     << "&"
-      formdata << "blog_name=" << CGI::escape(blog_name)
+      formdata << "title="     << URI::escape(title)     << "&"
+      formdata << "url="       << URI::escape(url)       << "&"
+      formdata << "blog_name=" << URI::escape(blog_name) << "&"
+      formdata << "excerpt="   << URI::escape(excerpt)
       #
       response = nil
       body     = nil
@@ -93,29 +85,60 @@ module Chalow
    end
 end
 
+def usage( itemlist )
+   puts <<EOF
+  #{$0} entry_id
+	(List all possible trackbak pings in the entry_id)
+	entry_id:
+		#{itemlist[0][:id]}	#{itemlist[0][:title]}
+		#{itemlist[1][:id]}	#{itemlist[1][:title]}
+		#{itemlist[2][:id]}	#{itemlist[2][:title]}
+		#{itemlist[3][:id]}	#{itemlist[3][:title]}
+		#{itemlist[4][:id]}	#{itemlist[4][:title]}
+
+  #{$0} entry_id url [excerpt]
+	(Send a trackback ping of the entry_id to the url)
+EOF
+end
+
 if $0 == __FILE__
    include Chalow
 
    itemlist = parse_itemlist
 
    BLOG_NAME = "まさおのChangeLogメモ";
-   TEMPLATE_FILE = "tb-send.rhtml"
-   css = "../default.css"
+   BLOG_BASEURI = URI.parse( "http://masao.jpn.org/d/" )
 
-   cgi = CGI.new
-   puts cgi.header( "text/html; charset=EUC-JP" )
-   if cgi.params["id"][0]
-      if cgi.params["submit"][0]
-      else
-         #puts ERB.new( open( TEMPLATE_FILE ){|io| io.read }, nil, "<>" ).result( binding )
-         entry = itemlist.find{|e| e[:id] == cgi.params["id"][0] }
-         puts ERB.new( open( "tb-send.id.rhtml" ){|io| io.read }, nil, "<>" ).result( binding )
-         #parse_html( entry ).each do |url|
-         #p [url, Trackback.auto_discovery( url, entry[:title], entry[:content], entry[:url], BLOG_NAME )]
-         #end
-      end
+   entry_id = ARGV.shift
+   if entry_id.nil?
+      usage( itemlist )
+      exit
+   end
+   entry = itemlist.find{|e| e[:id] == entry_id }
+
+   ping_url = ARGV.shift
+   if ping_url
+      title = entry[:title].toutf8
+      excerpt = entry[:content].toutf8
+      blog_name = BLOG_NAME.toutf8
+      url = ( BLOG_BASEURI + entry[:url] ).to_s
+      p Trackback.send( ping_url, title, excerpt, url, blog_name )
    else
-      puts ERB.new( open( "tb-send.rhtml" ){|io| io.read }, nil, "<>" ).result( binding )
+      urllist = parse_html( entry )
+      skiplist = []
+      puts "Trackback ping:"
+      urllist.each do |url|
+         tb_url = Trackback.auto_discovery( url )
+         if tb_url
+            puts url
+            puts "\t" + tb_url
+         else
+            skiplist << url
+         end
+      end
+      puts "Trackback ping not found:"
+      skiplist.each do |url|
+         puts url
+      end
    end
 end
-
