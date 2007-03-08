@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="EUC-JP"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-JP" />
+<link rev="made" href="mailto:masao@nii.ac.jp" />
+<link rel="stylesheet" href="<%= css %>" type="text/css" />
+<title>Send trackback</title>
+</head>
+<body>
+<ul>
+<% i = 0 %>
+<% itemlist.each do |entry| %>
+  <li><%= entry[:id] %>: <a href="<%= cgi.self_url %>?id=<%= entry[:id] %>"><%= entry[:title] %></a></li>
+<%    i += 1 %>
+<%    break if i > 15 %>
+<% end %>
+</ul>
+<ul>
+<% itemlist.map{|e| e[:id][ 0, 4 ] }.uniq.each do |y| %>
+<li><%= y %>:
+<% itemlist.map{|e| e[:id][ 0, 7 ] }.uniq.select{|e| /\A#{y}/ =~ e }.sort.each do |m| %>
+<a href="<%= cgi.self_url %>?date=<%= m %>"><%= m[ -2, 2 ] %></a>
+<% end %>
+</li>
+<% end %>
+</ul>
+</body>
+</html>
