@@ -23,12 +23,15 @@ module Trackback
          body = response.read_body
       end
       result = nil
-      if body.gsub!(/\s+/, " ").match( %r{ xmlns:(\w+)="http://madskills.com/public/xml/rss/module/trackback/"} )
-         tb_namespace = $1
-         if body.match( %r{ #{tb_namespace}:ping="([^\"]+)"} )
-            tb_url = $1
-            #result = self.send( tb_url, title, excerpt, url, blog_name )
-            result = tb_url
+      if body
+         body.gsub!(/\s+/, " ")
+         if body.match( %r{ xmlns:(\w+)="http://madskills.com/public/xml/rss/module/trackback/"} )
+            tb_namespace = $1
+            if body.match( %r{\s#{tb_namespace}:ping="([^\"]+)"} )
+               tb_url = $1
+               #result = self.send( tb_url, title, excerpt, url, blog_name )
+               result = tb_url
+            end
          end
       end
       result
@@ -114,6 +117,9 @@ if $0 == __FILE__
          #p [url, Trackback.auto_discovery( url, entry[:title], entry[:content], entry[:url], BLOG_NAME )]
          #end
       end
+   elsif cgi.params["date"][0]
+      itemlist = itemlist.select{|e| /\A#{ cgi.params["date"][0] }/ =~ e[:id] }
+      puts ERB.new( open( "tb-send.rhtml" ){|io| io.read }, nil, "<>" ).result( binding )
    else
       puts ERB.new( open( "tb-send.rhtml" ){|io| io.read }, nil, "<>" ).result( binding )
    end

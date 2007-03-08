@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="EUC-JP"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-JP" />
+<link rev="made" href="mailto:masao@nii.ac.jp" />
+<link rel="stylesheet" href="<%= css %>" type="text/css" />
+<title>Send trackback</title>
+</head>
+<body>
+<h1><%= entry[:title] %></h1>
+<ul>
+  <li>blog_name: <span id="blog_name"><%= BLOG_NAME %></span></li>
+<% entry_url = URI.parse(cgi.self_url) + entry[:url] %>
+  <li>url: <span id="url"><a href="<%= entry_url %>"><%= entry_url %></a></li>
+  <li>title: <span id="title"><%= entry[:title] %></span></li>
+  <li>excerpt: <div id="content" style="font-size:smaller;"><%= entry[:content] %></textarea></li>
+  <li>URL:<ul>
+    <% threads = [] %>
+    <% parse_html( entry ).each do |url| %>
+    <li><a href="<%= url %>"><%= url %></a>
+	<% if tb_url = Trackback.auto_discovery( url ) %>
+	<br /><span class="ping-url">Trackback ping url: <a href="<%= tb_url %>"><%= tb_url %></a></span>
+	<% end %>
+    </li>
+    <% end %>
+</ul></li>
+  <li><input type="submit" id="submit" name="submit" /></li>
+</ul>
+<hr />
+<p><a href="<%= cgi.self_url %>">Back to TB-send Top</a></p>
+</body>
+</html>
