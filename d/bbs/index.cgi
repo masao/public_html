@@ -128,8 +128,13 @@ if ($mode eq "write") {
     $name = $noname if ($name =~ /^\s*$/sm);
     
     if ($body !~ /\A\s*\Z/m) {
-	# Spam対策; URLを3つ以上書いたものは除去
-	my @spam = ($body =~ /http:\/\//gmo);
+	# Spam対策;
+	my @spam;
+	# 特定のURLリンク記法やHTMLリンク記法は禁止
+	@spam = ($body =~ /(\[url=http:\/\/|<a\s+href\s*=\s*["']\s*http:\/\/)/gmoi);
+	exit if scalar(@spam) > 0;
+	# URLを3つ以上書くのは禁止
+	@spam = ($body =~ /http:\/\//gmo);
 	exit if scalar(@spam) > 2;
 
 	escape_string(\$name);	
