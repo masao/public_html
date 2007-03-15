@@ -23,12 +23,12 @@ Information retrieval, Digital library, Information behaviour
 ::'''[[Transdisciplinary Research Integration Center|http://www.rois.ac.jp/tric/]], [[Research Organization of Information and Systems|http://www.rois.ac.jp/]]  Post-doctoral researcher''':
 ::Constructing a researcher information server (building prototype systems for integrating information on researchers in Japan)
 ::(Keywords) digital library, identification, combining bibliographics, researcher network, visualization
-::(Skils) Perl, Web API, XML, Ruby
+::(Skills) Perl, Web API, XML, Ruby
 :2004-09 - 2005-12:
 ::'''[[National Institute of Informatics|http://www.nii.ac.jp/]] Post-doctoral researcher''':
 ::One of organizers of [[NTCIR-5 WEB task|http://research.nii.ac.jp/ntcweb/]]. Building a Web test collection.
 ::(Keywords) Web information retrieval, IR evaluation, search engine, test collection
-::(Skils) Perl, Ruby, GETA, Web API, trec_eval
+::(Skills) Perl, Ruby, GETA, Web API, trec_eval
 
 !!Teaching
 :[[Tsurumi University|http://www.tsurumi-u.ac.jp/]] part-time lecturer:
@@ -42,18 +42,18 @@ Information retrieval, Digital library, Information behaviour
 !!Other activities
 :ULIS-DL metadata retrieval system (2002 - 2003):
 ::Design and build a Web-based Metadata retrieval system by Namazu.
-::(Skils) C, Perl, WWW/CGI, HTML, Unix, SGML, Dublin Core
-:Tsukuba city IT (Student) special commettee (2001 - 2002):
-::Member of student commettee for new IT services by Tsukuba city. Proposed building inter-library service systems and utilization of GIS systems.
+::(Skills) C, Perl, WWW/CGI, HTML, Unix, SGML, Dublin Core
+:Tsukuba city IT (Student) special committee (2001 - 2002):
+::Member of student committee for new IT services by Tsukuba city. Proposed building inter-library service systems and utilization of GIS systems.
 :[[LA Seminar|http://phase.hpcc.jp/la/]] (1998 - 2004):
 ::Website management for presentation materials. Conversion into CD-ROM for distribution. Assist for PR/communications for the seminar.
-::(Skils) HTML, PDF, Image format conversions, Perl
+::(Skills) HTML, PDF, Image format conversions, Perl
 :[[Namazu Project|http://www.namazu.org/]] (Open source full-text retrieval engine; committer) (1998 - 2000):
 ::Tested features and added access-control feature.
-::(Skils) C, Perl, WWW/CGI, HTML, Unix
+::(Skills) C, Perl, WWW/CGI, HTML, Unix
 :Building a Japan/MARC browsing system (1998 - 2001):
 ::Building a web-based browsing system for Japanese national bibliographics Japan/MARC data including 1M-records from over 13 years.
-::(Skils) Japan/MARC, C, Perl, DBM, Magnetic tapes
+::(Skills) Japan/MARC, C, Perl, DBM, Magnetic tapes
 
 !!Selected publications
 *{{u "Masao Takaku"}}, Keizo Oyama, Akiko Aizawa. An Analysis on Topic Features and Difficulties Based on Web Navigational Retrieval Experiments. Proceedings of the Third Asia Information Retrieval Symposium (AIRS) 2006; Springer, LNCS 4182; Singapore; pp.625-632; (2006-10) DOI:10.1007/11880592_55 (refereed)
@@ -61,7 +61,7 @@ Information retrieval, Digital library, Information behaviour
 *{{u "Masao Takaku"}}, Yuka Egusa, Chinatsu Ito, Hidehiro Ishizuka. A Browsing System Based on Reusable Data Format for Various Terminological Systems. ''Joho-Chishiki-Gakkai-shi'' (Journal of Information and Knowledge of Japan); vol.13; no.1; pp.10-22; (2003) In Japanese (refereed)
 *Norihiko Uda, Yuka Egusa, {{u "Masao Takaku"}}, Hidehiro Ishizuka. Information Retrieval System based on Z39.50 protocol for Japanese Bibliographic Data. ''Joho-Chishiki-Gakkai-shi'' (Journal of Information and Knowledge of Japan); vol.9; no.2; pp.1-15; (1999) In Japanese (refereed)
 
-A full list of publications are availabe at [[./pub/]].
+A full list of publications are available at [[./pub/]].
 
 !!Academic societies
 *[[Information Processing Society of Japan|http://www.ipsj.or.jp/]]
@@ -73,13 +73,13 @@ A full list of publications are availabe at [[./pub/]].
 ::Organizing committee member for [[The Fifth NTCIR Workshop Meeting|http://research.nii.ac.jp/ntcir-ws5/]]. Publication co-chair and presentation area co-coordinator.
 
 :Reviewer:
-::''Joho-Chishiki-Gakkai-Shi'' (Jounal of Information and Knowledge of Japan) (2006)
+::''Joho-Chishiki-Gakkai-Shi'' (Journal of Information and Knowledge of Japan) (2006)
 ::SACSIS 2005 (2005)
 
 !!Research fund
 *2005-2007: '''Study on Distributed Terminological Systems for Utilizing and Reusing Web Sitemaps''' (Principal researcher) Grant-in-Aid for Scientific Research by the Ministry of Education, Culture, Sports, Science and Technology; Young Researcher B; No. 17700130
 
-!!Foreign language and other skils
+!!Foreign language and other skills
 :English:TOEIC score 730 (2006)
 :Computer skills:
 ::(Programming languages) C, Ruby, Perl, Unixシェル([kb]sh, [t]csh), Java
@@ -90,4 +90,4 @@ A full list of publications are availabe at [[./pub/]].
 
 !!Related links
 *[[Official Web page|http://research.nii.ac.jp/~masao/]]
-*[[Researcher info. for JST ReaD DB|http://read.jst.go.jp/public/cs_ksh_008EventAction.do?action4=event&lang_act4=J&judge_act4=2&knkysh_name_code=1000302228]]
+*[[Researcher info. for JST ReaD DB|http://read.jst.go.jp/public/cs_ksh_008EventAction.do?action4=event&lang_act4=E&judge_act4=2&knkysh_name_code=1000302228]]
