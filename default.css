@@ -8,6 +8,23 @@
   h1 {
     text-align: center;
   }
+  h2 {
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+    border-style: solid;
+    text-indent: 0.5em;
+    color: #223322;
+    background-color: #eeeeee;
+    border-color: #669966;
+    border-width: 0 0 thin thick;
+  }
+  h3 {
+    border-style: solid;
+    text-indent: 0.5em;
+    margin-left: 0.5em;
+    border-color: #669966;
+    border-width: 0 0 thin thick;
+  }
   p, dd {
     text-indent: 1em;
   }
