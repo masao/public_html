@@ -21,6 +21,7 @@ HTML	= 	index.html.ja index.html.en \
 		software/zipcode_cgi.html \
 		software/graphviz-ja/index.html \
 		private/memo.html \
+		lecture/index.html \
 
 all: $(HTML) chalow
 
