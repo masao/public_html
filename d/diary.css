@@ -284,3 +284,14 @@ a.icon img {
 	border: none;
 	vertical-align: bottom;
 }
+
+/* derived from clover.css (tDiary) : license:GPL */
+div.day span.sanchor {
+        background-image: url(clover_anchor.png);
+        background-position: bottom right;
+        background-repeat: no-repeat;
+        padding: 16px 16px 0px 0px;
+        color: #fff;
+        background-color: transparent;
+        font-size: 1px;
+}
