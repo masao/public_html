@@ -15,7 +15,8 @@ module Trackback
          body = response.read_body
       end
       result = nil
-      if body.gsub!(/\s+/, " ").match( %r{ xmlns:(\w+)="http://madskills.com/public/xml/rss/module/trackback/"} )
+      body.gsub!(/\s+/, " ")
+      if body.match( %r{ xmlns:(\w+)="http://madskills.com/public/xml/rss/module/trackback/"} )
          tb_namespace = $1
          if body.match( %r{ #{tb_namespace}:ping="([^\"]+)"} )
             tb_url = $1
