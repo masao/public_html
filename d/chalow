@@ -1068,7 +1068,7 @@ sub get_last_day_of_month {
 sub write_rss_file {
     my $rdfseq;
     my $rdfitem;
-    my $ctr = ($rss_topn > 0) ? $rss_topn : (($opt_topn > 7) ? 7 : $opt_topn);
+    my $ctr = ($rss_topn > 0) ? $rss_topn : (($opt_topn > 15) ? 15 : $opt_topn);
 
     my @items;
 
