@@ -1,0 +1,115 @@
+Index: src/edu/uci/ics/jung/io/GraphMLFileHandler.java
+===================================================================
+RCS file: /cvsroot/jung/jung/src/edu/uci/ics/jung/io/GraphMLFileHandler.java,v
+retrieving revision 1.13
+diff -u -b -r1.13 GraphMLFileHandler.java
+--- src/edu/uci/ics/jung/io/GraphMLFileHandler.java	15 Oct 2006 08:39:29 -0000	1.13
++++ src/edu/uci/ics/jung/io/GraphMLFileHandler.java	11 Jan 2007 09:27:12 -0000
+@@ -28,6 +28,7 @@
+ import edu.uci.ics.jung.graph.impl.SparseVertex;
+ import edu.uci.ics.jung.graph.impl.UndirectedSparseEdge;
+ import edu.uci.ics.jung.utils.UserData;
++import edu.uci.ics.jung.utils.UserDataDelegate;
+ 
+ /**
+  * The default GraphML file handler to use to parse the xml file
+@@ -38,6 +39,13 @@
+     private StringLabeller mLabeller;
+     private boolean default_directed;
+ 
++    private UserDataDelegate parent;
++    private HashMap attrName = new HashMap();
++    private HashMap attrType = new HashMap();
++    private HashMap attrDefault = new HashMap();
++    private String dataKey;
++    private StringBuffer dataBuffer = new StringBuffer();
++
+     /**
+      * The default constructor
+      */
+@@ -150,7 +158,6 @@
+             mLabeller.setLabel((Vertex) vertex,idString);
+         } catch (StringLabeller.UniqueLabelException ule) {
+             throw new FatalException("Ids must be unique");
+-
+         }
+ 
+         for (Iterator keyIt = attributeMap.keySet().iterator();
+@@ -163,6 +170,12 @@
+         return vertex;
+     }
+ 
++    protected void createUserData(Map attributeMap) {
++	String id = (String) attributeMap.get("id");
++	attrName.put(id, attributeMap.get("attr.name"));
++	attrType.put(id, attributeMap.get("attr.type"));
++    }
++
+     public void startElement(
+             String namespaceURI,
+             String lName,
+@@ -174,13 +187,59 @@
+ 
+         if (qName.toLowerCase().equals("graph")) {
+             createGraph(attributeMap);
+-
++	    parent = (UserDataDelegate) mGraph;
+         } else if (qName.toLowerCase().equals("node")) {
+-            createVertex(attributeMap);
+-
++            parent = (UserDataDelegate) createVertex(attributeMap);
+         } else if (qName.toLowerCase().equals("edge")) {
+-            createEdge(attributeMap);
+-
++            parent = (UserDataDelegate) createEdge(attributeMap);
++        } else if (qName.toLowerCase().equals("data")) {
++            dataKey = (String) attributeMap.get("key");
++        } else if (qName.toLowerCase().equals("key")) {
++            createUserData(attributeMap);
++        } else if (qName.toLowerCase().equals("default")) {
++            //createUserData(attributeMap);
++        }
++	dataBuffer.delete(0, dataBuffer.length());
++    }
++
++    public void characters(char ch[], int start, int length) {
++	dataBuffer.append(ch, start, length);
++    }
++
++    public void endElement(String namespaceUri, String lName, String qName)
++	throws SAXException {
++
++	if (qName.toLowerCase().equals("data")) {
++	    System.out.println(parent + "-" + dataKey + ":" + dataBuffer);
++	    String dataValue = dataBuffer.toString();
++	    if (attrType.get(dataKey).equals("boolean")) {
++		parent.setUserDatum((Object) attrName.get(dataKey),
++				    (Object) new Boolean(dataValue),
++				    UserData.SHARED);
++	    } else if (attrType.get(dataKey).equals("int")) {
++		parent.setUserDatum((Object) attrName.get(dataKey),
++				    (Object) new Integer(dataValue),
++				    UserData.SHARED);
++	    } else if (attrType.get(dataKey).equals("long")) {
++		parent.setUserDatum((Object) attrName.get(dataKey),
++				    (Object) new Long(dataValue),
++				    UserData.SHARED);
++	    } else if (attrType.get(dataKey).equals("float")) {
++		parent.setUserDatum((Object) attrName.get(dataKey),
++				    (Object) new Float(dataValue),
++				    UserData.SHARED);
++	    } else if (attrType.get(dataKey).equals("double")) {
++		parent.setUserDatum((Object) attrName.get(dataKey),
++				    (Object) new Double(dataValue),
++				    UserData.SHARED);
++	    } else if (attrType.get(dataKey).equals("string")) {
++		parent.setUserDatum((Object) attrName.get(dataKey),
++				    (Object) dataValue,
++				    UserData.SHARED);
++	    } else {
++		throw new FatalException("Unknown attr.type: "
++					 + attrType.get(dataKey));
++	    }
+         }
+     }
+ 

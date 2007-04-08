@@ -1,0 +1,201 @@
+diff -ruN CQL-Parser-1.0/lib/CQL/BooleanNode.pm CQL-Parser-1.0.mod/lib/CQL/BooleanNode.pm
+--- CQL-Parser-1.0/lib/CQL/BooleanNode.pm	2006-02-14 13:38:23.000000000 +0900
++++ CQL-Parser-1.0.mod/lib/CQL/BooleanNode.pm	2007-04-08 22:58:31.000000000 +0900
+@@ -119,7 +119,8 @@
+ 
+     return  join( ' ', $leftStr, uc $self->op(), $rightStr ) if $self->op() !~ /prox/;
+ 
+-    my $distance = ( split /\//, $self->op() )[ 2 ] || 1;
++    my $distance = 1;
++    $distance = $1 if $self->op() =~ /\/distance[=><]{1,2}(\d+)/;
+     return "\"$leftStr $rightStr\"~$distance";
+ }
+ 
+diff -ruN CQL-Parser-1.0/lib/CQL/Parser.pm CQL-Parser-1.0.mod/lib/CQL/Parser.pm
+--- CQL-Parser-1.0/lib/CQL/Parser.pm	2006-11-28 02:58:50.000000000 +0900
++++ CQL-Parser-1.0.mod/lib/CQL/Parser.pm	2007-04-08 22:08:16.000000000 +0900
+@@ -222,6 +222,7 @@
+ 
+ sub gatherProxParameters {
+     my $node = shift;
++    if (0) {	# CQL 1.0 (obsolete)
+     for (my $i=0; $i<4; $i++ ) {
+         if ( $token->getType() != CQL_MODIFIER ) { 
+             ## end of proximity parameters 
+@@ -235,6 +236,28 @@
+             elsif ( $i==3 ) { gatherProxOrdering($node); }
+         }
+     }
++    } else {
++        while ( $token->getType() == CQL_MODIFIER ) {
++	    match( $token );
++	    if ( $token->getType() == CQL_DISTANCE ) {
++		match( $token );
++		gatherProxRelation( $node );
++		gatherProxDistance( $node );
++	    } elsif ( $token->getType() == CQL_UNIT ) {
++		match( $token );
++		if ( $token->getType() != CQL_EQ ) {
++		    croak( "expected proximity unit parameter got ".$token->getString() );
++		}
++		match( $token );
++		gatherProxUnit( $node );
++	    } elsif ( $token->getType() == CQL_ORDERED
++		      || $token->getType() == CQL_UNORDERED ) {
++		gatherProxOrdering( $node );
++	    } else {
++		croak( "expected proximity parameter got ". $token->getString()  ."(". $token->getType() .")" );
++	    }
++        }
++    }
+ }
+ 
+ sub gatherProxRelation {
+diff -ruN CQL-Parser-1.0/lib/CQL/ProxNode.pm CQL-Parser-1.0.mod/lib/CQL/ProxNode.pm
+--- CQL-Parser-1.0/lib/CQL/ProxNode.pm	2006-02-14 13:38:23.000000000 +0900
++++ CQL-Parser-1.0.mod/lib/CQL/ProxNode.pm	2007-04-08 22:40:50.000000000 +0900
+@@ -3,7 +3,7 @@
+ use strict;
+ use warnings;
+ use base qw( CQL::BooleanNode );
+-use CQL::ModifierSet;
++use CQL::ProxModifierSet;
+ 
+ =head1 NAME
+ 
+@@ -37,7 +37,7 @@
+ sub new {
+     my ($class,$left) = @_;
+     my $self = $class->SUPER::new( left => $left, right => undef );
+-    $self->{modifierSet} = CQL::ModifierSet->new( 'prox' );
++    $self->{modifierSet} = CQL::ProxModifierSet->new( 'prox' );
+     return $self;
+ }
+ 
+diff -ruN CQL-Parser-1.0/lib/CQL/Token.pm CQL-Parser-1.0.mod/lib/CQL/Token.pm
+--- CQL-Parser-1.0/lib/CQL/Token.pm	2006-02-14 13:38:23.000000000 +0900
++++ CQL-Parser-1.0.mod/lib/CQL/Token.pm	2007-04-08 22:06:36.000000000 +0900
+@@ -69,6 +69,8 @@
+ use constant CQL_MASKED    => 137;    ## The "masked" relation modifier
+ use constant CQL_UNMASKED  => 138;    ## The "unmasked" relation modifier
+ use constant CQL_NWSE      => 139;    ## The "nwse" relation modifier
++use constant CQL_DISTANCE  => 140;    ## The "distance" proximity modifier
++use constant CQL_UNIT      => 141;    ## The "unit" proximity modifier
+ 
+ ## lookup table for easily determining token type
+ our %lookupTable = (
+@@ -109,6 +111,8 @@
+     'masked'     => CQL_MASKED,
+     'unmasked'   => CQL_UNMASKED,
+     'nwse'       => CQL_NWSE,
++    'distance'   => CQL_DISTANCE,
++    'unit'       => CQL_UNIT,
+ );
+ 
+ ## constants available for folks to use when looking at 
+@@ -122,6 +126,7 @@
+     CQL_WORD CQL_PHRASE CQL_EOF CQL_MODIFIER CQL_STRING CQL_ISODATE
+     CQL_NUMBER CQL_URI CQL_MASKED CQL_UNMASKED CQL_WITHIN CQL_PARTIAL
+     CQL_ENCLOSES CQL_NWSE
++    CQL_DISTANCE CQL_UNIT
+ );
+ 
+ =head2 new()
+diff -ruN CQL-Parser-1.0/t/boolean.t CQL-Parser-1.0.mod/t/boolean.t
+--- CQL-Parser-1.0/t/boolean.t	2006-02-14 13:38:22.000000000 +0900
++++ CQL-Parser-1.0.mod/t/boolean.t	2007-04-08 22:50:07.000000000 +0900
+@@ -38,8 +38,8 @@
+ ## PROX
+ my $prox = CQL::ProxNode->new( $term1 );
+ $prox->addSecondTerm( $term2 );
+-$prox->addModifier( undef, '>' );
+-$prox->addModifier( undef, '2' );
++$prox->addModifier( "relation", '>' );
++$prox->addModifier( "distance", '2' );
+ 
+ isa_ok( $prox, 'CQL::ProxNode' );
+-is( $prox->toCQL(), '(foo) prox/>/2 (bar)', 'prox toCQL()' );
++is( $prox->toCQL(), '(foo) prox/distance>2 (bar)', 'prox toCQL()' );
+diff -ruN CQL-Parser-1.0/t/lucene.t CQL-Parser-1.0.mod/t/lucene.t
+--- CQL-Parser-1.0/t/lucene.t	2006-02-14 13:38:22.000000000 +0900
++++ CQL-Parser-1.0.mod/t/lucene.t	2007-04-08 21:46:27.000000000 +0900
+@@ -38,7 +38,8 @@
+ $node = $parser->parse(qq(complete prox dinosaur));
+ is( $node->toLucene(), qq("complete dinosaur"~1), "proximity search");
+ 
+-$node = $parser->parse(qq(ribs prox/>/5/paragraph chevrons));
++#$node = $parser->parse(qq(ribs prox/>/5/paragraph chevrons));
++$node = $parser->parse(qq(ribs prox/distance>=5/unit=paragraph chevrons));
+ is( $node->toLucene(), qq("ribs chevrons"~5), "proximity search, ignore unsupported parameters");
+ 
+ $node = $parser->parse( "title exact fish" );
+diff -ruN CQL-Parser-1.0/t/parser.t CQL-Parser-1.0.mod/t/parser.t
+--- CQL-Parser-1.0/t/parser.t	2006-11-28 02:53:01.000000000 +0900
++++ CQL-Parser-1.0.mod/t/parser.t	2007-04-08 22:46:03.000000000 +0900
+@@ -51,51 +51,52 @@
+ isa_ok( $root, 'CQL::ProxNode' );
+ 
+ ## complete prox/<= dinosaur
+-$root = $parser->parse( 'complete prox/<= dinosaur' );
+-is( $root->toCQL(), '(complete) prox/<= (dinosaur)',
++#$root = $parser->parse( 'complete prox/<= dinosaur' );
++$root = $parser->parse( 'complete prox/distance<=1 dinosaur' );
++is( $root->toCQL(), '(complete) prox/distance<=1 (dinosaur)',
+     'complete prox/<= dinosaur' );
+ isa_ok( $root, 'CQL::ProxNode' );
+ 
+ ## complete prox/bogus dinosaur
+ throws_ok
+     { $parser->parse( 'complete prox/bogus dinosaur') }
+-    qr/expected proximity relation got bogus/,
+-    'bad proximity relation';
++    qr/expected proximity parameter got bogus/,
++    'bad proximity parameter';
+ 
+ ## complete prox/<=/1 dinosaur
+-$root = $parser->parse( 'complete prox/<=/1 dinosaur');
+-is( $root->toCQL(), '(complete) prox/<=/1 (dinosaur)',
++$root = $parser->parse( 'complete prox/distance<=1 dinosaur');
++is( $root->toCQL(), '(complete) prox/distance<=1 (dinosaur)',
+     'complete prox/<=/1 dinosaur' );
+ isa_ok( $root, 'CQL::ProxNode' );
+ 
+ ## complete prox/<=/bogus dinosaur
+ throws_ok
+-    { $parser->parse( 'complete prox/<=/bogus dinosaur') }
++    { $parser->parse( 'complete prox/distance<=bogus dinosaur') }
+     qr/expected proximity distance got bogus/,
+     'bad proximity distance';
+ 
+ ## complete prox/<=/1/word dinosaur
+-$root = $parser->parse( 'complete prox/<=/1/word dinosaur' );
+-is( $root->toCQL(), '(complete) prox/<=/1/word (dinosaur)',
++$root = $parser->parse( 'complete prox/distance<=1/unit=word dinosaur' );
++is( $root->toCQL(), '(complete) prox/distance<=1/unit=word (dinosaur)',
+     'complete prox/<=/1 dinosaur/word' );
+ isa_ok( $root, 'CQL::ProxNode' );
+ 
+ ## complete prox/<=/1/bogus dinosaur
+ throws_ok
+-    { $parser->parse( 'complete prox/<=/bogus dinosaur') }
++    { $parser->parse( 'complete prox/distance<=bogus dinosaur') }
+     qr/expected proximity distance got bogus/,
+     'bad proximity distance';
+ 
+ ## complete prox/<=/1/word/ordered dinosaur
+-$root = $parser->parse( 'complete prox/<=/1/word/ordered dinosaur' );
+-is( $root->toCQL(), '(complete) prox/<=/1/word/ordered (dinosaur)',
++$root = $parser->parse( 'complete prox/distance<=1/unit=word/ordered dinosaur' );
++is( $root->toCQL(), '(complete) prox/distance<=1/unit=word/ordered (dinosaur)',
+     'complete prox/<=/1 dinosaur/word/ordered' );
+ isa_ok( $root, 'CQL::ProxNode' );
+ 
+ ## complete prox/<=/1/word/bogus dinosaur
+ throws_ok
+-    { $parser->parse( 'complete prox/<=/1/word/bogus dinosaur' ) }
+-    qr/expected proximity ordering got bogus/,
++    { $parser->parse( 'complete prox/distance<=1/unit=word/bogus dinosaur' ) }
++    qr/expected proximity parameter got bogus/,
+     'expected proximity ordering got bogus';
+ 
+ ## some versions didn't handle <> 
