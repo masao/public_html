@@ -51,6 +51,54 @@ diff -ruN CQL-Parser-1.0/lib/CQL/Parser.pm CQL-Parser-1.0.mod/lib/CQL/Parser.pm
  }
  
  sub gatherProxRelation {
+diff -ruN CQL-Parser-1.0/lib/CQL/ProxModifierSet.pm CQL-Parser-1.0.mod/lib/CQL/ProxModifierSet.pm
+--- CQL-Parser-1.0/lib/CQL/ProxModifierSet.pm	1970-01-01 09:00:00.000000000 +0900
++++ CQL-Parser-1.0.mod/lib/CQL/ProxModifierSet.pm	2007-04-08 22:51:38.000000000 +0900
+@@ -0,0 +1,44 @@
++package CQL::ProxModifierSet;
++
++use strict;
++use warnings;
++use base qw( CQL::ModifierSet );
++use CQL::Utils qw( indent xq );
++use Carp qw( croak );
++use CQL::ModifierSet;
++
++=head1 NAME
++
++CQL::ProxModifierSet - represents a base string and modifier strings 
++
++=head1 SYNOPSIS
++
++=head1 DESCRIPTION
++
++This class is used as a delegate by CQLProxNode based on ModifierSet
++data structure.
++
++=head1 METHODS
++
++=head2 toCQL()
++
++=cut
++
++sub toCQL {
++    my $self = shift;
++    my $cql = $self->{base};
++
++    my $distance = $self->modifier("distance");
++    my $relation = $self->modifier("relation");
++    my $unit = $self->modifier("unit");
++    my $ordering = $self->modifier("ordering");
++
++    $cql .= "/distance$relation$distance"
++	if defined $distance and defined $relation;
++    $cql .= "/unit=$unit" if defined $unit;
++    $cql .= "/$ordering" if defined $ordering;
++
++    return $cql;
++}
++
++1;
 diff -ruN CQL-Parser-1.0/lib/CQL/ProxNode.pm CQL-Parser-1.0.mod/lib/CQL/ProxNode.pm
 --- CQL-Parser-1.0/lib/CQL/ProxNode.pm	2006-02-14 13:38:23.000000000 +0900
 +++ CQL-Parser-1.0.mod/lib/CQL/ProxNode.pm	2007-04-08 22:40:50.000000000 +0900
