@@ -210,12 +210,13 @@ class ToHTML
          file = @file.gsub( /\.\w+\.([a-z][a-z])$/, ".html.en" )
          file = @file.gsub( /\.\w+$/, ".html.en" ) if not File.file?( file )
       end
-      file = nil if not File.file?( file )
+      file = nil if file == @file or not File.file?( file )
       file
    end
    def lang_switch
       result = []
       @conf["interlang"].keys.each do |lang|
+         #STDERR.puts lang_file( lang )
          result << lang if lang_file( lang )
       end
       result
