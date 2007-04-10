@@ -25,6 +25,9 @@
     border-color: #669966;
     border-width: 0 0 thin thick;
   }
+  dl {
+    margin-left: 1.5em;
+  }
   p, dd {
     text-indent: 1em;
   }
