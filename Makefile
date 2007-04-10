@@ -24,18 +24,22 @@ HTML	= 	index.html.ja index.html.en \
 		lecture/index.html \
 		lecture/2007/kiso/index.html \
 
+TOHTML =	./tohtml.rb
+TOHTML_JA=$(TOHTML) ./tohtml.conf.ja ./template.html.ja
+TOHTML_EN=$(TOHTML) ./tohtml.conf.en ./template.html.en
+
 all: $(HTML) chalow
 
-%.html: %.hikidoc template.html.ja
+%.html: %.hikidoc $(TOHTML_JA)
 	./tohtml.rb $< > $@
 
-%.shtml: %.hikidoc template.html.ja
+%.shtml: %.hikidoc $(TOHTML_JA)
 	./tohtml.rb $< > $@
 
-%.html.ja: %.hikidoc.ja template.html.ja
+%.html.ja: %.hikidoc.ja $(TOHTML_JA)
 	./tohtml.rb $< > $@
 
-%.html.en: %.hikidoc.en template.html.en
+%.html.en: %.hikidoc.en $(TOHTML_EN)
 	./tohtml.rb $< > $@
 
 # chalow
