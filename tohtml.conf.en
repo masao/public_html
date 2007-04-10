@@ -4,6 +4,7 @@ date.format: "%Y-%m-%d"
 subject.label:
    etc : misc.
    software : software
+   lecture : lecture
 
 interwiki:
    amazon: "http://www.amazon.co.jp/exec/obidos/ASIN/%s/masaotakakush-22/ref=nosim"
