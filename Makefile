@@ -22,6 +22,8 @@ HTML	= 	index.html.ja index.html.en \
 		software/graphviz-ja/index.html \
 		private/memo.html \
 		lecture/index.html \
+		lecture/2005/excel/index.html \
+		lecture/2005/html/index.html \
 		lecture/2007/kiso/index.html \
 
 TOHTML =	./tohtml.rb
