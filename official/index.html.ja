@@ -9,14 +9,14 @@
 <body>
 <div class="lang-switch"><a href="index.html.en">[In English]</a></div>
 <!-- hhmts start -->
-<div class="last-update">最終更新日: 2006年11月26日</div>
+<div class="last-update">最終更新日: 2007年04月24日</div>
 <!-- hhmts end -->
 <h1>高久雅生のページ</h1>
 <dl>
   <dt>氏名:
   <dd>高久雅生 (Masao Takaku)
   <dt>所属:
-  <dd>融合プロジェクト研究員
+  <dd>融合プロジェクト特任研究員
   <dd><a href="http://www.rois.ac.jp/">情報・システム研究機構</a>
       <a href="http://www.rois.ac.jp/tric/">新領域融合研究センター</a>
   <dt>Email:
@@ -37,13 +37,15 @@
 
 <h2>関連リンク</h2>
 <ul>
-  <li><a href="http://research.nii.ac.jp/ntcir/">NTCIR: 情報検索システム評価用テストコレクション構築プロジェクト</a>
-  <li><a href="http://www.nii.ac.jp/">国立情報学研究所（NII）</a>
   <li><a href="http://www.rois.ac.jp/">情報・システム研究機構</a>
       <ul>
 	<li><a href="http://www.rois.ac.jp/tric/">新領域融合研究センター</a>
-	<li><a href="http://www.nii.ac.jp/info_tric/">分野横断型融合研究のための情報空間・情報基盤の構築</a>
+	    <ul>
+	      <li><a href="http://www.nii.ac.jp/info_tric/">分野横断型融合研究のための情報空間・情報基盤の構築</a>
+	    </ul>
       </ul>
+  <li><a href="http://www.nii.ac.jp/">国立情報学研究所（NII）</a>
+  <li><a href="http://research.nii.ac.jp/ntcir/">NTCIR: 情報検索システム評価用テストコレクション構築プロジェクト</a>
 </ul>
 
 <hr>
