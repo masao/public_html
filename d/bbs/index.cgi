@@ -131,7 +131,7 @@ if ($mode eq "write") {
 	# Spam対策;
 	my @spam;
 	# 特定のURLリンク記法やHTMLリンク記法は禁止
-	@spam = ($body =~ /(\[url=http:\/\/|<a\s+href\s*=\s*["']\s*http:\/\/)/gmoi);
+	@spam = ($body =~ /(\[url=http:\/\/|<a\s+href\s*=\s*["']?\s*http:\/\/)/gmoi);
 	exit if scalar(@spam) > 0;
 	# URLを3つ以上書くのは禁止
 	@spam = ($body =~ /http:\/\//gmo);
