@@ -6,7 +6,8 @@
     <author>江草由佳</author>
     <author>高久雅生</author>
     <title>SRU/SRWを用いた教育図書館資料の書誌検索システムの構築</title>
-    <conference>情報知識学会・第15回年次大会（研究報告会）</conference>
+    <conference>第15回年次大会（研究報告会）</conference>
+    <org>情報知識学会</org>
     <city>東京, 国文学研究資料館</city>
     <year>2007</year>
     <month>5</month>
@@ -31,7 +32,7 @@
     <author>Hitoshi Terai</author>
     <title>An Application of the NTCIR-WEB Raw-data Archive Dataset for User Experiments</title>
     <journal>Proceedings of the Sixth NTCIR Workshop Meeting</journal>
-    <conference>EVIA 2007: The First International Workshop on Evaluating Information Access (NTCIR-6 Pre-Meeting Workshop)</conference>
+    <conference>The First International Workshop on Evaluating Information Access (EVIA 2007)</conference>
     <year>2007</year>
     <month>5</month>
     <city>Tokyo</city>

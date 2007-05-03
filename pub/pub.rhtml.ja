@@ -72,8 +72,8 @@
 <% if not pub.text("conference").nil? %>
 <span class="conference"><%= pub.text("conference") %>;</span>
 <% end %>
-<% if not pub.text("journal").nil? %>
-<span class="journal"><%= pub.text("journal") %>;</span>
+<% if not pub.text("org").nil? %>
+<span class="org"><%= pub.text("org") %>;</span>
 <% end %>
 <% if not pub.text("publisher").nil? %>
 <span class="publisher"><%= pub.text("publisher") %>;</span>
@@ -81,8 +81,8 @@
 <% if not pub.text("city").nil? %>
 <span class="city"><%= pub.text("city") %>;</span>
 <% end %>
-<% if not pub.text("org").nil? %>
-<span class="org"><%= pub.text("org") %>;</span>
+<% if not pub.text("journal").nil? %>
+<span class="journal"><%= pub.text("journal") %>;</span>
 <% end %>
 <% if not pub.text("volume").nil? %>
 <span class="volume">vol.<%= pub.text("volume") %>;</span>
