@@ -3,6 +3,51 @@
 <publist>
 
   <pub type="misc">
+    <author>江草由佳</author>
+    <author>高久雅生</author>
+    <title>SRU/SRWを用いた教育図書館資料の書誌検索システムの構築</title>
+    <conference>情報知識学会・第15回年次大会（研究報告会）</conference>
+    <city>東京, 国文学研究資料館</city>
+    <year>2007</year>
+    <month>5</month>
+    <journal>情報知識学会誌</journal>
+    <volume>17</volume>
+    <number>2</number>
+    <page>4</page>
+<!--
+    <page>
+      <start>35</start>
+      <end>41</end>
+    </page>
+-->
+    <language>ja</language>
+    <note>（印刷中）</note>
+  </pub>
+
+  <pub type="conference">
+    <author>Masao Takaku</author>
+    <author>Yuka Egusa</author>
+    <author>Hitomi Saito</author>
+    <author>Hitoshi Terai</author>
+    <title>An Application of the NTCIR-WEB Raw-data Archive Dataset for User Experiments</title>
+    <journal>Proceedings of the Sixth NTCIR Workshop Meeting</journal>
+    <conference>EVIA 2007: The First International Workshop on Evaluating Information Access (NTCIR-6 Pre-Meeting Workshop)</conference>
+    <year>2007</year>
+    <month>5</month>
+    <city>Tokyo</city>
+    <publisher>National Institute of Informatics</publisher>
+    <page>4</page>
+<!--
+    <page>
+      <start>625</start>
+      <end>632</end>
+    </page>
+-->
+    <language>en</language>
+    <note>(in press)</note>
+  </pub>
+
+  <pub type="misc">
     <author>高久雅生</author>
     <author>相澤彰子</author>
     <author>大山敬三</author>
