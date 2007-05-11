@@ -1,0 +1,85 @@
+（学籍番号）	高久雅生	（レポート課題1・回答例）
+
+・検索テーマ「慶應大学 日吉」
+
+・適合判定:
+日吉キャンパスにこれから訪れる際に重要なアクセスマップやキャンパス内の地図に容易に辿りつけるかを目安に判定した。
+（○:適合ページ、△:部分適合ページ、×:不適合ページ）
+
+・考察:
+...
+
+・Yahoo! Japan
+△ 1. 慶應義塾大学日吉メディアセンター
+http://www.hc.lib.keio.ac.jp
+
+○ 2. 慶應義塾大学日吉キャンパス
+http://www.hc.keio.ac.jp/index-jp.html
+
+○ 3. 慶應義塾 - アクセス・キャンパスマップ
+http://www.keio.ac.jp/access.html
+
+○ 4. 慶應義塾ホームページ
+http://www.keio.ac.jp/index-jp.html
+
+△ 5. 慶應義塾大学理工学部ホームページ
+http://www.st.keio.ac.jp
+
+× 6. Keio Baseball - 慶應義塾体育会野球部
+http://www.hc.keio.ac.jp/baseball
+
+× 7. 日吉紀要(WEB版)
+http://review.keio-up.co.jp
+
+× 8. 慶應ピアノ・ソサィエティー(KPS)
+http://www016.upp.so-net.ne.jp/kps-homepage
+
+× 9. Dept of Astronomy, Keio Univ
+http://sunrise.hc.keio.ac.jp/~mariko/astro.html
+
+× 10. 交通アクセス [慶應義塾大学 理工学部]
+http://www.st.keio.ac.jp/access
+
+・Google
+○ 1. 慶應義塾大学日吉キャンパス
+http://www.hc.keio.ac.jp/
+
+○ 2. 慶應義塾大学日吉キャンパス
+http://www.hc.keio.ac.jp/index-jp.html
+
+○ 3. 慶應義塾ホームページ
+http://www.keio.ac.jp/index-jp.html
+
+○ 4. 日吉キャンパス
+http://www.keio.ac.jp/access/hiyoshi.html
+
+× 5. 日吉紀要(WEB版)
+http://review.keio-up.co.jp/
+
+× 6. Department of Physics, Hiyoshi Campus, Keio University
+http://sasuke.econ.hc.keio.ac.jp/
+
+○ 7. 慶應義塾大学 - Wikipedia
+http://ja.wikipedia.org/wiki/%E6%85%B6%E6%87%89%E7%BE%A9%E5%A1%BE%E5%A4%A7%E5%AD%A6
+
+△ 8. 慶應義塾大学日吉メディアセンター
+http://www.hc.lib.keio.ac.jp/
+
+△ 9. 慶應義塾大学日吉メディアセンター
+http://www.hc.lib.keio.ac.jp/i/
+
+× 10. KITIE - Keio Interactive Tutorial on Information Education
+http://www.lib.keio.ac.jp/kitie/
+
+・Yahoo! Japan - Google 共通出現ページ
+
+G2-Y2	http://www.hc.keio.ac.jp/index-jp.html
+Y4-G3	http://www.keio.ac.jp/index-jp.html
+
+・検索実行（参照）日付
+
+2007年5月11日
+
+・感想
+
+...
