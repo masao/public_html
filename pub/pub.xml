@@ -31,21 +31,17 @@
     <author>Hitomi Saito</author>
     <author>Hitoshi Terai</author>
     <title>An Application of the NTCIR-WEB Raw-data Archive Dataset for User Experiments</title>
-    <journal>Proceedings of the Sixth NTCIR Workshop Meeting</journal>
-    <conference>The First International Workshop on Evaluating Information Access (EVIA 2007)</conference>
+    <journal>Proceedings of the First International Workshop on Evaluating Information Access (EVIA 2007) (NTCIR-6 Pre-Meeting Workshop)</journal>
+<!--    <conference>The First International Workshop on Evaluating Information Access (EVIA 2007)</conference> -->
     <year>2007</year>
     <month>5</month>
     <city>Tokyo</city>
     <publisher>National Institute of Informatics</publisher>
-    <page>4</page>
-<!--
     <page>
-      <start>625</start>
-      <end>632</end>
+      <start>78</start>
+      <end>81</end>
     </page>
--->
     <language>en</language>
-    <note>(in press)</note>
   </pub>
 
   <pub type="misc">
