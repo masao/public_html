@@ -1,10 +1,13 @@
 title: 2007年度 「基礎情報処理」（F）慶應義塾大学
 subject: lecture
 date.available: 2007-04-10
-date.modified: 2007-05-18
+date.modified: 2007-06-01
 css.content: .google-ads { display:none; }
 
 2007年度春学期に開講する「基礎情報処理」科目（対象: 文学部1年次）についての情報を提供します。
+
+!!お知らせ
+:2007-05-27:はしかによる全学一週間休講（[[参考|http://www.keio.ac.jp/news/070526.html]]）を受け、課題2の提出締切を一週間延長し、'''6月7日（木）'''と変更します。なお、次回 6月2日（土）1時限目の通常授業は、現時点では通常通り行う予定です。
 
 !! 授業内容
 
@@ -31,12 +34,12 @@ css.content: .google-ads { display:none; }
 #5月12日: Web、インターネットの利用法 - [[資料|4.pdf]], [[レポート課題1-1例|report1-1-masao.txt]]
 #5月19日: MS Wordの利用法 - [[資料|5.pdf]], [[練習用テキスト|5-ex1.txt]]+[[整形例(指示付き)|5-ex1.pdf]], [[レポート課題2-1（A）テキスト|report2-1-A.txt]]+[[整形例|http://www.ipsj.or.jp/katsudou/sig/sighp/fi/cfp/20070531/cfp.html]], [[レポート課題2-1（B）メニューテキスト|report2-1-B.txt]]+[[その他素材|report2-1-B/]]+[[整形例|report2-1-B.pdf]]([[公式サイト|http://r.gnavi.co.jp/g967600/]])
 #5月26日:（休講）
-#6月2日: MS Excelの利用法
-#6月9日: MS Powerpointの利用法
-#6月16日: 画像の作成、処理
-#6月23日: Webページの作成
-#6月30日: Webページの公開、ファイル転送
-#7月7日: （未定）
+#6月2日: MS Excelの利用法 - [[資料|6.pdf]]
+#6月9日: MS Excelの利用法(2)
+#6月16日: MS Powerpointの利用法
+#6月23日: 画像の作成、処理
+#6月30日: Webページの作成
+#7月7日: Webページの公開、ファイル転送
 
 !! 参考サイト
 *[[日吉ITCマニュアル - 利用の手引き|http://www.hc.keio.ac.jp/itc/manual/]]
