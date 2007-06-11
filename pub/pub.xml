@@ -2,6 +2,26 @@
 <!-- $Id$ -->
 <publist>
 
+  <pub type="conference">
+    <author>Masao Takaku</author>
+    <author>Hitomi Saito</author>
+    <author>Yuka Egusa</author>
+    <author>Hitoshi Terai</author>
+    <title>Comparing System Evaluation with User Experiments for Japanese Web Navigational Retrieval</title>
+    <journal>Proceedings of the First Workshop on Web Information-Seeking and Interaction (WISI 2007) (SIGIR 2007 Workshop)</journal>
+    <year>2007</year>
+    <month>7</month>
+    <city>Amsterdam</city>
+<!--
+    <page>
+      <start>78</start>
+      <end>81</end>
+    </page>
+-->
+    <language>en</language>
+    <note>(to appear)</note>
+  </pub>
+
   <pub type="misc">
     <author>江草由佳</author>
     <author>高久雅生</author>
