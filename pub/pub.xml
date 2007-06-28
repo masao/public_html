@@ -2,6 +2,26 @@
 <!-- $Id$ -->
 <publist>
 
+  <pub type="misc">
+    <author>齋藤ひとみ</author>
+    <author>寺井仁</author>
+    <author>高久雅生</author>
+    <author>江草由佳</author>
+    <title>検索システムの性能評価と利用者実験との比較</title>
+    <journal>日本認知科学会第24回大会</journal>
+    <year>2007</year>
+    <month>9</month>
+    <city>東京</city>
+<!--
+    <page>
+      <start>78</start>
+      <end>81</end>
+    </page>
+-->
+    <language>ja</language>
+    <note>(印刷中)</note>
+  </pub>
+
   <pub type="conference">
     <author>Masao Takaku</author>
     <author>Yuka Egusa</author>
@@ -39,6 +59,7 @@
       <end>74</end>
     </page>
     <language>ja</language>
+    <doi>10.2964/jsik.17.69</doi>
   </pub>
 
   <pub type="conference">
