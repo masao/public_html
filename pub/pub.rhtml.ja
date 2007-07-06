@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="../default.css" type="text/css">
 <link rel="stylesheet" href="pub.css" type="text/css">
 <link rev="made" href="mailto:masao@nii.ac.jp">
-<title>発表論文、講演資料など</title>
+<title>発表論文、講演資料など - 高久雅生</title>
 </head>
 <body>
 <div class="last-update">最終更新日: <%= LASTUPDATE.strftime("%Y年%m月%d日") %></div>
