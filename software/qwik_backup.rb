@@ -137,7 +137,7 @@ if $0 == __FILE__
    qwik.get_titlelist.each do |page|
       page.sub!(/\..*$/, "")
       files = qwik.get_attach_list( page )
-      p files
+      #p files
       files.each do |file|
          response = qwik.get( file, "" )
          dir = File.dirname( file )
