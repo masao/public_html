@@ -84,16 +84,14 @@ class QwikBackup
          end
          @token.update( session ) if @token
       end
-      #if @token
-      #   STDERR.puts @token.inspect
-      #else
-      #   STDERR.puts session.inspect
-      #end
       session
    end
 
    def get( page, mode )
-      @conn.start unless @conn.active?
+      unless @conn.active?
+         STDERR.puts "reactivate conn"
+         @conn.start
+      end
       @conn.get( @baseurl.path + page + mode, @cookie )
    end
    def get_html( page )
@@ -129,16 +127,27 @@ class QwikBackup
       end
       files
    end
-
-   def get_attach( file )
-      response = get( file, "" )
-   end
 end
 
 if $0 == __FILE__
    QWIKPASS = File.join( ENV["HOME"], ".qwikpass" )
    username, password = open( QWIKPASS ){|io| io.read }.chomp.split(/:/)
    qwik = QwikBackup.new( "http://qwik.jp/irce/", username, password )
-   puts qwik.get_txt( "1" )
-   puts qwik.get_titlelist
+   #puts qwik.get_txt( "1" )
+   qwik.get_titlelist.each do |page|
+      page.sub!(/\..*$/, "")
+      files = qwik.get_attach_list( page )
+      p files
+      files.each do |file|
+         response = qwik.get( file, "" )
+         dir = File.dirname( file )
+         begin
+            Dir.mkdir( dir )
+         rescue Errno::EEXIST
+         end
+         open( file, "w" ) do |io|
+            io.print response.body
+         end
+      end
+   end
 end
