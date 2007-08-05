@@ -21,7 +21,7 @@ class QwikBackup
       #p baseurl
       return_url = nil
       cookie = nil
-      response = get( "", ".typekey" )
+      response = get( ".typekey" )
       redir_url = URI.parse( response[ 'Location' ] )
       #p response
       #p redir_url
@@ -87,18 +87,18 @@ class QwikBackup
       session
    end
 
-   def get( page, mode )
+   def get( page )
       unless @conn.active?
          STDERR.puts "reactivate conn"
          @conn.start
       end
-      @conn.get( @baseurl.path + page + mode, @cookie )
+      @conn.get( @baseurl.path + page, @cookie )
    end
    def get_html( page )
-      get( page, ".html" )
+      get( page + ".html" )
    end
    def get_edit( page )
-      get( page, ".edit" )
+      get( page + ".edit" )
    end
 
    def get_titlelist
@@ -119,6 +119,10 @@ class QwikBackup
       end
    end
 
+   def archive_filename
+      @baseurl.path[1...-1] + ".zip"
+   end
+
    def get_attach_list( page )
       files = []
       response = get_edit( page )
@@ -134,12 +138,19 @@ if $0 == __FILE__
    username, password = open( QWIKPASS ){|io| io.read }.chomp.split(/:/)
    qwik = QwikBackup.new( "http://qwik.jp/irce/", username, password )
    #puts qwik.get_txt( "1" )
+
+   file = qwik.archive_filename
+   res = qwik.get( file )
+   open( file, "w" ) do |io|
+      io.print res.body
+   end
+
    qwik.get_titlelist.each do |page|
       page.sub!(/\..*$/, "")
       files = qwik.get_attach_list( page )
       #p files
       files.each do |file|
-         response = qwik.get( file, "" )
+         response = qwik.get( file )
          dir = File.dirname( file )
          begin
             Dir.mkdir( dir )
