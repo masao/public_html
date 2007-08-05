@@ -35,7 +35,7 @@ class QwikBackup
       http_tk.start do |conn|
          conn.get( redir_url.request_uri )
          data = redir_url.query + "&__mode=save_login&username=#{ username }&password=#{ password }"
-         #__mode=save_login&_return=http%3A%2F%2Fqwik.jp%2Firce%2F.typekey&t=0NTLU925g4FfXP94wt43&v=1.1&username=#{ username }&password=#{ password }&layout=&need_email=1&keep_me=1
+         #__mode=save_login&_return=http%3A%2F%2Fqwik.jp%2F#{ site }%2F.typekey&t=0NTLU925g4FfXP94wt43&v=1.1&username=#{ username }&password=#{ password }&layout=&need_email=1&keep_me=1
          #p data
          login_response = conn.post( "/t/typekey", data )
          login_session = parse_cookie( login_response )
@@ -44,7 +44,7 @@ class QwikBackup
          #p login_session
          header = { "Cookie" => login_session.keys.map{|c| "#{c}=#{login_session[c]}" }.join("; ") }
          data = redir_url.query + "&__mode=save_login&pass_email=1"
-         #__mode=save_login&v=1.1&t=0NTLU925g4FfXP94wt43&_return=http%3A%2F%2Fqwik.jp%2Firce%2F.typekey&pass_email=1&need_email=1
+         #__mode=save_login&v=1.1&t=0NTLU925g4FfXP94wt43&_return=http%3A%2F%2Fqwik.jp%2F#{ site }%2F.typekey&pass_email=1&need_email=1
          login_response2 = conn.post( "/t/typekey", data, header )
          #p login_response2.body
          #p login_response2.canonical_each{|k, v| }
