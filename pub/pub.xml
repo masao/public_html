@@ -32,14 +32,13 @@
     <year>2007</year>
     <month>7</month>
     <city>Amsterdam</city>
-<!--
     <page>
-      <start>78</start>
-      <end>81</end>
+      <start>49</start>
+      <end>52</end>
     </page>
--->
     <language>en</language>
-    <note>(to appear)</note>
+    <url>http://research.microsoft.com/~ryenw/wisi/</url>
+    <file>./2007/wisi2007.pdf</file>
   </pub>
 
   <pub type="misc">
