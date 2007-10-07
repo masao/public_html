@@ -1133,9 +1133,10 @@ sub html2xmlstr {
     local ($_) = @_;
     s/&nbsp;/ /g;
     s|<img.+?alt="(.*?)".*?>|[$1]|gosm;
-    s/[\t\n]//g;
+    s/([\x20-\x7f])\n([\x20-\x7f])/$1 $2/g;
+    s/\n//go;
     s/[\x00-\x1f]+/ /g;
-    s/\s\s+/ /g;
+    s/\s\s+/ /go;
     s|<[^<>]+?>||gosm;
     s/&lt;/</go;
     s/&/&amp;/go; s/>/&gt;/go; s/</&lt;/go; s/\"/&quot;/go; # "いつもの４つ
@@ -1224,8 +1225,9 @@ sub write_category_rss {
 
         my @ents = sort {$b->{eh} cmp $a->{eh}} @{$category_item{$catname}};
 	my $max = ( $n > scalar(@ents) ) ? scalar(@ents) : $n;
-	foreach my $ent ( @ents[0...$max] ) {
+	foreach my $ent ( splice(@ents, 0, $max) ) {
 	    my $ymd = $ent->{ymd};
+	    #if not defined $ymd or $ymd eq "";
 	    my $ymdi = $ent->{ymdi};
 	    my ($i) = ($ymdi =~ /(\d+)$/);
 	    my $permlink = $clog_url_pref.datestr2url($ymdi);
