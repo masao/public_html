@@ -308,6 +308,8 @@ my $cat_page_entry_max = 10;
 # ($output_cat_pages = 0 のときのみ有効)
 my $cat_page_cgi = "clsearch.cgi?cat=%%CAT%%";
 #my $cat_page_cgi = "";
+# カテゴリページ毎にRSSファイルを作るか (0:NO, 1:YES)
+my $output_cat_rss = 1;
 
 # ファイルの最初に出てくる「<!-- ReplaceOnce -->」を置き換える文字列
 my $replace_once = "";
@@ -447,6 +449,8 @@ write_month_page();
 write_day_page() if ($day_page_mode or $page_mode >= 1);
 write_item_page() if ($page_mode == 2);
 write_category_page() if ($output_cat_pages);
+write_category_rss()
+    if $output_rss and $output_cat_pages; # カテゴリ毎のRSSファイルを作る
 
 print "done.\n" if (!defined $quiet_mode);
 
@@ -607,7 +611,11 @@ sub make_item_html {
 	my $ent_h = make_entry_header_html($e->{eh}, $ymd);
 	foreach (@{$e->{$i}{cat}}) {
 	    # カテゴリ別ページは --stop-date と相性が悪いので注意
-	    push @{$category_item{$_}}, {eh=>$ent_h, cont=>$this_item};
+	    push @{$category_item{$_}}, {eh=>$ent_h,
+					 cont=>$this_item,
+					 ymd=>$ymd,
+					 ymdi=>$item_ymdi,
+					};
 	}
     }
     return $this_item;
@@ -666,7 +674,6 @@ sub write_category_page {
     foreach my $catname (@cat_list) {
 
         my @ents = sort {$b->{eh} cmp $a->{eh}} @{$category_item{$catname}};
-
         my $n = $cat_page_entry_max;
         my $num_of_old_pages = int(@ents / $n);
 
@@ -1203,6 +1210,70 @@ sub write_category_list_file {
     $category_list = join("\n", @lines);
     if ($output_cat_pages == 1) {
 	output_to_file("$outputdir/cl-cat.js", \$ostr);
+    }
+}
+
+### カテゴリ毎に作られるRSSファイル
+sub write_category_rss {
+    my $ostr;
+    my @cat_list = keys %category_item;
+    my $n = ($rss_topn > 0) ? $rss_topn : (($opt_topn > 15) ? 15 : $opt_topn);
+
+    foreach my $catname (@cat_list) {
+	my @items;
+
+        my @ents = sort {$b->{eh} cmp $a->{eh}} @{$category_item{$catname}};
+	my $max = ( $n > scalar(@ents) ) ? scalar(@ents) : $n;
+	foreach my $ent ( @ents[0...$max] ) {
+	    my $ymd = $ent->{ymd};
+	    my $ymdi = $ent->{ymdi};
+	    my ($i) = ($ymdi =~ /(\d+)$/);
+	    my $permlink = $clog_url_pref.datestr2url($ymdi);
+	    my $e = $cl->{all}->{$ymd};
+	    my $coen = $e->{$i}{c};
+	    $coen =~ s!<a href="(\d.+?)"!<a href="$clog_url_pref$1"!g;
+	    $coen =~ s!<img src="([^h].+?)"!<img src="$clog_url_pref$1"!g;
+
+	    my $cont = $e->{$i}{c};
+	    $cont = html2xmlstr($cont);
+	    if ($cont =~ s/^(([\x00-\x7F]|[\x80-\xFF]{2}){300}).+$/$1/sm) {
+		$cont =~ s/&[^;]*$//g; # &gt...$ でXMLパーズエラー
+		$cont .= "...";
+	    }
+
+	    my $item_dcdate = # ($dcdate =~ /^$ymd/) ? $dcdate : 
+		$ymd."T23:59:59+09:00";
+
+	    push @items, {
+		permlink => $permlink,
+		itemheader => html2xmlstr($e->{$i}{h}),
+		itemauthor => $e->{$i}{a}, 
+		itemcontent => $cont,
+		itemcontentencoded => $coen,
+		item_dcdate => $item_dcdate
+	    };
+	}
+
+	my $cat_filename = get_category_filename( $catname );
+	my $cat_clog_url = $clog_url_pref.$cat_filename;
+	my $cat_changelog_name =  $catname." / ".$changelog_name;
+	my $cat_rss_filename = $cat_filename;
+	$cat_rss_filename =~ s/\.html$/.rdf/;
+
+	my $t = HTML::Template->new(scalarref => \$rss_template,
+				    die_on_bad_params => 0, gloval_vars => 1);
+	$t->param(items => \@items);
+	$t->param(changelog_name => $cat_changelog_name);
+	$t->param(dcdate => $dcdate);
+	$t->param(changelog_description => $changelog_description);
+	$t->param(clog_url => $cat_clog_url);
+	$t->param(clog_url_pref => $clog_url_pref);
+	$t->param(rss_file => $cat_rss_filename); # 050821
+	$t->param(generatoragent=>"http://nais.to/~yto/tools/chalow/?v=$version");
+	my $ostr = $t->output();
+	to_utf8_cl(\$ostr) if (not $utf8_mode);
+
+	output_to_file("$outputdir/$cat_rss_filename", \$ostr);
     }
 }
 
