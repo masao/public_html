@@ -1,6 +1,6 @@
 @media screen, print {
   body {
-    background-color: #aaffaa;
+    background-color: #afa;
     font-family: sans-serif;
     margin: 1% 2% 0px;
     line-height: 1.2;
@@ -55,7 +55,7 @@
   }
   div.news {
     padding: 5px;
-    border: medium solid #bbb;
+    border: medium dashed #999;
     font-size: smaller;
     float: right;
     width: 45%;
