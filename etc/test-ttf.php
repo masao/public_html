@@ -1,6 +1,12 @@
 <?php // -*- html-helper -*-
 //error_reporting(E_ERROR | E_PARSE);
 switch ($_POST['type']) {
+  case 'ipag':
+    $fontfile = "./ipag.ttf";
+    break;
+  case 'ipam':
+    $fontfile = "./ipam.ttf";
+    break;
   case 'sazanami-gothic':
     $fontfile = "./sazanami-gothic.ttf";
     break;
@@ -76,7 +82,7 @@ if (strlen($text) > 0) {
 <body>
 <div class="last-update">公開日: 2003年06月24日</div>
 <!-- hhmts start -->
-<div class="last-update">最終更新日: 2006年06月09日</div>
+<div class="last-update">最終更新日: 2007年10月11日</div>
 <!-- hhmts end -->
 <h1>TrueTypeフォントの表示テスト</h1>
 <form action="./test-ttf.php" method="POST">
@@ -84,6 +90,8 @@ if (strlen($text) > 0) {
 <textarea name="text" rows="5" cols="80">Hello, World!
 ここに文章を書いてください。</textarea><br>
 フォント: <select name="type">
+  <option value="ipag">IPAゴシック</option>
+  <option value="ipam">IPA明朝</option>
   <option value="sazanami-gothic">さざなみゴチック</option>
   <option value="sazanami-mincho">さざなみ明朝</option>
   <option value="mikachan">みかちゃんフォント</option>
@@ -125,6 +133,7 @@ PHPに同梱されているGDライブラリの機能を使って、
 一応、使っているフォントとそのバージョンを以下に示します。
 </p>
 <ul>
+  <li><a href="http://ossipedia.ipa.go.jp/ipafont/">IPAフォント</a>: IPAfont00201.zip
   <li><a href="http://sourceforge.jp/projects/efont/">さざなみフォント</a>: sazanami-20040629.tar.bz2
   <li><a href="http://mikachan-font.com">みかちゃんフォント</a>: ver9.1.lzh
   <li><a href="ftp://ftp.netscape.com/pub/communicator/extras/fonts/windows/">Cyberbit</a>: Cyberbit Version 2.0
