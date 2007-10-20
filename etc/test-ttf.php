@@ -4,8 +4,14 @@ switch ($_POST['type']) {
   case 'ipag':
     $fontfile = "./ipag.ttf";
     break;
+  case 'ipagui':
+    $fontfile = "./ipagui.ttf";
+    break;
   case 'ipam':
     $fontfile = "./ipam.ttf";
+    break;
+  case 'ipamp':
+    $fontfile = "./ipamp.ttf";
     break;
   case 'sazanami-gothic':
     $fontfile = "./sazanami-gothic.ttf";
@@ -91,7 +97,9 @@ if (strlen($text) > 0) {
 ここに文章を書いてください。</textarea><br>
 フォント: <select name="type">
   <option value="ipag">IPAゴシック</option>
+  <option value="ipagui">IPA UIゴシック</option>
   <option value="ipam">IPA明朝</option>
+  <option value="ipamp">IPA P明朝</option>
   <option value="sazanami-gothic">さざなみゴチック</option>
   <option value="sazanami-mincho">さざなみ明朝</option>
   <option value="mikachan">みかちゃんフォント</option>
