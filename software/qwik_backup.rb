@@ -134,9 +134,13 @@ class QwikBackup
 end
 
 if $0 == __FILE__
+   if not ARGV[0] or ARGV[0].empty?
+      puts "USAGE:  #$0 path"
+      exit
+   end
    QWIKPASS = File.join( ENV["HOME"], ".qwikpass" )
    username, password = open( QWIKPASS ){|io| io.read }.chomp.split(/:/)
-   qwik = QwikBackup.new( "http://qwik.jp/irce/", username, password )
+   qwik = QwikBackup.new( File.join("http://qwik.jp" + ARGV[0]), username, password )
    #puts qwik.get_txt( "1" )
 
    file = qwik.archive_filename
