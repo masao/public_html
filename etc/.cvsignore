@@ -4,5 +4,6 @@ zipcode.db
 .alias
 .emacs*
 .mnews_setup
+.screenrc
 test-ttf_php.txt
 *.html
