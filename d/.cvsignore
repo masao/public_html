@@ -1,5 +1,7 @@
 200?-*.html
 index.html
+cat_*.html
+cat_*.rdf
 ChangeLog
 cl.itemlist
 cl.js
