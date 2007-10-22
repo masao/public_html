@@ -139,7 +139,9 @@ class MHikiDoc < HikiDoc
       class Include < Plugin
          def expand( *args )
             content = open(args[0]){|io| io.readlines }.join
-            MHikiDoc.new( content, :label => args[0].gsub(/\W+/,'') ).to_html
+            MHikiDoc.new( content,
+                          { :label => args[0].gsub(/\W+/,''),
+                            :interwiki => @interwiki } ).to_html
          end
       end
       class Rawhtml < Plugin
@@ -152,7 +154,8 @@ class MHikiDoc < HikiDoc
             lines = args.join("\n").split(/\n/)
             attrs = lines.shift
             text = MHikiDoc.new( lines.join("\n"),
-                                 :label => args[0].gsub(/\W+/,'') ).to_html
+                                 { :label => args[0].gsub(/\W+/,''),
+                                   :interwiki => @interwiki } ).to_html
             %Q[<div #{ attrs }>#{ text }</div>]
          end
       end
@@ -261,8 +264,9 @@ class ToHTML
          args = $3
          args.sub!(/\A\s*\(/, "") && args.sub!(/\)\s*\Z/, "")
          args = Shellwords.shellwords( args )
-         plugin = MHikiDoc::Plugin.const_get( name.capitalize ).new(:doc => @doc,
-                                                                    :style => style)
+         plugin = MHikiDoc::Plugin.const_get( name.capitalize ).new( :doc => @doc,
+                                                                     :style => style,
+                                                                     :interwiki => @conf["interwiki"] )
          plugin.expand( *args )
       end
    end
