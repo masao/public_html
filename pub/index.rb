@@ -89,10 +89,13 @@ class PubApp
    end
    def toc_key( element, sort_mode = self.sort_mode )
       #STDERR.puts sort_mode.inspect
-      if sort_mode == :type
+      case sort_mode
+      when :type
          element.send( :type )
-      elsif element.send( sort_mode )
-         element.send( sort_mode )
+      when :author
+         element.send( :author )[0]
+      else
+         element.send( sort_mode ) or nil
       end
    end
    def sort_order(e, sort_mode = self.sort_mode)
