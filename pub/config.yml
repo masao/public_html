@@ -1,0 +1,7 @@
+author_mine: [ !ruby/regexp "/高久\s*雅生/", !ruby/regexp "/Masao Takaku/i" ]
+author_maping:
+  ja:
+    相澤彰子: Akiko Aizawa
+    高久雅生: Masao Takaku
+    宇陀則彦: Norihiko Uda
+    江草由佳: Yuka Egusa

@@ -5,7 +5,7 @@ require "cgi"
 require "erb"
 
 require "rexml/document"
-#require "yaml"
+require "yaml"
 
 class PubData
    def self.load( io )
@@ -59,9 +59,11 @@ end
 
 class PubApp
    attr_accessor :lang, :tmpl
+   attr_reader :config
 
    def initialize
       @cgi = CGI.new
+      @config = YAML.load( open( "config.yml") )
    end
    def header(arg)
       @cgi.header(arg)
@@ -93,7 +95,17 @@ class PubApp
       when :type
          element.send( :type )
       when :author
-         element.send( :author )[0]
+         author = element.send( :author )[0]
+         if @config and @config["author_maping"]
+            author_map = @config["author_maping"]["ja"]
+            author_map.keys.each do |k|
+               if author_map[ k ].to_a.include? author
+                  author = k
+                  break
+               end
+            end
+         end
+         author
       else
          element.send( sort_mode ) or nil
       end
