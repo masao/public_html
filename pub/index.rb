@@ -18,6 +18,7 @@ class PubList
    end
 
    SORT_ACCEPT = {
+      :month => ( "0".."12" ).to_a.reverse,
       :year => (1998 .. Time.now.year+1).to_a.map{|e|e.to_s}.reverse,
       :type => %w[ book journal conference thesis techreport misc ],
       :author => nil,
@@ -40,14 +41,14 @@ class PubList
       #STDERR.puts sort_mode.inspect
       if sort_mode == :type
          element.attributes["type"]
-      else
+      elsif element.elements[sort_mode.to_s]
          element.elements[sort_mode.to_s].text
       end
    end
    def sort_order(e, sort_mode = self.sort_mode)
       key = toc_key(e, sort_mode)
       if SORT_ACCEPT[sort_mode]
-         SORT_ACCEPT[sort_mode].index(key) or key
+         SORT_ACCEPT[sort_mode].index(key) or SORT_ACCEPT[sort_mode].size
       else
          key
       end
@@ -69,7 +70,9 @@ if $0 == __FILE__
    pubs = pubs.sort_by do |e|
       #p cgi.toc_key(e)
       #p cgi.sort_order(e)
-      [ cgi.sort_order(e), cgi.sort_order(e, :year) ]
+      [ cgi.sort_order(e),
+        cgi.sort_order(e, :year),
+        cgi.sort_order(e, :month) ]
    end
 
    # pubs << e.elements[cgi.sort_mode.to_s]
