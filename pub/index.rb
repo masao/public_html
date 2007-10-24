@@ -95,17 +95,18 @@ class PubApp
       when :type
          element.send( :type )
       when :author
-         author = element.send( :author )[0]
-         if @config and @config["author_maping"]
-            author_map = @config["author_maping"]["ja"]
-            author_map.keys.each do |k|
-               if author_map[ k ].to_a.include? author
-                  author = k
-                  break
-               end
-            end
-         end
-         author
+         element.send( :author )[0]
+#         author = element.send( :author )[0]
+#          if @config and @config["author_maping"]
+#             author_map = @config["author_maping"]["ja"]
+#             author_map.keys.each do |k|
+#                if author_map[ k ].to_a.include? author
+#                   author = k
+#                   break
+#                end
+#             end
+#          end
+#          author
       else
          element.send( sort_mode ) or nil
       end
