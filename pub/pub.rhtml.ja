@@ -36,7 +36,7 @@
 <% toc_keys.each do |k| %>
 <li><a href="#pubid<%= pubs.find{|e|
     k == app.toc_key(e)
-    }.object_id %>"><%= k %></a>
+    }.object_id %>"><%= k.capitalize %></a>
 <span class="toc_size">(<%= pubs.find_all{|e| k == app.toc_key(e) }.size %>)</span>
 <% end %>
 </ul>
@@ -55,14 +55,15 @@
 <% if not pub.file.nil? %></a><% end %>
 </span></dt>
 <dd class="author"><span class="author"><%= pub.author.map{|author|
+    author_s = author.dup
     if author =~ /高久\s*雅生/ or author =~ /Masao Takaku/i
-      author = "<em>#{author}</em>"
+      author_s = "<em>#{author}</em>"
     end
     if pub.author_role[author] == "editor"
-      author << "(編)"
+      author_s << "(編)"
     end
     #STDERR.puts author
-    author
+    author_s
     }.join(", ")
 %>
 </span></dd>
