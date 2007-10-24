@@ -60,26 +60,26 @@ PUBDATA = "pub.xml"
 LASTUPDATE = File::mtime( PUBDATA )
 
 if $0 == __FILE__
-   cgi = PubList::new
-   cgi.lang = DEFAULT_LANG
-   cgi.tmpl = "pub.rhtml.#{cgi.lang}"
+   app = PubList::new
+   app.lang = DEFAULT_LANG
+   app.tmpl = "pub.rhtml.#{app.lang}"
 
-   print cgi.header("text/html; charset=UTF-8")
+   print app.header("text/html; charset=UTF-8")
 
    pubs = REXML::Document.new(open(PUBDATA)).elements.to_a("/publist/pub")
    pubs = pubs.sort_by do |e|
-      #p cgi.toc_key(e)
-      #p cgi.sort_order(e)
-      sort_keys = [ cgi.sort_order(e, :year),
-                    cgi.sort_order(e, :month) ]
-      unless cgi.sort_mode == :year
-         sort_keys.unshift( cgi.sort_order(e) )
+      #p app.toc_key(e)
+      #p app.sort_order(e)
+      sort_keys = [ app.sort_order(e, :year),
+                    app.sort_order(e, :month) ]
+      unless app.sort_mode == :year
+         sort_keys.unshift( app.sort_order(e) )
       end
       sort_keys
    end
 
-   # pubs << e.elements[cgi.sort_mode.to_s]
-   toc_keys = pubs.map{|e| cgi.toc_key(e) }.uniq
+   # pubs << e.elements[app.sort_mode.to_s]
+   toc_keys = pubs.map{|e| app.toc_key(e) }.uniq
 
-   print result = ERB::new(open(cgi.tmpl){|f|f.read}, $SAFE, 2).result(binding)
+   print ERB::new(open(app.tmpl){|f|f.read}, $SAFE, 2).result(binding)
 end

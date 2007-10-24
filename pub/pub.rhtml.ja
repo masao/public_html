@@ -15,17 +15,17 @@
 <div id="sortby_list">
 <p>ソート方式:</p>
 <ul>
-<li><% if cgi.sort_mode == :year %>
+<li><% if app.sort_mode == :year %>
 <strong>発表年月</strong>
 <% else %>
 <a href="./?sort_mode=year">発表年月</a>
 <% end %>
-<li><% if cgi.sort_mode == :type %>
+<li><% if app.sort_mode == :type %>
 <strong>論文種別</strong>
 <% else %>
 <a href="./?sort_mode=type">論文種別</a>
 <% end %>
-<li><% if cgi.sort_mode == :author %>
+<li><% if app.sort_mode == :author %>
 <strong>筆頭著者</strong>
 <% else %>
 <a href="./?sort_mode=author">筆頭著者</a>
@@ -35,9 +35,9 @@
 <ul id="toc">
 <% toc_keys.each do |k| %>
 <li><a href="#pubid<%= pubs.find{|e|
-    k == cgi.toc_key(e)
+    k == app.toc_key(e)
     }.object_id %>"><%= k %></a>
-<span class="toc_size">(<%= pubs.find_all{|e| k == cgi.toc_key(e) }.size %>)</span>
+<span class="toc_size">(<%= pubs.find_all{|e| k == app.toc_key(e) }.size %>)</span>
 <% end %>
 </ul>
 <dl id="publist">
