@@ -7,7 +7,7 @@ require "erb"
 require "rexml/document"
 #require "yaml"
 
-class PubList
+class PubApp
    attr_accessor :lang, :tmpl
 
    def initialize
@@ -60,7 +60,7 @@ PUBDATA = "pub.xml"
 LASTUPDATE = File::mtime( PUBDATA )
 
 if $0 == __FILE__
-   app = PubList::new
+   app = PubApp::new
    app.lang = DEFAULT_LANG
    app.tmpl = "pub.rhtml.#{app.lang}"
 
