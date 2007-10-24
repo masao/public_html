@@ -42,25 +42,23 @@
 </ul>
 <dl id="publist">
 <% pubs.each do |pub| %>
-<dt class="title"><a name="pubid<%= pub.object_id %>" id="pubid<%= pub.object_id %>"><span class="year"><%= pub.text("year") %></span>
-<span class="type"><%= pub.attributes["type"] %></span></a>
+<dt class="title"><a name="pubid<%= pub.object_id %>" id="pubid<%= pub.object_id %>"><span class="year"><%= pub.year %></span>
+<span class="type"><%= pub.type %></span></a>
 <span class="title">
-<% if not pub.text("file").nil? %>
-<a href="<%= pub.text("file") %>">
+<% if not pub.file.nil? %>
+<a href="<%= pub.file %>">
 <% end %>
-<%= pub.text("title") %>
-<% if pub.text("subtitle") %>
-: <span><%= pub.text("subtitle") %></span>
+<%= pub.title %>
+<% if pub.subtitle %>
+: <span><%= pub.subtitle %></span>
 <% end %>
-<% if not pub.text("file").nil? %></a><% end %>
+<% if not pub.file.nil? %></a><% end %>
 </span></dt>
-<dd class="author"><span class="author"><%= pub.get_elements("author").to_a.map{|e|
-    #STDERR.puts e
-    author = e.text
+<dd class="author"><span class="author"><%= pub.author.map{|author|
     if author =~ /高久\s*雅生/ or author =~ /Masao Takaku/i
       author = "<em>#{author}</em>"
     end
-    if e.attributes["role"] == "editor"
+    if pub.author_role[author] == "editor"
       author << "(編)"
     end
     #STDERR.puts author
@@ -69,65 +67,47 @@
 %>
 </span></dd>
 <dd class="bibdata">
-<% if not pub.text("conference").nil? %>
-<span class="conference"><%= pub.text("conference") %>;</span>
-<% end %>
-<% if not pub.text("org").nil? %>
-<span class="org"><%= pub.text("org") %>;</span>
-<% end %>
-<% if not pub.text("publisher").nil? %>
-<span class="publisher"><%= pub.text("publisher") %>;</span>
-<% end %>
-<% if not pub.text("city").nil? %>
-<span class="city"><%= pub.text("city") %>;</span>
-<% end %>
-<% if not pub.text("journal").nil? %>
-<span class="journal"><%= pub.text("journal") %>;</span>
-<% end %>
-<% if not pub.text("volume").nil? %>
-<span class="volume">vol.<%= pub.text("volume") %>;</span>
-<% end %>
-<% if not pub.text("number").nil? %>
-<span class="number"><%= "no." unless pub.attributes["type"] == "techreport"%><%= pub.text("number") %>;</span>
-<% end %>
-<% if not pub.text("institution").nil? %>
-<span class="institution"><%= pub.text("institution") %>;</span>
-<% end %>
-<% page = pub.elements["page"] %>
-<% if not page.nil? %>
-<% if page.has_elements? %>
-<span class="page">pp.<%= page.elements["start"].text %>-<%= page.elements["end"].text %>;</span>
-<% else %>
-<span class="page"><%= pub.text("page") %>p.</span>
+<% [ :conference, :org, :publisher, :city, :journal ].each do |field| %>
+<% if not pub.send( field ).nil? %>
+<span class="<%= field %>"><%= pub.send( field ) %>;</span>
 <% end %>
 <% end %>
-<% if not pub.text("year").nil? %>
-<span class="pubdate">(<%= pub.text("year") %><% if not pub.text("month").nil? %><span class="month">-<%= "%02d" % pub.text("month").to_i %></span><% end %>)
+<% if not pub.volume.nil? %>
+<span class="volume">vol.<%= pub.volume %>;</span>
+<% end %>
+<% if not pub.number.nil? %>
+<span class="number"><%= "no." unless pub.type == "techreport"%><%= pub.number %>;</span>
+<% end %>
+<% if pub.page_start and pub.page_end %>
+<span class="page">pp.<%= pub.page_start %>-<%= pub.page_end %>;</span>
+<% elsif pub.page %>
+<span class="page"><%= pub.page %>p.</span>
+<% end %>
+<% if not pub.year.nil? %>
+<span class="pubdate">(<%= pub.year %><% if not pub.month.nil? %><span class="month">-<%= "%02d" % pub.month.to_i %></span><% end %>)
 </span>
 <% end %>
-<% if not pub.text("isbn").nil? %>
-<span class="isbn">(ISBN:<%= pub.text("isbn") %>)</span>
+<% if not pub.isbn.nil? %>
+<span class="isbn">(ISBN:<%= pub.isbn %>)</span>
 <% end %>
-<% if not pub.text("note").nil? %>
-<span class="note"><%= pub.text("note") %></span>
+<% if not pub.note.nil? %>
+<span class="note"><%= pub.note %></span>
 <% end %>
 </dd>
-<% if not pub.text("url").nil? %>
+<% if not pub.url.nil? %>
 <dd class="url">
-<span class="url"><a href="<%= pub.text("url") %>"><%=
-pub.elements["url"].attributes["label"] ? pub.elements["url"].attributes["label"] : pub.text("url")
-%></a></span>
+<span class="url"><a href="<%= pub.url %>"><%= pub.url_label ? pub.url_label : pub.url %></a></span>
 </dd>
 <% end %>
-<% if not pub.text("doi").nil? %>
+<% if not pub.doi.nil? %>
 <dd class="url">
-<span class="doi">DOI <a href="http://dx.doi.org/<%= pub.text("doi") %>"><%= pub.text("doi") %></a></span>
+<span class="doi">DOI <a href="http://dx.doi.org/<%= pub.doi %>"><%= pub.doi %></a></span>
 </dd>
 <% end %>
 <% %w[ slide poster ].each do |target| %>
-<% pub.elements.to_a(target).each do |e| %>
+<% if pub.send( target ) %>
 <dd class="url">
-<span class="<%= target %>">[<%= target.capitalize %>] <a href="<%= e.text %>"><%= e.text %></a></span>
+<span class="<%= target %>">[<%= target.capitalize %>] <a href="<%= pub.send( target ) %>"><%= pub.send( target ) %></a></span>
 </dd>
 <% end %>
 <% end %>

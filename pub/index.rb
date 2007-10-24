@@ -7,6 +7,56 @@ require "erb"
 require "rexml/document"
 #require "yaml"
 
+class PubData
+   def self.load( io )
+      data = []
+      REXML::Document.new( io ).elements.to_a("/publist/pub").each do |e|
+         data << PubData.new( e )
+      end
+      data
+   end
+   attr_reader :type, :author, :author_role, :title, :subtitle
+   attr_reader :journal, :conference, :org, :publisher
+   attr_reader :volume, :number, :year, :month, :city
+   attr_reader :page_start, :page_end, :page, :isbn, :note
+   attr_reader :url, :url_label, :doi, :slide, :poster, :file
+   attr_reader :language
+   def initialize( element )
+      @type = element.attributes["type"]
+      @author = []
+      @author_role = {}
+      element.get_elements("author").to_a.each{|e|
+         @author << e.text
+         @author_role[e.text] = e.attributes["role"] if e.attributes["role"]
+      }
+      @title = element.text("title")
+      @subtitle = element.text("subtitle")
+      @journal = element.text("journal")
+      @conference = element.text("conference")
+      @org = element.text("org")
+      @publisher = element.text("publisher")
+      @volume = element.text("volume")
+      @number = element.text("number")
+      @year = element.text("year")
+      @month = element.text("month")
+      @city = element.text("city")
+      @page_start = element.text("page/start")
+      @page_end = element.text("page/end")
+      if @page_start.nil? and @page_end.nil?
+         @page = element.text("page")
+      end
+      @isbn = element.text("isbn")
+      @note = element.text("note")
+      @language = element.text("language")
+      @url = element.text("url")
+      @url_label = element.elements["url"].attributes["label"] if @url
+      @doi = element.text("doi")
+      @slide = element.text("slide")
+      @poster = element.text("poster")
+      @file = element.text("file")
+   end
+end
+
 class PubApp
    attr_accessor :lang, :tmpl
 
@@ -37,12 +87,12 @@ class PubApp
          SORT_DEFAULT
       end
    end
-   def toc_key(element, sort_mode = self.sort_mode)
+   def toc_key( element, sort_mode = self.sort_mode )
       #STDERR.puts sort_mode.inspect
       if sort_mode == :type
-         element.attributes["type"]
-      elsif element.elements[sort_mode.to_s]
-         element.elements[sort_mode.to_s].text
+         element.send( :type )
+      elsif element.send( sort_mode )
+         element.send( sort_mode )
       end
    end
    def sort_order(e, sort_mode = self.sort_mode)
@@ -66,7 +116,7 @@ if $0 == __FILE__
 
    print app.header("text/html; charset=UTF-8")
 
-   pubs = REXML::Document.new(open(PUBDATA)).elements.to_a("/publist/pub")
+   pubs = PubData.load( open(PUBDATA) )
    pubs = pubs.sort_by do |e|
       #p app.toc_key(e)
       #p app.sort_order(e)
@@ -78,7 +128,6 @@ if $0 == __FILE__
       sort_keys
    end
 
-   # pubs << e.elements[app.sort_mode.to_s]
    toc_keys = pubs.map{|e| app.toc_key(e) }.uniq
 
    print ERB::new(open(app.tmpl){|f|f.read}, $SAFE, 2).result(binding)
