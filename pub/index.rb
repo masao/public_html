@@ -113,6 +113,14 @@ class PubApp
    end
    def sort_order(e, sort_mode = self.sort_mode)
       key = toc_key(e, sort_mode)
+#       if sort_mode == :author
+#          if @config["author_mine"]
+#             mine = @config["author_mine"].any?{|r| r =~ key } ? 0 : 1
+#             [ mine, key ]
+#          else
+#             key
+#          end
+#       elsif SORT_ACCEPT[sort_mode]
       if SORT_ACCEPT[sort_mode]
          SORT_ACCEPT[sort_mode].index(key) or SORT_ACCEPT[sort_mode].size
       else
