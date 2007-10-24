@@ -70,9 +70,12 @@ if $0 == __FILE__
    pubs = pubs.sort_by do |e|
       #p cgi.toc_key(e)
       #p cgi.sort_order(e)
-      [ cgi.sort_order(e),
-        cgi.sort_order(e, :year),
-        cgi.sort_order(e, :month) ]
+      sort_keys = [ cgi.sort_order(e, :year),
+                    cgi.sort_order(e, :month) ]
+      unless cgi.sort_mode == :year
+         sort_keys.unshift( cgi.sort_order(e) )
+      end
+      sort_keys
    end
 
    # pubs << e.elements[cgi.sort_mode.to_s]
