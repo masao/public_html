@@ -438,6 +438,7 @@
     <city>つくば</city>
     <org>図書館情報大学</org>
     <year>1998</year>
+    <month>3</month>
     <page>57</page>
     <note>卒業論文</note>
     <file>./1998/grad-thesis.pdf</file>
@@ -450,6 +451,7 @@
     <city>つくば</city>
     <org>図書館情報大学</org>
     <year>2000</year>
+    <month>3</month>
     <page>73</page>
     <note>修士論文</note>
     <file>./2000/master-thesis.pdf</file>
@@ -466,6 +468,7 @@
     <city>つくば</city>
     <org>筑波大学</org>
     <year>2004</year>
+    <month>9</month>
     <page>78</page>
     <note>博士論文</note>
     <file>./2004/phd-thesis.pdf</file>
