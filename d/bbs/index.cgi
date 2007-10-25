@@ -47,7 +47,8 @@ my $q = new CGI;
 #print $q->Dump;
 
 my $mode = $q->param('mode');
-$mode = "latest" if not defined $mode;
+my $logid = $q->param('id'); # コメントの ID。ログファイル指定に利用
+$mode = "latest" if not defined $mode and not defined $logid;
 
 # ユーザ情報
 my $name = $q->param('name');
@@ -87,7 +88,6 @@ if ($mode eq 'latest') {
 }
 
 # コメント対象の情報
-my $logid = $q->param('id'); # コメントの ID。ログファイル指定に利用
 $logid =~ s{[^a-zA-Z0-9\.\-\#_]}{_}g;
 exit if ($logid =~ /^\s*$/);
 my $target_url = id2url($logid); # コメント対象の URL
