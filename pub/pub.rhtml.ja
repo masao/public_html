@@ -57,17 +57,12 @@
 <dd class="author"><span class="author"><%= pub.author.map{|author|
 author_s = author.dup
 if app.config and app.config["author_mine"]
-   app.config["author_mine"].each do |r|
-      if r =~ author
-         author_s = "<em>#{author}</em>"
-         break
-      end
-   end
-   if pub.author_role[author] == "editor"
-      author_s << "(編)"
-   end
-   author_s
+   author_s = "<em>#{author}</em>" if app.config["author_mine"].any?{|r| r =~ author }
 end
+if pub.author_role[author] == "editor"
+   author_s << "(編)"
+end
+author_s
 }.join(", ")
 %>
 </span></dd>
