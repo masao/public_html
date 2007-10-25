@@ -13,6 +13,9 @@ p {
         margin: 0em;
 	font-size: smaller;
 }
+.navi {
+	text-align: right;
+}
 
 /*
 日記タイトルの設定
