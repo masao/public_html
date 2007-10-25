@@ -167,12 +167,15 @@ sub store_item {
 
     # Processing item header
     # # If 1st line doesn't have ": ", it will become item header.
-    my @cat;
+    my @cat = ();
 #    $ih =~ s/(:|\s+)$//g;
     $ih =~ s/[:\s]*$//sg;	# Triming trailing spaces and ":"
     #print "[[[[$ih]]]\n";
     # category
-    $ih =~ s/^\s*\[([^\[\]]+)\]\s*/push(@cat,$1);""/ge if $self->use_category;
+    if ($self->use_category) {
+	1 while $ih =~ s/^\s*\[([^\[\]]+)\]\s*/push(@cat,$1);""/ge;
+    }
+    #print STDERR join(":",@cat),"\n" if scalar(@cat) > 0;
 
     # Processing item content
     $cont =~ s/^( {8}| {0,7}\t)//gsm; 
