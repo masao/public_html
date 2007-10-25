@@ -1,7 +1,7 @@
 title: Windows上で使っているソフトウェア達
 subject: etc
 date.available: 2001-10-29
-date.modified: 2007-02-09
+date.modified: 2007-10-25
 
 私がMicrosoft Windows上で使っている主なソフトウェアをメモしておきます。
 
@@ -12,7 +12,7 @@ date.modified: 2007-02-09
 
 !!(フリー/シェア)ウェア
 
-:[[Xming|http://freedesktop.org/wiki/Xming]]:Xサーバ（Cygwinベース）: Astec Xが使えない環境で重宝
+:[[Xming|http://sourceforge.net/projects/xming]]:Xサーバ（Cygwinベース）: Astec Xが使えない環境で重宝
 :[[WinSCP|http://winscp.sourceforge.net/eng/]]:ファイル転送ツール。（scpをGUIでできる）
 :[[FireFox|http://www.mozilla-japan.org/]] (Mozilla Browser):Webブラウザ
 :[[Cygwin|http://cygwin.com/]]:ユーティリティ
