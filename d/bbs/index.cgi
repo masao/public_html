@@ -47,6 +47,7 @@ my $q = new CGI;
 #print $q->Dump;
 
 my $mode = $q->param('mode');
+$mode = "latest" if not defined $mode;
 
 # ユーザ情報
 my $name = $q->param('name');
