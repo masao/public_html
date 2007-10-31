@@ -2,6 +2,18 @@
 <!-- $Id$ -->
 <publist>
 
+  <pub type="conference"><!--（査読あり：採録済）-->
+    <author>相澤彰子</author>
+    <author>大山敬三</author>
+    <author>高久雅生</author>
+    <title>大規模データベースを利用したリンケージシステムの提案と実装</title>
+    <conference>データベースとWeb情報システムに関するシンポジウム（DBWeb 2007）</conference>
+    <year>2007</year>
+    <month>11</month>
+    <language>ja</language>
+    <note>発表予定</note>
+  </pub>
+
   <pub type="misc">
     <author>齋藤ひとみ</author>
     <author>寺井仁</author>
@@ -261,6 +273,7 @@
     <volume>14</volume>
     <number>1</number>
     <year>2004</year>
+    <month>1</month>
     <page>
       <start>11</start>
       <end>22</end>
@@ -277,6 +290,7 @@
     <volume>14</volume>
     <number>3</number>
     <year>2004</year>
+    <month>7</month>
     <page>
       <start>1</start>
       <end>17</end>
@@ -312,6 +326,7 @@
     <volume>13</volume>
     <number>1</number>
     <year>2003</year>
+    <month>3</month>
     <page>
       <start>10</start>
       <end>22</end>
@@ -329,6 +344,7 @@
     <volume>11</volume>
     <number>2</number>
     <year>2001</year>
+    <month>11</month>
     <page>
       <start>1</start>
       <end>10</end>
@@ -390,6 +406,7 @@
       <end>15</end>
     </page>
     <year>1999</year>
+    <month>9</month>
     <language>ja</language>
   </pub>
 
