@@ -1,6 +1,8 @@
 *.ttf
 *.TTF
+ken_all*
 zipcode.db
+zipcode.log*
 .alias
 .emacs*
 .mnews_setup
