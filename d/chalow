@@ -562,7 +562,7 @@ sub okikae {
 
     unescape_string(\$_);	# プラグイン呼び出しも行なう
 
-    s!</div><br>!</div>!;
+    s!</div><br>!</div>!g;
     s!</pre><br>!</pre>!g;	# ad hoc
 
     return $_;
