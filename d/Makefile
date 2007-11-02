@@ -20,7 +20,7 @@ ping: index.html
 		http://rpc.weblogs.com/RPC2 \
 		http://www.blogpeople.net/servlet/weblogUpdates \
 		http://r.hatena.ne.jp/rpc \
-		http://rpc.bloglines.com/update \
+		http://www.bloglines.com/ping \
 		http://ping.ask.jp/xmlrpc.m \
 		http://blog.goo.ne.jp/XMLRPC \
 		http://blogsearch.google.co.jp/ping/RPC2 \
