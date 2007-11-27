@@ -138,6 +138,10 @@ if ($mode eq "write") {
 	@spam = ($body =~ /http:\/\//gmo);
 	exit if scalar(@spam) > 2;
 
+	# ÆÃÄê¤ÎÊ¸»úÎó¤ò¶Ø»ß
+	@spam = ($body =~ /Hello!?\s*(Good|Nice) Site/gmoi);
+	exit if scalar(@spam) > 0;
+
 	escape_string(\$name);	
 	escape_string(\$mail_or_url);	
 	escape_string(\$body);
