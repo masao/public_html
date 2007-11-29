@@ -4,7 +4,7 @@
 require "kconv"
 
 SUBJECT = "=?ISO-2022-JP?B?GyRCPEI4MyUiJWslUCUkJUg/PSQ3THUkIiRqJF4bKEI=?=\n\t=?ISO-2022-JP?B?GyRCJDskcxsoQg==?="
-SENDMAIL = '/usr/lib/sendmail'
+SENDMAIL = '/usr/sbin/sendmail'
 
 FROM = 'Masao Takaku <masao@nii.ac.jp>' # From: フィールド
 REAL_FROM = 'masao@nii.ac.jp'	# error mail 宛先
@@ -23,19 +23,19 @@ if $0 == __FILE__
    open(ARGV[1]).each do |line|
       name, addr, = line.chomp.split(/\t/)
       if addr =~ /^[\w\.\-]+@[\w\.\-]+$/
-         open("| #{SENDMAIL} -oi -t -f #{REAL_FROM}") do |sendmail|
+         open("| #{SENDMAIL} -oi -t -f #{REAL_FROM}", "w") do |sendmail|
             sendmail.print <<EOF
 From: #{FROM}
 Subject: #{SUBJECT}
 To: #{addr}
+Cc: #{FROM}
 Mime-Version: 1.0
 Content-Type: text/plain; charset=ISO-2022-JP
 Content-Transfer-Encoding: 7bit
 
 EOF
 
-            message.gsub!( /%NAME%/, name )
-            sendmail.print message.tojis
+            sendmail.print message.gsub( /%NAME%/, name ).tojis
          end
          puts "#{addr} done."
       else
