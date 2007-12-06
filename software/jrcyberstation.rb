@@ -11,6 +11,9 @@ $KCODE = "s"
 TOPURL = "http://www.jr.cyberstation.ne.jp/vacancy/Vacancy.html"
 URL = "http://www1.jr.cyberstation.ne.jp/csws/Vacancy.do"
 
+mail = nil
+mail = "takaku-masao@ezweb.ne.jp,yuka@nier.go.jp"
+
 POSTDATA = {
    :month => 12,
    :day => 29,
@@ -59,8 +62,11 @@ content = open("z.jr"){|io| io.read }
 vacant = content.scan(%r|<tr>\s*<td\s+align="left">([^<]+)</td>\s*<td\s+align="center">([\d\:]+)</td>\s*<td\s+align="center">([\d\:]+)</td>\s*<td\s+align="center">([^<]+)</td>\s*<td\s+align="center">([^<]+)</td>\s*<td\s*align="center">([^<]+)</td>\s*<td\s+align="center">([^<]+)</td>\s*</tr>|)
 vacant = vacant.find_all{|e| e[1] < DEP_BEFORE } if DEP_BEFORE
 vacant = vacant.find_all{|e| e[2] < ARR_BEFORE } if ARR_BEFORE
-if vacant = vacant.find_all{|e| e[3] != "~" }
+vacant = vacant.find_all{|e| e[3] != "~" }
+if not vacant.empty?
+   sendmail = open("|mail -s 'JR Cyberstation' '#{mail}'", "w")
    vacant.each do |v|
       puts v.join("\t")
+      sendmail.puts v.join("\t")
    end
 end
