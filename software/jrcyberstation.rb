@@ -64,9 +64,14 @@ vacant = vacant.find_all{|e| e[1] < DEP_BEFORE } if DEP_BEFORE
 vacant = vacant.find_all{|e| e[2] < ARR_BEFORE } if ARR_BEFORE
 vacant = vacant.find_all{|e| e[3] != "~" }
 if not vacant.empty?
-   sendmail = open("|mail -s 'JR Cyberstation' '#{mail}'", "w")
-   vacant.each do |v|
+   if mail
+      open("|mail -s 'JR Cyberstation' '#{mail}'", "w") do |sendmail|
+         vaant.each do |v|
+            sendmail.puts v.join("\t")
+         end
+      end
+   end
+   vaant.each do |v|
       puts v.join("\t")
-      sendmail.puts v.join("\t")
    end
 end
