@@ -3,6 +3,7 @@
 
 # http://www1.jr.cyberstation.ne.jp/csws/Vacancy.do
 
+require "kconv"
 require "open-uri"
 require "uri"
 
@@ -65,13 +66,13 @@ vacant = vacant.find_all{|e| e[2] < ARR_BEFORE } if ARR_BEFORE
 vacant = vacant.find_all{|e| e[3] != "~" }
 if not vacant.empty?
    if mail
-      open("|mail -s 'JR Cyberstation' '#{mail}'", "w") do |sendmail|
-         vaant.each do |v|
-            sendmail.puts v.join("\t")
+      open("|Mail -s 'JR Cyberstation' '#{mail}'", "w") do |sendmail|
+         vacant.each do |v|
+            sendmail.puts v.join("\t").tojis
          end
       end
    end
-   vaant.each do |v|
+   vacant.each do |v|
       puts v.join("\t")
    end
 end
