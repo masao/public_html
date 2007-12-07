@@ -67,6 +67,7 @@ vacant = vacant.find_all{|e| e[3] != "Å~" }
 if not vacant.empty?
    output = STDOUT
    output = open("|Mail -s 'JR Cyberstation' '#{mail}'", "w") if mail
+   outputs "#{POSTDATA[:month]}/#{POSTDATA[:day]} #{POSTDATA[:dep_stn]}-#{POSTDATA[:arr_stn]}".tojis
    vacant.each do |v|
       output.puts v.join("\t").tojis
    end
