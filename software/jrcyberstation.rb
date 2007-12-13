@@ -33,7 +33,7 @@ POSTDATA = {
 }
 #DEP_BEFORE = "12:53"	# 出発時刻指定
 DEP_BEFORE = nil
-ARR_BEFORE = "18:00"		# 到着時刻指定
+ARR_BEFORE = "19:00"		# 到着時刻指定
 # ARR_BEFORE = nil
 
 STATION_JS = "http://www.jr.cyberstation.ne.jp/vacancy/Station.js"
