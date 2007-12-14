@@ -20,6 +20,7 @@ HTML	= 	index.html.ja index.html.en \
 		software/yim/index.html \
 		software/zipcode_cgi.html \
 		software/graphviz-ja/index.html \
+		software/google-cache.html \
 		private/memo.html \
 		lecture/index.html \
 		lecture/2005/excel/index.html \
