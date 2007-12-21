@@ -1,7 +1,7 @@
 title: Firefox: ブックマーク、拡張、設定など
 title.short: Firefox設定集
 date.available: 2006-04-20
-date.modified:  2007-10-12
+date.modified:  2007-12-21
 subject: etc
 
 常用ブラウザとして[[Mozilla Firefox|http://www.mozilla-japan.org/]]を使っていますが、Firefox上でのブックマーク、拡張、設定情報のメモです。
@@ -12,7 +12,7 @@ subject: etc
 *[[goo|http://dictionary.goo.ne.jp/search.php?MT=%s&kind=jn]]
 *[[en|http://encarta.msn.com/dictionary_/%s.html]]
 *[[wp|http://ja.wikipedia.org/wiki/%E7%89%B9%E5%88%A5:Search?search=%s]]
-*[[kawaguchi|http://www.kawaguchi-lib.jp/opw1/OPW/OPWSRCHLIST.CSP?DB=LIB&FLG=SEARCH&opr%281%29=OR&qual%281%29=MZTI&text%281%29=%s]]
+*[[kawaguchi|http://www.kawaguchi-lib.jp/opw1/OPW/OPWSRCHLIST.CSP?DB=LIB&FLG=SEARCH&MODE=1&opr%281%29=OR&qual%281%29=ALL&text%281%29=%s]]
 
 !!! Boolmarklet
 *[[上|javascript:if (location.hash) location.hash = ''; else if (location.search) location.search = ''; else if (location.pathname.charAt(location.pathname.length-1) == %22/%22) location = %22..%22; else if (location.pathname) location = %22.%22; void 0]]
