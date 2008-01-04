@@ -497,8 +497,8 @@ sub okikae {
     s!^$readmore_tag$(.*)$!<div class="readmore">$1</div>!sm;
 
     ### 文字修飾と水平線。Hiki の記法を採用。
-    s!'''(.+?)'''!<strong>$1</strong>!gms;
-    s!''(.+?)''!<em>$1</em>!gms;
+    #s!'''(.+?)'''!<strong>$1</strong>!gms;
+    #s!''(.+?)''!<em>$1</em>!gms;
     #s!==(\S.+?)==!<s>$1</s>!gms;
     s!^\-{4}!<hr>!gms;
 
