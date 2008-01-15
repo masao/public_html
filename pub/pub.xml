@@ -2,6 +2,25 @@
 <!-- $Id$ -->
 <publist>
 
+  <pub type="misc">
+    <author>高久雅生</author>
+    <author>相澤彰子</author>
+    <author>大山敬三</author>
+    <title>統計分野における研究者の氏名同定とその応用</title>
+    <conference>「大規模データ・リンケージ，データマイニングと統計手法」研究会</conference>
+    <year>2008</year>
+    <month>1</month>
+    <city>東京, 統計数理研究所</city>
+<!--
+    <page>
+      <start>544</start>
+      <end>545</end>
+    </page>
+-->
+    <note>（発表予定）</note>
+    <language>ja</language>
+  </pub>
+
   <pub type="conference"><!--（査読あり：採録済）-->
     <author>相澤彰子</author>
     <author>大山敬三</author>
@@ -20,7 +39,7 @@
     <author>高久雅生</author>
     <author>江草由佳</author>
     <title>検索システムの性能評価と利用者実験との比較</title>
-    <journal>日本認知科学会第24回大会</journal>
+    <conference>日本認知科学会第24回大会</conference>
     <year>2007</year>
     <month>9</month>
     <city>東京, 成城大学</city>
