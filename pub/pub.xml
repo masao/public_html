@@ -50,6 +50,19 @@
   </pub>
 
   <pub type="misc">
+    <author>高久雅生</author>
+    <title>研究者情報サーバの構築と異種情報資源の統合</title>
+    <conference>若手研究者クロストーク</conference>
+    <publisher>情報・システム研究機構 新領域融合研究センター</publisher>
+    <year>2007</year>
+    <month>11</month>
+    <city>伊豆長岡</city>
+    <language>ja</language>
+    <note>ポスター発表</note>
+    <poster>./2007/tric-wakate.pdf</poster>
+  </pub>
+
+  <pub type="misc">
     <author>齋藤ひとみ</author>
     <author>寺井仁</author>
     <author>高久雅生</author>
