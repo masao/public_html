@@ -7,6 +7,7 @@ require "yaml"
 require "erb"
 require "hikidoc"
 require "cgi"
+require "shellwords"
 
 # HierFilename:
 #
@@ -251,7 +252,6 @@ class ToHTML
                nil, "<>" ).result( binding )
    end
    def expand_plugin( text )
-      require "shellwords"
       #STDERR.puts text
       text.gsub(/<(div|span) class="plugin">\{\{\s*(\w+)\s*(.*?)\s*\}\}<\/\1>/m) do |match|
          #STDERR.puts match
