@@ -132,7 +132,7 @@ class MHikiDoc < HikiDoc
       class Include < Plugin
          def expand( *args )
             content = open(args[0]){|io| io.readlines }.join
-            MHikiDoc.to_html( content,
+            MHikiDoc.to_xhtml( content,
                               { :label => args[0].gsub(/\W+/,''),
                                 :interwiki => @interwiki } )
          end
@@ -242,7 +242,7 @@ class ToHTML
       [ content.join, header ]
    end
    def expand( template = "template.html.#{@lang}" )
-      @doc = MHikiDoc.new( HikiDoc::HTMLOutput.new(">"),
+      @doc = MHikiDoc.new( HikiDoc::HTMLOutput.new("/>"),
                            { :interwiki => @conf["interwiki"],
                              :plugin_syntax => Proc.new{ true }
                            })
