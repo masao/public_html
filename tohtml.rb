@@ -263,7 +263,15 @@ class ToHTML
          name = $2
          args = $3
          args.sub!(/\A\s*\(/, "") && args.sub!(/\)\s*\Z/, "")
-         args = Shellwords.shellwords( args )
+         case style
+         when "div"
+            args = args.split(/\n/)
+            args = Shellwords.shellwords( args.join("\n") ) if args.size == 1
+         when "span"
+            args = Shellwords.shellwords( args )
+         else
+            raise "unknown plugin style: #{style}"
+         end
          plugin = MHikiDoc::Plugin.const_get( name.capitalize ).new( :doc => @doc,
                                                                      :style => style,
                                                                      :interwiki => @conf["interwiki"] )

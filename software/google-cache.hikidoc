@@ -1,16 +1,14 @@
 title: google-cache.pl
-keyword: Google cache WWW Perl Wget
 date.available: 2001-06-11
-date.modified: 2007-12-14
+date.modified: 2008-01-30
 subject: software
+keyword: Google cache WWW Perl Wget
 
-{{div 'style="color:red;margin:0 5%;border:1px dashed gray;padding:10px"'
-"
+{{div style="color:red;margin:0 5%;border:1px dashed gray;padding:10px"
 '''注意: 本ソフトウェアは参考のために残してあるもので、更新を停止しています。'''
 
 [[Yahoo Web Search API|http://developer.yahoo.co.jp/search/]]や[[Google Web API|http://www.google.com/apis/]]など、キャッシュにアクセスできるようなAPIが提供されています。
 現在では、本スクリプトは無用のものとなっているとおもいますので、APIを利用するなどするようにしてください。
-"
 }}
 
 {{toc}}

@@ -1,12 +1,11 @@
 title: Masao Takaku's Website
-date.modified: 2007-03-04
+date.modified: 2008-01-30
 date.available: 2007-03-04
 navi: false
 
-{{div 'class="news"' "
+{{div class="news"
 !! News
 :2007-03-04:English version of my website has been opened.
-"
 }}
 
 !!Table of Contents

@@ -1,16 +1,14 @@
 title: Graphviz-ja
 subject: software
 date.available: 2001-10-10
-date.modified: 2007-10-10
+date.modified: 2008-01-30
 
-{{div 'style="color:red;margin:0 5%;border:1px dashed gray;padding:10px"'
-"
+{{div style="color:red;margin:0 5%;border:1px dashed gray;padding:10px"
 '''注意: 以下の記述は相当古いものです。'''
 
 以下は、私が GraphViz を使っていた 2000年〜2002年頃までのものを対象にした説明です。
 2007年10月に確認した範囲では、GraphViz本家の機能拡張により、以下の記述の多くは最新版のGraphVizにはあてはまりません。
 ご注意ください。
-"
 }}
 
 !!概要

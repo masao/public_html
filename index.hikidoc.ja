@@ -1,15 +1,14 @@
 title: たかくまさおのホームページ
-date.modified: 2007-03-04
+date.modified: 2008-01-30
 navi: false
 
-{{div 'class="news"' "
+{{div class="news"
 !! お知らせ
 :2006-04-29:[[発表文献|./pub/]]のページを作成、公開しました。
 :2006-04-26:個人用に書きためていた[[メモ|./d/]]を公開しました。
 :2006-03-12:長らく休止状態だったWebサイトを http://masao.jpn.org/ へ移行して再開しました。
 
 [[古いお知らせ|history.html]]
-"
 }}
 
 !! 目次
