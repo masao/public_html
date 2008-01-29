@@ -18,6 +18,7 @@ HTML	= 	index.html.ja index.html.en \
 		software/mnewsprint/index.html \
 		software/imgs2html/index.html \
 		software/yim/index.html \
+		software/msimpleform/index.html \
 		software/zipcode_cgi.html \
 		software/graphviz-ja/index.html \
 		software/google-cache.html \
@@ -26,6 +27,7 @@ HTML	= 	index.html.ja index.html.en \
 		lecture/2005/excel/index.html \
 		lecture/2005/html/index.html \
 		lecture/2007/kiso/index.html \
+		trans/2008/wikipedia_community_publishing.html \
 
 TOHTML =	./tohtml.rb
 TOHTML_JA=$(TOHTML) ./tohtml.conf.ja ./template.html.ja
@@ -60,3 +62,6 @@ rsync:
 #	% sort -nr score | less
 lint:
 	./htmllint-all.rb
+
+target:
+	@echo $(HTML)
