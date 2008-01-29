@@ -244,7 +244,8 @@ class ToHTML
    def expand( template = "template.html.#{@lang}" )
       @doc = MHikiDoc.new( HikiDoc::HTMLOutput.new("/>"),
                            { :interwiki => @conf["interwiki"],
-                             :plugin_syntax => Proc.new{ true }
+                             :plugin_syntax => Proc.new{ true },
+                             :use_wiki_name => false,
                            })
       body = @doc.compile( @content )
       body = expand_plugin( body )
