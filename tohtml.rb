@@ -29,61 +29,54 @@ class HierFilename < Pathname
    alias :to_s :to_str
 end
 
+class HikiDoc::HTMLOutput
+   def headline(level, title, attr)
+      attr_s = ""
+      attr.keys.sort.each do |k|
+         attr_s << %Q[ #{k}="#{attr[k]}"]
+      end
+      @f.puts "<h#{level}#{ " " + attr_s if attr_s.size > 0 }>#{title}</h#{level}>"
+   end
+end
+
 # My HikiDoc...
 #
 class MHikiDoc < HikiDoc
    attr_reader :toc, :label
    def initialize( content, options = {} )
+      @toc = []
       @label = options[:label] || ''
       @interwiki = options[:interwiki] || ''
       super( content, options )
    end
 
    # For ToC
-   def parse_header( text )
-      #STDERR.puts text
-      @toc ||= []
-      text.gsub( /^(#{HEADER_RE}{1,#{7-@level}})\s*(.*)\n?/ ) do |str|
-         level, title = $1.size + @level - 1, $2
-         if @toc.empty? or @toc[-1].first != level
-            @toc << [level, inline_parser(title)]
-         else
-            @toc[-1] << inline_parser(title)
-         end
-         #STDERR.puts @toc.inspect
-         href_id = "toc#{@label}#{@toc.size}_#{@toc[-1].size-1}"
-         %Q[\n<h#{level} id="#{href_id}">%s</h#{level}>\n\n] % inline_parser(title)
+   def compile_header(line)
+      @header_re ||= /\A!{1,#{7 - @level}}/
+      level = @level + (line.slice!(@header_re).size - 1)
+      title = strip(line)
+      compiled_text = compile_inline(title)
+      if @toc.empty? or @toc[-1].first != level
+         @toc << [level, compiled_text]
+      else
+         @toc[-1] << compiled_text
       end
+      h_id = "toc#{@label}#{@toc.size}_#{@toc[-1].size-1}"
+      @output.headline level, compiled_text, :id => h_id
    end
 
    # For Interwiki
-   def parse_link( text )
-      ret = text
-      ret.gsub!( BRACKET_LINK_RE ) do |str|
-         link = $1
-         if NAMED_LINK_RE =~ link
-            uri, title = $2, $1
-            title = parse_modifier( title )
-         else
-            uri = title = link
-         end
-         uri.sub!( /^(?:https?|ftp|file)+:/, '' ) if %r|://| !~ uri && /^mailto:/ !~ uri
-         if /^(\w+):(.*)$/ =~ uri and @interwiki.has_key?( $1 )
-            prefix = $1
-            str = $2
-            uri = @interwiki[prefix].gsub(/%s/, str)
-         end
-         store_block( %Q|<a href="#{escape_quote( uri )}">#{title}</a>| )
+   def fix_uri(uri)
+      if /^(\w+):(.*)$/ =~ uri and @interwiki.has_key?( $1 )
+         prefix = $1
+         str = $2
+         uri = @interwiki[prefix]
+         uri << str if not uri.gsub!(/%s/, str)
+      elsif %r|://| !~ uri and /\Amailto:/ !~ uri
+         uri.sub(/\A\w+:/, "")
+      else
+         uri
       end
-      ret.gsub!( URI_RE ) do |uri|
-         uri.sub!( /^\w+:/, '' ) if %r|://| !~ uri && /^mailto:/ !~ uri
-         if IMAGE_RE =~ uri
-            store_block( %Q|<img src="#{uri}" alt="#{File.basename( uri )}"#{@empty_element_suffix}| )
-         else
-            store_block( %Q|<a href="#{uri}">#{uri}</a>| )
-         end
-      end
-      ret
    end
 
    class Plugin
@@ -139,9 +132,9 @@ class MHikiDoc < HikiDoc
       class Include < Plugin
          def expand( *args )
             content = open(args[0]){|io| io.readlines }.join
-            MHikiDoc.new( content,
-                          { :label => args[0].gsub(/\W+/,''),
-                            :interwiki => @interwiki } ).to_html
+            MHikiDoc.to_html( content,
+                              { :label => args[0].gsub(/\W+/,''),
+                                :interwiki => @interwiki } )
          end
       end
       class Rawhtml < Plugin
@@ -151,11 +144,12 @@ class MHikiDoc < HikiDoc
       end
       class Div < Plugin
          def expand( *args )
+            #STDERR.puts [@style,args].inspect
             lines = args.join("\n").split(/\n/)
             attrs = lines.shift
-            text = MHikiDoc.new( lines.join("\n"),
-                                 { :label => args[0].gsub(/\W+/,''),
-                                   :interwiki => @interwiki } ).to_html
+            text = MHikiDoc.to_html( lines.join("\n"),
+                                     {  :label => args[0].gsub(/\W+/,''),
+                                        :interwiki => @interwiki } )
             %Q[<div #{ attrs }>#{ text }</div>]
          end
       end
@@ -248,8 +242,11 @@ class ToHTML
       [ content.join, header ]
    end
    def expand( template = "template.html.#{@lang}" )
-      @doc = MHikiDoc.new( @content, :interwiki => @conf["interwiki"] )
-      body = @doc.to_html
+      @doc = MHikiDoc.new( HikiDoc::HTMLOutput.new(">"),
+                           { :interwiki => @conf["interwiki"],
+                             :plugin_syntax => Proc.new{ true }
+                           })
+      body = @doc.compile( @content )
       body = expand_plugin( body )
       ERB.new( open(HierFilename.new(template)){|io| io.read },
                nil, "<>" ).result( binding )
@@ -268,6 +265,7 @@ class ToHTML
             args = args.split(/\n/)
             args = Shellwords.shellwords( args.join("\n") ) if args.size == 1
          when "span"
+            #STDERR.puts args
             args = Shellwords.shellwords( args )
          else
             raise "unknown plugin style: #{style}"
