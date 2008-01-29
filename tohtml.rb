@@ -74,9 +74,8 @@ class MHikiDoc < HikiDoc
          uri << str if not uri.gsub!(/%s/, str)
       elsif %r|://| !~ uri and /\Amailto:/ !~ uri
          uri.sub(/\A\w+:/, "")
-      else
-         uri
       end
+      uri
    end
 
    class Plugin
