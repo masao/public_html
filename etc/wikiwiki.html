@@ -19,26 +19,57 @@ WikiCloneについてのメモ</div>
 おもに、<a href="http://amazon.slis.tsukuba.ac.jp/sys/">システム分野のページ</a>のような文書を複数人で管理するために採用できないかという検討を行うために調査した際のものです。以下、調査したWikiCloneの名称、開発元、コメントなどを書いておきます。</p>
 <p>なお、最近になって、<a href="http://www1.neweb.ne.jp/wa/yamdas/column/technique/clonelist.html">日本発の wiki クローンリスト</a>というページを見つけました。こちらの方が私のリストよりもずっと網羅的で詳しいと思うので、こちらも参照してください。</p>
 <dl>
-<dt><a href="http://www.todo.org/">Tiki</a></dt><dd>Rubyベース。バックエンドはプレインテキストのファイル群。</dd>
-<dd>日本語が通るものとしては最古参（たぶん）。</dd>
-<dt><a href="http://www.hyuki.com/yukiwiki/">YukiWiki</a></dt><dd>Perlベース。バックエンドは DBM 形式。掲示板風？</dd>
-<dt><a href="http://www.pukiwiki.org/">PukiWiki</a></dt><dd>PHPベース。YukiWikiを参考にPHPで実装。高機能。</dd>
-<dt><a href="http://rwiki.jin.gr.jp/cgi-bin/rw-cgi.rb?cmd=view;name=top">RWiki</a></dt><dd>Rubyベース。RD 形式で記述する。</dd>
-<dd>RD という標準フォーマットがきちんと定義されているのが魅力で、ちょっとインストールしてみようかと思ったけど、面倒だからやめる。なにせ、dRuby を使うので、デーモンを立ちあげておかないといけないらしい…。これでは、本運用するにはちょい問題あり。</dd>
-<dt><a href="http://www.gembook.jp/html/moin/moin.cgi/FrontPage">MoinMoin</a></dt><dd>Pythonベース。</dd>
-<dt><a href="http://minnow.cc.gatech.edu/swiki">Swiki</a></dt><dd>Squeakベース。</dd>
-<dd><a href="http://www.mars.dti.ne.jp/~umejava/smalltalk/squeak/swiki/index.html">SqueakでWikiをたちあげよう!!</a>、<a href="http://ichijo.hn.org:8000/Swiki">Swiki-ml</a>、<a href="http://ma2tak.dyndns.org:8888/ma2tak/14">ComSWiki</a>などに情報がある。</dd>
-<dt><a href="http://vivi.dyndns.org/vikky2/vikky.phtml?title=TopPage">vikky</a></dt><dd>PHP + PostgreSQL ベース。</dd>
-<dd>表組み、フォーム、ログインなど豊富な機能を持っていてかなり強力。</dd>
-<dt><a href="http://moonrock.jp/~don/wikimodoki/wikimodoki.cgi">Wikiもどき</a></dt><dd>Ruby ベース。RD 形式で記述する。</dd>
-<dd>単純に言ってしまえば、RWiki の機能を dRuby 抜きで実現したもの。</dd>
-<dt><a href="http://www.gci-net.com/users/j/johnw/EmacsResources.html">EmacsWiki</a></dt><dd>Emacs-Lispベース。</dd>
-<dd>Web上で編集できるというWikiの特徴はちょっと違うものの、&lt;q&gt;個人の情報管理ツールとしては有用&lt;/q&gt;との<a href="http://www.ops.dti.ne.jp/~cake-smd/wiki/EmacsWiki.html">報告</a>も。</dd>
-<dt><a href="http://twiki.org/">TWiki</a></dt><dd>Perlベース。海外ではけっこう有名みたい。高機能。</dd>
-<dd>日本語は通らない。cf. <a href="http://twiki.org/cgi-bin/view/Codev/KanjiCharacterSet&quot; title=&quot;TWikiにおける日本語処理についての議論">TWiki.Codev.KanjiCharacterSet</a></dd>
-<dd>ただ、GPLなのにダウンロード時に登録しないといけないのがちょっとイヤ。</dd>
-<dt><a href="http://www.usemod.com/cgi-bin/wiki.pl?UseModWiki">UseModWiki</a></dt><dd><a href="http://emacswiki.org/">http://emacswiki.org/</a> が採用するなど、海外では結構人気のあるみたい。</dd>
-<dd>日本語はそのままでは通らないが、<a href="http://p5ee.net/wiki.pl?WikiName">p5eeWiki:WikiName</a>や<a href="http://www.ceres.dti.ne.jp/~george/jdiaryA11001.html#2001100502">WikiWiki clone - UseModWiki</a>などに日本語対応パッチあり。</dd>
+<dt><a href="http://www.todo.org/">Tiki</a></dt>
+<dd>Rubyベース。バックエンドはプレインテキストのファイル群。
+</dd>
+<dd>日本語が通るものとしては最古参（たぶん）。
+</dd>
+<dt><a href="http://www.hyuki.com/yukiwiki/">YukiWiki</a></dt>
+<dd>Perlベース。バックエンドは DBM 形式。掲示板風？
+</dd>
+<dt><a href="http://www.pukiwiki.org/">PukiWiki</a></dt>
+<dd>PHPベース。YukiWikiを参考にPHPで実装。高機能。
+</dd>
+<dt><a href="http://rwiki.jin.gr.jp/cgi-bin/rw-cgi.rb?cmd=view;name=top">RWiki</a></dt>
+<dd>Rubyベース。RD 形式で記述する。
+</dd>
+<dd>RD という標準フォーマットがきちんと定義されているのが魅力で、ちょっとインストールしてみようかと思ったけど、面倒だからやめる。なにせ、dRuby を使うので、デーモンを立ちあげておかないといけないらしい…。これでは、本運用するにはちょい問題あり。
+</dd>
+<dt><a href="http://www.gembook.jp/html/moin/moin.cgi/FrontPage">MoinMoin</a></dt>
+<dd>Pythonベース。
+</dd>
+<dt><a href="http://minnow.cc.gatech.edu/swiki">Swiki</a></dt>
+<dd>Squeakベース。
+</dd>
+<dd><a href="http://www.mars.dti.ne.jp/~umejava/smalltalk/squeak/swiki/index.html">SqueakでWikiをたちあげよう!!</a>、<a href="http://ichijo.hn.org:8000/Swiki">Swiki-ml</a>、<a href="http://ma2tak.dyndns.org:8888/ma2tak/14">ComSWiki</a>などに情報がある。
+</dd>
+<dt><a href="http://vivi.dyndns.org/vikky2/vikky.phtml?title=TopPage">vikky</a></dt>
+<dd>PHP + PostgreSQL ベース。
+</dd>
+<dd>表組み、フォーム、ログインなど豊富な機能を持っていてかなり強力。
+</dd>
+<dt><a href="http://moonrock.jp/~don/wikimodoki/wikimodoki.cgi">Wikiもどき</a></dt>
+<dd>Ruby ベース。RD 形式で記述する。
+</dd>
+<dd>単純に言ってしまえば、RWiki の機能を dRuby 抜きで実現したもの。
+</dd>
+<dt><a href="http://www.gci-net.com/users/j/johnw/EmacsResources.html">EmacsWiki</a></dt>
+<dd>Emacs-Lispベース。
+</dd>
+<dd>Web上で編集できるというWikiの特徴はちょっと違うものの、&lt;q&gt;個人の情報管理ツールとしては有用&lt;/q&gt;との<a href="http://www.ops.dti.ne.jp/~cake-smd/wiki/EmacsWiki.html">報告</a>も。
+</dd>
+<dt><a href="http://twiki.org/">TWiki</a></dt>
+<dd>Perlベース。海外ではけっこう有名みたい。高機能。
+</dd>
+<dd>日本語は通らない。cf. <a href="http://twiki.org/cgi-bin/view/Codev/KanjiCharacterSet&quot; title=&quot;TWikiにおける日本語処理についての議論">TWiki.Codev.KanjiCharacterSet</a>
+</dd>
+<dd>ただ、GPLなのにダウンロード時に登録しないといけないのがちょっとイヤ。
+</dd>
+<dt><a href="http://www.usemod.com/cgi-bin/wiki.pl?UseModWiki">UseModWiki</a></dt>
+<dd><a href="http://emacswiki.org/">http://emacswiki.org/</a> が採用するなど、海外では結構人気のあるみたい。
+</dd>
+<dd>日本語はそのままでは通らないが、<a href="http://p5ee.net/wiki.pl?WikiName">p5eeWiki:WikiName</a>や<a href="http://www.ceres.dti.ne.jp/~george/jdiaryA11001.html#2001100502">WikiWiki clone - UseModWiki</a>などに日本語対応パッチあり。
+</dd>
 </dl>
 <h2 id="toc1_1">参照URL</h2>
 <ul>
@@ -51,18 +82,6 @@ WikiCloneについてのメモ</div>
 <address>高久雅生 (Masao Takaku)<br />
 <a href="http://masao.jpn.org/">http://masao.jpn.org/</a>,
 <a href="mailto:masao@nii.ac.jp">masao@nii.ac.jp</a></address>
-<div class="google-ads">
-<script type="text/javascript"><!--
-google_ad_client = "pub-4944393696391770";
-google_ad_width = 728;
-google_ad_height = 90;
-google_ad_format = "728x90_as";
-google_ad_type = "text_image";
-google_ad_channel = "";
-//--></script>
-<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
-</div>
 <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
 </script>
 <script type="text/javascript">
