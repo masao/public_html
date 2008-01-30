@@ -110,12 +110,8 @@ if $0 == __FILE__
    if cgi.params["id"][0]
       if cgi.params["submit"][0]
       else
-         #puts ERB.new( open( TEMPLATE_FILE ){|io| io.read }, nil, "<>" ).result( binding )
          entry = itemlist.find{|e| e[:id] == cgi.params["id"][0] }
          puts ERB.new( open( "tb-send.id.rhtml" ){|io| io.read }, nil, "<>" ).result( binding )
-         #parse_html( entry ).each do |url|
-         #p [url, Trackback.auto_discovery( url, entry[:title], entry[:content], entry[:url], BLOG_NAME )]
-         #end
       end
    elsif cgi.params["date"][0]
       itemlist = itemlist.select{|e| /\A#{ cgi.params["date"][0] }/ =~ e[:id] }
