@@ -36,14 +36,14 @@ class HikiDoc::HTMLOutput
       attr.keys.sort.each do |k|
          attr_s << %Q[ #{k}="#{attr[k]}"]
       end
-      @f.puts "<h#{level}#{ " " + attr_s if attr_s.size > 0 }>#{title}</h#{level}>"
+      @f.puts "<h#{level}#{ attr_s if attr_s.size > 0 }>#{title}</h#{level}>"
    end
 end
 
 # My HikiDoc...
 #
 class MHikiDoc < HikiDoc
-   attr_reader :toc, :label
+   attr_reader :toc, :label, :options
    def initialize( content, options = {} )
       @toc = []
       @label = options[:label] || ''
@@ -132,9 +132,9 @@ class MHikiDoc < HikiDoc
       class Include < Plugin
          def expand( *args )
             content = open(args[0]){|io| io.readlines }.join
-            MHikiDoc.to_xhtml( content,
-                              { :label => args[0].gsub(/\W+/,''),
-                                :interwiki => @interwiki } )
+            options = @doc.options
+            options[:label] = args[0].gsub(/\W+/,'')
+            MHikiDoc.to_xhtml( content, options )
          end
       end
       class Rawhtml < Plugin
@@ -147,24 +147,28 @@ class MHikiDoc < HikiDoc
             #STDERR.puts [@style,args].inspect
             lines = args.join("\n").split(/\n/)
             attrs = lines.shift
-            text = MHikiDoc.to_html( lines.join("\n"),
-                                     {  :label => args[0].gsub(/\W+/,''),
-                                        :interwiki => @interwiki } )
+            options = @doc.options
+            options[:label] = args[0].gsub(/\W+/,'')
+            text = MHikiDoc.to_html( lines.join("\n"), options )
             %Q[<div #{ attrs }>#{ text }</div>]
          end
       end
       class Code < Plugin
          def expand( *args )
             str = args.join("\n")
-            #str = MHikiDoc.new( str ).to_html.gsub(/^<p>/,'').gsub(/<\/p>$/,'')
             %Q[<code>#{ str }</code>]
          end
       end
       class U < Plugin
          def expand( *args )
             str = args.join("\n")
-            #str = MHikiDoc.new( str ).to_html.gsub(/^<p>/,'').gsub(/<\/p>$/,'')
             %Q[<u>#{ str }</u>]
+         end
+      end
+      class Q < Plugin
+         def expand( *args )
+            str = args.join("\n")
+            %Q[<q>#{ str }</q>]
          end
       end
       class Image < Plugin
@@ -242,7 +246,7 @@ class ToHTML
       [ content.join, header ]
    end
    def expand( template = "template.html.#{@lang}" )
-      @doc = MHikiDoc.new( HikiDoc::HTMLOutput.new("/>"),
+      @doc = MHikiDoc.new( HikiDoc::HTMLOutput.new(" />"),
                            { :interwiki => @conf["interwiki"],
                              :plugin_syntax => Proc.new{ true },
                              :use_wiki_name => false,
