@@ -1,7 +1,6 @@
 @media screen, print {
   body {
     background-color: #afa;
-/*    font-family: sans-serif;*/
     margin: 1% 2% 0px;
     line-height: 1.2;
   }
@@ -64,7 +63,7 @@
     font-size: smaller;
     float: right;
     width: 45%;
-    background-color: #ccc;
+    background-color: #ddd;
   }
   div.validator img {
     border: 0px;
