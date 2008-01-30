@@ -1,0 +1,100 @@
+title: 	ウィキペディア: 編集者のコミュニティ？寄稿者のコミュニティ？
+date.available: 2008-01-24
+date.modified: 2008-01-30
+subject: trans
+css.content: div.orig { color: gray; font-size: smaller; line-height:1.0; padding: 0px; margin-top: -0.5em; /*margin-left: 1.2em;*/ }
+css.content: div.note { margin:2em;padding:10px;font-size:smaller;background-color:#ddd; }
+
+{{div class="note"
+以下の文章は、Tim Oreily氏による「[[Wikipedia: A community of editors or a community of authors?|http://radar.oreilly.com/archives/2008/01/wikipedia_community_publishing.html]]」と題するブログ記事の日本語訳です。
+
+元記事と同じく[[Creative Commons (表示-非営利-継承) ライセンス|http://creativecommons.org/licenses/by-nc-sa/1.0/]]で公開します。
+
+現在、日本語訳の内容について[[はてな人力検索|http://q.hatena.ne.jp/xxxxxxxx]]にて添削を受け付けています。
+}}
+----
+
+ホリデーシーズンということでいつもより少しだけ時間があったので、いろんな読み物に没頭してみた。古いリンク記事を辿って見たり。そのなかで見逃していたのが信じられないような、重要な記事に出会った。2006年に公開されていたAaron Swartzの「[[Who Writes Wikipedia?|http://www.aaronsw.com/weblog/whowriteswikipedia]]」（※日本語訳:[[WhoWritesWikipedia - 日本語訳|http://www.hyuki.com/yukiwiki/wiki.cgi?WhoWritesWikipedia]]）だ。
+
+{{div class="orig"
+Having a bit more time than usual over the holidays, I caught up on various types of reading, including following old links. One of the pieces I came across that I can't believe I missed when it was first published back in 2006 is Aaron Swartz's Who Writes Wikipedia?
+}}
+
+この記事は出版の将来像を気にかけている人なら必読の記事だ。
+Aaronはウィキペディアの実像についてのJimmy Walesの解説は誤りだとして、以下のように議論している:
+
+{{div class="orig"
+This piece is a must-read for anyone who cares about the future of publishing. Aaron argues that Jimmy Wales' account of how Wikipedia happens is wrong:
+}}
+
+""ウィキペディアの顔であるJimbo Walesに初めて会ったのは、彼がスタンフォードに講演に来たときだった。Walesはその講演でウィキペディアの歴史、技術、文化について語ったが、その内容で一つ気になったことがあった。「大勢の人たちがウィキペディアについて抱く思いというのは」と彼は述べ、つづけて、「一種の新しい潮流、つまり群集の叡智、群知能とでも言うべきものではないかというもので、これは何千何万もの個人たちが小さなコンテンツを追加することで明快な作品が生みだされることからきているようだ」と語った。しかし、彼は真実は異なるものだと強調した。つまり、ウィキペディアは実際には「コミュニティ、それも数百人のボランティアからなる熱心なグループ」によって書かれているものだという。しかも「私はそのグループ全員を知っているし、グループ内のみんなもお互いを知っている」という。まさに、「これまでの伝統的な組織となんら変わらないものだ。」
+""
+""{{div class="orig"
+I first met Jimbo Wales, the face of Wikipedia, when he came to speak at Stanford. Wales told us about Wikipedia's history, technology, and culture, but one thing he said stands out. "The idea that a lot of people have of Wikipedia," he noted, "is that it's some emergent phenomenon -- the wisdom of mobs, swarm intelligence, that sort of thing -- thousands and thousands of individual users each adding a little bit of content and out of this emerges a coherent body of work." But, he insisted, the truth was rather different: Wikipedia was actually written by "a community ... a dedicated group of a few hundred volunteers" where "I know all of them and they all know each other". Really, "it's much like any traditional organization."
+}}
+""
+""もちろん、根本的な違いがある。ウィキペディアのような偉業がどのようになされたかを知りたい一般の人たちにとってだけでなく、サイトの運営方法を知りたいWales自身に対しても。「私にとってこれは本当に重要なことで、この400〜500人ほどの人たちの意見に耳を傾けるのに相当の時間を費しているんだからね。もし…これらの人たちが口だけの人だとしたら、…方針を決めるときにもたぶん彼らの言うことは無視すれば足りるだろうし。」と彼は言った。代わりに「個々の文を書いている数百の人たち」のことを気にかけないとだめになるだろう。
+""
+""{{div class="orig"
+The difference, of course, is crucial. Not just for the public, who wants to know how a grand thing like Wikipedia actually gets written, but also for Wales, who wants to know how to run the site. "For me this is really important, because I spend a lot of time listening to those four or five hundred and if ... those people were just a bunch of people talking ... maybe I can just safely ignore them when setting policy" and instead worry about "the million people writing a sentence each".
+}}
+
+Aaronは、（Jimmy Walesがやっているように）編集回数を数えるのではなく語数を数えるようにすれば、ウィキペディアのコンテンツの大半がコアな編集者以外の人たちの手によるものになると議論している。
+
+{{div class="orig"
+Aaron makes the argument that when you count words rather than edits (as Jimmy Wales does when citing Wikipedia contributor statistics), most of the content in Wikipedia does indeed come from contributors outside the core.
+}}
+
+Aaronの中心となる論点は、運営面から見て、ウィキペディアはコア編集者たちよりも、気紛れな個々のコンテンツ編集者たちに多くの目を向けるべきではないかというものだ。（そして、近年起こっている批判は、ウィキペディアのコアコミュニティがあまりに内輪向きにすぎる集団ではないかとのAaronの主張を裏付けているのだけど。）しかし、私は別の側面に興味を惹かれた。
+
+{{div class="orig"
+Aaron's principal point was that from a governance point of view, Wikipedia should focus more on random, individual contributors of content, rather than on the core of editors. (And recent controversies have supported Aaron's contention that Wikipedia's core community may be too ingrown.) But I was interested for another reason.
+}}
+
+Aaronとは違い、私はJimmyは正しいと思う。つまり、ウィキペディアは伝統的な出版組織と多くの面で共通点を持っていると思う。しかし、Aaronもまた正しいと思う。つまり、全ての編集者たちの価値を認めるべきだと思う。O'Reillyの出版事業を例にとってみよう。わたしたちは雇っている社員よりも多くの外部執筆者をかかえている。そう、ウィキペディアの執筆者と同じようにだ。外部執筆者たちの作品は編集チームによって改善を加えられ、私たちが作り出したブランドの一環として市場に届けられる。しかし、外部の作家たちがいなければ私たちは何もできないのだ。これはどんな出版社にとっても全く同じことだろう。Bloomsbury社の編集者がハリーポッターを産み出したのか？ちがうだろう。電車に乗っている最中にこのアイデアを夢見た生活保護を受けているある母親の手によるものだ。
+
+{{div class="orig"
+Unlike Aaron, I think that Jimmy is right: Wikipedia does have a lot in common with traditional publishing organizations. But Aaron is also right: you have to value the contributors. Take O'Reilly's book publishing operations: we have far more outside authors than we have employees. Many of them are passionate experts rather than professional writers or editors, just like Wikipedia authors. Their work is improved by an editing team and brought to market in the context of brands that we've created, but we couldn't do what we do without them. This is just as true of any publishing company. Did Bloomsbury's editors invent Harry Potter? No, it was a welfare mom who dreamed up the idea while riding on the train.
+}}
+
+どんな出版社も両者の力を必要だ。大勢の外部執筆者たちとのつながりと、常勤の編集者たちからなるコア集団。
+
+{{div class="orig"
+Any publishing organization needs both: a large network of contributors and a core of committed regulars.
+}}
+
+この観点から私はいつも、出版業界が「ユーザ・ジェネレイティッド・コンテンツ」を見下しているような風潮に当惑を覚えてきた。出版業の基本的な仕事というのは博物館のようなものだと思う。良いモノを揃え、それをまだ観たことがないような観客に届ける。このためには、（必ずしも必要でない場合もあるが）ほとんどの場合はこれを編集したり改良したりするような作業が必要となってくる（私たちの出版物のうちでもっとも成功した本の中には編集作業をほとんど要しなかったようなものもある）。時には、委託して書いてもらったり、創作そのものも行ってしまうこともあるが、そういったケースは例外的だ。
+
+{{div class="orig"
+This is why I've always found the publishing disdain for "user generated content" to be so perplexing. The fundamental job of publishing is curation -- finding good stuff and bringing it to an audience that might not otherwise encounter it. It often (but not always) includes editing and improving it. (Some of our most successful books required very little editing.) Sometimes it involves commissioning or creating it, but that is far from the norm.
+}}
+
+だから、出版社はウィキペディアを研究すべきだ（ほかにもYouTubeやGoogleも）。なぜなら、それらの動きは出版の新しい側面を見せてくれているからだ。これらの活動の中核は、コンテンツ制作の新しい手法を取り入れているだけでなく、博物的な側面でも新しい手法を取り入れている。ウィキペディアでは執筆者がその知識と情熱を燃やしながらスキルを学ぶ場を作りあげている。そう、協調創作ができるんだ。しかも、それをうまいことやっていっている。でも、ウィキペディアの核となる枠組みは小さなチームが開発したもので、この小さな集団がそれを軌道に乗せるべく編集作業を続けている。
+
+{{div class="orig"
+This is why publishers should be studying Wikipedia (and YouTube, and Google) -- because they are all showing us the new face of publishing. At their heart, they involve new means of content creation yes, but more profoundly, they involve new means of curation. Wikipedia creates a context within which authors can exercise their skills, displaying their knowledge and their passion. Yes, it allows for collaborative creation, and that's good. But the core framework of Wikipedia was developed by a small team, and a small team provides the editing work that keeps it on track.
+}}
+
+このことは決して何か根本的に新しいことではない。単に出版社がすでにやっていることの一部をちょっと違ったやりかたでもっとうまくこなしているだけのことだ。
+
+{{div class="orig"
+This isn't fundamentally new. It's a different and better way of doing some tasks that publishers already perform.
+}}
+
+Googleも同じことだ。PageRankがWebコンテンツのごちゃごちゃの塊を整理することが、何百万ものユーザからの支持を得て、サーチエンジン業界で巨万の富を得る地位に君臨するようになった、一つの要因とみなされている。
+
+{{div class="orig"
+Ditto Google. PageRank might be thought of as a way of getting millions of readers to work on the slushpile of web content, and promoting the best material to the top, where it can become professionalized.
+}}
+
+（偶然にも、これが私たちが開催した「Tools of Change for Publishing」カンファレンスに技術者たちと出版社たちの双方を招いた理由の一つだ。Webで起きていることの大部分は出版業界のやり方の再発明となっている。代替となるものを創りだしているのではなく、再生産し、補強し、出版社に技術者がしていることのうち一番大切なものは何であり、新しいメディアにおけるコアコンピテンシーを再発見するにはどうすればよいかを教えてくれる。）
+
+{{div class="orig"
+(Incidentally, this is one of the reasons why we bring technologists and publishers together at our Tools of Change for Publishing conference. A great deal of what is happening on the web is the reinvention of the practices of publishing, not creating an alternative to them, but recreating them, reinforcing them, and showing publishers what is most important about what they do, and how to re-discover their core competencies in the new medium.)
+}}
+
+追伸: もしもAaronの分析が正しいのなら、ウィキペディアへの参加パターンがオープンソースソフトウェアにおける参加パターンと相当に違うということになる。オープンソースソフトウェアの場合、Ohlohの参加統計はJimmy Walesによるウィキペディアに関する公式の説と似たようなものとなっている。つまりおおかたの作業は小さな中核的なコミュニティによってなされている。
+
+{{div class="orig"
+P.S. If Aaron's analysis is right, it demonstrates that Wikipedia is significantly different in its contribution pattern from open source software, which Ohloh's contribution statistics demonstrate have a pattern much like Jimmy Wales' official story about Wikipedia, that most of the work is done by a small core community.
+}}
