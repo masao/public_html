@@ -10,6 +10,13 @@ class CGI
    def self_url
       "http://" + server_name.to_s + script_name.to_s
    end
+   def cgi_params( override = {} )
+      r = []
+      self.params.merge( override ).each do |k,v|
+         r << "#{k}=#{v}"
+      end
+      r.join(";")
+   end
 end
 
 module Trackback
@@ -98,7 +105,8 @@ end
 
 if $0 == __FILE__
    include Chalow
-
+   include ERB::Util
+   
    itemlist = parse_itemlist
 
    BLOG_NAME = "まさおのChangeLogメモ";
@@ -120,4 +128,3 @@ if $0 == __FILE__
       puts ERB.new( open( "tb-send.rhtml" ){|io| io.read }, nil, "<>" ).result( binding )
    end
 end
-

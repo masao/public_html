@@ -10,13 +10,20 @@
 </head>
 <body>
 <ul>
-<% i = 0 %>
-<% itemlist.each do |entry| %>
+<% SIZE = 15 %>
+<% start = cgi.params["start"][0].to_i %>
+<% itemlist[start, SIZE].each do |entry| %>
   <li><%= entry[:id] %>: <a href="<%= cgi.self_url %>?id=<%= entry[:id] %>"><%= entry[:title] %></a></li>
-<%    i += 1 %>
-<%    break if i > 15 %>
 <% end %>
 </ul>
+<p>
+<% if start != 0 %>
+<a href="<%=h cgi.script_name %>?<%=h cgi.cgi_params( "start" => start-SIZE ) %>">&lt;&lt;prev <%=h SIZE %></a>
+<% end %>
+<% if itemlist.size > start + SIZE %>
+<a href="<%=h cgi.script_name %>?<%=h cgi.cgi_params( "start" => start+SIZE ) %>">next <%=h SIZE %>&gt;&gt;</a>
+<% end %>
+</p>
 <ul>
 <% itemlist.map{|e| e[:id][ 0, 4 ] }.uniq.each do |y| %>
 <li><%= y %>:
