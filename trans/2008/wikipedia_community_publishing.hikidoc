@@ -2,13 +2,12 @@ title: 	ウィキペディア: 編集者のコミュニティ？寄稿者のコミュニティ？
 date.available: 2008-01-30
 date.modified: 2008-01-30
 subject: trans
-css.content: div.orig { color: gray; font-size: smaller; line-height:1.0; padding: 0px; margin-top: -0.5em; /*margin-left: 1.2em;*/ }
+css.content: div.orig { color: #666; font-size: smaller; line-height:1.0; padding: 0px; margin-top: -0.5em; }
 css.content: div.note { margin:2em;padding:10px;font-size:smaller;background-color:#ddd; }
 css.content: .trans-comment { color:maroon;font-size:smaller; }
 
 {{div class="note"
 以下の文章は、Tim Oreily氏による「[[Wikipedia: A community of editors or a community of authors?|http://radar.oreilly.com/archives/2008/01/wikipedia_community_publishing.html]]」と題するブログ記事の日本語訳です。
-
 元記事と同じく[[Creative Commons (表示-非営利-継承) ライセンス|http://creativecommons.org/licenses/by-nc-sa/1.0/]]で公開します。
 
 現在、日本語訳の内容について[[はてな人力検索|http://q.hatena.ne.jp/1201698451]]にて添削を受け付けています。
