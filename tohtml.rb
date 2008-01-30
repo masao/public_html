@@ -246,6 +246,7 @@ class ToHTML
                            { :interwiki => @conf["interwiki"],
                              :plugin_syntax => Proc.new{ true },
                              :use_wiki_name => false,
+                             :allow_bracket_inline_image => false,
                            })
       body = @doc.compile( @content )
       body = expand_plugin( body )
