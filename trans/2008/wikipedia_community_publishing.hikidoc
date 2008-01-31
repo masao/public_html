@@ -1,6 +1,6 @@
 title: ウィキペディア: 編集者のコミュニティ？寄稿者のコミュニティ？
 date.available: 2008-01-30
-date.modified: 2008-01-31
+date.modified: 2008-02-01
 subject: trans
 css.content: div.orig { color: #666; font-size: smaller; line-height:1.0; padding: 0px; margin-top: -0.5em; }
 css.content: div.note { margin:2em;padding:10px;font-size:smaller;background-color:#ddd; }
@@ -12,6 +12,9 @@ css.content: .trans-comment { color:maroon;font-size:smaller; }
 
 現在、日本語訳の内容について[[はてな人力検索|http://q.hatena.ne.jp/1201698451]]にて添削を受け付けています。
 原文は添削終了後に除去する予定です。
+
+[[nofrills|http://q.hatena.ne.jp/nofrills/]]様からコメントをいただき、修正しました。
+ありがとうございました。
 
 コメントなどありましたら、お気軽にどうぞ。
 }}
@@ -32,20 +35,19 @@ This piece is a must-read for anyone who cares about the future of publishing. A
 }}
 
 ""ウィキペディアの顔であるJimbo Walesに初めて会ったのは、彼がスタンフォードに講演に来たときだった。Walesはその講演でウィキペディアの歴史、技術、文化について語ったが、その内容で一つ気になったことがあった。
-""「大勢の人たちがウィキペディアについて抱く思いというのは」と彼は語り、つづけて「一種の新しい潮流、つまり群集の叡智、群知能とでも言うべきものではないかというもので、これは何千何万もの個人たちが小さなコンテンツを追加することできちんと一貫した論理を持つような作品が生みだされることからきているようだ」と語った。
-""しかし、彼は真実は異なるものだと強調した。
-""つまり、ウィキペディアは実際には「あるコミュニティ、それも数百人のボランティアからなる熱心なグループ」によって書かれているものだという。
+""「大勢の人たちがウィキペディアについて抱く思いというのは一種の新しい潮流、つまり群集の叡智、群知能とでも言うべきものではないかというもので、これは何千何万もの個人がそれぞれ少しずつコンテンツを追加することできちんと（一貫して）整合性のとれたひとつの記事が生みだされることからきているようだ」と彼は語ったのだ。
+""しかし、彼は実際にはやや違うふうになっていると主張した。
+""つまり、ウィキペディアは「あるコミュニティ、それも数百人のボランティアからなる熱心なグループ」によって書かれているものだという。
 ""しかも「私はそのグループ全員を知っているし、グループ内のみんなもお互いを知っている」という。
-""まさに「これまでの伝統的な組織となんら変わらないものだ。」
+""まさに「これまでの伝統的な組織と変わらないものだ。」
 ""
 ""{{div class="orig"
 I first met Jimbo Wales, the face of Wikipedia, when he came to speak at Stanford. Wales told us about Wikipedia's history, technology, and culture, but one thing he said stands out. "The idea that a lot of people have of Wikipedia," he noted, "is that it's some emergent phenomenon -- the wisdom of mobs, swarm intelligence, that sort of thing -- thousands and thousands of individual users each adding a little bit of content and out of this emerges a coherent body of work." But, he insisted, the truth was rather different: Wikipedia was actually written by "a community ... a dedicated group of a few hundred volunteers" where "I know all of them and they all know each other". Really, "it's much like any traditional organization."
 }}
 ""
-""もちろん、この2つには根本的な違いがある。
-""ウィキペディアのような偉業がどのようになされたかを知りたい一般の人たちにとってだけでなく、ウィキペディアの運営方法を知りたいWales自身にとっても。
-""「私にとってこれは本当に重要なことで、この400〜500人ほどの人たちの意見に耳を傾けるのに相当の時間を費しているんだからね。もし…これらの人たちが口だけの人だとしたら…方針を決めるときにもたぶん彼らの言うことは無視すれば足りるだろうし。」と彼は言った。
-""代わりに「個々の文章を書いている数百万もの人たち」のことを気にかけるようになるだろう。
+""もちろん、その違いは決定的なものだ。
+""ウィキペディアのような偉業がどのようになされているかを知りたい一般の人たちにとってだけでなく、ウェールズ自身にとってもだ。というのは、彼自身もこのサイトをどう運営したらよいのかを知りたいからだ。
+""「私にとってこれは本当に重要なことで、この400〜500人ほどの人たちの意見に耳を傾けるのに相当の時間を費しているんだからね。もし…これらの人たちが口だけの人だとしたら…方針を決めるときにもたぶん彼らの言うことは無視すれば足りるだろうし、代わりに個々の文章を書いている数百万もの人たちのことを気にかけるようになるだろう。」と彼は述べた。
 ""
 ""{{div class="orig"
 The difference, of course, is crucial. Not just for the public, who wants to know how a grand thing like Wikipedia actually gets written, but also for Wales, who wants to know how to run the site. "For me this is really important, because I spend a lot of time listening to those four or five hundred and if ... those people were just a bunch of people talking ... maybe I can just safely ignore them when setting policy" and instead worry about "the million people writing a sentence each".
