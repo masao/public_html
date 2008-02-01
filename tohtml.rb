@@ -171,6 +171,12 @@ class MHikiDoc < HikiDoc
             %Q[<q>#{ str }</q>]
          end
       end
+      class Ins < Plugin
+         def expand( *args )
+            str = args.join("\n")
+            %Q[<ins>#{ str }</ins>]
+         end
+      end
       class Image < Plugin
          def expand( *args )
             #STDERR.puts args.inspect
