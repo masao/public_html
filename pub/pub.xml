@@ -2,6 +2,26 @@
 <!-- $Id$ -->
 <publist>
 
+  <pub type="journal">
+    <author>相澤彰子</author>
+    <author>高久雅生</author>
+    <author>大山敬三</author>
+    <title>大規模データベースを利用したリンケージシステムの提案と実装</title>
+    <journal>日本データベース学会Letters</journal>
+    <year>2008</year>
+    <month>3</month>
+    <volume>6</volume>
+    <number>4</number>
+    <!--
+    <page>
+      <start>31</start>
+      <end>36</end>
+    </page>
+    -->
+    <note>（採録）</note>
+    <language>ja</language>
+  </pub>
+
   <pub type="misc">
     <author>高久雅生</author>
     <author>相澤彰子</author>
