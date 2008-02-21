@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby
+#!/usr/local/bin/ruby
 # $Id$
 
 require "mailread"
@@ -25,11 +25,13 @@ multiparts = false
 open("forwardmail_mobile.log", "a") do |log|
    log.puts [ now.strftime( "%Y%m%dT%H%M%S" ), from, subject ].join( "\t" )
 end
+#STDERR.puts mail[ "content-type" ].inspect
 if /^text\/plain/i =~ mail[ "content-type" ]
-elsif /^multipart\/.*boundary\s*=\s*(\"?)([^\"]+)\1/is =~ mail[ "content-type" ]
+elsif /^multipart\/.*boundary\s*=\s*(\"?)([^\"]+)\1/ism =~ mail[ "content-type" ]
+   #STDERR.puts "multipart!"
    boundary = $2
    first_text = nil
-   multiparts = body.join( "" ).split( /\n--#{ Regexp.quote boundary }.*\n/ )
+   multiparts = body.join( "" ).split( /\n--#{ Regexp.quote boundary }.*\n/s )
    attach = []
    multiparts.each do |str|
       next if str.empty?
