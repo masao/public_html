@@ -26,8 +26,8 @@ open("forwardmail_mobile.log", "a") do |log|
    log.puts [ now.strftime( "%Y%m%dT%H%M%S" ), from, subject ].join( "\t" )
 end
 if /^text\/plain/i =~ mail[ "content-type" ]
-elsif /^multipart\/.*boundary=\"([^\"]+)\"/ =~ mail[ "content-type" ]
-   boundary = $1
+elsif /^multipart\/.*boundary\s*=\s*(\"?)([^\"]+)\1/is =~ mail[ "content-type" ]
+   boundary = $2
    first_text = nil
    multiparts = body.join( "" ).split( /\n--#{ Regexp.quote boundary }.*\n/ )
    attach = []
