@@ -505,7 +505,7 @@ sub okikae {
     ### URL。Hiki の記法を採用。
     my $URL_REGEX = '(?:(?:https?|ftp:\/\/)|\.\.?\/|\/)[^\s\(\)\|<>"\'\0-\037]+?';
     s!\[\[\s*($URL_REGEX)\s*\]\]!get_link_str($1, $1)!gme;
-    s!\[\[(.+?)\s*\|\s*($URL_REGEX)\]\]!get_link_str($1, $2)!gme;
+    s!\[\[(.+?)\s*\|\s*($URL_REGEX)\]\]!get_link_str($1, $2)!gmse;
 
     ### 表。Hiki の記法を採用。
     s!(^(\|\|[^\n]+\n)+)!'<table><tr>'.
