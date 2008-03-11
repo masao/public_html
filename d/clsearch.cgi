@@ -212,6 +212,12 @@ my $page_template = << "__TEMPLE"
 <a href="./">ChangeLog INDEX</a>
 <div style="text-align:right">Powered by 
 <a href="http://nais.to/~yto/tools/chalow/"><strong>chalow</strong></a></div>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-389547-1";
+urchinTracker();
+</script>
 </body></html>
 __TEMPLE
 
