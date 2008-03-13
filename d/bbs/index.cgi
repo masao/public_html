@@ -139,7 +139,7 @@ if ($mode eq "write") {
 	exit if scalar(@spam) > 2;
 
 	# ÆÃÄê¤ÎÊ¸»úÎó¤ò¶Ø»ß
-	@spam = ($body =~ /Hello!?\s*(Good|Nice) Site/gmoi);
+	@spam = ($body =~ /\b(good|nice|cool|funny|best|great) site/gmoi);
 	exit if scalar(@spam) > 0;
 
 	escape_string(\$name);	
