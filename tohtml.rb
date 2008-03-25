@@ -31,6 +31,9 @@ class HierFilename < Pathname
 end
 
 class HikiDoc::HTMLOutput
+   def escape_html(text)
+      text.gsub(/&/, "&amp;").gsub(/</, "&lt;").gsub(/>/, "&gt;").gsub(/&amp;#(x[\da-f]+|\d{2,3});/i, '&#\1;')
+   end
    def headline(level, title, attr)
       attr_s = ""
       attr.keys.sort.each do |k|
@@ -151,6 +154,17 @@ class MHikiDoc < HikiDoc
             options[:label] = args[0].gsub(/\W+/,'')
             text = MHikiDoc.to_html( lines.join("\n"), options )
             %Q[<div #{ attrs }>#{ text }</div>]
+         end
+      end
+      class Blockquote < Plugin
+         def expand( *args )
+            #STDERR.puts [@style,args].inspect
+            lines = args.join("\n").split(/\n/)
+            attrs = lines.shift
+            options = @doc.options
+            options[:label] = args[0].gsub(/\W+/,'')
+            text = MHikiDoc.to_html( lines.join("\n"), options )
+            %Q[<blockquote #{ attrs }>#{ text }</blockquote>]
          end
       end
       class Code < Plugin
