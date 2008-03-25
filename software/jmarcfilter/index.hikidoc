@@ -13,17 +13,17 @@ Japan/MARCのレコード構造を読み取り、
 上記のファイルをダウンロードし、解凍・展開してください。
 展開してできたファイル{{code 'jmarcfilter.pl'}}が、
 Japan/MARC形式のデータをプレインテキストに変換するプログラムです。
-また、<code>jmarc.pl</code>はJapan/MARCレコードを解析するためのライブラリです。
+また、{{code 'jmarc.pl'}}はJapan/MARCレコードを解析するためのライブラリです。
 例えば、以下のようにします。
       % gzip -cd jmarc-Perl.XXXXXXXX.tar.gz | tar xvf -
       % ./jmarcfilter.pl 200201
 
 !![[jmarc-C.20020318.tar.gz]] (C言語版)
 
-{{code 'jmarcfilter.pl'}}の機能をC言語で実装したものです。
+上記、{{code 'jmarcfilter.pl'}}の機能をC言語で実装したものです。
 
 上記のファイルをダウンロードし、解凍・展開してください。
-展開してできたファイル<code>jmarcfilter.c</code>が、
+展開してできたファイル{{code jmarcfilter.c}}が、
 Japan/MARC形式のデータをプレインテキストに変換するプログラムです。
 例えば、以下のようにします。
 
@@ -31,45 +31,3 @@ Japan/MARC形式のデータをプレインテキストに変換するプログラムです。
       % cc -o jmarcfilter jmarcfilter.c
       % ./jmarcfilter /ap/MARC/JP/200201
       ..
-
-!!!USマーク関連ツール
-
-!![[cleanup_usmarc.c]]
-
-現在公開しているUS MARCのデータから、ノイズを除去するプログラムです。
-このプログラムで作成したデータは、US MARCのAPIを使って解析できます。
-C言語で実装しています。
-
-下記のファイルをダウンロードしてください。
-例えば、以下のようにします。
-      % cc -o cleanup_usmarc cleanup_usmarc.c
-      % ./cleanup_usmarc  /ap/MARC/US/922001 922001.new
-
-!![[http://marcpm.sourceforge.net/|MARC.pm]]
-SOURCE FORGEが提供している、US MARC用のPerl5のモジュールです。
-cleanup_usmarc.cを使って作成したデータを解析して、
-さまざまなフォーマットに変換することができます。
-
-例えば、以下のようなperlプログラムusmarc.plでテキストに変換できます。
-  -----
-  #!/usr/local/bin/perl -w
-  # ファイル名：usmarc.pl
-        
-  use MARC;
-  
-  if(@ARGV != 2){
-      print "USAGE: $0 inputfile outputfile\n";
-      exit 1;
-  } 
-  
-  $infile = $ARGV[0];
-  $outfile = $ARGV[1];
-  
-  $x = new MARC;
-  $x->openmarc({file=>$infile,'format'=>"usmarc"});
-  while ($x->nextmarc(1)) {
-      $x->output({file=>">>$outfile",'format'=>"ascii"});
-      $x->deletemarc(); #empty the object for reading in another
-  }
-  -----
-  % usmarc.pl 922001.new 922001.txt
