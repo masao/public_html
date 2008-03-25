@@ -22,6 +22,7 @@ HTML	= 	index.html.ja index.html.en \
 		software/zipcode_cgi.html \
 		software/graphviz-ja/index.html \
 		software/google-cache.html \
+		software/jmarcfilter/index.html \
 		private/memo.html \
 		lecture/index.html \
 		lecture/2005/excel/index.html \
