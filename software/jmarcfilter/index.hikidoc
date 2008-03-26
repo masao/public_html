@@ -1,9 +1,11 @@
 title: JAPAN/MARC関連ツール
-date.modified: 2008-03-25
+date.modified: 2008-03-26
 date.available: 2008-03-25
 subject: software
 
-!![[jmarc-Perl.20020318.tar.gz]] (Perl版)
+//以下のツール群は図書館情報大学電子図書館プロジェクトの一環として、http://lib.ulis.ac.jp というアドレスにおいて公開されていたものです。
+
+!![[jmarc-Perl.20020318.tar.gz|../archive/jmarc-Perl.20020318.tar.gz]] (Perl版)
 
 Japan/MARCのレコード構造を読み取り、
 文字コードがASCII・ISO-2022-JPからなるプレインテキストに変換します。
@@ -13,21 +15,55 @@ Japan/MARCのレコード構造を読み取り、
 上記のファイルをダウンロードし、解凍・展開してください。
 展開してできたファイル{{code 'jmarcfilter.pl'}}が、
 Japan/MARC形式のデータをプレインテキストに変換するプログラムです。
+例えば、以下のようにMARCファイルを引数として指定して実行します。
+ % gzip -cd jmarc-Perl.XXXXXXXX.tar.gz | tar xvf -
+ % ./jmarcfilter.pl 200201
+
 また、{{code 'jmarc.pl'}}はJapan/MARCレコードを解析するためのライブラリです。
-例えば、以下のようにします。
-      % gzip -cd jmarc-Perl.XXXXXXXX.tar.gz | tar xvf -
-      % ./jmarcfilter.pl 200201
+[[簡単なマニュアル|jmarc-man.html]]も一応あります...。
 
-!![[jmarc-C.20020318.tar.gz]] (C言語版)
+!![[jmarc-C.20020318.tar.gz|../archive/jmarc-C.20020318.tar.gz]] (C言語版)
 
-上記、{{code 'jmarcfilter.pl'}}の機能をC言語で実装したものです。
+上記の{{code 'jmarcfilter.pl'}}の機能をC言語で実装したものです。
 
 上記のファイルをダウンロードし、解凍・展開してください。
 展開してできたファイル{{code jmarcfilter.c}}が、
 Japan/MARC形式のデータをプレインテキストに変換するプログラムです。
 例えば、以下のようにします。
+ % gzip -cd jmarc-C.XXXXXXXX.tar.gz | tar xvf -
+ % cc -o jmarcfilter jmarcfilter.c
+ % ./jmarcfilter /ap/MARC/JP/200201
+ ..
 
-      % gzip -cd jmarc-C.XXXXXXXX.tar.gz | tar xvf -
-      % cc -o jmarcfilter jmarcfilter.c
-      % ./jmarcfilter /ap/MARC/JP/200201
-      ..
+!!注意事項
+{{blockquote ""
+なお、JAPAN/MARC で独自に定義されている外字については、適宜変換を行なった1。
+1 Ａ&#x0302;Ｉ&#x0302;Ｕ&#x0302;Ｅ&#x0302;Ｏ&#x0302;などは、Ａ, Ｉ, Ｕ, Ｅ, Ｏに、その他の追加文字は空白文字に変換した。また、JAPAN/MARC では長音（ー）の文字がマイナス（−）記号になっているので、カタカナ・平仮名の直後に現れるマイナス記号は長音に変換した。
+}}
+高久雅生: 修士論文, p.14 (2000)
+!!Japan/MARCとは（参考）
+
+{{blockquote ""
+国立国会図書館が全国書誌データ領布用に開発したMARCで、1981年4月に領布サービスが開始された。そのフォーマットは、外形式についてはISO 2709 Format for Bibliographic Information Interchange on Magnetic Tape を採用し、内形式はUNIMARCに準拠したものとしているが、日本語の特徴である漢字データとその読み（片かなおよびローマ字表記）とのリンク、あるいは書誌記述中のタイトル、責任表示とタイトル標目、著者名標目とのリンクなど、独自の拡張を施している。また、「日本目録規則新版予備版」を基盤としており（1996年現在）、「同1987年版改訂版」への移行が急務とされている。現在、図書および逐次刊行物のMARCが提供、領布されているが、典拠データの領布も計画されている。
+}}
+図書館情報学用語辞典[1] p.84. 「JAPAN MARC」から引用。
+
+!!参考文献
+
+:全国書誌通信 --国立国会図書館図書部図書整理課編.
+::国立国会図書館図書部.
+:マークをうまく使うには：機械可読目録入門 -- 黒澤正彦, 西村徹編.
+::東京, 三洋出版貿易, 1986, 310p. （ISBN 4-87930-030-6）
+::マークの使い方について書いてある図書。
+:Japan/MARCマニュアル：図書編. 第1版. -- 国立国会図書館.
+::東京, 国立国会図書館, 1992, 129p. （ISBN 4-87582-332-0）
+::Japan/MARCマニュアルの第1版 。
+:Japan/MARCマニュアル：図書編. 第2版. -- 国立国会図書館.
+::東京, 国立国会図書館, 1998, 186p. （ISBN 4-87582-527-7）
+::Japan/MARCマニュアルの第2版 、第1版よりも付録が充実している。 
+
+#図書館情報学用語辞典. -- 日本図書館学会 用語辞典編集委員会編.
+
+!!関連リンク
+*[[国立国会図書館|http://www.ndl.go.jp]]
+**[[日本全国書誌|http://www.ndl.go.jp/jp/publication/jnbwl/jnb_top.html]]
