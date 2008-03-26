@@ -1,5 +1,5 @@
 title: ソフトウェア
-date.modified: 2007-02-25
+date.modified: 2008-03-26
 css.content: div.obsolete { opacity:0.5; color:gray; }
 
 ここでは、私が書いた簡単なツールを紹介します。
@@ -10,6 +10,7 @@ css.content: div.obsolete { opacity:0.5; color:gray; }
 :[[Graphviz日本語対応|graphviz-ja/]]:[[Graphviz|http://www.research.att.com/sw/tools/graphviz/]]を日本語に対応させたいなぁと思っております。
 :[[郵便番号検索スクリプト（CGIプログラム）|zipcode_cgi.html]]:郵便番号検索用のCGIスクリプトです。
 :[[Namazu用パッチ|../namazu/]]:全文検索エンジンNamazu用の機能追加パッチをいくつか公開しています。
+:[[JAPAN/MARC関連ツール|./jmarcfilter/]]:JAPAN/MARCレコードデータをプレインテキストに変換するプログラムを公開しています。
 
 !! 小物
 以下はちょっとした仕事をするためのワンライナー的スクリプトです。
