@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-JP">
+<link rel="stylesheet" href="../../default.css" type="text/css">
+<link rev="made" href="mailto:masao@nii.ac.jp">
+<title>jmarc.pl - Japan/MARC library for perl
+
+</title>
+</head>
+<body>
+<div><a href="./">[Up]</a></div><hr>
+<h1>jmarc.pl - Japan/MARC library for perl
+
+</h1>
+<h2>NAME</h2>
+<p>jmarc.pl - Japan/MARC library for perl</p>
+<h2>SYSNOPSYS</h2>
+<pre>  require 'jmarc.pl';
+  
+  my @records = jmarc::get_records($contents);</pre>
+
+<pre>  foreach my $record (@records) {
+      next if jmarc::get_status($record) eq $jmarc::DELETE;
+      my %fields = jmarc::get_fields($record);</pre>
+
+<pre>      foreach my $fid (sort keys %fields) {
+	  if ($fid eq "001") {
+	      print "$fid  $fields{$fid}\n";
+	      next;
+	  }
+	  foreach my $subfield (@{$fields{$fid}}) {
+	      while (my ($sub_fid, $value) = each %{$subfield}) {
+		  print "$fid \$$sub_fid $value\n";
+	      }
+	  }
+      }
+      print "\n";
+  }</pre>
+
+<h2>DESCRIPTION</h2>
+<p>このモジュールは、国立国会図書館が配布しているJapan/MARCレコードを解析
+するためのライブラリである。</p>
+<ul>
+<li><a name="item_jmarc__get_records__"></a><b>jmarc::get_records()</b>
+<p>含まれている複数のレコードをリストで返す。</p>
+</li>
+<li><a name="item_jmarc__read_record__file___pos_"></a><b>jmarc::read_record($file, $pos)</b>
+<p>ファイル名と開始位置を元に一レコードを読み込んで返す。</p>
+</li>
+<li><a name="item_jmarc__get_label__"></a><b>jmarc::get_label()</b>
+<p>レコードのラベル部分(固定長:24byte)を返す。</p>
+</li>
+<li><a name="item_jmarc__get_directory__"></a><b>jmarc::get_directory()</b>
+<p>ディレクトリの部分を返す。</p>
+</li>
+<li><a name="item_jmarc__get_data__"></a><b>jmarc::get_data()</b>
+<p>実際の書誌データ部分を返す。</p>
+</li>
+<li><a name="item_jmarc__get_status__"></a><b>jmarc::get_status()</b>
+<p>ラベルのうち、レコードの状況(新規・訂正・削除)を返す。</p>
+</li>
+<li><a name="item_jmarc__get_baseaddr__"></a><b>jmarc::get_baseaddr()</b>
+<p>データ部の開始位置を返す。</p>
+</li>
+<li><a name="item_jmarc__get_jpno__"></a><b>jmarc::get_jpno()</b>
+<p>JP番号を返す。</p>
+</li>
+<li><a name="item_jmarc__get_type__"></a><b>jmarc::get_type()</b>
+<p>レコードの種別（印刷物・コンピュータファイルなど）を返す。</p>
+</li>
+<li><a name="item_jmarc__get_fields__"></a><b>jmarc::get_fields()</b>
+<p>レコードのフィールド構造を解析して、結果全体をハッシュで返す。</p>
+</li>
+<li><a name="item_jmarc__as_html__"></a><b>jmarc::as_html()</b>
+</li>
+</ul>
+<p>以下は、文字コード変換機能を持つ関数である。</p>
+<ul>
+<li><a name="item_jmarc__escape_kanji__"></a><b>jmarc::escape_kanji()</b>
+<p>2バイト部を外字を考慮してISO-2022-JP文字列に変換して返す。</p>
+</li>
+<li><a name="item_jmarc__ebcdic2ascii__"></a><b>jmarc::ebcdic2ascii()</b>
+<p>EBCDICコードをASCIIに変換する。</p>
+</li>
+</ul>
+<h2>COPYRIGHT</h2>
+<p>Copyright (C) 2000 Masao Takaku &lt;masao@ulis.ac.jp&gt;.
+All rights reserved.</p>
+<hr>
+<address>高久雅生 (Takaku Masao)<br />
+<a href="http://masao.jpn.org/">http://masao.jpn.org/</a>,
+<a href="mailto:masao@nii.ac.jp">masao@nii.ac.jp</a></address>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-389547-1";
+urchinTracker();
+</script>
+</body></html>
