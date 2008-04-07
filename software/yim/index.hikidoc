@@ -1,7 +1,7 @@
 title: Yahoo!メッセンジャー・アーカイブ・ブラウザ
 subject: software
 date.available: 2006-12-09
-date.modified: 2006-12-12
+date.modified: 2008-04-07
 
 [[Yahoo!メッセンジャー|http://messenger.yahoo.co.jp/]]での会話内容を保存したメッセージアーカイブ・ファイルを簡単に閲覧・検索できるようにしたツールです。
 以下の機能を持ちます。
@@ -19,13 +19,14 @@ date.modified: 2006-12-12
 
 !!お知らせ
 
+:2008-04-07:yim_archive-0.2 を公開。カンファレンス形式のアーカイブに対応しました。
 :2006-12-09:初版 yim_archive-0.1 を公開しました。
 
 !!ダウンロード
 
 yim_archive はGNU Generic Public License version 2に従ったフリーソフトウェアとします。
 
-*[[yim_archive-0.1.tar.gz|../archive/yim_archive-0.1.tar.gz]]
+*[[yim_archive-0.2.tar.gz|../archive/yim_archive-0.2.tar.gz]]
 
 !!使い方
 
