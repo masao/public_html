@@ -32,7 +32,7 @@ end
 
 class HikiDoc::HTMLOutput
    def escape_html(text)
-      text.gsub(/&/, "&amp;").gsub(/</, "&lt;").gsub(/>/, "&gt;").gsub(/&amp;#(x[\da-f]+|\d{2,3});/i, '&#\1;')
+      text.gsub(/&(?!#(x[\da-f]+|\d{2,3}))/i, "&amp;").gsub(/</, "&lt;").gsub(/>/, "&gt;")
    end
    def headline(level, title, attr)
       attr_s = ""
@@ -158,13 +158,13 @@ class MHikiDoc < HikiDoc
       end
       class Blockquote < Plugin
          def expand( *args )
-            #STDERR.puts [@style,args].inspect
+            STDERR.puts [@style,args].inspect
             lines = args.join("\n").split(/\n/)
-            attrs = lines.shift
+            #attrs = lines.shift
             options = @doc.options
             options[:label] = args[0].gsub(/\W+/,'')
             text = MHikiDoc.to_html( lines.join("\n"), options )
-            %Q[<blockquote #{ attrs }>#{ text }</blockquote>]
+            %Q[<blockquote>#{ text }</blockquote>]
          end
       end
       class Code < Plugin
