@@ -303,6 +303,9 @@ div.day span.sanchor {
         background-color: transparent;
         font-size: 1px;
 }
+h3.subtitle a {
+  text-decoration: none;
+}
 
 div.amazon_img {
 	float: right;

@@ -1442,7 +1442,7 @@ sub make_item_header_html {
 	$ihb = $item_header_mark;
 	if ($use_item_anchor == 1) {
 	    my $day_url = datestr2url($ymdi);
-	    $ihb = qq(<a name="$ymdi" href="$day_url">$ihb\n</a>);
+	    $ihb = qq(<a name="$ymdi" href="$day_url">$ihb</a>);
 	}
 	$ihb .= " ";
     }
