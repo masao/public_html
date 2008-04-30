@@ -2,5 +2,6 @@
 # $Id$
 # <title>郵便番号検索</title>
 
-export LD_LIBRARY_PATH=/home/etk2/lib:/home/etk/lib
-ruby -I $LIBDIR ./zipcode.rb
+export HOME=/home/etk2	# sakuraでは $HOME が未定義なので明示的に指定する
+export LD_LIBRARY_PATH=$HOME/lib
+ruby -I $HOME/lib/ruby/site_ruby/1.8 ./zipcode.rb "$@"
