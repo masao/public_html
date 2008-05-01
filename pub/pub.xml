@@ -2,6 +2,30 @@
 <!-- $Id$ -->
 <publist>
 
+  <pub type="misc">
+    <author>高久雅生</author>
+    <author>寺井仁</author>
+    <author>江草由佳</author>
+    <author>齋藤ひとみ</author>
+    <author>三輪眞木子</author>
+    <author>神門典子</author>
+    <title>Web情報探索における視線データの予備的分析</title>
+    <conference>情報知識学会 第16回年次大会</conference>
+    <year>2008</year>
+    <month>5</month>
+    <city>東京, 慶應義塾大学</city>
+    <journal>情報知識学会誌</journal>
+    <!--
+    <page>
+      <start>544</start>
+      <end>545</end>
+    </page>
+    <file>./2007/jcss2007.pdf</file>
+    -->
+    <note>（発表予定）</note>
+    <language>ja</language>
+  </pub>
+
   <pub type="journal">
     <author>相澤彰子</author>
     <author>高久雅生</author>
