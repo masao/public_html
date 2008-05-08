@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist>
+<!--
+  <pub type="misc">
+    <author>相澤彰子</author>
+    <author>高須淳宏</author>
+    <author>深川大路</author>
+    <author>高久雅生</author>
+    <author>安達淳</author>
+    <title>アカデミックリンケージ</title>
+    <subtitle>膨大な学術情報へのアクセスを支援するリンケージ基盤</subtitle>
+    <year>2008</year>
+    <month>7</month>
+    <journal>情報処理</journal>
+    <volume>49</volume>
+    <number>7</number>
+    <!--
+    <page>
+      <start>544</start>
+      <end>545</end>
+    </page>
+    <note>（印刷中）</note>
+    <language>ja</language>
+  </pub>
+-->
 
   <pub type="misc">
     <author>高久雅生</author>
@@ -22,7 +45,8 @@
       <start>544</start>
       <end>545</end>
     </page>
-    <file>./2007/jcss2007.pdf</file>
+    <doi>10.2964/jsik.18.xxx</doi>
+    <slide>./2008/jsik2008-slide.pdf</slide>
     -->
     <note>（印刷中）</note>
     <language>ja</language>
