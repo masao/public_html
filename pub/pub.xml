@@ -15,7 +15,6 @@
     <journal>情報処理</journal>
     <volume>49</volume>
     <number>7</number>
-    <!--
     <page>
       <start>544</start>
       <end>545</end>
@@ -40,15 +39,12 @@
     <journal>情報知識学会誌</journal>
     <volume>18</volume>
     <number>2</number>
-    <!--
     <page>
-      <start>544</start>
-      <end>545</end>
+      <start>181</start>
+      <end>188</end>
     </page>
-    <doi>10.2964/jsik.18.xxx</doi>
-    <slide>./2008/jsik2008-slide.pdf</slide>
-    -->
-    <note>（印刷中）</note>
+<!--    <doi>10.2964/jsik.18.181</doi>-->
+    <slide>./2008/jsik2008-slides.pdf</slide>
     <language>ja</language>
   </pub>
 
