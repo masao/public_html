@@ -142,6 +142,10 @@ if ($mode eq "write") {
 	@spam = ($body =~ /\b(good|nice|cool|funny|best|great) site/gmoi);
 	exit if scalar(@spam) > 0;
 
+	# ÆÃÄê¤ÎURL¤ò¶Ø»ß
+	@spam = ($body =~ /\b(https?:\/\/(\w+\.)?google\.(com|us)\/group\/\w?\w?(ticket|teens)/gmoi);
+	exit if scalar(@spam) > 0;
+
 	escape_string(\$name);	
 	escape_string(\$mail_or_url);	
 	escape_string(\$body);
