@@ -143,7 +143,7 @@ if ($mode eq "write") {
 	exit if scalar(@spam) > 0;
 
 	# ÆÃÄê¤ÎURL¤ò¶Ø»ß
-	@spam = ($body =~ /\b(https?:\/\/(\w+\.)?google\.(com|us)\/group\/\w?\w?(ticket|teens)/gmoi);
+	@spam = ($body =~ /\bhttps?:\/\/(\w+\.)?google\.(com|us)\/group\/\w?\w?(ticket|teens)/gmoi);
 	exit if scalar(@spam) > 0;
 
 	escape_string(\$name);	
