@@ -57,7 +57,8 @@ chalow:
 # Rsync to http://masao.jpn.org/
 rsync:
 	./rsync.pl etk2:www/masao/d/bbs/kblog/ ./d/bbs/kblog/
-	./rsync.pl --exclude=test/ --exclude=private/ --delete-after \
+	./rsync.pl --exclude=test/ --exclude=private/ --exclude=official/ \
+		--delete-after \
 		./ etk2:www/masao/
 
 #	% make lint
