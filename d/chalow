@@ -556,14 +556,14 @@ sub okikae {
     # 各行の行末に <br> を付ける
     # memo: 昔は pre で囲んでいたが、v0.23 からやめた
 #print "1[$_]\n";
-    s!$!<br>!gsm;
-    s!<br>$!!;
+    s!$!<br>!gsmo;
+    s!<br>$!!o;
 #print "2[$_]\n";
 
     unescape_string(\$_);	# プラグイン呼び出しも行なう
 
-    s!</div><br>!</div>!g;
-    s!</pre><br>!</pre>!g;	# ad hoc
+    s!</div>\s*<br>!</div>!go;
+    s!</pre><br>!</pre>!go;	# ad hoc
 
     return $_;
 }
