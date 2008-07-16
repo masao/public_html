@@ -24,6 +24,28 @@
   </pub>
 -->
 
+  <pub type="conference">
+    <author>Hitoshi Terai</author>
+    <author>Hitomi Saito</author>
+    <author>Masao Takaku</author>
+    <author>Yuka Egusa</author>
+    <author>Makiko Miwa</author>
+    <author>Noriko Kando</author>
+    <title>Differences between Informational and Transactional Tasks in Information Seeking on the Web</title>
+    <year>2008</year>
+    <month>10</month>
+    <journal>Proceedings of the Second Symposium on Information Interaction in Context (IIiX 2008)</journal>
+    <page>7</page>
+    <!--
+    <page>
+      <start>544</start>
+      <end>545</end>
+    </page>
+    -->
+    <note>(to appear)</note>
+    <language>en</language>
+  </pub>
+
   <pub type="misc">
     <author>高久雅生</author>
     <author>寺井仁</author>
