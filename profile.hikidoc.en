@@ -1,5 +1,5 @@
 title: Curriculum Vitae (Masao Takaku)
-date.modified: 2008-07-14
+date.modified: 2008-08-03
 date.available: 2007-03-04
 
 :Name:Masao Takaku
@@ -44,11 +44,16 @@ Information retrieval, Digital library, Information behaviour
 ::(2000; Department of Library and Information Science) IT Basic Literacy - HTML/PowerPoint/Excel/Photoshop
 
 !!Other activities
+:[[CRES joint research project|http://cres.jpn.org/]] (2007 - )
+::Member of the CRES project for understanding users' information behaviour and information needs on the Web.
+::(Skills) User studies, Browser log, Eye-tracking
+:[[Next-L project|http://www.next-l.jp]] (2007 - )
+::A collaborator of the project to construct the next generation library system based on Open Source.
 :ULIS-DL metadata retrieval system (2002 - 2003):
 ::Design and build a Web-based Metadata retrieval system by Namazu.
 ::(Skills) C, Perl, WWW/CGI, HTML, Unix, SGML, Dublin Core
 :Tsukuba city IT (Student) special committee (2001 - 2002):
-::Member of student committee for new IT services by Tsukuba city. Proposed building inter-library service systems and utilization of GIS systems.
+::Member of the student committee for new IT services by Tsukuba city. Proposed building inter-library service systems and utilization of GIS systems.
 :[[LA Seminar|http://phase.hpcc.jp/la/]] (1998 - 2004):
 ::Website management for presentation materials. Conversion into CD-ROM for distribution. Assist for PR/communications for the seminar.
 ::(Skills) HTML, PDF, Image format conversions, Perl
