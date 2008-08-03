@@ -9,7 +9,7 @@
 <body>
 <div class="lang-switch"><a href="index.html.en">[In English]</a></div>
 <!-- hhmts start -->
-<div class="last-update">最終更新日: 2008年05月11日</div>
+<div class="last-update">最終更新日: 2008年08月03日</div>
 <!-- hhmts end -->
 <h1>高久雅生のページ</h1>
 <dl>
@@ -45,6 +45,7 @@
 	    </ul>
       </ul>
   <li><a href="http://www.nii.ac.jp/">国立情報学研究所（NII）</a>
+  <li><a href="http://cres.jpn.org/">CRES (Cognitive Research for Exploratory Search)</a>
   <li><a href="http://research.nii.ac.jp/ntcir/">NTCIR: 情報検索システム評価用テストコレクション構築プロジェクト</a>
 </ul>
 

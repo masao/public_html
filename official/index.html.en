@@ -10,7 +10,7 @@
 <body>
 <div class="lang-switch"><a href="index.html.ja">[In Japanese]</a></div>
 <!-- hhmts start -->
-<div class="last-update">Updated: 2008-05-11</div>
+<div class="last-update">Updated: 2008-08-03</div>
 <!-- hhmts end -->
 <h1>Masao TAKAKU, Ph.D.</h1>
 <dl>
@@ -47,6 +47,7 @@
 	    </ul>
       </ul>
   <li><a href="http://www.nii.ac.jp/">National Institute of Informatics (NII)</a>
+  <li><a href="http://cres.jpn.org/">CRES (Cognitive Research for Exploratory Search)</a>
   <li><a href="http://research.nii.ac.jp/ntcir/">NTCIR</a>
 </ul>
 <hr>
