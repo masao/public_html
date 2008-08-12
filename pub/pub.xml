@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist>
+
+  <pub type="misc">
+    <author>蔵川圭</author>
+    <author>武田英明</author>
+    <author>高久雅生</author>
+    <author>相澤彰子</author>
+    <title>KAKENβと研究者リゾルバーαの情報構造</title>
+    <subtitle>KAKENβ1.12と研究者リゾルバーα1.12</subtitle>
+    <conference>第5回情報プロフェッショナルシンポジウム (INFOPRO 2008)</conference>
+    <year>2008</year>
+    <month>11</month>
+    <city>東京, 日本科学未来館</city>
+    <page>2</page>
+    <!--
+    <page>
+      <start>544</start>
+      <end>545</end>
+    </page>
+    -->
+    <note>（発表予定）</note>
+  </pub>
+
   <pub type="conference">
     <author>Hitoshi Terai</author>
     <author>Hitomi Saito</author>
