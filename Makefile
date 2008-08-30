@@ -58,7 +58,7 @@ chalow:
 rsync:
 	./rsync.pl etk2:www/masao/d/bbs/kblog/ ./d/bbs/kblog/
 	./rsync.pl --exclude=test/ --exclude=private/ --exclude=official/ \
-		--delete-after \
+		--delete-after --copy-unsafe-links \
 		./ etk2:www/masao/
 
 #	% make lint
