@@ -1,11 +1,11 @@
 title: JAPAN/MARC関連ツール
-date.modified: 2008-03-26
+date.modified: 2008-08-30
 date.available: 2008-03-26
 subject: software
 
 以下のプログラムは、国立国会図書館から頒布されているJAPAN/MARCレコードデータを読み取り、プレインテキストに変換する簡単なプログラムです。
 [[無償・無保証・著作権放棄|http://nais.to/~yto/doc/zb/0002.html]]として公開しますので、ご自由にお使いください。
-不明な点等ありましたら、[[mailto:masao@nii.ac.jp]] までご連絡ください。
+不明な点等ありましたら、[[mailto:tmasao@acm.org]] までご連絡ください。
 
 //以下のツール群は図書館情報大学電子図書館プロジェクトの一環として、http://lib.ulis.ac.jp というアドレスにおいて公開されていたものです。
 

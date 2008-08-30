@@ -12,7 +12,7 @@ sub view_pod {
     my ($self, $pod) = @_;
     my $title = $pod->head1->[0]->content;
     my $home = 'http://masao.jpn.org/';
-    my $email = 'masao@nii.ac.jp';
+    my $email = 'tmasao@acm.org';
     my $header = <<EOF;
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="ja">

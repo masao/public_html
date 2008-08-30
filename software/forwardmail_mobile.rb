@@ -75,6 +75,6 @@ Content-Type: text/plain; charset=iso-2022-jp
 EOF
 # puts message
 
-open("|/usr/sbin/sendmail -oi -t -f masao@nii.ac.jp", "w") do |sendmail|
+open("|/usr/sbin/sendmail -oi -t -f tmasao@acm.org", "w") do |sendmail|
    sendmail.puts NKF.nkf( "-jm0", message )
 end

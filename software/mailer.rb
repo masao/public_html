@@ -6,8 +6,8 @@ require "kconv"
 SUBJECT = "=?ISO-2022-JP?B?GyRCPEI4MyUiJWslUCUkJUg/PSQ3THUkIiRqJF4bKEI=?=\n\t=?ISO-2022-JP?B?GyRCJDskcxsoQg==?="
 SENDMAIL = '/usr/sbin/sendmail'
 
-FROM = 'Masao Takaku <masao@nii.ac.jp>' # From: フィールド
-REAL_FROM = 'masao@nii.ac.jp'	# error mail 宛先
+FROM = 'Masao Takaku <tmasao@acm.org>' # From: フィールド
+REAL_FROM = 'tmasao@acm.org'	# error mail 宛先
 
 def usage
    puts "USAGE: #$0 message_file address_tsv"

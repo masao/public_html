@@ -1,5 +1,5 @@
 title: imgs2html & ps2imgs
-date.modified: 2006-09-29
+date.modified: 2008-08-30
 subject: software
 
 PostScriptファイルをWeb用の画像形式に変換するスクリプト（ps2imgs）、
@@ -7,7 +7,7 @@ PostScriptファイルをWeb用の画像形式に変換するスクリプト（ps2imgs）、
 
 例えば、プレゼンテーション資料を元に、[[複数の画像とその一覧からなるページ|http://phase.hpcc.jp/la/SLIDES/0012-hasegawa/index.html]]を作れます。
 
-バグ報告・要望・感想などは[[masao@nii.ac.jp|mailto:masao@nii.ac.jp]]までお寄せ下さい。お気軽にどうぞ。
+バグ報告・要望・感想などは[[tmasao@acm.org|mailto:tmasao@acm.org]]までお寄せ下さい。お気軽にどうぞ。
 
 !!マニュアル
 
@@ -27,7 +27,7 @@ PostScriptファイルをWeb用の画像形式に変換するスクリプト（ps2imgs）、
 
 !!類似ソフトウェア
 
-（他にもご存じの方は[[お知らせ|mailto:masao@nii.ac.jp]]いただければ幸いです）
+（他にもご存じの方は[[お知らせ|mailto:tmasao@acm.org]]いただければ幸いです）
 
 *[[WebMagick|http://www.simplesystems.org/WebMagick/]]
 *[[thumbnail_index|http://www.acme.com/software/thumbnail_index/]]

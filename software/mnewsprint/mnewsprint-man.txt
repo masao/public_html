@@ -49,5 +49,5 @@ NOTES
     に変換してから渡してください。
 
 AUTHOR
-    高久 雅生 <masao@nii.ac.jp>
+    高久 雅生 <tmasao@acm.org>
 
