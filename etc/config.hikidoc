@@ -1,13 +1,13 @@
 title: 各種設定ファイル
 date.available: 2001-06-11
-date.modified: 2007-10-20
+date.modified: 2008-08-30
 subject: etc
 
 主にUNIX系のツールの設定ファイルを置いておきます。
 大抵は、ツールのマニュアルに載っていたとか、
 Web or fj で見かけた設定例とかをパクっているだけなので、
 誤りや「ここはこう書いた方が良い」などありましたら、
-[[masao@nii.ac.jp]]まで
+[[mailto:tmasao@acm.org]]まで
 ご指摘いただけるとありがたいです。
 
 :[[{{code .alias}}|.alias]]:シェルの設定ファイルです。主に{{code ${HOME}/.cshrc}}などから読み込むことを前提に書いている設定ファイルです。シェルはtcshを使っています。
