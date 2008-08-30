@@ -94,7 +94,7 @@ if (strlen($text) > 0) {
 <body>
 <div class="last-update">公開日: 2003年06月24日</div>
 <!-- hhmts start -->
-<div class="last-update">最終更新日: 2008年07月18日</div>
+<div class="last-update">最終更新日: 2008年08月30日</div>
 <!-- hhmts end -->
 <h1>TrueTypeフォントの表示テスト</h1>
 <form action="./test-ttf.php" method="POST">
@@ -183,7 +183,7 @@ PHPに同梱されているGDライブラリの機能を使って、
 <address>
 高久雅生 (Takaku Masao)<br>
 <a href="http://masao.jpn.org/">http://masao.jpn.org/</a>, 
-<a href="mailto:masao@nii.ac.jp">masao@nii.ac.jp</a>
+<a href="mailto:tmasao@acm.org">tmasao@acm.org</a>
 </address>
 <div class="id">$Id$</div>
 <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
