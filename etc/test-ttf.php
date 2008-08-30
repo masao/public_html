@@ -88,7 +88,7 @@ if (strlen($text) > 0) {
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../default.css" type="text/css">
-<link rev="made" href="mailto:masao@nii.ac.jp">
+<link rev="made" href="mailto:tmasao@acm.org">
 <title>TrueTypeフォントの表示テスト</title>
 </head>
 <body>
