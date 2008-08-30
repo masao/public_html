@@ -1,12 +1,13 @@
 title: Curriculum Vitae (Masao Takaku)
-date.modified: 2008-08-04
+date.modified: 2008-08-30
 date.available: 2007-03-04
 
 :Name:Masao Takaku
-:Contact:2-1-2 Hitotsubashi, Chiyoda-ku, Tokyo 101-8430, Japan
-::Tel: +81-3-4212-2654
-::Fax: +81-3-3556-1916
-::E-mail: masao@nii.ac.jp
+:Contact:
+//:Contact:2-1-2 Hitotsubashi, Chiyoda-ku, Tokyo 101-8430, Japan
+//::Tel: +81-3-4212-2654
+//::Fax: +81-3-3556-1916
+::E-mail: tmasao@acm.org
 ::URL: http://masao.jpn.org/
 
 !!Research interests
@@ -21,7 +22,7 @@ Information retrieval, Digital library, Information behaviour
 ::PhD dissertation: "[[A Study of Cooperative Information Service Systems: Applications to Terminological Systems and Information Retrieval Systems|./pub/2004/phd-thesis.pdf]] (in Japanese)"
 
 !!Work
-:2006-01 -:
+:2006-01 - 2008-09:
 ::'''[[Transdisciplinary Research Integration Center|http://www.rois.ac.jp/tric/]], [[Research Organization of Information and Systems|http://www.rois.ac.jp/]]  Post-doctoral researcher'''
 ::Constructing a researcher information server (building prototype systems for integrating information on researchers in Japan). Involved in development of [[KAKEN Database (Beta service)|http://seikaplus.csc.nii.ac.jp/]] and [[Researcher Resolver (Alpha service)|http://rns.csc.nii.ac.jp/]]
 ::(Keywords) digital library, identification, combining bibliographics, researcher network, visualization
