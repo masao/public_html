@@ -2,6 +2,50 @@
 <!-- $Id$ -->
 <publist>
 
+  <pub type="conference">
+    <author>Yuka Egusa</author>
+    <author>Masao Takaku</author>
+    <author>Hitomi Saito</author>
+    <author>Hitoshi Terai</author>
+    <author>Noriko Kando</author>
+    <author>Makiko Miwa</author>
+    <title>Visualization of User Eye Movements for Search Result Pages</title>
+    <journal>Proceedings of the Second International Workshop on Evaluating Information Access (EVIA 2008) (NTCIR-7 Pre-Meeting Workshop)</journal>
+<!--    <conference>The First International Workshop on Evaluating Information Access (EVIA 2007)</conference> -->
+    <year>2008</year>
+    <month>12</month>
+    <city>Tokyo</city>
+    <publisher>National Institute of Informatics</publisher>
+    <!--
+    <page>
+      <start>78</start>
+      <end>81</end>
+    </page>
+    -->
+    <language>en</language>
+    <note>(to appear; accepted)</note>
+  </pub>
+  
+  <pub type="conference">
+    <author>Masao Takaku</author>
+    <author>Akiko Aizawa</author>
+    <author>Yasumasa Baba</author>
+    <title>Name Disambiguation of Japanese Researchers</title>
+    <subtitle>A Case Study with Statistics Research Community</subtitle>
+    <conference>Joint Meeting of 4th World Conference of the IASC and 6th Conference of the Asian Regional Section of the IASC on Computational Statistics &amp; Data Analysis (IASC 2008)</conference>
+    <year>2008</year>
+    <month>12</month>
+    <city>Yokohama, Pacifico Yokohama</city>
+    <page>5</page>
+    <!--
+    <page>
+      <start>544</start>
+      <end>545</end>
+    </page>
+    -->
+    <note>(to appear)</note>
+  </pub>
+
   <pub type="misc">
     <author>蔵川圭</author>
     <author>武田英明</author>
@@ -182,7 +226,7 @@
     <publisher>情報・システム研究機構 新領域融合研究センター</publisher>
     <year>2007</year>
     <month>11</month>
-    <city>伊豆長岡</city>
+    <city>静岡, 伊豆長岡</city>
     <language>ja</language>
     <note>ポスター発表</note>
     <poster>./2007/tric-wakate.pdf</poster>
@@ -215,7 +259,7 @@
     <journal>Proceedings of the First Workshop on Web Information-Seeking and Interaction (WISI 2007) (SIGIR 2007 Workshop)</journal>
     <year>2007</year>
     <month>7</month>
-    <city>Amsterdam</city>
+    <city>Netherland, Amsterdam</city>
     <page>
       <start>49</start>
       <end>52</end>
