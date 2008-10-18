@@ -43,6 +43,9 @@
 <dl id="publist">
 <% @pubs.each do |pub| %>
 <dt class="title"><a name="pubid<%= pub.object_id %>" id="pubid<%= pub.object_id %>"><span class="year"><%= pub.year %></span>
+<% if pub.refereed %>
+<span class="refereed"><img src="refereed.png" alt="refereed" title="refereed"></span>
+<% end %>
 <span class="type"><%= pub.type %></span></a>
 <span class="title">
 <% if not pub.file.nil? %>

@@ -14,8 +14,10 @@ class PubData
    attr_reader :page_start, :page_end, :page, :isbn, :note
    attr_reader :url, :url_label, :doi, :slide, :poster, :file
    attr_reader :language
+   attr_reader :refereed
    def initialize( element )
       @type = element.attributes["type"]
+      @refereed = element.attributes["refereed"]
       @author = []
       @author_role = {}
       element.get_elements("author").to_a.each{|e|
