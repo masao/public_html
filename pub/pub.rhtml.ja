@@ -36,31 +36,31 @@
 <% @toc_keys.each do |k| %>
 <li><a href="#pubid<%= @pubs.find{|e|
     k == toc_key(e)
-    }.object_id %>"><%= k %></a>
+    }.object_id %>"><%=h k %></a>
 <span class="toc_size">(<%= @pubs.find_all{|e| k == toc_key(e) }.size %>)</span>
 <% end %>
 </ul>
 <dl id="publist">
 <% @pubs.each do |pub| %>
-<dt class="title"><a name="pubid<%= pub.object_id %>" id="pubid<%= pub.object_id %>"><span class="year"><%= pub.year %></span>
+<dt class="title"><a name="pubid<%= pub.object_id %>" id="pubid<%= pub.object_id %>"><span class="year"><%=h pub.year %></span>
 <% if pub.refereed %>
 <span class="refereed"><img src="refereed.png" alt="refereed" title="refereed"></span>
 <% end %>
-<span class="type"><%= pub.type %></span></a>
+<span class="type"><%=h pub.type %></span></a>
 <span class="title">
 <% if not pub.file.nil? %>
-<a href="<%= pub.file %>">
+<a href="<%=h pub.file %>">
 <% end %>
-<%= pub.title %>
+<%=h pub.title %>
 <% if pub.subtitle %>
-: <span><%= pub.subtitle %></span>
+: <span><%=h pub.subtitle %></span>
 <% end %>
 <% if not pub.file.nil? %></a><% end %>
 </span></dt>
 <dd class="author"><span class="author"><%= pub.author.map{|author|
-author_s = author.dup
+author_s = h author
 if @config and @config["author_mine"]
-   author_s = "<em>#{author}</em>" if @config["author_mine"].any?{|r| r =~ author }
+   author_s = "<em>#{h author}</em>" if @config["author_mine"].any?{|r| r =~ author }
 end
 if pub.author_role[author] == "editor"
    author_s << "(編)"
@@ -72,45 +72,45 @@ author_s
 <dd class="bibdata">
 <% [ :conference, :org, :publisher, :city, :journal ].each do |field| %>
 <% if not pub.send( field ).nil? %>
-<span class="<%= field %>"><%= pub.send( field ) %>;</span>
+<span class="<%= field %>"><%=h pub.send( field ) %>;</span>
 <% end %>
 <% end %>
 <% if not pub.volume.nil? %>
-<span class="volume">vol.<%= pub.volume %>;</span>
+<span class="volume">vol.<%=h pub.volume %>;</span>
 <% end %>
 <% if not pub.number.nil? %>
-<span class="number"><%= "no." unless pub.type == "techreport"%><%= pub.number %>;</span>
+<span class="number"><%=h "no." unless pub.type == "techreport"%><%=h pub.number %>;</span>
 <% end %>
 <% if pub.page_start and pub.page_end %>
-<span class="page">pp.<%= pub.page_start %>-<%= pub.page_end %>;</span>
+<span class="page">pp.<%=h pub.page_start %>-<%=h pub.page_end %>;</span>
 <% elsif pub.page %>
-<span class="page"><%= pub.page %>p.</span>
+<span class="page"><%=h pub.page %>p.</span>
 <% end %>
 <% if not pub.year.nil? %>
-<span class="pubdate">(<%= pub.year %><% if not pub.month.nil? %><span class="month">-<%= "%02d" % pub.month.to_i %></span><% end %>)
+<span class="pubdate">(<%=h pub.year %><% if not pub.month.nil? %><span class="month">-<%= "%02d" % pub.month.to_i %></span><% end %>)
 </span>
 <% end %>
 <% if not pub.isbn.nil? %>
-<span class="isbn">(ISBN:<%= pub.isbn %>)</span>
+<span class="isbn">(ISBN:<%=h pub.isbn %>)</span>
 <% end %>
 <% if not pub.note.nil? %>
-<span class="note"><%= pub.note %></span>
+<span class="note"><%=h pub.note %></span>
 <% end %>
 </dd>
 <% if not pub.url.nil? %>
 <dd class="url">
-<span class="url"><a href="<%= pub.url %>"><%= pub.url_label ? pub.url_label : pub.url %></a></span>
+<span class="url"><a href="<%=h pub.url %>"><%=h pub.url_label ? pub.url_label : pub.url %></a></span>
 </dd>
 <% end %>
 <% if not pub.doi.nil? %>
 <dd class="url">
-<span class="doi">DOI <a href="http://dx.doi.org/<%= pub.doi %>"><%= pub.doi %></a></span>
+<span class="doi">DOI <a href="http://dx.doi.org/<%=h pub.doi %>"><%=h pub.doi %></a></span>
 </dd>
 <% end %>
 <% %w[ slide poster ].each do |target| %>
 <% if pub.send( target ) %>
 <dd class="url">
-<span class="<%= target %>">[<%= target.capitalize %>] <a href="<%= pub.send( target ) %>"><%= pub.send( target ) %></a></span>
+<span class="<%= target %>">[<%= target.capitalize %>] <a href="<%=h pub.send( target ) %>"><%=h pub.send( target ) %></a></span>
 </dd>
 <% end %>
 <% end %>
