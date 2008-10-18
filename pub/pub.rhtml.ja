@@ -30,6 +30,11 @@
 <% else %>
 <a href="./?sort_mode=author">筆頭著者</a>
 <% end %>
+<li><% if sort_mode == :refereed %>
+<strong>査読の有無</strong>
+<% else %>
+<a href="./?sort_mode=refereed">査読の有無</a>
+<% end %>
 </ul>
 </div>
 <ul id="toc">
@@ -37,11 +42,11 @@
 <li><a href="#pubid<%= @pubs.find{|e|
     k == toc_key(e)
     }.object_id %>">
-    <% if sort_mode == :author and @config["author_mine"] and @config["author_mine"] and @config["author_mine"].any?{|r| r =~ k } %>
-    <strong><%=h k %></strong>
-    <% else %>
+    <%# if sort_mode == :author and @config["author_mine"] and @config["author_mine"] and @config["author_mine"].any?{|r| r =~ k } %>
+<!--    <strong><%=h k %></strong>-->
+    <%# else %>
     <%=h k %>
-    <% end %>
+    <%# end %>
     </a>
 <span class="toc_size">(<%= @pubs.find_all{|e| k == toc_key(e) }.size %>)</span>
 <% end %>

@@ -79,9 +79,10 @@ class PubApp
 
    SORT_ACCEPT = {
       :month => ( "0".."12" ).to_a.reverse,
-      :year => (1998 .. Time.now.year+1).to_a.map{|e|e.to_s}.reverse,
+      :year => ( 1945 .. Time.now.year+2 ).to_a.map{|e|e.to_s}.reverse,
       :type => %w[ book journal conference thesis techreport misc ],
       :author => nil,
+      :refereed => [ true, false ]
    }
    SORT_DEFAULT = :year
    def sort_mode
@@ -115,6 +116,8 @@ class PubApp
 #             end
 #          end
 #          author
+      when :refereed
+         element.send( :refereed ) == "true"
       else
          element.send( sort_mode ) or nil
       end
