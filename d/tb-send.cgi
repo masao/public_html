@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# -*- coding: euc-jp -*-
 # $Id$
 
 require "net/http"
@@ -21,27 +22,31 @@ end
 
 module Trackback
    def self::auto_discovery(dest_url)
-      uri = URI.parse(dest_url)
-      response = nil
-      body     = nil
-      Net::HTTP.version_1_2
-      Net::HTTP.start( uri.host, uri.port ) do |http|
-         response = http.get( uri.path )
-         body = response.read_body
-      end
-      result = nil
-      if body
-         body.gsub!(/\s+/, " ")
-         if body.match( %r{ xmlns:(\w+)="http://madskills.com/public/xml/rss/module/trackback/"} )
-            tb_namespace = $1
-            if body.match( %r{\s#{tb_namespace}:ping="([^\"]+)"} )
-               tb_url = $1
-               #result = self.send( tb_url, title, excerpt, url, blog_name )
-               result = tb_url
+      begin
+         uri = URI.parse(dest_url)
+         response = nil
+         body     = nil
+         Net::HTTP.version_1_2
+         Net::HTTP.start( uri.host, uri.port ) do |http|
+            response = http.get( uri.path )
+            body = response.read_body
+         end
+         result = nil
+         if body
+            body.gsub!(/\s+/, " ")
+            if body.match( %r{ xmlns:(\w+)="http://madskills.com/public/xml/rss/module/trackback/"} )
+               tb_namespace = $1
+               if body.match( %r{\s#{tb_namespace}:ping="([^\"]+)"} )
+                  tb_url = $1
+                  #result = self.send( tb_url, title, excerpt, url, blog_name )
+                  result = tb_url
+               end
             end
          end
+         result
+      rescue
+         nil
       end
-      result
    end
 
    def self::send(tb_url, title, excerpt, url, blog_name)
@@ -106,8 +111,6 @@ end
 if $0 == __FILE__
    include Chalow
    include ERB::Util
-   
-   itemlist = parse_itemlist
 
    BLOG_NAME = "まさおのChangeLogメモ";
    TEMPLATE_FILE = "tb-send.rhtml"
@@ -115,16 +118,26 @@ if $0 == __FILE__
 
    cgi = CGI.new
    puts cgi.header( "text/html; charset=EUC-JP" )
-   if cgi.params["id"][0]
-      if cgi.params["submit"][0]
+
+   begin
+      itemlist = parse_itemlist
+      if cgi.params["id"][0]
+         unless cgi.params["submit"][0]
+            entry = itemlist.find{|e| e[:id] == cgi.params["id"][0] }
+            puts ERB.new( open( "tb-send.id.rhtml" ){|io| io.read }, nil, "<>" ).result( binding )
+         end
+      elsif cgi.params["date"][0]
+         itemlist = itemlist.select{|e| /\A#{ cgi.params["date"][0] }/ =~ e[:id] }
+         puts ERB.new( open( "tb-send.rhtml" ){|io| io.read }, nil, "<>" ).result( binding )
       else
-         entry = itemlist.find{|e| e[:id] == cgi.params["id"][0] }
-         puts ERB.new( open( "tb-send.id.rhtml" ){|io| io.read }, nil, "<>" ).result( binding )
+         puts ERB.new( open( "tb-send.rhtml" ){|io| io.read }, nil, "<>" ).result( binding )
       end
-   elsif cgi.params["date"][0]
-      itemlist = itemlist.select{|e| /\A#{ cgi.params["date"][0] }/ =~ e[:id] }
-      puts ERB.new( open( "tb-send.rhtml" ){|io| io.read }, nil, "<>" ).result( binding )
-   else
-      puts ERB.new( open( "tb-send.rhtml" ){|io| io.read }, nil, "<>" ).result( binding )
+   rescue
+      puts "<h1>500 Internal Server Error</h1>"
+      puts "<pre>"
+      puts CGI::escapeHTML( "#{$!} (#{$!.class})" )
+      puts ""
+      puts CGI::escapeHTML( $@.join( "\n" ) )
+      puts "</pre>"
    end
 end
