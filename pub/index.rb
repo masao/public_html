@@ -66,7 +66,7 @@ class PubApp
       REXML::Document.new( io ).elements.to_a("/publist/pub").each do |e|
          @pubs << PubData.new( e )
       end
-      @pubs.sort_by do |e|
+      @pubs = @pubs.sort_by do |e|
          sort_keys = [ sort_order(e, :year),
                        sort_order(e, :month) ]
          unless sort_mode == :year
