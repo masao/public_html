@@ -8,13 +8,6 @@ require "rexml/document"
 require "yaml"
 
 class PubData
-   def self.load( io )
-      data = []
-      REXML::Document.new( io ).elements.to_a("/publist/pub").each do |e|
-         data << PubData.new( e )
-      end
-      data
-   end
    attr_reader :type, :author, :author_role, :title, :subtitle
    attr_reader :journal, :conference, :org, :publisher
    attr_reader :volume, :number, :year, :month, :city
@@ -58,15 +51,28 @@ class PubData
 end
 
 class PubApp
-   attr_accessor :lang, :tmpl
-   attr_reader :config
+   attr_reader :config, :lang
 
-   def initialize
-      @cgi = CGI.new
+   def initialize( cgi, lang = "ja" )
+      @cgi = cgi
       @config = YAML.load( open( "config.yml") )
+      @lang = lang
    end
-   def header(arg)
-      @cgi.header(arg)
+
+   def load_pubdata( io )
+      @pubs = []
+      REXML::Document.new( io ).elements.to_a("/publist/pub").each do |e|
+         @pubs << PubData.new( e )
+      end
+      @pubs.sort_by do |e|
+         sort_keys = [ sort_order(e, :year),
+                       sort_order(e, :month) ]
+         unless sort_mode == :year
+            sort_keys.unshift( sort_order(e) )
+         end
+         sort_keys
+      end
+      @toc_keys = @pubs.map{|e| toc_key(e) }.uniq
    end
 
    SORT_ACCEPT = {
@@ -127,32 +133,32 @@ class PubApp
          key
       end
    end
+
+   def eval_rhtml( tmpl )
+      rhtml = open( tmpl ){|f| f.read }
+      ERB::new( rhtml, $SAFE, 2 ).result( binding )
+   end
+   include ERB::Util
 end
 
-DEFAULT_LANG = "ja"
 PUBDATA = "pub.xml"
 LASTUPDATE = File::mtime( PUBDATA )
 
-if $0 == __FILE__
-   app = PubApp::new
-   app.lang = DEFAULT_LANG
-   app.tmpl = "pub.rhtml.#{app.lang}"
-
-   print app.header("text/html; charset=UTF-8")
-
-   pubs = PubData.load( open(PUBDATA) )
-   pubs = pubs.sort_by do |e|
-      #p app.toc_key(e)
-      #p app.sort_order(e)
-      sort_keys = [ app.sort_order(e, :year),
-                    app.sort_order(e, :month) ]
-      unless app.sort_mode == :year
-         sort_keys.unshift( app.sort_order(e) )
-      end
-      sort_keys
+if $0 == __FILE__   
+   begin
+      cgi = CGI.new
+      app = PubApp::new( cgi )
+      app.load_pubdata( open(PUBDATA) )
+      cgi.out("charset" => "UTF-8") {
+         app.eval_rhtml( "pub.rhtml.#{app.lang}" )
+      }
+   rescue
+      print cgi.header( { "status" => "500 Internal Server Error",
+                          "type"   => "text/plain; charset=utf-8" } )
+      puts "500 Internal Server Error:"
+      puts
+      puts "#{$!} (#{$!.class})"
+      puts
+      puts $@.join("\n")
    end
-
-   toc_keys = pubs.map{|e| app.toc_key(e) }.uniq
-
-   print ERB::new(open(app.tmpl){|f|f.read}, $SAFE, 2).result(binding)
 end
