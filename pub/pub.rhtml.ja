@@ -36,7 +36,13 @@
 <% @toc_keys.each do |k| %>
 <li><a href="#pubid<%= @pubs.find{|e|
     k == toc_key(e)
-    }.object_id %>"><%=h k %></a>
+    }.object_id %>">
+    <% if sort_mode == :author and @config["author_mine"] and @config["author_mine"] and @config["author_mine"].any?{|r| r =~ k } %>
+    <strong><%=h k %></strong>
+    <% else %>
+    <%=h k %>
+    <% end %>
+    </a>
 <span class="toc_size">(<%= @pubs.find_all{|e| k == toc_key(e) }.size %>)</span>
 <% end %>
 </ul>
