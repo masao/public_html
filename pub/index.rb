@@ -82,7 +82,7 @@ class PubApp
       :year => ( 1945 .. Time.now.year+2 ).to_a.map{|e|e.to_s}.reverse,
       :type => %w[ book journal conference thesis techreport misc ],
       :author => nil,
-      :refereed => [ true, false ]
+      :refereed => [ "refereed", "not refereed" ]
    }
    SORT_DEFAULT = :year
    def sort_mode
@@ -117,7 +117,7 @@ class PubApp
 #          end
 #          author
       when :refereed
-         element.send( :refereed ) == "true"
+         element.send( :refereed ) == "true" ? "refereed" : "not refereed"
       else
          element.send( sort_mode ) or nil
       end
