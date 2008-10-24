@@ -11,7 +11,6 @@
     <author>Makiko Miwa</author>
     <title>Visualization of User Eye Movements for Search Result Pages</title>
     <journal>Proceedings of the Second International Workshop on Evaluating Information Access (EVIA 2008) (NTCIR-7 Pre-Meeting Workshop)</journal>
-<!--    <conference>The First International Workshop on Evaluating Information Access (EVIA 2007)</conference> -->
     <year>2008</year>
     <month>12</month>
     <city>Tokyo</city>
@@ -57,13 +56,10 @@
     <year>2008</year>
     <month>11</month>
     <city>東京, 日本科学未来館</city>
-    <page>2</page>
-    <!--
     <page>
-      <start>544</start>
-      <end>545</end>
+      <start>69</start>
+      <end>74</end>
     </page>
-    -->
     <note>（発表予定）</note>
   </pub>
 
@@ -84,6 +80,7 @@
       <end>159</end>
     </page>
     <language>en</language>
+    <doi>10.1145/1414694.1414728</doi>
   </pub>
 
   <pub refereed="true" type="misc">
