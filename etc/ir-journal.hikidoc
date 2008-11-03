@@ -1,6 +1,6 @@
 title: 情報検索関連の論文誌
 date.available: 2006-04-17
-date.modified: 2008-07-30
+date.modified: 2008-11-03
 subject: etc
 
 情報検索分野で頻繁にチェックする論文誌、国際会議論文集をブックマーク代わりに挙げておきます:
@@ -27,7 +27,9 @@ subject: etc
 
 !!国際会議
 *[[SIGIR|http://portal.acm.org/toc.cfm?id=SERIES278]]
+**([[SIGIR Forum|http://www.sigir.org/forum/]])
 *ECIR:
+**[[ECIR2008|http://www.springerlink.com/openurl.asp?genre=issue&issn=0302-9743&volume=4956&issue=preprint]]
 **[[ECIR2007|http://www.springeronline.com/978-3-540-71494-1]]
 **[[ECIR2006|http://www.springerlink.com/content/3-540-33347-9/]]
 **[[ECIR2005|http://www.springerlink.com/openurl.asp?genre=issue&issn=0302-9743&volume=3408&issue=preprint]]
@@ -36,10 +38,9 @@ subject: etc
 **[[ECIR2002|http://www.springerlink.com/openurl.asp?genre=issue&issn=0302-9743&volume=2291&issue=preprint]]
 *[[Proceedings of ASIS&T (Annual Meeting)|http://www3.interscience.wiley.com/journal/109861970/home]]
 *[[Text REtrieval Conference (TREC) Home Page|http://trec.nist.gov/]]
-*CLEF:
-**[[Welcome to Cross Language Evaluation Forum|http://www.clef-campaign.org/]]
-**[[CLEF 2002|http://www.springerlink.com/(luuvtb552xbgxo45epwux4b1)/app/home/issue.asp?referrer=parent&backto=journal,1109,3334;linkingpublicationresults,1:105633,1]]
+*CLEF: ([[Publications|http://www.clef-campaign.org/publications.html]])
 *AIRS:
+**[[AIRS 2008|http://www.springerlink.com/openurl.asp?genre=issue&issn=0302-9743&volume=4993&issue=preprint]]
 **[[AIRS 2006|http://www.springerlink.com/content/978-3-540-45780-0/]]
 **[[AIRS 2005|http://www.springerlink.com/openurl.asp?genre=issue&issn=0302-9743&volume=3689&issue=preprint]]
 **[[AIRS 2004|http://www.springerlink.com/openurl.asp?genre=issue&issn=0302-9743&volume=3411&issue=preprint]]
