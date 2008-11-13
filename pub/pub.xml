@@ -2,6 +2,29 @@
 <!-- $Id$ -->
 <publist>
 
+  <pub type="misc">
+    <author>齋藤ひとみ</author>
+    <author>江草由佳</author>
+    <author>高久雅生</author>
+    <author>寺井仁</author>
+    <author>三輪眞木子</author>
+    <author>神門典子</author>
+    <title>Web情報探索行動の分析</title>
+    <subtitle>課題の志向性と経験の違いによる影響についての予備的検討</subtitle>
+    <conference>電子情報通信学会 「Webインテリジェンスとインタラクション」研究会 (IEICE SIG-WI2) 第13回研究会</conference>
+    <year>2008</year>
+    <month>12</month>
+    <city>神奈川, 横浜近代文学館</city>
+    <!--
+    <page>
+      <start>234</start>
+      <end>235</end>
+    </page>
+    -->
+    <language>ja</language>
+    <note>（発表予定）</note>
+  </pub>
+
   <pub refereed="true" type="conference">
     <author>Yuka Egusa</author>
     <author>Masao Takaku</author>
@@ -60,7 +83,6 @@
       <start>69</start>
       <end>74</end>
     </page>
-    <note>（発表予定）</note>
   </pub>
 
   <pub refereed="true" type="conference">
