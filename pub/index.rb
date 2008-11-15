@@ -4,6 +4,7 @@
 require "cgi"
 require "erb"
 
+require "uri"
 require "rexml/document"
 require "yaml"
 
@@ -40,6 +41,7 @@ class PubData
       if @page_start.nil? and @page_end.nil?
          @page = element.text("page")
       end
+      @issn = element.text("issn")
       @isbn = element.text("isbn")
       @note = element.text("note")
       @language = element.text("language")
@@ -49,6 +51,61 @@ class PubData
       @slide = element.text("slide")
       @poster = element.text("poster")
       @file = element.text("file")
+   end
+
+   def to_coins
+      matrix = []
+      @author.each do |a|
+         matrix << [:au, a]
+      end
+      title_s = @title
+      title_s << ": " + @subtitle if @subtitle
+      if @type == "book"
+         matrix << [ :btitle, title_s ]
+      else
+         matrix << [ :atitle, title_s ]
+      end
+      matrix << [ :jtitle, @journal ]
+      matrix << [ :place, @city ]
+      matrix << [ :pub, @publisher ]
+      matrix << [ :date, @month ? "#{@year}-#{@month}" : @year ]
+      matrix << [ :volume, @volume ]
+      matrix << [ :issue, @number ]
+      matrix << [ :spage, @page_start ]
+      matrix << [ :epage, @page_end ]
+      matrix << [ :pages, @page ? @page : "#{page_start}-#{page_end}" ]
+      matrix << [ :tpages, @page ] if @page
+      matrix << [ :issn, @issn ]
+      matrix << [ :isbn, @isbn ]
+      genre =  case @type
+               when "conference"
+                  "proceeding"
+               when "techreport"
+                  "report"
+               when "book"
+                  "book"
+               else
+                  "article"
+               end
+      matrix << [ :genre, genre ]
+      coins = "url_ver=Z39.88-2004&rft_val_fmt=info:ofi/fmt:kev:mtx:"
+      case @type
+      when "journal", "conference"
+         coins << "journal"
+      else
+         coins << "book"
+      end
+      coins << "&rft_id=#{ @doi ? "info:doi/#{@doi}" : @url }&"
+      matrix = matrix.to_a.map do |e|
+         key = "rft." + e[0].to_s
+         val = e[1]
+         if val
+            "#{key}=#{URI.escape( val )}"
+         else
+            nil
+         end
+      end
+      coins << matrix.compact.join("&")
    end
 end
 

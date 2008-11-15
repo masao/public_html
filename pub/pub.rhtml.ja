@@ -119,6 +119,7 @@ author_s
 </dd>
 <% end %>
 <% end %>
+<dd><span class="Z3988" title="<%=h pub.to_coins %>"></span></dd>
 <% end %>
 </dl>
 <hr>
