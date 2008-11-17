@@ -238,6 +238,25 @@
   </pub>
 
   <pub type="misc">
+    <author>相澤彰子</author>
+    <author>蔵川圭</author>
+    <author>高久雅生</author>
+    <author>Dang Bac Van</author>
+    <title>「情報リンケージ」が生み出す新たな価値</title>
+    <journal>NII Today</journal>
+    <publisher>国立情報学研究所</publisher>
+    <number>37</number>
+    <year>2007</year>
+    <month>9</month>
+    <page>
+      <start>8</start>
+      <end>9</end>
+    </page>
+    <language>ja</language>
+    <url>http://www.nii.ac.jp/results/pr_data/NII_Today/37/p08-09.pdf</url>
+  </pub>
+
+  <pub type="misc">
     <author>高久雅生</author>
     <title>研究者情報サーバの構築と異種情報資源の統合</title>
     <conference>若手研究者クロストーク</conference>
