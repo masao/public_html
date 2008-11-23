@@ -59,10 +59,8 @@ $content_type = 'text/xml' if $mode eq 'rss';
 
 # header
 if ($mode eq 'write') {
-    escape_string(\$name);	
-    escape_string(\$mail_or_url);	
-    my $cookie = $q->cookie(-name=>'kuttukibbs', 
-			    -value=>"$name\t$mail_or_url", 
+    my $cookie = $q->cookie(-name=>'kuttukibbs',
+			    -value=>"$name\t$mail_or_url",
 			    -expires=>'+30d');
     print $q->header(-cookie=>$cookie, -charset=>$charset);
 } else {
@@ -70,8 +68,6 @@ if ($mode eq 'write') {
     if (defined $q->cookie('kuttukibbs')) {
 	($name, $mail_or_url) = split(/\t/, $q->cookie('kuttukibbs')); 
     }
-    escape_string(\$name);
-    escape_string(\$mail_or_url);
 }
 
 my $cgi_url = $q->url();
@@ -147,9 +143,9 @@ if ($mode eq "write") {
 	@spam = ($body =~ /\bhttps?:\/\/(\w+\.)?google\.(com|us|jp)\/group\/\w?\w?(ticket|teens)/gmoi);
 	error("禁止されたURLが含まれています。\nYour comment contains a spamming URL.") if scalar(@spam) > 0;
 
-	escape_string(\$name);
-	escape_string(\$mail_or_url);
-	escape_string(\$body);
+	$name = CGI::escapeHTML( $name );
+	$mail_or_url = CGI::escapeHTML( $mail_or_url );
+	$body = CGI::escapeHTML( $body );
 
 	$body =~ s/\r?\n/<br>/gsm;
 
@@ -180,14 +176,6 @@ print $page_html;
 exit;
 
 #----------------------------------------------------------------------
-
-###
-sub escape_string {
-    my ($sp) = @_;
-    $$sp =~ s/</&lt;/g;
-    $$sp =~ s/>/&gt;/g;
-    $$sp =~ s/\"/&quot;/g;	# "
-}
 
 sub error {
     my ($str) = @_;
@@ -241,6 +229,7 @@ sub set_comment_hash {
 sub make_comment_html {
     my ($commentp, $commentid) = @_;
     my $mes = $commentp->{'m'};
+    #$mes = CGI::escapeHTML( $mes );
     $mes =~ s{((s?https?|ftp)://($URLCHARS+))}{<a href="$1">$1</a>}g;
 
     my $anchor = qq(<span class="canchor">*</span>);
@@ -309,8 +298,10 @@ sub write_to_jsfile {
 	# URL to anchor
 	$m =~ s/((s?https?|ftp):\/\/$URLCHARS+)/<a href="$1">$1<\/a>/ig;
 
+	my $commentid = $i + 1;
+
 	$str .= << "JS";
-document.writeln('<p><span class="canchor">_</span>');
+document.writeln('<p><span class="canchor"><a href="$cgi_url#$commentid">_</a></span>');
 document.writeln('<span class="commentator">$n</span>');
 document.writeln(' [$m]</p>');
 JS
