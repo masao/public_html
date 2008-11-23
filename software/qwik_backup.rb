@@ -12,12 +12,21 @@ class QwikBackup
    def initialize( baseurl, username, password )
       @baseurl = URI.parse( baseurl )
       @conn = Net::HTTP.new( @baseurl.host, @baseurl.port )
-      cookie = login( @baseurl + ".typekey", username, password )
+      cookie = login( username, password )
       @cookie = { "Cookie" => cookie.keys.map{|c| "#{c}=#{cookie[c]}" }.join("; ") }
    end
 
+   def login( username, password )
+      data = "user=#{ username }&pass=#{ password }"
+      response = @conn.post( @baseurl.path + ".login", data )
+      p response
+      p response.header
+      cookie = parse_cookie( response )
+      cookie
+   end
+
    # Ref: http://support.typepad.com/cgi-bin/typepad.cfg/php/enduser/std_adp.php?p_faqid=1338
-   def login( baseurl, username, password )
+   def login_typekey( username, password )
       # Location: https://www.typekey.com/t/typekey/login?t=0NTLU925g4FfXP94wt43&need_email=1&_return=http://qwik.jp/irce/.typekey&v=1.1
       #p baseurl
       return_url = nil
@@ -149,7 +158,7 @@ if $0 == __FILE__
    QWIKPASS = File.join( ENV["HOME"], ".qwikpass" )
    username, password = open( QWIKPASS ){|io| io.read }.chomp.split(/:/)
    qwik = QwikBackup.new( File.join("http://qwik.jp" + ARGV[0]), username, password )
-   #puts qwik.get_txt( "1" )
+   # puts qwik.get_txt( "1" )
 
    file = qwik.archive_filename
    res = qwik.get( file )
