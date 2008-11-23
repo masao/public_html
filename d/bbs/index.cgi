@@ -3,6 +3,8 @@
 # $Id$
 use strict;
 use POSIX qw(strftime);
+use CGI;
+use CGI::Carp;
 
 ### 編集して下さい
 my $conf_file = "kuttukibbs.conf"; # ユーザ設定ファイルの場所
@@ -31,18 +33,15 @@ my $URLCHARS = "[-_.!~*'a-zA-Z0-9;/?:@&=+,%\#\$]";
 
 # ユーザ設定ファイルの読み込み
 if (not -e $conf_file) {
-    print "error: can't read $conf_file\n";
-    exit;
+    die "error: can't read $conf_file\n";
 }
 open(CONF, "$conf_file") or die "can't open $conf_file : $!";
 my $conf = join('', <CONF>);
 eval $conf;
 
 # 現在時刻の獲得
-use POSIX qw(strftime);
 my $what_time_is_it_now = strftime "%Y-%m-%d %H:%M:%S", localtime;
 
-use CGI;
 my $q = new CGI;
 #print $q->Dump;
 
@@ -71,8 +70,8 @@ if ($mode eq 'write') {
     if (defined $q->cookie('kuttukibbs')) {
 	($name, $mail_or_url) = split(/\t/, $q->cookie('kuttukibbs')); 
     }
-    escape_string(\$name);	
-    escape_string(\$mail_or_url);	
+    escape_string(\$name);
+    escape_string(\$mail_or_url);
 }
 
 my $cgi_url = $q->url();
@@ -89,7 +88,7 @@ if ($mode eq 'latest') {
 
 # コメント対象の情報
 $logid =~ s{[^a-zA-Z0-9\.\-\#_]}{_}g;
-exit if ($logid =~ /^\s*$/);
+die( 'invalid id' ) if ($logid =~ /^\s*$/);
 my $target_url = id2url($logid); # コメント対象の URL
 $cgi_url .= "?id=$logid";
 my $fn_pref = "$log_dir/$logid";
@@ -131,37 +130,39 @@ if ($mode eq "write") {
     if ($body !~ /\A\s*\Z/m) {
 	# Spam対策;
 	my @spam;
+
 	# 特定のURLリンク記法やHTMLリンク記法は禁止
 	@spam = ($body =~ /(\[url=https?:\/\/|<a\s+href\s*=\s*["']?\s*https?:\/\/)/gmoi);
-	exit if scalar(@spam) > 0;
+	error("リンク記法が含まれています。\nYour comment contains a inappropriate hyperlink format.") if scalar(@spam) > 0;
+
 	# URLを3つ以上書くのは禁止
 	@spam = ($body =~ /https?:\/\//gmo);
-	exit if scalar(@spam) > 2;
+	error("複数のURLが書かれています。\nYour comment contains too many URLs.") if scalar(@spam) > 2;
 
 	# 特定の文字列を禁止
 	@spam = ($body =~ /\b(good|nice|cool|funny|best|great) site/gmoi);
-	exit if scalar(@spam) > 0;
+	error("禁止された語句が含まれています。\nYour comment contains stop words, such as 'cool','funny' etc.") if scalar(@spam) > 0;
 
 	# 特定のURLを禁止
 	@spam = ($body =~ /\bhttps?:\/\/(\w+\.)?google\.(com|us|jp)\/group\/\w?\w?(ticket|teens)/gmoi);
-	exit if scalar(@spam) > 0;
+	error("禁止されたURLが含まれています。\nYour comment contains a spamming URL.") if scalar(@spam) > 0;
 
-	escape_string(\$name);	
+	escape_string(\$name);
 	escape_string(\$mail_or_url);
 	escape_string(\$body);
 
 	$body =~ s/\r?\n/<br>/gsm;
-	
+
 	my $name_tmp = $name;
 	if ($mail_or_url =~ /^http:\/\/$URLCHARS+$/) {
 	    $name_tmp = qq(<a href="$mail_or_url">$name</a>);
 	}
-	
+
 	$latest_id++;
 	$com_hash{$latest_id}{n} = $name_tmp;
 	$com_hash{$latest_id}{m} = $body;
 	$com_hash{$latest_id}{d} = $what_time_is_it_now;
-	
+
 	write_to_logfile();	# ログファイルへの書き込み
 	write_to_jsfile($fn_pref.".js"); # JavaScript Feed ファイルへの書き込み
 	write_to_adminlogfile(); # 管理者用ログファイルへの書き込み
@@ -188,6 +189,21 @@ sub escape_string {
     $$sp =~ s/\"/&quot;/g;	# "
 }
 
+sub error {
+    my ($str) = @_;
+    print <<EOF;
+<html><head><title>Internal Server Error</title></head>
+<body>
+<h1>Internal Server Error</h1>
+<pre>
+$str
+</pre>
+<p><a href="javascript:history.back()">[Back]</a></p>
+</body>
+</html>
+EOF
+    exit;
+}
 
 ### ファイルを読む
 sub read_file {
@@ -253,7 +269,6 @@ DAY
     ;
     return $rv;
 }
-
 
 ### ログファイルへの書き込み
 sub write_to_logfile {
