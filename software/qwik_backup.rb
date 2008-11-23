@@ -19,10 +19,7 @@ class QwikBackup
    def login( username, password )
       data = "user=#{ username }&pass=#{ password }"
       response = @conn.post( @baseurl.path + ".login", data )
-      p response
-      p response.header
-      cookie = parse_cookie( response )
-      cookie
+      parse_cookie( response )
    end
 
    # Ref: http://support.typepad.com/cgi-bin/typepad.cfg/php/enduser/std_adp.php?p_faqid=1338
