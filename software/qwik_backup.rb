@@ -16,38 +16,46 @@ class QwikBackup
       @cookie = { "Cookie" => cookie.keys.map{|c| "#{c}=#{cookie[c]}" }.join("; ") }
    end
 
+   # Ref: http://support.typepad.com/cgi-bin/typepad.cfg/php/enduser/std_adp.php?p_faqid=1338
    def login( baseurl, username, password )
       # Location: https://www.typekey.com/t/typekey/login?t=0NTLU925g4FfXP94wt43&need_email=1&_return=http://qwik.jp/irce/.typekey&v=1.1
       #p baseurl
       return_url = nil
       cookie = nil
+      http_typekey = nil
       response = get( ".typekey" )
-      redir_url = URI.parse( response[ 'Location' ] )
-      #p response
-      #p redir_url
-      http_tk = Net::HTTP.new( redir_url.host, redir_url.port )
-      if redir_url.scheme == "https"
-         http_tk.use_ssl = true
-         #http_tk.ca_file = '/var/ssl/cert.pem'
-         #http_tk.verify_mode = OpenSSL::SSL::VERIFY_PEER
-         #http_tk.verify_depth = 5
+      while response[ 'Location' ]
+         redir_url = URI.parse( response[ 'Location' ] )
+         p response
+         p redir_url
+         http_typekey = Net::HTTP.new( redir_url.host, redir_url.port )
+         if redir_url.scheme == "https"
+            http_typekey.use_ssl = true
+            #http_tk.ca_file = '/var/ssl/cert.pem'
+            #http_tk.verify_mode = OpenSSL::SSL::VERIFY_PEER
+            #http_tk.verify_depth = 5
+         else
+            http_typekey.use_ssl = false
+         end
+         response = http_typekey.request_get( redir_url.request_uri )
       end
-      http_tk.start do |conn|
-         conn.get( redir_url.request_uri )
+      http_typekey.use_ssl = true
+      http_typekey.start do |conn|
+         # conn.get( redir_url.request_uri )
          data = redir_url.query + "&__mode=save_login&username=#{ username }&password=#{ password }"
          #__mode=save_login&_return=http%3A%2F%2Fqwik.jp%2F#{ site }%2F.typekey&t=0NTLU925g4FfXP94wt43&v=1.1&username=#{ username }&password=#{ password }&layout=&need_email=1&keep_me=1
          #p data
          login_response = conn.post( "/t/typekey", data )
          login_session = parse_cookie( login_response )
-         #p login_response.canonical_each{|k, v| }
+         p login_response
          #p login_response.body
-         #p login_session
+         p login_session
          header = { "Cookie" => login_session.keys.map{|c| "#{c}=#{login_session[c]}" }.join("; ") }
          data = redir_url.query + "&__mode=save_login&pass_email=1"
          #__mode=save_login&v=1.1&t=0NTLU925g4FfXP94wt43&_return=http%3A%2F%2Fqwik.jp%2F#{ site }%2F.typekey&pass_email=1&need_email=1
          login_response2 = conn.post( "/t/typekey", data, header )
          #p login_response2.body
-         #p login_response2.canonical_each{|k, v| }
+         #p login_response2.canonical_each{|k,v| p [k,v] }
          #p login_response2[ 'Location' ]
          return_url = URI.parse( login_response2[ 'Location' ] )
       end
