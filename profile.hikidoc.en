@@ -1,10 +1,8 @@
 title: Curriculum Vitae (Masao Takaku)
-date.modified: 2008-10-27
+date.modified: 2008-11-24
 date.available: 2007-03-04
 
-{{rawhtml('<div style="border-style:solid;border-color:#ccc;float:right">')}}
-{{image './images/200811-profile.jpg' 'My portrait at National Museum of Emerging Science and Innovation (November 2008)'}}
-{{rawhtml('</div>')}}
+{{image './images/200811-profile.jpg' 'My portrait at National Museum of Emerging Science and Innovation (November 2008)' 'right'}}
 :Name:Masao Takaku
 :Contact:
 //:Contact:2-1-2 Hitotsubashi, Chiyoda-ku, Tokyo 101-8430, Japan

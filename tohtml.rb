@@ -1,4 +1,5 @@
 #!/usr/local/bin/ruby
+# -*- coding: euc-jp -*-
 # $Id$
 
 require "pathname"
@@ -158,7 +159,7 @@ class MHikiDoc < HikiDoc
       end
       class Blockquote < Plugin
          def expand( *args )
-            STDERR.puts [@style,args].inspect
+            #STDERR.puts [@style,args].inspect
             lines = args.join("\n").split(/\n/)
             #attrs = lines.shift
             options = @doc.options
@@ -198,8 +199,8 @@ class MHikiDoc < HikiDoc
             label_text = ""
             label_text = %Q[ alt="#{label}" title="#{label}"] if label
             align_text = ""
-            align_text = %Q[ style="display:#{align};clear:#{align}"] if align
-            %Q[<img src="#{src}"#{align_text}#{label_text}/>]
+            align_text = %Q[ style="float:#{align};clear:#{align}"] if align
+            %Q[<#{@style}#{align_text}><img src="#{src}"#{label_text}/></#{@style}]
          end
       end
    end
