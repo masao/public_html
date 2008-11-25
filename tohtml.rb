@@ -200,7 +200,7 @@ class MHikiDoc < HikiDoc
             label_text = %Q[ alt="#{label}" title="#{label}"] if label
             align_text = ""
             align_text = %Q[ style="float:#{align};clear:#{align}"] if align
-            %Q[<#{@style}#{align_text}><img src="#{src}"#{label_text}/></#{@style}]
+            %Q[<#{@style}#{align_text} class="image"><img src="#{src}"#{label_text}/></#{@style}>]
          end
       end
    end
