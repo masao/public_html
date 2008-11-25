@@ -1,7 +1,7 @@
 title: 高久雅生の経歴
 title.short: 経歴
 date.available: 2007-03-04
-date.modified: 2008-11-24
+date.modified: 2008-11-25
 
 {{image './images/200811-profile.jpg' '2008年11月 科学未来館にて' 'right'}}
 :氏名:高久 雅生 （たかく まさお）
@@ -72,10 +72,10 @@ date.modified: 2008-11-24
 ::（スキル）Japan/MARC, C言語, Perl, DBM, 磁気テープ
 
 !!主な著作物
-*Masao Takaku, Keizo Oyama, Akiko Aizawa. An Analysis on Topic Features and Difficulties Based on Web Navigational Retrieval Experiments. Proceedings of the Third Asia Information Retrieval Symposium (AIRS) 2006; Springer, LNCS 4182; Singapore; pp.625-632; (2006-10) DOI:10.1007/11880592_55 （査読あり）
-*高久雅生, 江草由佳, 石塚英弘. Webサービスによる用語体系データの提供とその応用システム. 情報知識学会誌; vol.14; no.1; pp.11-22; (2004) （査読あり）
-*高久雅生, 江草由佳, 伊東千夏, 石塚英弘. データの再利用が可能な複数用語体系ブラウジングシステムの構築. 情報知識学会誌; vol.13; no.1; pp.10-22; (2003) （査読あり）
-*宇陀則彦, 江草由佳, 高久雅生, 石塚英弘. Z39.50による日本語書誌データ検索システム. 情報知識学会誌; vol.9; no.2; pp.1-15; (1999) （査読あり）
+*{{u "Masao Takaku"}}, Keizo Oyama, Akiko Aizawa. An Analysis on Topic Features and Difficulties Based on Web Navigational Retrieval Experiments. Proceedings of the Third Asia Information Retrieval Symposium (AIRS) 2006; Springer, LNCS 4182; Singapore; pp.625-632; (2006-10) DOI:10.1007/11880592_55 （査読あり）
+*{{u "高久雅生"}}, 江草由佳, 石塚英弘. Webサービスによる用語体系データの提供とその応用システム. 情報知識学会誌; vol.14; no.1; pp.11-22; (2004) （査読あり）
+*{{u "高久雅生"}}, 江草由佳, 伊東千夏, 石塚英弘. データの再利用が可能な複数用語体系ブラウジングシステムの構築. 情報知識学会誌; vol.13; no.1; pp.10-22; (2003) （査読あり）
+*宇陀則彦, 江草由佳, {{u "高久雅生"}}, 石塚英弘. Z39.50による日本語書誌データ検索システム. 情報知識学会誌; vol.9; no.2; pp.1-15; (1999) （査読あり）
 全発表文献一覧は[[発表文献一覧|./pub/]]を参照のこと。
 
 !!所属学会
