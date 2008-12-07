@@ -13,7 +13,7 @@ class PubData
    attr_reader :journal, :conference, :org, :publisher
    attr_reader :volume, :number, :year, :month, :city
    attr_reader :page_start, :page_end, :page, :isbn, :note
-   attr_reader :url, :url_label, :doi, :slide, :poster, :file
+   attr_reader :url, :url_label, :doi, :slide, :poster, :file, :abstract
    attr_reader :language
    attr_reader :refereed
    def initialize( element )
@@ -51,6 +51,7 @@ class PubData
       @slide = element.text("slide")
       @poster = element.text("poster")
       @file = element.text("file")
+      @abstract = element.text("abstract")
    end
 
    def to_coins

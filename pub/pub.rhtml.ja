@@ -112,7 +112,7 @@ author_s
 <span class="doi">DOI <a href="http://dx.doi.org/<%=h pub.doi %>"><%=h pub.doi %></a></span>
 </dd>
 <% end %>
-<% %w[ slide poster ].each do |target| %>
+<% %w[ abstract slide poster ].each do |target| %>
 <% if pub.send( target ) %>
 <dd class="url">
 <span class="<%= target %>">[<%= target.capitalize %>] <a href="<%=h pub.send( target ) %>"><%=h pub.send( target ) %></a></span>

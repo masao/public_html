@@ -59,14 +59,12 @@
     <year>2008</year>
     <month>12</month>
     <city>Yokohama, Pacifico Yokohama</city>
-    <page>5</page>
-    <!--
     <page>
-      <start>544</start>
-      <end>545</end>
+      <start>1509</start>
+      <end>1513</end>
     </page>
-    -->
-    <note>(to appear)</note>
+    <file>./2008/iasc2008_proceedings.pdf</file>
+    <abstract>./2008/iasc2008_abstract.pdf</abstract>
   </pub>
 
   <pub type="misc">
