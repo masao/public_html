@@ -10,6 +10,7 @@
 </head>
 <body>
 <div class="last-update">最終更新日: <%= LASTUPDATE.strftime("%Y年%m月%d日") %></div>
+<div class="last-update"><%=h @version %></div>
 <h1>発表論文、講演資料など</h1>
 <p>これまでに執筆、発表した論文等の情報です（全 <%= @pubs.size %> 件）。</p>
 <div id="sortby_list">

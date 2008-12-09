@@ -120,8 +120,10 @@ class PubApp
    end
 
    def load_pubdata( io )
+      doc = REXML::Document.new( io )
+      @version = doc.elements[ "/publist" ].attributes[ "version" ]
       @pubs = []
-      REXML::Document.new( io ).elements.to_a("/publist/pub").each do |e|
+      doc.elements.to_a("/publist/pub").each do |e|
          @pubs << PubData.new( e )
       end
       @pubs = @pubs.sort_by do |e|
