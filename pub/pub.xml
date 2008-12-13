@@ -2,6 +2,28 @@
 <!-- $Id$ -->
 <publist version="$Revision$">
 
+  <pub refereed="true" type="journal">
+    <author>Akiko Aizawa</author>
+    <author>Atsuhiro Takasu</author>
+    <author>Daiji Fukagawa</author>
+    <author>Masao Takaku</author>
+    <author>Jun Adachi</author>
+    <title>Academic Linkage</title>
+    <subtitle>A Linkage Platform for Large Volumes of Academic Information</subtitle>
+    <journal>Progress in Informatics</journal>
+    <year>2009</year>
+    <!--<month>12</month>-->
+    <publisher>National Institute of Informatics</publisher>
+    <!--
+    <page>
+      <start>78</start>
+      <end>81</end>
+    </page>
+    -->
+    <language>en</language>
+    <note>(to appear; accepted)</note>
+  </pub>
+
   <pub refereed="true" type="conference">
     <author>Yuka Egusa</author>
     <author>Masao Takaku</author>
