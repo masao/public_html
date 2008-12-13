@@ -1,7 +1,7 @@
 title: 高久雅生の経歴
 title.short: 経歴
 date.available: 2007-03-04
-date.modified: 2008-12-03
+date.modified: 2008-12-13
 
 {{image './images/200811-profile.jpg' '2008年11月 科学未来館にて' 'right'}}
 :氏名:高久 雅生 （たかく まさお）
@@ -31,8 +31,8 @@ date.modified: 2008-12-03
 ::（スキル）eSciDoc, Fedora Commons, SOA, Java, JSP/JSF
 :2006-01 - 2008-08:
 ::'''[[情報・システム研究機構|http://www.rois.ac.jp/]] [[新領域融合研究センター|http://www.rois.ac.jp/tric/]] （ポスドク研究員）'''
-::研究者情報サーバの構築（国内研究者のデータを一元化するプロトタイプシステムの構築）。[[科研費報告書データベースβ版|http://seikaplus.nii.ac.jp/]]、[[研究者リゾルバーα版|http://rns.nii.ac.jp/]]の開発に協力
-::（研究テーマ）電子図書館, 名寄せ, 書誌同定, 研究者ネットワーク, 可視化
+::情報リンケージの研究に従事。研究者情報サーバの構築（国内研究者のデータを一元化するプロトタイプシステムの構築）。[[科研費報告書データベースβ版|http://seikaplus.nii.ac.jp/]]、[[研究者リゾルバーα版|http://rns.nii.ac.jp/]]の開発に協力
+::（研究テーマ）情報リンケージ, 電子図書館, 名寄せ, 書誌同定, 研究者ネットワーク, 可視化
 ::（スキル）Perl, Web API, XML, Ruby
 :2004-10 - 2005-12:
 ::'''[[国立情報学研究所|http://www.nii.ac.jp/]] 情報学資源研究センター （ポスドク研究員）'''
@@ -89,6 +89,7 @@ date.modified: 2008-12-03
 !!!学会等における活動
 *情報知識学会理事（2008年-）
 *情報知識学フォーラム実行委員（2005年、2006年、2007年、2008年）
+*情報知識学会年次大会実行副委員長（2009年）
 *情報処理学会 [[論文誌（データベース）(TOD)|http://ipsjtod.kyoto-su.ac.jp/]] 編集委員（2008年-）
 *情報処理学会 [[情報学基礎研究会|http://www.ipsj.or.jp/katsudou/sig/sighp/fi/]] 運営委員（2007年-）
 *The Fifth NTCIR Workshop Meeting Publication Co-Chair（2005年）

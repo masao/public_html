@@ -1,5 +1,5 @@
 title: Curriculum Vitae (Masao Takaku)
-date.modified: 2008-12-11
+date.modified: 2008-12-13
 date.available: 2007-03-04
 
 {{image './images/200811-profile.jpg' 'My portrait at National Museum of Emerging Science and Innovation (November 2008)' 'right'}}
@@ -31,7 +31,7 @@ Information retrieval, Digital library, Information behaviour
 :2006-01 - 2008-08:
 ::'''[[Transdisciplinary Research Integration Center|http://www.rois.ac.jp/tric/]], [[Research Organization of Information and Systems|http://www.rois.ac.jp/]]  Post-doctoral researcher'''
 ::Constructing a researcher information server (building prototype systems for integrating information on researchers in Japan). Involved in development of [[KAKEN Database (Beta service)|http://seikaplus.nii.ac.jp/]] and [[Researcher Resolver (Alpha service)|http://rns.nii.ac.jp/]]
-::(Keywords) digital library, identification, combining bibliographics, researcher network, visualization
+::(Keywords) information linkage, digital library, identification, combining bibliographics, researcher network, visualization
 ::(Skills) Perl, Web API, XML, Ruby
 :2004-10 - 2005-12:
 ::'''[[National Institute of Informatics|http://www.nii.ac.jp/]] Post-doctoral researcher'''
