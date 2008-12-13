@@ -76,15 +76,13 @@
     <year>2008</year>
     <month>12</month>
     <city>東京, 統計数理研究所</city>
-    <page>1</page>
-<!--
     <page>
-      <start>31</start>
-      <end>36</end>
+      <start>1</start>
+      <end>2</end>
     </page>
--->
     <language>ja</language>
-    <note>（発表予定）</note>
+    <file>./2008/200812-tricseminar.pdf</file>
+    <slide>./2008/20081211-tricseminar-slides.pdf</slide>
   </pub>
 
   <pub type="conference">
