@@ -32,19 +32,17 @@
     <author>Noriko Kando</author>
     <author>Makiko Miwa</author>
     <title>Visualization of User Eye Movements for Search Result Pages</title>
-    <journal>Proceedings of the Second International Workshop on Evaluating Information Access (EVIA 2008) (NTCIR-7 Pre-Meeting Workshop)</journal>
+    <journal>Proceedings of the Second International Workshop on Evaluating Information Access (EVIA 2008) (Satelite Workshop of NTCIR-7)</journal>
     <year>2008</year>
     <month>12</month>
     <city>Tokyo</city>
     <publisher>National Institute of Informatics</publisher>
-    <!--
     <page>
-      <start>78</start>
-      <end>81</end>
+      <start>42</start>
+      <end>46</end>
     </page>
-    -->
     <language>en</language>
-    <note>(to appear; accepted)</note>
+    <url>http://research.nii.ac.jp/ntcir/workshop/OnlineProceedings7/abstract_evia.html#EIVA08</url>
   </pub>
 
   <pub type="misc">
