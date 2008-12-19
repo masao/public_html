@@ -194,13 +194,30 @@ class MHikiDoc < HikiDoc
       end
       class Image < Plugin
          def expand( *args )
-            #STDERR.puts args.inspect
-            src, label, align = args
-            label_text = ""
-            label_text = %Q[ alt="#{label}" title="#{label}"] if label
-            align_text = ""
-            align_text = %Q[ style="float:#{align};clear:#{align}"] if align
-            %Q[<#{@style}#{align_text} class="image"><img src="#{src}"#{label_text}/></#{@style}>]
+            src, label, *opts = args
+            @css = {}
+            opts.each do |opt|
+               case opt
+               when "thumbs"
+                  @thumbs = true
+               when "right", "left"  # align
+                  @css[:float] = opt
+                  @css[:clear] = opt
+               when /\A(\d+)(?:px)?\Z/ # width
+                  @css[:width] = $1 + "px"
+               end
+            end
+            if not @css.empty?
+               css_str = @css.keys.map{|k| "#{k}:#{@css[k]}" }.join(";")
+               style_attr = %Q[ style="#{css_str}"]
+            end
+            label_attr = label ? %Q[ alt="#{label}" title="#{label}"] : ""
+            img_tag = %Q[<img src="#{src}" #{label_attr}/>]
+            if @thumbs
+               %Q[<div class="thumbs"#{style_attr}><div class="thumbs-image">#{img_tag}</div><div class="thumbs-caption">#{label}</div></div>]
+            else
+               %Q[<#{@style}#{style_attr} class="image"><img src="#{src}"#{label_attr}/></#{@style}>]
+            end
          end
       end
    end
