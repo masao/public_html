@@ -2,6 +2,7 @@
 
 HTML	= 	index.html.ja index.html.en \
 		profile.html.ja profile.html.en \
+		profile-images.html.ja profile-images.html.en \
 		history.html links.html \
 		etc/index.shtml \
 		etc/firefox.html \
