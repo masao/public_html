@@ -97,6 +97,11 @@
     padding: .1em .5em;
     border: solid 1px gray;
   }
+  div.thumbs {
+    padding: 5px;
+    text-indent: 0px;
+    border: #ccc solid 1pt;
+  }
 }
 @media print {
   body {
