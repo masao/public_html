@@ -24,6 +24,23 @@
     <note>(to appear; accepted)</note>
   </pub>
 
+  <pub type="misc">
+    <author>高久雅生</author>
+    <title>Web情報検索の深化へ向けて</title>
+    <journal>情報知識学会誌</journal>
+    <year>2008</year>
+    <month>12</month>
+    <volume>18</volume>
+    <number>5</number>
+    <page>
+      <start>468</start>
+      <end>471</end>
+    </page>
+    <language>ja</language>
+    <note>情報知識学会創立20周年記念特別号</note>
+    <date>2008-12-08</date>
+  </pub>
+
   <pub refereed="true" type="conference">
     <author>Yuka Egusa</author>
     <author>Masao Takaku</author>
@@ -43,6 +60,7 @@
     </page>
     <language>en</language>
     <url>http://research.nii.ac.jp/ntcir/workshop/OnlineProceedings7/pdf/EVIA2008/08-EVIA2008-EgusaY.pdf</url>
+    <date>2008-12-16</date>
   </pub>
 
   <pub type="misc">
@@ -63,6 +81,7 @@
       <end>42</end>
     </page>
     <language>ja</language>
+    <date>2008-12-12</date>
   </pub>
   
   <pub type="misc">
@@ -81,6 +100,7 @@
     <language>ja</language>
     <file>./2008/200812-tricseminar.pdf</file>
     <slide>./2008/20081211-tricseminar-slides.pdf</slide>
+    <date>2008-12-11</date>
   </pub>
 
   <pub type="conference">
@@ -100,6 +120,7 @@
     <file>./2008/iasc2008_proceedings.pdf</file>
     <abstract>./2008/iasc2008_abstract.pdf</abstract>
     <slide>./2008/iasc2008-slides.pdf</slide>
+    <date>2008-12-06</date>
   </pub>
 
   <pub type="misc">
@@ -115,6 +136,7 @@
     <city>神奈川, パシフィコ横浜</city>
     <language>ja</language>
     <url>http://pubman.mpdl.mpg.de/pubman/item/escidoc:39671</url>
+    <date>2008-11-27</date>
   </pub>
 
   <pub type="misc">
@@ -133,6 +155,7 @@
       <end>74</end>
     </page>
     <url>http://www.jstage.jst.go.jp/article/infopro/2008/0/2008_69/_article/-char/ja/</url>
+    <date>2008-11-13</date>
   </pub>
 
   <pub refereed="true" type="conference">
@@ -153,6 +176,7 @@
     </page>
     <language>en</language>
     <doi>10.1145/1414694.1414728</doi>
+    <date>2008-10-17</date>
   </pub>
 
   <pub refereed="true" type="misc">
@@ -173,6 +197,7 @@
     </page>
     <language>ja</language>
 <!--    <file>./2007/jcss2007.pdf</file>-->
+    <date>2008-09-06</date>
   </pub>
 
   <pub type="misc">
@@ -194,6 +219,7 @@
     </page>
     <language>ja</language>
     <file>./2008/ipsj-academic-linkage.pdf</file>
+    <date>2008-08-15</date>
   </pub>
 
   <pub type="misc">
@@ -218,6 +244,7 @@
     <doi>10.2964/jsik.18-181</doi>
     <slide>./2008/jsik2008-slides.pdf</slide>
     <language>ja</language>
+    <date>2008-05-24</date>
   </pub>
 
   <pub refereed="true" type="journal">
@@ -236,6 +263,7 @@
     </page>
     <language>ja</language>
     <url>http://www.dbsj.org/Japanese/DBSJLetters/vol6/no4/thesis/aizawa.pdf</url>
+    <date>2008-03-27</date>
   </pub>
 
   <pub type="misc">
@@ -255,6 +283,7 @@
     <language>ja</language>
     <file>./2008/tric-seminar.pdf</file>
     <slide>./2008/tric-seminar-slides.pdf</slide>
+    <date>2008-01-28</date>
   </pub>
 
   <pub type="misc">
@@ -271,9 +300,10 @@
       <end>30</end>
     </page>
     <language>ja</language>
+    <date>2008-01-28</date>
   </pub>
 
-  <pub refereed="true" type="conference"><!--（査読あり：採録済）-->
+  <pub refereed="true" type="conference">
     <author>相澤彰子</author>
     <author>大山敬三</author>
     <author>高久雅生</author>
@@ -283,6 +313,7 @@
     <month>11</month>
     <city>東京</city>
     <language>ja</language>
+    <date>2007-11-27</date>
   </pub>
 
   <pub type="misc">
