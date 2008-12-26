@@ -130,7 +130,7 @@ class PubData
       bibtex[ :address ] = @city if @city
       bibtex[ :publisher ] = @publisher if @publisher
       bibtex[ :year ] = @year
-      bibtex[ :month ] = @month
+      bibtex[ :month ] = @month if @month
       bibtex[ :volume ] = @volume if @volume
       bibtex[ :number ] = @number if @number
       if @page
@@ -144,7 +144,7 @@ class PubData
       
       bibtex_s = bibtex.keys.map{|k| "#{k} = {#{bibtex[k]}}" }.join(",\n")
       <<EOF
-@#{genre}{#{id},
+@#{genre}{pubid#{object_id},
 #{bibtex_s}
 }
 EOF
@@ -265,13 +265,13 @@ if $0 == __FILE__
       app = PubApp::new( cgi )
       app.load_pubdata( open(PUBDATA) )
       if cgi.params["action"] and cgi.params["action"][0] == "bibtex"
-         cgi.out( "application/x-bibtex; charset=UTF-8" ) {
-            app.map{|e| e.to_bibtex }
-         }
+         cgi.out( "application/x-bibtex; charset=UTF-8" ) do
+            app.map{|e| e.to_bibtex }.join
+         end
       else
-         cgi.out( "charset" => "UTF-8" ) {
+         cgi.out( "charset" => "UTF-8" ) do
             app.eval_rhtml( "pub.rhtml.#{app.lang}" )
-         }
+         end
       end
    rescue
       print cgi.header( { "status" => "500 Internal Server Error",
