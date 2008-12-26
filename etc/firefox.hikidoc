@@ -1,7 +1,7 @@
 title: Firefox: ブックマーク、拡張、設定など
 title.short: Firefox設定集
 date.available: 2006-04-20
-date.modified:  2008-11-21
+date.modified:  2008-12-26
 subject: etc
 
 常用ブラウザとして[[Mozilla Firefox|http://www.mozilla-japan.org/]]を使っていますが、Firefox上でのブックマーク、拡張、設定情報のメモです。
@@ -18,7 +18,7 @@ subject: etc
 !!! Boolmarklet
 *[[上|javascript:if (location.hash) location.hash = ''; else if (location.search) location.search = ''; else if (location.pathname.charAt(location.pathname.length-1) == %22/%22) location = %22..%22; else if (location.pathname) location = %22.%22; void 0]]
 *[[Bloglines|javascript:location.href='http://www.bloglines.com/sub/'+location.href]]
-*[[del.icio.us|javascript:location.href='http://del.icio.us/new/masao?v=4&url='+encodeURIComponent(location.href)+'&title='+encodeURIComponent(document.title)]]
+*[[Delicious|javascript:location.href='http://del.icio.us/new/masao?v=4&url='+encodeURIComponent(location.href)+'&title='+encodeURIComponent(document.title)]]
 !! 拡張
 *[[IE View|http://ieview.mozdev.org/]]
 *[[LiveHttpHeaders|http://livehttpheaders.mozdev.org/]]
