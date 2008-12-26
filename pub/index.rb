@@ -3,7 +3,7 @@
 
 require "cgi"
 require "erb"
-
+require "date"
 require "uri"
 require "rexml/document"
 require "yaml"
@@ -16,6 +16,7 @@ class PubData
    attr_reader :url, :url_label, :doi, :slide, :poster, :file, :abstract
    attr_reader :language
    attr_reader :refereed
+   attr_reader :date
    def initialize( element )
       @type = element.attributes["type"]
       @refereed = element.attributes["refereed"]
@@ -52,6 +53,7 @@ class PubData
       @poster = element.text("poster")
       @file = element.text("file")
       @abstract = element.text("abstract")
+      @date = element.text("date")
    end
 
    def to_coins
@@ -108,6 +110,45 @@ class PubData
       end
       coins << matrix.compact.join("&")
    end
+
+   def to_bibtex
+      bibtex = {}
+      genre =  case @type
+               when "conference"
+                  "inproceedings"
+               else
+                  @type
+               end
+      bibtex[ :author ] = @author.join(" and ")
+      bibtex[ :title ] = @title
+      bibtex[ :title ] << ": " + @subtitle if @subtitle
+      bibtex[ :journal ] = @journal if @journal
+      bibtex[ :conference ] = @conference if @conference
+      if genre == "inproceedings"
+         bibtex[ :booktitle ] = @conference ? @conference : @journal
+      end
+      bibtex[ :address ] = @city if @city
+      bibtex[ :publisher ] = @publisher if @publisher
+      bibtex[ :year ] = @year
+      bibtex[ :month ] = @month
+      bibtex[ :volume ] = @volume if @volume
+      bibtex[ :number ] = @number if @number
+      if @page
+         bibtex[ :pages ] = @page
+      elsif @page_start
+         bibtex[ :pages ] = "#{page_start}-#{page_end}"
+      end
+      bibtex[ :issn ] = @issn if @issn
+      bibtex[ :isbn ] = @isbn if @isbn
+      bibtex[ :note ] = @note if @note
+      
+      bibtex_s = bibtex.keys.map{|k| "#{k} = {#{bibtex[k]}}" }.join(",\n")
+      <<EOF
+@#{genre}{#{id},
+#{bibtex_s}
+}
+EOF
+   end
 end
 
 class PubApp
@@ -129,6 +170,8 @@ class PubApp
       @pubs = @pubs.sort_by do |e|
          sort_keys = [ sort_order(e, :year),
                        sort_order(e, :month) ]
+         sort_keys << ( - Date.parse( e.date ).jd ) if e.date
+         
          unless sort_mode == :year
             sort_keys.unshift( sort_order(e) )
          end
@@ -136,6 +179,13 @@ class PubApp
       end
       @toc_keys = @pubs.map{|e| toc_key(e) }.uniq
    end
+
+   def each
+      @pubs.each do |e|
+         yield e
+      end
+   end
+   include Enumerable
 
    SORT_ACCEPT = {
       :month => ( "0".."12" ).to_a.reverse,
@@ -214,9 +264,15 @@ if $0 == __FILE__
       cgi = CGI.new
       app = PubApp::new( cgi )
       app.load_pubdata( open(PUBDATA) )
-      cgi.out("charset" => "UTF-8") {
-         app.eval_rhtml( "pub.rhtml.#{app.lang}" )
-      }
+      if cgi.params["action"] and cgi.params["action"][0] == "bibtex"
+         cgi.out( "application/x-bibtex; charset=UTF-8" ) {
+            app.map{|e| e.to_bibtex }
+         }
+      else
+         cgi.out( "charset" => "UTF-8" ) {
+            app.eval_rhtml( "pub.rhtml.#{app.lang}" )
+         }
+      end
    rescue
       print cgi.header( { "status" => "500 Internal Server Error",
                           "type"   => "text/plain; charset=utf-8" } )
