@@ -2,6 +2,27 @@
 <!-- $Id$ -->
 <publist version="$Revision$">
 
+  <pub type="misc">
+    <author>大塚真吾</author>
+    <author>高久雅生</author>
+    <author>喜連川優</author>
+    <author>宮崎収兄</author>
+    <title>女性向けフリーマガジン発行サイトにおけるユーザの行動分析</title>
+    <conference>第1回データ工学と情報マネジメントに関するフォーラム (DEIM 2009)</conference>
+    <year>2009</year>
+    <month>3</month>
+    <city>静岡県掛川市</city>
+    <!--
+    <page>
+      <start>37</start>
+      <end>42</end>
+    </page>
+    -->
+    <language>ja</language>
+    <date>2009-03-08</date>
+    <note>（発表予定）</note>
+  </pub>
+
   <pub refereed="true" type="journal">
     <author>Akiko Aizawa</author>
     <author>Atsuhiro Takasu</author>
