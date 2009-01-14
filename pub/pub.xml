@@ -2,6 +2,28 @@
 <!-- $Id$ -->
 <publist version="$Revision$">
 
+  <!--
+  <pub type="journal">
+    <title>ネット社会におけるデジタルリポジトリシステムの実践と将来</title>
+    <author>谷藤幹子</author>
+    <author>高久雅生</author>
+    <author>大塚真吾</author>
+    <author>轟眞市</author>
+    <journal>情報管理</journal>
+    <volume>51</volume>
+    <number>12</number>
+    <year>2009</year>
+    <month>3</month>
+    <page>
+      <start></start>
+      <end></end>
+    </page>
+    <doi>10.1241/johokanri.51.xxxx</doi>
+    <language>ja</language>
+    <note>（印刷中）</note>
+  </pub>
+  -->
+
   <pub type="misc">
     <author>大塚真吾</author>
     <author>高久雅生</author>
