@@ -1,0 +1,37 @@
+<?php
+// $Id$
+// tracker_mylist plugin (customized version of tracker_list)
+function plugin_tracker_mylist_convert()
+{
+    $args = func_get_args();
+    $base = $args[0];
+    $filter = $args[1];
+    $result = array();
+    foreach ( preg_grep("/^$base\//", array_values(get_existpages())) as $pagename ) {
+	$source = join( get_source($pagename) );
+	$title = "[no title]";
+	if (preg_match("/^\*\s*(.*?)\s*(\[#\w+\])?\s*$/m", $source, $matches)) {
+	    $title = $matches[1];
+	}
+	if ($filter) {
+	    if (preg_match("/". preg_quote( $filter, "/" ) ."/i", $source)) {
+		$filtered = true;
+	    } else {
+		continue;
+	    }
+	}
+	$buf = "[[$pagename]] : $title";
+	if (preg_match("/^-\s*状態\s*:\s*解決$/m", $source, $matches)) {
+	    $buf = "%%$buf%%";
+	}
+	$result[] = "-$buf";
+    }
+    $html = "";
+    if ($filter) {
+	$html .= "<p>Filtered by \"$filter\".</p>\n";
+    }
+    natsort( $result );
+    $html .= convert_html( $result, "\n" );
+    return $html;
+}
+?>
