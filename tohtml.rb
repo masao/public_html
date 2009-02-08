@@ -168,30 +168,19 @@ class MHikiDoc < HikiDoc
             %Q[<blockquote>#{ text }</blockquote>]
          end
       end
-      class Code < Plugin
+      class SimpleInlinePlugin < Plugin
          def expand( *args )
+            element_name = self.class.to_s.split(/::/).last.downcase
             str = args.join("\n")
-            %Q[<code>#{ str }</code>]
+            %Q[<#{element_name}>#{ str }</#{element_name}>]
          end
       end
-      class U < Plugin
-         def expand( *args )
-            str = args.join("\n")
-            %Q[<u>#{ str }</u>]
-         end
-      end
-      class Q < Plugin
-         def expand( *args )
-            str = args.join("\n")
-            %Q[<q>#{ str }</q>]
-         end
-      end
-      class Ins < Plugin
-         def expand( *args )
-            str = args.join("\n")
-            %Q[<ins>#{ str }</ins>]
-         end
-      end
+      class Code  < SimpleInlinePlugin; end
+      class U     < SimpleInlinePlugin; end
+      class Q     < SimpleInlinePlugin; end
+      class Ins   < SimpleInlinePlugin; end
+      class Kbd   < SimpleInlinePlugin; end
+      class Small < SimpleInlinePlugin; end
       class Image < Plugin
          def expand( *args )
             src, label, *opts = args
