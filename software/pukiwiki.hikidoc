@@ -5,7 +5,7 @@ subject: software
 
 [[PukiWiki|http://pukiwiki.sourceforge.jp]]関連のツールです。
 
-ローカルのWikiで使用した小さなスクリプト、プラグインを置いておきます。
+手元のPukiWiki用に作成した簡易プラグインや作業用スクリプトを置いておきます。
 
 !! calc プラグイン
 
@@ -24,7 +24,7 @@ subject: software
 ::第1引数: 計算式そのもの。省略不可。
 ::第2引数: 小数点以下の桁数。省略時は0（小数点以下を表示しない）。
 ::第3引数: 'comma'と指定した場合のみ3桁ごとのカンマを表示。省略時はカンマ表示無し。
-:関連URL: [[PukiWiki/1.4/自作プラグイン/calcプラグイン|http://pukiwiki.sourceforge.jp/dev/?PukiWiki%2F1.4%2F%BC%AB%BA%EE%A5%D7%A5%E9%A5%B0%A5%A4%A5%F3%2Fcalc%A5%D7%A5%E9%A5%B0%A5%A4%A5%F3]]
+:関連URL: [[PukiWiki/1.4/自作プラグイン/calcプラグイン|http://pukiwiki.sourceforge.jp/dev/?PukiWiki%2F1.4%2F%BC%AB%BA%EE%A5%D7%A5%E9%A5%B0%A5%A4%A5%F3%2Fcalc%A5%D7%A5%E9%A5%B0%A5%A4%A5%F3]] （本家サイト上の紹介ページ）
 
 !! tracker_mylist プラグイン
 
