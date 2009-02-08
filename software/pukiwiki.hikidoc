@@ -1,0 +1,52 @@
+title: PukiWiki 関連ツール
+date.modified: 2009-02-08
+date.available: 2009-02-08
+subject: software
+
+[[PukiWiki|http://pukiwiki.sourceforge.jp]]関連のツールです。
+
+ローカルのWikiで使用した小さなスクリプト、プラグインを置いておきます。
+
+!! calc プラグイン
+
+その場で簡易計算を行うプラグインです。
+計算式を書けば、その場で計算して計算結果に変換して表示します。
+
+:ダウンロード:
+::[[./calc_inc_php.txt]]
+::{{small '（ダウンロード後に、pluginディレクトリに calc.inc.php と名前を変えて置けば設置完了）'}}
+:使い方:
+::{{code '&calc(1 + 2 + 3);              // ⇒ 6'}}
+::{{code '&calc(12345 * 1.05);           // ⇒ 12962'}}
+::{{code '&calc(12345 * 1.05, 2);        // ⇒ 12962.25'}}
+::{{code '&calc(12345 * 1.05, 2, comma); // ⇒ 12,962.25'}}
+:引数:
+::第1引数: 計算式そのもの。省略不可。
+::第2引数: 小数点以下の桁数。省略時は0（小数点以下を表示しない）。
+::第3引数: 'comma'と指定した場合のみ3桁ごとのカンマを表示。省略時はカンマ表示無し。
+:関連URL: [[PukiWiki/1.4/自作プラグイン/calcプラグイン|http://pukiwiki.sourceforge.jp/dev/?PukiWiki%2F1.4%2F%BC%AB%BA%EE%A5%D7%A5%E9%A5%B0%A5%A4%A5%F3%2Fcalc%A5%D7%A5%E9%A5%B0%A5%A4%A5%F3]]
+
+!! tracker_mylist プラグイン
+
+PukiWikiのtrackerプラグインで作成されたページ群の一覧を生成するプラグインで、標準添付のtracker_listとは全く違うものですが、単純な文字列検索によるフィルタ機能を追加してあります。
+
+:ダウンロード:
+::[[./tracker_mylist.inc.php.txt]]
+::{{small '（ダウンロード後に、pluginディレクトリに tracker_mylist.inc.php と名前を変えて置けば設置完了）'}}
+:使い方:
+::{{code '#tracker_mylist(Issue)'}}
+::{{code '#tracker_mylist(Issue,IssueGoal/2009-03)'}}
+:引数:
+::第1引数: trackerページ群の置いてあるページのベース名。{{code Issue}}と書けば、Issue/1, Issue/2 などのページが表示対象となる。省略不可。
+::第2引数: ページ群中で表示対象となるページを指定する検索文字列。その文字列が書かれているページのみを対象とする。省略時は全てのページを表示する。
+:関連URL: [[tracker_plus.inc.php|http://www2.g-com.ne.jp/~jjyun/twilight-breeze/?Lab%2Ftracker_plus.inc.php]] - 高機能版 tracker_plus プラグイン。こちらの方がより洗練された機能を提供しています。（手元の環境でうまくインストールできなかったので、このプラグインを作りました。）
+
+!! csv2tracker.rb
+
+CSV形式のファイルを tracker プラグインが扱うような形式のファイルに出力するRubyスクリプト。
+
+:ダウンロード:
+::[[./csv2tracker.rb]]
+:使い方:
+::{{kbd './csv2tracker.rb issue.csv'}}
+::ファイル名を引数として指定して、実行すると、PukiWiki形式のテキストファイルを生成します。そのファイルをそのままpukiwikiの wiki ディレクトリに転送するだけで、閲覧できるようになります。ページの名前（ファイル名）および内容テンプレートはソースコード先頭の変数で変えられます。
