@@ -32,6 +32,10 @@ def bsfilter_option(mode)
    end
 end
 
+require 'getopts'
+getopts("m:", "max:")
+max_iterates = ($OPT_m or $OPT_max).to_i if $OPT_m or $OPT_max
+
 ARGV.each do |fname|
    result = {}
    m = Mail.new(open(fname))
