@@ -5,6 +5,7 @@
 require "csv"
 # require "kconv"
 
+PAGE_NAME = "Issue/%%DATA1%%"
 PAGE_TEMPLATE = <<EOF
 * %%DATA7%%
 -¥Ú¡¼¥¸: [[Issue]]
@@ -26,7 +27,6 @@ PAGE_TEMPLATE = <<EOF
 ----
 #comment
 EOF
-PAGE_NAME = "Issue/%%DATA1%%"
 
 class String
    def expand_vars( data_row )
