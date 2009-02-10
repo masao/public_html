@@ -9,3 +9,8 @@ zipcode.log*
 .screenrc
 test-ttf_php.txt
 *.html
+*.aux
+*.log
+*.bbl
+*.dvi
+*.blg
