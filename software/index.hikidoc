@@ -1,5 +1,5 @@
 title: ソフトウェア
-date.modified: 2009-02-08
+date.modified: 2009-02-11
 css.content: div.obsolete { opacity:0.5; color:gray; }
 
 ここでは、私が書いた簡単なツールを紹介します。
@@ -12,6 +12,7 @@ css.content: div.obsolete { opacity:0.5; color:gray; }
 :[[Namazu用パッチ|../namazu/]]:全文検索エンジンNamazu用の機能追加パッチをいくつか公開しています。
 :[[JAPAN/MARC関連ツール|./jmarcfilter/]]:JAPAN/MARCレコードデータをプレインテキストに変換するプログラムを公開しています。
 :[[PukiWiki関連ツール|pukiwiki.html]]: PukiWikiプラグインと作業用スクリプトです。
+:[[『情報知識学会誌』引用形式スタイルファイル|jsik_bst.html]]: 情報知識学会誌への投稿論文用のBibTeX参照文献スタイルファイルを公開しています。
 
 !! 小物
 以下はちょっとした仕事をするためのワンライナー的スクリプトです。
