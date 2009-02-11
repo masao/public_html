@@ -1,21 +1,4 @@
-	% version 0.30 for JBibTeX versions 0.30 or later, LaTeX version 2.09.
-	% Copyright (C) 1990, all rights reserved.
-	%
-	% This file is derived from btxbst.doc of BibTeX 0.99c
-	%
-	% Copying of this file is authorized only if either
-	% (1) you make absolutely no changes to your copy, including name, or
-	% (2) if you do make changes, you name it something other than
-	% jbtxbst.doc, jplain.bst, junsrt.bst, jalpha.bst, jabbrv.bst,
-	% tipsj.bst, jipsj.bst, tieice.bst, jname.bst, jorsj.bst
-	%
-	% This restriction helps ensure that all standard styles are identical.
-	% The file jbtxbst.doc has the documentation for this style.
-	%
-	% Please notify Shouichi MATSUI(matsui@denken.or.jp) of any bugs in
-	% these standard styles or in this documentation file.
-	% 松井 正一  (財) 電力中央研究所　情報システム部
-
+% $Id$
 ENTRY
   { address
     author
