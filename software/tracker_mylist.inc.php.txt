@@ -1,6 +1,10 @@
 <?php
 // $Id$
-// tracker_mylist plugin (customized version of tracker_list)
+// tracker_mylist plugin (simplified version of tracker_list)
+
+// CLOSED_PATTERN: displayed in over-striked style.
+define('PLUGIN_TRACKER_MYLIST_CLOSED_PATTERN', "/^-\s*状態\s*:\s*(解決|保留)$/m");
+
 function plugin_tracker_mylist_convert()
 {
     $args = func_get_args();
@@ -21,7 +25,7 @@ function plugin_tracker_mylist_convert()
 	    }
 	}
 	$buf = "[[$pagename]] : $title";
-	if (preg_match("/^-\s*状態\s*:\s*解決$/m", $source, $matches)) {
+	if (preg_match(PLUGIN_TRACKER_MYLIST_CLOSED_PATTERN, $source, $matches)) {
 	    $buf = "%%$buf%%";
 	}
 	$result[] = "-$buf";
