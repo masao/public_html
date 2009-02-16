@@ -144,7 +144,7 @@
     </page>
     <language>ja</language>
     <file>./2008/200812-tricseminar.pdf</file>
-    <slide>./2008/20081211-tricseminar-slides.pdf</slide>
+    <slides>./2008/20081211-tricseminar-slides.pdf</slides>
     <date>2008-12-11</date>
   </pub>
 
@@ -164,7 +164,7 @@
     </page>
     <file>./2008/iasc2008_proceedings.pdf</file>
     <abstract>./2008/iasc2008_abstract.pdf</abstract>
-    <slide>./2008/iasc2008-slides.pdf</slide>
+    <slides>./2008/iasc2008-slides.pdf</slides>
     <date>2008-12-06</date>
   </pub>
 
@@ -287,7 +287,7 @@
       <end>188</end>
     </page>
     <doi>10.2964/jsik.18-181</doi>
-    <slide>./2008/jsik2008-slides.pdf</slide>
+    <slides>./2008/jsik2008-slides.pdf</slides>
     <language>ja</language>
     <date>2008-05-24</date>
   </pub>
@@ -327,7 +327,7 @@
     </page>
     <language>ja</language>
     <file>./2008/tric-seminar.pdf</file>
-    <slide>./2008/tric-seminar-slides.pdf</slide>
+    <slides>./2008/tric-seminar-slides.pdf</slides>
     <date>2008-01-28</date>
   </pub>
 
@@ -486,7 +486,7 @@
       <end>41</end>
     </page>
     <file>./2007/tric-symposium.pdf</file>
-    <slide>./2007/tric-symposium-slides.pdf</slide>
+    <slides>./2007/tric-symposium-slides.pdf</slides>
     <language>ja</language>
   </pub>
 
@@ -565,7 +565,7 @@
       <end>96</end>
     </page>
     <file>./2006/linkage-seminar.pdf</file>
-    <slide>./2006/linkage-seminar-slides.pdf</slide>
+    <slides>./2006/linkage-seminar-slides.pdf</slides>
     <language>ja</language>
   </pub>
 
@@ -604,7 +604,7 @@
       <start>47</start>
       <end>56</end>
     </page>
-    <slide>./2005/jsikforum-slides.pdf</slide>
+    <slides>./2005/jsikforum-slides.pdf</slides>
     <language>ja</language>
   </pub>
 
@@ -809,7 +809,7 @@
       <end>106</end>
     </page>
     <url>http://www.dl.slis.tsukuba.ac.jp/DLjournal/No_16/12-masao/12-masao.html</url>
-    <slide>./1999/dlw16-slides.pdf</slide>
+    <slides>./1999/dlw16-slides.pdf</slides>
     <language>ja</language>
   </pub>
 
@@ -853,7 +853,7 @@
     <page>73</page>
     <note>修士論文</note>
     <file>./2000/master-thesis.pdf</file>
-    <slide>./2000/master-thesis-slides.pdf</slide>
+    <slides>./2000/master-thesis-slides.pdf</slides>
     <language>ja</language>
   </pub>
 
@@ -870,7 +870,7 @@
     <page>78</page>
     <note>博士論文</note>
     <file>./2004/phd-thesis.pdf</file>
-    <slide>./2004/phd-thesis-slides.pdf</slide>
+    <slides>./2004/phd-thesis-slides.pdf</slides>
     <language>ja</language>
   </pub>
 </publist>

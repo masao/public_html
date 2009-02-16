@@ -13,7 +13,7 @@ class PubData
    attr_reader :journal, :conference, :org, :publisher
    attr_reader :volume, :number, :year, :month, :city
    attr_reader :page_start, :page_end, :page, :isbn, :note
-   attr_reader :url, :url_label, :doi, :slide, :poster, :file, :abstract
+   attr_reader :url, :url_label, :doi, :slides, :poster, :file, :abstract
    attr_reader :language
    attr_reader :refereed
    attr_reader :date
@@ -49,7 +49,8 @@ class PubData
       @url = element.text("url")
       @url_label = element.elements["url"].attributes["label"] if @url
       @doi = element.text("doi")
-      @slide = element.text("slide")
+      @slides = element.text("slides")
+      @slides ||= element.text("slide")
       @poster = element.text("poster")
       @file = element.text("file")
       @abstract = element.text("abstract")
