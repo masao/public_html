@@ -130,7 +130,7 @@ class PubData
       bibtex[ :address ] = @city if @city
       bibtex[ :publisher ] = @publisher if @publisher
       bibtex[ :year ] = @year
-      bibtex[ :month ] = @month if @month
+      #bibtex[ :month ] = @month if @month
       bibtex[ :volume ] = @volume if @volume
       bibtex[ :number ] = @number if @number
       if @page
