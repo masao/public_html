@@ -25,6 +25,28 @@
   -->
 
   <pub type="misc">
+    <author>蔵川圭</author>
+    <author>武田英明</author>
+    <author>高久雅生</author>
+    <author>相澤彰子</author>
+    <title>研究者リゾルバーβのコンセプト</title>
+    <conference>ディジタル図書館ワークショップ</conference>
+    <year>2009</year>
+    <month>3</month>
+    <city>東京都千代田区</city>
+    <number>36</number>
+    <!--
+    <page>
+      <start>37</start>
+      <end>42</end>
+    </page>
+    -->
+    <language>ja</language>
+    <date>2009-03-10</date>
+    <note>（発表予定）</note>
+  </pub>
+
+  <pub type="misc">
     <author>大塚真吾</author>
     <author>高久雅生</author>
     <author>喜連川優</author>
