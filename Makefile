@@ -24,6 +24,8 @@ HTML	= 	index.html.ja index.html.en \
 		software/graphviz-ja/index.html \
 		software/google-cache.html \
 		software/jmarcfilter/index.html \
+		software/pukiwiki.html \
+		software/jsik_bst.html \
 		private/memo.html \
 		lecture/index.html \
 		lecture/2005/excel/index.html \
