@@ -181,6 +181,11 @@ class MHikiDoc < HikiDoc
       class Ins   < SimpleInlinePlugin; end
       class Kbd   < SimpleInlinePlugin; end
       class Small < SimpleInlinePlugin; end
+      class Clear < Plugin
+         def expand( *args )
+            return %Q[<div style="clear:both;"/>]
+         end
+      end
       class Image < Plugin
          def expand( *args )
             src, label, *opts = args
