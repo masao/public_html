@@ -1,8 +1,8 @@
 title: Curriculum Vitae (Masao Takaku)
-date.modified: 2008-12-20
+date.modified: 2009-02-28
 date.available: 2007-03-04
 
-[[{{image './images/200812-ntcir.jpg' 'at NTCIR-7 Meeting (December 2008)' thumbs 200px right}}|./profile-images.html]]
+[[{{image './images/200901-munich.jpg' 'at Munich, Germany (January 2009)' right thumbs 150px}}|./profile-images.html]]
 :Name:Masao Takaku
 :Contact:
 //:Contact:2-1-2 Hitotsubashi, Chiyoda-ku, Tokyo 101-8430, Japan
@@ -99,10 +99,10 @@ A full list of publications are available at [[./pub/]].
 //::''Joho-Chishiki-Gakkai-Shi'' (Journal of Information and Knowledge of Japan) (2006)
 //::SACSIS 2005 (2005)
 
-!!Research fund
-*2008-: '''Study on Construction of Cognitive Models for Information Seeking Behavior and Its Application''' Co-joint researcher (Principal investigator: [[Hitomi Saito|http://rhino.ics.aichi-edu.ac.jp/]]); Joint Research Fund from National Institute of Informatics
-*2005-2007: '''Study on Distributed Terminological Systems for Utilizing and Reusing Web Sitemaps''' (Principal researcher) Grant-in-Aid for Scientific Research by the Ministry of Education, Culture, Sports, Science and Technology; Young Researcher B; No. 17700130
-*2006-: '''Study on Method of Accurate Classification from Large-scale WWW Data for Constructing Informtion Resources''' Co-joint researcher (Principal researcher: [[Keizo Oyama|http://research.nii.ac.jp/~oyama/]]); Grant-in-Aid for Scientific Research by the Ministry of Education, Culture, Sports, Science and Technology; (C); No. 18300037
+!!Research grants
+*2008-: '''Study on Construction of Cognitive Models for Information Seeking Behavior and Its Application''' Co-joint researcher (Principal investigator: [[Hitomi Saito|http://rhino.ics.aichi-edu.ac.jp/]]); Joint Research Fund from National Institute of Informatics ([[CRES Project|http://cres.jpn.org]])
+*2005-2007: '''Study on Distributed Terminological Systems for Utilizing and Reusing Web Sitemaps''' (Principal researcher) Grant-in-Aid for Scientific Research by the Ministry of Education, Culture, Sports, Science and Technology; Young Researcher B; No. [[17700130|http://seikaplus.nii.ac.jp/kd/17700130]]
+*2006-2008: '''Study on Method of Accurate Classification from Large-scale WWW Data for Constructing Informtion Resources''' Co-joint researcher (Principal researcher: [[Keizo Oyama|http://research.nii.ac.jp/~oyama/]]); Grant-in-Aid for Scientific Research by the Ministry of Education, Culture, Sports, Science and Technology; (C); No. [[18300037|http://seikaplus.nii.ac.jp/kd/18300037]]
 
 !!Foreign language and other skills
 :English:TOEIC score 760 (2006)
@@ -115,3 +115,4 @@ A full list of publications are available at [[./pub/]].
 
 !!Related links
 *[[Researcher info. for JST ReaD DB|http://read.jst.go.jp/public/cs_ksh_008EventAction.do?action4=event&lang_act4=E&judge_act4=2&knkysh_name_code=1000302228]]
+*[[NII researcher resolver|http://rns.nii.ac.jp/nr/1000000399271]]
