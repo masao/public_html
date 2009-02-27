@@ -13,7 +13,7 @@
 <body>
 <div class="navi"><a href="./..">HOME</a> &gt;
 雑多</div>
-<div class="last-update">最終更新日: 2006年06月09日</div>
+<div class="last-update">最終更新日: 2009年02月16日</div>
 <h1>その他雑多なメモ類のページ</h1>
 <!--#config timefmt="<span class=\"lastmodified\">[%Y-%m-%d]</span>" -->
 <p>雑多な覚え書きその他を置いてあります。  （<span
@@ -24,13 +24,13 @@ class="lastmodified">[日付]</span>は更新日を示します）</p>
 <li><a href="unihan-onkun.html">Unihan.txt - 音訓辞書</a> <!--#flastmod file="unihan-onkun.hikidoc" --></li>
 <li><a href="zipcode.cgi">郵便番号検索</a> <!--#flastmod file="zipcode.db" --></li>
 <li><a href="test-ttf.php">TrueTypeフォントのテスト</a> <!--#flastmod file="test-ttf.php" --></li>
-<li><a href="paper-checklist.html">論文投稿前のチェックリスト</a> <!--#flastmod file="paper-checklist.html" --></li>
-<li><a href="wikiwiki.html">WikiCloneについてのメモ</a> <!--#flastmod file="wikiwiki.html" --></li>
+<li><a href="paper-checklist.html">論文投稿前のチェックリスト</a> <!--#flastmod file="paper-checklist.hikidoc" --></li>
+<li><a href="wikiwiki.html">WikiCloneについてのメモ</a> <!--#flastmod file="wikiwiki.hikidoc" --></li>
 <li><a href="windows-software.html">Useful Softwares on Windows</a> <!--#flastmod file="windows-software.hikidoc" --></li>
 <li><a href="clover-papi.html">Clover上でPAPI(Performance API)を動作させる</a> <!--#flastmod file="clover-papi.html" --></li>
-<li><a href="rpm.html">RPMの使い方</a> <!--#flastmod file="rpm.html" --></li>
-<li><a href="emacs20-unicode.html">Emacs20でUnicodeを使おう!</a> <!--#flastmod file="emacs20-unicode.html" --></li>
-<li><a href="config.html">各種設定ファイル</a> <!--#flastmod file="config.html" --></li>
+<li><a href="rpm.html">RPMの使い方</a> <!--#flastmod file="rpm.hikidoc" --></li>
+<li><a href="emacs20-unicode.html">Emacs20でUnicodeを使おう!</a> <!--#flastmod file="emacs20-unicode.hikidoc" --></li>
+<li><a href="config.html">各種設定ファイル</a> <!--#flastmod file="config.hikidoc" --></li>
 </ul>
 <p>以下のものはだいぶ昔に書いたもので、更新の予定はありません。</p>
 <ul>

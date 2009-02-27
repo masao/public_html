@@ -1,6 +1,6 @@
 title: その他雑多なメモ類のページ
 title.short: 雑多
-date.modified: 2006-06-09
+date.modified: 2009-02-16
 css.content: .lastmodified { color: maroon; font-size: smaller; }
 
 {{ rawhtml '<!--#config timefmt="<span class=\"lastmodified\">[%Y-%m-%d]</span>" -->' }}
@@ -13,13 +13,13 @@ class="lastmodified">[日付]</span>') }}は更新日を示します）
 *[[Unihan.txt - 音訓辞書|unihan-onkun.html]] {{ rawhtml( '<!--#flastmod file="unihan-onkun.hikidoc" -->' }}
 *[[郵便番号検索|zipcode.cgi]] {{ rawhtml( '<!--#flastmod file="zipcode.db" -->' }}
 *[[TrueTypeフォントのテスト|test-ttf.php]] {{ rawhtml( '<!--#flastmod file="test-ttf.php" -->' }}
-*[[論文投稿前のチェックリスト|paper-checklist.html]] {{ rawhtml( '<!--#flastmod file="paper-checklist.html" -->' }}
-*[[WikiCloneについてのメモ|wikiwiki.html]] {{ rawhtml( '<!--#flastmod file="wikiwiki.html" -->' }}
+*[[論文投稿前のチェックリスト|paper-checklist.html]] {{ rawhtml( '<!--#flastmod file="paper-checklist.hikidoc" -->' }}
+*[[WikiCloneについてのメモ|wikiwiki.html]] {{ rawhtml( '<!--#flastmod file="wikiwiki.hikidoc" -->' }}
 *[[Useful Softwares on Windows|windows-software.html]] {{ rawhtml( '<!--#flastmod file="windows-software.hikidoc" -->' }}
 *[[Clover上でPAPI(Performance API)を動作させる|clover-papi.html]] {{ rawhtml( '<!--#flastmod file="clover-papi.html" -->' }}
-*[[RPMの使い方|rpm.html]] {{ rawhtml( '<!--#flastmod file="rpm.html" -->' }}
-*[[Emacs20でUnicodeを使おう!|emacs20-unicode.html]] {{ rawhtml( '<!--#flastmod file="emacs20-unicode.html" -->' }}
-*[[各種設定ファイル|config.html]] {{ rawhtml( '<!--#flastmod file="config.html" -->' }}
+*[[RPMの使い方|rpm.html]] {{ rawhtml( '<!--#flastmod file="rpm.hikidoc" -->' }}
+*[[Emacs20でUnicodeを使おう!|emacs20-unicode.html]] {{ rawhtml( '<!--#flastmod file="emacs20-unicode.hikidoc" -->' }}
+*[[各種設定ファイル|config.html]] {{ rawhtml( '<!--#flastmod file="config.hikidoc" -->' }}
 
 以下のものはだいぶ昔に書いたもので、更新の予定はありません。
 
