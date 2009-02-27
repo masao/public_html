@@ -1,6 +1,9 @@
 title: My recent portraits
-date.modified: 2008-12-20
+date.modified: 2009-02-18
 date.available: 2008-12-20
+
+:January 2009:
+::{{image './images/200901-munich.jpg' 'at a business trip in Munich, Germany' thumbs 150px}}
 
 :December 2008:
 ::{{image './images/200812-ntcir.jpg' 'at NTCIR-7 Meeting in Tokyo' thumbs 200px}}
