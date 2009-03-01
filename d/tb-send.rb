@@ -12,11 +12,10 @@ module Trackback
       Net::HTTP.version_1_2
       Net::HTTP.start( uri.host, uri.port ) do |http|
          response = http.get( uri.path )
-         body = response.read_body
+         body = response.body
       end
       result = nil
-      body.gsub!(/\s+/, " ")
-      if body.match( %r{ xmlns:(\w+)="http://madskills.com/public/xml/rss/module/trackback/"} )
+      if body and body.gsub(/\s+/, " ").match( %r{ xmlns:(\w+)="http://madskills.com/public/xml/rss/module/trackback/"} )
          tb_namespace = $1
          if body.match( %r{ #{tb_namespace}:ping="([^\"]+)"} )
             tb_url = $1
