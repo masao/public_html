@@ -2,7 +2,6 @@
 <!-- $Id$ -->
 <publist version="$Revision$">
 
-  <!--
   <pub type="journal">
     <title>ネット社会におけるデジタルリポジトリシステムの実践と将来</title>
     <author>谷藤幹子</author>
@@ -15,14 +14,13 @@
     <year>2009</year>
     <month>3</month>
     <page>
-      <start></start>
-      <end></end>
+      <start>888</start>
+      <end>901</end>
     </page>
-    <doi>10.1241/johokanri.51.xxxx</doi>
+    <doi>10.1241/johokanri.51.888</doi>
     <language>ja</language>
-    <note>（印刷中）</note>
+    <date>2009-03-01</date>
   </pub>
-  -->
 
   <pub type="misc">
     <author>蔵川圭</author>
