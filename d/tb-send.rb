@@ -1,8 +1,10 @@
 #!/usr/bin/env ruby
+# -*- coding: euc-jp -*-
 # $Id$
 
 require "net/http"
 require "kconv"
+require "cgi"
 
 module Trackback
    def self::auto_discovery(dest_url)
@@ -78,7 +80,7 @@ module Chalow
       html = $1 if /<!-- start:#{entry[:id]} -->(.*)<!-- end:#{entry[:id]} -->/ms =~ content
       external_urls = []
       html.gsub( /<a href=\"((?:http|ftp):\/\/[^\"]+)"/ ) do |match|
-         external_urls << $1
+         external_urls << CGI.unescapeHTML( $1 )
       end
       #p external_urls
       external_urls
