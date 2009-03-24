@@ -3,7 +3,7 @@
 <publist version="$Revision$">
 
   <pub type="journal">
-    <title>ネット社会におけるデジタルリポジトリシステムの実践と将来</title>
+    <title>材料系研究所におけるリポジトリシステムの実践と将来</title>
     <author>谷藤幹子</author>
     <author>高久雅生</author>
     <author>大塚真吾</author>
@@ -33,15 +33,12 @@
     <month>3</month>
     <city>東京, 筑波大学秋葉原キャンパス</city>
     <number>36</number>
-    <!--
     <page>
-      <start>37</start>
-      <end>42</end>
+      <start>15</start>
+      <end>21</end>
     </page>
-    -->
     <language>ja</language>
     <date>2009-03-10</date>
-    <note>（発表予定）</note>
   </pub>
 
   <pub type="misc">
@@ -62,7 +59,6 @@
     -->
     <language>ja</language>
     <date>2009-03-08</date>
-    <note>（発表予定）</note>
   </pub>
 
   <pub refereed="true" type="journal">
