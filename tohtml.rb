@@ -307,11 +307,27 @@ class ToHTML
          else
             raise "unknown plugin style: #{style}"
          end
-         plugin = MHikiDoc::Plugin.const_get( name.capitalize ).new( :doc => @doc,
-                                                                     :style => style,
-                                                                     :interwiki => @conf["interwiki"] )
+         plugin_class = MHikiDoc::Plugin.const_get( name.capitalize )
+         plugin = plugin_class.new( :doc => @doc,
+                                    :style => style,
+                                    :interwiki => @conf["interwiki"] )
          plugin.expand( *args )
       end
+   end
+   def subject_path
+      result = []
+      @conf["subject"].to_a.each do |category|
+         label = @conf["subject.label"][category] || category
+         category_dir  = File.join( rootdir, category )
+         category_file = HierFilename.new( "#{category}.html" )
+         category_file = HierFilename.new( "#{category}.html.#{@lang}" ) if not File.file?( category_file )
+         if File.file?( category_file ) 
+            result << [ label, category_file ] 
+         else File.directory?( category_dir )
+            result << [ label, category_dir + "/" ] 
+         end
+      end
+      result
    end
    def method_missing( name, *args )
       name = name.to_s.gsub("_", ".")

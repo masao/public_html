@@ -1,11 +1,12 @@
 title: 近影
-date.modified: 2009-03-31
+date.modified: 2009-04-01
 date.available: 2008-12-20
+subject: profile
 
 !! 2009年
 {{image './images/200903-okinawa.jpg' '沖縄旅行にて（2009年3月）' thumbs 200px left}}
 {{image './images/200901-munich.jpg' 'ミュンヘン出張にて（2009年1月）' thumbs 150px left}}
 {{clear}}
 !!2008年
-{{image './images/200812-ntcir.jpg'   'NTCIR-7成果報告会にて（2008年1月）' thumbs 200px left}}
+{{image './images/200812-ntcir.jpg'   'NTCIR-7成果報告会にて（2008年12月）' thumbs 200px left}}
 {{image './images/200811-profile.jpg' '科学未来館にて（2008年11月）' thumbs 200px left}}
