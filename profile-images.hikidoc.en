@@ -1,12 +1,12 @@
 title: My recent portraits
-date.modified: 2009-02-18
+date.modified: 2009-03-31
 date.available: 2008-12-20
 
-:January 2009:
-::{{image './images/200901-munich.jpg' 'at a business trip in Munich, Germany' thumbs 150px}}
+!! 2009
+{{image './images/200903-okinawa.jpg' 'at Mibaru Beach in Okinawa (March 2009)' thumbs 200px left}}
+{{image './images/200901-munich.jpg' 'at a business trip in Munich, Germany (January 2009)' thumbs 150px left}}
+{{clear}}
 
-:December 2008:
-::{{image './images/200812-ntcir.jpg' 'at NTCIR-7 Meeting in Tokyo' thumbs 200px}}
-
-:November 2008:
-::{{image './images/200811-profile.jpg' 'at National Museum of Emerging Science and Innovation' thumbs 200px}}
+!! 2008
+{{image './images/200812-ntcir.jpg' 'at NTCIR-7 Meeting in Tokyo (December 2008)' thumbs 200px left}}
+{{image './images/200811-profile.jpg' 'at National Museum of Emerging Science and Innovation (November 2008)' thumbs 200px left}}

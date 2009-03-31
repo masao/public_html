@@ -50,6 +50,9 @@
   address, div.id {
     text-align: right;
   }
+  hr {
+    clear: both;
+  }
   div.last-update {
     text-align: right;
     font-size: smaller;
@@ -102,6 +105,7 @@
     text-indent: 0px;
     border: #ccc solid 1pt;
     background-color: #dfd;
+    margin: 2px;
   }
   div.commentator {
     font-size: larger;

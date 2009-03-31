@@ -196,7 +196,7 @@ class MHikiDoc < HikiDoc
                   @thumbs = true
                when "right", "left"  # align
                   @css[:float] = opt
-                  @css[:clear] = opt
+                  #@css[:clear] = opt
                when /\A(\d+)(?:px)?\Z/ # width
                   @css[:width] = $1 + "px"
                end
