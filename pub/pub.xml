@@ -2,6 +2,28 @@
 <!-- $Id$ -->
 <publist version="$Revision$">
 
+  <pub refereed="true" type="conference">
+    <author>Kei Kurakawa</author>
+    <author>Hideaki Takeda</author>
+    <author>Masao Takaku</author>
+    <author>Akiko Aizawa</author>
+    <title>Researcher Name Resolver</title>
+    <subtitle>A Framework for Researcher Identification in Japan</subtitle>
+    <conference>The 4th International Conference on Open Repositories (OR2009)</conference>
+    <year>2009</year>
+    <month>5</month>
+    <city>Atlanta, Georgia, USA</city>
+    <!--
+    <page>
+      <start>42</start>
+      <end>46</end>
+    </page>
+    -->
+    <language>en</language>
+    <date>2009-05-18</date>
+    <note>(Accepted)</note>
+  </pub>
+
   <pub type="journal">
     <title>材料系研究所におけるリポジトリシステムの実践と将来</title>
     <author>谷藤幹子</author>
