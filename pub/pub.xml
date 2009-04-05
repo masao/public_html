@@ -94,16 +94,15 @@
     <subtitle>A Linkage Platform for Large Volumes of Academic Information</subtitle>
     <journal>Progress in Informatics</journal>
     <year>2009</year>
-    <!--<month>12</month>-->
+    <month>3</month>
     <publisher>National Institute of Informatics</publisher>
-    <!--
+    <number>6</number>
     <page>
-      <start>78</start>
-      <end>81</end>
+      <start>41</start>
+      <end>47</end>
     </page>
-    -->
     <language>en</language>
-    <note>(to appear; accepted)</note>
+    <doi>10.2201/NiiPi.2009.6.5</doi>
   </pub>
 
   <pub type="misc">
