@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="../default.css" type="text/css">
+<link rel="stylesheet" href="pub.css" type="text/css">
+<link rev="made" href="mailto:tmasao@acm.org">
+<link rel="alternate" type="application/x-bibtex" title="BibTeX" href="./?action=bibtex">
+<title>発表論文、講演資料など - 高久雅生</title>
+</head>
+<body>
+<div class="last-update">最終更新日: <%= LASTUPDATE.strftime("%Y年%m月%d日") %></div>
+<div class="last-update"><%=h @version %></div>
+<h1>発表論文、講演資料など</h1>
+<p>これまでに執筆、発表した論文等の情報です（全 <%= @pubs.size %> 件）。</p>
+<div id="sortby_list">
+<p>ソート方式:</p>
+<ul>
+<li><% if sort_mode == :year %>
+<strong>発表年月</strong>
+<% else %>
+<a href="./?sort_mode=year">発表年月</a>
+<% end %>
+<li><% if sort_mode == :type %>
+<strong>論文種別</strong>
+<% else %>
+<a href="./?sort_mode=type">論文種別</a>
+<% end %>
+<li><% if sort_mode == :author %>
+<strong>筆頭著者</strong>
+<% else %>
+<a href="./?sort_mode=author">筆頭著者</a>
+<% end %>
+<li><% if sort_mode == :refereed %>
+<strong>査読の有無</strong>
+<% else %>
+<a href="./?sort_mode=refereed">査読の有無</a>
+<% end %>
+</ul>
+</div>
+<ul id="toc">
+<% @toc_keys.each do |k| %>
+<li><a href="#pubid<%= @pubs.find{|e|
+    k == toc_key(e)
+    }.object_id %>"><%=h k %></a>
+<span class="toc_size">(<%= @pubs.find_all{|e| k == toc_key(e) }.size %>)</span>
+<% end %>
+</ul>
+<dl id="publist">
+<% @pubs.each do |pub| %>
+<%= pub.eval_rhtml( "pub.rhtml.#{ self.lang }" ) %>
+<% end %>
+</dl>
+<hr>
+<address>
+高久雅生 (Masao Takaku)<br>
+<a href="http://masao.jpn.org/">http://masao.jpn.org/</a>, 
+<a href="mailto:tmasao@acm.org">tmasao@acm.org</a>
+</address>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-389547-1";
+urchinTracker();
+</script>
+</body>
+</html>

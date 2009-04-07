@@ -1,75 +1,24 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-"http://www.w3.org/TR/html4/strict.dtd">
-<html lang="ja">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<link rel="stylesheet" href="../default.css" type="text/css">
-<link rel="stylesheet" href="pub.css" type="text/css">
-<link rev="made" href="mailto:tmasao@acm.org">
-<link rel="alternate" type="application/x-bibtex" title="BibTeX" href="./?action=bibtex">
-<title>発表論文、講演資料など - 高久雅生</title>
-</head>
-<body>
-<div class="last-update">最終更新日: <%= LASTUPDATE.strftime("%Y年%m月%d日") %></div>
-<div class="last-update"><%=h @version %></div>
-<h1>発表論文、講演資料など</h1>
-<p>これまでに執筆、発表した論文等の情報です（全 <%= @pubs.size %> 件）。</p>
-<div id="sortby_list">
-<p>ソート方式:</p>
-<ul>
-<li><% if sort_mode == :year %>
-<strong>発表年月</strong>
-<% else %>
-<a href="./?sort_mode=year">発表年月</a>
-<% end %>
-<li><% if sort_mode == :type %>
-<strong>論文種別</strong>
-<% else %>
-<a href="./?sort_mode=type">論文種別</a>
-<% end %>
-<li><% if sort_mode == :author %>
-<strong>筆頭著者</strong>
-<% else %>
-<a href="./?sort_mode=author">筆頭著者</a>
-<% end %>
-<li><% if sort_mode == :refereed %>
-<strong>査読の有無</strong>
-<% else %>
-<a href="./?sort_mode=refereed">査読の有無</a>
-<% end %>
-</ul>
-</div>
-<ul id="toc">
-<% @toc_keys.each do |k| %>
-<li><a href="#pubid<%= @pubs.find{|e|
-    k == toc_key(e)
-    }.object_id %>"><%=h k %></a>
-<span class="toc_size">(<%= @pubs.find_all{|e| k == toc_key(e) }.size %>)</span>
-<% end %>
-</ul>
-<dl id="publist">
-<% @pubs.each do |pub| %>
-<dt class="title"><a name="pubid<%= pub.object_id %>" id="pubid<%= pub.object_id %>"><span class="year"><%=h pub.year %></span>
-<% if pub.refereed %>
+<dt class="title"><a name="pubid<%= object_id %>" id="pubid<%= object_id %>"><span class="year"><%=h year %></span>
+<% if refereed %>
 <span class="refereed"><img src="refereed.png" alt="refereed" title="refereed"></span>
 <% end %>
-<span class="type"><%=h pub.type %></span></a>
+<span class="type"><%=h type %></span></a>
 <span class="title">
-<% if not pub.file.nil? %>
-<a href="<%=h pub.file %>">
+<% if not file.nil? %>
+<a href="<%=h file %>">
 <% end %>
-<%=h pub.title %>
-<% if pub.subtitle %>
-: <span><%=h pub.subtitle %></span>
+<%=h title %>
+<% if subtitle %>
+: <span><%=h subtitle %></span>
 <% end %>
-<% if not pub.file.nil? %></a><% end %>
+<% if not file.nil? %></a><% end %>
 </span></dt>
-<dd class="author"><span class="author"><%= pub.author.map{|author|
+<dd class="author"><span class="author"><%= author.map{|author|
 author_s = h author
 if @config and @config["author_mine"]
    author_s = "<em>#{h author}</em>" if @config["author_mine"].any?{|r| r =~ author }
 end
-if pub.author_role[author] == "editor"
+if author_role[author] == "editor"
    author_s << "(編)"
 end
 author_s
@@ -78,63 +27,47 @@ author_s
 </span></dd>
 <dd class="bibdata">
 <% [ :conference, :org, :publisher, :city, :journal ].each do |field| %>
-<% if not pub.send( field ).nil? %>
-<span class="<%= field %>"><%=h pub.send( field ) %>;</span>
+<% if not send( field ).nil? %>
+<span class="<%= field %>"><%=h send( field ) %>;</span>
 <% end %>
 <% end %>
-<% if not pub.volume.nil? %>
-<span class="volume">vol.<%=h pub.volume %>;</span>
+<% if not volume.nil? %>
+<span class="volume">vol.<%=h volume %>;</span>
 <% end %>
-<% if not pub.number.nil? %>
-<span class="number"><%=h "no." unless pub.type == "techreport"%><%=h pub.number %>;</span>
+<% if not number.nil? %>
+<span class="number"><%=h "no." unless type == "techreport"%><%=h number %>;</span>
 <% end %>
-<% if pub.page_start and pub.page_end %>
-<span class="page">pp.<%=h pub.page_start %>-<%=h pub.page_end %>;</span>
-<% elsif pub.page %>
-<span class="page"><%=h pub.page %>p.</span>
+<% if page_start and page_end %>
+<span class="page">pp.<%=h page_start %>-<%=h page_end %>;</span>
+<% elsif page %>
+<span class="page"><%=h page %>p.</span>
 <% end %>
-<% if not pub.year.nil? %>
-<span class="pubdate">(<%=h pub.year %><% if not pub.month.nil? %><span class="month">-<%= "%02d" % pub.month.to_i %></span><% end %>)
+<% if not year.nil? %>
+<span class="pubdate">(<%=h year %><% if not month.nil? %><span class="month">-<%= "%02d" % month.to_i %></span><% end %>)
 </span>
 <% end %>
-<% if not pub.isbn.nil? %>
-<span class="isbn">(ISBN:<%=h pub.isbn %>)</span>
+<% if not isbn.nil? %>
+<span class="isbn">(ISBN:<%=h isbn %>)</span>
 <% end %>
-<% if not pub.note.nil? %>
-<span class="note"><%=h pub.note %></span>
+<% if not note.nil? %>
+<span class="note"><%=h note %></span>
 <% end %>
 </dd>
-<% if not pub.url.nil? %>
+<% if not url.nil? %>
 <dd class="url">
-<span class="url"><a href="<%=h pub.url %>"><%=h pub.url_label ? pub.url_label : pub.url %></a></span>
+<span class="url"><a href="<%=h url %>"><%=h url_label ? url_label : url %></a></span>
 </dd>
 <% end %>
-<% if not pub.doi.nil? %>
+<% if not doi.nil? %>
 <dd class="url">
-<span class="doi">DOI <a href="http://dx.doi.org/<%=h pub.doi %>"><%=h pub.doi %></a></span>
+<span class="doi">DOI <a href="http://dx.doi.org/<%=h doi %>"><%=h doi %></a></span>
 </dd>
 <% end %>
 <% %w[ abstract slides poster ].each do |target| %>
-<% if pub.send( target ) %>
+<% if send( target ) %>
 <dd class="url">
-<span class="<%= target %>">[<%= target.capitalize %>] <a href="<%=h pub.send( target ) %>"><%=h pub.send( target ) %></a></span>
+<span class="<%= target %>">[<%= target.capitalize %>] <a href="<%=h send( target ) %>"><%=h send( target ) %></a></span>
 </dd>
 <% end %>
 <% end %>
-<dd><span class="Z3988" title="<%=h pub.to_coins %>"></span></dd>
-<% end %>
-</dl>
-<hr>
-<address>
-高久雅生 (Masao Takaku)<br>
-<a href="http://masao.jpn.org/">http://masao.jpn.org/</a>, 
-<a href="mailto:tmasao@acm.org">tmasao@acm.org</a>
-</address>
-<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
-</script>
-<script type="text/javascript">
-_uacct = "UA-389547-1";
-urchinTracker();
-</script>
-</body>
-</html>
+<dd><span class="Z3988" title="<%=h to_coins %>"></span></dd>

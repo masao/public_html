@@ -17,7 +17,8 @@ class PubData
    attr_reader :language
    attr_reader :refereed
    attr_reader :date
-   def initialize( element )
+   def initialize( element, config )
+      @config = config
       @type = element.attributes["type"]
       @refereed = element.attributes["refereed"]
       @author = []
@@ -150,6 +151,12 @@ class PubData
 }
 EOF
    end
+
+   def eval_rhtml( tmpl )
+      rhtml = open( tmpl ){|f| f.read }
+      ERB::new( rhtml, $SAFE, 2 ).result( binding )
+   end
+   include ERB::Util
 end
 
 class PubApp
@@ -166,7 +173,7 @@ class PubApp
       @version = doc.elements[ "/publist" ].attributes[ "version" ]
       @pubs = []
       doc.elements.to_a("/publist/pub").each do |e|
-         @pubs << PubData.new( e )
+         @pubs << PubData.new( e, @config )
       end
       @pubs = @pubs.sort_by do |e|
          sort_keys = [ sort_order(e, :year),
@@ -271,7 +278,7 @@ if $0 == __FILE__
          end
       else
          cgi.out( "charset" => "UTF-8" ) do
-            app.eval_rhtml( "pub.rhtml.#{app.lang}" )
+            app.eval_rhtml( "publist.rhtml.#{app.lang}" )
          end
       end
    rescue

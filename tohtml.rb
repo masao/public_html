@@ -9,6 +9,7 @@ require "erb"
 require "hikidoc"
 require "cgi"
 require "shellwords"
+require "nkf"
 
 # HierFilename:
 #
@@ -52,6 +53,7 @@ class MHikiDoc < HikiDoc
       @toc = []
       @label = options[:label] || ''
       @interwiki = options[:interwiki] || ''
+      @lang = options[:lang]
       super( content, options )
    end
 
@@ -123,6 +125,34 @@ class MHikiDoc < HikiDoc
                pre_level = level
             end
             result << "</li></ul>"
+         end
+      end
+      class Recent_publication < Plugin
+         def expand( *args )
+            Dir.chdir( "./pub" ) do
+               cgi = {}
+               def cgi.params; Hash.new( "" ); end
+               require "index.rb"
+               app = PubApp::new( cgi )
+               app.load_pubdata( open(PUBDATA) )
+               result = []
+               app.each do |pub|
+                  next unless pub.refereed == "true"
+                  next if @lang == "en" and pub.language != @lang
+                  #STDERR.puts pub.inspect
+                  result << pub.eval_rhtml( "pub_recent.rhtml.ja" )
+                  break if result.size > 4
+               end
+               contents = %Q[<ul id="publist">#{ result.join }</ul>]
+               #STDERR.puts contents.inspect
+               #contents = app.eval_rhtml( "publist.rhtml.#{app.lang}" )
+               #contents.sub!( /^.*<dl id="publist">\s*(.*)\s*<\/dl>.*$/ms, '\1' )
+               #list = contents.split( /<dt / )
+               #list = list.find_all{|e| /refereed/ =~ e }[0...5]
+               #contents = list.map{|e| e.gsub( /<span class="(refereed|type|year)">.*?<\/span>/, "" ).gsub( /<(\/?)d[td](.*)>/, "<\\1span\\2>" ) }.join( "<li " )
+               #contents = %Q[<ul id="publist"><li #{ contents }</ul>]
+               NKF.nkf( "-em0", contents )
+            end
          end
       end
       class Lastmodified < Plugin
@@ -282,6 +312,7 @@ class ToHTML
                            { :interwiki => @conf["interwiki"],
                              :plugin_syntax => Proc.new{ true },
                              :use_wiki_name => false,
+                             :lang => @lang,
                              :allow_bracket_inline_image => false,
                            })
       body = @doc.compile( @content )
@@ -310,6 +341,7 @@ class ToHTML
          plugin_class = MHikiDoc::Plugin.const_get( name.capitalize )
          plugin = plugin_class.new( :doc => @doc,
                                     :style => style,
+                                    :lang => @lang,
                                     :interwiki => @conf["interwiki"] )
          plugin.expand( *args )
       end

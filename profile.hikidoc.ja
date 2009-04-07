@@ -1,7 +1,7 @@
 title: 高久雅生の経歴
 title.short: 経歴
 date.available: 2007-03-04
-date.modified: 2009-04-02
+date.modified: 2009-04-08
 
 [[{{image './images/200903-okinawa.jpg'   '沖縄旅行にて（2009年3月）' right thumbs 200px}}|./profile-images.html]]
 :氏名:高久 雅生 （たかく まさお）
@@ -73,10 +73,8 @@ date.modified: 2009-04-02
 ::（スキル）Japan/MARC, C言語, Perl, DBM, 磁気テープ
 
 !!主な著作物
-*{{u "Masao Takaku"}}, Keizo Oyama, Akiko Aizawa. An Analysis on Topic Features and Difficulties Based on Web Navigational Retrieval Experiments. Proceedings of the Third Asia Information Retrieval Symposium (AIRS) 2006; Springer, LNCS 4182; Singapore; pp.625-632; (2006-10) DOI:10.1007/11880592_55 （査読あり）
-*{{u "高久雅生"}}, 江草由佳, 石塚英弘. Webサービスによる用語体系データの提供とその応用システム. 情報知識学会誌; vol.14; no.1; pp.11-22; (2004) （査読あり）
-*{{u "高久雅生"}}, 江草由佳, 伊東千夏, 石塚英弘. データの再利用が可能な複数用語体系ブラウジングシステムの構築. 情報知識学会誌; vol.13; no.1; pp.10-22; (2003) （査読あり）
-*宇陀則彦, 江草由佳, {{u "高久雅生"}}, 石塚英弘. Z39.50による日本語書誌データ検索システム. 情報知識学会誌; vol.9; no.2; pp.1-15; (1999) （査読あり）
+{{recent_publication}}
+
 全発表文献一覧は[[発表文献一覧|./pub/]]を参照のこと。
 
 !!所属学会
@@ -101,6 +99,8 @@ date.modified: 2009-04-02
 //::SACSIS 2005 （2005年）
 
 !!研究助成金
+*2009年度-: 科学研究費補助金 基盤研究(B) 「検索ログ解析と認知的研究による利用者の探索的な情報検索行動の研究」（研究代表者:[[神門典子|http://research.nii.ac.jp/~kando/]]） 連携研究者
+//（課題番号:[[18300037|http://kaken.nii.ac.jp/ja/p/18300037]]）（研究代表者:[[大山敬三|http://research.nii.ac.jp/~oyama/]]） 共同研究者
 *2008年度-: 国立情報学研究所 公募型共同研究 「情報探索行動の認知モデルの構築とその応用に関する研究」（研究代表者: [[齋藤ひとみ|http://rhino.ics.aichi-edu.ac.jp/]]） 共同研究者 （[[CRESプロジェクト|http://cres.jpn.org/]]）
 *2005年度-2007年度: 科学研究費補助金 若手研究(B) 「WWW上サイトマップの再利用促進のための分散型用語体系提供システムの研究」（課題番号:[[17700130|http://kaken.nii.ac.jp/ja/p/17700130]]） 研究代表者
 *2006年度-2008年度: 科学研究費補助金 基盤研究(C) 「大規模WWWデータからの情報資源構築のための高性能分類方式の研究」（課題番号:[[18300037|http://kaken.nii.ac.jp/ja/p/18300037]]）（研究代表者:[[大山敬三|http://research.nii.ac.jp/~oyama/]]） 共同研究者

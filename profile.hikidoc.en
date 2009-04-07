@@ -1,5 +1,5 @@
 title: Curriculum Vitae (Masao Takaku)
-date.modified: 2009-04-02
+date.modified: 2009-04-08
 date.available: 2007-03-04
 
 [[{{image './images/200903-okinawa.jpg' 'at Okinawa (March 2009)' right thumbs 200px}}|./profile-images.html]]
@@ -72,10 +72,7 @@ Information retrieval, Digital library, Information behaviour
 ::(Skills) Japan/MARC, C, Perl, DBM, Magnetic tapes
 
 !!Selected publications
-*{{u "Masao Takaku"}}, Keizo Oyama, Akiko Aizawa. An Analysis on Topic Features and Difficulties Based on Web Navigational Retrieval Experiments. Proceedings of the Third Asia Information Retrieval Symposium (AIRS) 2006; Springer, LNCS 4182; Singapore; pp.625-632; (2006-10) DOI:10.1007/11880592_55 (refereed)
-*{{u "Masao Takaku"}}, Yuka Egusa, Hidehiro Ishizuka. Providing Data of Terminological Systems Based on Web Services and Its Application Systems. ''Joho-Chishiki-Gakkai-shi'' (Journal of Information and Knowledge of Japan); vol.14; no.1; pp.11-22; (2004) In Japanese. (refereed)
-*{{u "Masao Takaku"}}, Yuka Egusa, Chinatsu Ito, Hidehiro Ishizuka. A Browsing System Based on Reusable Data Format for Various Terminological Systems. ''Joho-Chishiki-Gakkai-shi'' (Journal of Information and Knowledge of Japan); vol.13; no.1; pp.10-22; (2003) In Japanese (refereed)
-*Norihiko Uda, Yuka Egusa, {{u "Masao Takaku"}}, Hidehiro Ishizuka. Information Retrieval System based on Z39.50 protocol for Japanese Bibliographic Data. ''Joho-Chishiki-Gakkai-shi'' (Journal of Information and Knowledge of Japan); vol.9; no.2; pp.1-15; (1999) In Japanese (refereed)
+{{recent_publication}}
 
 A full list of publications are available at [[./pub/]].
 
@@ -100,6 +97,7 @@ A full list of publications are available at [[./pub/]].
 //::SACSIS 2005 (2005)
 
 !!Research grants
+*2009-: '''Study on User's Exploratory Information Seeking Behavior by using Access Log Analysis and Cognitive Methodologies''' Co-joint researcher (Principal researcher: [[Noriko Kando|http://research.nii.ac.jp/~kando/]]); Grant-in-Aid for Scientific Research by the Ministry of Education, Culture, Sports, Science and Technology; (C)
 *2008-: '''Study on Construction of Cognitive Models for Information Seeking Behavior and Its Application''' Co-joint researcher (Principal investigator: [[Hitomi Saito|http://rhino.ics.aichi-edu.ac.jp/]]); Joint Research Fund from National Institute of Informatics ([[CRES Project|http://cres.jpn.org]])
 *2005-2007: '''Study on Distributed Terminological Systems for Utilizing and Reusing Web Sitemaps''' (Principal researcher) Grant-in-Aid for Scientific Research by the Ministry of Education, Culture, Sports, Science and Technology; Young Researcher B; No. [[17700130|http://kaken.nii.ac.jp/en/p/17700130]]
 *2006-2008: '''Study on Method of Accurate Classification from Large-scale WWW Data for Constructing Informtion Resources''' Co-joint researcher (Principal researcher: [[Keizo Oyama|http://research.nii.ac.jp/~oyama/]]); Grant-in-Aid for Scientific Research by the Ministry of Education, Culture, Sports, Science and Technology; (C); No. [[18300037|http://kaken.nii.ac.jp/en/p/18300037]]
