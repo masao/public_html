@@ -865,7 +865,7 @@ FUNCTION {book}
   if$
   format.edition output
 
-   "p." pages output.pre
+   "p." pages output.post
 
   format.date "year" output.check
 
