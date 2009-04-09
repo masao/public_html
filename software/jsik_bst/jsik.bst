@@ -518,10 +518,8 @@ FUNCTION {format.pages}
 { pages empty$
     { "" }
     { pages multi.page.check
-
  	{ "pp." pages n.dashify tie.or.space.connect }
 	{ "p." pages tie.or.space.connect }
-
       if$
     }
   if$
@@ -867,10 +865,7 @@ FUNCTION {book}
   if$
   format.edition output
 
-  pages empty$ 
-    { "" }
-    { pages "p." * output.nonnull }
-  if$
+   "p." pages output.pre
 
   format.date "year" output.check
 
