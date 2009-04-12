@@ -815,7 +815,7 @@ FUNCTION {format.incoll.inproc.crossref}
 FUNCTION {article}
 { output.bibitem
   format.authors "author" output.check
-  "~: " 'separator :=
+  ": " 'separator :=
   format.title "title" output.check
   crossref missing$
     { journal emphasize "journal" output.check
@@ -847,7 +847,7 @@ FUNCTION {book}
       format.translators output
     }
   if$
-  "~: " 'separator :=
+  ": " 'separator :=
   format.btitle "title" output.check
   crossref missing$
     { format.bvolume output
@@ -898,6 +898,7 @@ FUNCTION {inbook}
       if$
     }
   if$
+  ": " 'separator :=
   new.block
   format.btitle "title" output.check
   new.block
@@ -927,6 +928,7 @@ FUNCTION {inbook}
 FUNCTION {incollection}
 { output.bibitem
   format.authors "author" output.check
+  ": " 'separator :=
   new.block
   format.title "title" output.check
   new.block
@@ -961,7 +963,7 @@ FUNCTION {incollection}
 FUNCTION {inproceedings}
 { output.bibitem
   format.authors "author" output.check
-  "~: " 'separator :=
+  ": " 'separator :=
   format.title "title" output.check
   crossref missing$
     { format.in.ed.booktitle "booktitle" output.check
@@ -1044,6 +1046,7 @@ FUNCTION {manual}
 FUNCTION {mastersthesis}
 { output.bibitem
   format.authors "author" output.check
+  ": " 'separator :=
   new.block
   format.title "title" output.check
   new.block
@@ -1059,6 +1062,7 @@ FUNCTION {mastersthesis}
 FUNCTION {misc}
 { output.bibitem
   format.authors output
+  ": " 'separator :=
   title howpublished new.block.checkb
   format.title output
   howpublished new.block.checka
