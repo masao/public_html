@@ -322,6 +322,7 @@ FUNCTION {format.translators}
 { translator empty$
     { "" }
     {
+      " " *
       translator is.kanji.str$
 	{ "（" * }
 	{ "("  * }
@@ -899,7 +900,6 @@ FUNCTION {inbook}
     }
   if$
   ": " 'separator :=
-  new.block
   format.btitle "title" output.check
   new.block
   format.booktitle "booktitle" output.check
@@ -1063,10 +1063,16 @@ FUNCTION {misc}
 { output.bibitem
   format.authors output
   ": " 'separator :=
-  title howpublished new.block.checkb
-  format.title output
-  howpublished new.block.checka
-  howpublished output
+  title empty$
+    { "" }
+    { format.title output.nonnull }
+  if$
+  howpublished empty$
+    {}
+    { new.block
+      howpublished output
+    }
+  if$
   format.date output
 
   new.block
