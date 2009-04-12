@@ -1,5 +1,5 @@
 title: 情報知識学会誌 BibTeX用 文献引用スタイルファイル
-date.modified: 2009-04-09
+date.modified: 2009-04-12
 date.available:2009-02-11
 subject: software
 
@@ -44,4 +44,7 @@ jBibTeXと同一のライセンスとします（参考: [[COPYRIGHT|http://www.ctan.org/tex-arc
 本スタイルファイルは jBibTeX 付属の junsrt.bst スタイルの一部を変更して作成したものです。
 jBibTeXおよびjunsrtスタイルの作者である松井正一さんに感謝いたします。
 
-{{clear}}
+!!関連リンク
+
+*[[情報知識学会ホームページ|http://wwwsoc.nii.ac.jp/jsik/]]
+*[[『情報知識学会誌』執筆要領|http://wwwsoc.nii.ac.jp/jsik/gakkaishi/tokokitei/shippitsu0707.pdf]]
