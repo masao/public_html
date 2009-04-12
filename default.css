@@ -101,6 +101,14 @@
     padding: .1em .5em;
     border: solid 1px gray;
   }
+  .center {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+  .center * {
+    text-align: center;
+  }
   /* thumbs plugin */
   div.thumbs {
     padding: 5px;
@@ -108,6 +116,7 @@
     border: #ccc solid 1pt;
     background-color: #dfd;
     margin: 2px;
+    width: auto;
   }
   /* For BBS */
   div.commentator {

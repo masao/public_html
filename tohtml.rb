@@ -227,6 +227,8 @@ class MHikiDoc < HikiDoc
                when "right", "left"  # align
                   @css[:float] = opt
                   #@css[:clear] = opt
+               when "center"
+                  @center = true
                when /\A(\d+)(?:px)?\Z/ # width
                   @css[:width] = $1 + "px"
                end
@@ -237,11 +239,13 @@ class MHikiDoc < HikiDoc
             end
             label_attr = label ? %Q[ alt="#{label}" title="#{label}"] : ""
             img_tag = %Q[<img src="#{src}" #{label_attr}/>]
-            if @thumbs
-               %Q[<div class="thumbs"#{style_attr}><div class="thumbs-image">#{img_tag}</div><div class="thumbs-caption">#{label}</div></div>]
-            else
-               %Q[<#{@style}#{style_attr} class="image"><img src="#{src}"#{label_attr}/></#{@style}>]
-            end
+            tags = if @thumbs
+                      %Q[<div class="thumbs"#{style_attr}><div class="thumbs-image">#{img_tag}</div><div class="thumbs-caption">#{label}</div></div>]
+                   else
+                      %Q[<#{@style}#{style_attr} class="image"><img src="#{src}"#{label_attr}/></#{@style}>]
+                   end
+            tags = %Q[<div class="center">#{ tags }</div>] if @center
+            tags
          end
       end
    end
