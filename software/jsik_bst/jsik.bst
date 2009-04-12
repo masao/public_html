@@ -929,7 +929,6 @@ FUNCTION {incollection}
 { output.bibitem
   format.authors "author" output.check
   ": " 'separator :=
-  new.block
   format.title "title" output.check
   new.block
   crossref missing$
