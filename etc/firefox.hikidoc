@@ -1,7 +1,7 @@
 title: Firefox: ブックマーク、拡張、設定など
 title.short: Firefox設定集
 date.available: 2006-04-20
-date.modified:  2009-01-07
+date.modified:  2009-04-05
 subject: etc
 
 常用ブラウザとして[[Mozilla Firefox|http://www.mozilla-japan.org/]]を使っていますが、Firefox上でのブックマーク、拡張、設定情報のメモです。
@@ -22,9 +22,9 @@ subject: etc
 *[[Delicious|javascript:location.href='http://del.icio.us/new/masao?v=4&url='+encodeURIComponent(location.href)+'&title='+encodeURIComponent(document.title)]]
 !! 拡張
 *[[FireBug|https://addons.mozilla.org/ja/firefox/addon/1843]]
-*[[IE View|http://ieview.mozdev.org/]]
+*[[IE View|https://addons.mozilla.org/ja/firefox/addon/35]]
 *[[Link Widget|https://addons.mozilla.org/ja/firefox/addon/2933]]
-*[[LiveHttpHeaders|http://livehttpheaders.mozdev.org/]]
+*[[LiveHttpHeaders|https://addons.mozilla.org/ja/firefox/addon/3829]]
 *[[Page Saver|http://pearlcrescent.com/products/pagesaver/]]
 *[[Resizeable Textarea|https://addons.mozilla.org/ja/firefox/addon/3818]]
 !!!以下は優先度の低い拡張機能（ほとんど使わない）
