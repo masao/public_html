@@ -310,6 +310,7 @@
       <end>235</end>
     </page>
     <language>ja</language>
+    <url>http://www.jcss.gr.jp/meetings/JCSS2008/papers/pdf/JCSS2008_P3-1.pdf</url>
 <!--    <file>./2007/jcss2007.pdf</file>-->
     <date>2008-09-06</date>
   </pub>
@@ -477,7 +478,10 @@
       <end>545</end>
     </page>
     <language>ja</language>
+    <url>http://www.nozy.org/JCSS2007/P5-18.pdf</url>
+    <!--
     <file>./2007/jcss2007.pdf</file>
+    -->
   </pub>
 
   <pub refereed="true" type="conference">
