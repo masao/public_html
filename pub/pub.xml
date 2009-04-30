@@ -2,6 +2,24 @@
 <!-- $Id$ -->
 <publist version="$Revision$">
 
+  <pub type="conference">
+    <author>Makiko Miwa</author>
+    <author>Noriko Kando</author>
+    <author>Yuka Egusa</author>
+    <author>Hitomi Saito</author>
+    <author>Masao Takaku</author>
+    <author>Hitoshi Terai</author>
+    <title>What Can Eye-Tracker Visualize?</title>
+    <subtitle>An Approach to Capture the Reality of Search Processes</subtitle>
+    <conference>Annual Meeting of the American Society for Information Science &amp; Technology (Panel Session)</conference>
+    <year>2009</year>
+    <month>11</month>
+    <city>Vancouver, Canada</city>
+    <language>en</language>
+    <date>2009-11-06</date>
+    <note>(to appear; accepted)</note>
+  </pub>
+
   <pub type="misc">
     <author>神門典子</author>
     <author>三輪眞木子</author>
