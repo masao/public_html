@@ -1,0 +1,67 @@
+<li><a name="pubid<%= object_id %>" id="pubid<%= object_id %>">
+<span class="author"><span class="author"><%= author.map{|author|
+author_s = h author
+if @config and @config["author_mine"]
+   author_s = "<em>#{h author}</em>" if @config["author_mine"].any?{|r| r =~ author }
+end
+if author_role[author] == "editor"
+   author_s << "(編)"
+end
+author_s
+}.join(", ")
+%>
+</span>:
+<span class="title">
+<% if not file.nil? %>
+<a href="<%=h file %>">
+<% end %>
+<%=h title %>
+<% if subtitle %>
+: <span><%=h subtitle %></span>
+<% end %>
+<% if not file.nil? %></a><% end %>
+</span>.
+<span class="bibdata">
+<% [ :conference, :org, :publisher, :city, :journal ].each do |field| %>
+<% if not send( field ).nil? %>
+<span class="<%= field %>"><%=h send( field ) %>;</span>
+<% end %>
+<% end %>
+<% if not volume.nil? %>
+<span class="volume">vol.<%=h volume %>;</span>
+<% end %>
+<% if not number.nil? %>
+<span class="number"><%=h "no." unless type == "techreport"%><%=h number %>;</span>
+<% end %>
+<% if page_start and page_end %>
+<span class="page">pp.<%=h page_start %>-<%=h page_end %>;</span>
+<% elsif page %>
+<span class="page"><%=h page %>p.</span>
+<% end %>
+<% if not year.nil? %>
+<span class="pubdate">(<%=h year %><% if not month.nil? %><span class="month">-<%= "%02d" % month.to_i %></span><% end %>)
+</span>
+<% end %>
+<% if not isbn.nil? %>
+<span class="isbn">(ISBN:<%=h isbn %>)</span>
+<% end %>
+<% if not note.nil? %>
+<span class="note"><%=h note %></span>
+<% end %>
+</span>
+<div class="url">
+<% if not doi.nil? %>
+<span class="doi">DOI <a href="http://dx.doi.org/<%=h doi %>"><%=h doi %></a></span>
+<% end %>
+<% if not url.nil? %>
+<span class="url"><a href="<%=h url %>"><%=h url_label ? url_label : "[URL]" %></a></span>
+<% end %>
+<% %w[ abstract slides poster ].each do |target| %>
+<% if send( target ) %>
+<span class="url">
+<span class="<%= target %>"><a href="<%=h send( target ) %>">[<%= target.capitalize %>]</a></span>
+</span>
+<% end %>
+<% end %>
+<span class="Z3988" title="<%=h to_coins %>"></span>
+</div>
