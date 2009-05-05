@@ -122,7 +122,7 @@ sub store_entry {
     # {"ym"} : 各年月に含まれている日付エントリ数
     # {"md"} : 同じ月日を持つ年 for same date jump
 
-    if ($self->{stop_date} != 0) {
+    if (defined($self->{stop_date}) and $self->{stop_date} != 0) {
 	my $cdate = $y * 10000 + $m * 100 + $d;
 	if ($self->{stop_date} > $cdate) {
 	    delete $self->{all}->{$ymd};
