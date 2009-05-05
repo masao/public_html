@@ -306,7 +306,7 @@ div.day span.sanchor {
         background-color: transparent;
         font-size: 1px;
 }
-h3.subtitle > a:first-child {	/* workaround for [2008-04-28-2] */
+h3.subtitle > a:first-child {	/* workaround for [2008-04-29-2] */
   text-decoration: none;
 }
 
@@ -325,5 +325,6 @@ div.amazon_img {
   float: right;
 }
 .bicycle-meter a img {
-  border: none;
+  border: 1px dotted gray;
+  background-color: #f0f0f0;
 }
