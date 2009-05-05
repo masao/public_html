@@ -151,6 +151,7 @@ div.body p {
 	text-align: right;
 	font-size: smaller;
 	margin: 0em;
+	clear: both;
 }
 
 /* ツッコミ関連 */
@@ -317,4 +318,12 @@ div.amazon_img {
 .highlight {
         color: #000;
         background: #ffff88;
+}
+
+/* bicycle-meter */
+.bicycle-meter {
+  float: right;
+}
+.bicycle-meter a img {
+  border: none;
 }
