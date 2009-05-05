@@ -31,6 +31,6 @@ sitemap.xml: index.html
 	./cli2sitemap.pl cl.itemlist > sitemap.xml
 
 bicycle-meter.png: bicycle-meter.txt
-	./bicycle-meter-gnuplot.rb $< > $@
+	./bicycle-meter-gnuplot.rb $<
 bicycle-meter.txt: ChangeLog
 	../software/cl2bicycle-meter.pl $< > $@
