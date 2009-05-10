@@ -555,9 +555,10 @@
     <year>2007</year>
     <month>8</month>
     <conference>Yahoo! Japan技術講演会</conference>
-    <city>東京, Yahoo! Japan</city>
+    <city>東京</city>
     <language>ja</language>
     <date>2007-08-28</date>
+    <slides>./2007/yahoo-seminar.pdf</slides>
   </pub>
 
   <pub refereed="true" type="conference">
