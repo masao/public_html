@@ -549,6 +549,17 @@
     -->
   </pub>
 
+  <pub type="misc">
+    <author>高久雅生</author>
+    <title>異種データベース統合に基づく研究者情報検索</title>
+    <year>2007</year>
+    <month>8</month>
+    <conference>Yahoo! Japan技術講演会</conference>
+    <city>東京, Yahoo! Japan</city>
+    <language>ja</language>
+    <date>2007-08-28</date>
+  </pub>
+
   <pub refereed="true" type="conference">
     <author>Masao Takaku</author>
     <author>Yuka Egusa</author>
