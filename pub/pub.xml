@@ -54,15 +54,15 @@
     <volume>19</volume>
     <number>2</number>
     <page>12</page>
-    <!--
     <page>
-      <start>181</start>
-      <end>188</end>
+      <start>224</start>
+      <end>235</end>
     </page>
+    <!--
     <doi>10.2964/jsik.18-181</doi>
-    <slides>./2008/jsik2008-slides.pdf</slides>
-    <language>ja</language>
+    <slides>./2009/jsik2009-slides.pdf</slides>
     -->
+    <language>ja</language>
     <date>2009-05-16</date>
     <note>（発表予定）</note>
   </pub>
