@@ -1,5 +1,5 @@
 title: Curriculum Vitae (Masao Takaku)
-date.modified: 2009-05-02
+date.modified: 2009-05-08
 date.available: 2007-03-04
 
 [[{{image './images/200903-okinawa.jpg' 'at Okinawa (March 2009)' right thumbs 200px}}|./profile-images.html]]
@@ -24,17 +24,17 @@ Information retrieval, Digital library, Information behaviour
 
 !!Work
 :2008-09 -:
-::'''[[National Institute for Materials Science|http://www.nims.go.jp/]] [[Scientific Information Office|http://www.nims.go.jp/eng/org/front07.html]] Senior Engineer'''
+::'''Scientific Information Office, [[National Institute for Materials Science|http://www.nims.go.jp/]]  (Senior Engineer)'''
 ::Developing an digital library system for the field of materials science. Operation in a special library at NIMS.
 ::(Keywords) Institutional repository, Fulltext search, Portal service for Materials Science
 ::(Skills) eSciDoc, Fedora Commons, SOA, Java, JSP/JSF
 :2006-01 - 2008-08:
-::'''[[Transdisciplinary Research Integration Center|http://www.rois.ac.jp/tric/]], [[Research Organization of Information and Systems|http://www.rois.ac.jp/]]  Post-doctoral researcher'''
+::'''[[Transdisciplinary Research Integration Center|http://www.rois.ac.jp/tric/]], [[Research Organization of Information and Systems|http://www.rois.ac.jp/]]  (Post-doctoral researcher)'''
 ::Constructing a researcher information server (building prototype systems for integrating information on researchers in Japan). Involved in development of [[KAKEN Database (Beta service)|http://seikaplus.nii.ac.jp/]] and [[Researcher Resolver (Alpha service)|http://rns.nii.ac.jp/]]
 ::(Keywords) information linkage, digital library, identification, combining bibliographics, researcher network, visualization
 ::(Skills) Perl, Web API, XML, Ruby
 :2004-10 - 2005-12:
-::'''[[National Institute of Informatics|http://www.nii.ac.jp/]] Post-doctoral researcher'''
+::'''[[National Institute of Informatics|http://www.nii.ac.jp/]]  (Post-doctoral researcher)'''
 ::One of organizers of [[NTCIR-5 WEB task|http://research.nii.ac.jp/ntcweb/]]. Building a Web test collection.
 ::(Keywords) Web information retrieval, IR evaluation, search engine, test collection
 ::(Skills) Perl, Ruby, GETA, Web API, trec_eval
