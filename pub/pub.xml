@@ -463,6 +463,24 @@
   </pub>
 
   <pub type="misc">
+    <author>安達淳</author>
+    <author>大山敬三</author>
+    <author>相澤彰子</author>
+    <author>高須淳宏</author>
+    <author>井上雅史</author>
+    <author>深川大路</author>
+    <author>高久雅生</author>
+    <title>情報爆発時代の情報検索基盤技術</title>
+    <conference>文部科学省情報爆発プロジェクト 平成19年度 成果報告会</conference>
+    <year>2008</year>
+    <month>3</month>
+    <city>東京, 秋葉原ダイビル</city>
+    <language>ja</language>
+    <date>2008-03-03</date>
+    <note>（ポスター発表）</note>
+  </pub>
+
+  <pub type="misc">
     <author>高久雅生</author>
     <author>相澤彰子</author>
     <author>大山敬三</author>
@@ -674,6 +692,27 @@
     <file>./2007/tric-symposium.pdf</file>
     <slides>./2007/tric-symposium-slides.pdf</slides>
     <language>ja</language>
+  </pub>
+
+  <pub type="misc">
+    <author>安達淳</author>
+    <author>大山敬三</author>
+    <author>高須淳宏</author>
+    <author>相澤彰子</author>
+    <author>江口浩二</author>
+    <author>井上雅史</author>
+    <author>正田備也</author>
+    <author>深川大路</author>
+    <author>高久雅生</author>
+    <title>情報爆発時代の情報検索基盤技術</title>
+    <subtitle>アカデミックリンケージ〜知のクライアントへの発信を目指して</subtitle>
+    <conference>文部科学省科学研究費補助金「情報爆発時代に向けた新しいIT基盤技術の研究」 平成18年度 成果報告会</conference>
+    <year>2007</year>
+    <month>1</month>
+    <city>東京, 秋葉原ダイビル</city>
+    <language>ja</language>
+    <date>2007-01-24</date>
+    <note>（デモポスター発表）</note>
   </pub>
 
   <pub type="misc">
