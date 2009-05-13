@@ -12,6 +12,7 @@ for my $fname (@ARGV) {
     $cl->store_changelog_file($fname);
 }
 my @cycle_entries;
+my $dist_total = 0;
 foreach my $ymd (sort keys %{$cl->{all}}) {
     # print Dumper(\%{$cl->{all}->{$ymd}});
     my $entry = $cl->{all}->{$ymd};
@@ -21,8 +22,9 @@ foreach my $ymd (sort keys %{$cl->{all}}) {
 	    #print join( "\t", "<$ymd>", $cont );
 	    my $dist = $1 if $cont =~ /ЕїЮЅ:\s*([\d\.]+)\s*km/iso;
 	    my $time = $1 if $cont =~ /ЛўДж:\s*([\d\.\:]+)/iso;
+	    $dist_total += $dist;
 	    $time = "0:".$time if not defined((split(/:/, $time))[2]);
-	    print join( "\t", $ymd, $dist, $time ), "\n";
+	    print join( "\t", $ymd, $dist, $time, $dist_total ), "\n";
 	    #push( @cycle_entries, $entry );
 	}
     }
