@@ -13,7 +13,7 @@
 <a class="subject" href="./../../software/">ソフトウェア</a> &gt;
 Yahoo!メッセンジャー・アーカイブ・ブラウザ</div>
 <div class="last-update">初版公開日: 2006年12月09日</div>
-<div class="last-update">最終更新日: 2008年05月28日</div>
+<div class="last-update">最終更新日: 2009年05月17日</div>
 <h1>Yahoo!メッセンジャー・アーカイブ・ブラウザ</h1>
 <p><a href="http://messenger.yahoo.co.jp/">Yahoo!メッセンジャー</a>での会話内容を保存したメッセージアーカイブ・ファイルを簡単に閲覧・検索できるようにしたツールです。
 以下の機能を持ちます。</p>
@@ -33,6 +33,9 @@ Yahoo!メッセンジャー・アーカイブ・ブラウザ</div>
 <a href="yim-s.png"><span class="image"><img src="yim-s.s.png" alt="検索結果表示画面" title="検索結果表示画面"/></span></a></p>
 <h2 id="toc1_2">お知らせ</h2>
 <dl>
+<dt>2009-05-17</dt>
+<dd>yim_archive-0.3 を公開。初期画面からメッセージ表示画面へのリンクがエラーになってしまうバグを修正。
+</dd>
 <dt>2008-04-07</dt>
 <dd>yim_archive-0.2 を公開。カンファレンス形式のアーカイブに対応しました。
 </dd>
@@ -43,7 +46,7 @@ Yahoo!メッセンジャー・アーカイブ・ブラウザ</div>
 <h2 id="toc1_3">ダウンロード</h2>
 <p>yim_archive はGNU Generic Public License version 2に従ったフリーソフトウェアとします。</p>
 <ul>
-<li><a href="../archive/yim_archive-0.2.tar.gz">yim_archive-0.2.tar.gz</a></li>
+<li><a href="../archive/yim_archive-0.3.tar.gz">yim_archive-0.3.tar.gz</a></li>
 </ul>
 <h2 id="toc1_4">使い方</h2>
 <p>実行に当たっては、<a href="http://www.ruby-lang.org/ja/">Ruby</a> 1.8 以降およびCGIプログラムの実行環境が必要となります。</p>
@@ -60,10 +63,14 @@ Yahoo!メッセンジャーのメッセージ・アーカイブは、ウィンドウズ上では、<code>C:\Pro
 このフォルダ以下のデータをまるごと、適当なディレクトリ名で、yim.cgi と同一のディレクトリにコピーしてきます。</p>
 <p>以上で完了です。
 先に確認したURLにアクセスしてみると、コピーしたファイルの内容を確認できると思います。</p>
-<h2 id="toc1_5">謝辞</h2>
+<h3 id="toc2_1">既知の問題点</h3>
+<p>いくつかのアーカイブファイルにおいて文字化けが起きることがあるようです。
+手元では発生せず、再現するため条件が不明なために対応できていません。
+文字化けが再現する環境をお持ちの方はご連絡ください。</p>
+<h2 id="toc3_1">謝辞</h2>
 <p>本ツールの作成にあたっては<a href="http://yammy.sourceforge.net/">Yammy</a>のデコード機能のソースコードを参考にいたしました。
 開発者のPravin Paratey氏に感謝いたします。</p>
-<h2 id="toc1_6">連絡先</h2>
+<h2 id="toc3_2">連絡先</h2>
 <p>本ツールに対し、質問・意見などありましたら、<a href="mailto:tmasao@acm.org">お気軽にご連絡ください</a>。</p>
 <hr />
 <div class="navi"><a href="./../..">HOME</a> &gt;
