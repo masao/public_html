@@ -37,11 +37,11 @@
 
   <pub type="misc">
     <author>神門典子</author>
-    <author>三輪眞木子</author>
-    <author>高久雅生</author>
     <author>江草由佳</author>
     <author>齋藤ひとみ</author>
+    <author>高久雅生</author> 
     <author>寺井仁</author>
+    <author>三輪眞木子</author>
     <title>Web探索の心とふるまい</title>
     <subtitle>視線は語る</subtitle>
     <year>2009</year>
@@ -80,7 +80,6 @@
     -->
     <language>ja</language>
     <date>2009-05-16</date>
-    <note>（発表予定）</note>
   </pub>
 
   <pub refereed="true" type="conference">
