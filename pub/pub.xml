@@ -20,6 +20,50 @@
     <note>(to appear; accepted)</note>
   </pub>
 
+  <pub type="misc">
+    <author>高久雅生</author>
+    <author>相澤彰子</author>
+    <author>馬場康維</author>
+    <author>蔵川圭</author>
+    <author>谷藤幹子</author>
+    <title>研究者同定とその応用</title>
+    <subtitle>統計分野と材料科学分野を例として</subtitle>
+    <conference>第25回ファジーシステムシンポジウム</conference>
+    <year>2009</year>
+    <month>7</month>
+    <city>つくば, 筑波大学</city>
+    <!--
+    <page>
+      <start>15</start>
+      <end>21</end>
+    </page>
+    -->
+    <language>ja</language>
+    <date>2009-07-14</date>
+    <note>（発表予定）</note>
+  </pub>
+
+  <pub type="misc">
+    <author>蔵川圭</author>
+    <author>武田英明</author>
+    <author>高久雅生</author>
+    <author>相澤彰子</author>
+    <title>研究者リゾルバーαの研究者同定</title>
+    <conference>第25回ファジーシステムシンポジウム</conference>
+    <year>2009</year>
+    <month>7</month>
+    <city>つくば, 筑波大学</city>
+    <!--
+    <page>
+      <start>15</start>
+      <end>21</end>
+    </page>
+    -->
+    <language>ja</language>
+    <date>2009-07-14</date>
+    <note>（発表予定）</note>
+  </pub>
+
   <!--
   <pub type="misc">
     <author>高久雅生</author>
