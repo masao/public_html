@@ -27,6 +27,7 @@ HTML	= 	index.html.ja index.html.en \
 		software/pukiwiki.html \
 		software/jsik_bst/index.html \
 		private/memo.html \
+		private/nims_memo.html \
 		lecture/index.html \
 		lecture/2005/excel/index.html \
 		lecture/2005/html/index.html \
