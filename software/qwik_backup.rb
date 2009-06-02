@@ -102,11 +102,21 @@ class QwikBackup
    end
 
    def get( page )
-      unless @conn.active?
-         STDERR.puts "reactivate conn"
-         @conn.start
+      retry_count = 5
+      begin
+         unless @conn.active?
+            STDERR.puts "reactivate conn"
+            @conn.start
+         end
+         @conn.get( @baseurl.path + URI.escape(page), @cookie )
+      rescue Timeout::Error
+         retry_count -= 1
+         raise "get() exceeds the retry limit(5): #{page}" if retry_count < 0
+         # reset connection & sleep for a while
+         @conn.finish
+         sleep( 300 )
+         retry
       end
-      @conn.get( @baseurl.path + page, @cookie )
    end
    def get_html( page )
       get( page + ".html" )
