@@ -12,6 +12,9 @@ class QwikBackup
    def initialize( baseurl, username, password )
       @baseurl = URI.parse( baseurl )
       @conn = Net::HTTP.new( @baseurl.host, @baseurl.port )
+      #STDERR.puts "read_timeout (deafult) #{@conn.read_timeout}"
+      @conn.read_timeout = 300
+      #STDERR.puts "read_timeout is set to #{@conn.read_timeout}"
       cookie = login( username, password )
       @cookie = { "Cookie" => cookie.keys.map{|c| "#{c}=#{cookie[c]}" }.join("; ") }
    end
