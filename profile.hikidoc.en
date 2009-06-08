@@ -1,5 +1,5 @@
 title: Curriculum Vitae (Masao Takaku)
-date.modified: 2009-05-28
+date.modified: 2009-06-09
 date.available: 2007-03-04
 
 [[{{image './images/200903-okinawa.jpg' 'at Okinawa (March 2009)' right thumbs 200px}}|./profile-images.html]]
@@ -24,7 +24,7 @@ Information retrieval, Digital library, Information behaviour
 
 !!Work
 :2008-09 -:
-::'''Scientific Information Office, [[National Institute for Materials Science|http://www.nims.go.jp/]]  (Senior Engineer)'''
+::'''Scientific Information Office, [[National Institute for Materials Science|http://www.nims.go.jp/]]  (Lead Engineer)'''
 ::Developing an digital library system for the field of materials science. Operation in a special library at NIMS.
 ::(Keywords) Institutional repository, Fulltext search, Portal service for Materials Science
 ::(Skills) eSciDoc, Fedora Commons, SOA, Java, JSP/JSF
