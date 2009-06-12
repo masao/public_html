@@ -68,15 +68,16 @@
 
   <pub type="misc">
     <author>高久雅生</author>
-<!--    <title></title>-->
+    <title>いまのCiNiiをどう使っているか？これからどう使うか？</title>
+    <subtitle>実装者、利用者の観点から</subtitle>
     <year>2009</year>
     <month>6</month>
     <conference>次世代学術コンテンツ基盤ワークショップ「ひらめき、ひろがる、知の可能性（かたち）―CiNiiリニューアルとウェブAPIコンテスト―」 （国立情報学研究所 平成21年度オープンハウス）</conference>
     <city>東京, 国立情報学研究所</city>
     <language>ja</language>
     <date>2009-06-12</date>
-    <note>（発表予定）</note>
     <url>http://www.nii.ac.jp/index.php?action=pages_view_main&amp;page_id=317</url>
+    <slides>./2009/cinii-workshop-slides.pdf</slides>
   </pub>
 
   <pub type="misc">
@@ -94,7 +95,7 @@
     <city>東京, 国立情報学研究所</city>
     <language>ja</language>
     <date>2009-06-11</date>
-    <note>（ポスター発表; 発表予定）</note>
+    <note>（ポスター発表）</note>
     <url>http://www.nii.ac.jp/index.php?action=pages_view_main&amp;page_id=317</url>
   </pub>
   
