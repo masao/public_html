@@ -4,6 +4,8 @@
   <!--
   <pub type="book">
     <author>高久雅生</author>
+    <author role="editor">小山憲司</author>
+    <author role="editor">岸田和明</author>
     <title>Web情報検索手法の最新動向</title>
     <publisher>勉誠出版</publisher>
     <booktitle>情報アクセスの新たな展開: 情報検索・利用の最新動向</booktitle>
@@ -11,6 +13,8 @@
     <pages>17</pages>
     <series>図書館情報学のフロンティア</series>
     <number>9</number>
+    <year>2009</year>
+    <month>12</month>
   </pub>
   -->
 
