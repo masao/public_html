@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist version="$Revision$">
+  <!--
+  <pub type="book">
+    <author>高久雅生</author>
+    <title>Web情報検索手法の最新動向</title>
+    <publisher>勉誠出版</publisher>
+    <booktitle></booktitle>
+  </pub>
+  -->
 
   <pub type="conference">
     <author>Makiko Miwa</author>
@@ -32,11 +40,11 @@
     <year>2009</year>
     <month>7</month>
     <city>神戸, 神戸ファッションマート</city>
-    <journal>情報処理学会研究報告FI95</journal>
+    <journal>情報処理学会研究報告</journal>
+    <volume>2009-FI-95</volume>
+    <number>1</number>
+    <page>7</page>
     <!--
-    <volume>19</volume>
-    <number>2</number>
-    <page>12</page>
     <page>
       <start>224</start>
       <end>235</end>
