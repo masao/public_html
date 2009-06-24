@@ -126,6 +126,7 @@
     <date>2009-06-16</date>
     <city>Karlsruhe, Germany</city>
     <language>en</language>
+    <slides>./2009/escidocdays2009-i18n-slides.pdf</slides>
   </pub>
 
   <pub type="conference">
@@ -139,6 +140,7 @@
     <date>2009-06-16</date>
     <city>Karlsruhe, Germany</city>
     <language>en</language>
+    <slides>./2009/escidocdays2009-cone-slides.pdf</slides>
   </pub>
 
   <pub type="misc">
