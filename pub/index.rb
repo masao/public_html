@@ -11,6 +11,7 @@ require "yaml"
 class PubData
    attr_reader :type, :author, :author_role, :title, :subtitle
    attr_reader :journal, :conference, :org, :publisher
+   attr_reader :booktitle, :series
    attr_reader :volume, :number, :year, :month, :city
    attr_reader :page_start, :page_end, :page, :isbn, :note
    attr_reader :url, :url_label, :doi, :slides, :poster, :file, :abstract
@@ -30,6 +31,8 @@ class PubData
       @title = element.text("title")
       @subtitle = element.text("subtitle")
       @journal = element.text("journal")
+      @booktitle = element.text("booktitle")
+      @series = element.text("series")
       @conference = element.text("conference")
       @org = element.text("org")
       @publisher = element.text("publisher")
