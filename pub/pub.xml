@@ -143,6 +143,19 @@
     <slides>./2009/escidocdays2009-cone-slides.pdf</slides>
   </pub>
 
+  <pub type="conference">
+    <author>Mikiko Tanifuji</author>
+    <author>Masao Takaku</author>
+    <title>NIMS eSciDoc</title>
+    <subtitle>A perspective of a knowledgebase in materials science</subtitle>
+    <conference>eSciDoc Days 2009</conference>
+    <year>2009</year>
+    <month>6</month>
+    <date>2009-06-16</date>
+    <city>Karlsruhe, Germany</city>
+    <language>en</language>
+  </pub>
+
   <pub type="misc">
     <author>高久雅生</author>
     <title>いまのCiNiiをどう使っているか？これからどう使うか？</title>
