@@ -16,7 +16,7 @@
 <dd class="author"><span class="author"><%= author.map{|author|
 author_s = h author
 if @config and @config["author_mine"]
-   author_s = "<em>#{h author}</em>" if @config["author_mine"].any?{|r| r =~ author }
+   author_s = "<em>#{author}</em>" if @config["author_mine"].any?{|r| r =~ author }
 end
 if author_role[author] == "editor"
    author_s << "(編)"
@@ -26,7 +26,13 @@ author_s
 %>
 </span></dd>
 <dd class="bibdata">
-<% [ :conference, :org, :publisher, :city, :journal ].each do |field| %>
+<%
+biborder = [ :conference, :org, :publisher, :city, :journal ]
+if type == "book" or type == "chapter"
+   biborder = [ :booktitle, :org, :publisher, :city, :series ]
+end
+%>
+<% biborder.each do |field| %>
 <% if not send( field ).nil? %>
 <span class="<%= field %>"><%=h send( field ) %>;</span>
 <% end %>
