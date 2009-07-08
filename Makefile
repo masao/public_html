@@ -53,6 +53,9 @@ all: $(HTML) chalow
 %.html.en: %.hikidoc.en $(TOHTML_EN)
 	./tohtml.rb $< > $@
 
+profile.html.ja: pub/pub.xml
+profile.html.en: pub/pub.xml
+
 # chalow
 chalow:
 	cd private/ && make

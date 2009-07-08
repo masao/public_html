@@ -1,5 +1,5 @@
 title: Curriculum Vitae (Masao Takaku)
-date.modified: 2009-06-24
+date.modified: 2009-07-08
 date.available: 2007-03-04
 
 [[{{image './images/200903-okinawa.jpg' 'at Okinawa (March 2009)' right thumbs 200px}}|./profile-images.html]]
@@ -71,7 +71,7 @@ Information retrieval, Digital library, Information behaviour
 ::Building a web-based browsing system for Japanese national bibliographics Japan/MARC data including 1M-records from over 13 years.
 ::(Skills) Japan/MARC, C, Perl, DBM, Magnetic tapes
 
-!!Selected publications
+!!Recent publications
 {{recent_publication}}
 
 A full list of publications are available at [[./pub/]].
