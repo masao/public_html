@@ -1,9 +1,10 @@
 title: 近影
-date.modified: 2009-04-01
+date.modified: 2009-07-11
 date.available: 2008-12-20
 subject: profile
 
 !! 2009年
+{{image './images/200906-starnberg.jpg' 'シュタルンベルク湖畔にて（2009年6月）' thumbs 200px left}}
 {{image './images/200903-okinawa.jpg' '沖縄旅行にて（2009年3月）' thumbs 200px left}}
 {{image './images/200901-munich.jpg' 'ミュンヘン出張にて（2009年1月）' thumbs 150px left}}
 {{clear}}

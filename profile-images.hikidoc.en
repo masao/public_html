@@ -1,9 +1,10 @@
 title: My recent portraits
-date.modified: 2009-04-01
+date.modified: 2009-07-11
 date.available: 2008-12-20
 subject: profile
 
 !! 2009
+{{image './images/200906-starnberg.jpg' 'at the lakeside of Starnberg in German (June 2009)' thumbs 200px left}}
 {{image './images/200903-okinawa.jpg' 'at Mibaru Beach in Okinawa (March 2009)' thumbs 200px left}}
 {{image './images/200901-munich.jpg' 'at a business trip in Munich, Germany (January 2009)' thumbs 150px left}}
 {{clear}}
