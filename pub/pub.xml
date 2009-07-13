@@ -70,6 +70,26 @@
     <note>（発表予定）</note>
   </pub>
 
+  <pub type="conference" refereed="true">
+    <author>Hitomi Saito</author>
+    <author>Hitoshi Terai</author>
+    <author>Yuka Egusa</author>
+    <author>Masao Takaku</author>
+    <author>Makiko Miwa</author>
+    <author>Noriko Kando</author>
+    <title>How Task Types and User Experiences Affect Information-Seeking Behavior on the Web</title>
+    <subtitle>Using Eye-tracking and Client-side Search Logs</subtitle>
+    <conference>Understanding the User - Logging and interpreting user interactions in information search and retrieval (UIIR 2009) (SIGIR 2009 Workshop)</conference>
+    <year>2009</year>
+    <month>7</month>
+    <city>Boston, USA</city>
+    <pages>4</pages>
+    <language>en</language>
+    <date>2009-07-23</date>
+    <note>(to appear as poster presentation; accepted)</note>
+    <url>http://uiir-2009.dfki.de/</url>
+  </pub>
+
   <pub type="misc">
     <author>高久雅生</author>
     <author>相澤彰子</author>
@@ -223,9 +243,7 @@
       <start>224</start>
       <end>235</end>
     </page>
-    <!--
     <doi>10.2964/jsik.19-224</doi>
-    -->
     <slides>./2009/jsik2009-slides.pdf</slides>
     <language>ja</language>
     <date>2009-05-16</date>
