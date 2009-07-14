@@ -12,7 +12,6 @@ config_file = "twitter.yml"
 username = YAML.load( open( config_file ) )["test"]["login"]
 
 twitter = Twitter::Client.from_config( config_file )
-#p twitter
 
 prev_date = nil
 twitter.timeline_for( :me, :count => 200 ) do |status|
@@ -23,5 +22,5 @@ twitter.timeline_for( :me, :count => 200 ) do |status|
       puts "\t* [[今日のつぶやき|http://twitter.com/#{ username }]]:"
    end
    time_s = status.created_at.strftime("%H:%M")
-   puts "\t{{twitter \"#{username}\", \"#{ time_s }\", \"#{ status.text }\", #{ status.id }}}"
+   puts "\t{{twitter \"#{username}\", \"#{ time_s }\", \"#{ status.text }\", #{ status.id }, '#{ status.source }'}}"
 end
