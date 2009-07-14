@@ -328,3 +328,12 @@ div.amazon_img {
   border: 1px dotted gray;
   background-color: #f0f0f0;
 }
+
+/* twitter */
+.twitter {
+  font-size: smaller;
+}
+.twitter span.agent, .twitter span.agent a {
+  font-size: smaller;
+  color: #999;
+}
