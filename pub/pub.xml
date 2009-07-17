@@ -103,15 +103,9 @@
     <month>7</month>
     <city>つくば, 筑波大学</city>
     <page>6</page>
-    <!--
-    <page>
-      <start>15</start>
-      <end>21</end>
-    </page>
-    -->
     <language>ja</language>
     <date>2009-07-14</date>
-    <note>（発表予定）</note>
+    <slides>./2009/fss2009-slides.pdf</slides>
   </pub>
 
   <pub type="misc">
@@ -133,7 +127,6 @@
     -->
     <language>ja</language>
     <date>2009-07-14</date>
-    <note>（発表予定）</note>
   </pub>
 
   <pub type="conference">
