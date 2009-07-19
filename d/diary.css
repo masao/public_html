@@ -314,7 +314,7 @@ h3.subtitle > a:first-child {	/* workaround for [2008-04-29-2] */
 .plugin-error {
   color: #644;
 }
-   
+
 /* amazon_img plugin */
 div.amazon_img {
 	float: right;
@@ -339,7 +339,8 @@ div.amazon_img {
 .twitter {
   font-size: smaller;
 }
-.twitter span.agent, .twitter span.agent a {
+.twitter span.agent, .twitter span.agent a,
+.twitter span.in_reply_to, .twitter span.in_reply_to a {
   font-size: smaller;
   color: #999;
 }
