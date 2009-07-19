@@ -1,4 +1,4 @@
-all: index.html ping sitemap.xml
+all: index.html ping sitemap.xml bicycle-meter.png
 
 index.html: ChangeLog chalow cl.conf ../private/ChangeLog.delicious
 	./chalow -q -u -c cl.conf ChangeLog ../private/ChangeLog.delicious
