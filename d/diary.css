@@ -310,6 +310,12 @@ h3.subtitle > a:first-child {	/* workaround for [2008-04-29-2] */
   text-decoration: none;
 }
 
+/* plugin generic (plugin-error) */
+.plugin-error {
+  color: #644;
+}
+   
+/* amazon_img plugin */
 div.amazon_img {
 	float: right;
 }

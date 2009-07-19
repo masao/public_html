@@ -1393,7 +1393,15 @@ sub unescape_string {
     my ($strp) = @_;
 
     ### プラグインアンエスケープ - 実行！
-    $$strp =~ s|\x7\x13(\d+)\x3|eval($escaped_plugin{$1})|ge;
+    $$strp =~ s|\x7\x13(\d+)\x3|
+	my $s = eval($escaped_plugin{$1});
+        if ( !defined($s) and length($@) > 0 ) {
+	    warn( "plugin error: ". (split(/\s/, $escaped_plugin{$1}))[0] .": $@" );
+	    qq(<span class="plugin-error">{{$escaped_plugin{$1}}}</span>)
+	} else {
+	    $s;
+	}
+    |gex;
     ### ソースアンエスケープ - pre 追加
     $$strp =~ s|\x6\x13(\d+)\x3|<pre>$escaped_src{$1}</pre>|g;
     ### HTML アンエスケープ
