@@ -828,6 +828,32 @@ sub write_day_page {
 	# 日へのリンク (日付一覧)
 	my $day_list = make_day_list_str($ym);
 
+	# 各日におけるエントリのタイトル
+	#print "$ymd:\n";
+	my $entry_title = "";
+	my $day_entries = $cl->{all}->{$ymd};
+	for( my $i = $day_entries->{curid}; $i > 0; $i--) {
+	    if ( length($entry_title) > 0 ) {
+		$entry_title .= "; ";
+	    }
+	    my $title = $day_entries->{$i}->{ho};
+	    $title =~ s/\[\[(.*?)\|.*?\]\]/$1/g;
+	    $title =~ s/^\s+//g;
+	    $title =~ s/\s+$//g;
+	    $title =~ s/\s+/ /g;
+# 	    if ( length($title) > 20 ) {
+# 		# utf8 ベースでの折り返しを使った処理
+# 		use utf8;
+# 		my $decoded_title = decode( "euc-jp", $title );
+# 		my $folded = fold_utf8( $decoded_title, 20 );
+# 		$decoded_title = (split( /\n/, $folded ))[0];
+# 		$decoded_title .= "...";
+# 		$title = encode( "euc-jp", $decoded_title );
+# 	    }
+	    $entry_title .= "$title";
+	    #print "$title\n";
+	}
+
 	### ページの組み上げ
 	my $t = HTML::Template->new(scalarref => \$day_page_template,
 				    loop_context_vars => 1,
@@ -847,6 +873,7 @@ sub write_day_page {
 	$t->param(back => $day_before);
 	$t->param(next => $day_after);
 	$t->param(content => $month_page{$ym}{$ymd}{str});
+	$t->param(entry_title => $entry_title);
 
 	my $ostr = $t->output();
 
@@ -855,6 +882,24 @@ sub write_day_page {
     }
 }
 
+# 折り返し処理を使った、文字列短縮コード:
+sub fold_utf8 {
+    my ($original, $fold) = @_;
+    my @tmp = split( /\s+/, $original );
+    return $original if (not $fold || not length($original));
+    my $folded = '';
+    my $length = 0;
+    while (length($original)) {
+	my $char = substr($original, 0, 1, '');
+	$folded .= $char;
+	$length += ( bytes::length($char) <= 2 ) ? 1 : 2;
+	if ($length >= $fold) {
+	    $folded .= "\n";
+	    $length = 0;
+	}
+    }
+    return $folded;
+}
 
 ### 月ページ(ex: 2001-01.html)を作る。
 sub write_month_page {
