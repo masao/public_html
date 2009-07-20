@@ -1398,6 +1398,7 @@ sub unescape_string {
         my $s = eval($escaped_plugin{$plugin_id});
         if ( !defined($s) and length($@) > 0 ) {
 	    my $plugin_name = (split(/\s+/, $escaped_plugin{$plugin_id}))[0];
+	    # FIXME: Ad-hoc workaround for ignore_warning_list...
 	    warn( "plugin error: $plugin_name: $@" ) if not $plugin_name =~ /^jareq\|/;
 	    qq(<span class="plugin-error">{{$escaped_plugin{$plugin_id}}}</span>)
 	} else {
