@@ -143,6 +143,9 @@ if ($mode eq "write") {
 	@spam = ($body =~ /\bhttps?:\/\/(\w+\.)?google\.(com|us|jp)\/group\/\w?\w?(ticket|teens)/gmoi);
 	error("禁止されたURLが含まれています。\nYour comment contains a spamming URL.") if scalar(@spam) > 0;
 
+	# 特定のアドレスからの投稿を禁止
+	error("禁止されたアドレス/URLが含まれています。\nYour comment contains a spamming E-mail address/URL.") if $mail_or_url eq 'maxhamehame@livedoor.com';
+
 	$name = CGI::escapeHTML( $name );
 	$mail_or_url = CGI::escapeHTML( $mail_or_url );
 	$body = CGI::escapeHTML( $body );
