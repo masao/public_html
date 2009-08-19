@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist version="$Revision$">
-  <!--
+  <pub type="conference" refereed="true">
+    <author>Yuka Egusa</author>
+    <author>Hitomi Saito</author>
+    <author>Masao Takaku</author>
+    <author>Hitoshi Terai</author>
+    <author>Makiko Miwa</author>
+    <author>Noriko Kando</author>
+    <title>Link Depth: Measuring How Far Searchers Explore Web</title>
+    <conference>The 43rd Hawaii International Conference on System Sciences (HICSS-43)</conference>
+    <year>2010</year>
+    <month>1</month>
+    <city>Kauai, Hawaii</city>
+    <language>en</language>
+    <date>2010-01-05</date>
+    <note>(to appear; accepted)</note>
+  </pub>
+
   <pub type="chapter">
     <author>高久雅生</author>
     <title>Web情報検索手法の最新動向</title>
@@ -10,10 +26,9 @@
     <author role="editor">小山憲司</author>
     <author role="editor">岸田和明</author>
     <city>東京</city>
-    <pages>17</pages>
     <page>
-      <start>224</start>
-      <end>235</end>
+      <start>125</start>
+      <end>139</end>
     </page>
     <series>図書館情報学のフロンティア</series>
     <number>9</number>
@@ -22,7 +37,6 @@
     <date>2009-12-31</date>
     <note>（刊行予定）</note>
   </pub>
-  -->
 
   <pub type="conference">
     <author>Makiko Miwa</author>
@@ -41,6 +55,34 @@
     <date>2009-11-06</date>
     <note>(to appear; accepted)</note>
     <url>http://asis.org/Conferences/AM09/panels/24.html</url>
+  </pub>
+  
+  <pub type="misc">
+    <author>高久雅生</author>
+    <author>谷藤幹子</author>
+    <title>NIMS eSciDoc</title>
+    <subtitle>A feedback from Japanese Aspects</subtitle>
+    <conference>DRF技術ワークショップ「Workshop of Application of Repository Infrastructure for eScience and eResearch: 研究成果やデータを永久保存していく活動へ向けて」</conference>
+    <year>2009</year>
+    <month>9</month>
+    <city>京都, 京都大学附属図書館</city>
+    <url>http://drf.lib.hokudai.ac.jp/drf/?DRFtech-Kyoto</url>
+    <language>ja</language>
+    <date>2009-09-07</date>
+    <note>（発表予定）</note>
+  </pub>
+  
+  <pub type="misc">
+    <author>高久雅生</author>
+    <title>21世紀の新しい共同研究について</title>
+    <conference>第5回ARGカフェ</conference>
+    <year>2009</year>
+    <month>8</month>
+    <city>大阪, ドーンセンター</city>
+    <url>http://d.hatena.ne.jp/arg/20090724/1248402413</url>
+    <language>ja</language>
+    <date>2009-08-22</date>
+    <note>（発表予定）</note>
   </pub>
   
   <pub type="misc">
@@ -67,7 +109,6 @@
     -->
     <language>ja</language>
     <date>2009-07-28</date>
-    <note>（発表予定）</note>
   </pub>
 
   <pub type="conference" refereed="true">
@@ -86,8 +127,7 @@
     <pages>4</pages>
     <language>en</language>
     <date>2009-07-23</date>
-    <note>(to appear as poster presentation; accepted)</note>
-    <url>http://uiir-2009.dfki.de/</url>
+    <url>http://uiir-2009.dfki.de/papers/uiir2009_submission_4.pdf</url>
   </pub>
 
   <pub type="misc">
@@ -375,7 +415,7 @@
       <start>468</start>
       <end>471</end>
     </page>
-    <url>http://www.jstage.jst.go.jp/article/jsik/18/5/468/_pdf/-char/ja/</url>
+    <doi>10.2964/jsik.18-5-21</doi>
     <language>ja</language>
     <note>情報知識学会創立20周年記念特別号</note>
     <date>2008-12-08</date>
