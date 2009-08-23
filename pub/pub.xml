@@ -79,10 +79,10 @@
     <year>2009</year>
     <month>8</month>
     <city>大阪, ドーンセンター</city>
-    <url>http://d.hatena.ne.jp/arg/20090724/1248402413</url>
     <language>ja</language>
     <date>2009-08-22</date>
-    <note>（発表予定）</note>
+    <slides>./2009/argcafe-lt.pdf</slides>
+    <slides>http://www.slideshare.net/tmasao/21-1894948</slides>
   </pub>
   
   <pub type="misc">
@@ -101,12 +101,6 @@
     <volume>2009-FI-95</volume>
     <number>1</number>
     <page>7</page>
-    <!--
-    <page>
-      <start>224</start>
-      <end>235</end>
-    </page>
-    -->
     <language>ja</language>
     <date>2009-07-28</date>
   </pub>
