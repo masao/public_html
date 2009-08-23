@@ -53,11 +53,20 @@ class PubData
       @url = element.text("url")
       @url_label = element.elements["url"].attributes["label"] if @url
       @doi = element.text("doi")
-      @slides = element.text("slides")
-      @slides ||= element.text("slide")
-      @poster = element.text("poster")
+      %w[ abstract slides poster ].each do |target|
+         values = element.get_elements(target).to_a
+         if values.empty?
+            next
+         elsif values.size > 1
+            instance_eval( "@#{ target } = []" )
+            values.each do |e|
+               instance_eval( "@#{ target } << e.text" )
+            end
+         else
+            instance_eval( "@#{ target } = values.first.text( target )" )
+         end
+      end
       @file = element.text("file")
-      @abstract = element.text("abstract")
       @date = element.text("date")
    end
 
