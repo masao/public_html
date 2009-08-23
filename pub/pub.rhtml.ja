@@ -70,10 +70,18 @@ end
 </dd>
 <% end %>
 <% %w[ abstract slides poster ].each do |target| %>
+<% if send( target ).is_a?( Array ) %>
+<% send( target ).each do |val| %>
+<dd class="url">
+<span class="<%= target %>">[<%= target.capitalize %>] <a href="<%=h val %>"><%=h val %></a></span>
+</dd>
+<% end %>
+<% else %>
 <% if send( target ) %>
 <dd class="url">
 <span class="<%= target %>">[<%= target.capitalize %>] <a href="<%=h send( target ) %>"><%=h send( target ) %></a></span>
 </dd>
+<% end %>
 <% end %>
 <% end %>
 <dd><span class="Z3988" title="<%=h to_coins %>"></span></dd>
