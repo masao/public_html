@@ -94,7 +94,7 @@ if (strlen($text) > 0) {
 <body>
 <div class="last-update">公開日: 2003年06月24日</div>
 <!-- hhmts start -->
-<div class="last-update">最終更新日: 2008年08月30日</div>
+<div class="last-update">最終更新日: 2009年08月24日</div>
 <!-- hhmts end -->
 <h1>TrueTypeフォントの表示テスト</h1>
 <form action="./test-ttf.php" method="POST">
@@ -175,6 +175,7 @@ PHPに同梱されているGDライブラリの機能を使って、
 </ul>
 <h2>関連リンク</h2>
 <ul>
+  <li><a href="http://ja.wikipedia.org/wiki/%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88%E3%81%AE%E6%AF%94%E8%BC%83">日本語フォントの比較</a> (Wikipedia)
   <li><a href="http://openlab.jp/efont/">/efont/</a>
   <li><a href="http://unifont.org/fontguide/">Unicode Font Guide</a>
   <li><a href="http://www.nongnu.org/freefont/">Free UCS Outline Fonts</a>
