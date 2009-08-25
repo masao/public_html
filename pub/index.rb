@@ -63,7 +63,7 @@ class PubData
                instance_eval( "@#{ target } << e.text" )
             end
          else
-            instance_eval( "@#{ target } = values.first.text( target )" )
+            instance_eval( "@#{ target } = values.first.text" )
          end
       end
       @file = element.text("file")
