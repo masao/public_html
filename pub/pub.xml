@@ -74,6 +74,21 @@
   
   <pub type="misc">
     <author>高久雅生</author>
+    <author>谷藤幹子</author>
+    <title>NIMS eSciDoc</title>
+    <subtitle>A Subject Repository in Materials Science and Its Application Towards eScience</subtitle>
+    <conference>RIMS研究集会（第3回SPARC Japanセミナー2009）「数学におけるデジタルライブラリー構築に向けて―研究分野間の協調のもとに」</conference>
+    <year>2009</year>
+    <month>9</month>
+    <city>京都, 京都大学附属図書館</city>
+    <url>http://www.nii.ac.jp/sparc/event/2009/20090908.html</url>
+    <language>ja</language>
+    <date>2009-09-09</date>
+    <note>（発表予定）</note>
+  </pub>
+  
+  <pub type="misc">
+    <author>高久雅生</author>
     <title>21世紀の新しい共同研究について</title>
     <conference>第5回ARGカフェ</conference>
     <year>2009</year>
