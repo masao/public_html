@@ -14,8 +14,11 @@ HTML	= 	index.html.ja index.html.en \
 		etc/rpm.html \
 		etc/config.html \
 		etc/windows-software.html \
-		etc/senkyo-koho/index.html \
-		etc/senkyo-koho/200907-tokyo/Adachi/index.html \
+		senkyo-koho/index.html \
+		senkyo-koho/200907-tokyo/Adachi/index.html \
+		senkyo-koho/200908-shugiin/Tokyo_12/index.html \
+		senkyo-koho/200908-shugiin/Tokyo_13/index.html \
+		senkyo-koho/200908-shugiin/Tokyo_block/index.html \
 		namazu/index.html \
 		software/index.html \
 		software/mnewsprint/index.html \
