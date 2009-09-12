@@ -1,5 +1,5 @@
 title: 選挙広報集（電子版）
-date.modified: 2009-08-21
+date.modified: 2009-09-12
 date.available: 2009-08-21
 css.content: div.note { margin:2em;padding:10px;font-size:smaller;background-color:#ddd;border: 1px solid darkgreen; }
 
@@ -9,6 +9,11 @@ css.content: div.note { margin:2em;padding:10px;font-size:smaller;background-col
 以下で公開している文章および画像は選挙広報に記載された情報をそのまま電子化し掲載したもので、現在のところ個人的なメモを目的としたアーカイブです。
 もし掲載されることに問題がある場合はご連絡いただければ幸いです。
 }}
+
+!!2009-08 衆議院議員選挙
+*[[東京12区|./200908-tokyo/Tokyo_12/]]
+*[[東京13区|./200908-tokyo/Tokyo_13/]]
+*[[比例代表 東京ブロック|./200908-tokyo/Tokyo_block/]]
 
 !!2009-07 東京都議会議員選挙
 ([[開票結果|http://www.senkyo.metro.tokyo.jp/h21togisen/h21gik_kai.html]])
