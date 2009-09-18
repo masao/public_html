@@ -61,15 +61,16 @@
     <author>高久雅生</author>
     <author>谷藤幹子</author>
     <title>NIMS eSciDoc</title>
-    <subtitle>A feedback from Japanese Aspects</subtitle>
+    <subtitle>A Feedback from Japanese Aspects</subtitle>
     <conference>DRF技術ワークショップ「Workshop of Application of Repository Infrastructure for eScience and eResearch: 研究成果やデータを永久保存していく活動へ向けて」</conference>
     <year>2009</year>
     <month>9</month>
     <city>京都, 京都大学附属図書館</city>
-    <url>http://drf.lib.hokudai.ac.jp/drf/?DRFtech-Kyoto</url>
+    <url>http://pubman.mpdl.mpg.de/pubman/item/escidoc:95244</url>
+    <slides>http://pubman.mpdl.mpg.de/pubman/item/escidoc:95244/component/escidoc:95242/20090907-drftech-kyoto-takaku.pdf</slides>
     <language>ja</language>
     <date>2009-09-07</date>
-    <note>（発表予定）</note>
+    <note>（当日スケジュールの都合により発表自体はキャンセル）</note>
   </pub>
   
   <pub type="misc">
@@ -81,10 +82,11 @@
     <year>2009</year>
     <month>9</month>
     <city>京都, 京都大学附属図書館</city>
-    <url>http://www.nii.ac.jp/sparc/event/2009/20090908.html</url>
+    <url>http://pubman.mpdl.mpg.de/pubman/item/escidoc:95155</url>
+    <slides>http://pubman.mpdl.mpg.de/pubman/item/escidoc:95155/component/escidoc:95153/20090909-sparcjapan-takaku.pdf</slides>
+    <slides>http://www.slideshare.net/tmasao/nims-escidoc-a-subject-repository-in-materials-science-and-its-applications-towards-escience</slides>
     <language>ja</language>
     <date>2009-09-09</date>
-    <note>（発表予定）</note>
   </pub>
   
   <pub type="misc">
