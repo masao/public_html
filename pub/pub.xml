@@ -56,7 +56,22 @@
     <note>(to appear; accepted)</note>
     <url>http://asis.org/Conferences/AM09/panels/24.html</url>
   </pub>
-  
+
+  <pub type="misc">
+    <author>蔵川圭</author>
+    <author>武田英明</author>
+    <author>高久雅生</author>
+    <author>相澤彰子</author>
+    <title>研究者リゾルバーαの同姓同名推定モデルと実データによる分析</title>
+    <conference>「大規模データ・リンケージ，データマイニングと統計手法」研究会</conference>
+    <year>2009</year>
+    <month>10</month>
+    <city>東京, 統計数理研究所</city>
+    <language>ja</language>
+    <date>2009-10-08</date>
+    <note>（発表予定）</note>
+  </pub>
+
   <pub type="misc">
     <author>高久雅生</author>
     <author>谷藤幹子</author>
