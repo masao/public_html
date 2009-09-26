@@ -137,7 +137,9 @@ if ($mode eq "write") {
 
 	# 特定の文字列を禁止
 	@spam = ($body =~ /\b(good|nice|cool|funny|best|great) site/gmoi);
-	error("禁止された語句が含まれています。\nYour comment contains stop words, such as 'cool','funny' etc.") if scalar(@spam) > 0;
+	error("禁止された語句が含まれています。\nYour comment contains one or more stop words, such as 'cool','funny' etc.") if scalar(@spam) > 0;
+	@spam = ($body =~ /ｗｗｗｗｗ/gmoi);
+	error("禁止された語句が含まれています。\nYour comment contains one or more stop words, such as 'cool','funny' etc.") if scalar(@spam) > 0;
 
 	# 特定のURLを禁止
 	@spam = ($body =~ /\bhttps?:\/\/(\w+\.)?google\.(com|us|jp)\/group\/\w?\w?(ticket|teens)/gmoi);
