@@ -11,7 +11,6 @@ ping: index.html
 		-d @../private/ping.xml \
 		http://rpc.technorati.jp/rpc/ping \
 		http://api.my.yahoo.co.jp/RPC2 \
-		http://api.my.yahoo.com/RPC2 \
 		http://bulkfeeds.net/rpc \
 		http://ping.blo.gs/ \
 		http://ping.bloggers.jp/rpc/ \
