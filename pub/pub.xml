@@ -87,6 +87,26 @@
   </pub>
 
   <pub type="misc">
+    <author>相澤彰子</author>
+    <author>孫媛</author>
+    <author>蔵川圭</author>
+    <author>高久雅生</author>
+    <author>馬場康維</author>
+    <title>質と量を追求する「情報リンケージ」プロジェクト</title>
+    <journal>NII Today</journal>
+    <publisher>国立情報学研究所</publisher>
+    <number>45</number>
+    <year>2009</year>
+    <month>9</month>
+    <page>
+      <start>8</start>
+      <end>9</end>
+    </page>
+    <language>ja</language>
+    <url>http://www.nii.ac.jp/userdata/results/pr_data/NII_Today/45/p8-9.pdf</url>
+  </pub>
+
+  <pub type="misc">
     <author>高久雅生</author>
     <author>谷藤幹子</author>
     <title>NIMS eSciDoc</title>
