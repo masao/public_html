@@ -38,6 +38,19 @@
     <note>（刊行予定）</note>
   </pub>
 
+  <pub type="misc">
+    <author>高久雅生</author>
+    <title>（演題未定）</title>
+    <conference>第11回図書館総合展フォーラム「Let's 復習『インパクトファクター』」</conference>
+    <year>2009</year>
+    <month>11</month>
+    <city>パシフィコ横浜, 横浜</city>
+    <language>ja</language>
+    <date>2009-11-10</date>
+    <url>http://www.thomsonscientific.jp/event/lf/</url>
+    <note>（発表予定）</note>
+  </pub>
+
   <pub type="conference">
     <author>Makiko Miwa</author>
     <author>Yuka Egusa</author>
@@ -64,10 +77,9 @@
     <year>2009</year>
     <month>10</month>
     <city>東京, 東京大学</city>
-    <page>10</page>
     <language>ja</language>
     <date>2009-10-23</date>
-    <url>http://www.openaccessweek.jp/2009/09/24/267/</url>
+    <url>http://www.openaccessweek.jp/2009/10/12/300/</url>
     <note>（発表予定）</note>
   </pub>
 
