@@ -18,6 +18,21 @@
     <note>(to appear; accepted)</note>
   </pub>
 
+  <pub type="conference">
+    <author>Masao Takaku</author>
+    <author>Mikiko Tanifuji</author>
+    <title>E-Science experiences in NIMS eSciDoc</title>
+    <subtitle>Self-archiving of profiled experimental data</subtitle>
+    <conference>DRF International Conference 2009 (DRFIC2009)</conference>
+    <year>2009</year>
+    <month>12</month>
+    <city>Tokyo</city>
+    <language>en</language>
+    <date>2009-12-03</date>
+    <note>(to appear; accepted)</note>
+    <url>http://drfic2009.jp/</url>
+  </pub>
+
   <pub type="chapter">
     <author>高久雅生</author>
     <title>Web情報検索手法の最新動向</title>
