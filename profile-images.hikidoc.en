@@ -1,14 +1,15 @@
 title: My recent portraits
-date.modified: 2009-07-11
+date.modified: 2009-10-28
 date.available: 2008-12-20
 subject: profile
 
 !! 2009
-{{image './images/200906-starnberg.jpg' 'at the lakeside of Starnberg in German (June 2009)' thumbs 200px left}}
-{{image './images/200903-okinawa.jpg' 'at Mibaru Beach in Okinawa (March 2009)' thumbs 200px left}}
-{{image './images/200901-munich.jpg' 'at a business trip in Munich, Germany (January 2009)' thumbs 150px left}}
+{{image './images/200910-oafriday.jpg' 'Open Access Friday 2009 at Univ. of Tokyo (October 2009) (photo by [[omoon|http://www.flickr.com/photos/omoon/4048737915/in/set-72157622672807186/]])' thumbs 240px left}}
+{{image './images/200906-starnberg.jpg' 'lakeside of Starnberg in German (June 2009)' thumbs 200px left}}
+{{image './images/200903-okinawa.jpg' 'Mibaru Beach in Okinawa (March 2009)' thumbs 200px left}}
+{{image './images/200901-munich.jpg' 'business trip in Munich, Germany (January 2009)' thumbs 150px left}}
 {{clear}}
 
 !! 2008
-{{image './images/200812-ntcir.jpg' 'at NTCIR-7 Meeting in Tokyo (December 2008)' thumbs 200px left}}
-{{image './images/200811-profile.jpg' 'at National Museum of Emerging Science and Innovation (November 2008)' thumbs 200px left}}
+{{image './images/200812-ntcir.jpg' 'NTCIR-7 Meeting in Tokyo (December 2008)' thumbs 200px left}}
+{{image './images/200811-profile.jpg' 'National Museum of Emerging Science and Innovation (November 2008)' thumbs 200px left}}

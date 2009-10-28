@@ -237,10 +237,15 @@ class MHikiDoc < HikiDoc
                css_str = @css.keys.map{|k| "#{k}:#{@css[k]}" }.join(";")
                style_attr = %Q[ style="#{css_str}"]
             end
+            caption = nil
+            if @thumbs
+               caption = MHikiDoc.to_xhtml( label, @doc.options ).gsub( /\A<p>/, "" ).gsub( /<\/p>\Z/, "" )
+               label = caption.gsub( /<[^>]*>/, "" )
+            end
             label_attr = label ? %Q[ alt="#{label}" title="#{label}"] : ""
             img_tag = %Q[<img src="#{src}" #{label_attr}/>]
             tags = if @thumbs
-                      %Q[<div class="thumbs"#{style_attr}><div class="thumbs-image">#{img_tag}</div><div class="thumbs-caption">#{label}</div></div>]
+                      %Q[<div class="thumbs"#{style_attr}><div class="thumbs-image">#{img_tag}</div><div class="thumbs-caption">#{caption}</div></div>]
                    else
                       %Q[<#{@style}#{style_attr} class="image"><img src="#{src}"#{label_attr}/></#{@style}>]
                    end
