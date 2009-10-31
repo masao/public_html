@@ -1,6 +1,6 @@
 title: その他雑多なメモ類のページ
 title.short: 雑多
-date.modified: 2009-02-16
+date.modified: 2009-08-21
 css.content: .lastmodified { color: maroon; font-size: smaller; }
 
 {{ rawhtml '<!--#config timefmt="<span class=\"lastmodified\">[%Y-%m-%d]</span>" -->' }}
@@ -8,6 +8,7 @@ css.content: .lastmodified { color: maroon; font-size: smaller; }
 雑多な覚え書きその他を置いてあります。  （{{ rawhtml('<span
 class="lastmodified">[日付]</span>') }}は更新日を示します）
 
+*[[選挙広報集|../senkyo-koho/]] {{ rawhtml( '<!--#flastmod file="../senkyo-koho/index.hikidoc" -->') }}
 *[[Filefox: ブックマーク、拡張、設定など|firefox.html]] {{ rawhtml( '<!--#flastmod file="firefox.hikidoc" -->') }}
 *[[情報検索関連の論文誌|ir-journal.html]] {{ rawhtml( '<!--#flastmod file="ir-journal.hikidoc" -->' }}
 *[[Unihan.txt - 音訓辞書|unihan-onkun.html]] {{ rawhtml( '<!--#flastmod file="unihan-onkun.hikidoc" -->' }}
