@@ -34,6 +34,29 @@
   </pub>
 
   <pub type="conference">
+    <author>Yuji Nonaka</author>
+    <author>Shinji Maeda</author>
+    <author>Yaeko Takeuchi</author>
+    <author>Kunie Horikoshi</author>
+    <author>Tomonari Kinto</author>
+    <author>Masao Takaku</author>
+    <author>Ikuko Tsuchide</author>
+    <author>Hayahiko Oozono</author>
+    <author>Daisuke Ueda</author>
+    <author>Shingo Moriyasu</author>
+    <title>Two heads are better than one</title>
+    <subtitle>A report on the DRF Technical Workshop in Karuizawa</subtitle>
+    <conference>DRF International Conference 2009 (DRFIC2009)</conference>
+    <year>2009</year>
+    <month>12</month>
+    <city>Tokyo</city>
+    <language>en</language>
+    <date>2009-12-03</date>
+    <note>(to appear; accepted as poster presentation)</note>
+    <url>http://drfic2009.jp/</url>
+  </pub>
+
+  <pub type="conference">
     <author>Masao Takaku</author>
     <author>Mikiko Tanifuji</author>
     <title>An integrated approach to Researcher Portfolio and Institutional Repository in NIMS eSciDoc</title>
@@ -88,7 +111,9 @@
 
   <pub type="misc">
     <author>高久雅生</author>
-    <title>（演題未定）</title>
+    <author>谷藤幹子</author>
+    <title>研究業績のセルフ・アピール</title>
+    <subtitle>Web サービス活用案</subtitle>
     <conference>第11回図書館総合展フォーラム「Let's 復習『インパクトファクター』」</conference>
     <year>2009</year>
     <month>11</month>
@@ -157,7 +182,6 @@
     <page>10</page>
     <language>ja</language>
     <date>2009-10-08</date>
-    <note>（発表予定）</note>
   </pub>
 
   <pub type="misc">
@@ -362,7 +386,8 @@
   <pub type="misc">
     <author>谷藤幹子</author>
     <author>高久雅生</author>
-    <title>研究業績のセルフ・アピール： Web サービス活用案</title>
+    <title>研究業績のセルフ・アピール</title>
+    <subtitle>Web サービス活用案</subtitle>
     <year>2009</year>
     <month>6</month>
     <conference>研究機関のための研究評価ミーティング</conference>
