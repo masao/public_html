@@ -1,10 +1,10 @@
 title: 近影
-date.modified: 2009-10-28
+date.modified: 2009-11-07
 date.available: 2008-12-20
 subject: profile
 
 !! 2009年
-{{image './images/200910-oafriday.jpg' 'Open Access Friday 2009にて（2009年10月） (photo by [[omoon|http://www.flickr.com/photos/omoon/4048737915/in/set-72157622672807186/]])' thumbs 240px left}}
+{{image './images/200910-oafriday.jpg' 'Open Access Friday 2009にて（2009年10月） (撮影: [[omoon|http://www.flickr.com/photos/omoon/4048737915/in/set-72157622672807186/]])' thumbs 240px left}}
 {{image './images/200906-starnberg.jpg' 'シュタルンベルク湖畔にて（2009年6月）' thumbs 200px left}}
 {{image './images/200903-okinawa.jpg' '沖縄旅行にて（2009年3月）' thumbs 200px left}}
 {{image './images/200901-munich.jpg' 'ミュンヘン出張にて（2009年1月）' thumbs 150px left}}
