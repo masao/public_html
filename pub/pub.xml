@@ -121,9 +121,9 @@
     <language>ja</language>
     <date>2009-11-10</date>
     <url>http://www.thomsonscientific.jp/event/lf/</url>
-    <note>（発表予定）</note>
   </pub>
 
+  <!--
   <pub type="conference">
     <author>Makiko Miwa</author>
     <author>Yuka Egusa</author>
@@ -139,9 +139,9 @@
     <city>Vancouver, Canada</city>
     <language>en</language>
     <date>2009-11-06</date>
-    <note>(to appear; accepted)</note>
     <url>http://asis.org/Conferences/AM09/panels/24.html</url>
   </pub>
+  -->
 
   <pub type="misc">
     <author>高久雅生</author>
@@ -279,12 +279,15 @@
     <title>How Task Types and User Experiences Affect Information-Seeking Behavior on the Web</title>
     <subtitle>Using Eye-tracking and Client-side Search Logs</subtitle>
     <conference>Understanding the User - Logging and interpreting user interactions in information search and retrieval (UIIR 2009) (SIGIR 2009 Workshop)</conference>
+    <journal>CEUR Workshop Proceedings</journal>
+    <volume>512</volume>
     <year>2009</year>
     <month>7</month>
     <city>Boston, USA</city>
     <pages>4</pages>
     <language>en</language>
     <date>2009-07-23</date>
+    <url>http://ceur-ws.org/Vol-512/paper05.pdf</url>
     <url>http://uiir-2009.dfki.de/papers/uiir2009_submission_4.pdf</url>
   </pub>
 
@@ -539,8 +542,10 @@
       <end>42</end>
     </page>
     -->
+    <page>6</page>
     <language>ja</language>
     <date>2009-03-08</date>
+    <url>http://db-event.jpn.org/deim2009/proceedings/files/B8-4.pdf</url>
   </pub>
 
   <pub refereed="true" type="journal">
