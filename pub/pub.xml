@@ -71,6 +71,26 @@
   </pub>
 
   <pub type="chapter">
+    <author>原田隆史</author>
+    <author>田辺浩介</author>
+    <author>江草由佳</author>
+    <author>高久雅生</author>
+    <author>林賢紀</author>
+    <author>笹沼崇</author>
+    <author role="moderator">沢辺均</author>
+    <title>「Enju」は図書館システムの未来を変えていけるか</title>
+    <subtitle>図書館管理システム開発「Project Next-L」</subtitle>
+    <journal>ず・ぼん</journal>
+    <number>15</number>
+    <year>2009</year>
+    <month>11</month>
+    <language>ja</language>
+    <date>2009-11-20</date>
+    <isbn>978-4-7808-0137-8</isbn>
+    <url>http://www.pot.co.jp/books/isbn978-4-7808-0137-8.html</url>
+  </pub>
+  
+  <pub type="chapter">
     <author>高久雅生</author>
     <title>Web情報検索手法の最新動向</title>
     <publisher>勉誠出版</publisher>
@@ -1252,7 +1272,7 @@
     <language>en</language>
   </pub>
 
-  <pub type="book">
+  <pub type="proceedings">
     <author role="editor">Noriko Kando</author>
     <author role="editor">Masao Takaku</author>
     <title>Proceedings of the Fifth NTCIR Workshop Meeting on Evaluation of Information Access Technologies</title>
