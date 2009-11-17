@@ -80,10 +80,15 @@
     <author role="moderator">沢辺均</author>
     <title>「Enju」は図書館システムの未来を変えていけるか</title>
     <subtitle>図書館管理システム開発「Project Next-L」</subtitle>
-    <journal>ず・ぼん</journal>
+    <booktitle>ず・ぼん</booktitle>
+    <publisher>ポット出版</publisher>
     <number>15</number>
     <year>2009</year>
     <month>11</month>
+    <page>
+      <start>54</start>
+      <end>83</end>
+    </page>
     <language>ja</language>
     <date>2009-11-20</date>
     <isbn>978-4-7808-0137-8</isbn>
