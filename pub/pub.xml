@@ -29,7 +29,6 @@
     <city>Tokyo</city>
     <language>en</language>
     <date>2009-12-03</date>
-    <note>(to appear; accepted)</note>
     <url>http://drfic2009.jp/</url>
   </pub>
 
@@ -52,8 +51,8 @@
     <city>Tokyo</city>
     <language>en</language>
     <date>2009-12-03</date>
-    <note>(to appear; accepted as poster presentation)</note>
     <url>http://drfic2009.jp/</url>
+    <award>Poster Award 3rd Prize received.</award>
   </pub>
 
   <pub type="conference">
@@ -66,7 +65,6 @@
     <city>Tokyo</city>
     <language>en</language>
     <date>2009-12-03</date>
-    <note>(to appear; accepted as poster presentation)</note>
     <url>http://drfic2009.jp/</url>
   </pub>
 
@@ -93,6 +91,7 @@
     <date>2009-11-20</date>
     <isbn>978-4-7808-0137-8</isbn>
     <url>http://www.pot.co.jp/books/isbn978-4-7808-0137-8.html</url>
+    <url>http://www.amazon.co.jp/dp/4780801370/masaotakakush-22</url>
     <note>（座談会）</note>
   </pub>
   
