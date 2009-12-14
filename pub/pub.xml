@@ -63,9 +63,17 @@
     <year>2009</year>
     <month>12</month>
     <city>Tokyo</city>
+    <page>
+      <start>104</start>
+      <end>104</end>
+    </page>
     <language>en</language>
     <date>2009-12-03</date>
+    <url>http://pubman.mpdl.mpg.de/pubman/item/escidoc:145884</url>
     <url>http://drfic2009.jp/</url>
+    <poster>http://pubman.mpdl.mpg.de/pubman/item/escidoc:145884/component/escidoc:145881/DRFIC2009_Poster_A0.pdf</poster>
+    <abstract>http://pubman.mpdl.mpg.de/pubman/item/escidoc:145884/component/escidoc:145882/poster-abst.pdf</abstract>
+    <slides>http://pubman.mpdl.mpg.de/pubman/item/escidoc:145884/component/escidoc:145885/20091130-drfic2009-poster-onemunite.pdf</slides>
   </pub>
 
   <pub type="chapter">
