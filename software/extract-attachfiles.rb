@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# -*- coding: euc-jp -*-
 
 require "mailread"
 require "stringio"
@@ -20,10 +21,17 @@ ARGV.each do |f|
 	    filename = $2
 	 end
 	 cont = mailpart.body.join
-	 if mailpart["Content-Disposition"] =~ /base64/
+	 case  mailpart["Content-Transfer-Encoding"]
+         when /\bquoted-printable\b/
+            cont = cont.unpack("M")[0]
+         when /\bbase64\b/
 	    cont = Base64.decode64( cont )
 	 end
  	 if filename
+            if File.exist?( filename ) and File.size( filename ) == cont.size
+               next
+               # 既に処理済の場合はスキップ
+            end
 #            p [f, filename]
 #            print cont
  	    open(filename, "w") do |io|
