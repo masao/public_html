@@ -20,6 +20,8 @@ if @config and @config["author_mine"]
 end
 if author_role[author] == "editor"
    author_s << "(編)"
+elsif author_role[author] == "moderator"
+   author_s << "(司会)"
 end
 author_s
 }.join(", ")
