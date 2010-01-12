@@ -2,6 +2,7 @@
 # $Id$
 
 use strict;
+use Proc::ProcessTable;
 
 my $SSH_AGENT_ENV = "/tmp/.ssh-masao-agent.lnk";
 my $RSYNC = "/usr/bin/rsync";
@@ -15,7 +16,18 @@ sub load_sshenv() {
     }
     close(F);
 }
+sub ssh_agent_starttime {
+    my $t = new Proc::ProcessTable;
+    foreach my $p ( @{$t->table} ) {
+	return $p->start if $p->uid eq $< and $p->fname eq "ssh-agent";
+    }
+    warn "ssh-agent process not found.";
+    return time;
+}
 
-load_sshenv();
-
-system($RSYNC, "-ar", @ARGV);
+if ( ssh_agent_starttime() <= (stat($SSH_AGENT_ENV))[9] ) {
+    load_sshenv();
+    system($RSYNC, "-ar", @ARGV);
+} else {
+    print "load_sshenv() failed.";
+}
