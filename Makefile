@@ -67,6 +67,14 @@ chalow:
 	cd d/ && make
 
 # Rsync to http://masao.jpn.org/
+rsync:
+	./rsync.pl etk2:www/masao/d/bbs/kblog/ ./d/bbs/kblog/
+	./rsync.pl ./d/bbs/kblog/ arno:public_html/d/bbs/kblog/
+	./rsync.pl arno:public_html/ ./
+	./rsync.pl --exclude=test/ --exclude=private/ --exclude=official/ \
+		--delete-after --copy-unsafe-links \
+		./ etk2:www/masao/
+
 ## Changed for kaede (2009-05-12)
 rsync-on-kaede:
 	./rsync.pl etk2:www/masao/d/bbs/kblog/ ./d/bbs/kblog/
