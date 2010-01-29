@@ -25,7 +25,7 @@ sub ssh_agent_starttime {
     return time;
 }
 
-if ( ssh_agent_starttime() <= (stat($SSH_AGENT_ENV))[9] ) {
+if ( -r $SSH_AGENT_ENV and ssh_agent_starttime() <= (stat($SSH_AGENT_ENV))[9] ) {
     load_sshenv();
     system($RSYNC, "-ar", @ARGV);
 } else {
