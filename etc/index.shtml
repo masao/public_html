@@ -13,13 +13,14 @@
 <body>
 <div class="navi"><a href="./..">HOME</a> &gt;
 雑多</div>
-<div class="last-update">最終更新日: 2009年08月21日</div>
+<div class="last-update">最終更新日: 2010年01月31日</div>
 <h1>その他雑多なメモ類のページ</h1>
 <!--#config timefmt="<span class=\"lastmodified\">[%Y-%m-%d]</span>" -->
 <p>雑多な覚え書きその他を置いてあります。  （<span
 class="lastmodified">[日付]</span>は更新日を示します）</p>
 <ul>
-<li><a href="../senkyo-koho/">選挙広報集</a> <!--#flastmod file="../senkyo-koho/index.hikidoc" --></li>
+<li><a href="./webometrics_rep_jp.html">日本国内の機関リポジトリサイトのWeb認知指標</a> <!--#flastmod file="webometrics_rep_jp.hikidoc" --></li>
+<li><a href="../senkyo-koho/">選挙広報集</a> <!--#flastmod virtual="../senkyo-koho/index.hikidoc" --></li>
 <li><a href="firefox.html">Filefox: ブックマーク、拡張、設定など</a> <!--#flastmod file="firefox.hikidoc" --></li>
 <li><a href="ir-journal.html">情報検索関連の論文誌</a> <!--#flastmod file="ir-journal.hikidoc" --></li>
 <li><a href="unihan-onkun.html">Unihan.txt - 音訓辞書</a> <!--#flastmod file="unihan-onkun.hikidoc" --></li>
