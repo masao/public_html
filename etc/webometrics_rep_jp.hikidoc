@@ -1,5 +1,5 @@
 title: 日本国内の機関リポジトリサイトのWeb認知指標 :: Yet another Webometrics for Japanese Institutional Repositories
-date.modified: 2010-01-31
+date.modified: 2010-02-01
 date.available: 2010-01-31
 subject: etc
 css.content: td { padding:3px; }
@@ -47,7 +47,7 @@ css.content: td { padding:3px; }
 ||32||[[山口大学|http://petit.lib.yamaguchi-u.ac.jp/]]||42.7||0.09||0.05||0.79
 ||33||[[岐阜大学|http://repository.lib.gifu-u.ac.jp/]]||42.2||0.08||0.13||0.74
 ||34||[[宇都宮大学|http://uuair.lib.utsunomiya-u.ac.jp/]]||42.1||0.08||0.12||0.74
-||35||[[東京女子医科大学|http://ir.twmu.ac.jp/dspace/]]||41.7||0.18||0.50||0.52
+||35||[[東京女子医科大学|http://ir.twmu.ac.jp/dspace/]]||41.6||0.18||0.50||0.52
 ||36||[[静岡大学|http://ir.lib.shizuoka.ac.jp/]]||40.8||0.07||0.08||0.75
 ||37||[[小樽商科大学|http://barrel.ih.otaru-uc.ac.jp/]]||40.6||0.07||0.11||0.73
 ||38||[[城西大学|http://sucra.saitama-u.ac.jp/]]||40.3||0.02||0.06||0.76
@@ -60,8 +60,8 @@ css.content: td { padding:3px; }
 ||45||[[山形大学|http://repo.lib.yamagata-u.ac.jp/]]||38.8||0.04||0.05||0.73
 ||46||[[国立女性教育会館|http://sucra.saitama-u.ac.jp/]]||38.5||0.00||0.01||0.76
 ||47||[[札幌医科大学|http://ir.cc.sapmed.ac.jp/dspace]]||38.0||0.06||0.16||0.66
-||48||[[大阪教育大学|http://ir.lib.osaka-kyoiku.ac.jp/dspace/]]||37.9||0.06||0.09||0.68
-||49||[[岩手大学|http://ir.iwate-u.ac.jp/dspace/]]||37.9||0.06||0.06||0.70
+||48||[[岩手大学|http://ir.iwate-u.ac.jp/dspace/]]||37.9||0.06||0.06||0.70
+||49||[[大阪教育大学|http://ir.lib.osaka-kyoiku.ac.jp/dspace/]]||37.8||0.06||0.09||0.68
 ||50||[[法政大学|http://rose.lib.hosei.ac.jp/dspace/]]||37.5||0.07||0.09||0.67
 ||51||[[滋賀大学|http://libdspace.biwako.shiga-u.ac.jp/dspace/]]||37.4||0.06||0.28||0.58
 ||52||[[旭川医科大学|http://amcor.asahikawa-med.ac.jp]]||37.2||0.04||0.04||0.71
@@ -107,8 +107,8 @@ css.content: td { padding:3px; }
 ||92||[[東京外国語大学|http://repository.tufs.ac.jp/doc/]]||32.5||0.04||0.04||0.61
 ||93||[[福井大学|http://repo.flib.fukui-u.ac.jp/dspace/]]||31.4||0.03||0.03||0.60
 ||94||[[山梨大学|http://www.lib.yamanashi.ac.jp/repository/]]||31.3||0.04||0.10||0.57
-||95||[[福井工業大学|http://crf.flib.u-fukui.ac.jp/dspace/]]||31.2||0.03||0.07||0.58
-||96||[[茨城大学|http://ir.lib.ibaraki.ac.jp/]]||31.2||0.02||0.02||0.61
+||95||[[茨城大学|http://ir.lib.ibaraki.ac.jp/]]||31.2||0.02||0.02||0.61
+||96||[[福井工業大学|http://crf.flib.u-fukui.ac.jp/dspace/]]||31.1||0.03||0.07||0.58
 ||97||[[立命館大学,立命館アジア太平洋大学|http://r-cube.ritsumei.ac.jp/]]||31.0||0.01||0.02||0.60
 ||98||[[聖学院大学|http://serve.seigakuin-univ.ac.jp/]]||31.0||0.01||0.03||0.60
 ||99||[[室蘭工業大学|http://ir.lib.muroran-it.ac.jp/]]||30.9||0.01||0.00||0.61
@@ -130,22 +130,23 @@ css.content: td { padding:3px; }
 ||115||[[高知工科大学|http://kutarr.lib.kochi-tech.ac.jp/dspace/]]||27.9||0.01||0.01||0.55
 ||116||[[沖縄農業研究会|http://okinawa-repo.lib.u-ryukyu.ac.jp]]||27.9||0.01||0.03||0.54
 ||117||[[日本貿易振興機構アジア経済研究所|https://ir.ide.go.jp/dspace/]]||27.5||0.01||0.01||0.54
-||118||[[富山大学|http://utomir.lib.u-toyama.ac.jp/dspace/]]||27.3||0.05||0.03||0.51
-||119||[[帯広畜産大学|http://ir.obihiro.ac.jp/dspace/]]||27.3||0.04||0.05||0.50
-||120||[[青山学院大学|http://www.agulin.aoyama.ac.jp/repo/]]||27.3||0.02||0.10||0.48
-||121||[[鳥取大学|http://repository.lib.tottori-u.ac.jp/Repository/Index.e]]||26.8||0.04||0.12||0.46
-||122||[[名古屋工業大学|http://repo.lib.nitech.ac.jp]]||25.8||0.00||0.00||0.52
-||123||[[鹿屋体育大学|http://repo.lib.nifs-k.ac.jp/]]||25.4||0.01||0.01||0.50
-||124||[[滋賀医科大学|http://repository.shiga-med.ac.jp/]]||23.3||0.00||0.00||0.46
-||125||[[新潟青陵大学,新潟青陵大学短期大学部|http://nirr.lib.niigata-u.ac.jp]]||23.0||0.00||0.02||0.45
-||126||[[新潟医療福祉大学|http://nirr.lib.niigata-u.ac.jp]]||23.0||0.00||0.02||0.45
-||127||[[長岡工業高等専門学校|http://nirr.lib.niigata-u.ac.jp/]]||22.6||0.00||0.01||0.45
-||128||[[中国学園大学|http://cur-ren.cjc.ac.jp/]]||21.8||0.00||0.00||0.43
-||129||[[文化女子大学|http://dspace.bunka.ac.jp/dspace]]||19.6||0.00||0.01||0.39
-||130||[[神奈川工科大学|http://www.kait-r.com:8080/dspace/]]||19.0||0.02||0.04||0.35
-||131||[[奈良大学|http://repo.nara-u.ac.jp]]||17.6||0.00||0.01||0.35
-||132||[[武庫川女子大学|http://libir.mukogawa-u.ac.jp/]]||14.2||0.01||0.07||0.25
-||133||[[津山工業高等専門学校|http://repository.tsuyama-ct.ac.jp/]]||14.1||0.00||0.00||0.28
+||118||[[帯広畜産大学|http://ir.obihiro.ac.jp/dspace/]]||27.3||0.04||0.05||0.50
+||119||[[青山学院大学|http://www.agulin.aoyama.ac.jp/repo/]]||27.3||0.02||0.10||0.48
+||120||[[富山大学|http://utomir.lib.u-toyama.ac.jp/dspace/]]||27.2||0.05||0.03||0.51
+||121||[[物質・材料研究機構|http://pubman.mpdl.mpg.de]]||26.7||0.00||0.00||0.53
+||122||[[鳥取大学|http://repository.lib.tottori-u.ac.jp/Repository/Index.e]]||26.7||0.04||0.11||0.46
+||123||[[名古屋工業大学|http://repo.lib.nitech.ac.jp]]||25.8||0.00||0.00||0.52
+||124||[[鹿屋体育大学|http://repo.lib.nifs-k.ac.jp/]]||25.4||0.01||0.01||0.50
+||125||[[滋賀医科大学|http://repository.shiga-med.ac.jp/]]||23.3||0.00||0.00||0.46
+||126||[[新潟青陵大学,新潟青陵大学短期大学部|http://nirr.lib.niigata-u.ac.jp]]||23.0||0.00||0.02||0.45
+||127||[[新潟医療福祉大学|http://nirr.lib.niigata-u.ac.jp]]||23.0||0.00||0.02||0.45
+||128||[[長岡工業高等専門学校|http://nirr.lib.niigata-u.ac.jp/]]||22.6||0.00||0.01||0.45
+||129||[[中国学園大学|http://cur-ren.cjc.ac.jp/]]||21.8||0.00||0.00||0.43
+||130||[[文化女子大学|http://dspace.bunka.ac.jp/dspace]]||19.5||0.00||0.01||0.39
+||131||[[神奈川工科大学|http://www.kait-r.com:8080/dspace/]]||19.0||0.02||0.04||0.35
+||132||[[奈良大学|http://repo.nara-u.ac.jp]]||17.6||0.00||0.01||0.35
+||133||[[武庫川女子大学|http://libir.mukogawa-u.ac.jp/]]||14.2||0.01||0.07||0.25
+||134||[[津山工業高等専門学校|http://repository.tsuyama-ct.ac.jp/]]||14.1||0.00||0.00||0.28
 
 !!!謝辞
 
