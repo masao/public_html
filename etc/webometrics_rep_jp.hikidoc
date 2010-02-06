@@ -1,12 +1,12 @@
 title: 日本国内の機関リポジトリサイトのWeb認知指標 :: Yet another Webometrics for Japanese Institutional Repositories
-date.modified: 2010-02-01
+date.modified: 2010-02-06
 date.available: 2010-01-31
 subject: etc
 css.content: td { padding:3px; }
 
 日本国内の機関リポジトリのWeb上での認知度を考慮したランキングです。
 
-詳細説明は [ [[2010-01-31-1|../d/2010-01-31-1.html]] ] を参照のこと。
+詳細説明は [ [[2010-01-31-1|../d/2010-01-31.html#2010-01-31-1]] ] を参照のこと。
 
 !!ランキング
 
@@ -148,7 +148,7 @@ css.content: td { padding:3px; }
 ||133||[[武庫川女子大学|http://libir.mukogawa-u.ac.jp/]]||14.2||0.01||0.07||0.25
 ||134||[[津山工業高等専門学校|http://repository.tsuyama-ct.ac.jp/]]||14.1||0.00||0.00||0.28
 
-!!!謝辞
+!!謝辞
 
 このページの作成には [[Webometrics: Ranking Web of World Repositories|http://repositories.webometrics.info]]
 において提供されているランキング手法を参考にしました。
