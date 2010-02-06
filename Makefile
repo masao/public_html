@@ -15,6 +15,7 @@ HTML	= 	index.html.ja index.html.en \
 		etc/config.html \
 		etc/windows-software.html \
 		etc/webometrics_rep_jp.html \
+		etc/webometrics_rep_jp_201001.html \
 		senkyo-koho/index.html \
 		senkyo-koho/200907-tokyo/Adachi/index.html \
 		senkyo-koho/200908-shugiin/Tokyo_12/index.html \
