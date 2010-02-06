@@ -11,6 +11,9 @@
 <%= css_content %>
 </style>
 <% end %>
+<% if javascript_src %>
+<script type="text/javascript" src="<%= javascript_src %>"></script>
+<% end %>
 <title><%= title %></title>
 </head>
 <body>
