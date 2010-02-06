@@ -52,7 +52,7 @@ class MHikiDoc < HikiDoc
    def initialize( content, options = {} )
       @toc = []
       @label = options[:label] || ''
-      @interwiki = options[:interwiki] || ''
+      @interwiki = options[:interwiki] || {}
       @lang = options[:lang]
       super( content, options )
    end
@@ -251,6 +251,15 @@ class MHikiDoc < HikiDoc
                    end
             tags = %Q[<div class="center">#{ tags }</div>] if @center
             tags
+         end
+      end
+      class Sortable < Plugin
+         def expand( *args )
+            @@sortable_id ||= 0
+            @@sortable_id += 1
+            lines = args.join("\n").split(/\n/)
+            text = MHikiDoc.to_html( lines.join("\n"), @doc.options )
+            text.gsub( /<table\b/, "<table class=\"sortable\" id=\"sortable#{ @@sortable_id }\"" )
          end
       end
    end
