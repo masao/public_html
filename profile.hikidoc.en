@@ -1,5 +1,5 @@
 title: Curriculum Vitae (Masao Takaku)
-date.modified: 2009-10-28
+date.modified: 2010-02-07
 date.available: 2007-03-04
 
 [[{{image './images/200910-oafriday.jpg' 'Open Access Friday 2009 at University of Tokyo (October 2009) (photo by omoon)' thumbs 240px right}}|./profile-images.html]]
@@ -32,7 +32,7 @@ Information retrieval, Digital library, Information behaviour
 ::(Skills) eSciDoc, Fedora Commons, SOA, Java, JSP/JSF
 :2006-01 - 2008-08:
 ::'''[[Transdisciplinary Research Integration Center|http://www.rois.ac.jp/tric/]], [[Research Organization of Information and Systems|http://www.rois.ac.jp/]]  (Post-doctoral researcher)'''
-::Constructing a researcher information server (building prototype systems for integrating information on researchers in Japan). Involved in development of [[KAKEN Database (Beta service)|http://seikaplus.nii.ac.jp/]] and [[Researcher Resolver (Alpha service)|http://rns.nii.ac.jp/]]
+::Constructing a researcher information server (building prototype systems for integrating information on researchers in Japan). Involved in development of [[KAKEN Database (Beta service)|http://kaken.nii.ac.jp/]] and [[Researcher Resolver (Alpha service)|http://rns.nii.ac.jp/]]
 ::(Keywords) information linkage, digital library, identification, combining bibliographics, researcher network, visualization
 ::(Skills) Perl, Web API, XML, Ruby
 :2004-10 - 2005-12:
