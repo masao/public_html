@@ -5,7 +5,7 @@
   <pub type="misc">
     <author>高久雅生</author>
     <author>江草由佳</author>
-    <title>セレンディピティを促す論文検索ツール 「ふわっと関連検索」<title>
+    <title>セレンディピティを促す論文検索ツール 「ふわっと関連検索」</title>
     <conference>第38回ディジタル図書館ワークショップ 合同研究会</conference>
     <year>2010</year>
     <month>3</month>
@@ -13,6 +13,7 @@
     <language>ja</language>
     <date>2010-03-08</date>
     <url>http://www.dl.slis.tsukuba.ac.jp/DLworkshop/DLW-program.html</url>
+    <note>（発表予定）</note>
   </pub>
 
   <pub type="conference" refereed="true">
