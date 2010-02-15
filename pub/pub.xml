@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist version="$Revision$">
+
+  <pub type="misc">
+    <author>高久雅生</author>
+    <author>江草由佳</author>
+    <title>セレンディピティを促す論文検索ツール 「ふわっと関連検索」<title>
+    <conference>第38回ディジタル図書館ワークショップ 合同研究会</conference>
+    <year>2010</year>
+    <month>3</month>
+    <city>秋葉原, 東京</city>
+    <language>ja</language>
+    <date>2010-03-08</date>
+    <url>http://www.dl.slis.tsukuba.ac.jp/DLworkshop/DLW-program.html</url>
+  </pub>
+
   <pub type="conference" refereed="true">
     <author>Yuka Egusa</author>
     <author>Hitomi Saito</author>
