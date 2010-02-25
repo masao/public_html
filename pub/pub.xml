@@ -16,6 +16,21 @@
     <note>（発表予定）</note>
   </pub>
 
+  <pub type="misc">
+    <author>Masao Takaku</author>
+    <title>Fuwatto Search</title>
+    <subtitle>A Simple Mashup Tool for Information Encounters</subtitle>
+    <conference>Code4Lib 2010</conference>
+    <year>2010</year>
+    <month>2</month>
+    <city>Asheville, NC, USA</city>
+    <language>en</language>
+    <date>2010-02-23</date>
+    <url>http://www.slideshare.net/tmasao/fuwatto-search</url>
+    <url>http://code4lib.org/conference/2010/lightning</url>
+    <note>(Presented at Lightning Talks session)</note>
+  </pub>
+
   <pub type="conference" refereed="true">
     <author>Yuka Egusa</author>
     <author>Hitomi Saito</author>
