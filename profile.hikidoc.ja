@@ -1,7 +1,7 @@
 title: 高久雅生の経歴
 title.short: 経歴
 date.available: 2007-03-04
-date.modified: 2010-02-07
+date.modified: 2010-03-02
 
 [[{{image './images/200910-oafriday.jpg' 'Open Access Friday 2009にて（2009年10月）  (撮影: omoon)' thumbs 240px right}}|./profile-images.html]]
 :氏名:高久 雅生 （たかく まさお）
@@ -54,6 +54,8 @@ date.modified: 2010-02-07
 ::（2000年度・図書館情報学部）基礎情報処理 - HTMLの仕組みやPowerPoint/Excel/Photoshopなどのアプリケーションの使用法の解説と演習
 
 !!その他の活動
+:[[DRF技術ワーキンググループ|http://drf.lib.hokudai.ac.jp/]] （2009 - ）:
+::日本国内におけるリポジトリコミュニティの技術サポートワーキンググループに参加
 :[[CRES共同研究プロジェクト|http://cres.jpn.org/]] （2007 - ）:
 ::Web上における情報探索行動や情報要求の構造理解を目指す共同研究プロジェクト。主要メンバーの一人として活動。
 ::（スキル）ユーザ実験, ブラウザログ, 視線計測装置
@@ -90,7 +92,8 @@ date.modified: 2010-02-07
 !!!学会等における活動
 *情報知識学会理事（2008年-）
 *情報知識学フォーラム実行委員（2005年、2006年、2007年、2008年）
-*情報知識学会年次大会実行副委員長（2009年）
+*情報知識学会年次大会実行委員（2009年, 2010年）
+*『情報の科学と技術』編集委員（2009年-）
 *情報処理学会 [[論文誌（データベース）(TOD)|http://ipsjtod.kyoto-su.ac.jp/]] 編集委員（2008年-）
 *情報処理学会 [[情報学基礎研究会|http://www.ipsj.or.jp/katsudou/sig/sighp/fi/]] 運営委員（2007年-）
 *The Fifth NTCIR Workshop Meeting Publication Co-Chair（2005年）
