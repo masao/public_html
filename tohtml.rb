@@ -137,7 +137,11 @@ class MHikiDoc < HikiDoc
                app.load_pubdata( open(PUBDATA) )
                result = []
                app.each do |pub|
-                  next unless pub.refereed == "true"
+                  if pub.refereed != "true"
+                     if pub.type !~ /\Abook|chapter\Z/
+                        next
+                     end
+                  end
                   next if @lang == "en" and pub.language != @lang
                   #STDERR.puts pub.inspect
                   result << pub.eval_rhtml( "pub_recent.rhtml.ja" )
