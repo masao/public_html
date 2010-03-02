@@ -14,7 +14,7 @@ class PubData
    attr_reader :booktitle, :series
    attr_reader :volume, :number, :year, :month, :city
    attr_reader :page_start, :page_end, :page, :isbn, :note
-   attr_reader :url, :url_label, :doi, :slides, :poster, :file, :abstract
+   attr_reader :url, :doi, :slides, :poster, :file, :abstract
    attr_reader :language
    attr_reader :refereed
    attr_reader :date
@@ -50,10 +50,8 @@ class PubData
       @isbn = element.text("isbn")
       @note = element.text("note")
       @language = element.text("language")
-      @url = element.text("url")
-      @url_label = element.elements["url"].attributes["label"] if @url
       @doi = element.text("doi")
-      %w[ abstract slides poster ].each do |target|
+      %w[ abstract slides poster url ].each do |target|
          values = element.get_elements(target).to_a
          if values.empty?
             next

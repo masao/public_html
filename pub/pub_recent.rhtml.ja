@@ -54,7 +54,9 @@ author_s
 <span class="doi">DOI <a href="http://dx.doi.org/<%=h doi %>"><%=h doi %></a></span>
 <% end %>
 <% if not url.nil? %>
-<span class="url"><a href="<%=h url %>"><%=h url_label ? url_label : "[URL]" %></a></span>
+<% send( :url ).to_a.each do |val| %>
+<span class="url"><a href="<%=h val %>">[URL]</a></span>
+<% end %>
 <% end %>
 <% %w[ abstract slides poster ].each do |target| %>
 <% if send( target ) %>

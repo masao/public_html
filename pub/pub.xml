@@ -46,6 +46,7 @@
     <page>8</page>
     <language>en</language>
     <date>2010-01-05</date>
+    <doi>10.1109/HICSS.2010.257</doi>
   </pub>
 
   <pub type="conference">
@@ -59,7 +60,8 @@
     <city>Tokyo</city>
     <language>en</language>
     <date>2009-12-03</date>
-    <url>http://drfic2009.jp/</url>
+    <slides>http://drf.lib.hokudai.ac.jp/drf/index.php?plugin=attach&amp;refer=DRFIC2009&amp;openfile=session3_tanifuji.pdf</slides>
+    <poster></poster>
   </pub>
 
   <pub type="conference">
@@ -81,7 +83,7 @@
     <city>Tokyo</city>
     <language>en</language>
     <date>2009-12-03</date>
-    <url>http://drfic2009.jp/</url>
+    <poster>http://drf.lib.hokudai.ac.jp/drf/index.php?plugin=attach&amp;refer=DRFIC2009&amp;openfile=poster_P-16_nonaka.pdf</poster>
     <award>Poster Award 3rd Prize received.</award>
   </pub>
 
@@ -100,7 +102,6 @@
     <language>en</language>
     <date>2009-12-03</date>
     <url>http://pubman.mpdl.mpg.de/pubman/item/escidoc:145884</url>
-    <url>http://drfic2009.jp/</url>
     <poster>http://pubman.mpdl.mpg.de/pubman/item/escidoc:145884/component/escidoc:145881/DRFIC2009_Poster_A0.pdf</poster>
     <abstract>http://pubman.mpdl.mpg.de/pubman/item/escidoc:145884/component/escidoc:145882/poster-abst.pdf</abstract>
     <slides>http://pubman.mpdl.mpg.de/pubman/item/escidoc:145884/component/escidoc:145885/20091130-drfic2009-poster-onemunite.pdf</slides>
@@ -129,6 +130,7 @@
     <date>2009-11-20</date>
     <isbn>978-4-7808-0137-8</isbn>
     <url>http://www.pot.co.jp/books/isbn978-4-7808-0137-8.html</url>
+    <url>http://www.dotbook.jp/risoushoten/items/info/pot0007-rvtcrt</url>
     <url>http://www.amazon.co.jp/dp/4780801370/masaotakakush-22</url>
     <note>（座談会）</note>
   </pub>
@@ -147,10 +149,12 @@
     </page>
     <series>図書館情報学のフロンティア</series>
     <number>9</number>
+    <isbn>978-4-585-00278-9</isbn>
     <year>2009</year>
     <month>10</month>
     <date>2009-10-28</date>
     <url>http://www.bensey.co.jp/book/2182.html</url>
+    <url>http://www.amazon.co.jp/dp/4585002782/masaotakakush-22</url>
   </pub>
 
   <pub type="misc">

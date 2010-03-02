@@ -62,9 +62,11 @@ end
 <% end %>
 </dd>
 <% if not url.nil? %>
+<% send( :url ).to_a.each do |val| %>
 <dd class="url">
-<span class="url"><a href="<%=h url %>"><%=h url_label ? url_label : url %></a></span>
+<span class="url"><a href="<%=h val %>"><%=h val %></a></span>
 </dd>
+<% end %>
 <% end %>
 <% if not doi.nil? %>
 <dd class="url">
