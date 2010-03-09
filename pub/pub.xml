@@ -6,14 +6,21 @@
     <author>高久雅生</author>
     <author>江草由佳</author>
     <title>セレンディピティを促す論文検索ツール 「ふわっと関連検索」</title>
-    <conference>第38回ディジタル図書館ワークショップ 合同研究会</conference>
+    <conference>第38回ディジタル図書館ワークショップ</conference>
+    <journal>ディジタル図書館</journal>
     <year>2010</year>
     <month>3</month>
     <city>秋葉原, 東京</city>
+    <number>38</number>
+    <page>
+      <start>35</start>
+      <end>41</end>
+    </page>
     <language>ja</language>
     <date>2010-03-08</date>
-    <url>http://www.dl.slis.tsukuba.ac.jp/DLworkshop/DLW-program.html</url>
-    <note>（発表予定）</note>
+    <url>http://www.myopenarchive.org/documents/view/527</url>
+    <url>http://www.dl.slis.tsukuba.ac.jp/DLworkshop/old/DLW38/DLW-program.html</url>
+    <slides>./2010/dlw38-fuwatto-slides.pdf</slides>
   </pub>
 
   <pub type="misc">
