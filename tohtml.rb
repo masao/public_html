@@ -280,7 +280,7 @@ class ToHTML
       @content, header = parse( @file )
       @conf.update( header )
       @conf["title.short"] = @conf["title"] if not @conf["title.short"]
-      @conf["navi"] = true if not @conf["navi"] == "false"
+      @conf["navi"] = true if not @conf["navi"] == false or not @conf["navi"] == "false"
       if @conf["css"].nil?
          @conf["css"] = HierFilename.new( "default.css", File.dirname( file ) )
       end
