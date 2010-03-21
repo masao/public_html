@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist version="$Revision$">
+  <pub type="misc">
+    <author>高久雅生</author>
+    <title>Code4Lib 2010報告</title>
+    <subtitle>発表内容ダイジェスト</subtitle>
+    <conference>Code4Lib 2010報告会</conference>
+    <year>2010</year>
+    <month>3</month>
+    <city>霞が関, 東京</city>
+    <language>ja</language>
+    <date>2010-03-20</date>
+    <url>http://kaede.nier.go.jp/wiki/?code4lib2010</url>
+    <slides>http://www.slideshare.net/tmasao/code4lib-2010</slides>
+  </pub>
 
   <pub type="misc">
     <author>高久雅生</author>
