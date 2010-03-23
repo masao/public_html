@@ -280,7 +280,7 @@ class ToHTML
       @content, header = parse( @file )
       @conf.update( header )
       @conf["title.short"] = @conf["title"] if not @conf["title.short"]
-      @conf["navi"] = true if not @conf["navi"] == false or not @conf["navi"] == "false"
+      @conf["navi"] = true if not @conf["navi"] == false and not @conf["navi"] == "false"
       if @conf["css"].nil?
          @conf["css"] = HierFilename.new( "default.css", File.dirname( file ) )
       end
@@ -307,14 +307,17 @@ class ToHTML
       result
    end
    def parse( file )
-      content = open(file){|io| io.readlines }
+      lines = open(file){|io| io.readlines }
       header = {}
-      while line = content.shift do
+      while line = lines.shift do
          case line
          when /^$/
             break
          when /^([\w\.]+):\s*(.*)$/
             key, val = $1, $2
+            while lines[0] and lines[0] =~ /^[ \t]/
+               val += lines.shift
+            end
             if /^date(\.|$)/ =~ key
                val = DateTime.parse(val)
             end
@@ -327,7 +330,7 @@ class ToHTML
             STDERR.puts "WARN: Unknown format: #{line}"
          end
       end
-      [ content.join, header ]
+      [ lines.join, header ]
    end
    def expand( template = "template.html.#{@lang}" )
       @doc = MHikiDoc.new( HikiDoc::HTMLOutput.new(" />"),
