@@ -1,9 +1,9 @@
 title: 高久雅生の経歴
 title.short: 経歴
 date.available: 2007-03-04
-date.modified: 2010-03-02
+date.modified: 2010-03-23
 
-[[{{image './images/200910-oafriday.jpg' 'Open Access Friday 2009にて（2009年10月）  (撮影: omoon)' thumbs 240px right}}|./profile-images.html]]
+[[{{image './images/201003-c4l10jp.jpg' 'Code4Lib 2010報告会にて（2010年3月）' thumbs 193px right}}|./profile-images.html]]
 :氏名:高久 雅生 （たかく まさお）
 :連絡先:
 ::E-mail: tmasao@acm.org
@@ -128,3 +128,9 @@ date.modified: 2010-03-02
 *[[Researchmap|http://researchmap.jp/masao]]
 *[[ResearcherID| http://www.researcherid.com/rid/B-5097-2009]] {{rawhtml "<span id='badgeCont275303' style='width:26px'><script src='http://labs.researcherid.com/mashlets?el=badgeCont275303&mashlet=badge&showTitle=false&className=a&rid=B-5097-2009&size=small'></script></span>"}}
 *[[Mixi|http://mixi.jp/show_profile.pl?id=246364]]
+
+{{rawhtml(
+<script src="http://fuwat.to/api/widget.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">//fuwatto_widget( { width: 200, height: 400 } );
+fuwatto_widget({});
+</script>)}}

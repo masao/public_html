@@ -1,9 +1,13 @@
 title: My recent portraits
-date.modified: 2009-10-28
+date.modified: 2010-03-24
 date.available: 2008-12-20
 subject: profile
 
-!! 2009
+!!2010
+{{image './images/201003-c4l10jp.jpg' 'Workshop on Trip-report of Code4Lib 2010, and more in Tokyo (March 2010)' thumbs 193px left}}
+{{clear}}
+
+!!2009
 {{image './images/200910-oafriday.jpg' 'Open Access Friday 2009 at Univ. of Tokyo (October 2009) (photo by [[omoon|http://www.flickr.com/photos/omoon/4048737915/in/set-72157622672807186/]])' thumbs 240px left}}
 {{image './images/200906-starnberg.jpg' 'lakeside of Starnberg in German (June 2009)' thumbs 200px left}}
 {{image './images/200903-okinawa.jpg' 'Mibaru Beach in Okinawa (March 2009)' thumbs 200px left}}

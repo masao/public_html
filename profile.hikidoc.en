@@ -1,8 +1,8 @@
 title: Curriculum Vitae (Masao Takaku)
-date.modified: 2010-03-02
+date.modified: 2010-03-24
 date.available: 2007-03-04
 
-[[{{image './images/200910-oafriday.jpg' 'Open Access Friday 2009 at University of Tokyo (October 2009) (photo by omoon)' thumbs 240px right}}|./profile-images.html]]
+[[{{image './images/201003-c4l10jp.jpg' 'Workshop on Trip-report of Code4Lib 2010, and more in Tokyo (March 2010)' thumbs 193px right}}|./profile-images.html]]
 :Name:Masao Takaku
 :Contact:
 ::E-mail: tmasao@acm.org
@@ -128,3 +128,9 @@ A full list of publications are available at [[./pub/]].
 *[[Researchmap|http://researchmap.jp/masao]]
 *[[ResearcherID| http://www.researcherid.com/rid/B-5097-2009]] {{rawhtml "<span id='badgeCont191017' style='width:126px'><script src='http://labs.researcherid.com/mashlets?el=badgeCont191017&mashlet=badge&showTitle=false&className=a&rid=B-5097-2009'></script></span>"}}
 *[[Mixi|http://mixi.jp/show_profile.pl?id=246364]]
+
+{{rawhtml(
+<script src="http://fuwat.to/api/widget.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">//fuwatto_widget( { width: 200, height: 400 } );
+fuwatto_widget({});
+</script>)}}
