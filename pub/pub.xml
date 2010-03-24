@@ -3,6 +3,19 @@
 <publist version="$Revision$">
   <pub type="misc">
     <author>高久雅生</author>
+    <title>図書館システム開発コミュニティ“Code4Lib”国際会議〈報告〉</title>
+    <journal>カレントアウェアネス-E</journal>
+    <number>168</number>
+    <!-- <number>1033</number> -->
+    <year>2010</year>
+    <month>3</month>
+    <language>ja</language>
+    <date>2010-03-24</date>
+    <url>http://current.ndl.go.jp/e1033</url>
+  </pub>
+
+  <pub type="misc">
+    <author>高久雅生</author>
     <title>Code4Lib 2010報告</title>
     <subtitle>発表内容ダイジェスト</subtitle>
     <conference>Code4Lib 2010報告会</conference>
