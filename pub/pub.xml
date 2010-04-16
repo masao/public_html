@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist version="$Revision$">
+  <pub refereed="true" type="conference">
+    <author>Kei Kurakawa</author>
+    <author>Hideaki Takeda</author>
+    <author>Masao Takaku</author>
+    <author>Akiko Aizawa</author>
+    <title>Researcher Name Resolver</title>
+    <subtitle>A Framework for Researcher Identification in Japan</subtitle>
+    <conference>The 5th International Conference on Open Repositories (OR2010)</conference>
+    <year>2010</year>
+    <month>7</month>
+    <city>Madrid, Spain</city>
+    <!--
+    <page>
+      <start>42</start>
+      <end>46</end>
+    </page>
+    -->
+    <language>en</language>
+    <date>2010-07-06</date>
+    <note>(to appear; accepted)</note>
+  </pub>
+
   <pub type="misc">
     <author>高久雅生</author>
     <title>図書館システム開発コミュニティ“Code4Lib”国際会議〈報告〉</title>
