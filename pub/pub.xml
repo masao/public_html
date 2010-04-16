@@ -4,8 +4,8 @@
   <pub refereed="true" type="conference">
     <author>Kei Kurakawa</author>
     <author>Hideaki Takeda</author>
-    <author>Masao Takaku</author>
     <author>Akiko Aizawa</author>
+    <author>Masao Takaku</author>
     <title>Researcher Name Resolver</title>
     <subtitle>A Framework for Researcher Identification in Japan</subtitle>
     <conference>The 5th International Conference on Open Repositories (OR2010)</conference>
@@ -21,6 +21,7 @@
     <language>en</language>
     <date>2010-07-06</date>
     <note>(to appear; accepted)</note>
+    <url>https://togather.eu/handle/123456789/733</url>
   </pub>
 
   <pub type="misc">
