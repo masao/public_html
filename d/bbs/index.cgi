@@ -136,7 +136,7 @@ if ($mode eq "write") {
 	error("複数のURLが書かれています。\nYour comment contains too many URLs.") if scalar(@spam) > 2;
 
 	# 特定の文字列を禁止
-	@spam = ($body =~ /\b(good|nice|cool|funny|best|great) site/gmoi);
+	@spam = ($body =~ /\b(good|nice|cool|funny|best|great) (site|post)/gmoi);
 	error("禁止された語句が含まれています。\nYour comment contains one or more stop words, such as 'cool','funny' etc.") if scalar(@spam) > 0;
 	@spam = ($body =~ /ｗｗｗｗｗ/gmoi);
 	error("禁止された語句が含まれています。\nYour comment contains one or more stop words, such as 'cool','funny' etc.") if scalar(@spam) > 0;
