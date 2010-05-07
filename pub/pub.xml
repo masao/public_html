@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist version="$Revision$">
+  <pub type="misc">
+    <author>高久雅生</author>
+    <title>情報知識学会年次大会 記念シンポジウム「科学技術コモンズと情報知識学の挑戦」へのお誘い（羅針盤）</title>
+    <journal>ACADEMIC RESOURCE GUIDE</journal>
+    <year>2010</year>
+    <month>5</month>
+    <number>426</number>
+    <language>ja</language>
+    <date>2010-05-10</date>
+    <note>（掲載予定）</note>
+    <url>http://www.ne.jp/asahi/coffee/house/ARG/</url>
+  </pub>
+  
   <pub refereed="true" type="conference">
     <author>Kei Kurakawa</author>
     <author>Hideaki Takeda</author>
