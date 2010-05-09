@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist version="$Revision$">
+  <pub refereed="true" type="journal">
+    <title>タスク種別とユーザ特性の違いがWeb情報探索行動に与える影響</title>
+    <subtitle>眼球運動データおよび閲覧行動ログを用いた分析</subtitle>
+    <author>高久雅生</author>
+    <author>江草由佳</author>
+    <author>寺井仁</author>
+    <author>齋藤ひとみ</author>
+    <author>三輪眞木子</author>
+    <author>神門典子</author>
+    <journal>情報知識学会誌</journal>
+    <volume>20</volume>
+    <number>3</number>
+    <year>2010</year>
+    <month>9</month>
+    <page>28</page>
+    <!--
+    <page>
+      <start>888</start>
+      <end>901</end>
+    </page>
+    -->
+    <language>ja</language>
+    <date>2009-09-01</date>
+    <note>(採択済; 掲載予定)</note>
+  </pub>
+
   <pub type="misc">
     <author>高久雅生</author>
     <title>情報知識学会年次大会 記念シンポジウム「科学技術コモンズと情報知識学の挑戦」へのお誘い（羅針盤）</title>
