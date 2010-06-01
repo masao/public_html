@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist version="$Revision$">
+  <pub type="misc">
+    <author>高久雅生</author>
+    <title>ムダ知識との出会いを求めて</title>
+    <subtitle>ふわっと関連検索</subtitle>
+    <conference>第10回Wikiばな</conference>
+    <year>2010</year>
+    <month>6</month>
+    <language>ja</language>
+    <date>2010-06-12</date>
+    <note>（ライトニングトーク発表予定）</note>
+    <url>http://wikibana.socoda.net/wiki.cgi?%c2%e8%bd%bd%b2%f3Wiki%a4%d0%a4%ca</url>
+  </pub>
+
   <pub refereed="true" type="journal">
     <title>タスク種別とユーザ特性の違いがWeb情報探索行動に与える影響</title>
     <subtitle>眼球運動データおよび閲覧行動ログを用いた分析</subtitle>
@@ -24,6 +37,7 @@
     -->
     <language>ja</language>
     <date>2009-09-01</date>
+    <url>http://www.jstage.jst.go.jp/article/jsik/advpub/0/advpub_1005110019/_article/-char/ja/</url>
     <note>(採択済; 掲載予定)</note>
   </pub>
 
@@ -36,8 +50,7 @@
     <number>426</number>
     <language>ja</language>
     <date>2010-05-10</date>
-    <note>（掲載予定）</note>
-    <url>http://www.ne.jp/asahi/coffee/house/ARG/</url>
+    <url>http://archive.mag2.com/0000005669/20100510100948000.html</url>
   </pub>
   
   <pub refereed="true" type="conference">
