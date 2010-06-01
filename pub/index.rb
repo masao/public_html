@@ -5,8 +5,83 @@ require "cgi"
 require "erb"
 require "date"
 require "uri"
-require "rexml/document"
 require "yaml"
+
+begin
+   require "rubygems"
+   require "libxml"
+   XML_PARSER = :libxml
+rescue LoadError
+   require "rexml/document"
+   XML_PARSER =  :rexml
+end
+
+module XMLAlternate
+   class Document
+      def initialize( io )
+         case XML_PARSER
+         when :libxml
+            parser = LibXML::XML::Parser.io( io )
+            @doc = parser.parse
+         when :rexml
+            @doc = REXML::Document.new( io )
+         end
+      end
+      def elements( elem )
+         case XML_PARSER
+         when :libxml
+            @doc.find( elem )
+         when :rexml
+            @doc.elements[ elem ]
+         end
+      end
+      def each_elements( path )
+         case XML_PARSER
+         when :libxml
+            @doc.find( path ).each do |elem|
+               yield elem
+            end
+         when :rexml
+            @doc.elements.to_a( "/publist/pub" ).each do |elem|
+               yield elem
+            end
+         end
+      end
+   end
+end
+if XML_PARSER == :libxml
+   class LibXML::XML::Node
+      def text( path = nil )
+         if path.nil?
+            content
+         else
+            elem = find_first( path )
+            if elem
+               elem.content
+            else
+               nil
+            end
+         end
+      end
+      alias :elements :find
+      def each_elements( path )
+         find( path ).each do |child|
+            yield child
+         end
+      end
+   end
+elsif XML_PARSER == :rexml
+   class REXML::Element
+      def elements( path )
+         get_elements( path ).to_a
+      end
+      def each_elements( path )
+         get_elements( path ).to_a.each do |child|
+            yield child
+         end
+      end
+   end
+end
 
 class PubData
    attr_reader :type, :author, :author_role, :title, :subtitle
@@ -24,10 +99,10 @@ class PubData
       @refereed = element.attributes["refereed"]
       @author = []
       @author_role = {}
-      element.get_elements("author").to_a.each{|e|
+      element.each_elements( "author" ) do |e|
          @author << e.text
          @author_role[e.text] = e.attributes["role"] if e.attributes["role"]
-      }
+      end
       @title = element.text("title")
       @subtitle = element.text("subtitle")
       @journal = element.text("journal")
@@ -52,7 +127,7 @@ class PubData
       @language = element.text("language")
       @doi = element.text("doi")
       %w[ abstract slides poster url ].each do |target|
-         values = element.get_elements(target).to_a
+         values = element.elements( target )
          if values.empty?
             next
          elsif values.size > 1
@@ -178,11 +253,12 @@ class PubApp
       @lang = lang
    end
 
+   include XMLAlternate
    def load_pubdata( io )
-      doc = REXML::Document.new( io )
-      @version = doc.elements[ "/publist" ].attributes[ "version" ]
+      doc = Document.new( io )
+      @version = doc.elements( "/publist" ).first.attributes[ "version" ]
       @pubs = []
-      doc.elements.to_a("/publist/pub").each do |e|
+      doc.each_elements("/publist/pub") do |e|
          @pubs << PubData.new( e, @config )
       end
       @pubs = @pubs.sort_by do |e|
