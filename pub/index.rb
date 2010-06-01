@@ -27,12 +27,12 @@ module XMLAlternate
             @doc = REXML::Document.new( io )
          end
       end
-      def elements( elem )
+      def get_elements( elem )
          case XML_PARSER
          when :libxml
             @doc.find( elem )
          when :rexml
-            @doc.elements[ elem ]
+            @doc.get_elements( elem )
          end
       end
       def each_elements( path )
@@ -72,9 +72,6 @@ if XML_PARSER == :libxml
    end
 elsif XML_PARSER == :rexml
    class REXML::Element
-      def elements( path )
-         get_elements( path ).to_a
-      end
       def each_elements( path )
          get_elements( path ).to_a.each do |child|
             yield child
@@ -127,7 +124,7 @@ class PubData
       @language = element.text("language")
       @doi = element.text("doi")
       %w[ abstract slides poster url ].each do |target|
-         values = element.elements( target )
+         values = element.get_elements( target )
          if values.empty?
             next
          elsif values.size > 1
@@ -253,10 +250,9 @@ class PubApp
       @lang = lang
    end
 
-   include XMLAlternate
    def load_pubdata( io )
-      doc = Document.new( io )
-      @version = doc.elements( "/publist" ).first.attributes[ "version" ]
+      doc = XMLAlternate::Document.new( io )
+      @version = doc.get_elements( "/publist" ).first.attributes[ "version" ]
       @pubs = []
       doc.each_elements("/publist/pub") do |e|
          @pubs << PubData.new( e, @config )
