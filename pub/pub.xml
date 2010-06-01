@@ -3,6 +3,20 @@
 <publist version="$Revision$">
   <pub type="misc">
     <author>高久雅生</author>
+    <title>ふわっと関連検索</title>
+    <subtitle>APIアプリケーション事例紹介</subtitle>
+    <conference>次世代学術コンテンツ基盤ワークショップ「いつでもCiNii、どこでもCiNii ― ウェブAPIコンテスト第2弾」（国立情報学研究所 平成22年度オープンハウス）</conference>
+    <year>2010</year>
+    <month>6</month>
+    <city>東京, 国立情報学研究所</city>
+    <language>ja</language>
+    <date>2010-06-04</date>
+    <note>（発表予定）</note>
+    <url>http://www.nii.ac.jp/index.php?action=pages_view_main&amp;page_id=317</url>
+  </pub>
+
+  <pub type="misc">
+    <author>高久雅生</author>
     <title>ムダ知識との出会いを求めて</title>
     <subtitle>ふわっと関連検索</subtitle>
     <conference>第10回Wikiばな</conference>
@@ -562,7 +576,7 @@
     <city>東京, 国立情報学研究所</city>
     <language>ja</language>
     <date>2009-06-12</date>
-    <url>http://www.nii.ac.jp/index.php?action=pages_view_main&amp;page_id=317</url>
+    <url>http://www.nii.ac.jp/openhouse/archives/2009/</url>
     <slides>./2009/cinii-workshop-slides.pdf</slides>
   </pub>
 
