@@ -63,7 +63,7 @@ if XML_PARSER == :libxml
             end
          end
       end
-      alias :elements :find
+      alias :get_elements :find
       def each_elements( path )
          find( path ).each do |child|
             yield child
