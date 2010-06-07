@@ -23,8 +23,9 @@
     <city>東京, 国立情報学研究所</city>
     <language>ja</language>
     <date>2010-06-04</date>
-    <note>（発表予定）</note>
-    <url>http://www.nii.ac.jp/index.php?action=pages_view_main&amp;page_id=317</url>
+    <url>http://ci.nii.ac.jp/info/ja/index.html#20100607-02</url>
+    <!-- http://www.nii.ac.jp/index.php?action=pages_view_main&amp;page_id=317 -->
+    <slides>http://www.slideshare.net/tmasao/cinii-api</slides>
   </pub>
 
   <pub type="misc">
@@ -147,7 +148,6 @@
     <date>2010-03-08</date>
     <file>http://www.dl.slis.tsukuba.ac.jp/DLjournal/No_38/5-takaku/5-takaku.pdf</file>
     <url>http://www.myopenarchive.org/documents/view/527</url>
-    <!-- url>http://www.dl.slis.tsukuba.ac.jp/DLworkshop/old/DLW38/DLW-program.html</url -->
     <slides>./2010/dlw38-fuwatto-slides.pdf</slides>
   </pub>
 
