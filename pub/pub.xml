@@ -26,6 +26,7 @@
     <url>http://ci.nii.ac.jp/info/ja/index.html#20100607-02</url>
     <!-- http://www.nii.ac.jp/index.php?action=pages_view_main&amp;page_id=317 -->
     <slides>http://www.slideshare.net/tmasao/cinii-api</slides>
+    <slides>./2010/Fuwatto-cinii-workshop.pdf</slides>
   </pub>
 
   <pub type="misc">
@@ -37,8 +38,8 @@
     <month>6</month>
     <language>ja</language>
     <date>2010-06-12</date>
-    <note>（ライトニングトーク発表予定）</note>
-    <url>http://wikibana.socoda.net/wiki.cgi?%c2%e8%bd%bd%b2%f3Wiki%a4%d0%a4%ca</url>
+    <note>（ライトニングトーク発表）</note>
+    <slides>http://www.slideshare.net/tmasao/ss-4482056</slides>
   </pub>
 
   <pub refereed="true" type="journal">
