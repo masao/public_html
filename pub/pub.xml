@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist version="$Revision$">
+  <pub refereed="true" type="conference">
+    <author>Yuka Egusa</author>
+    <author>Hitomi Saito</author>
+    <author>Masao Takaku</author>
+    <author>Hitoshi Terai</author>
+    <author>Makiko Miwa</author>
+    <author>Noriko Kando</author>
+    <title>Using a Concept Map to Evaluate Exploratory Search</title>
+    <conference>The 3rd Information Interaction in Context Symposium (IIiX 2010)</conference>
+    <year>2010</year>
+    <month>8</month>
+    <city>New Brunswick, NJ, USA</city>
+    <page>10</page>
+    <!--
+    <page>
+      <start>42</start>
+      <end>46</end>
+    </page>
+    -->
+    <language>en</language>
+    <date>2010-08-18</date>
+    <note>(to appear; accepted)</note>
+  </pub>
+
   <pub type="misc">
     <author>高久雅生</author>
     <title>編集部特派員参加報告 シンポジウム「科学技術コモンズと情報知識学の挑戦」</title>
