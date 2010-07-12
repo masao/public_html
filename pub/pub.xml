@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist version="$Revision$">
+  <pub type="misc">
+    <author>高久雅生</author>
+    <author>江草由佳</author>
+    <title>簡易類似文書検索手法「ふわっと関連検索」の評価と予備的分析</title>
+    <conference>第150回データベースシステム・第99回情報基礎とアクセス技術 合同研究発表会</conference>
+    <year>2010</year>
+    <month>8</month>
+    <city>青山学院大, 東京</city>
+    <language>ja</language>
+    <date>2010-08-04</date>
+    <page>6</page>
+    <note>（発表予定）</note>
+  </pub>
+
   <pub refereed="true" type="conference">
     <author>Yuka Egusa</author>
     <author>Hitomi Saito</author>
@@ -116,16 +130,10 @@
     <year>2010</year>
     <month>7</month>
     <city>Madrid, Spain</city>
-    <!--
-    <page>
-      <start>42</start>
-      <end>46</end>
-    </page>
-    -->
+    <page>4</page>
     <language>en</language>
     <date>2010-07-06</date>
-    <note>(to appear; accepted)</note>
-    <url>https://togather.eu/handle/123456789/733</url>
+    <url>http://or2010.fecyt.es/Resources/documentos/GSabstracts/or2010-kurakawa-v1.pdf</url>
   </pub>
 
   <pub type="misc">
