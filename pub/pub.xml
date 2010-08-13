@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist version="$Revision$">
+  <pub refereed="true" type="conference">
+    <author>Hitomi Saito</author>
+    <author>Masao Takaku</author>
+    <author>Yuka Egusa</author>
+    <author>Hitoshi Terai</author>
+    <author>Makiko Miwa</author>
+    <author>Noriko Kando</author>
+    <title>Connecting Qualitative And Quantitative Analysis Of Web Search Process:analysis Using Search Units</title>
+    <conference>The Sixth Asia Information Retrieval Societies Conference (AIRS 2010)</conference>
+    <year>2010</year>
+    <month>12</month>
+    <city>Taipei, Taiwan</city>
+    <page>10</page>
+    <!--
+    <page>
+      <start>42</start>
+      <end>46</end>
+    </page>
+    -->
+    <language>en</language>
+    <date>2010-12-01</date>
+    <note>(to appear as poster presentation; accepted)</note>
+  </pub>
+  
   <pub type="misc">
     <author>高久雅生</author>
     <author>江草由佳</author>
