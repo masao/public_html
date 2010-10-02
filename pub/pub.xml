@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist version="$Revision$">
+  <pub type="conference">
+    <author>Masao Takaku</author>
+    <author>Yuka Egusa</author>
+    <author>Hitomi Saito</author>
+    <author>Noriko Kando</author>
+    <author>Hitoshi Terai</author>
+    <author>Makiko Miwa</author>
+    <title>CRES at LogCLEF 2010</title>
+    <subtitle>Towards Understanding the User Behaviors through an Analysis of Search Sessions, Search Units and Click Ranks</subtitle>
+    <conference>CLEF 2010</conference>
+    <year>2010</year>
+    <month>10</month>
+    <city>Padua, Italy</city>
+    <page>11</page>
+    <!--
+    <page>
+      <start>42</start>
+      <end>46</end>
+    </page>
+    -->
+    <language>en</language>
+    <date>2010-10-20</date>
+    <url>http://clef2010.org/resources/proceedings/clef2010labs_submission_120.pdf</url>
+  </pub>
+  
   <pub refereed="true" type="conference">
     <author>Hitomi Saito</author>
     <author>Masao Takaku</author>
