@@ -79,16 +79,13 @@
     <year>2010</year>
     <month>8</month>
     <city>New Brunswick, NJ, USA</city>
-    <page>10</page>
-    <!--
     <page>
-      <start>42</start>
-      <end>46</end>
+      <start>175</start>
+      <end>184</end>
     </page>
-    -->
     <language>en</language>
     <date>2010-08-18</date>
-    <note>(to appear; accepted)</note>
+    <doi>10.1145/1840784.1840810</doi>
   </pub>
 
   <pub type="misc">
@@ -154,7 +151,7 @@
     </page>
     -->
     <language>ja</language>
-    <date>2009-09-01</date>
+    <date>2009-10-30</date>
     <url>http://www.jstage.jst.go.jp/article/jsik/advpub/0/advpub_1005110019/_article/-char/ja/</url>
     <note>(採択済; 掲載予定)</note>
   </pub>
