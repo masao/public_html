@@ -1,5 +1,8 @@
+Options +FollowSymlinks
 DirectoryIndex index.shtml index.html
 <FilesMatch "\.ttf$">
 order deny,allow
 deny from all
 </FilesMatch>
+
+RemoveHandler .rb
