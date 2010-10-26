@@ -2,3 +2,4 @@ RedirectPermanent /software/graphviz-ja.html http://masao.jpn.org/software/graph
 RedirectPermanent /software/jsik_bst.html http://masao.jpn.org/software/jsik_bst/
 
 RemoveHandler .rb
+RemoveHandler .php
