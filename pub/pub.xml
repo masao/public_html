@@ -3,6 +3,18 @@
 <publist version="$Revision$">
   <pub type="conference">
     <author>Masao Takaku</author>
+    <title>Patent Collection on PubMan at NIMS Digital Library Project</title>
+    <conference>eSciDoc Days 2010</conference>
+    <year>2010</year>
+    <month>11</month>
+    <city>Kopenhagen, Denmark</city>
+    <language>en</language>
+    <date>2010-11-17</date>
+    <slides>./2010/escidocdays2010-ws3-slides.pdf</slides>
+  </pub>
+
+  <pub type="conference">
+    <author>Masao Takaku</author>
     <author>Yuka Egusa</author>
     <author>Hitomi Saito</author>
     <author>Noriko Kando</author>
