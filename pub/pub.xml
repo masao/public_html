@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist version="$Revision$">
+  <pub type="misc">
+    <author>高久雅生</author>
+    <title>ふわっとCiNii関連著者検索</title>
+    <conference>第2回CiNiiウェブAPIコンテスト優秀作品発表会</conference>
+    <year>2010</year>
+    <month>11</month>
+    <language>ja</language>
+    <date>2010-11-26</date>
+    <slides>./2010/ciniiapi-content-fuwatto.pdf</slides>
+  </pub>
+
   <pub type="conference">
     <author>Masao Takaku</author>
     <title>Patent Collection on PubMan at NIMS Digital Library Project</title>
@@ -154,17 +165,15 @@
     <volume>20</volume>
     <number>3</number>
     <year>2010</year>
-    <month>10</month>
-    <page>28</page>
-    <!--
+    <month>11</month>
     <page>
-      <start>888</start>
-      <end>901</end>
+      <start>249</start>
+      <end>276</end>
     </page>
-    -->
     <language>ja</language>
-    <date>2009-10-30</date>
-    <url>http://www.jstage.jst.go.jp/article/jsik/advpub/0/advpub_1005110019/_article/-char/ja/</url>
+    <!--早期公開: <date>2009-10-30</date> -->
+    <date>2009-11-30</date>
+    <doi>10.2964/jsik.20-026</doi>
   </pub>
 
   <pub type="misc">
