@@ -9,9 +9,19 @@ require "twitter/console"
 
 CL_NAME = "Masao Takaku <tmasao@acm.org>"
 config_file = "twitter.yml"
-username = YAML.load( open( config_file ) )["test"]["login"]
+config = YAML.load( open( config_file ) )["test"]
+username = config["login"]
+#p config
 
-twitter = Twitter::Client.from_config( config_file )
+Twitter::Client.configure do |conf|
+   conf.oauth_consumer_token = config[ "oauth_consumer_token" ]
+   conf.oauth_consumer_secret = config[ "oauth_consumer_secret" ]
+   #p conf
+end
+twitter = Twitter::Client.new(:oauth_access => {
+                                :key => config["oauth_token"],
+                                :secret => config["oauth_token_secret"]
+                             })
 
 prev_date = nil
 twitter.timeline_for( :me, :count => 200 ) do |status|
