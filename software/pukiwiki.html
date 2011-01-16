@@ -13,11 +13,34 @@
 <a class="subject" href="./../software/">ソフトウェア</a> &gt;
 PukiWiki 関連ツール</div>
 <div class="last-update">初版公開日: 2009年02月08日</div>
-<div class="last-update">最終更新日: 2009年02月13日</div>
+<div class="last-update">最終更新日: 2011年01月16日</div>
 <h1>PukiWiki 関連ツール</h1>
 <p><a href="http://pukiwiki.sourceforge.jp">PukiWiki</a>関連のツールです。</p>
 <p>手元のPukiWiki用に作成した簡易プラグインや作業用スクリプトを置いておきます。</p>
-<h2 id="toc1_1">calc プラグイン</h2>
+<h2 id="toc1_1">jstageプラグイン</h2>
+<p>科学技術振興機構が運営する学術論文プラットフォーム<a href="http://www.jstage.jst.go.jp">J-Stage</a>のAPIを利用して、論文目次を表示するプラグインです。</p>
+<dl>
+<dt>ダウンロード</dt>
+<dd>
+</dd>
+<dd><a href="https://gist.github.com/762100">https://gist.github.com/762100</a>
+</dd>
+<dd><small>（ダウンロード後に、pluginディレクトリに jstage.inc.php という名前で置けば設置完了）</small>
+</dd>
+<dt>使い方</dt>
+<dd>
+</dd>
+<dd><code>#jstage(issn=0917-1436)</code>
+</dd>
+<dd><small>（『情報知識学会誌』の目次を表示する）</small>
+</dd>
+<dt>引数</dt>
+<dd>
+</dd>
+<dd>第1引数: J-STAGEに対する検索クエリ。ISSN以外にも掲載誌名やタイトル検索なども可能。クエリとして使える書式については<a href="http://info.jstage.jst.go.jp/info_server_api/index.html">J-STAGE WebAPI</a>をご覧ください。
+</dd>
+</dl>
+<h2 id="toc1_2">calc プラグイン</h2>
 <p>その場で簡易計算を行うプラグインです。
 計算式を書けば、その場で計算して計算結果に変換して表示します。</p>
 <dl>
@@ -52,7 +75,7 @@ PukiWiki 関連ツール</div>
 <dd> <a href="http://pukiwiki.sourceforge.jp/dev/?PukiWiki%2F1.4%2F%BC%AB%BA%EE%A5%D7%A5%E9%A5%B0%A5%A4%A5%F3%2Fcalc%A5%D7%A5%E9%A5%B0%A5%A4%A5%F3">PukiWiki/1.4/自作プラグイン/calcプラグイン</a> （本家サイト上の紹介ページ）
 </dd>
 </dl>
-<h2 id="toc1_2">tracker_mylist プラグイン</h2>
+<h2 id="toc1_3">tracker_mylist プラグイン</h2>
 <p>PukiWikiのtrackerプラグインで作成されたページ群の一覧を生成するプラグインで、標準添付のtracker_listとは全く違うものですが、単純な文字列検索によるフィルタ機能を追加してあります。</p>
 <dl>
 <dt>ダウンロード</dt>

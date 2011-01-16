@@ -1,11 +1,24 @@
 title: PukiWiki 関連ツール
-date.modified: 2009-02-13
+date.modified: 2011-01-16
 date.available: 2009-02-08
 subject: software
 
 [[PukiWiki|http://pukiwiki.sourceforge.jp]]関連のツールです。
 
 手元のPukiWiki用に作成した簡易プラグインや作業用スクリプトを置いておきます。
+
+!! jstageプラグイン
+
+科学技術振興機構が運営する学術論文プラットフォーム[[J-Stage|http://www.jstage.jst.go.jp]]のAPIを利用して、論文目次を表示するプラグインです。
+
+:ダウンロード:
+::https://gist.github.com/762100
+::{{small '（ダウンロード後に、pluginディレクトリに jstage.inc.php という名前で置けば設置完了）'}}
+:使い方:
+::{{code '#jstage(issn=0917-1436)'}}
+::{{small '（『情報知識学会誌』の目次を表示する）'}}
+:引数:
+::第1引数: J-STAGEに対する検索クエリ。ISSN以外にも掲載誌名やタイトル検索なども可能。クエリとして使える書式については[[J-STAGE WebAPI|http://info.jstage.jst.go.jp/info_server_api/index.html]]をご覧ください。
 
 !! calc プラグイン
 
