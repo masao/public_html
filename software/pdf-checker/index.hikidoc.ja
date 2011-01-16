@@ -19,7 +19,7 @@ subject: software
 
 !!ダウンロード
 
-pdf-checker は GNU AGPL version 3 に従ったフリーソフトウェアとします。
+pdf-checker は [[GNU AGPL version 3|http://www.gnu.org/licenses/agpl.html]] に従ったフリーソフトウェアとします。
 
 *[[pdf-checker-20110116.zip]]
 
@@ -64,8 +64,9 @@ Javaで書かれていますので、Widnows/Mac/UnixなどOS環境によらず使えます。
 
 上記の使用例の出力では、PDFファイルのPDFバージョン（{{code "PDF version"}}）が3であること、3ページ（{{code "Number of pages"}}）からなること、暗号化等のセキュリティ（{{code "Encryption"}}）がかかっていないことがわかります。
 さらに、このPDFファイルの各ページは「595x842」という縦サイズ（{{code "Page size"}}）からなり、約600dpiの解像度（{{code "DPI-X/Y"}}）の画像が、PNG形式（{{code "Image filetype"}}）で圧縮されて埋め込まれていることがわかります。
-また、テキストも2000〜3000字程度（{{code "Text length"}}）埋め込まれており、OCR等の処理がかかっていることもわかります。
+テキストも2000〜3000字程度（{{code "Text length"}}）埋め込まれており、OCR等の処理がかかっていることもわかります。
 
+なお、引数のファイル名を複数指定することで一括指定になります。
 出力形式は単純なタブ区切りテキストですので、テキストファイルとして書き出して、Excelなどから読み込んでチェックすることを想定しています。
 
 !!TODO
