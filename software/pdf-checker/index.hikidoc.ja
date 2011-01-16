@@ -1,0 +1,86 @@
+title: PDFチェックツール (pdf-checker)
+date.available: 2011-01-16
+date.modified: 2011-01-17
+subject: software
+
+このツールは複数のPDFファイルの情報を一括してチェックするためのツールです。
+もともと、図書館等における大量の紙資料をスキャンする必要がある場合において、納品されたPDFファイルやOCRソフトウェアが出力したPDFファイルを、（ある程度まで）自動的にチェックしたい場合に使えるツールを試作することを目標において、作成したものです。
+現在、以下の項目をチェックして出力する機能を有しています：
+
+* PDFページ数
+* PDFのバージョン
+* （各ページについて以下の各項目:）
+** ページ内に埋め込まれたテキストの文字数
+** ページに埋め込まれた画像の解像度（DPI）
+** ページに埋め込まれた画像の形式
+
+!!更新履歴
+:2010-01-16:初版(20110116)を公開。
+
+!!ダウンロード
+
+pdf-checker は GNU AGPL version 3 に従ったフリーソフトウェアとします。
+
+*[[pdf-checker-20110116.zip]]
+
+※最新のソースコードは http://github.com/masao/pdf-checker/ から入手できます。
+
+!!利用方法
+Javaで書かれていますので、Widnows/Mac/UnixなどOS環境によらず使えます。
+
+上記のバイナリーパッケージ（Zipファイル）をダウンロードして展開してそのまま使ってください。 本ツールを使うには、コマンドラインで展開したフォルダに移動して、下記のように {{code 'java -jar PdfChecker.jar '}} に続けて、チェックしたファイル名を指定します:
+
+ % java -jar PdfChecker.jar pdf/*.pdf
+ Filename:	pdf/2010J00001.pdf
+ PDF version:	4
+ Number of pages:	5
+ Encryption:	false
+ Page size (1):	Rectangle: 595.0x842.0 (rot: 0 degrees)
+ Image filetype:	png
+ DPI-X:	600
+ DPI-Y:	599
+ Text length:	3566
+ Page size (2):	Rectangle: 595.0x842.0 (rot: 0 degrees)
+ Image filetype:	png
+ DPI-X:	600
+ DPI-Y:	599
+ Text length:	2741
+ Page size (3):	Rectangle: 595.0x842.0 (rot: 0 degrees)
+ Image filetype:	png
+ DPI-X:	600
+ DPI-Y:	599
+ Text length:	3458
+ Page size (4):	Rectangle: 595.0x842.0 (rot: 0 degrees)
+ Image filetype:	png
+ DPI-X:	600
+ DPI-Y:	599
+ Text length:	2709
+ Page size (5):	Rectangle: 595.0x842.0 (rot: 0 degrees)
+ Image filetype:	png
+ DPI-X:	600
+ DPI-Y:	599
+ Text length:	3754
+ ...
+
+上記の使用例の出力では、PDFファイルのPDFバージョン（{{code "PDF version"}}）が3であること、3ページ（{{code "Number of pages"}}）からなること、暗号化等のセキュリティ（{{code "Encryption"}}）がかかっていないことがわかります。
+さらに、このPDFファイルの各ページは「595x842」という縦サイズ（{{code "Page size"}}）からなり、約600dpiの解像度（{{code "DPI-X/Y"}}）の画像が、PNG形式（{{code "Image filetype"}}）で圧縮されて埋め込まれていることがわかります。
+また、テキストも2000〜3000字程度（{{code "Text length"}}）埋め込まれており、OCR等の処理がかかっていることもわかります。
+
+出力形式は単純なタブ区切りテキストですので、テキストファイルとして書き出して、Excelなどから読み込んでチェックすることを想定しています。
+
+!!TODO
+
+下記は2011年1月現在で未対応の項目:
+
+:エラー処理:
+::PDFファイル以外の形式や、読み込みにエラーが発生するようなファイルに対して頑健でないため、途中でエラーとして落ちてしまうことがある。
+::スキャンによる画像PDFではなく、Word等から作成されたPDFファイルでは、埋め込まれる画像が多様なため、エラーが発生したり、出力内容がおかしなものになる場合がある。
+:セキュリティ指定:
+::暗号化の有無しかチェックしていない。コピー不可設定・印刷設定などのセキュリティ設定についても出力するようにしたい。
+
+!!謝辞
+
+本ツールではPDF解析のためにiText Javaライブラリーを用い、同梱して再配布しています。iTextのソースコードおよび詳細な情報は下記のサイトから入手可能です:
+http://itextpdf.com/
+
+本ツールの構築にあたっては、平成22年度CSI委託事業「機関リポジトリ担当者の人材育成」における[[技術ワークショップ（平成22年9月15日〜9月18日 軽井沢セミナーハウスにおいて開催）|http://drf.lib.hokudai.ac.jp/drf/index.php?DRFtech-Karuizawa2010]]の調査を参考にしています。
