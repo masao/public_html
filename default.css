@@ -42,6 +42,9 @@
     color: navy;
     text-indent: 0;
   }
+  pre {
+    margin-left: 2em;
+  }
   div.navi {
     margin: 0;
     font-size: smaller;
