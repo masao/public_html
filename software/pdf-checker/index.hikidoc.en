@@ -19,7 +19,7 @@ The tool currently checks the following properties of PDF files:
 
 !!Download
 
-pdf-checker is a free software licensed under [[GNU AGPL version 3|http://www.gnu.org/licenses/agpl.html].
+pdf-checker is a free software licensed under [[GNU AGPL version 3|http://www.gnu.org/licenses/agpl.html]].
 
 *[[pdf-checker-20110116.zip]]
 
@@ -70,7 +70,7 @@ Each page of this file has a size of "595x842" without rotation and an embedded 
 
 You can check multiple files at one time by specifying those files as command line arguments.
 
-As output format is a simple text file with tab-separated, you can check it further by Excel etc.
+As output format is a simple text file with tab-separated, you can check it further via other applications like Excel.
 
 !!TODO
 
