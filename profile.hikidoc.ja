@@ -1,7 +1,7 @@
 title: 高久雅生の経歴
 title.short: 経歴
 date.available: 2007-03-04
-date.modified: 2010-11-16
+date.modified: 2011-01-17
 
 [[{{image './images/201003-c4l10jp.jpg' 'Code4Lib 2010報告会にて（2010年3月）' thumbs 193px right}}|./profile-images.html]]
 :氏名:高久 雅生 （たかく まさお）
@@ -132,7 +132,7 @@ date.modified: 2010-11-16
 *[[JST ReaDデータベース・研究者情報|http://read.jst.go.jp/public/cs_ksh_008EventAction.do?action4=event&lang_act4=J&judge_act4=2&knkysh_name_code=1000302228]]
 *[[NII研究者リゾルバー|http://rns.nii.ac.jp/nr/1000000399271]]
 *[[ResearcherID| http://www.researcherid.com/rid/B-5097-2009]] {{rawhtml "<span id='badgeCont275303' style='width:26px'><script src='http://labs.researcherid.com/mashlets?el=badgeCont275303&mashlet=badge&showTitle=false&className=a&rid=B-5097-2009&size=small'></script></span>"}}
-				   
+
 {{rawhtml(
 <script src="http://fuwat.to/api/widget.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">//fuwatto_widget( { width: 200, height: 400 } );

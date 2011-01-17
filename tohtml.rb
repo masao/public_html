@@ -332,6 +332,7 @@ class ToHTML
       end
       [ lines.join, header ]
    end
+   include ERB::Util
    def expand( template = "template.html.#{@lang}" )
       @doc = MHikiDoc.new( HikiDoc::HTMLOutput.new(" />"),
                            { :interwiki => @conf["interwiki"],

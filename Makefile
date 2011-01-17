@@ -35,6 +35,7 @@ HTML	= 	index.html.ja index.html.en \
 		software/pukiwiki.html \
 		software/jsik_bst/index.html \
 		software/pdf-checker/index.html.ja \
+		software/pdf-checker/index.html.en \
 		private/memo.html \
 		private/nims_memo.html \
 		lecture/index.html \

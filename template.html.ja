@@ -33,8 +33,14 @@
 <% end %>
 <% if lang_switch.size > 1 %>
 <ul id="interlang">
-<% @conf["interlang"].keys.each do |lang| %>
-<li id="il-<%= lang %>"><%= lang == @lang ? "" : "<a href=\"#{lang_file( lang )}\">" %><%= @conf["interlang"][lang] %><%= lang == @lang ? "" : %q[</a>] %></li>
+<% @conf[ "interlang" ].keys.each do |lang| %>
+<li id="il-<%= lang %>">
+<% if lang == @lang %>
+<%=h @conf["interlang"][lang] %>
+<% else %>
+<a href="<%=h File.basename( lang_file(lang) ) %>"><%=h @conf["interlang"][lang] %></a>
+<% end %>
+</li>
 <% end %>
 </ul>
 <% end %>
