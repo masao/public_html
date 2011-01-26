@@ -26,9 +26,13 @@ pdf-checker は [[GNU AGPL version 3|http://www.gnu.org/licenses/agpl.html]] に従
 ※最新のソースコードは http://github.com/masao/pdf-checker/ から入手できます。
 
 !!利用方法
-Javaで書かれていますので、Widnows/Mac/UnixなどOS環境によらず使えます。
+Javaで書かれていますので、Widnows/Mac/UnixなどOS環境を問わず使えます。
+利用にはまずJavaをコマンドラインから使えるようにインストールしておくことが必要です。
+必要であれば http://www.java.com/ja/download/ からダウンロードしインストールしてください。
 
-上記のバイナリーパッケージ（Zipファイル）をダウンロードして展開してそのまま使ってください。 本ツールを使うには、コマンドラインで展開したフォルダに移動して、下記のように {{code 'java -jar PdfChecker.jar '}} に続けて、チェックしたファイル名を指定します:
+Javaがインストールされているようなら、
+上記のバイナリーパッケージ（{{code "pdf-checker-YYYYMMDD.zip"}}）をダウンロードし展開してそのまま使ってください。
+本ツールを使うには、パッケージを展開したフォルダにコマンドライン上で移動し、下記のように {{code 'java -jar PdfChecker.jar '}} に続けて、チェックしたファイル名を指定します:
 
  % java -jar PdfChecker.jar pdf/*.pdf
  Filename:	pdf/2010J00001.pdf
