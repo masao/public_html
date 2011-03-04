@@ -3,34 +3,32 @@
 # $Id$
 
 require "date"
-require "rubygems"
-require "twitter"
-require "twitter/console"
+require "time"
+require "yaml"
 
 CL_NAME = "Masao Takaku <tmasao@acm.org>"
-config_file = "twitter.yml"
-config = YAML.load( open( config_file ) )["test"]
-username = config["login"]
-#p config
+SCREEN_NAME = "tmasao"
 
-Twitter::Client.configure do |conf|
-   conf.oauth_consumer_token = config[ "oauth_consumer_token" ]
-   conf.oauth_consumer_secret = config[ "oauth_consumer_secret" ]
-   #p conf
+list = []
+dup = {}
+YAML.each_document( ARGF ) do |doc|
+   doc.each do |status|
+      next if dup[ status["id"] ]
+      list << status
+      dup[ status["id"] ] = true
+   end
 end
-twitter = Twitter::Client.new(:oauth_access => {
-                                :key => config["oauth_token"],
-                                :secret => config["oauth_token_secret"]
-                             })
-
 prev_date = nil
-twitter.timeline_for( :me, :count => 200 ) do |status|
-   date = status.created_at.strftime("%Y-%m-%d")
+list.sort_by{|e| e["id"] }.reverse.each do |status|
+   date = Time.parse( status[ "created_at" ] ).strftime("%Y-%m-%d")
    if prev_date.nil? or date != prev_date
       prev_date = date
       puts "#{ date }  #{ CL_NAME }"
-      puts "\t* [[今日のつぶやき|http://twitter.com/#{ username }]]:"
+      puts "\t* [[今日のつぶやき|http://twitter.com/#{ SCREEN_NAME }]]:"
    end
-   time_s = status.created_at.strftime("%H:%M")
-   puts "\t{{twitter '#{username}', '#{ time_s }', '#{ status.text.gsub( /\'/, "\\'" ) }', #{ status.id }, '#{ status.source }', '#{ status.in_reply_to_status_id }', '#{ status.in_reply_to_screen_name }' }}"
+   time_s = Time.parse( status[ "created_at" ] ).strftime("%H:%M")
+   screen_name = status[ "user" ][ "screen_name" ]
+   #STDERR.puts status[ "user" ].inspect
+   text = status[ "text" ].gsub( /\'/, "\\'" )
+   puts "\t{{twitter '#{ screen_name }', '#{ time_s }', '#{ text }', '#{ status[ "id_str" ] }', '#{ status[ "source" ] }', '#{ status[ "in_reply_to_status_id" ] }', '#{ status["in_reply_to_screen_name"] }' }}"
 end
