@@ -339,6 +339,12 @@ div.amazon_img {
 .twitter {
   font-size: smaller;
 }
+.twitter .twitter-time {
+  float: left;
+}
+.twitter .twitter-status {
+  margin-left: 3em;
+}
 .twitter span.agent, .twitter span.agent a,
 .twitter span.in_reply_to, .twitter span.in_reply_to a {
   font-size: smaller;
