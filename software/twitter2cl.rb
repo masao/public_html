@@ -29,6 +29,6 @@ list.sort_by{|e| e["id"] }.reverse.each do |status|
    time_s = Time.parse( status[ "created_at" ] ).strftime("%H:%M")
    screen_name = status[ "user" ][ "screen_name" ]
    #STDERR.puts status[ "user" ].inspect
-   text = status[ "text" ].gsub( /\'/, "\\'" )
+   text = status[ "text" ].gsub( /\'/ ){|m| "\\'" }
    puts "\t{{twitter '#{ screen_name }', '#{ time_s }', '#{ text }', '#{ status[ "id_str" ] }', '#{ status[ "source" ] }', '#{ status[ "in_reply_to_status_id" ] }', '#{ status["in_reply_to_screen_name"] }' }}"
 end
