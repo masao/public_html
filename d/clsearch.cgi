@@ -92,6 +92,7 @@ if (defined $key and $key !~ /^\s*$/) {
     binmode(F);
     while (<F>) {
 	my ($date, $c) = (/^(.+?)\t(.+)$/);
+    #print $date,"\n";
 	my @regular_keys;
 
 	my $match_num = 0;
@@ -104,8 +105,11 @@ if (defined $key and $key !~ /^\s*$/) {
 		$match_num++ if ($c =~ /^.+\[$tmp\].*\t.*$/);
  	    } else {
 		my $tmp = clean($k);
+	#print "$k\t$tmp\n";
+	if ($c =~ /$tmp/i) {
 		$match_num++
-		    if $c =~ /^(?:$ascii|$twoBytes|$threeBytes)*?(?:$tmp)/i;
+		    if $c =~ /^(?:$ascii|$twoBytes|$threeBytes)*?$tmp/i;
+	}
 		push @regular_keys, $tmp;
 	    }
 	}
