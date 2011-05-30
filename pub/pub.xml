@@ -12,16 +12,13 @@
     <city>高松, 香川</city>
     <volume>21</volume>
     <number>2</number>
-    <!--
     <page>
-      <start>35</start>
-      <end>41</end>
+      <start>123</start>
+      <end>130</end>
     </page>
-    -->
     <language>ja</language>
     <date>2011-05-28</date>
     <url>http://www.jsik.jp/?2011program</url>
-    <note>（発表予定）</note>
   </pub>
 
   <pub type="misc">
@@ -39,16 +36,13 @@
     <city>高松, 香川</city>
     <volume>21</volume>
     <number>2</number>
-    <!--
     <page>
-      <start>35</start>
-      <end>41</end>
+      <start>137</start>
+      <end>142</end>
     </page>
-    -->
     <language>ja</language>
     <date>2011-05-28</date>
     <url>http://www.jsik.jp/?2011program</url>
-    <note>（発表予定）</note>
   </pub>
 
   <pub type="misc">
