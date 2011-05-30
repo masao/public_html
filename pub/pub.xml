@@ -2,6 +2,56 @@
 <!-- $Id$ -->
 <publist version="$Revision$">
   <pub type="misc">
+    <author>江草由佳</author>
+    <author>高久雅生</author>
+    <title>教育研究論文索引とCiNiiの重複率</title>
+    <conference>情報知識学会第19回年次大会</conference>
+    <journal>情報知識学会誌</journal>
+    <year>2011</year>
+    <month>5</month>
+    <city>高松, 香川</city>
+    <volume>21</volume>
+    <number>2</number>
+    <!--
+    <page>
+      <start>35</start>
+      <end>41</end>
+    </page>
+    -->
+    <language>ja</language>
+    <date>2011-05-28</date>
+    <url>http://www.jsik.jp/?2011program</url>
+    <note>（発表予定）</note>
+  </pub>
+
+  <pub type="misc">
+    <author>齋藤ひとみ</author>
+    <author>江草由佳</author>
+    <author>高久雅生</author>
+    <author>寺井仁</author>
+    <author>神門典子</author>
+    <author>三輪眞木子</author>
+    <title>情報検索の前後におけるユーザの知識構造の変化:コンセプトマップを使った分析</title>
+    <conference>情報知識学会第19回年次大会</conference>
+    <journal>情報知識学会誌</journal>
+    <year>2011</year>
+    <month>5</month>
+    <city>高松, 香川</city>
+    <volume>21</volume>
+    <number>2</number>
+    <!--
+    <page>
+      <start>35</start>
+      <end>41</end>
+    </page>
+    -->
+    <language>ja</language>
+    <date>2011-05-28</date>
+    <url>http://www.jsik.jp/?2011program</url>
+    <note>（発表予定）</note>
+  </pub>
+
+  <pub type="misc">
     <author>高久雅生</author>
     <title>ふわっとCiNii関連著者検索</title>
     <conference>第2回CiNiiウェブAPIコンテスト優秀作品発表会</conference>
@@ -171,6 +221,7 @@
     <!--早期公開: <date>2009-10-30</date> -->
     <date>2009-11-30</date>
     <doi>10.2964/jsik.20-026</doi>
+    <awards>（2011年度 情報知識学会 論文賞受賞）</awards>
   </pub>
 
   <pub type="misc">
