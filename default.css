@@ -151,6 +151,7 @@
     color: #3c3;
   }
   #publist .bibdata { font-size: smaller; }
+  #publist .awards  { font-weight: bolder; color: #BE003F; }
   #publist dd.url   { font-size: smaller; }
   #publist div.url  { font-size: smaller; }
 }
