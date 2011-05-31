@@ -2,6 +2,25 @@
 <!-- $Id$ -->
 <publist version="$Revision$">
   <pub type="misc">
+    <title>タスク種別とユーザ特性の違いがWeb情報探索行動に与える影響</title>
+    <subtitle>眼球運動データおよび閲覧行動ログを用いた分析</subtitle>
+    <author>高久雅生</author>
+    <author>江草由佳</author>
+    <author>寺井仁</author>
+    <author>齋藤ひとみ</author>
+    <author>三輪眞木子</author>
+    <author>神門典子</author>
+    <conference>情報知識学会第19回年次大会</conference>
+    <city>高松, 香川</city>
+    <year>2011</year>
+    <month>5</month>
+    <date>2011-05-28</date>
+    <note>（2011年度 情報知識学会 論文賞受賞記念講演）</note>
+    <language>ja</language>
+    <url>http://www.jsik.jp/?paper_award2011</url>
+  </pub>
+
+  <pub type="misc">
     <author>江草由佳</author>
     <author>高久雅生</author>
     <title>教育研究論文索引とCiNiiの重複率</title>
