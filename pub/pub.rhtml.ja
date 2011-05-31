@@ -60,6 +60,9 @@ end
 <% if not note.nil? %>
 <span class="note"><%=h note %></span>
 <% end %>
+<% if not awards.nil? %>
+<span class="awards"><%=h awards %></span>
+<% end %>
 </dd>
 <% if not url.nil? %>
 <% send( :url ).to_a.each do |val| %>

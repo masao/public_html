@@ -85,7 +85,7 @@ class PubData
    attr_reader :journal, :conference, :org, :publisher
    attr_reader :booktitle, :series
    attr_reader :volume, :number, :year, :month, :city
-   attr_reader :page_start, :page_end, :page, :isbn, :note
+   attr_reader :page_start, :page_end, :page, :isbn, :note, :awards
    attr_reader :url, :doi, :slides, :poster, :file, :abstract
    attr_reader :language
    attr_reader :refereed
@@ -122,6 +122,7 @@ class PubData
       @isbn = element.text("isbn")
       @note = element.text("note")
       @language = element.text("language")
+      @awards = element.text("awards")
       @doi = element.text("doi")
       %w[ abstract slides poster url ].each do |target|
          values = element.get_elements( target )
@@ -225,7 +226,6 @@ class PubData
       bibtex[ :issn ] = @issn if @issn
       bibtex[ :isbn ] = @isbn if @isbn
       bibtex[ :note ] = @note if @note
-      
       bibtex_s = bibtex.keys.map{|k| "#{k} = {#{bibtex[k]}}" }.join(",\n")
       <<EOF
 @#{genre}{pubid#{object_id},
@@ -261,7 +261,6 @@ class PubApp
          sort_keys = [ sort_order(e, :year),
                        sort_order(e, :month) ]
          sort_keys << ( - Date.parse( e.date ).jd ) if e.date
-         
          unless sort_mode == :year
             sort_keys.unshift( sort_order(e) )
          end
