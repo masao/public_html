@@ -138,6 +138,14 @@ if ($mode eq "write") {
 	# 特定の文字列を禁止
 	@spam = ($body =~ /\b(good|nice|cool|funny|best|great) (site|post)/gmoi);
 	error("禁止された語句が含まれています。\nYour comment contains one or more stop words, such as 'cool','funny' etc.") if scalar(@spam) > 0;
+	@spam = ($body =~ /\b(brain power|gareetst|aswenr|asnwer|awnesr|awnser|aneswr|asnewr|aswner|anwesr|cevelr|cleevr|impesrsed|inrcedblie|tahnks|tahkns|taknhs|thniknig|tihnknig|celver|seomnoe|hlepnig|magnaed|birnas|thuoght|slohud|suodns|fnially|rlaely|raelly|eiasly|fnially)\b/gmoi);
+	error("禁止された語句が含まれています。\nYour comment contains one or more stop words, such as 'cool','funny' etc.") if scalar(@spam) > 0;
+	@spam = ($body =~ /\b(good point|sounds great|great thinking)/gmoi);
+	error("禁止された語句が含まれています。\nYour comment contains one or more stop words, such as 'cool','funny' etc.") if scalar(@spam) > 0;
+	@spam = ($body =~ /\b(great|cool|really|superior) (thinking)/gmoi);
+	error("禁止された語句が含まれています。\nYour comment contains one or more stop words, such as 'cool','funny' etc.") if scalar(@spam) > 0;
+	@spam = ($body =~ /^(\w+\d\.txt\;\d+\;\d+|comment\d+)/gmoi);
+	error("禁止された語句が含まれています。\nYour comment contains one or more stop words, such as 'cool','funny' etc.") if scalar(@spam) > 0;
 	@spam = ($body =~ /ｗｗｗｗｗ/gmoi);
 	error("禁止された語句が含まれています。\nYour comment contains one or more stop words, such as 'cool','funny' etc.") if scalar(@spam) > 0;
 
@@ -147,6 +155,8 @@ if ($mode eq "write") {
 
 	# 特定のアドレスからの投稿を禁止
 	error("禁止されたアドレス/URLが含まれています。\nYour comment contains a spamming E-mail address/URL.") if $mail_or_url eq 'maxhamehame@livedoor.com';
+	error("禁止されたアドレス/URLが含まれています。\nYour comment contains a spamming E-mail address/URL.") if $mail_or_url eq 'mail';
+	error("禁止されたアドレス/URLが含まれています。\nYour comment contains a spamming E-mail address/URL.") if $mail_or_url eq 'email@gmail.com';
 
 	$name = CGI::escapeHTML( $name );
 	$mail_or_url = CGI::escapeHTML( $mail_or_url );
