@@ -90,7 +90,7 @@
   }
   body a[href $=".pdf"] {
     background: url("icons/pdf.gif") center right no-repeat;
-    padding-right: 12px;
+    padding-right: 16px;
   }
   /* For interlang switch */
   ul#interlang {
