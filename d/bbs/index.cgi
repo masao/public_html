@@ -30,6 +30,136 @@ my $latest_id = -1;		# 最新のコメントの ID
 my %com_hash;			# コメントを格納するハッシュ
 my $URLCHARS = "[-_.!~*'a-zA-Z0-9;/?:@&=+,%\#\$]";
 
+my $SPAM_BLACKLIST_WORDS = <<EOF;
+your answer solved
+brain power
+cool thinking
+great thinking
+superior thinking
+AFCAIT
+aesnwr
+aneswr
+anewsr
+ansewr
+anwesr
+anwser
+asenwr
+asewnr
+asnewr
+asnwer
+aswenr
+aswner
+awnesr
+awnser
+awsenr
+birnas
+bla bla bla bla
+brinas
+cahnge
+celevr
+celver
+cevelr
+cgahne
+cleevr
+clveer
+cveler
+cvoreed
+demnsortated
+ecxelnelt
+eiasly
+esaliy
+excleelnt
+exelclent
+exlceelnt
+expetcnig
+exptceing
+failnly
+fianlly
+filnlay
+fnially
+gareetst
+geartest
+getraset
+graetset
+greeatst
+greetast
+hleipng
+hlepnig
+icrndeible
+impesrsed
+increbdile
+inrcedblie
+ipmossbile
+laoedd
+lkonoig
+maagned
+magnaed
+pobrmles
+prbloems
+prboemls
+pttunig
+raelly
+ralely
+relaly
+rellay
+rlaely
+rlealy
+seomnoe
+shloud
+shluod
+shulod
+skopoy
+slohud
+smoneoe
+soeomne
+somenoe
+somethnig
+sometnhig
+sometnihg
+stdnas
+stgrugling
+sturgglnig
+suodns
+svoled
+tahkns
+tahnks
+taknhs
+tanhks
+tghins
+thgins
+thigns
+thiinnkg
+thikning
+thiknnig
+thininkg
+thinknig
+thkinnig
+thkninig
+thngis
+thniinkg
+thniknig
+thninkig
+thnkas
+thnkiing
+thohugt
+thuoght
+tihgns
+tihkning
+tihnknig
+tihnnkig
+tinhgs
+tinhking
+tinhknig
+tkhinnig
+tnakhs
+tnhgis
+tnhiinkg
+tnhkiing
+tohuhgt
+touhght
+tuhoght
+tuhohgt
+EOF
 
 # ユーザ設定ファイルの読み込み
 if (not -e $conf_file) {
@@ -364,10 +494,12 @@ sub get_latest_list {
 	next if (-s $f == 0);
 	my $all = join('', <F>);
 	my %hash;
-
 	my ($id) = ($f =~ /([^\/]+)\.log$/);
 	set_comment_hash(\%hash, \$all);
+	my $spam_regex = join( "|", split( /\n/, $SPAM_BLACKLIST_WORDS ) );
+	#print STDERR $spam_regex;
 	foreach my $i (keys %hash) {
+	    next if $hash{$i}{'m'} =~ /\b($spam_regex)\b/io;
 	    push @lalist, {d => $hash{$i}{'d'}, m => $hash{$i}{'m'},
 			   n => $hash{$i}{'n'}, i => $id,
 			   ii => $i,
