@@ -36,7 +36,15 @@ brain power
 cool thinking
 great thinking
 superior thinking
+clever way
+cool way
+home run
+AFAICT
 AFCAIT
+AFICAT
+incredilbe
+thakns
+aenwsr
 aesnwr
 aneswr
 anewsr
@@ -52,9 +60,13 @@ aswner
 awnesr
 awnser
 awsenr
+betsest
+birans
 birnas
 bla bla bla bla
 brinas
+bseetst
+bsetest
 cahnge
 celevr
 celver
@@ -63,14 +75,17 @@ cgahne
 cleevr
 clveer
 cveler
+cvleer
 cvoreed
 demnsortated
 ecxelnelt
 eiasly
 esaliy
 excleelnt
+exclelnet
 exelclent
 exlceelnt
+expeictng
 expetcnig
 exptceing
 failnly
@@ -78,9 +93,11 @@ fianlly
 filnlay
 fnially
 gareetst
+garetest
 geartest
 getraset
 graetset
+grateest
 greeatst
 greetast
 hleipng
@@ -97,6 +114,7 @@ magnaed
 pobrmles
 prbloems
 prboemls
+probelms
 pttunig
 raelly
 ralely
@@ -105,17 +123,24 @@ rellay
 rlaely
 rlealy
 seomnoe
+seotmhing
+sglguing
 shloud
 shluod
 shulod
 skopoy
 slohud
+smoenoe
 smoneoe
+sodnus
 soeomne
 somenoe
 somethnig
 sometnhig
 sometnihg
+somteinhg
+sopkoy
+spkooy
 stdnas
 stgrugling
 sturgglnig
@@ -127,14 +152,18 @@ taknhs
 tanhks
 tghins
 thgins
+thguhot
 thigns
 thiinnkg
 thikning
 thiknnig
 thininkg
 thinknig
+thinnikg
 thkinnig
 thkninig
+thnaks
+thnaks
 thngis
 thniinkg
 thniknig
@@ -145,6 +174,8 @@ thohugt
 thuoght
 tihgns
 tihkning
+tihngs
+tihnking
 tihnknig
 tihnnkig
 tinhgs
@@ -156,6 +187,7 @@ tnhgis
 tnhiinkg
 tnhkiing
 tohuhgt
+touchdown
 touhght
 tuhoght
 tuhohgt
