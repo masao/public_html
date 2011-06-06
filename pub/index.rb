@@ -7,6 +7,8 @@ require "date"
 require "uri"
 require "yaml"
 
+ENV["GEM_HOME"] = File.join( ENV["HOME"], ".gem" )
+
 begin
    require "rubygems"
    require "libxml"
