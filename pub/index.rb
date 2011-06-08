@@ -7,7 +7,7 @@ require "date"
 require "uri"
 require "yaml"
 
-ENV["GEM_HOME"] = File.join( ENV["HOME"], ".gem" )
+ENV["GEM_HOME"] = "/home/etk2/.gem" if File.directory?( "/home/etk2/.gem" )
 
 begin
    require "rubygems"
@@ -350,7 +350,7 @@ end
 PUBDATA = "pub.xml"
 LASTUPDATE = File::mtime( PUBDATA )
 
-if $0 == __FILE__   
+if $0 == __FILE__
    begin
       cgi = CGI.new
       app = PubApp::new( cgi )
