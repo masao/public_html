@@ -2,6 +2,19 @@
 <!-- $Id$ -->
 <publist version="$Revision$">
   <pub type="misc">
+    <title>ウェブと情報技術を使って資料と読者・著者を結び付ける</title>
+    <author>高久雅生</author>
+    <conference>専門図書館協議会 平成23年度全国研究集会</conference>
+    <city>東京</city>
+    <year>2011</year>
+    <month>7</month>
+    <date>2011-07-01</date>
+    <note>（発表予定）</note>
+    <language>ja</language>
+    <url>http://www.jsla.or.jp/1/13/13-2.html</url>
+  </pub>
+
+  <pub type="misc">
     <title>タスク種別とユーザ特性の違いがWeb情報探索行動に与える影響</title>
     <subtitle>眼球運動データおよび閲覧行動ログを用いた分析</subtitle>
     <author>高久雅生</author>
