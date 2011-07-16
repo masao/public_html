@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist version="$Revision$">
+  <pub type="conference">
+    <title>Changes in Users' Knowledge Structures Before and After Web Search on a Topic: Analysis Using the Concept Map</title>
+    <author>Hitomi Saito</author>
+    <author>Ryo Nakashima</author>
+    <author>Yuka Egusa</author>
+    <author>Masao Takaku</author>
+    <author>Hitoshi Terai</author>
+    <author>Makiko Miwa</author>
+    <author>Noriko Kando</author>
+    <conference>ASIS&amp;T 2011 Annual Meeting</conference>
+    <city>New Orleans, USA</city>
+    <year>2011</year>
+    <month>10</month>
+    <date>2011-10-10</date>
+    <language>en</language>
+    <url>http://www.asis.org/asist2011/</url>
+    <note>(to appear; accepted as Poster presentation)</note>
+  </pub>
+
   <pub type="misc">
     <title>ウェブと情報技術を使って資料と読者・著者を結び付ける</title>
     <author>高久雅生</author>
@@ -9,7 +28,6 @@
     <year>2011</year>
     <month>7</month>
     <date>2011-07-01</date>
-    <note>（発表予定）</note>
     <language>ja</language>
     <url>http://www.jsla.or.jp/1/13/13-2.html</url>
   </pub>
