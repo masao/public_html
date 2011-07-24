@@ -1,5 +1,5 @@
 title: Curriculum Vitae (Masao Takaku)
-date.modified: 2011-05-30
+date.modified: 2011-07-25
 date.available: 2007-03-04
 
 [[{{image './images/201003-c4l10jp.jpg' 'Workshop on Trip-report of Code4Lib 2010, and more in Tokyo (March 2010)' thumbs 193px right}}|./profile-images.html]]
@@ -76,6 +76,10 @@ Information retrieval, Digital library, Information behaviour, Scholarly communi
 :Building a Japan/MARC browsing system (1998 - 2001):
 ::Building a web-based browsing system for Japanese national bibliographics Japan/MARC data including 1M-records from over 13 years.
 ::(Skills) Japan/MARC, C, Perl, DBM, Magnetic tapes
+
+!!Awards
+:The 10th Best Paper Award of Journal of Information and Knowledge (2011):The paper entitled "Influence of Task Type and User Group on Web-based Information Seeking Behavior: Analysis of Eye Movement Data and Client-side Browsing Logs", co-authored with Yuka Egusa, Hitoshi Terai, Hitomi Saito, Makiko Miwa, Noriko Kando, published on ''Journal of Information and Knowledge'' Volume 20, Issue 3 got received the Best Paper Award. ([[details|http://www.jsik.jp/?paper_award2011]])
+:The Best Application Award at the 2nd CiNii Web API Contest (2010):My application "[[Fuwatto CiNii Author Search|http://fuwat.to/cinii-author]]" got received the Best Application Award. ([[details|http://ci.nii.ac.jp/info/ja/web_api_contest_2010_results.html]])
 
 !!Recent publications
 {{recent_publication}}
