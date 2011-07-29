@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist version="$Revision$">
+  <pub type="misc">
+    <title>1万件超登録を実現したBotノウハウからマッシュアップまで</title>
+    <author>高久雅生</author>
+    <conference>第十一回Wikiばな 特集、saveMLAK</conference>
+    <city>横浜</city>
+    <year>2011</year>
+    <month>8</month>
+    <date>2011-08-27</date>
+    <language>ja</language>
+    <url>http:/wikibana.socoda.net/wiki.cgi?%c2%e8%bd%bd%b0%ec%b2%f3Wiki%a4%d0%a4%ca</url>
+    <note>（発表予定）</note>
+  </pub>
+
   <pub type="conference">
     <title>Changes in Users' Knowledge Structures Before and After Web Search on a Topic: Analysis Using the Concept Map</title>
     <author>Hitomi Saito</author>
@@ -69,7 +82,10 @@
     </page>
     <language>ja</language>
     <date>2011-05-28</date>
-    <url>http://www.jsik.jp/?2011program</url>
+    <!--
+    <url>http://www.jstage.jst.go.jp/article/jsik/21/2/21_123/_article/-char/ja/</url>
+    -->
+    <doi>10.2964/jsik.21_01</doi>
   </pub>
 
   <pub type="misc">
@@ -93,7 +109,10 @@
     </page>
     <language>ja</language>
     <date>2011-05-28</date>
-    <url>http://www.jsik.jp/?2011program</url>
+    <!--
+    <url>http://www.jstage.jst.go.jp/article/jsik/21/2/21_137/_article/-char/ja/</url>
+    -->
+    <doi>10.2964/jsik.21_03</doi>
   </pub>
 
   <pub type="misc">
