@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist version="$Revision$">
+  <pub type="journal">
+    <title>saveMLAKウィキサイト</title>
+    <subtitle>博物館、図書館、文書館、公民館の震災関連情報</subtitle>
+    <author>江草由佳</author>
+    <author>高久雅生</author>
+    <journal>漢字文献情報処理研究</journal>
+    <number>12</number>
+    <year>2011</year>
+    <month>10</month>
+    <date>2011-10-01</date>
+    <language>ja</language>
+    <pages>5p.</pages>
+    <note>（予定）</note>
+  </pub>
+
   <pub type="misc">
     <title>1万件超登録を実現したBotノウハウからマッシュアップまで</title>
     <author>高久雅生</author>
@@ -31,6 +46,18 @@
     <language>en</language>
     <url>http://www.asis.org/asist2011/</url>
     <note>(to appear; accepted as Poster presentation)</note>
+  </pub>
+
+  <pub type="journal">
+    <title>ウェブと情報技術を使って資料と読者・著者を結び付ける</title>
+    <subtitle>物質・材料研究機構における事例から</subtitle>
+    <author>高久雅生</author>
+    <journal>専門図書館</journal>
+    <year>2011</year>
+    <month>9</month>
+    <date>2011-09-30</date>
+    <language>ja</language>
+    <note>（予定）</note>
   </pub>
 
   <pub type="misc">
