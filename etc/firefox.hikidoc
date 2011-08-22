@@ -1,7 +1,7 @@
 title: Firefox: ブックマーク、拡張、設定など
 title.short: Firefox設定集
 date.available: 2006-04-20
-date.modified:  2011-07-08
+date.modified:  2011-08-22
 subject: etc
 
 常用ブラウザとして[[Mozilla Firefox|http://www.mozilla-japan.org/]]を使っていますが、Firefox上でのブックマーク、拡張、設定情報のメモです。
@@ -10,7 +10,8 @@ subject: etc
 !!!ブックマーク・キーワード
 *[[alc|http://eow.alc.co.jp/%s]] （英辞郎検索; by アルク）
 *[[goo|http://dictionary.goo.ne.jp/search.php?MT=%s&kind=jn]] （Goo日本語辞書）
-*[[en|http://encarta.msn.com/dictionary_/%s.html]] （エンカルタ英英辞書）
+//*[[en|http://encarta.msn.com/dictionary_/%s.html]] （エンカルタ英英辞書）
+*[[en|http://www.merriam-webster.com/dictionary/%s]] （Merriam-Webster Dictionary; 英英辞書）
 *[[wp|http://ja.wikipedia.org/wiki/%E7%89%B9%E5%88%A5:Search?search=%s]] （ウィキペディア日本語版）
 //*[[kawaguchi|http://www.kawaguchi-lib.jp/opw1/OPW/OPWSRCHLIST.CSP?DB=LIB&FLG=SEARCH&MODE=1&opr%281%29=OR&qual%281%29=ALL&text%281%29=%s]] （川口市図書館OPAC検索）
 *[[100|http://100.yahoo.co.jp/search?p=%s]] （Yahoo!百科事典; 日本大百科全書）
@@ -26,6 +27,7 @@ subject: etc
 *[[IE View|https://addons.mozilla.org/ja/firefox/addon/35]]
 *[[Link Widget|https://addons.mozilla.org/ja/firefox/addon/2933]]
 *[[LiveHttpHeaders|https://addons.mozilla.org/ja/firefox/addon/3829]]
+*[[Multiproxy Switch|http://multiproxyswitch.blogspot.com/]]
 *[[Page Saver|http://pearlcrescent.com/products/pagesaver/]]
 *[[QuickProxy|https://addons.mozilla.org/ja/firefox/addon/quickproxy/]]
 *[[Resizeable Textarea|https://addons.mozilla.org/ja/firefox/addon/3818]]
