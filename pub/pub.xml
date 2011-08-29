@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist version="$Revision$">
+  <pub type="misc">
+    <title>研究所図書館における図書館システムEnjuの実践（仮）</title>
+    <author>高久雅生</author>
+    <author>谷藤幹子</author>
+    <conference>図書館総合展2011</conference>
+    <year>2011</year>
+    <month>11</month>
+    <date>2011-11-11</date>
+    <note>（発表予定）</note>
+    <url>http://2011.libraryfair.jp/</url>
+  </pub>
   <pub type="journal">
     <title>saveMLAKウィキサイト</title>
     <subtitle>博物館、図書館、文書館、公民館の震災関連情報</subtitle>
@@ -25,8 +36,8 @@
     <month>8</month>
     <date>2011-08-27</date>
     <language>ja</language>
-    <url>http:/wikibana.socoda.net/wiki.cgi?%c2%e8%bd%bd%b0%ec%b2%f3Wiki%a4%d0%a4%ca</url>
-    <note>（発表予定）</note>
+    <slides>http://www.slideshare.net/tmasao/1bot</slides>
+    <url>http://wikibana.socoda.net/wiki.cgi?%c2%e8%bd%bd%b0%ec%b2%f3Wiki%a4%d0%a4%ca</url>
   </pub>
 
   <pub type="conference">
