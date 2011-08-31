@@ -2,7 +2,7 @@
 <!-- $Id$ -->
 <publist version="$Revision$">
   <pub type="misc">
-    <title>研究所図書館における図書館システムEnjuの実践（仮）</title>
+    <title>研究所図書館における図書館システムEnjuの実践</title>
     <author>高久雅生</author>
     <author>谷藤幹子</author>
     <conference>図書館総合展2011</conference>
@@ -12,6 +12,7 @@
     <note>（発表予定）</note>
     <url>http://2011.libraryfair.jp/</url>
   </pub>
+
   <pub type="journal">
     <title>saveMLAKウィキサイト</title>
     <subtitle>博物館、図書館、文書館、公民館の震災関連情報</subtitle>
@@ -66,8 +67,9 @@
     <journal>専門図書館</journal>
     <year>2011</year>
     <month>9</month>
-    <date>2011-09-30</date>
+    <date>2011-09-25</date>
     <language>ja</language>
+    <page>5</page>
     <note>（予定）</note>
   </pub>
 
@@ -75,11 +77,16 @@
     <title>ウェブと情報技術を使って資料と読者・著者を結び付ける</title>
     <author>高久雅生</author>
     <conference>専門図書館協議会 平成23年度全国研究集会</conference>
+    <journal>平成23年度全国研究集会予稿集</journal>
     <city>東京</city>
     <year>2011</year>
     <month>7</month>
     <date>2011-07-01</date>
     <language>ja</language>
+    <page>
+      <start>38</start>
+      <end>39</end>
+    </page>
     <abstract>./2011/sentokyo-abstract.pdf</abstract>
     <url>http://www.jsla.or.jp/1/13/13-2.html</url>
   </pub>
