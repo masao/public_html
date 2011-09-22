@@ -43,7 +43,10 @@ end
 <span class="volume">vol.<%=h volume %>;</span>
 <% end %>
 <% if not number.nil? %>
-<span class="number"><%=h "no." unless type == "techreport"%><%=h number %>;</span>
+<span class="number">no.<%=h number %>;</span>
+<% end %>
+<% if not sequence_number.nil? %>
+<span class="sequence_number"><%=h sequence_number %>;</span>
 <% end %>
 <% if page_start and page_end %>
 <span class="page">pp.<%=h page_start %>-<%=h page_end %>;</span>
