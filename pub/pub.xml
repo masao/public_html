@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist version="$Revision$">
+  <pub type="journal" refereed="true">
+    <title>A method to capture information encountering embedded in exploratory Web searches</title>
+    <author>Makiko Miwa</author>
+    <author>Yuka Egusa</author>
+    <author>Hitomi Saito</author>
+    <author>Masao Takaku</author>
+    <author>Hitoshi Terai</author>
+    <author>Noriko Kando</author>
+    <journal>Information Research</journal>
+    <volume>16</volume>
+    <number>3</number>
+    <sequence-number>487</sequence-number>
+    <year>2011</year>
+    <month>9</month>
+    <date>2011-09-23</date>
+    <language>en</language>
+  </pub>
+
   <pub type="misc">
     <title>研究所図書館における図書館システムEnjuの実践</title>
     <author>高久雅生</author>
@@ -1666,7 +1684,7 @@
     <author>Junya Hayashi</author>
     <title>Building a Terabyte-scale Web Data Collection "NW1000G-04" in the NTCIR-5 WEB Task</title>
     <journal>NII Technical Report</journal>
-    <number>NII-2006-012E</number>
+    <sequence-number>NII-2006-012E</sequence-number>
     <publisher>National Institute of Informatics</publisher>
     <year>2006</year>
     <month>9</month>
@@ -1948,6 +1966,7 @@
       <end>59</end>
     </page>
     <language>ja</language>
+    <url>http://ci.nii.ac.jp/naid/110003351436</url>
   </pub>
 
   <pub type="thesis">
