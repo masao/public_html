@@ -121,6 +121,12 @@
     margin: 2px;
     width: auto;
   }
+
+  /* For banner */
+  .banner {
+    text-align: center;
+  }
+
   /* For BBS */
   div.commentator {
     font-size: larger;
