@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist version="$Revision$">
+  <pub type="misc">
+    <title>NIMS eSciDocからSAMURAI, その先のサービス展開</title>
+    <author>高久雅生</author>
+    <conference>第2回eSciDoc.JPワークショップ</conference>
+    <year>2011</year>
+    <month>10</month>
+    <date>2011-10-13</date>
+    <note>（発表予定）</note>
+    <url>http://www.nims.go.jp/publicity/events/hdfqf10000006hoy.html</url>
+  </pub>
+
   <pub type="journal" refereed="true">
     <title>A method to capture information encountering embedded in exploratory Web searches</title>
     <author>Makiko Miwa</author>
@@ -97,12 +108,16 @@
     <subtitle>物質・材料研究機構における事例から</subtitle>
     <author>高久雅生</author>
     <journal>専門図書館</journal>
+    <number>249</number>
     <year>2011</year>
     <month>9</month>
     <date>2011-09-25</date>
     <language>ja</language>
-    <page>5</page>
-    <note>（予定）</note>
+    <page>
+      <start>72</start>
+      <end>76</end>
+    </page>
+    <url>http://www.jsla.or.jp/1/14/ST/249-s.html#s15</url>
   </pub>
 
   <pub type="misc">
