@@ -2,6 +2,23 @@
 <!-- $Id$ -->
 <publist version="$Revision$">
   <pub type="misc">
+    <title>Web情報探索前後のコンセプトマップの分析</title>
+    <subtitle>探索者によるノード判定結果を用いて</subtitle>
+    <author>江草由佳</author>
+    <author>齋藤ひとみ</author>
+    <author>中島諒</author>
+    <author>高久雅生</author>
+    <author>神門典子</author>
+    <author>三輪眞木子</author>
+    <conference>情報処理学会 第104回情報基礎とアクセス技術研究会・第41回ディジタル図書館ワークショップ 合同研究会</conference>
+    <year>2011</year>
+    <month>11</month>
+    <date>2011-11-22</date>
+    <note>（発表予定）</note>
+    <url>http://ipsj-ifat.org/cfp/20111122/</url>
+  </pub>
+
+  <pub type="misc">
     <title>NIMS eSciDocからSAMURAI, その先のサービス展開</title>
     <author>高久雅生</author>
     <conference>第2回eSciDoc.JPワークショップ</conference>
