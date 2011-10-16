@@ -2,6 +2,18 @@
 <!-- $Id$ -->
 <publist version="$Revision$">
   <pub type="misc">
+    <title>SAMURAI: Extended Services via NIMS eSciDoc and Japanese community</title>
+    <author>Masao Takaku</author>
+    <author>Mikiko Tanifuji</author>
+    <conference>eSciDoc Days 2011</conference>
+    <year>2011</year>
+    <month>10</month>
+    <date>2011-10-26</date>
+    <note>(To appear)</note>
+    <url>https://www.escidoc.org/JSPWiki/en/ESciDocDays2011Program</url>
+  </pub>
+
+  <pub type="misc">
     <title>Web情報探索前後のコンセプトマップの分析</title>
     <subtitle>探索者によるノード判定結果を用いて</subtitle>
     <author>江草由佳</author>
@@ -25,7 +37,6 @@
     <year>2011</year>
     <month>10</month>
     <date>2011-10-13</date>
-    <note>（発表予定）</note>
     <url>http://www.nims.go.jp/publicity/events/hdfqf10000006hoy.html</url>
   </pub>
 
