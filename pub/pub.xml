@@ -2,15 +2,16 @@
 <!-- $Id$ -->
 <publist version="$Revision$">
   <pub type="misc">
-    <title>SAMURAI: Extended Services via NIMS eSciDoc and Japanese community</title>
+    <title>SAMURAI and Library Portal at NIMS</title>
+    <subtitle>Applications of NIMS eSciDoc and eSciDoc Community in Japan</subtitle>
     <author>Masao Takaku</author>
     <author>Mikiko Tanifuji</author>
     <conference>eSciDoc Days 2011</conference>
     <year>2011</year>
     <month>10</month>
     <date>2011-10-26</date>
-    <note>(To appear)</note>
     <url>https://www.escidoc.org/JSPWiki/en/ESciDocDays2011Program</url>
+    <slides>https://www.escidoc.org/pdf/escidoc-days-2011/day1-takaku-samurai.pdf</slides>
   </pub>
 
   <pub type="misc">
@@ -34,9 +35,13 @@
     <title>NIMS eSciDocからSAMURAI, その先のサービス展開</title>
     <author>高久雅生</author>
     <conference>第2回eSciDoc.JPワークショップ</conference>
+    <city>つくば市</city>
     <year>2011</year>
     <month>10</month>
     <date>2011-10-13</date>
+    <url>http://pubman.mpdl.mpg.de/pubman/item/escidoc:1164613</url>
+    <slides>http://pubman.mpdl.mpg.de/pubman/item/escidoc:1164613/component/escidoc:1164610/NIMSeSciDocWorkShop_Takaku_Summary2011Oct.pdf</slides>
+    <slides>http://pubman.mpdl.mpg.de/pubman/item/escidoc:1164613/component/escidoc:1164611/NIMSeSciDocWorkShop_Takaku_Summary2011Oct-en.pdf</slides>
     <url>http://www.nims.go.jp/publicity/events/hdfqf10000006hoy.html</url>
   </pub>
 
@@ -93,10 +98,9 @@
     <number>12</number>
     <year>2011</year>
     <month>10</month>
-    <date>2011-10-01</date>
+    <date>2011-10-30</date>
     <language>ja</language>
     <page>5</page>
-    <note>（予定）</note>
   </pub>
 
   <pub type="misc">
@@ -128,7 +132,7 @@
     <date>2011-10-10</date>
     <language>en</language>
     <url>http://www.asis.org/asist2011/</url>
-    <note>(to appear; accepted as Poster presentation)</note>
+    <note>(presented as Poster presentation)</note>
   </pub>
 
   <pub type="journal">
