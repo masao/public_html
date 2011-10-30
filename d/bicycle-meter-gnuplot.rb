@@ -10,8 +10,11 @@ first_date = Date.parse( dates[0]  ) - 7
 last_date  = Date.parse( dates[-1] ) + 7
 
 monthes = (first_date .. last_date).to_a.select{|d| d.day == 1 }
-bi_monthes = (first_date .. last_date).to_a.select{|d|	# for thumbnail
+bi_monthes = monthes.select{|d|	# for thumbnail
    d.month % 2 == 1 and d.day == 1
+}
+tri_monthes = monthes.select{|d|	# for thumbnail
+   d.month % 3 == 1 and d.day == 1
 }
 #p monthes.map{|e| e.to_s }
 
@@ -37,7 +40,7 @@ EOF
    gnuplot.puts <<EOF
   	  set size .4
 	  set out "bicycle-meter-s.png"
-	  set xtics ( #{ bi_monthes.map{|d| %Q["#{d.to_s}"] }.join(",") } )
+	  set xtics ( #{ tri_monthes.map{|d| %Q["#{d.to_s}"] }.join(",") } )
 	  set y2label "Cumulative Distance (km)" 0,-3
 	  plot ["#{first_date.to_s}":"#{last_date.to_s}"] \
 		"#{DATA_FILE}" using 1:2 with impulses lw 3 notitle, \
