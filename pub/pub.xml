@@ -2,6 +2,18 @@
 <!-- $Id$ -->
 <publist version="$Revision$">
   <pub type="misc">
+    <title>学習型情報探索行動を探る</title>
+    <subtitle>CRES共同研究プロジェクトの成果から</subtitle>
+    <author>高久雅生</author>
+    <conference>人工知能学会 情報編纂研究会 第7回研究会</conference>
+    <year>2011</year>
+    <month>12</month>
+    <date>2011-12-16</date>
+    <url>http://taurus.c.u-tokyo.ac.jp/SigIC/</url>
+    <note>（招待講演; 発表予定）</note>
+  </pub>
+
+  <pub type="misc">
     <title>SAMURAI and Library Portal at NIMS</title>
     <subtitle>Applications of NIMS eSciDoc and eSciDoc Community in Japan</subtitle>
     <author>Masao Takaku</author>
