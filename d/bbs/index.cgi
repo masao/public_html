@@ -31,56 +31,152 @@ my %com_hash;			# コメントを格納するハッシュ
 my $URLCHARS = "[-_.!~*'a-zA-Z0-9;/?:@&=+,%\#\$]";
 
 my $SPAM_BLACKLIST_WORDS = <<EOF;
-your answer solved
-brain power
-cool thinking
-great thinking
-superior thinking
-clever way
-cool way
-home run
 AFAICT
 AFCAIT
 AFICAT
-incredilbe
-thakns
+Arictles
+Awsemoe
+Brilialcne
+Bristih
+Calnlig
+Could you write about
+Divorce
+Excleelnt
+Good job
+Great work
+Halleulajh
+Hey hey hey
+Infortmioan
+Infromaiton
+It's great to read
+Lol thank
+Lol!
+Not bad at all
+Phsiycs
+Scniece
+So much info
+So true
+Sooenme
+Superb information
+Thank God
+Thanks alot
+Thanks for sharing
+Thgouht
+Unrpaalleled
+WINNING!
+Well done
+absoelutly
+accucray
+achieevd
+actulaly
+aenswr
 aenwsr
 aesnwr
+airtcle
+alhrgit
 aneswr
 anewsr
 ansewr
+answeerd
 anwesr
 anwser
+apeapr
+aplpes
+appaer
+apprcieate
+aprepciate
+arctlie
+arictles
+arirevd
+aritcle
+aritlce
+artcile
+artclie
+arteilcs
+artlice
+arvried
 asenwr
 asewnr
+aslbuotely
 asnewr
 asnwer
 aswenr
 aswner
+atilrce
+atrcile
+atricels
+atrilecs
+atrlcie
+awalys
 awnesr
 awnser
 awsenr
+aymnroe
+aynthing
+bdoaciuos
+beettr
+beilvee
 betsest
+bferoe
+bfreoe
 birans
 birnas
+birnay
 bla bla bla bla
+bleeive
+bleivee
+borther
+brain power
+bravo!
+brhoetr
 brinas
 bseetst
 bsetest
+btesset
 cahnge
+cahnigng
+cehered
 celevr
 celver
 cevelr
 cgahne
 cleevr
+clever way
 clveer
+cmnoig
+cmonig
+cnocout
+comlpicaetd
+compliatns
+compuetr
+consfuing
+convoulted
+cool thinking
+cool way
 cveler
 cvleer
 cvoreed
+dazlznig
 demnsortated
+dicattor
+drvier
 ecxelnelt
+edcuaiton
+eesair
 eiasly
+eisaer
+enthlraling
+enuogh
+epxcet
+erdutioin
+esaeir
+esaier
 esaliy
+eseair
+evertyihng
+everynoe
+evryeday
+excatly
 excleelnt
 exclelnet
 exelclent
@@ -88,71 +184,203 @@ exlceelnt
 expeictng
 expetcnig
 exptceing
+exrpet
+exrtmeely
 failnly
+fathom
+feeilng
+feelnig
 fianlly
 filnlay
+firgue
 fnially
+foloish
 gareetst
 garetest
+gdnaer
 geartest
+gertaest
+getnleemn
 getraset
+going for years
+good stuff
+good to know
 graetset
 grateest
+great thinking
 greeatst
 greetast
+gviing
+happeend
+heepld
+heflpul
+helpful article
+helpful information
+helps me
+heplnig
 hleipng
+hlepful
 hlepnig
+hlepufl
+hlpeufl
+home run
+hoolignas
+hpeled
 icrndeible
+idnispensable
+ifnomred
+ifrnomation
+ilncined
+immedaeitly
+immedaitely
+imperssing
 impesrsed
 increbdile
+incredilbe
+indebted
+indispeansble
+infortamoin
+infortmaion
+inofmratvie
+inorfmative
 inrcedblie
 ipmossbile
+is power
+kbaoom
+knlowedge
+knwlodege
+knwodlege
+knwonig
 laoedd
+lcoekd
+learn a lot
+liebrty
 lkonoig
+lkooing
+lokinog
+lokiong
+lokoed
+lonoikg
+looikng
+looinkg
+looknig
+loonkig
 maagned
 magnaed
+mdniight
+miuents
+mknaig
+monoploy
+munties
+my problem
+nciley
+neeedd
+none can doubt
+nothnig
+oenped
+onnlie
+pertty
 pobrmles
+ponits
+porlebm
+potsing
+ppoped
+pragmatisdc
 prbloems
 prboemls
+prbolmes
+preescne
+probelm
 probelms
+probmels
+proelbm
+prseence
+psoting!
+psotnig
 pttunig
+purhcseas
+pworeful
+qeustions
 raelly
 ralely
+rceokn
+really appreciate
+reevlation
+relaible
 relaly
 rellay
+reockn
+rescoure
 rlaely
 rlealy
+roesurce
+saecrehd
+sahring
+sebnsile
+senisble
 seomnoe
 seotmhing
+sepkas
+seriusoly
+sesnlibe
 sglguing
 shloud
 shluod
+shnziit
+shoratge
 shulod
 skopoy
 slohud
+smoehntig
 smoenoe
+smoeone
 smoneoe
 sodnus
 soeomne
+sohlud
+solhud
 somenoe
 somethnig
 sometnhig
 sometnihg
 somteinhg
 sopkoy
+soveld
 spkooy
+sppusoes
+spurrsied
+srhanig
+srhwed
+ssnebile
 stdnas
 stgrugling
 sturgglnig
+sublmie
+succnict
+such greatness
+suciccnt
 suodns
+superior thinking
+suppsoes
 svoled
+svreeal
+sweetheart
+taelnt
+tahknful
 tahkns
 tahnks
 taknhs
+talnikg
 tanhks
+tcriky
+terrfiic
 tghins
+thakns
+thanks for he answer
+thanks for posting
 thgins
 thguhot
+thienkr
 thigns
 thiinnkg
 thikning
@@ -163,15 +391,18 @@ thinnikg
 thkinnig
 thkninig
 thnaks
-thnaks
 thngis
+thnigs
 thniinkg
 thniknig
+thninikg
 thninkig
 thnkas
 thnkiing
+thoghut
 thohugt
 thuoght
+tieckt
 tihgns
 tihkning
 tihngs
@@ -181,16 +412,45 @@ tihnnkig
 tinhgs
 tinhking
 tinhknig
+tiopcs
 tkhinnig
+tkhnaful
+tlanet
 tnakhs
+tnghis
 tnhgis
 tnhiinkg
+tnhiknig
 tnhkiing
+tocpis
+tohrugh
 tohuhgt
 touchdown
 touhght
+trencahnt
+trikcy
+truly appreciate
 tuhoght
 tuhohgt
+tuohhgt
+udnersatnd
+udnesrtand
+ufseul
+uiltzie
+wanetd
+web20power
+webiste
+weeeknd
+witohut
+wohrty
+wrierts
+wrintig
+writnig
+wrtiing
+wrtinig
+wsebites
+wtiring
+your answer solved
 EOF
 
 # ユーザ設定ファイルの読み込み
@@ -298,6 +558,9 @@ if ($mode eq "write") {
 	error("複数のURLが書かれています。\nYour comment contains too many URLs.") if scalar(@spam) > 2;
 
 	# 特定の文字列を禁止
+	my $spam_regex = join( "|", split( /\n/, $SPAM_BLACKLIST_WORDS ) );
+	@spam = ($body =~ /\b($spam_regex)\b/gmio);
+	error("禁止された語句が含まれています。\nYour comment contains one or more stop words, such as 'cool','funny' etc.") if scalar(@spam) > 0;
 	@spam = ($body =~ /\b(good|nice|cool|funny|best|great) (site|post)/gmoi);
 	error("禁止された語句が含まれています。\nYour comment contains one or more stop words, such as 'cool','funny' etc.") if scalar(@spam) > 0;
 	@spam = ($body =~ /\b(brain power|gareetst|aswenr|asnwer|awnesr|awnser|aneswr|asnewr|aswner|anwesr|cevelr|cleevr|impesrsed|inrcedblie|tahnks|tahkns|taknhs|thniknig|tihnknig|celver|seomnoe|hlepnig|magnaed|birnas|thuoght|slohud|suodns|fnially|rlaely|raelly|eiasly|fnially)\b/gmoi);
