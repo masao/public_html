@@ -34,37 +34,69 @@ my $SPAM_BLACKLIST_WORDS = <<EOF;
 AFAICT
 AFCAIT
 AFICAT
+Always a good job
 Arictles
+Aritecls
+Awosmee
 Awsemoe
 Brilialcne
+Brilliance
 Bristih
 Calnlig
 Could you write about
+Death Star
 Divorce
+Exelcenlt
 Excleelnt
 Good job
+Got it!
+Grade A stuff
 Great work
 Halleulajh
 Hey hey hey
+Ho ho
+I love reading these articles
+I really appreciate free
+I sure appreciate
+I thought finding this
 Infortmioan
 Infromaiton
 It's great to read
+Keep on writing
+Kudos!
+Kudos to you
 Lol thank
 Lol!
+More power to you
 Not bad at all
+Not the usual
 Phsiycs
+Ppl like you
 Scniece
 So much info
 So true
 Sooenme
+Suepiror
 Superb information
 Thank God
 Thanks alot
 Thanks for sharing
+Thanks for taking the time
+Thanks for writing
+Thanks guys
+That saves me.
+There is a critical shortage
+This makes everything
 Thgouht
+This article achieved
 Unrpaalleled
 WINNING!
+Way to go on
 Well done
+What a joy to find someone
+Wheevor
+Woah nelly
+a lot easier from here
 absoelutly
 accucray
 achieevd
@@ -72,6 +104,7 @@ actulaly
 aenswr
 aenwsr
 aesnwr
+airclte
 airtcle
 alhrgit
 aneswr
@@ -83,9 +116,12 @@ anwser
 apeapr
 aplpes
 appaer
+apprceita
 apprcieate
 aprepciate
+arctile
 arctlie
+aricetls
 arictles
 arirevd
 aritcle
@@ -101,15 +137,20 @@ aslbuotely
 asnewr
 asnwer
 aswenr
+asweome
 aswner
 atilrce
+atircle
+atrciles
 atrcile
 atricels
+atricle
 atrilecs
 atrlcie
 awalys
 awnesr
 awnser
+awsemoe
 awsenr
 aymnroe
 aynthing
@@ -125,11 +166,13 @@ birnay
 bla bla bla bla
 bleeive
 bleivee
+bodacoius
 borther
 brain power
 bravo!
 brhoetr
 brinas
+brngis
 bseetst
 bsetest
 btesset
@@ -140,8 +183,12 @@ celevr
 celver
 cevelr
 cgahne
+chganing
+cilcked
+claered
 cleevr
 clever way
+cloudn't
 clveer
 cmnoig
 cmonig
@@ -149,17 +196,22 @@ cnocout
 comlpicaetd
 compliatns
 compuetr
+conmig
 consfuing
 convoulted
 cool thinking
 cool way
+couldn't pay me to
 cveler
 cvleer
 cvoreed
 dazlznig
 demnsortated
 dicattor
+dilaspy
 drvier
+ecxelelnt
+ecxellnet
 ecxelnelt
 edcuaiton
 eesair
@@ -168,11 +220,14 @@ eisaer
 enthlraling
 enuogh
 epxcet
+epxlain
 erdutioin
 esaeir
 esaier
 esaliy
 eseair
+esesntial
+etinrely
 evertyihng
 everynoe
 evryeday
@@ -193,8 +248,10 @@ feelnig
 fianlly
 filnlay
 firgue
+fiurgnig
 fnially
 foloish
+for years without knowing
 gareetst
 garetest
 gdnaer
@@ -202,16 +259,24 @@ geartest
 gertaest
 getnleemn
 getraset
+gettnig
 going for years
 good stuff
 good to know
+gooldy
+goooooal
 graetset
 grateest
+greaestt
 great thinking
 greeatst
 greetast
+gtreaset
 gviing
+halsse
 happeend
+have to be the case
+hear from you
 heepld
 heflpul
 helpful article
@@ -225,12 +290,19 @@ hlepufl
 hlpeufl
 home run
 hoolignas
+hpaepir
+hpeflul
 hpeled
 icrndeible
+idinspensable
 idnispensable
+ifnmoratoin
 ifnomred
+ifnoramtion
 ifrnomation
+ignronat
 ilncined
+imemdiately
 immedaeitly
 immedaitely
 imperssing
@@ -239,26 +311,36 @@ increbdile
 incredilbe
 indebted
 indispeansble
+informative article
+informatvie
 infortamoin
 infortmaion
 inofmratvie
+inoframtion
+inoframtvie
 inorfmative
 inrcedblie
+intrenet
 ipmossbile
 is power
 kbaoom
+keyaobrd
 knlowedge
 knwlodege
 knwodlege
 knwonig
+konlwedge
+kyeborad
 laoedd
 lcoekd
 learn a lot
 liebrty
 lkonoig
 lkooing
+loiokn
 lokinog
 lokiong
+loknoig
 lokoed
 lonoikg
 looikng
@@ -266,23 +348,38 @@ looinkg
 looknig
 loonkig
 maagned
+macamdaia
 magnaed
+mainkg
 mdniight
+miknag
+mituens
 miuents
 mknaig
+mnitue
 monoploy
+more from this article
 munties
 my problem
+nbaibt
 nciley
+ndeeed
 neeedd
 none can doubt
 nothnig
 oenped
 onnlie
+paajmas
+padrenr
 pertty
+pjaaams
 pobrmles
+poeuwrfl
 ponits
 porlebm
+posntigs
+possbliy
+potsings
 potsing
 ppoped
 pragmatisdc
@@ -292,6 +389,7 @@ prbolmes
 preescne
 probelm
 probelms
+problem solved
 probmels
 proelbm
 prseence
@@ -299,23 +397,38 @@ psoting!
 psotnig
 pttunig
 purhcseas
+put aside a whole afternoon
+pwoerufl
 pworeful
+qaulity
 qeustions
 raelly
 ralely
 rceokn
 really appreciate
+really informative
+reemmber
 reevlation
+reiandg
 relaible
 relaly
 rellay
+reocgniezd
 reockn
 rescoure
+resorcue
 rlaely
 rlealy
+rlelay
+rnunnig
 roesurce
+rpseect
+rseocrue
 saecrehd
 sahring
+satsifeid
+satifsied
+scucinct
 sebnsile
 senisble
 seomnoe
@@ -324,19 +437,26 @@ sepkas
 seriusoly
 sesnlibe
 sglguing
+sharnig
 shloud
 shluod
 shnziit
 shoratge
 shulod
 skopoy
+slhuod
 slohud
 smoehntig
 smoenoe
 smoeone
 smoneoe
+smoonee
+snseible
+snushnie
+so much learning
 sodnus
 soeomne
+sohcked
 sohlud
 solhud
 somenoe
@@ -345,6 +465,7 @@ sometnhig
 sometnihg
 somteinhg
 sopkoy
+soutolin
 soveld
 spkooy
 sppusoes
@@ -354,14 +475,19 @@ srhwed
 ssnebile
 stdnas
 stgrugling
+stnadard
+stucrk
 sturgglnig
 sublmie
 succnict
 such greatness
 suciccnt
 suodns
+suonds
+super helpful
 superior thinking
 suppsoes
+susnnhie
 svoled
 svreeal
 sweetheart
@@ -369,6 +495,7 @@ taelnt
 tahknful
 tahkns
 tahnks
+tailkng
 taknhs
 talnikg
 tanhks
@@ -379,15 +506,18 @@ thakns
 thanks for he answer
 thanks for posting
 thgins
+thgnis
 thguhot
 thienkr
 thigns
 thiinnkg
 thikning
 thiknnig
+thinikng
 thininkg
 thinknig
 thinnikg
+this is so cool
 thkinnig
 thkninig
 thnaks
@@ -402,6 +532,7 @@ thnkiing
 thoghut
 thohugt
 thuoght
+ticrky
 tieckt
 tihgns
 tihkning
@@ -416,8 +547,10 @@ tiopcs
 tkhinnig
 tkhnaful
 tlanet
+tnahks
 tnakhs
 tnghis
+tnhaks
 tnhgis
 tnhiinkg
 tnhiknig
@@ -425,32 +558,47 @@ tnhkiing
 tocpis
 tohrugh
 tohuhgt
+topic-bravo
 touchdown
 touhght
 trencahnt
 trikcy
 truly appreciate
+ttoally
 tuhoght
 tuhohgt
 tuohhgt
+ubneilevblae
 udnersatnd
 udnesrtand
 ufseul
 uiltzie
+unebilevbale
+vlauables
+vuallabe
 wanetd
+watching for your posts
 web20power
 webiste
 weeeknd
+what a quick and easy
+where to find this info
 witohut
+witring
+wnodreing
 wohrty
 wrierts
 wrintig
 writnig
 wrtiing
 wrtinig
+wrtohy
+wrttien
 wsebites
 wtiring
+wuodla
 your answer solved
+your post makes mine
 EOF
 
 # ユーザ設定ファイルの読み込み
@@ -558,8 +706,8 @@ if ($mode eq "write") {
 	error("複数のURLが書かれています。\nYour comment contains too many URLs.") if scalar(@spam) > 2;
 
 	# 特定の文字列を禁止
-	my $spam_regex = join( "|", split( /\n/, $SPAM_BLACKLIST_WORDS ) );
-	@spam = ($body =~ /\b($spam_regex)\b/gmio);
+	my $spam_regex = join( '|', map { quotemeta($_) } split( /\n/, $SPAM_BLACKLIST_WORDS ) );
+	@spam = ($body =~ /(\b|\s)($spam_regex)(\b|\s)/gmio);
 	error("禁止された語句が含まれています。\nYour comment contains one or more stop words, such as 'cool','funny' etc.") if scalar(@spam) > 0;
 	@spam = ($body =~ /\b(good|nice|cool|funny|best|great) (site|post)/gmoi);
 	error("禁止された語句が含まれています。\nYour comment contains one or more stop words, such as 'cool','funny' etc.") if scalar(@spam) > 0;
@@ -576,6 +724,8 @@ if ($mode eq "write") {
 
 	# 特定のURLを禁止
 	@spam = ($body =~ /\bhttps?:\/\/(\w+\.)?google\.(com|us|jp)\/group\/\w?\w?(ticket|teens)/gmoi);
+	error("禁止されたURLが含まれています。\nYour comment contains a spamming URL.") if scalar(@spam) > 0;
+	@spam = ($body =~ /\bhttps?:\/\/(ylm\.me|jtgvrqveco.com)/gmoi);
 	error("禁止されたURLが含まれています。\nYour comment contains a spamming URL.") if scalar(@spam) > 0;
 
 	# 特定のアドレスからの投稿を禁止
@@ -784,6 +934,8 @@ ADD
 sub get_latest_list {
     my @fl = <$log_dir/*.log>;
     my @lalist;
+    my $spam_regex = join( '|', map { quotemeta($_) } split( /\n/, $SPAM_BLACKLIST_WORDS ) );
+    print STDERR $spam_regex;
     foreach my $f (@fl) {
 	open(F, $f) or die "$! $f";
 	next if (-s $f == 0);
@@ -791,10 +943,8 @@ sub get_latest_list {
 	my %hash;
 	my ($id) = ($f =~ /([^\/]+)\.log$/);
 	set_comment_hash(\%hash, \$all);
-	my $spam_regex = join( "|", split( /\n/, $SPAM_BLACKLIST_WORDS ) );
-	#print STDERR $spam_regex;
 	foreach my $i (keys %hash) {
-	    next if $hash{$i}{'m'} =~ /\b($spam_regex)\b/io;
+	    next if $hash{$i}{'m'} =~ /(\b|\s)($spam_regex)(\b|\s)/mio;
 	    push @lalist, {d => $hash{$i}{'d'}, m => $hash{$i}{'m'},
 			   n => $hash{$i}{'n'}, i => $id,
 			   ii => $i,
