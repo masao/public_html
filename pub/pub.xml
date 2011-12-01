@@ -39,8 +39,8 @@
     <year>2011</year>
     <month>11</month>
     <date>2011-11-22</date>
-    <note>（発表予定）</note>
-    <url>http://ipsj-ifat.org/cfp/20111122/</url>
+    <url>http://id.nii.ac.jp/1001/00078502</url>
+    <slides>http://www.slideshare.net/yegusa/20111122-104ifat</slides>
   </pub>
 
   <pub type="misc">
@@ -77,15 +77,14 @@
   </pub>
 
   <pub type="misc">
-    <title>研究所図書館における図書館システムEnjuの実践</title>
+    <title>物質・材料研究機構におけるNext-L Enjuの採用、導入と今後</title>
     <author>高久雅生</author>
-    <author>谷藤幹子</author>
-    <conference>図書館総合展2011</conference>
+    <conference>第13回図書館総合展フォーラム「実用段階に入った次世代図書館システムProject Next-L」</conference>
     <year>2011</year>
     <month>11</month>
     <date>2011-11-11</date>
-    <note>（発表予定）</note>
-    <url>http://2011.libraryfair.jp/</url>
+    <url>http://2011.libraryfair.jp/node/169</url>
+    <slides>http://www.slideshare.net/tmasao/nextl-enju</slides>
   </pub>
 
   <pub type="misc">
@@ -112,7 +111,11 @@
     <month>10</month>
     <date>2011-10-30</date>
     <language>ja</language>
-    <page>5</page>
+    <page>
+      <start>104</start>
+      <end>108</end>
+    </page>
+    <url>http://www.jaet.gr.jp/jj/12.html</url>
   </pub>
 
   <pub type="misc">
@@ -1858,6 +1861,7 @@
       <end>22</end>
     </page>
     <language>ja</language>
+    <url>http://ci.nii.ac.jp/naid/110003320769</url>
   </pub>
 
   <pub refereed="true" type="journal">
@@ -1875,6 +1879,7 @@
       <end>17</end>
     </page>
     <language>ja</language>
+    <url>http://ci.nii.ac.jp/naid/110003320787</url>
   </pub>
 
   <pub refereed="true" type="conference">
@@ -1911,6 +1916,7 @@
       <end>22</end>
     </page>
     <language>ja</language>
+    <url>http://ci.nii.ac.jp/naid/110003320760</url>
   </pub>
 
   <pub refereed="true" type="journal">
@@ -1929,6 +1935,7 @@
       <end>10</end>
     </page>
     <language>ja</language>
+    <url>http://ci.nii.ac.jp/naid/110003320695</url>
   </pub>
 
   <pub type="misc">
@@ -1950,6 +1957,8 @@
       <end>8</end>
     </page>
     <language>ja</language>
+    <url>http://id.nii.ac.jp/1001/00040390/</url>
+    <url>http://ci.nii.ac.jp/naid/110002934355</url>
   </pub>
 
   <pub type="misc">
