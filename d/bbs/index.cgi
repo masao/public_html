@@ -31,71 +31,144 @@ my %com_hash;			# コメントを格納するハッシュ
 my $URLCHARS = "[-_.!~*'a-zA-Z0-9;/?:@&=+,%\#\$]";
 
 my $SPAM_BLACKLIST_WORDS = <<EOF;
+A bit surprised
 AFAICT
 AFCAIT
 AFICAT
+All of my questions
+All posts of this
 Always a good job
 Arictles
 Aritecls
+Articles like this
 Awosmee
 Awsemoe
 Brilialcne
 Brilliance
 Bristih
 Calnlig
+Cool!
 Could you write about
 Death Star
 Divorce
-Exelcenlt
+Excellent!
 Excleelnt
+Execlelnt
+Exelcenlt
+Fell out of bed
+Gee whiz
 Good job
 Got it!
 Grade A stuff
+Great common sense
+Great hammer
+Great stuff
 Great work
 Halleulajh
 Hey hey hey
 Ho ho
+Holy Toledo
+Hot damn
+I can already tell
+I don't hate it
+I feel so much
+I found this article
+I found this info
 I love reading these articles
 I really appreciate free
+I saw this post
 I sure appreciate
 I thought finding this
+I was the sensible one
+I wish I would have had
+I would find this
+I'd have to pay
+I'd thought of
+I'm impressed
+I'm quite pleased
+I'm so glad
+I've been informed
+I've finally found
+Infomrtaion
 Infortmioan
 Infromaiton
+It was dark
 It's great to read
+keep on reading
 Keep on writing
-Kudos!
 Kudos to you
+Kudos!
+Learning a ton
 Lol thank
+Lol thanks
 Lol!
+Many many quality
+Mighty useful
 More power to you
+Never would have thunk
+Nice posting
 Not bad at all
 Not the usual
 Phsiycs
+Play informative
 Ppl like you
+San Diego
 Scniece
+Shoot,
+Slam dunkin
 So much info
 So true
+Someone who understands
+Son of a gun
 Sooenme
+Stands back
+Stay with this guys
 Suepiror
+Super excited
+Super informative
+Super jazzed
 Superb information
+Superbly illuminating
+Supieror
 Thank God
 Thanks alot
+Thanks for hanging out
+Thanks for posting
+Thanks for setting me
 Thanks for sharing
 Thanks for taking the time
+Thanks for the insight
+Thanks for the news
 Thanks for writing
 Thanks guys
+Thanky
 That saves me.
+There are no words
 There is a critical shortage
-This makes everything
 Thgouht
 This article achieved
+This has made my day
+This information is off
+This makes everything
+Tip top
 Unrpaalleled
+Very true
+Very valid
+View my complete
 WINNING!
 Way to go on
 Well done
+Well put
+What a joy
 What a joy to find someone
 Wheevor
+Whoa, whoa
 Woah nelly
+Wow! Great
+You know what
+You really found
+You saved me
+You've hit the ball
 a lot easier from here
 absoelutly
 accucray
@@ -104,9 +177,13 @@ actulaly
 aenswr
 aenwsr
 aesnwr
+aftrneoon
 airclte
 airtcle
 alhrgit
+all my problems
+allows free info like this
+amlsot
 aneswr
 anewsr
 ansewr
@@ -116,6 +193,7 @@ anwser
 apeapr
 aplpes
 appaer
+apprceiaiton
 apprceita
 apprcieate
 aprepciate
@@ -126,9 +204,11 @@ arictles
 arirevd
 aritcle
 aritlce
+aritlces
 artcile
 artclie
 arteilcs
+article perfectly
 artlice
 arvried
 asenwr
@@ -139,12 +219,15 @@ asnwer
 aswenr
 asweome
 aswner
+atcriles
 atilrce
 atircle
-atrciles
+atircles
 atrcile
+atrciles
 atricels
 atricle
+atrilce
 atrilecs
 atrlcie
 awalys
@@ -152,48 +235,78 @@ awnesr
 awnser
 awsemoe
 awsenr
+awsner
 aymnroe
 aynthing
+back from the keyboard
 bdoaciuos
 beettr
 beilvee
 betsest
+betsset
+better than a brick
 bferoe
 bfreoe
+big help
 birans
+birllanit
 birnas
 birnay
 bla bla bla bla
 bleeive
 bleivee
+bocdiauos
 bodacoius
 borther
 brain power
 bravo!
 brhoetr
+brightened my day
 brinas
+brings light into
+brliialnt
 brngis
 bseetst
 bsetest
 btesset
+bteter
+btteer
+bullsyee
+buy these articles
 cahnge
 cahnigng
+calling up people
+ceelvr
 cehered
+cehreed
 celevr
 celver
 cevelr
+cevler
 cgahne
 chganing
+chugging away
+ciclked
 cilcked
 claered
+cleared it up
 cleevr
+clever 4
+clever by half
 clever way
 cloudn't
 clveer
+cmiong
+cmmoon
 cmnoig
 cmonig
+cnfoused
 cnocout
+cnocrens
+come up with that
+come up with the
 comlpicaetd
+completely painless
 compliatns
 compuetr
 conmig
@@ -202,6 +315,8 @@ convoulted
 cool thinking
 cool way
 couldn't pay me to
+crietanly
+cteairnly
 cveler
 cvleer
 cvoreed
@@ -209,7 +324,13 @@ dazlznig
 demnsortated
 dicattor
 dilaspy
+doctor ordered
+doing so much
+doors for me
 drvier
+easily impressed
+easy-to-understand article
+ecxalty
 ecxelelnt
 ecxellnet
 ecxelnelt
@@ -225,9 +346,11 @@ erdutioin
 esaeir
 esaier
 esaliy
+esbtalishment
 eseair
 esesntial
 etinrely
+etneilry
 evertyihng
 everynoe
 evryeday
@@ -241,92 +364,153 @@ expetcnig
 exptceing
 exrpet
 exrtmeely
+facts available here
 failnly
 fathom
+fabluous
+fbauolus
+fbualous
 feeilng
 feelnig
 fianlly
 filnlay
+finally found
 firgue
 fiurgnig
 fnially
 foloish
+for years without
 for years without knowing
 gareetst
 garetest
 gdnaer
+geaertst
 geartest
 gertaest
+get this online
 getnleemn
 getraset
+getting that know-how
 gettnig
+giivng
+give it a shot
 going for years
+going to talk to
 good stuff
+good to find someone
+good to find
 good to know
 gooldy
 goooooal
+got it in one
+goto expert
+graeetst
 graetset
 grateest
 greaestt
+greaetst
+great info
+great internet
 great thinking
+great to me
 greeatst
 greetast
 gtreaset
 gviing
 halsse
 happeend
+hard to find out
+have thought of that
 have to be the case
+have you on our side
 hear from you
+heelpd
 heepld
 heflpul
+helfpul
+hella easy
+help tons
 helpful article
 helpful information
+helping me out
 helps me
+heplful
 heplnig
+hit the ball
+hizool
+hlefpul
 hleipng
 hlepful
 hlepnig
 hlepufl
+hlpeed
 hlpeufl
 home run
 hoolignas
+how clever some
 hpaepir
 hpeflul
 hpeled
+icnlnied
 icrndeible
 idinspensable
 idnispensable
 ifnmoratoin
 ifnomred
 ifnoramtion
+ifnoratimve
+ifnormation
 ifrnomation
 ignronat
+illuimnating
+illumniaitng
+ilulmintaing
 ilncined
 imemdiately
 immedaeitly
 immedaitely
 imperssing
 impesrsed
+impressing me!
+in the same forum
 increbdile
 incredilbe
 indebted
 indispeansble
+infoarmtion
+infomraiton
+infomrtaion
 informative article
+informatoin
 informatvie
 infortamoin
 infortmaion
+infromaitve
 inofmratvie
 inoframtion
 inoframtvie
+inofrmtaion
 inorfmative
 inrcedblie
+internet writer
+intreent
 intrenet
 ipmossbile
 is power
+it all makes sense
+job on that
+just like these articles
+just logic
+just read this
 kbaoom
+kbeyoard
 keyaobrd
+keybroad
+kliler
 knlowedge
+know everything
 knwlodege
+knwloedge
 knwodlege
 knwonig
 konlwedge
@@ -335,8 +519,10 @@ laoedd
 lcoekd
 learn a lot
 liebrty
+like a classroom
 lkonoig
 lkooing
+logic set out
 loiokn
 lokinog
 lokiong
@@ -345,44 +531,68 @@ lokoed
 lonoikg
 looikng
 looinkg
+looking for your posts
 looknig
+loonikg
 loonkig
+love of God
 maagned
 macamdaia
+made my day
 magnaed
 mainkg
+mangaed
+marvelously good
 mdniight
 miknag
 mituens
 miuents
 mknaig
 mnitue
+mold-breaker
 monoploy
 more from this article
+mortar establishment
 munties
 my problem
 nbaibt
 nciley
 ndeeed
+neat articles
+nedeed
 neeedd
+nelicy
+nice work!
 none can doubt
 nothnig
+ntoihng
 oenped
 onnlie
 paajmas
 padrenr
+pay me to ignore
+pepyaka
+perfect way
 pertty
+pianelss
 pjaaams
+pjamaas
+pleasure to read
 pobrmles
 poeuwrfl
 ponits
+porlebms
 porlebm
 posntigs
+possbily
 possbliy
-potsings
+potinsg
 potsing
+potsings
+powerfully helpful
 ppoped
 pragmatisdc
+prbloem
 prbloems
 prboemls
 prbolmes
@@ -391,27 +601,39 @@ probelm
 probelms
 problem solved
 probmels
+prodigious writers
 proelbm
 prseence
+prsoen
+psosilby
 psoting!
 psotnig
 pttunig
 purhcseas
 put aside a whole afternoon
+put it better
+put this to good use
 pwoerufl
 pworeful
 qaulity
 qeustions
+qluaity
+queistnos
+qusetions
 raelly
 ralely
+ralley
 rceokn
 really appreciate
+really cool way of
 really informative
+really neat
 reemmber
 reevlation
 reiandg
 relaible
 relaly
+reliable data like this
 rellay
 reocgniezd
 reockn
@@ -420,62 +642,92 @@ resorcue
 rlaely
 rlealy
 rlelay
+rmemeber
 rnunnig
 roesurce
+rotten egg
 rpseect
 rseocrue
+rsourece
+s***
 saecrehd
 sahring
-satsifeid
+sarhing
 satifsied
+satsifeid
+save me time
+sceert
+sceret
 scucinct
 sebnsile
+seecrt
+semlls
 senisble
 seomnoe
 seotmhing
 sepkas
+sercet about your post
 seriusoly
 sesnlibe
+setting me straight
 sglguing
+shanrig
+sharing your wisdom
 sharnig
+shed a ray
 shloud
 shluod
 shnziit
 shoratge
+shranig
 shulod
+siplme
 skopoy
+slainet
 slhuod
 slohud
 smoehntig
+smoething
 smoenoe
 smoeone
 smoneoe
+smooene
 smoonee
 snseible
 snushnie
 so much learning
+so much simpler
+socks off
 sodnus
+soelvd
 soeomne
 sohcked
 sohlud
 solhud
 somenoe
+someone comes up with
+something I agree
 somethnig
 sometnhig
 sometnihg
+somneoe
 somteinhg
 sopkoy
 soutolin
 soveld
 spkooy
+sppuoess
 sppusoes
 spurrsied
+sreect
 srhanig
 srhwed
 ssnebile
+standard in the industry
 stdnas
 stgrugling
 stnadard
+stnadrad
 stucrk
 sturgglnig
 sublmie
@@ -487,6 +739,7 @@ suonds
 super helpful
 superior thinking
 suppsoes
+surprsied
 susnnhie
 svoled
 svreeal
@@ -496,28 +749,39 @@ tahknful
 tahkns
 tahnks
 tailkng
+take the next step
 taknhs
 talnikg
 tanhks
 tcriky
+tealnt
 terrfiic
 tghins
 thakns
+thank you humbly
 thanks for he answer
 thanks for posting
+thanks to your posts
+thanukfl
+that really helped
 thgins
 thgnis
 thguhot
 thienkr
 thigns
 thiinnkg
+thikinng
 thikning
 thiknnig
 thinikng
 thininkg
+thinking demonstrated
 thinknig
+thinks this way
 thinnikg
+this helped me
 this is so cool
+this makes it understandable
 thkinnig
 thkninig
 thnaks
@@ -527,6 +791,7 @@ thniinkg
 thniknig
 thninikg
 thninkig
+thnkaful
 thnkas
 thnkiing
 thoghut
@@ -535,6 +800,7 @@ thuoght
 ticrky
 tieckt
 tihgns
+tihiknng
 tihkning
 tihngs
 tihnking
@@ -547,6 +813,7 @@ tiopcs
 tkhinnig
 tkhnaful
 tlanet
+tleant
 tnahks
 tnakhs
 tnghis
@@ -558,37 +825,64 @@ tnhkiing
 tocpis
 tohrugh
 tohuhgt
+toltaly
+tons of links
+top of the game
 topic-bravo
 touchdown
 touhght
 trencahnt
 trikcy
+true I guess
 truly appreciate
 ttoally
 tuhoght
 tuhohgt
 tuohhgt
+turthflluy
 ubneilevblae
 udnersatnd
 udnesrtand
 ufseul
 uiltzie
 unebilevbale
+useufl
+valaulbes
+valubaels
+vauallbes
 vlauables
 vuallabe
 wanetd
+want to get read
+was looking everywhere
 watching for your posts
+way more helpful
 web20power
 webiste
 weeeknd
+what I was needed
+what I needed
 what a quick and easy
+what's up
+way of thinking about
 where to find this info
+who you wrote this
+wirter
 witohut
 witring
+wnodernig
 wnodreing
+wodnernig
+wodnreing
 wohrty
+woke up down
+wondreing
+wonedrnig
+wothry
 wrierts
 wrintig
+write for me
+write more
 writnig
 wrtiing
 wrtinig
@@ -597,6 +891,7 @@ wrttien
 wsebites
 wtiring
 wuodla
+you struck us
 your answer solved
 your post makes mine
 EOF
@@ -709,7 +1004,7 @@ if ($mode eq "write") {
 	my $spam_regex = join( '|', map { quotemeta($_) } split( /\n/, $SPAM_BLACKLIST_WORDS ) );
 	@spam = ($body =~ /(\b|\s)($spam_regex)(\b|\s)/gmio);
 	error("禁止された語句が含まれています。\nYour comment contains one or more stop words, such as 'cool','funny' etc.") if scalar(@spam) > 0;
-	@spam = ($body =~ /\b(good|nice|cool|funny|best|great) (site|post)/gmoi);
+	@spam = ($body =~ /\b(good|nice|cool|funny|best|great|neat|sweet|wonderful|big|super|informative|salient|awesome|easy-to-understand|brilliant) (site|post|work|article|job|help|answer|point|info|internet|way)/gmoi);
 	error("禁止された語句が含まれています。\nYour comment contains one or more stop words, such as 'cool','funny' etc.") if scalar(@spam) > 0;
 	@spam = ($body =~ /\b(brain power|gareetst|aswenr|asnwer|awnesr|awnser|aneswr|asnewr|aswner|anwesr|cevelr|cleevr|impesrsed|inrcedblie|tahnks|tahkns|taknhs|thniknig|tihnknig|celver|seomnoe|hlepnig|magnaed|birnas|thuoght|slohud|suodns|fnially|rlaely|raelly|eiasly|fnially)\b/gmoi);
 	error("禁止された語句が含まれています。\nYour comment contains one or more stop words, such as 'cool','funny' etc.") if scalar(@spam) > 0;
@@ -944,7 +1239,7 @@ sub get_latest_list {
 	my ($id) = ($f =~ /([^\/]+)\.log$/);
 	set_comment_hash(\%hash, \$all);
 	foreach my $i (keys %hash) {
-	    next if $hash{$i}{'m'} =~ /(\b|\s)($spam_regex)(\b|\s)/mio;
+	    # next if $hash{$i}{'m'} =~ /(\b|\s)($spam_regex)(\b|\s)/mio;
 	    push @lalist, {d => $hash{$i}{'d'}, m => $hash{$i}{'m'},
 			   n => $hash{$i}{'n'}, i => $id,
 			   ii => $i,
