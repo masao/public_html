@@ -50,7 +50,9 @@ Calnlig
 Cool!
 Could you write about
 Death Star
+Deep thought
 Divorce
+Essays like this
 Excellent!
 Excleelnt
 Execlelnt
@@ -69,12 +71,16 @@ Hey hey hey
 Ho ho
 Holy Toledo
 Hot damn
+How neat
 I can already tell
+I can count on
 I don't hate it
 I feel so much
+I found myself
 I found this article
 I found this info
 I love reading these articles
+I love these articles
 I really appreciate free
 I saw this post
 I sure appreciate
@@ -94,11 +100,11 @@ Infortmioan
 Infromaiton
 It was dark
 It's great to read
-keep on reading
 Keep on writing
 Kudos to you
 Kudos!
 Learning a ton
+Life is short
 Lol thank
 Lol thanks
 Lol!
@@ -107,6 +113,7 @@ Mighty useful
 More power to you
 Never would have thunk
 Nice posting
+Noralmly
 Not bad at all
 Not the usual
 Phsiycs
@@ -149,6 +156,7 @@ Thgouht
 This article achieved
 This has made my day
 This information is off
+This is what we need
 This makes everything
 Tip top
 Unrpaalleled
@@ -169,6 +177,7 @@ You know what
 You really found
 You saved me
 You've hit the ball
+Your cranium
 a lot easier from here
 absoelutly
 accucray
@@ -205,7 +214,8 @@ arirevd
 aritcle
 aritlce
 aritlces
-artcile
+arltices
+arrtcile
 artclie
 arteilcs
 article perfectly
@@ -284,6 +294,7 @@ celver
 cevelr
 cevler
 cgahne
+cgwho
 chganing
 chugging away
 ciclked
@@ -321,6 +332,8 @@ cveler
 cvleer
 cvoreed
 dazlznig
+dcotor
+deep thinking
 demnsortated
 dicattor
 dilaspy
@@ -336,12 +349,15 @@ ecxellnet
 ecxelnelt
 edcuaiton
 eesair
+eevrynoe
+eevrywhree
 eiasly
 eisaer
 enthlraling
 enuogh
 epxcet
 epxlain
+epxuonder
 erdutioin
 esaeir
 esaier
@@ -349,6 +365,7 @@ esaliy
 esbtalishment
 eseair
 esesntial
+esteeemd
 etinrely
 etneilry
 evertyihng
@@ -360,14 +377,15 @@ exclelnet
 exelclent
 exlceelnt
 expeictng
+expertise answers
 expetcnig
 exptceing
 exrpet
 exrtmeely
+fabluous
 facts available here
 failnly
 fathom
-fabluous
 fbauolus
 fbualous
 feeilng
@@ -397,9 +415,10 @@ give it a shot
 going for years
 going to talk to
 good stuff
-good to find someone
 good to find
+good to find someone
 good to know
+good to see
 gooldy
 goooooal
 got it in one
@@ -411,6 +430,7 @@ greaestt
 greaetst
 great info
 great internet
+great page
 great thinking
 great to me
 greeatst
@@ -446,6 +466,7 @@ hlepufl
 hlpeed
 hlpeufl
 home run
+hooilgnas
 hoolignas
 how clever some
 hpaepir
@@ -464,8 +485,8 @@ ifrnomation
 ignronat
 illuimnating
 illumniaitng
-ilulmintaing
 ilncined
+ilulmintaing
 imemdiately
 immedaeitly
 immedaitely
@@ -488,10 +509,13 @@ infortmaion
 infromaitve
 inofmratvie
 inoframtion
+inoframtoin
 inoframtvie
 inofrmtaion
 inorfmative
 inrcedblie
+insgiht
+inteillegnt
 internet writer
 intreent
 intrenet
@@ -504,6 +528,7 @@ just logic
 just read this
 kbaoom
 kbeyoard
+keep on reading
 keyaobrd
 keybroad
 kliler
@@ -528,6 +553,7 @@ lokinog
 lokiong
 loknoig
 lokoed
+lokonig
 lonoikg
 looikng
 looinkg
@@ -537,6 +563,7 @@ loonikg
 loonkig
 love of God
 maagned
+macadmaia
 macamdaia
 made my day
 magnaed
@@ -562,7 +589,9 @@ neat articles
 nedeed
 neeedd
 nelicy
+nggoin
 nice work!
+nilcey
 none can doubt
 nothnig
 ntoihng
@@ -571,6 +600,7 @@ onnlie
 paajmas
 padrenr
 pay me to ignore
+pefrtecly
 pepyaka
 perfect way
 pertty
@@ -581,8 +611,8 @@ pleasure to read
 pobrmles
 poeuwrfl
 ponits
-porlebms
 porlebm
+porlebms
 porn company
 posntigs
 possbily
@@ -620,6 +650,7 @@ qaulity
 qeustions
 qluaity
 queistnos
+queiston
 qusetions
 raelly
 ralely
@@ -640,6 +671,7 @@ reocgniezd
 reockn
 rescoure
 resorcue
+ritaonal
 rlaely
 rlealy
 rlelay
@@ -657,6 +689,7 @@ sarhing
 satifsied
 satsifeid
 save me time
+sbulmie
 sceert
 sceret
 scucinct
@@ -683,15 +716,17 @@ shnziit
 shoratge
 shranig
 shulod
+silly websites
 siplme
 skopoy
 slainet
 slhuod
 slohud
+smart way of
 smoehntig
-smoething
 smoenoe
 smoeone
+smoething
 smoneoe
 smooene
 smoonee
@@ -724,6 +759,7 @@ spurrsied
 sreect
 srhanig
 srhwed
+srmats
 ssnebile
 standard in the industry
 stdnas
@@ -755,6 +791,7 @@ take the next step
 taknhs
 talnikg
 tanhks
+tanlet
 tcriky
 tealnt
 terrfiic
@@ -763,6 +800,7 @@ thakns
 thank you humbly
 thanks for he answer
 thanks for posting
+thanks to your post
 thanks to your posts
 thanukfl
 that really helped
@@ -781,6 +819,7 @@ thinking demonstrated
 thinknig
 thinks this way
 thinnikg
+this article saved
 this helped me
 this is so cool
 this makes it understandable
@@ -812,6 +851,7 @@ tinhgs
 tinhking
 tinhknig
 tiopcs
+tirkcy
 tkhinnig
 tkhnaful
 tlanet
@@ -847,6 +887,7 @@ udnersatnd
 udnesrtand
 ufseul
 uiltzie
+undsretnad
 unebilevbale
 useufl
 valaulbes
@@ -859,14 +900,14 @@ want to get read
 was looking everywhere
 watching for your posts
 way more helpful
+way of thinking about
 web20power
 webiste
 weeeknd
-what I was needed
 what I needed
+what I was needed
 what a quick and easy
 what's up
-way of thinking about
 where to find this info
 who you wrote this
 wirter
@@ -1006,7 +1047,7 @@ if ($mode eq "write") {
 	my $spam_regex = join( '|', map { quotemeta($_) } split( /\n/, $SPAM_BLACKLIST_WORDS ) );
 	@spam = ($body =~ /(\b|\s)($spam_regex)(\b|\s)/gmio);
 	error("禁止された語句が含まれています。\nYour comment contains one or more stop words, such as 'cool','funny' etc.") if scalar(@spam) > 0;
-	@spam = ($body =~ /\b(good|nice|cool|funny|best|great|neat|sweet|wonderful|big|super|informative|salient|awesome|easy-to-understand|brilliant) (site|post|work|article|job|help|answer|point|info|internet|way)/gmoi);
+	@spam = ($body =~ /\b(good|nice|cool|funny|best|great|neat|sweet|wonderful|big|super|informative|salient|awesome|easy-to-understand|brilliant|free|deep) (site|post|work|article|job|help|answer|point|info|internet|way|page|thought)/gmoi);
 	error("禁止された語句が含まれています。\nYour comment contains one or more stop words, such as 'cool','funny' etc.") if scalar(@spam) > 0;
 	@spam = ($body =~ /\b(brain power|gareetst|aswenr|asnwer|awnesr|awnser|aneswr|asnewr|aswner|anwesr|cevelr|cleevr|impesrsed|inrcedblie|tahnks|tahkns|taknhs|thniknig|tihnknig|celver|seomnoe|hlepnig|magnaed|birnas|thuoght|slohud|suodns|fnially|rlaely|raelly|eiasly|fnially)\b/gmoi);
 	error("禁止された語句が含まれています。\nYour comment contains one or more stop words, such as 'cool','funny' etc.") if scalar(@spam) > 0;
