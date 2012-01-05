@@ -35,6 +35,7 @@ A bit surprised
 AFAICT
 AFCAIT
 AFICAT
+Abslueotly
 All of my questions
 All posts of this
 Always a good job
@@ -177,6 +178,7 @@ You know what
 You really found
 You saved me
 You've hit the ball
+Your answer lifts
 Your cranium
 a lot easier from here
 absoelutly
@@ -186,9 +188,11 @@ actulaly
 aenswr
 aenwsr
 aesnwr
+after reading this
 aftrneoon
 airclte
 airtcle
+airtlce
 alhrgit
 all my problems
 allows free info like this
@@ -197,6 +201,7 @@ aneswr
 anewsr
 ansewr
 answeerd
+answer from
 anwesr
 anwser
 apeapr
@@ -206,6 +211,7 @@ apprceiaiton
 apprceita
 apprcieate
 aprepciate
+arcitles
 arctile
 arctlie
 aricetls
@@ -249,6 +255,7 @@ awsner
 aymnroe
 aynthing
 back from the keyboard
+bceasue
 bdoaciuos
 beettr
 beilvee
@@ -267,6 +274,7 @@ bleeive
 bleivee
 bocdiauos
 bodacoius
+bortehr
 borther
 brain power
 bravo!
@@ -280,6 +288,7 @@ bseetst
 bsetest
 btesset
 bteter
+btorher
 btteer
 bullsyee
 buy these articles
@@ -314,6 +323,7 @@ cmonig
 cnfoused
 cnocout
 cnocrens
+coimng
 come up with that
 come up with the
 comlpicaetd
@@ -366,6 +376,7 @@ esbtalishment
 eseair
 esesntial
 esteeemd
+estemeed
 etinrely
 etneilry
 evertyihng
@@ -414,7 +425,9 @@ giivng
 give it a shot
 going for years
 going to talk to
+golody
 good stuff
+good to be true
 good to find
 good to find someone
 good to know
@@ -426,6 +439,7 @@ goto expert
 graeetst
 graetset
 grateest
+grateful you
 greaestt
 greaetst
 great info
@@ -437,6 +451,7 @@ greeatst
 greetast
 gtreaset
 gviing
+had no idea
 halsse
 happeend
 hard to find out
@@ -454,8 +469,10 @@ helpful article
 helpful information
 helping me out
 helps me
+hepled
 heplful
 heplnig
+high brow literature
 hit the ball
 hizool
 hlefpul
@@ -507,6 +524,8 @@ informatvie
 infortamoin
 infortmaion
 infromaitve
+ingshit
+inisght
 inofmratvie
 inoframtion
 inoframtoin
@@ -514,13 +533,17 @@ inoframtvie
 inofrmtaion
 inorfmative
 inrcedblie
+insghit
 insgiht
 inteillegnt
+intelliegcne
 internet writer
 intreent
 intrenet
 ipmossbile
 is power
+isinght
+isinght
 it all makes sense
 job on that
 just like these articles
@@ -561,6 +584,7 @@ looking for your posts
 looknig
 loonikg
 loonkig
+lot easier
 love of God
 maagned
 macadmaia
@@ -570,6 +594,7 @@ magnaed
 mainkg
 mangaed
 marvelously good
+mcaadmaia
 mdniight
 miknag
 mituens
@@ -591,6 +616,7 @@ neeedd
 nelicy
 nggoin
 nice work!
+nicely put
 nilcey
 none can doubt
 nothnig
@@ -600,13 +626,16 @@ onnlie
 paajmas
 padrenr
 pay me to ignore
+pefrect
 pefrtecly
 pepyaka
+perfcet
 perfect way
 pertty
 pianelss
 pjaaams
 pjamaas
+plainyg
 pleasure to read
 pobrmles
 poeuwrfl
@@ -652,6 +681,7 @@ qluaity
 queistnos
 queiston
 qusetions
+raeidng
 raelly
 ralely
 ralley
@@ -681,6 +711,7 @@ roesurce
 rotten egg
 rpseect
 rseocrue
+rseoucre
 rsourece
 s***
 saecrehd
@@ -689,6 +720,7 @@ sarhing
 satifsied
 satsifeid
 save me time
+saved me
 sbulmie
 sceert
 sceret
@@ -706,6 +738,7 @@ sesnlibe
 setting me straight
 sexy images
 sglguing
+shairng
 shanrig
 sharing your wisdom
 sharnig
@@ -735,6 +768,7 @@ snushnie
 so much learning
 so much simpler
 socks off
+socrue
 sodnus
 soelvd
 soeomne
@@ -750,8 +784,10 @@ sometnihg
 somneoe
 somteinhg
 sopkoy
+souhld
 soutolin
 soveld
+spending time
 spkooy
 sppuoess
 sppusoes
@@ -761,6 +797,7 @@ srhanig
 srhwed
 srmats
 ssnebile
+stadnrad
 standard in the industry
 stdnas
 stgrugling
@@ -794,6 +831,7 @@ tanhks
 tanlet
 tcriky
 tealnt
+ternchant
 terrfiic
 tghins
 thakns
@@ -869,6 +907,7 @@ tohrugh
 tohuhgt
 toltaly
 tons of links
+too good
 top of the game
 topic-bravo
 touchdown
@@ -1047,7 +1086,7 @@ if ($mode eq "write") {
 	my $spam_regex = join( '|', map { quotemeta($_) } split( /\n/, $SPAM_BLACKLIST_WORDS ) );
 	@spam = ($body =~ /(\b|\s)($spam_regex)(\b|\s)/gmio);
 	error("禁止された語句が含まれています。\nYour comment contains one or more stop words, such as 'cool','funny' etc.") if scalar(@spam) > 0;
-	@spam = ($body =~ /\b(good|nice|cool|funny|best|great|neat|sweet|wonderful|big|super|informative|salient|awesome|easy-to-understand|brilliant|free|deep) (site|post|work|article|job|help|answer|point|info|internet|way|page|thought)/gmoi);
+	@spam = ($body =~ /\b(good|nice|cool|funny|best|great|neat|sweet|wonderful|big|super|informative|salient|awesome|easy-to-understand|brilliant|free|deep|useful) (site|post|work|article|job|help|answer|point|info|internet|way|page|thought|sharing)/gmoi);
 	error("禁止された語句が含まれています。\nYour comment contains one or more stop words, such as 'cool','funny' etc.") if scalar(@spam) > 0;
 	@spam = ($body =~ /\b(brain power|gareetst|aswenr|asnwer|awnesr|awnser|aneswr|asnewr|aswner|anwesr|cevelr|cleevr|impesrsed|inrcedblie|tahnks|tahkns|taknhs|thniknig|tihnknig|celver|seomnoe|hlepnig|magnaed|birnas|thuoght|slohud|suodns|fnially|rlaely|raelly|eiasly|fnially)\b/gmoi);
 	error("禁止された語句が含まれています。\nYour comment contains one or more stop words, such as 'cool','funny' etc.") if scalar(@spam) > 0;
