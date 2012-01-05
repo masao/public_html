@@ -1111,7 +1111,7 @@ if ($mode eq "write") {
 	error("禁止されたアドレス/URLが含まれています。\nYour comment contains a spamming E-mail address/URL.") if $mail_or_url eq 'email@gmail.com';
 
 	# 特定のホストからの投稿を禁止
-	error("禁止されたホストからの投稿です。\nYour host has been blocked as a spamming server.") if $q->remote_host() =~ /(giga-dns\.com|localmatchmakerservices\.com|hostkey\.ru|quadranet\.com|comcast\.net)$/o;
+	error("禁止されたホストからの投稿です。\nYour host has been blocked as a spamming server.") if $q->remote_host() =~ /(giga-dns\.com|localmatchmakerservices\.com|hostkey\.ru|quadranet\.com|comcast\.net|xsserver\.eu)$/o;
 	error("禁止されたホストからの投稿です。\nYour host has been blocked as a spamming server.") if $q->remote_host() =~ /^(208\.53\.158\.241|68\.169\.86\.22.)$/o;
 
 	$name = CGI::escapeHTML( $name );
