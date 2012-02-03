@@ -10,7 +10,8 @@
     <month>12</month>
     <date>2011-12-16</date>
     <url>http://taurus.c.u-tokyo.ac.jp/SigIC/</url>
-    <note>（招待講演; 発表予定）</note>
+    <note>（招待講演）</note>
+    <slides>./2011/sigic-cres.pdf</slides>
   </pub>
 
   <pub type="misc">
