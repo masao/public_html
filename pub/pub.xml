@@ -2,6 +2,20 @@
 <!-- $Id$ -->
 <publist version="$Revision$">
   <pub type="misc">
+    <title>Recovery of Minamisanriku Town Library from Tsunami Disaster</title>
+    <author>Yuka Egusa</author>
+    <author>Masao Takaku</author>
+    <conference>Code4Lib 2012</conference>
+    <year>2012</year>
+    <month>2</month>
+    <city>Seattle, WA, USA</city>
+    <language>en</language>
+    <date>2012-02-09</date>
+    <note>(Presented at Lightning Talks session)</note>
+    <slides>http://www.slideshare.net/yegusa/20100209recovery-of-minamisanriku-town-library-from-tsunami-disaster</slides>
+  </pub>
+
+  <pub type="misc">
     <title>学習型情報探索行動を探る</title>
     <subtitle>CRES共同研究プロジェクトの成果から</subtitle>
     <author>高久雅生</author>
