@@ -48,6 +48,7 @@ Brilialcne
 Brilliance
 Bristih
 Calnlig
+Cheers
 Cool!
 Could you write about
 Death Star
@@ -71,6 +72,7 @@ Halleulajh
 Hey hey hey
 Ho ho
 Holy Toledo
+Holy concise
 Hot damn
 How neat
 I can already tell
@@ -123,6 +125,7 @@ Ppl like you
 San Diego
 Scniece
 Shoot,
+Sir/Madam
 Slam dunkin
 So much info
 So true
@@ -175,6 +178,7 @@ Whoa, whoa
 Woah nelly
 Wow! Great
 You know what
+You make things
 You really found
 You saved me
 You've hit the ball
@@ -351,7 +355,9 @@ doctor ordered
 doing so much
 doors for me
 drvier
+easei
 easily impressed
+easy to understand
 easy-to-understand article
 ecxalty
 ecxelelnt
@@ -386,6 +392,7 @@ excatly
 excleelnt
 exclelnet
 exelclent
+exetrmely
 exlceelnt
 expeictng
 expertise answers
@@ -396,6 +403,7 @@ exrtmeely
 fabluous
 facts available here
 failnly
+falbberagsting
 fathom
 fbauolus
 fbualous
@@ -421,6 +429,7 @@ getnleemn
 getraset
 getting that know-how
 gettnig
+giinvg
 giivng
 give it a shot
 going for years
@@ -464,6 +473,7 @@ heepld
 heflpul
 helfpul
 hella easy
+helnpig
 help tons
 helpful article
 helpful information
@@ -489,6 +499,7 @@ how clever some
 hpaepir
 hpeflul
 hpeled
+huelpfl
 icnlnied
 icrndeible
 idinspensable
@@ -537,6 +548,7 @@ insghit
 insgiht
 inteillegnt
 intelliegcne
+intelligent point
 internet writer
 intreent
 intrenet
@@ -556,12 +568,14 @@ keyaobrd
 keybroad
 kliler
 knlowedge
+knolwdege
 know everything
 knwlodege
 knwloedge
 knwodlege
 knwonig
 konlwedge
+kownledge
 kyeborad
 laoedd
 lcoekd
@@ -578,6 +592,7 @@ loknoig
 lokoed
 lokonig
 lonoikg
+lonokig
 looikng
 looinkg
 looking for your posts
@@ -628,7 +643,9 @@ padrenr
 pay me to ignore
 pefrect
 pefrtecly
+pelaesd
 pepyaka
+perecft
 perfcet
 perfect way
 pertty
@@ -666,6 +683,7 @@ proelbm
 prseence
 prsoen
 psosilby
+psoting
 psoting!
 psotnig
 pttunig
@@ -680,7 +698,9 @@ qeustions
 qluaity
 queistnos
 queiston
+questnios
 qusetions
+qusetoins
 raeidng
 raelly
 ralely
@@ -688,6 +708,7 @@ ralley
 rceokn
 really appreciate
 really cool way of
+really helped
 really informative
 really neat
 reemmber
@@ -777,6 +798,7 @@ sohlud
 solhud
 somenoe
 someone comes up with
+someone who thinks
 something I agree
 somethnig
 sometnhig
@@ -835,6 +857,7 @@ ternchant
 terrfiic
 tghins
 thakns
+thank you for this
 thank you humbly
 thanks for he answer
 thanks for posting
@@ -943,15 +966,18 @@ way of thinking about
 web20power
 webiste
 weeeknd
+well-written
 what I needed
 what I was needed
 what a quick and easy
+what the dotcor ordered
 what's up
 where to find this info
 who you wrote this
 wirter
 witohut
 witring
+wndeoring
 wnodernig
 wnodreing
 wodnernig
@@ -1102,7 +1128,7 @@ if ($mode eq "write") {
 	# 特定のURLを禁止
 	@spam = ($body =~ /\bhttps?:\/\/(\w+\.)?google\.(com|us|jp)\/group\/\w?\w?(ticket|teens)/gmoi);
 	error("禁止されたURLが含まれています。\nYour comment contains a spamming URL.") if scalar(@spam) > 0;
-	@spam = ($body =~ /\bhttps?:\/\/(ylm\.me|jtgvrqveco.com)/gmoi);
+	@spam = ($body =~ /\bhttps?:\/\/(ylm\.me|jtgvrqveco\.com|fastcashloans\.tv|jn\.l7i7\.com/)/gmoi);
 	error("禁止されたURLが含まれています。\nYour comment contains a spamming URL.") if scalar(@spam) > 0;
 
 	# 特定のアドレスからの投稿を禁止
@@ -1112,7 +1138,7 @@ if ($mode eq "write") {
 
 	# 特定のホストからの投稿を禁止
 	error("禁止されたホストからの投稿です。\nYour host has been blocked as a spamming server.") if $q->remote_host() =~ /(giga-dns\.com|localmatchmakerservices\.com|hostkey\.ru|quadranet\.com|comcast\.net|xsserver\.eu)$/o;
-	error("禁止されたホストからの投稿です。\nYour host has been blocked as a spamming server.") if $q->remote_host() =~ /^(208\.53\.158\.241|68\.169\.86\.22.)$/o;
+	error("禁止されたホストからの投稿です。\nYour host has been blocked as a spamming server.") if $q->remote_host() =~ /^(208\.53\.158\.241|68\.169\.86\.22.|199\.19\.104\.197)$/o;
 
 	$name = CGI::escapeHTML( $name );
 	$mail_or_url = CGI::escapeHTML( $mail_or_url );
