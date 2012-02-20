@@ -2,6 +2,20 @@
 <!-- $Id$ -->
 <publist version="$Revision$">
   <pub type="misc">
+    <title>物質・材料研究機構（NIMS）の事例</title>
+    <subtitle>研究者総覧SAMURAIにおける研究者IDと外部連携</subtitle>
+    <author>高久雅生</author>
+    <conference>ワークショップ「研究者と論文とを結びつけるために〜研究者IDサミット2〜」</conference>
+    <year>2012</year>
+    <month>2</month>
+    <city>大阪市</city>
+    <language>ja</language>
+    <date>2012-02-14</date>
+    <url>http://www.lib.kanazawa-u.ac.jp/kura/nayose_ws/2011.html</url>
+    <slides>http://pubman.mpdl.mpg.de/pubman/item/escidoc:1365555/component/escidoc:1365553/20120214-NIMS-NayoseWS.pdf</slides>
+  </pub>
+
+  <pub type="misc">
     <title>Recovery of Minamisanriku Town Library from Tsunami Disaster</title>
     <author>Yuka Egusa</author>
     <author>Masao Takaku</author>
