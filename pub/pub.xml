@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist version="$Revision$">
+  <pub type="journal">
+    <title>材料系研究所における機関リポジトリNIMS eSciDocの開発から応用まで</title>
+    <subtitle>研究者総覧SAMURAIと研究ライブラリコレクション</subtitle>
+    <author>高久雅生</author>
+    <author>谷藤幹子</author>
+    <journal>情報管理</journal>
+    <volume>55</volume>
+    <number>1</number>
+    <year>2012</year>
+    <month>4</month>
+    <date>2011-04-01</date>
+    <language>ja</language>
+    <note>（刊行予定）</note>
+  </pub>
+
   <pub type="misc">
     <title>物質・材料研究機構（NIMS）の事例</title>
     <subtitle>研究者総覧SAMURAIにおける研究者IDと外部連携</subtitle>
