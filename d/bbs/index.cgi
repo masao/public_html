@@ -36,6 +36,7 @@ AFAICT
 AFCAIT
 AFICAT
 Abslueotly
+Absoltuely
 All of my questions
 All posts of this
 Always a good job
@@ -47,6 +48,7 @@ Awsemoe
 Brilialcne
 Brilliance
 Bristih
+Calling all cars
 Calnlig
 Cheers
 Cool!
@@ -185,6 +187,7 @@ You've hit the ball
 Your answer lifts
 Your cranium
 a lot easier from here
+ability to think
 absoelutly
 accucray
 achieevd
@@ -229,6 +232,7 @@ arrtcile
 artclie
 arteilcs
 article perfectly
+article up
 artlice
 arvried
 asenwr
@@ -339,6 +343,7 @@ consfuing
 convoulted
 cool thinking
 cool way
+cotnributing
 couldn't pay me to
 crietanly
 cteairnly
@@ -434,6 +439,7 @@ giivng
 give it a shot
 going for years
 going to talk to
+goldoy
 golody
 good stuff
 good to be true
@@ -479,6 +485,7 @@ helpful article
 helpful information
 helping me out
 helps me
+helupfl
 hepled
 heplful
 heplnig
@@ -521,6 +528,7 @@ immedaitely
 imperssing
 impesrsed
 impressing me!
+imrpseesd
 in the same forum
 increbdile
 incredilbe
@@ -548,6 +556,7 @@ insghit
 insgiht
 inteillegnt
 intelliegcne
+intelligent answer
 intelligent point
 internet writer
 intreent
@@ -749,6 +758,7 @@ scucinct
 sebnsile
 seecrt
 semlls
+semoone
 senisble
 seomnoe
 seotmhing
@@ -999,6 +1009,7 @@ wrttien
 wsebites
 wtiring
 wuodla
+you are quite
 you struck us
 your answer solved
 your post makes mine
