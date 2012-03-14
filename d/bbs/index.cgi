@@ -218,6 +218,7 @@ apprceiaiton
 apprceita
 apprcieate
 aprepciate
+aprpeication
 arcitles
 arctile
 arctlie
@@ -393,6 +394,7 @@ etneilry
 evertyihng
 everynoe
 evryeday
+exact point
 excatly
 excleelnt
 exclelnet
@@ -509,6 +511,7 @@ hpeled
 huelpfl
 icnlnied
 icrndeible
+ideal answer
 idinspensable
 idnispensable
 ifnmoratoin
@@ -561,6 +564,7 @@ intelligent point
 internet writer
 intreent
 intrenet
+ipmeraivte
 ipmossbile
 is power
 isinght
@@ -572,6 +576,7 @@ just logic
 just read this
 kbaoom
 kbeyoard
+keep coming
 keep on reading
 keyaobrd
 keybroad
@@ -582,6 +587,7 @@ know everything
 knwlodege
 knwloedge
 knwodlege
+knwoeldge
 knwonig
 konlwedge
 kownledge
@@ -668,6 +674,7 @@ poeuwrfl
 ponits
 porlebm
 porlebms
+pormiisng
 porn company
 posntigs
 possbily
@@ -865,6 +872,7 @@ tcriky
 tealnt
 ternchant
 terrfiic
+terrific amount
 tghins
 thakns
 thank you for this
@@ -894,6 +902,7 @@ this article saved
 this helped me
 this is so cool
 this makes it understandable
+this post hits
 thkinnig
 thkninig
 thnaks
