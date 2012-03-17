@@ -61,6 +61,7 @@ Excellent!
 Excleelnt
 Execlelnt
 Exelcenlt
+Facebook page
 Fell out of bed
 Gee whiz
 Good job
@@ -68,6 +69,7 @@ Got it!
 Grade A stuff
 Great common sense
 Great hammer
+Great posintg
 Great stuff
 Great work
 Halleulajh
@@ -266,6 +268,7 @@ aynthing
 back from the keyboard
 bceasue
 bdoaciuos
+beenift
 beettr
 beilvee
 betsest
@@ -375,6 +378,7 @@ eevrynoe
 eevrywhree
 eiasly
 eisaer
+enetrtaniing
 enthlraling
 enuogh
 epxcet
@@ -413,8 +417,10 @@ failnly
 falbberagsting
 fathom
 fbauolus
+fblauuos
 fbualous
 feeilng
+feel stupid
 feelnig
 fianlly
 filnlay
@@ -443,6 +449,7 @@ going for years
 going to talk to
 goldoy
 golody
+good enough
 good stuff
 good to be true
 good to find
@@ -488,6 +495,7 @@ helpful information
 helping me out
 helps me
 helupfl
+hepilng
 hepled
 heplful
 heplnig
@@ -537,6 +545,7 @@ increbdile
 incredilbe
 indebted
 indispeansble
+info out
 infoarmtion
 infomraiton
 infomrtaion
@@ -588,6 +597,7 @@ knwlodege
 knwloedge
 knwodlege
 knwoeldge
+knwolegde
 knwonig
 konlwedge
 kownledge
@@ -633,6 +643,7 @@ mknaig
 mnitue
 mold-breaker
 monoploy
+more clever
 more from this article
 mortar establishment
 munties
@@ -662,6 +673,7 @@ pelaesd
 pepyaka
 perecft
 perfcet
+perfect reply
 perfect way
 pertty
 pianelss
@@ -715,6 +727,7 @@ qluaity
 queistnos
 queiston
 questnios
+quseitons
 qusetions
 qusetoins
 raeidng
@@ -722,6 +735,8 @@ raelly
 ralely
 ralley
 rceokn
+reading this
+reaindg
 really appreciate
 really cool way of
 really helped
@@ -767,6 +782,7 @@ seecrt
 semlls
 semoone
 senisble
+sensible answer
 seomnoe
 seotmhing
 sepkas
@@ -794,6 +810,7 @@ slainet
 slhuod
 slohud
 smart way of
+smeoone
 smoehntig
 smoenoe
 smoeone
@@ -803,8 +820,10 @@ smooene
 smoonee
 snseible
 snushnie
+so awesome
 so much learning
 so much simpler
+so well
 socks off
 socrue
 sodnus
@@ -813,6 +832,7 @@ soeomne
 sohcked
 sohlud
 solhud
+solve problems
 somenoe
 someone comes up with
 someone who thinks
@@ -822,6 +842,7 @@ sometnhig
 sometnihg
 somneoe
 somteinhg
+sooemne
 sopkoy
 souhld
 soutolin
@@ -882,7 +903,9 @@ thanks for posting
 thanks to your post
 thanks to your posts
 thanukfl
+that posting
 that really helped
+there you
 thgins
 thgnis
 thguhot
@@ -1019,6 +1042,7 @@ wsebites
 wtiring
 wuodla
 you are quite
+you helped
 you struck us
 your answer solved
 your post makes mine
