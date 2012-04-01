@@ -13,8 +13,11 @@
     <month>4</month>
     <date>2011-04-01</date>
     <language>ja</language>
-    <page>13</page>
-    <note>（刊行予定）</note>
+    <page>
+      <start>29</start>
+      <end>41</end>
+    </page>
+    <doi>10.1241/johokanri.55.29</doi>
   </pub>
 
   <pub type="misc">
