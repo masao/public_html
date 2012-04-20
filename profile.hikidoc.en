@@ -1,5 +1,5 @@
 title: Curriculum Vitae (Masao Takaku)
-date.modified: 2012-03-25
+date.modified: 2012-04-20
 date.available: 2007-03-04
 
 [[{{image './images/201003-c4l10jp.jpg' 'Workshop on Trip-report of Code4Lib 2010, and more in Tokyo (March 2010)' thumbs 193px right}}|./profile-images.html]]
@@ -29,7 +29,7 @@ Information retrieval, Digital library, Information behaviour, Scholarly communi
 ::'''Scientific Information Office, [[National Institute for Materials Science|http://www.nims.go.jp/]]  (Lead Engineer)'''
 ::Developing an digital library system and researchers directory for the institute. Operation in a special library at NIMS.
 ::(Keywords) Institutional repository, Fulltext search, Portal service for Materials Science
-::(Skills) eSciDoc, Fedora Commons, SOA, Java, JSP/JSF
+::(Skills) Ruby, Solr, eSciDoc, Fedora Commons, SOA, Java, JSP/JSF
 :2006-01 - 2008-08:
 ::'''[[Transdisciplinary Research Integration Center|http://www.rois.ac.jp/tric/]], [[Research Organization of Information and Systems|http://www.rois.ac.jp/]]  (Post-doctoral researcher)'''
 ::Constructing a researcher information server (building prototype systems for integrating information on researchers in Japan). Involved in development of [[KAKEN Database (Beta service)|http://kaken.nii.ac.jp/]] and [[Researcher Resolver (Alpha service)|http://rns.nii.ac.jp/]]
