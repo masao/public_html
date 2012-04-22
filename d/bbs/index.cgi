@@ -86,6 +86,7 @@ I feel so much
 I found myself
 I found this article
 I found this info
+I have what I need
 I love reading these articles
 I love these articles
 I really appreciate free
@@ -335,6 +336,7 @@ cmonig
 cnfoused
 cnocout
 cnocrens
+cnortuibting
 coimng
 come up with that
 come up with the
@@ -378,6 +380,7 @@ eevrynoe
 eevrywhree
 eiasly
 eisaer
+end of the line
 enetrtaniing
 enthlraling
 enuogh
@@ -406,6 +409,7 @@ exelclent
 exetrmely
 exlceelnt
 expeictng
+expert answer
 expertise answers
 expetcnig
 exptceing
@@ -558,6 +562,7 @@ infortmaion
 infromaitve
 ingshit
 inisght
+inisghts
 inofmratvie
 inoframtion
 inoframtoin
@@ -571,6 +576,7 @@ inteillegnt
 intelliegcne
 intelligent answer
 intelligent point
+internet hooligans
 internet writer
 intreent
 intrenet
@@ -608,6 +614,7 @@ lcoekd
 learn a lot
 liebrty
 like a classroom
+like yourself
 lkonoig
 lkooing
 logic set out
@@ -640,6 +647,7 @@ marvelously good
 mcaadmaia
 mdniight
 miknag
+million thanks
 mituens
 miuents
 mknaig
@@ -659,6 +667,7 @@ neat articles
 nedeed
 neeedd
 nelicy
+never happened
 nggoin
 nice work!
 nicely put
@@ -689,6 +698,7 @@ pleasure to read
 pobrmles
 poeuwrfl
 ponits
+porlbem
 porlebm
 porlebms
 pormiisng
@@ -812,6 +822,7 @@ shranig
 shulod
 silly websites
 siplme
+skillful answer
 skopoy
 slainet
 slhuod
@@ -872,6 +883,7 @@ stnadard
 stnadrad
 stucrk
 sturgglnig
+sublime
 sublmie
 succnict
 such greatness
