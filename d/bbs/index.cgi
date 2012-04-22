@@ -478,6 +478,7 @@ gviing
 had no idea
 halsse
 happeend
+hard fucking
 hard to find out
 have thought of that
 have to be the case
@@ -616,6 +617,8 @@ lokiong
 loknoig
 lokoed
 lokonig
+lolita
+lolitas
 lonoikg
 lonokig
 looikng
@@ -648,6 +651,7 @@ more from this article
 mortar establishment
 munties
 my problem
+naked
 nbaibt
 nciley
 ndeeed
@@ -670,6 +674,7 @@ pay me to ignore
 pefrect
 pefrtecly
 pelaesd
+penis
 pepyaka
 perecft
 perfcet
@@ -716,6 +721,7 @@ psoting!
 psotnig
 pttunig
 purhcseas
+pussy
 put aside a whole afternoon
 put it better
 put this to good use
@@ -790,6 +796,7 @@ sercet about your post
 seriusoly
 sesnlibe
 setting me straight
+sex
 sexy images
 sglguing
 shairng
@@ -998,6 +1005,7 @@ valaulbes
 valubaels
 vauallbes
 vlauables
+voyeur
 vuallabe
 wanetd
 want to get read
@@ -1041,6 +1049,7 @@ wrttien
 wsebites
 wtiring
 wuodla
+xxx
 you are quite
 you helped
 you struck us
@@ -1172,7 +1181,7 @@ if ($mode eq "write") {
 	# 特定のURLを禁止
 	@spam = ($body =~ /\bhttps?:\/\/(\w+\.)?google\.(com|us|jp)\/group\/\w?\w?(ticket|teens)/gmoi);
 	error("禁止されたURLが含まれています。\nYour comment contains a spamming URL.") if scalar(@spam) > 0;
-	@spam = ($body =~ /\bhttps?:\/\/(ylm\.me|jtgvrqveco\.com|fastcashloans\.tv|(jn|www)\.l7i7\.com)/gmoi);
+	@spam = ($body =~ /\bhttps?:\/\/(ylm\.me|jtgvrqveco\.com|fastcashloans\.tv|(jn|www)\.l7i7\.com|\w+\.lefora\.com)/gmoi);
 	error("禁止されたURLが含まれています。\nYour comment contains a spamming URL.") if scalar(@spam) > 0;
 
 	# 特定のアドレスからの投稿を禁止
@@ -1181,7 +1190,7 @@ if ($mode eq "write") {
 	error("禁止されたアドレス/URLが含まれています。\nYour comment contains a spamming E-mail address/URL.") if $mail_or_url eq 'email@gmail.com';
 
 	# 特定のホストからの投稿を禁止
-	error("禁止されたホストからの投稿です。\nYour host has been blocked as a spamming server.") if $q->remote_host() =~ /(giga-dns\.com|localmatchmakerservices\.com|hostkey\.ru|quadranet\.com|comcast\.net|xsserver\.eu|bergdorf-group\.com)$/o;
+	error("禁止されたホストからの投稿です。\nYour host has been blocked as a spamming server.") if $q->remote_host() =~ /(giga-dns\.com|localmatchmakerservices\.com|hostkey\.ru|quadranet\.com|comcast\.net|xsserver\.eu|bergdorf-group\.com|\.kimsufi\.com)$/o;
 	error("禁止されたホストからの投稿です。\nYour host has been blocked as a spamming server.") if $q->remote_host() =~ /^(208\.53\.158\.241|68\.169\.86\.22.|199\.19\.104\.197)$/o;
 
 	$name = CGI::escapeHTML( $name );
