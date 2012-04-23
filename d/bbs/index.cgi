@@ -42,6 +42,7 @@ All posts of this
 Always a good job
 Arictles
 Aritecls
+Articles like
 Articles like this
 Awosmee
 Awsemoe
@@ -63,6 +64,8 @@ Execlelnt
 Exelcenlt
 Facebook page
 Fell out of bed
+Fidnnig
+Fidnnig
 Gee whiz
 Good job
 Got it!
@@ -89,6 +92,7 @@ I found this info
 I have what I need
 I love reading these articles
 I love these articles
+I must confess
 I really appreciate free
 I saw this post
 I sure appreciate
@@ -122,6 +126,7 @@ More power to you
 Never would have thunk
 Nice posting
 Noralmly
+Norlmaly
 Not bad at all
 Not the usual
 Phsiycs
@@ -152,11 +157,14 @@ Thanks for hanging out
 Thanks for posting
 Thanks for setting me
 Thanks for sharing
+Thanks for starting
 Thanks for taking the time
+Thanks for the answer
 Thanks for the insight
 Thanks for the news
 Thanks for writing
 Thanks guys
+Thanks!
 Thanky
 That saves me.
 There are no words
@@ -198,6 +206,7 @@ actulaly
 aenswr
 aenwsr
 aesnwr
+aewomse
 after reading this
 aftrneoon
 airclte
@@ -269,6 +278,8 @@ aynthing
 back from the keyboard
 bceasue
 bdoaciuos
+be happy
+beenfit
 beenift
 beettr
 beilvee
@@ -285,6 +296,7 @@ birnay
 bla bla bla bla
 bleeive
 bleivee
+bluleyse
 bocdiauos
 bodacoius
 bortehr
@@ -344,6 +356,7 @@ comlpicaetd
 completely painless
 compliatns
 compuetr
+coniesdred
 conmig
 consfuing
 convoulted
@@ -351,6 +364,7 @@ cool thinking
 cool way
 cotnributing
 couldn't pay me to
+creative answer
 crietanly
 cteairnly
 cveler
@@ -358,6 +372,7 @@ cvleer
 cvoreed
 dazlznig
 dcotor
+deabte
 deep thinking
 demnsortated
 dicattor
@@ -378,6 +393,7 @@ edcuaiton
 eesair
 eevrynoe
 eevrywhree
+effrot
 eiasly
 eisaer
 end of the line
@@ -398,6 +414,8 @@ esteeemd
 estemeed
 etinrely
 etneilry
+etxcied
+eunogh
 evertyihng
 everynoe
 evryeday
@@ -430,6 +448,7 @@ fianlly
 filnlay
 finally found
 firgue
+first class post
 fiurgnig
 fnially
 foloish
@@ -461,6 +480,7 @@ good to find someone
 good to know
 good to see
 gooldy
+gooooaol
 goooooal
 got it in one
 goto expert
@@ -507,6 +527,7 @@ heplnig
 high brow literature
 hit the ball
 hizool
+hleepd
 hlefpul
 hleipng
 hlepful
@@ -534,7 +555,9 @@ ifnoratimve
 ifnormation
 ifrnomation
 ignronat
+iinsght
 illuimnating
+illuminating data
 illumniaitng
 ilncined
 ilulmintaing
@@ -543,6 +566,7 @@ immedaeitly
 immedaitely
 imperssing
 impesrsed
+imporatnt
 impressing me!
 imrpseesd
 in the same forum
@@ -563,6 +587,7 @@ infromaitve
 ingshit
 inisght
 inisghts
+inishgt
 inofmratvie
 inoframtion
 inoframtoin
@@ -738,7 +763,9 @@ put this to good use
 pwoerufl
 pworeful
 qaulity
+qeustion
 qeustions
+qeustoin
 qluaity
 queistnos
 queiston
@@ -752,7 +779,9 @@ ralely
 ralley
 rceokn
 reading this
+readnig
 reaindg
+real intelligence
 really appreciate
 really cool way of
 really helped
@@ -789,6 +818,7 @@ satifsied
 satsifeid
 save me time
 saved me
+saved us
 sbulmie
 sceert
 sceret
@@ -802,6 +832,7 @@ sensible answer
 seomnoe
 seotmhing
 sepkas
+serached
 sercet about your post
 seriusoly
 sesnlibe
@@ -827,6 +858,8 @@ skopoy
 slainet
 slhuod
 slohud
+smart and intelligent
+smart thinking
 smart way of
 smeoone
 smoehntig
@@ -851,6 +884,7 @@ sohcked
 sohlud
 solhud
 solve problems
+solves a problem
 somenoe
 someone comes up with
 someone who thinks
@@ -924,6 +958,7 @@ thanks to your posts
 thanukfl
 that posting
 that really helped
+the tikcet
 there you
 thgins
 thgnis
@@ -943,6 +978,7 @@ thinnikg
 this article saved
 this helped me
 this is so cool
+this kind of stuff
 this makes it understandable
 this post hits
 thkinnig
@@ -959,6 +995,7 @@ thnkas
 thnkiing
 thoghut
 thohugt
+throguh
 thuoght
 ticrky
 tieckt
@@ -997,6 +1034,7 @@ topic-bravo
 touchdown
 touhght
 trencahnt
+trenchant
 trikcy
 true I guess
 truly appreciate
@@ -1008,8 +1046,10 @@ turthflluy
 ubneilevblae
 udnersatnd
 udnesrtand
+uefsul
 ufseul
 uiltzie
+understand the issues
 undsretnad
 unebilevbale
 useufl
@@ -1025,10 +1065,12 @@ was looking everywhere
 watching for your posts
 way more helpful
 way of thinking about
+way to kick
 web20power
 webiste
 weeeknd
 well-written
+what I need
 what I needed
 what I was needed
 what a quick and easy
@@ -1053,6 +1095,7 @@ wrierts
 wrintig
 write for me
 write more
+writing this topic
 writnig
 wrtiing
 wrtinig
