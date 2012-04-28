@@ -10,7 +10,7 @@ dt {
 }
 #toc li {
   display: inline;
-  padding: 0px 5px;
+  padding-right: 5px;
 }
 .toc_size {
   font-size: smaller;
