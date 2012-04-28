@@ -44,8 +44,7 @@
 <% @toc_keys.each do |k| %>
 <li><a href="#pubid<%= @pubs.find{|e|
     k == toc_key(e)
-    }.object_id %>"><%=h k %></a>
-<span class="toc_size">(<%= @pubs.find_all{|e| k == toc_key(e) }.size %>)</span>
+    }.object_id %>"><%=h k %></a>&nbsp;<span class="toc_size">(<%= @pubs.find_all{|e| k == toc_key(e) }.size %>)</span>
 <% end %>
 </ul>
 <dl id="publist">
