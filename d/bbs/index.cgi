@@ -44,6 +44,7 @@ Arictles
 Aritecls
 Articles like
 Articles like this
+Awemsoe
 Awosmee
 Awsemoe
 Brilialcne
@@ -125,6 +126,7 @@ Mighty useful
 More power to you
 Never would have thunk
 Nice posting
+No complaints
 Noralmly
 Norlmaly
 Not bad at all
@@ -165,7 +167,9 @@ Thanks for the news
 Thanks for writing
 Thanks guys
 Thanks!
+Thanks!
 Thanky
+That insight
 That saves me.
 There are no words
 There is a critical shortage
@@ -176,6 +180,7 @@ This information is off
 This is what we need
 This makes everything
 Tip top
+Unparalleled accuracy
 Unrpaalleled
 Very true
 Very valid
@@ -187,6 +192,7 @@ Well put
 What a joy
 What a joy to find someone
 Wheevor
+Which came first
 Whoa, whoa
 Woah nelly
 Wow! Great
@@ -200,6 +206,7 @@ Your cranium
 a lot easier from here
 ability to think
 absoelutly
+accraute
 accucray
 achieevd
 actulaly
@@ -216,6 +223,7 @@ alhrgit
 all my problems
 allows free info like this
 amlsot
+an expert
 aneswr
 anewsr
 ansewr
@@ -279,6 +287,7 @@ back from the keyboard
 bceasue
 bdoaciuos
 be happy
+beacsue
 beenfit
 beenift
 beettr
@@ -296,6 +305,7 @@ birnay
 bla bla bla bla
 bleeive
 bleivee
+blown away
 bluleyse
 bocdiauos
 bodacoius
@@ -333,6 +343,7 @@ chganing
 chugging away
 ciclked
 cilcked
+cimnog
 claered
 cleared it up
 cleevr
@@ -348,7 +359,10 @@ cmonig
 cnfoused
 cnocout
 cnocrens
+cnofuesd
+cnomig
 cnortuibting
+cofneusd
 coimng
 come up with that
 come up with the
@@ -363,6 +377,7 @@ convoulted
 cool thinking
 cool way
 cotnributing
+cotnributnig
 couldn't pay me to
 creative answer
 crietanly
@@ -374,6 +389,7 @@ dazlznig
 dcotor
 deabte
 deep thinking
+defiinetly
 demnsortated
 dicattor
 dilaspy
@@ -391,6 +407,7 @@ ecxellnet
 ecxelnelt
 edcuaiton
 eesair
+eevryhwere
 eevrynoe
 eevrywhree
 effrot
@@ -410,11 +427,13 @@ esaliy
 esbtalishment
 eseair
 esesntial
+esestnial
 esteeemd
 estemeed
 etinrely
 etneilry
 etxcied
+eungoh
 eunogh
 evertyihng
 everynoe
@@ -473,6 +492,7 @@ going to talk to
 goldoy
 golody
 good enough
+good piece
 good stuff
 good to be true
 good to find
@@ -492,6 +512,7 @@ greaestt
 greaetst
 great info
 great internet
+great minds
 great page
 great thinking
 great to me
@@ -568,6 +589,7 @@ imperssing
 impesrsed
 imporatnt
 impressing me!
+imprseesd
 imrpseesd
 in the same forum
 increbdile
@@ -619,8 +641,10 @@ kbaoom
 kbeyoard
 keep coming
 keep on reading
+keep them
 keyaobrd
 keybroad
+kind of knowledge
 kliler
 knlowedge
 knolwdege
@@ -640,9 +664,11 @@ learn a lot
 liebrty
 like a classroom
 like yourself
+litlte
 lkonoig
 lkooing
 logic set out
+loikong
 loiokn
 lokinog
 lokiong
@@ -655,6 +681,7 @@ lonoikg
 lonokig
 looikng
 looinkg
+look promising
 looking for your posts
 looknig
 loonikg
@@ -670,6 +697,7 @@ mainkg
 mangaed
 marvelously good
 mcaadmaia
+mcdaaamia
 mdniight
 miknag
 million thanks
@@ -682,6 +710,7 @@ monoploy
 more clever
 more from this article
 mortar establishment
+mttear
 munties
 my problem
 naked
@@ -701,6 +730,7 @@ none can doubt
 nothnig
 ntoihng
 oenped
+off the list
 onnlie
 paajmas
 padrenr
@@ -708,7 +738,9 @@ pay me to ignore
 pefrect
 pefrtecly
 pelaesd
+pelasrue
 penis
+people like you
 pepyaka
 perecft
 perfcet
@@ -731,6 +763,7 @@ porn company
 posntigs
 possbily
 possbliy
+posting shines
 potinsg
 potsing
 potsings
@@ -750,6 +783,7 @@ prodigious writers
 proelbm
 prseence
 prsoen
+psoitng
 psosilby
 psoting
 psoting!
@@ -766,6 +800,7 @@ qaulity
 qeustion
 qeustions
 qeustoin
+qlaiuty
 qluaity
 queistnos
 queiston
@@ -777,6 +812,7 @@ raeidng
 raelly
 ralely
 ralley
+rational answer
 rceokn
 reading this
 readnig
@@ -787,12 +823,15 @@ really cool way of
 really helped
 really informative
 really neat
+really raised
 reemmber
 reevlation
+refsrehing
 reiandg
 relaible
 relaly
 reliable data like this
+reliable information
 rellay
 reocgniezd
 reockn
@@ -852,6 +891,7 @@ shoratge
 shranig
 shulod
 silly websites
+simlpy
 siplme
 skillful answer
 skopoy
@@ -965,6 +1005,7 @@ thgnis
 thguhot
 thienkr
 thigns
+thiiknng
 thiinnkg
 thikinng
 thikning
@@ -1006,6 +1047,7 @@ tihngs
 tihnking
 tihnknig
 tihnnkig
+time is money
 tinhgs
 tinhking
 tinhknig
@@ -1033,6 +1075,7 @@ top of the game
 topic-bravo
 touchdown
 touhght
+transaprnetly
 trencahnt
 trenchant
 trikcy
@@ -1049,16 +1092,19 @@ udnesrtand
 uefsul
 ufseul
 uiltzie
+undeniable importance
 understand the issues
 undsretnad
 unebilevbale
 useufl
+usfeul
 valaulbes
 valubaels
 vauallbes
 vlauables
 voyeur
 vuallabe
+waiting for
 wanetd
 want to get read
 was looking everywhere
@@ -1066,6 +1112,7 @@ watching for your posts
 way more helpful
 way of thinking about
 way to kick
+weathlier
 web20power
 webiste
 weeeknd
@@ -1074,6 +1121,7 @@ what I need
 what I needed
 what I was needed
 what a quick and easy
+what info I want
 what the dotcor ordered
 what's up
 where to find this info
@@ -1102,6 +1150,7 @@ wrtinig
 wrtohy
 wrttien
 wsebites
+wthuiot
 wtiring
 wuodla
 xxx
@@ -1110,6 +1159,7 @@ you helped
 you struck us
 your answer solved
 your post makes mine
+your posting
 EOF
 
 # ユーザ設定ファイルの読み込み
@@ -1218,7 +1268,7 @@ if ($mode eq "write") {
 
 	# 特定の文字列を禁止
 	my $spam_regex = join( '|', map { quotemeta($_) } split( /\n/, $SPAM_BLACKLIST_WORDS ) );
-	@spam = ($body =~ /(\b|\s)($spam_regex)(\b|\s)/gmio);
+	@spam = ($body =~ /(^|\b|\s)($spam_regex)(\b|\s|$)/gmio);
 	error("禁止された語句が含まれています。\nYour comment contains one or more stop words, such as 'cool','funny' etc.") if scalar(@spam) > 0;
 	@spam = ($body =~ /\b(good|nice|cool|funny|best|great|neat|sweet|wonderful|big|super|informative|salient|awesome|easy-to-understand|brilliant|free|deep|useful) (site|post|work|article|job|help|answer|point|info|internet|way|page|thought|sharing)/gmoi);
 	error("禁止された語句が含まれています。\nYour comment contains one or more stop words, such as 'cool','funny' etc.") if scalar(@spam) > 0;
