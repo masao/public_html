@@ -67,6 +67,7 @@ Facebook page
 Fell out of bed
 Fidnnig
 Fidnnig
+Free movies
 Gee whiz
 Good job
 Got it!
@@ -113,7 +114,9 @@ Infortmioan
 Infromaiton
 It was dark
 It's great to read
+Kamagra
 Keep on writing
+Klonopin
 Kudos to you
 Kudos!
 Learning a ton
@@ -121,6 +124,7 @@ Life is short
 Lol thank
 Lol thanks
 Lol!
+Lorazepam
 Many many quality
 Mighty useful
 More power to you
@@ -131,8 +135,11 @@ Noralmly
 Norlmaly
 Not bad at all
 Not the usual
+POV videos
+Party girls
 Phsiycs
 Play informative
+Porn
 Ppl like you
 San Diego
 Scniece
@@ -179,11 +186,15 @@ This has made my day
 This information is off
 This is what we need
 This makes everything
+Threesomes
 Tip top
+Tramadol
+Transsexuals
 Unparalleled accuracy
 Unrpaalleled
 Very true
 Very valid
+Viagra
 View my complete
 WINNING!
 Way to go on
@@ -210,6 +221,7 @@ accraute
 accucray
 achieevd
 actulaly
+addictive
 aenswr
 aenwsr
 aesnwr
@@ -222,6 +234,7 @@ airtlce
 alhrgit
 all my problems
 allows free info like this
+ambien
 amlsot
 an expert
 aneswr
@@ -268,6 +281,7 @@ atcriles
 atilrce
 atircle
 atircles
+ativan
 atrcile
 atrciles
 atricels
@@ -341,6 +355,7 @@ cgahne
 cgwho
 chganing
 chugging away
+cialis
 ciclked
 cilcked
 cimnog
@@ -350,6 +365,7 @@ cleevr
 clever 4
 clever by half
 clever way
+clips
 cloudn't
 clveer
 cmiong
@@ -374,6 +390,7 @@ coniesdred
 conmig
 consfuing
 convoulted
+cool models
 cool thinking
 cool way
 cotnributing
@@ -466,6 +483,7 @@ feelnig
 fianlly
 filnlay
 finally found
+fioricet
 firgue
 first class post
 fiurgnig
@@ -473,6 +491,7 @@ fnially
 foloish
 for years without
 for years without knowing
+fucking
 gareetst
 garetest
 gdnaer
@@ -559,6 +578,7 @@ hlpeufl
 home run
 hooilgnas
 hoolignas
+hot ass
 how clever some
 hpaepir
 hpeflul
@@ -633,6 +653,7 @@ is power
 isinght
 isinght
 it all makes sense
+job description
 job on that
 just like these articles
 just logic
@@ -661,6 +682,7 @@ kyeborad
 laoedd
 lcoekd
 learn a lot
+levitra
 liebrty
 like a classroom
 like yourself
@@ -710,6 +732,7 @@ monoploy
 more clever
 more from this article
 mortar establishment
+movie clips
 mttear
 munties
 my problem
@@ -747,7 +770,9 @@ perfcet
 perfect reply
 perfect way
 pertty
+pharmacies
 pianelss
+pills
 pjaaams
 pjamaas
 plainyg
@@ -775,12 +800,14 @@ prbloems
 prboemls
 prbolmes
 preescne
+preteen
 probelm
 probelms
 problem solved
 probmels
 prodigious writers
 proelbm
+propecia
 prseence
 prsoen
 psoitng
@@ -790,6 +817,7 @@ psoting!
 psotnig
 pttunig
 purhcseas
+pussy
 pussy
 put aside a whole afternoon
 put it better
@@ -1099,8 +1127,10 @@ unebilevbale
 useufl
 usfeul
 valaulbes
+valium
 valubaels
 vauallbes
+virgins
 vlauables
 voyeur
 vuallabe
@@ -1153,6 +1183,7 @@ wsebites
 wthuiot
 wtiring
 wuodla
+xanax
 xxx
 you are quite
 you helped
@@ -1286,7 +1317,7 @@ if ($mode eq "write") {
 	# 特定のURLを禁止
 	@spam = ($body =~ /\bhttps?:\/\/(\w+\.)?google\.(com|us|jp)\/group\/\w?\w?(ticket|teens)/gmoi);
 	error("禁止されたURLが含まれています。\nYour comment contains a spamming URL.") if scalar(@spam) > 0;
-	@spam = ($body =~ /\bhttps?:\/\/(ylm\.me|jtgvrqveco\.com|fastcashloans\.tv|(jn|www)\.l7i7\.com|\w+\.lefora\.com)/gmoi);
+	@spam = ($body =~ /\bhttps?:\/\/(ylm\.me|jtgvrqveco\.com|fastcashloans\.tv|(jn|www)\.l7i7\.com|\w+\.lefora\.com|\w+\.blog\.free\.fr|\w+\.de\.tl)/gmoi);
 	error("禁止されたURLが含まれています。\nYour comment contains a spamming URL.") if scalar(@spam) > 0;
 
 	# 特定のアドレスからの投稿を禁止
@@ -1296,7 +1327,11 @@ if ($mode eq "write") {
 
 	# 特定のホストからの投稿を禁止
 	error("禁止されたホストからの投稿です。\nYour host has been blocked as a spamming server.") if $q->remote_host() =~ /(giga-dns\.com|localmatchmakerservices\.com|hostkey\.ru|quadranet\.com|comcast\.net|xsserver\.eu|bergdorf-group\.com|\.kimsufi\.com)$/o;
-	error("禁止されたホストからの投稿です。\nYour host has been blocked as a spamming server.") if $q->remote_host() =~ /^(208\.53\.158\.241|68\.169\.86\.22.|199\.19\.104\.197)$/o;
+	error("禁止されたホストからの投稿です。\nYour host has been blocked as a spamming server.") if $q->remote_host() =~ /^(208\.53\.158\.241|68\.169\.86\.22.|199\.19\.104\.197|68\.169\.80\.\d+)$/o;
+
+	# 特定の氏名による投稿を禁止
+	@spam = ($body =~ /(^|\b|\s)($spam_regex)(\b|\s|$)/gmio);
+	error("禁止された語句が含まれています。\nYour name contains one or more stop words, such as 'cool','funny' etc.") if scalar(@spam) > 0;
 
 	$name = CGI::escapeHTML( $name );
 	$mail_or_url = CGI::escapeHTML( $mail_or_url );
