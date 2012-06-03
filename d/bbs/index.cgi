@@ -67,6 +67,7 @@ Facebook page
 Fell out of bed
 Fidnnig
 Fidnnig
+Filanly
 Free movies
 Gee whiz
 Good job
@@ -202,6 +203,7 @@ Well done
 Well put
 What a joy
 What a joy to find someone
+What a pleasure
 Wheevor
 Which came first
 Whoa, whoa
@@ -215,6 +217,7 @@ You've hit the ball
 Your answer lifts
 Your cranium
 a lot easier from here
+abiilty
 ability to think
 absoelutly
 accraute
@@ -229,8 +232,10 @@ aewomse
 after reading this
 aftrneoon
 airclte
+airltce
 airtcle
 airtlce
+airtlces
 alhrgit
 all my problems
 allows free info like this
@@ -361,7 +366,9 @@ cilcked
 cimnog
 claered
 cleared it up
+cleared my thoughts
 cleevr
+clerlay
 clever 4
 clever by half
 clever way
@@ -389,6 +396,7 @@ compuetr
 coniesdred
 conmig
 consfuing
+contriutbing
 convoulted
 cool models
 cool thinking
@@ -554,6 +562,7 @@ heflpul
 helfpul
 hella easy
 helnpig
+help articles
 help tons
 helpful article
 helpful information
@@ -594,6 +603,7 @@ ifnomred
 ifnoramtion
 ifnoratimve
 ifnormation
+ifnrmoatoin
 ifrnomation
 ignronat
 iinsght
@@ -723,6 +733,7 @@ mcdaaamia
 mdniight
 miknag
 million thanks
+minteus
 mituens
 miuents
 mknaig
@@ -762,6 +773,7 @@ pefrect
 pefrtecly
 pelaesd
 pelasrue
+pelasure
 penis
 people like you
 pepyaka
@@ -792,6 +804,7 @@ posting shines
 potinsg
 potsing
 potsings
+potsnig
 powerfully helpful
 ppoped
 pragmatisdc
