@@ -35,6 +35,7 @@ A bit surprised
 AFAICT
 AFCAIT
 AFICAT
+Ab fab
 Abslueotly
 Absoltuely
 All of my questions
@@ -58,6 +59,7 @@ Could you write about
 Death Star
 Deep thought
 Divorce
+Dude
 Essays like this
 Excellent!
 Excleelnt
@@ -131,6 +133,7 @@ Mighty useful
 More power to you
 Never would have thunk
 Nice posting
+Ninja Turtle
 No complaints
 Noralmly
 Norlmaly
@@ -164,6 +167,7 @@ Supieror
 Thank God
 Thanks alot
 Thanks for hanging out
+Thanks for helping me
 Thanks for posting
 Thanks for setting me
 Thanks for sharing
@@ -241,6 +245,7 @@ all my problems
 allows free info like this
 ambien
 amlsot
+amnout
 an expert
 aneswr
 anewsr
@@ -294,6 +299,7 @@ atricle
 atrilce
 atrilecs
 atrlcie
+avdice
 awalys
 awnesr
 awnser
@@ -328,6 +334,7 @@ blown away
 bluleyse
 bocdiauos
 bodacoius
+borhetr
 bortehr
 borther
 brain power
@@ -395,6 +402,7 @@ compliatns
 compuetr
 coniesdred
 conmig
+connviced
 consfuing
 contriutbing
 convoulted
@@ -488,6 +496,7 @@ fbualous
 feeilng
 feel stupid
 feelnig
+fgiruing
 fianlly
 filnlay
 finally found
@@ -586,6 +595,7 @@ hlpeed
 hlpeufl
 home run
 hooilgnas
+hoolaigns
 hoolignas
 hot ass
 how clever some
@@ -606,6 +616,7 @@ ifnormation
 ifnrmoatoin
 ifrnomation
 ignronat
+ignsiht
 iinsght
 illuimnating
 illuminating data
@@ -659,6 +670,7 @@ intreent
 intrenet
 ipmeraivte
 ipmossbile
+iprmesesd
 is power
 isinght
 isinght
@@ -680,6 +692,7 @@ kliler
 knlowedge
 knolwdege
 know everything
+knowledge in this article
 knwlodege
 knwloedge
 knwodlege
@@ -885,11 +898,13 @@ rlelay
 rmemeber
 rnunnig
 roesurce
+roilnlg
 rotten egg
 rpseect
 rseocrue
 rseoucre
 rsourece
+ruinnng out
 s***
 saecrehd
 sahring
@@ -1023,6 +1038,7 @@ taknhs
 talnikg
 tanhks
 tanlet
+tarpnsaretnly
 tcriky
 tealnt
 ternchant
@@ -1106,6 +1122,7 @@ tnhgis
 tnhiinkg
 tnhiknig
 tnhkiing
+to the point
 tocpis
 tohrugh
 tohuhgt
