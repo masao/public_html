@@ -1,7 +1,11 @@
 author_mine: [ !ruby/regexp "/高久\s*雅生/", !ruby/regexp "/Masao Takaku/i" ]
-author_maping:
-  ja:
-    相澤彰子: Akiko Aizawa
-    高久雅生: Masao Takaku
-    宇陀則彦: Norihiko Uda
-    江草由佳: Yuka Egusa
+author_map:
+  "Akiko Aizawa": 相澤彰子
+  "Masao Takaku": 高久雅生
+  "Yuka Egusa": 江草由佳
+  "Makiko Miwa": 三輪眞木子
+  "Hitomi Saito": 齋藤ひとみ
+  "Noriko Kando": 神門典子
+  "Kei Kurakawa": 蔵川圭
+  "Mikiko Tanifuji": 谷藤幹子
+  "Keizo Oyama": 大山敬三

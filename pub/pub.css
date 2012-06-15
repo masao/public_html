@@ -30,3 +30,8 @@ dt {
   display: inline; 
   padding: .1em .5em; 
 }
+
+span.author_map {
+  /* color: #44f; */
+  font-size: smaller;
+}

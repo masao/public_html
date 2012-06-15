@@ -307,17 +307,18 @@ class PubApp
          element.send( :type )
       when :author
          element.send( :author )[0]
-#         author = element.send( :author )[0]
-#          if @config and @config["author_maping"]
-#             author_map = @config["author_maping"]["ja"]
-#             author_map.keys.each do |k|
-#                if author_map[ k ].to_a.include? author
-#                   author = k
-#                   break
-#                end
-#             end
-#          end
-#          author
+         author = element.send( :author )[0]
+         if @config and @config["author_map"]
+            author_map = @config["author_map"]
+            author_map.keys.each do |k|
+               if author_map[ k ] == author
+                  # STDERR.puts "#{ k } == #{ author_map[ k ] }"
+                  author = k
+                  break
+               end
+            end
+         end
+         author
       when :refereed
          element.send( :refereed ) == "true" ? "refereed" : "not refereed"
       else
