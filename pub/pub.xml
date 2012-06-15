@@ -55,6 +55,7 @@
     <conference>人工知能学会 情報編纂研究会 第7回研究会</conference>
     <year>2011</year>
     <month>12</month>
+    <city>横浜</city>
     <date>2011-12-16</date>
     <url>http://taurus.c.u-tokyo.ac.jp/SigIC/</url>
     <note>（招待講演）</note>
@@ -69,6 +70,7 @@
     <conference>eSciDoc Days 2011</conference>
     <year>2011</year>
     <month>10</month>
+    <city>Berlin, Germany</city>
     <date>2011-10-26</date>
     <url>https://www.escidoc.org/JSPWiki/en/ESciDocDays2011Program</url>
     <slides>https://www.escidoc.org/pdf/escidoc-days-2011/day1-takaku-samurai.pdf</slides>
@@ -86,6 +88,7 @@
     <conference>情報処理学会 第104回情報基礎とアクセス技術研究会・第41回ディジタル図書館ワークショップ 合同研究会</conference>
     <year>2011</year>
     <month>11</month>
+    <city>福岡</city>
     <date>2011-11-22</date>
     <url>http://id.nii.ac.jp/1001/00078502</url>
     <slides>http://www.slideshare.net/yegusa/20111122-104ifat</slides>
@@ -95,7 +98,7 @@
     <title>NIMS eSciDocからSAMURAI, その先のサービス展開</title>
     <author>高久雅生</author>
     <conference>第2回eSciDoc.JPワークショップ</conference>
-    <city>つくば市</city>
+    <city>つくば</city>
     <year>2011</year>
     <month>10</month>
     <date>2011-10-13</date>
@@ -142,6 +145,7 @@
     <conference>saveMLAK活動報告会</conference>
     <year>2011</year>
     <month>9</month>
+    <city>東京</city>
     <date>2011-09-19</date>
     <url>http://savemlak.jp/wiki/saveMLAK:Event/20110919</url>
     <slides>http://savemlak.jp/wiki/File:20110919-saveMLAK-wikidata.pptx</slides>
@@ -309,6 +313,7 @@
     <conference>第2回CiNiiウェブAPIコンテスト優秀作品発表会</conference>
     <year>2010</year>
     <month>11</month>
+    <city>パシフィコ横浜, 横浜</city>
     <language>ja</language>
     <date>2010-11-26</date>
     <slides>./2010/ciniiapi-content-fuwatto.pdf</slides>
@@ -320,7 +325,7 @@
     <conference>eSciDoc Days 2010</conference>
     <year>2010</year>
     <month>11</month>
-    <city>Kopenhagen, Denmark</city>
+    <city>Copenhagen, Denmark</city>
     <language>en</language>
     <date>2010-11-17</date>
     <slides>./2010/escidocdays2010-ws3-slides.pdf</slides>
