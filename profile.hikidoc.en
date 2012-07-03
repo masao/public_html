@@ -1,5 +1,5 @@
 title: Curriculum Vitae (Masao Takaku)
-date.modified: 2012-04-20
+date.modified: 2012-07-03
 date.available: 2007-03-04
 
 [[{{image './images/201003-c4l10jp.jpg' 'Workshop on Trip-report of Code4Lib 2010, and more in Tokyo (March 2010)' thumbs 193px right}}|./profile-images.html]]
@@ -26,7 +26,7 @@ Information retrieval, Digital library, Information behaviour, Scholarly communi
 
 !!Work
 :2008-09 -:
-::'''Scientific Information Office, [[National Institute for Materials Science|http://www.nims.go.jp/]]  (Lead Engineer)'''
+::'''Scientific Information Office, [[National Institute for Materials Science|http://www.nims.go.jp/]]  (Engineer)'''
 ::Developing an digital library system and researchers directory for the institute. Operation in a special library at NIMS.
 ::(Keywords) Institutional repository, Fulltext search, Portal service for Materials Science
 ::(Skills) Ruby, Solr, eSciDoc, Fedora Commons, SOA, Java, JSP/JSF
@@ -94,16 +94,16 @@ A full list of publications are available at [[./pub/]].
 *[[Japan Society of Information and Knowledge|http://www.jsik.jp/]] (Board member, 2008- )
 *[[Japan Society of Library and Information Science|http://wwwsoc.nii.ac.jp/jslis/]]
 *[[Database Society of Japan|http://www.dbsj.org/]]
-*[[Information Science and Technology Association Japan|http://www.infosta.or.jp]] (Council member, 2011- )
+*[[Information Science and Technology Association Japan|http://www.infosta.or.jp/start_e.html]] (Council member, 2011- )
 
 !!!Activities on academic societies
-*Administrative Board member (2008-): Japan Society of Information and Knowledge (JSIK)
-*Organizing committee member for JSIK Forum (2005, 2006, 2007, 2008, 2010)
+*Board member (2008-): Japan Society of Information and Knowledge (JSIK)
+*Organizing committee member for JSIK Forum (2005, 2006, 2007, 2008, 2010, 2012)
 *Organizing committee member for Annual Meeting of JSIK (2009, 2010)
-*Council member of [[Information Science and Technology Association|http://www.infosta.or.jp/]] (2009-)
+*Council member of [[Information Science and Technology Association|http://www.infosta.or.jp/start_e.html]] (2011-)
 *Editorial Committee member (2009-): [[Journal of Information Science and Technology Association|http://www.infosta.or.jp/journal/backtope.html]]
-*Editorial Committee member (2008-): [[IPSJ Transaction on Databases (TOD)|http://ipsjtod.kyoto-su.ac.jp/]], Information Processing Society of Japan
-*Steering Committee member (2007-): [[Special Interest Groups on Fundamental Informatics (FI)|http://www.ipsj.or.jp/katsudou/sig/sighp/fi/]], Information Processing Society of Japan
+*Editorial Committee member (2008-2012): [[IPSJ Transaction on Databases (TOD)|http://ipsjtod.kyoto-su.ac.jp/]], Information Processing Society of Japan
+*Steering Committee member (2007-2011): [[Special Interest Groups on Fundamental Informatics (FI)|http://www.ipsj.or.jp/katsudou/sig/sighp/fi/]], Information Processing Society of Japan
 *The Fifth NTCIR Workshop Meeting Publication Co-Chair (2005)
 **Organizing committee member for [[The Fifth NTCIR Workshop Meeting|http://research.nii.ac.jp/ntcir-ws5/]]. Publication co-chair and presentation area co-coordinator.
 
