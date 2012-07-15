@@ -81,12 +81,14 @@ Great posintg
 Great stuff
 Great work
 Halleulajh
+Hats off
 Hey hey hey
 Ho ho
 Holy Toledo
 Holy concise
 Hot damn
 How neat
+I am forever
 I can already tell
 I can count on
 I don't hate it
@@ -144,6 +146,7 @@ Party girls
 Phsiycs
 Play informative
 Porn
+Posts like this
 Ppl like you
 San Diego
 Scniece
@@ -161,6 +164,7 @@ Suepiror
 Super excited
 Super informative
 Super jazzed
+Superb
 Superb information
 Superbly illuminating
 Supieror
@@ -252,6 +256,7 @@ anewsr
 ansewr
 answeerd
 answer from
+answreed
 anwesr
 anwser
 apeapr
@@ -261,6 +266,7 @@ apprceiaiton
 apprceita
 apprcieate
 aprepciate
+aprpecaition
 aprpeication
 arcitles
 arctile
@@ -313,6 +319,7 @@ bceasue
 bdoaciuos
 be happy
 beacsue
+beaten us
 beenfit
 beenift
 beettr
@@ -366,6 +373,7 @@ cevler
 cgahne
 cgwho
 chganing
+chlalengnig
 chugging away
 cialis
 ciclked
@@ -385,6 +393,7 @@ clveer
 cmiong
 cmmoon
 cmnoig
+cmomnuicated
 cmonig
 cnfoused
 cnocout
@@ -413,6 +422,7 @@ cotnributing
 cotnributnig
 couldn't pay me to
 creative answer
+creative mind
 crietanly
 cteairnly
 cveler
@@ -421,6 +431,7 @@ cvoreed
 dazlznig
 dcotor
 deabte
+debtae
 deep thinking
 defiinetly
 demnsortated
@@ -440,6 +451,7 @@ ecxellnet
 ecxelnelt
 edcuaiton
 eesair
+eestemed
 eevryhwere
 eevrynoe
 eevrywhree
@@ -449,11 +461,13 @@ eisaer
 end of the line
 enetrtaniing
 enthlraling
+enthralling
 enuogh
 epxcet
 epxlain
 epxuonder
 erdutioin
+erudition
 esaeir
 esaier
 esaliy
@@ -470,6 +484,7 @@ eungoh
 eunogh
 evertyihng
 everynoe
+eveyrewhre
 evryeday
 exact point
 excatly
@@ -479,6 +494,7 @@ exelclent
 exetrmely
 exlceelnt
 expeictng
+expert advice
 expert answer
 expertise answers
 expetcnig
@@ -508,6 +524,7 @@ fnially
 foloish
 for years without
 for years without knowing
+foveerr
 fucking
 gareetst
 garetest
@@ -515,6 +532,7 @@ gdnaer
 geaertst
 geartest
 gertaest
+get this info
 get this online
 getnleemn
 getraset
@@ -528,6 +546,7 @@ going to talk to
 goldoy
 golody
 good enough
+good many
 good piece
 good stuff
 good to be true
@@ -546,6 +565,7 @@ grateest
 grateful you
 greaestt
 greaetst
+great aritcels
 great info
 great internet
 great minds
@@ -574,6 +594,7 @@ helnpig
 help articles
 help tons
 helpful article
+helpful articles
 helpful information
 helping me out
 helps me
@@ -613,6 +634,7 @@ ifnomred
 ifnoramtion
 ifnoratimve
 ifnormation
+ifnormatoin
 ifnrmoatoin
 ifrnomation
 ignronat
@@ -631,6 +653,7 @@ impesrsed
 imporatnt
 impressing me!
 imprseesd
+imrpessive
 imrpseesd
 in the same forum
 increbdile
@@ -652,6 +675,7 @@ inisght
 inisghts
 inishgt
 inofmratvie
+inofmrtaion
 inoframtion
 inoframtoin
 inoframtvie
@@ -674,9 +698,11 @@ iprmesesd
 is power
 isinght
 isinght
+isnihgt
 it all makes sense
 job description
 job on that
+just about right
 just like these articles
 just logic
 just read this
@@ -742,6 +768,7 @@ mainkg
 mangaed
 marvelously good
 mcaadmaia
+mcadaamia
 mcdaaamia
 mdniight
 miknag
@@ -759,6 +786,7 @@ mortar establishment
 movie clips
 mttear
 munties
+music armed
 my problem
 naked
 nbaibt
@@ -802,6 +830,7 @@ pjaaams
 pjamaas
 plainyg
 pleasure to read
+plesuare
 pobrmles
 poeuwrfl
 ponits
@@ -859,6 +888,8 @@ qluaity
 queistnos
 queiston
 questnios
+quetsoin
+quseiotns
 quseitons
 qusetions
 qusetoins
@@ -886,11 +917,13 @@ relaible
 relaly
 reliable data like this
 reliable information
+relilabe
 rellay
 reocgniezd
 reockn
 rescoure
 resorcue
+respect from me
 ritaonal
 rlaely
 rlealy
@@ -952,7 +985,9 @@ siplme
 skillful answer
 skopoy
 slainet
+slemls
 slhuod
+slick answer
 slohud
 smart and intelligent
 smart thinking
@@ -970,6 +1005,7 @@ snushnie
 so awesome
 so much learning
 so much simpler
+so straightforward
 so well
 socks off
 socrue
@@ -989,6 +1025,7 @@ somethnig
 sometnhig
 sometnihg
 somneoe
+somonee
 somteinhg
 sooemne
 sopkoy
@@ -1046,12 +1083,14 @@ terrfiic
 terrific amount
 tghins
 thakns
+thank you enough
 thank you for this
 thank you humbly
 thanks for he answer
 thanks for posting
 thanks to your post
 thanks to your posts
+thanks y'all
 thanukfl
 that posting
 that really helped
@@ -1063,12 +1102,14 @@ thguhot
 thienkr
 thigns
 thiiknng
+thiinkng
 thiinnkg
 thikinng
 thikning
 thiknnig
 thinikng
 thininkg
+think like that
 thinking demonstrated
 thinknig
 thinks this way
@@ -1079,6 +1120,7 @@ this is so cool
 this kind of stuff
 this makes it understandable
 this post hits
+thkanufl
 thkinnig
 thkninig
 thnaks
@@ -1137,6 +1179,7 @@ transaprnetly
 trencahnt
 trenchant
 trikcy
+trkicy
 true I guess
 truly appreciate
 ttoally
@@ -1153,10 +1196,12 @@ uiltzie
 undeniable importance
 understand the issues
 undsretnad
+unebilevable
 unebilevbale
 useufl
 usfeul
 valaulbes
+valbulaes
 valium
 valubaels
 vauallbes
@@ -1183,6 +1228,7 @@ what I was needed
 what a quick and easy
 what info I want
 what the dotcor ordered
+what we need
 what's up
 where to find this info
 who you wrote this
@@ -1213,6 +1259,7 @@ wsebites
 wthuiot
 wtiring
 wuodla
+wvoheer
 xanax
 xxx
 you are quite
