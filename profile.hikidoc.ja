@@ -1,7 +1,7 @@
 title: 高久雅生の経歴
 title.short: 経歴
 date.available: 2007-03-04
-date.modified: 2012-07-03
+date.modified: 2012-08-09
 
 [[{{image './images/201003-c4l10jp.jpg' 'Code4Lib 2010報告会にて（2010年3月）' thumbs 193px right}}|./profile-images.html]]
 :氏名:高久 雅生 （たかく まさお）
@@ -28,7 +28,7 @@ date.modified: 2012-07-03
 
 !!職歴
 :2008-09 -:
-::'''[[物質・材料研究機構|http://www.nims.go.jp/]] [[科学情報室|http://www.nims.go.jp/infrastructure/data_information/scientific_info.html]] （エンジニア）'''
+::'''[[物質・材料研究機構|http://www.nims.go.jp/]] [[科学情報室|http://www.nims.go.jp/infrastructure/data_information/scientific_info.html]] （主任エンジニア）'''
 ::物質・材料分野のデジタルライブラリーシステムの構築。NIMS研究者総覧の構築。専門図書館の運営。
 ::（スキル）Ruby, Solr, eSciDoc, Fedora Commons, SOA, Java, JSP/JSF
 :2006-01 - 2008-08:
@@ -58,7 +58,7 @@ date.modified: 2012-07-03
 ::東日本大震災後に立ち上がった博物館、図書館、文書館、公民館等の文化教育関連施設の被災・救援情報の集約と提供、支援活動を行っているコミュニティ。システム担当として参加。
 :[[Code4Lib JAPAN|http://www.code4lib.jp]] (2010 - ):
 ::日本における図書館関連の技術者のコミュニティ。図書館振興財団からの助成（2010年）。コアメンバーとして活動。
-:[[DRF技術ワーキンググループ|http://drf.lib.hokudai.ac.jp/]] （2009 - ）:
+:[[DRF技術ワーキンググループ|http://drf.lib.hokudai.ac.jp/]] （2009 - 2012年）:
 ::日本国内における機関リポジトリコミュニティの技術サポートワーキンググループに参加
 :[[CRES共同研究プロジェクト|http://cres.jpn.org/]] （2007 - ）:
 ::Web上における情報探索行動や情報要求の構造理解を目指す共同研究プロジェクト。主要メンバーの一人として活動。

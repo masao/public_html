@@ -1,5 +1,5 @@
 title: Curriculum Vitae (Masao Takaku)
-date.modified: 2012-07-03
+date.modified: 2012-08-09
 date.available: 2007-03-04
 
 [[{{image './images/201003-c4l10jp.jpg' 'Workshop on Trip-report of Code4Lib 2010, and more in Tokyo (March 2010)' thumbs 193px right}}|./profile-images.html]]
@@ -26,7 +26,7 @@ Information retrieval, Digital library, Information behaviour, Scholarly communi
 
 !!Work
 :2008-09 -:
-::'''Scientific Information Office, [[National Institute for Materials Science|http://www.nims.go.jp/]]  (Engineer)'''
+::'''Scientific Information Office, [[National Institute for Materials Science|http://www.nims.go.jp/]]  (Senior Engineer)'''
 ::Developing an digital library system and researchers directory for the institute. Operation in a special library at NIMS.
 ::(Keywords) Institutional repository, Fulltext search, Portal service for Materials Science
 ::(Skills) Ruby, Solr, eSciDoc, Fedora Commons, SOA, Java, JSP/JSF
@@ -57,7 +57,7 @@ Information retrieval, Digital library, Information behaviour, Scholarly communi
 ::Project member of voluntary community and website on museums, libraries, archives and kominkans (community centers) (MLAK) in Japan stricken by the 2011 Tohoku earthquake and tsunami.
 :[[Code4Lib JAPAN|http://www.code4lib.jp]] (2010 - ):
 ::Core member of Japan chapter-like activity of Code4Lib community. Funded partially from Japanese Library Promotion Foundation (2010).
-:[[DRF Technology Working Group|http://drf.lib.hokudai.ac.jp/drf/?Digital%20Repository%20Federation%20%28in%20English%29]] (2009 - ):
+:[[DRF Technology Working Group|http://drf.lib.hokudai.ac.jp/drf/?Digital%20Repository%20Federation%20%28in%20English%29]] (2009 - 2012):
 ::Member of Technology support working group for the institutional repository community in Japan.
 :[[CRES joint research project|http://cres.jpn.org/]] (2007 - ):
 ::Member of the CRES project for understanding users' information behaviour and information needs on the Web.
