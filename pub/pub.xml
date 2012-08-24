@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist version="$Revision$">
+  <pub type="misc">
+    <title>saveMLAKウィキにおける共同編集コンテンツ分析の試み</title>
+    <author>高久雅生</author>
+    <author>江草由佳</author>
+    <author>岡本真</author>
+    <author>大向一輝</author>
+    <conference>情報処理学会 第108回情報基礎とアクセス技術研究会・第43回ディジタル図書館ワークショップ 合同研究会</conference>
+    <year>2012</year>
+    <month>9</month>
+    <city>東京</city>
+    <date>2012-09-25</date>
+    <page>6</page>
+    <note>（発表予定）</note>
+  </pub>
+
   <pub type="journal">
     <title>材料系研究所における機関リポジトリNIMS eSciDocの開発から応用まで</title>
     <subtitle>研究者総覧SAMURAIと研究ライブラリコレクション</subtitle>
@@ -198,8 +213,8 @@
     <month>10</month>
     <date>2011-10-10</date>
     <language>en</language>
-    <url>http://www.asis.org/asist2011/</url>
     <note>(presented as Poster presentation)</note>
+    <doi>10.1002/meet.2011.14504801097</doi>
   </pub>
 
   <pub type="journal">
@@ -342,7 +357,7 @@
     <subtitle>Towards Understanding the User Behaviors through an Analysis of Search Sessions, Search Units and Click Ranks</subtitle>
     <conference>CLEF 2010</conference>
     <year>2010</year>
-    <month>10</month>
+    <month>9</month>
     <city>Padua, Italy</city>
     <page>11</page>
     <!--
@@ -352,7 +367,7 @@
     </page>
     -->
     <language>en</language>
-    <date>2010-10-20</date>
+    <date>2010-09-20</date>
     <url>http://clef2010.org/resources/proceedings/clef2010labs_submission_120.pdf</url>
     <note>(Notebook Paper)</note>
   </pub>
@@ -592,8 +607,8 @@
   </pub>
 
   <pub type="conference">
-    <author>Masao Takaku</author>
     <author>Mikiko Tanifuji</author>
+    <author>Masao Takaku</author>
     <title>E-Science experiences in NIMS eSciDoc</title>
     <subtitle>Self-archiving of profiled experimental data</subtitle>
     <conference>DRF International Conference 2009 (DRFIC2009)</conference>
@@ -602,8 +617,11 @@
     <city>Tokyo</city>
     <language>en</language>
     <date>2009-12-03</date>
+    <page>
+      <start>88</start>
+      <end>89</end>
+    </page>      
     <slides>http://drf.lib.hokudai.ac.jp/drf/index.php?plugin=attach&amp;refer=DRFIC2009&amp;openfile=session3_tanifuji.pdf</slides>
-    <poster></poster>
   </pub>
 
   <pub type="conference">
@@ -623,6 +641,10 @@
     <year>2009</year>
     <month>12</month>
     <city>Tokyo</city>
+    <page>
+      <start>116</start>
+      <end>116</end>
+    </page>      
     <language>en</language>
     <date>2009-12-03</date>
     <poster>http://drf.lib.hokudai.ac.jp/drf/index.php?plugin=attach&amp;refer=DRFIC2009&amp;openfile=poster_P-16_nonaka.pdf</poster>
