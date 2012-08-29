@@ -265,6 +265,8 @@ appaer
 apprceiaiton
 apprceita
 apprcieate
+apprecitaion
+approcah
 aprepciate
 aprpecaition
 aprpeication
@@ -688,6 +690,7 @@ inteillegnt
 intelliegcne
 intelligent answer
 intelligent point
+intellignece
 internet hooligans
 internet writer
 intreent
@@ -787,6 +790,7 @@ movie clips
 mttear
 munties
 music armed
+my ignorance
 my problem
 naked
 nbaibt
@@ -989,6 +993,7 @@ slemls
 slhuod
 slick answer
 slohud
+sluaghetred
 smart and intelligent
 smart thinking
 smart way of
@@ -1065,6 +1070,7 @@ susnnhie
 svoled
 svreeal
 sweetheart
+swrhed
 taelnt
 tahknful
 tahkns
@@ -1178,6 +1184,7 @@ touhght
 transaprnetly
 trencahnt
 trenchant
+tricky question
 trikcy
 trkicy
 true I guess
@@ -1198,6 +1205,7 @@ understand the issues
 undsretnad
 unebilevable
 unebilevbale
+unedrtsadning
 useufl
 usfeul
 valaulbes
@@ -1238,6 +1246,7 @@ witring
 wndeoring
 wnodernig
 wnodreing
+wnordenig
 wodnernig
 wodnreing
 wohrty
@@ -1388,7 +1397,7 @@ if ($mode eq "write") {
 	error("禁止された語句が含まれています。\nYour comment contains one or more stop words, such as 'cool','funny' etc.") if scalar(@spam) > 0;
 	@spam = ($body =~ /^(\w+\d\.txt\;\d+\;\d+|comment\d+)/gmoi);
 	error("禁止された語句が含まれています。\nYour comment contains one or more stop words, such as 'cool','funny' etc.") if scalar(@spam) > 0;
-	@spam = ($body =~ /ｗｗｗｗｗ/gmoi);
+	@spam = ($body =~ /ｗｗｗｗｗ|熟女|人妻/gmoi);
 	error("禁止された語句が含まれています。\nYour comment contains one or more stop words, such as 'cool','funny' etc.") if scalar(@spam) > 0;
 
 	# 特定のURLを禁止
