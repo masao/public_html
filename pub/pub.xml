@@ -2,6 +2,22 @@
 <!-- $Id$ -->
 <publist version="$Revision$">
   <pub type="misc">
+    <title>「第37回情報科学技術協会賞」を受賞して</title>
+    <subtitle>優秀機関賞を受賞して</subtitle>
+    <author>高久雅生</author>
+    <journal>情報の科学と技術</journal>
+    <year>2012</year>
+    <month>9</month>
+    <date>2012-09-01</date>
+    <volume>62</volume>
+    <number>9</number>
+    <page>
+      <start>400</start>
+      <end>401</end>
+    </page>
+  </pub>
+
+  <pub type="misc">
     <title>saveMLAKウィキにおける共同編集コンテンツ分析の試み</title>
     <author>高久雅生</author>
     <author>江草由佳</author>
@@ -13,7 +29,8 @@
     <city>東京</city>
     <date>2012-09-25</date>
     <page>6</page>
-    <note>（発表予定）</note>
+    <url>http://id.nii.ac.jp/1001/00085749/</url>
+    <slides>http://www.slideshare.net/tmasao/20120925-savemlakifat108</slides>
   </pub>
 
   <pub type="journal">
