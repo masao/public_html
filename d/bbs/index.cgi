@@ -59,6 +59,7 @@ Could you write about
 Death Star
 Deep thought
 Divorce
+Do you know the address
 Dude
 Essays like this
 Excellent!
@@ -133,6 +134,7 @@ Lorazepam
 Many many quality
 Mighty useful
 More power to you
+Nature is spiritual
 Never would have thunk
 Nice posting
 Ninja Turtle
@@ -289,6 +291,7 @@ artlice
 arvried
 asenwr
 asewnr
+ask her to call me
 aslbuotely
 asnewr
 asnwer
@@ -364,6 +367,7 @@ bullsyee
 buy these articles
 cahnge
 cahnigng
+call you back
 calling up people
 ceelvr
 cehered
@@ -534,6 +538,7 @@ gdnaer
 geaertst
 geartest
 gertaest
+get paid
 get this info
 get this online
 getnleemn
