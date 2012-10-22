@@ -24,7 +24,7 @@ Twitterフォロワーリスト化ツール</div>
 <h1>Twitterフォロワーリスト化ツール</h1>
 <p>Twitterの特定のアカウントのフォロワーをリスト化します。
 なお、Twitter APIを使っているので、フォロワー数が一定限度に達するとエラーになります（おそらく1万フォロー以上あるアカウントには対応できません）。</p>
-<p>読み込みが終了すると、フォロワーのプロフィール（アカウント名、名前、プロフィール、場所、URL）をタブ区切りで一行ごとにした内容がテキストエリアが出現するので、コピー&amp;ペーストしてExcelファイル等で扱えます。</p>
+<p>読み込みが終了すると、フォロワーのプロフィール（アカウント名、名前、プロフィール、場所、URL、アカウント登録日）をタブ区切りで一行ごとにした内容がテキストエリアが出現するので、コピー&amp;ペーストしてExcelファイル等で扱えます。</p>
 <script type="text/javascript">
 var TWITTER_BASEURL = 'https://api.twitter.com/1/';
 function load_twitter_followers_ids( cursor ) {
@@ -87,6 +87,7 @@ function preview_list3( users ) {
     line += "\t" + normalize_text( users[i][ "description" ] );
     line += "\t" + normalize_text( users[i][ "location" ] );
     line += "\t" + normalize_text( users[i][ "url" ] );
+    line += "\t" + normalize_text( users[i][ "created_at" ] );
     textarea.value += line + "\r\n";
   }
   textarea.select();
