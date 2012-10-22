@@ -1,0 +1,71 @@
+title: Twitterフォロー/フォロワーリストツール
+dc.issued: 2012-10-22
+dc.available: 2012-10-22
+
+Twitterでフォローしている相手、フォローされている相手をリストします。
+
+なお、Twitter APIを使うので、1時間に150回以上アクセスすると、エラーになります。
+
+{{rawhtml
+<form action="" id="form" onsubmit="preview_list();return false;">
+<div class="form">
+<label>アカウント名: <input type="text" name="userid" size="40" /></label>
+<label>リスト対象: <select name="target">
+<option value="followers">フォローされている</option>
+<option value="following">フォローしている</option>
+</select>
+</label>
+<label>出力形式: <select name="format">
+<option value="html">表形式</option>
+<option value="text">テキスト</option>
+</select>
+</div>
+</form>
+<div id="preview"></div>
+<script type="text/javascript>
+var TWITTER_BASEURL = 'https://api.twitter.com/1/';
+function load_twitter_json( cursor ) {
+  var script = document.createElement( "script" );
+  script.setAttribute( "src", TWITTER_BASEURL + target + '/' + userid + '.json?callback=preview_list2' );
+  script.setAttribute( "type", "text/javascript" );
+  script.setAttribute( "defer", "defer" );
+  document.getElementById( 'preview' ).appendChild( script );
+}
+function preview_list() {
+  var userid = form.userid.value
+  var target = form.target.value
+  var format = form.format.value
+  document.getElementById( 'preview' ).innerHTML = '<img src="../images/ajax-loader.gif" />';
+
+  var textarea = document.creatElement( "input" );
+  textarea.setAttribute( "type", "textarea" );
+  textarea.setAttribute( "id", "textarea" );
+  load_twitter_json( -1 );
+  preview.appendChild( textarea );
+}
+function preview_list2( data ) {
+  var textarea = document.getElementById( 'textarea' );
+  var users = data[ "users" ];
+  for (var i = 0, entry; entry = users.entries[i]; i++) {
+    textarea.innnerHTML += normalize_text( users[i][ "name" ] );
+    textarea.innnerHTML += "\t" + normalize_text( users[i][ "screen_name" ] );
+    textarea.innnerHTML += "\t" + normalize_text( users[i][ "description" ] );
+    textarea.innnerHTML += "\t" + normalize_text( users[i][ "location" ] );
+    textarea.innnerHTML += "\t" + normalize_text( users[i][ "url" ] );
+    textarea.innnerHTML += "\n";
+  }
+  if ( data[ "cursor" ] ) {
+    load_twitter_json( data[ "cursor" ] );
+  }
+}
+function normalize_text( str ) {
+  return str.replace_string( /[\r\n\t]+/, " " );
+}
+</script>
+}}
+
+
+! 履歴
+
+:2012-10-22:初版作成
+
