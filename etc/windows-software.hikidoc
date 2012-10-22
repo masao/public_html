@@ -1,7 +1,7 @@
 title: Windows上で使っているソフトウェア達
 subject: etc
 date.available: 2001-10-29
-date.modified: 2009-10-19
+date.modified: 2012-08-07
 
 私がMicrosoft Windows上で使っている主なソフトウェアをメモしておきます。
 
@@ -21,8 +21,9 @@ date.modified: 2009-10-19
 :[[WMF2EPS|http://www.wmf2eps.de.vu/]]:Windowsアプリケーションの出力をEPSへ変換
 :[[Java2|http://java.sun.com/]]:プログラミング環境
 :[[WinShot|http://www.woodybells.com/winshot.html]]:スクリーンキャプチャ。
-:[[FileSum|http://www.vector.co.jp/soft/winnt/util/se030005.html]]:ディスク容量計測ツール
+:[[TeraPad|http://www5f.biglobe.ne.jp/~t-susumu/library/tpad.html]]:テキストエディタ
 :[[NTEmacs|http://www.gnu.org/software/emacs/windows/]]:エディタ
+:[[FileSum|http://www.vector.co.jp/soft/winnt/util/se030005.html]]:ディスク容量計測ツール
 :[[Xming|http://sourceforge.net/projects/xming]]:Xサーバ（Cygwinベース）: Astec Xが使えない環境で重宝
 :[[De4Exif|http://www002.upp.so-net.ne.jp/candynag/digicam/de4exif.html]]:Exif 日付時刻情報復元ツール
 :[[Intel Application Accelerator|http://support.intel.co.jp/jp/support/chipsets/iaa/index.htm]]:CPU/IOのパフォーマンス向上ためのユーティリティ。
