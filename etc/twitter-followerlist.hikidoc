@@ -1,5 +1,5 @@
 title: Twitterフォロワーリスト化ツール
-date.available: 2012-10-22
+date.available: 2012-10-23
 date.modified: 2012-10-23
 css.content:
   #preview {
@@ -52,7 +52,8 @@ function preview_list() {
     alert( "アカウント名を入力してください" );
     return false;
   }
-  document.getElementById( 'preview' ).innerHTML = '<img src="../images/ajax-loader.gif" />';
+  load_twitter_rate_limit_status();
+  document.getElementById( 'preview' ).innerHTML = '<img id="loader" src="../images/ajax-loader.gif" />';
   load_twitter_followers_ids( -1 );
 }
 function preview_list2( data ) {
@@ -68,7 +69,12 @@ function preview_list2( data ) {
 function preview_list3( users ) {
   var textarea = document.getElementById( 'textarea' );
   if (!textarea) {
-    document.getElementById( 'preview' ).innerHTML = '<textarea id="textarea" rows="10" cols="120"></textarea>';
+    document.getElementById( "loader" ).style.display = "none";
+    var e = document.createElement( "textarea" );
+    e.setAttribute( "id", "textarea" );
+    e.setAttribute( "rows", "10" );
+    e.setAttribute( "cols", "120" );
+    document.getElementById( 'preview' ).appendChild( e );
     textarea = document.getElementById( 'textarea' );
   }
   for ( var i = 0; i < users.length; i++ ) {
