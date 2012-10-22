@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="EUC-JP"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-JP" />
+<link rev="made" href="mailto:tmasao@acm.org" />
+<link rel="stylesheet" href="../default.css" type="text/css" />
+<style type="text/css">
+  #preview {
+    margin: 1ex;
+  }
+  #textarea {
+    width: 100%;
+  }
+</style>
+<title>Twitterフォロワーリスト化ツール</title>
+</head>
+<body>
+<div class="navi"><a href="./..">HOME</a> &gt;
+Twitterフォロワーリスト化ツール</div>
+<div class="last-update">初版公開日: 2012年10月22日</div>
+<div class="last-update">最終更新日: 2012年10月23日</div>
+<h1>Twitterフォロワーリスト化ツール</h1>
+<p>Twitterの特定のアカウントのフォロワーをリスト化します。
+なお、Twitter APIを使っているので、フォロワー数が一定限度に達するとエラーになります（おそらく1万フォロー以上あるアカウントには対応できません）。</p>
+<p>読み込みが終了すると、フォロワーのプロフィール（アカウント名、名前、プロフィール、場所、URL）をタブ区切りで一行ごとにした内容がテキストエリアが出現するので、コピー&amp;ペーストしてExcelファイル等で扱えます。</p>
+<script type="text/javascript">
+var TWITTER_BASEURL = 'https://api.twitter.com/1/';
+function load_twitter_followers_ids( cursor ) {
+  var userid = document.forms.form1.userid.value;
+  var script = document.createElement( "script" );
+  script.setAttribute( "src", TWITTER_BASEURL + 'followers/ids.json?callback=preview_list2&screen_name=' + userid + '&cursor=' + cursor );
+  script.setAttribute( "type", "text/javascript" );
+  script.setAttribute( "defer", "defer" );
+  document.getElementById( 'preview' ).appendChild( script );
+}
+function load_twitter_users_lookup( userids ) {
+  var script = document.createElement( "script" );
+  script.setAttribute( "src", TWITTER_BASEURL + 'users/lookup.json?callback=preview_list3&user_id=' + userids.join(",") );
+  script.setAttribute( "type", "text/javascript" );
+  script.setAttribute( "defer", "defer" );
+  document.getElementById( 'preview' ).appendChild( script );
+}
+function load_twitter_rate_limit_status() {
+  var script = document.createElement( "script" );
+  script.setAttribute( "src", TWITTER_BASEURL + 'account/rate_limit_status.json?callback=check_rate_limit' );
+  script.setAttribute( "type", "text/javascript" );
+  script.setAttribute( "defer", "defer" );
+  document.getElementById( 'preview' ).appendChild( script );
+}
+function check_rate_limit( data ) {
+  var remaining_hits = data[ "remaining_hits" ];
+  if ( remaining_hits == 0 ) {
+    alert( "Twitter APIの呼び出し制限中です。" );
+    throw( "Twitter APIの呼び出し制限中です。" );
+  }
+}
+function preview_list() {
+  var userid = document.forms.form1.userid.value;
+  if ( !userid || userid == "" ) {
+    alert( "アカウント名を入力してください" );
+    return false;
+  }
+  document.getElementById( 'preview' ).innerHTML = '<img src="../images/ajax-loader.gif" />';
+  load_twitter_followers_ids( -1 );
+}
+function preview_list2( data ) {
+  var ids = data[ "ids" ];
+  for ( var i = 0, entry; i < ids.length; i += 100 ) {
+    var subids = ids.slice( i, i + 100 );
+    load_twitter_users_lookup( subids );
+  }
+  if ( data[ "cursor" ] ) {
+    load_twitter_followers_ids( data[ "cursor" ] );
+  }
+}
+function preview_list3( users ) {
+  var textarea = document.getElementById( 'textarea' );
+  if (!textarea) {
+    document.getElementById( 'preview' ).innerHTML = '<textarea id="textarea" rows="10" cols="120"></textarea>';
+    textarea = document.getElementById( 'textarea' );
+  }
+  for ( var i = 0; i < users.length; i++ ) {
+    var line = normalize_text( users[i][ "screen_name" ] );
+    line += "\t" + normalize_text( users[i][ "name" ] );
+    line += "\t" + normalize_text( users[i][ "description" ] );
+    line += "\t" + normalize_text( users[i][ "location" ] );
+    line += "\t" + normalize_text( users[i][ "url" ] );
+    textarea.value += line + "\r\n";
+  }
+  textarea.select();
+}
+function normalize_text( str ) {
+  return str ? str.replace( /[\r\n\t]+/g, " " ) : "";
+}
+</script>
+<form action="" id="form1" onsubmit="preview_list();return false;">
+<div class="form">
+<label>アカウント名: <input type="text" name="userid" size="40" /></label>
+<!--
+<label>リスト対象: <select name="target">
+<option value="followers">フォローされている</option>
+<option value="following">フォローしている</option>
+</select>
+</label>
+<label>出力形式: <select name="format">
+<option value="html">表形式</option>
+<option value="text">テキスト</option>
+</select>
+-->
+<input type="submit" value=" 出力 " />
+</div>
+</form>
+<div id="preview"></div>
+<h2 id="toc1_1">履歴</h2>
+<dl>
+<dt>2012-10-22</dt>
+<dd>初版作成
+</dd>
+</dl>
+<hr />
+<div class="navi"><a href="./..">HOME</a> &gt;
+Twitterフォロワーリスト化ツール</div>
+<address>高久雅生 (Masao Takaku)<br />
+<a href="http://masao.jpn.org/">http://masao.jpn.org/</a>,
+<a href="mailto:tmasao@acm.org">tmasao@acm.org</a></address>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-389547-1";
+urchinTracker();
+</script>
+</body>
+</html>
