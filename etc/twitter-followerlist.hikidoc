@@ -1,71 +1,111 @@
-title: TwitterƒtƒHƒ[/ƒtƒHƒƒ[ƒŠƒXƒgƒc[ƒ‹
-dc.issued: 2012-10-22
-dc.available: 2012-10-22
+title: Twitter¥Õ¥©¥í¥ï¡¼¥ê¥¹¥È²½¥Ä¡¼¥ë
+date.available: 2012-10-22
+date.modified: 2012-10-23
+css.content:
+  #preview {
+    margin: 1ex;
+  }
+  #textarea {
+    width: 100%;
+  }
 
-Twitter‚ÅƒtƒHƒ[‚µ‚Ä‚¢‚é‘ŠèAƒtƒHƒ[‚³‚ê‚Ä‚¢‚é‘Šè‚ğƒŠƒXƒg‚µ‚Ü‚·B
+Twitter¤ÎÆÃÄê¤Î¥¢¥«¥¦¥ó¥È¤Î¥Õ¥©¥í¥ï¡¼¤ò¥ê¥¹¥È²½¤·¤Ş¤¹¡£
+¤Ê¤ª¡¢Twitter API¤ò»È¤Ã¤Æ¤¤¤ë¤Î¤Ç¡¢¥Õ¥©¥í¥ï¡¼¿ô¤¬°ìÄê¸ÂÅÙ¤ËÃ£¤¹¤ë¤È¥¨¥é¡¼¤Ë¤Ê¤ê¤Ş¤¹¡Ê¤ª¤½¤é¤¯1Ëü¥Õ¥©¥í¡¼°Ê¾å¤¢¤ë¥¢¥«¥¦¥ó¥È¤Ë¤ÏÂĞ±ş¤Ç¤­¤Ş¤»¤ó¡Ë¡£
 
-‚È‚¨ATwitter API‚ğg‚¤‚Ì‚ÅA1ŠÔ‚É150‰ñˆÈãƒAƒNƒZƒX‚·‚é‚ÆAƒGƒ‰[‚É‚È‚è‚Ü‚·B
+ÆÉ¤ß¹ş¤ß¤¬½ªÎ»¤¹¤ë¤È¡¢¥Õ¥©¥í¥ï¡¼¤Î¥×¥í¥Õ¥£¡¼¥ë¡Ê¥¢¥«¥¦¥ó¥ÈÌ¾¡¢Ì¾Á°¡¢¥×¥í¥Õ¥£¡¼¥ë¡¢¾ì½ê¡¢URL¡Ë¤ò¥¿¥Ö¶èÀÚ¤ê¤Ç°ì¹Ô¤´¤È¤Ë¤·¤¿ÆâÍÆ¤¬¥Æ¥­¥¹¥È¥¨¥ê¥¢¤¬½Ğ¸½¤¹¤ë¤Î¤Ç¡¢¥³¥Ô¡¼&¥Ú¡¼¥¹¥È¤·¤ÆExcel¥Õ¥¡¥¤¥ëÅù¤Ç°·¤¨¤Ş¤¹¡£
 
 {{rawhtml
-<form action="" id="form" onsubmit="preview_list();return false;">
-<div class="form">
-<label>ƒAƒJƒEƒ“ƒg–¼: <input type="text" name="userid" size="40" /></label>
-<label>ƒŠƒXƒg‘ÎÛ: <select name="target">
-<option value="followers">ƒtƒHƒ[‚³‚ê‚Ä‚¢‚é</option>
-<option value="following">ƒtƒHƒ[‚µ‚Ä‚¢‚é</option>
-</select>
-</label>
-<label>o—ÍŒ`®: <select name="format">
-<option value="html">•\Œ`®</option>
-<option value="text">ƒeƒLƒXƒg</option>
-</select>
-</div>
-</form>
-<div id="preview"></div>
-<script type="text/javascript>
+<script type="text/javascript">
 var TWITTER_BASEURL = 'https://api.twitter.com/1/';
-function load_twitter_json( cursor ) {
+function load_twitter_followers_ids( cursor ) {
+  var userid = document.forms.form1.userid.value;
   var script = document.createElement( "script" );
-  script.setAttribute( "src", TWITTER_BASEURL + target + '/' + userid + '.json?callback=preview_list2' );
+  script.setAttribute( "src", TWITTER_BASEURL + 'followers/ids.json?callback=preview_list2&screen_name=' + userid + '&cursor=' + cursor );
   script.setAttribute( "type", "text/javascript" );
   script.setAttribute( "defer", "defer" );
   document.getElementById( 'preview' ).appendChild( script );
 }
+function load_twitter_users_lookup( userids ) {
+  var script = document.createElement( "script" );
+  script.setAttribute( "src", TWITTER_BASEURL + 'users/lookup.json?callback=preview_list3&user_id=' + userids.join(",") );
+  script.setAttribute( "type", "text/javascript" );
+  script.setAttribute( "defer", "defer" );
+  document.getElementById( 'preview' ).appendChild( script );
+}
+function load_twitter_rate_limit_status() {
+  var script = document.createElement( "script" );
+  script.setAttribute( "src", TWITTER_BASEURL + 'account/rate_limit_status.json?callback=check_rate_limit' );
+  script.setAttribute( "type", "text/javascript" );
+  script.setAttribute( "defer", "defer" );
+  document.getElementById( 'preview' ).appendChild( script );
+}
+function check_rate_limit( data ) {
+  var remaining_hits = data[ "remaining_hits" ];
+  if ( remaining_hits == 0 ) {
+    alert( "Twitter API¤Î¸Æ¤Ó½Ğ¤·À©¸ÂÃæ¤Ç¤¹¡£" );
+    throw( "Twitter API¤Î¸Æ¤Ó½Ğ¤·À©¸ÂÃæ¤Ç¤¹¡£" );
+  }
+}
 function preview_list() {
-  var userid = form.userid.value
-  var target = form.target.value
-  var format = form.format.value
+  var userid = document.forms.form1.userid.value;
+  if ( !userid || userid == "" ) {
+    alert( "¥¢¥«¥¦¥ó¥ÈÌ¾¤òÆşÎÏ¤·¤Æ¤¯¤À¤µ¤¤" );
+    return false;
+  }
   document.getElementById( 'preview' ).innerHTML = '<img src="../images/ajax-loader.gif" />';
-
-  var textarea = document.creatElement( "input" );
-  textarea.setAttribute( "type", "textarea" );
-  textarea.setAttribute( "id", "textarea" );
-  load_twitter_json( -1 );
-  preview.appendChild( textarea );
+  load_twitter_followers_ids( -1 );
 }
 function preview_list2( data ) {
-  var textarea = document.getElementById( 'textarea' );
-  var users = data[ "users" ];
-  for (var i = 0, entry; entry = users.entries[i]; i++) {
-    textarea.innnerHTML += normalize_text( users[i][ "name" ] );
-    textarea.innnerHTML += "\t" + normalize_text( users[i][ "screen_name" ] );
-    textarea.innnerHTML += "\t" + normalize_text( users[i][ "description" ] );
-    textarea.innnerHTML += "\t" + normalize_text( users[i][ "location" ] );
-    textarea.innnerHTML += "\t" + normalize_text( users[i][ "url" ] );
-    textarea.innnerHTML += "\n";
+  var ids = data[ "ids" ];
+  for ( var i = 0, entry; i < ids.length; i += 100 ) {
+    var subids = ids.slice( i, i + 100 );
+    load_twitter_users_lookup( subids );
   }
   if ( data[ "cursor" ] ) {
-    load_twitter_json( data[ "cursor" ] );
+    load_twitter_followers_ids( data[ "cursor" ] );
   }
 }
+function preview_list3( users ) {
+  var textarea = document.getElementById( 'textarea' );
+  if (!textarea) {
+    document.getElementById( 'preview' ).innerHTML = '<textarea id="textarea" rows="10" cols="120"></textarea>';
+    textarea = document.getElementById( 'textarea' );
+  }
+  for ( var i = 0; i < users.length; i++ ) {
+    var line = normalize_text( users[i][ "screen_name" ] );
+    line += "\t" + normalize_text( users[i][ "name" ] );
+    line += "\t" + normalize_text( users[i][ "description" ] );
+    line += "\t" + normalize_text( users[i][ "location" ] );
+    line += "\t" + normalize_text( users[i][ "url" ] );
+    textarea.value += line + "\r\n";
+  }
+  textarea.select();
+}
 function normalize_text( str ) {
-  return str.replace_string( /[\r\n\t]+/, " " );
+  return str ? str.replace( /[\r\n\t]+/g, " " ) : "";
 }
 </script>
+<form action="" id="form1" onsubmit="preview_list();return false;">
+<div class="form">
+<label>¥¢¥«¥¦¥ó¥ÈÌ¾: <input type="text" name="userid" size="40" /></label>
+<!--
+<label>¥ê¥¹¥ÈÂĞ¾İ: <select name="target">
+<option value="followers">¥Õ¥©¥í¡¼¤µ¤ì¤Æ¤¤¤ë</option>
+<option value="following">¥Õ¥©¥í¡¼¤·¤Æ¤¤¤ë</option>
+</select>
+</label>
+<label>½ĞÎÏ·Á¼°: <select name="format">
+<option value="html">É½·Á¼°</option>
+<option value="text">¥Æ¥­¥¹¥È</option>
+</select>
+-->
+<input type="submit" value=" ½ĞÎÏ " />
+</div>
+</form>
+<div id="preview"></div>
 }}
 
+!! ÍúÎò
 
-! —š—ğ
-
-:2012-10-22:‰”Åì¬
+:2012-10-22:½éÈÇºîÀ®
 
