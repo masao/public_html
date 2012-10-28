@@ -2,6 +2,26 @@
 <!-- $Id$ -->
 <publist version="$Revision$">
   <pub type="misc">
+    <title>茨城県つくば市における地域情報発信の様子を振り返る試み</title>
+    <conference>東日本大震災ビッグデータワークショップ成果発表会</conference>
+    <year>2012</year>
+    <month>10</month>
+    <city>東京</city>
+    <date>2012-10-28</date>
+    <slides>http://www.slideshare.net/tmasao/ss-14915945</slides>
+  </pub>
+
+  <pub type="misc">
+    <title>物質・材料研究機構におけるNext-L Enjuの導入事例</title>
+    <conference>EnjuKaigi 2012</conference>
+    <year>2012</year>
+    <month>10</month>
+    <city>松江市</city>
+    <date>2012-10-27</date>
+    <slides>http://www.slideshare.net/tmasao/nextl-enju-14907921</slides>
+  </pub>
+
+  <pub type="misc">
     <title>「第37回情報科学技術協会賞」を受賞して</title>
     <subtitle>優秀機関賞を受賞して</subtitle>
     <author>高久雅生</author>
