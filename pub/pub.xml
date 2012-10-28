@@ -3,6 +3,8 @@
 <publist version="$Revision$">
   <pub type="misc">
     <title>東日本大震災発災期のツイッターにおける地域発信情報の分析の試み</title>
+    <author>高久雅生</author>
+    <author>江草由佳</author>
     <conference>第5回知識共有ワークショップ</conference>
     <year>2012</year>
     <month>11</month>
@@ -14,6 +16,8 @@
 
   <pub type="misc">
     <title>茨城県つくば市における地域情報発信の様子を振り返る試み</title>
+    <author>高久雅生</author>
+    <author>江草由佳</author>
     <conference>東日本大震災ビッグデータワークショップ成果発表会</conference>
     <year>2012</year>
     <month>10</month>
@@ -24,6 +28,7 @@
 
   <pub type="misc">
     <title>物質・材料研究機構におけるNext-L Enjuの導入事例</title>
+    <author>高久雅生</author>
     <conference>EnjuKaigi 2012</conference>
     <year>2012</year>
     <month>10</month>
