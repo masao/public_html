@@ -10,7 +10,10 @@
     <month>11</month>
     <city>福山</city>
     <date>2012-11-10</date>
-    <page>4</page>
+    <page>
+      <start>81</start>
+      <end>84</end>
+    </page>
     <file>2012/infosocio-ks.pdf</file>
     <slides>http://www.slideshare.net/tmasao/ss-15119117</slides>
   </pub>
