@@ -1,7 +1,7 @@
 title: 高久雅生の経歴
 title.short: 経歴
 date.available: 2007-03-04
-date.modified: 2012-08-10
+date.modified: 2012-12-07
 
 [[{{image './images/201003-c4l10jp.jpg' 'Code4Lib 2010報告会にて（2010年3月）' thumbs 193px right}}|./profile-images.html]]
 :氏名:高久 雅生 （たかく まさお）
@@ -52,6 +52,15 @@ date.modified: 2012-08-10
 ::（2000年度・図書館情報学部）プログラミング言語演習I - C言語を使った演習
 ::（2000年度・図書館情報学部）プログラミング言語演習II - C言語を使った演習
 ::（2000年度・図書館情報学部）基礎情報処理 - HTMLの仕組みやPowerPoint/Excel/Photoshopなどのアプリケーションの使用法の解説と演習
+
+!!! セミナー講師等
+
+:[[平成23年度 第3回東京都図書館研究交流会・東京都図書館協会IT講習会|http://www.code4lib.jp/2011/11/670/]] （2011年11月・東京都豊島区）:OPACシステム改善のための手法「OPAC+」演習におけるファシリテーションを担当。
+:[[国立情報学研究所 学術ポータル研修|http://www.nii.ac.jp/hrd/ja/portal/h23/curritxt.html]] （2011年8月・東京都千代田区）:「学術情報流通を実現する技術（1）‐要素技術」と題して講義、受講生のファシリテーションを担当。
+:[[第6回Code4Lib JAPANワークショップ|http://d.hatena.ne.jp/josei002-10/20110728/1311816868]] （2011年7月・愛知県名古屋市）:OPACシステム改善のための手法「OPAC+」演習におけるファシリテーションを担当。
+:[[第3回Code4Lib JAPANワークショップ|http://d.hatena.ne.jp/josei002-10/20101213/1292251500]] （2010年12月・福井県あわら市）:ウェブAPI, RSSを用いたワークショップにおける講師とファシリテーションを担当。
+:[[第2回Code4Lib JAPANワークショップ|http://d.hatena.ne.jp/josei002-10/20101025/1288003806]] （2010年10月・茨城県つくば市）:ウェブアクセスログの実践的な解析手法のワークショップ演習における講師とファシリテーションを担当。
+:Yahoo! Japan技術講演会 （2007年8月・東京都港区）:「異種データベース統合に基づく研究者情報検索」と題し、研究者情報を中心とする学術情報流通のトピックについて講演。
 
 !!その他の活動
 :ジャパンリンクセンター運営委員会 システム技術分科会 (2012 - ):
@@ -117,10 +126,10 @@ date.modified: 2012-08-10
 //::SACSIS 2005 （2005年）
 
 !!研究助成金
-*2010年度-: 科学研究費補助金 若手研究(B) 「[[機関リポジトリ・外部データベースと連携可能な著者ID流通システム|http://kaken.nii.ac.jp/ja/p/22700253]]」（課題番号:22700253）研究代表者
-*2009年度-: 科学研究費補助金 基盤研究(C) 「[[ウェブ空間に対する紙メディアの影響力分析に関する研究|http://kaken.nii.ac.jp/ja/p/21500107]]」（課題番号:21500107）（研究代表者:[[宮崎収兄|http://www.mz.cs.it-chiba.ac.jp/]]） 研究分担者
-*2009年度-: 科学研究費補助金 基盤研究(B) 「[[検索ログ解析と認知的研究による利用者の探索的な情報検索行動の研究|http://kaken.nii.ac.jp/ja/p/21300096]]」（課題番号:21300096）（研究代表者:[[神門典子|http://research.nii.ac.jp/~kando/]]） 連携研究者
-*2008年度-: 国立情報学研究所 公募型共同研究 「情報探索行動の認知モデルの構築とその応用に関する研究」（研究代表者: [[齋藤ひとみ|http://rhino.ics.aichi-edu.ac.jp/]]） 共同研究者 （[[CRESプロジェクト|http://cres.jpn.org/]]）
+*2010年度-2011年度: 科学研究費補助金 若手研究(B) 「[[機関リポジトリ・外部データベースと連携可能な著者ID流通システム|http://kaken.nii.ac.jp/ja/p/22700253]]」（課題番号:22700253）研究代表者
+*2009年度-2011年度: 科学研究費補助金 基盤研究(C) 「[[ウェブ空間に対する紙メディアの影響力分析に関する研究|http://kaken.nii.ac.jp/ja/p/21500107]]」（課題番号:21500107）（研究代表者:[[宮崎収兄|http://www.mz.cs.it-chiba.ac.jp/]]） 研究分担者
+*2009年度-2011年度: 科学研究費補助金 基盤研究(B) 「[[検索ログ解析と認知的研究による利用者の探索的な情報検索行動の研究|http://kaken.nii.ac.jp/ja/p/21300096]]」（課題番号:21300096）（研究代表者:[[神門典子|http://research.nii.ac.jp/~kando/]]） 連携研究者
+*2008年度-2011年度: 国立情報学研究所 公募型共同研究 「情報探索行動の認知モデルの構築とその応用に関する研究」（研究代表者: [[齋藤ひとみ|http://rhino.ics.aichi-edu.ac.jp/]]） 共同研究者 （[[CRESプロジェクト|http://cres.jpn.org/]]）
 *2006年度-2008年度: 科学研究費補助金 基盤研究(C) 「[[大規模WWWデータからの情報資源構築のための高性能分類方式の研究|http://kaken.nii.ac.jp/ja/p/18300037]]」（課題番号:18300037）（研究代表者:[[大山敬三|http://research.nii.ac.jp/~oyama/]]） 研究分担者
 *2006年度-2008年度: 科学研究費補助金 特定領域研究（計画研究A01-00-04） 「[[情報爆発時代の情報検索基盤技術|http://research.nii.ac.jp/ix/A01-00-04/]]」（課題番号:[[18049069|http://kaken.nii.ac.jp/ja/p/18049069]]）（研究代表者:[[安達淳|http://www.nii.ac.jp/index.php?action=pages_view_main&page_id=129]]） 研究協力者
 *2005年度-2007年度: 科学研究費補助金 若手研究(B) 「[[WWW上サイトマップの再利用促進のための分散型用語体系提供システムの研究|http://kaken.nii.ac.jp/ja/p/17700130]]」（課題番号:17700130） 研究代表者
@@ -144,6 +153,7 @@ date.modified: 2012-08-10
 *[[JST ReaDデータベース・研究者情報|http://read.jst.go.jp/public/cs_ksh_008EventAction.do?action4=event&lang_act4=J&judge_act4=2&knkysh_name_code=1000302228]]
 *[[NII研究者リゾルバー|http://rns.nii.ac.jp/nr/1000000399271]]
 *[[ResearcherID| http://www.researcherid.com/rid/B-5097-2009]] {{rawhtml "<span id='badgeCont275303' style='width:26px'><script src='http://labs.researcherid.com/mashlets?el=badgeCont275303&mashlet=badge&showTitle=false&className=a&rid=B-5097-2009&size=small'></script></span>"}}
+*[[ORCID|https://orcid.org/0000-0002-2458-6988]]
 *[[GitHub|https://github.com/masao]]
 *[[Delicious|http://www.delicious.com/masao]]
 
