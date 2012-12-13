@@ -175,6 +175,7 @@ Supieror
 Thank God
 Thanks alot
 Thanks for contributing
+Thanks for contributing
 Thanks for hanging out
 Thanks for helping me
 Thanks for posting
@@ -195,6 +196,7 @@ That saves me.
 There are no words
 There is a critical shortage
 Thgouht
+Thinking like that
 This article achieved
 This has made my day
 This information is off
@@ -227,6 +229,7 @@ You make things
 You really found
 You saved me
 You've hit the ball
+Your answer
 Your answer lifts
 Your cranium
 Your post
@@ -295,6 +298,8 @@ arteilcs
 article perfectly
 article up
 artiecls
+artlcie
+artlcies
 artlice
 arvried
 asenwr
@@ -303,6 +308,7 @@ ask her to call me
 aslbuotely
 asnewr
 asnwer
+astute
 aswenr
 asweome
 aswner
@@ -330,6 +336,7 @@ awsner
 aymnroe
 aynthing
 back from the keyboard
+bareable
 bceasue
 bdoaciuos
 be happy
@@ -403,6 +410,7 @@ cimnog
 claered
 cleared it up
 cleared my thoughts
+cleared the air
 cleevr
 clerlay
 clever 4
@@ -422,6 +430,7 @@ cnocrens
 cnofuesd
 cnomig
 cnortuibting
+cnotribtiuon
 cofneusd
 coimng
 come up with that
@@ -457,6 +466,7 @@ dazlznig
 dcotor
 deabte
 debtae
+deep thinker
 deep thinking
 defiinetly
 demnsortated
@@ -529,6 +539,7 @@ expetcnig
 exptceing
 exrpet
 exrtmeely
+extermely
 fabluous
 facts available here
 failnly
@@ -558,6 +569,8 @@ foveerr
 fucking
 gareetst
 garetest
+garetufl
+gatrfuel
 gdnaer
 geaertst
 geartest
@@ -570,6 +583,7 @@ getnleemn
 getraset
 getting that know-how
 gettnig
+geunienly
 giinvg
 giivng
 give it a shot
@@ -615,6 +629,7 @@ halsse
 happeend
 hard fucking
 hard to find out
+hate my life
 have thought of that
 have to be the case
 have you on our side
@@ -686,15 +701,18 @@ imperssing
 impesrsed
 imporatnt
 impressing me!
+impressive answer
 imprseesd
 impsresed
 imrpessive
 imrpseesd
+imrpsesed
 in the same forum
 increbdile
 incredilbe
 indebted
 indispeansble
+inetllgicene
 info out
 infoarmtion
 infomraiton
@@ -800,6 +818,7 @@ loonikg
 loonkig
 lot easier
 love of God
+maacadmia
 maagned
 macadmaia
 macamdaia
@@ -852,6 +871,7 @@ oenped
 off the list
 onnlie
 paajmas
+paamjas
 padrenr
 pay me to ignore
 pefrect
@@ -859,11 +879,13 @@ pefrtecly
 pelaesd
 pelasrue
 pelasure
+pelsaure
 penis
 people like you
 pepyaka
 perecft
 perfcet
+perfect insight
 perfect reply
 perfect way
 pertty
@@ -976,6 +998,7 @@ replica watches
 rescoure
 resorcue
 respect from me
+revleatoin
 ritaonal
 rlaely
 rlealy
@@ -988,6 +1011,7 @@ roesurce
 roilnlg
 rotten egg
 rpseect
+rquereis
 rseocrue
 rseoucre
 rsourece
@@ -998,6 +1022,7 @@ saecrehd
 sahring
 sarhing
 satifsied
+satirntg
 satsifeid
 save me time
 saved me
@@ -1007,6 +1032,7 @@ sceert
 sceret
 screet
 scucinct
+searhced
 searhced
 sebnsile
 seecrt
@@ -1141,8 +1167,10 @@ talnikg
 tanhks
 tanlet
 tarpnsaretnly
+tckiet
 tcriky
 tealnt
+tehard
 ternchant
 terrfiic
 terrific amount
@@ -1203,6 +1231,7 @@ thoghut
 thohugt
 throguh
 thuoght
+thurogh
 tiakng
 ticrky
 tieckt
@@ -1232,6 +1261,7 @@ tnhgis
 tnhiinkg
 tnhiknig
 tnhkiing
+tnihikng
 to the point
 tocpis
 tohguht
@@ -1323,6 +1353,7 @@ wondreing
 wonedrnig
 wothry
 wrierts
+wrinitg
 wrintig
 write for me
 write more
