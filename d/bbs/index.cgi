@@ -42,6 +42,7 @@ All of my questions
 All posts of this
 Always a good job
 Arictles
+Aritcels
 Aritecls
 Articles like
 Articles like this
@@ -146,6 +147,7 @@ Not the usual
 POV videos
 Party girls
 Phsiycs
+Plasneig
 Play informative
 Porn
 Posts like this
@@ -172,6 +174,7 @@ Superbly illuminating
 Supieror
 Thank God
 Thanks alot
+Thanks for contributing
 Thanks for hanging out
 Thanks for helping me
 Thanks for posting
@@ -226,6 +229,7 @@ You saved me
 You've hit the ball
 Your answer lifts
 Your cranium
+Your post
 a lot easier from here
 abiilty
 ability to think
@@ -249,6 +253,7 @@ airtlces
 alhrgit
 all my problems
 allows free info like this
+amainzg
 ambien
 amlsot
 amnout
@@ -283,10 +288,13 @@ aritlce
 aritlces
 arltices
 arrtcile
+artciels
+artciles
 artclie
 arteilcs
 article perfectly
 article up
+artiecls
 artlice
 arvried
 asenwr
@@ -303,6 +311,7 @@ atilrce
 atircle
 atircles
 ativan
+atlrice
 atrcile
 atrciles
 atricels
@@ -310,6 +319,7 @@ atricle
 atrilce
 atrilecs
 atrlcie
+aucrcate
 avdice
 awalys
 awnesr
@@ -353,6 +363,7 @@ brain power
 bravo!
 brhoetr
 brightened my day
+brilalint
 brinas
 brings light into
 brliialnt
@@ -364,14 +375,18 @@ bteter
 btorher
 btteer
 bullsyee
+buy online
 buy these articles
 cahnge
 cahnigng
 call you back
 calling up people
+carnuim
+catpeurs
 ceelvr
 cehered
 cehreed
+celared
 celevr
 celver
 cevelr
@@ -427,10 +442,14 @@ cool way
 cotnributing
 cotnributnig
 couldn't pay me to
+crackerjack
+crateive
 creative answer
 creative mind
 crietanly
+crystal clear
 cteairnly
+cunning
 cveler
 cvleer
 cvoreed
@@ -441,7 +460,9 @@ debtae
 deep thinking
 defiinetly
 demnsortated
+detbae
 dicattor
+difficult question
 dilaspy
 doctor ordered
 doing so much
@@ -469,6 +490,7 @@ enetrtaniing
 enthlraling
 enthralling
 enuogh
+eognuh
 epxcet
 epxlain
 epxuonder
@@ -516,6 +538,7 @@ fbauolus
 fblauuos
 fbualous
 feeilng
+feel satisfied
 feel stupid
 feelnig
 fgiruing
@@ -525,6 +548,7 @@ finally found
 fioricet
 firgue
 first class post
+first rate
 fiurgnig
 fnially
 foloish
@@ -537,6 +561,7 @@ garetest
 gdnaer
 geaertst
 geartest
+genius store
 gertaest
 get paid
 get this info
@@ -548,6 +573,7 @@ gettnig
 giinvg
 giivng
 give it a shot
+gneetlmen
 going for years
 going to talk to
 goldoy
@@ -571,6 +597,7 @@ graetset
 grateest
 grateful you
 greaestt
+greaetnss
 greaetst
 great aritcels
 great info
@@ -660,6 +687,7 @@ impesrsed
 imporatnt
 impressing me!
 imprseesd
+impsresed
 imrpessive
 imrpseesd
 in the same forum
@@ -691,11 +719,13 @@ inorfmative
 inrcedblie
 insghit
 insgiht
+insgihts
 inteillegnt
 intelliegcne
 intelligent answer
 intelligent point
 intellignece
+interesntig
 internet hooligans
 internet writer
 intreent
@@ -706,6 +736,7 @@ iprmesesd
 is power
 isinght
 isinght
+isndie
 isnihgt
 it all makes sense
 job description
@@ -719,6 +750,7 @@ kbeyoard
 keep coming
 keep on reading
 keep them
+keep writing
 keyaobrd
 keybroad
 kind of knowledge
@@ -758,6 +790,7 @@ lolita
 lolitas
 lonoikg
 lonokig
+looikn
 looikng
 looinkg
 look promising
@@ -775,6 +808,7 @@ magnaed
 mainkg
 mangaed
 marvelously good
+mcaaadmia
 mcaadmaia
 mcadaamia
 mcdaaamia
@@ -782,6 +816,7 @@ mdniight
 miknag
 million thanks
 minteus
+mintue
 mituens
 miuents
 mknaig
@@ -835,11 +870,14 @@ pertty
 pharmacies
 pianelss
 pills
+piotns
 pjaaams
 pjamaas
 plainyg
 pleasure to read
+plesead
 plesuare
+plsaeed
 pobrmles
 poeuwrfl
 ponits
@@ -897,11 +935,15 @@ qluaity
 queistnos
 queiston
 questnios
+quetsion
 quetsoin
+qulatiy
 quseiotns
 quseitons
 qusetions
 qusetoins
+qusoetin
+raeding
 raeidng
 raelly
 ralely
@@ -930,6 +972,7 @@ relilabe
 rellay
 reocgniezd
 reockn
+replica watches
 rescoure
 resorcue
 respect from me
@@ -937,7 +980,9 @@ ritaonal
 rlaely
 rlealy
 rlelay
+rlieef
 rmemeber
+rnuning
 rnunnig
 roesurce
 roilnlg
@@ -946,6 +991,7 @@ rpseect
 rseocrue
 rseoucre
 rsourece
+rtoetn
 ruinnng out
 s***
 saecrehd
@@ -959,13 +1005,16 @@ saved us
 sbulmie
 sceert
 sceret
+screet
 scucinct
+searhced
 sebnsile
 seecrt
 semlls
 semoone
 senisble
 sensible answer
+sensilbe
 seomnoe
 seotmhing
 sepkas
@@ -997,6 +1046,7 @@ slainet
 slemls
 slhuod
 slick answer
+slkilful
 slohud
 sluaghetred
 smart and intelligent
@@ -1007,6 +1057,7 @@ smoehntig
 smoenoe
 smoeone
 smoething
+smoethnig
 smoneoe
 smooene
 smoonee
@@ -1031,10 +1082,12 @@ somenoe
 someone comes up with
 someone who thinks
 something I agree
+something like that
 somethnig
 sometnhig
 sometnihg
 somneoe
+somoene
 somonee
 somteinhg
 sooemne
@@ -1080,6 +1133,7 @@ taelnt
 tahknful
 tahkns
 tahnks
+taikng
 tailkng
 take the next step
 taknhs
@@ -1137,6 +1191,7 @@ thkninig
 thnaks
 thngis
 thnigs
+thniikng
 thniinkg
 thniknig
 thninikg
@@ -1148,6 +1203,7 @@ thoghut
 thohugt
 throguh
 thuoght
+tiakng
 ticrky
 tieckt
 tihgns
@@ -1168,6 +1224,7 @@ tkhnaful
 tlanet
 tleant
 tnahks
+tnahkufl
 tnakhs
 tnghis
 tnhaks
@@ -1177,6 +1234,8 @@ tnhiknig
 tnhkiing
 to the point
 tocpis
+tohguht
+tohguhts
 tohrugh
 tohuhgt
 toltaly
@@ -1187,6 +1246,7 @@ topic-bravo
 touchdown
 touhght
 transaprnetly
+trehncant
 trencahnt
 trenchant
 tricky question
@@ -1211,6 +1271,7 @@ undsretnad
 unebilevable
 unebilevbale
 unedrtsadning
+unrdetsanding
 useufl
 usfeul
 valaulbes
@@ -1235,6 +1296,7 @@ web20power
 webiste
 weeeknd
 well-written
+well-wrtiten
 what I need
 what I needed
 what I was needed
@@ -1243,6 +1305,7 @@ what info I want
 what the dotcor ordered
 what we need
 what's up
+where to buy
 where to find this info
 who you wrote this
 wirter
@@ -1267,6 +1330,7 @@ writing this topic
 writnig
 wrtiing
 wrtinig
+wrtiten
 wrtohy
 wrttien
 wsebites
