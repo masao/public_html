@@ -2,6 +2,34 @@
 <!-- $Id$ -->
 <publist version="$Revision$">
   <pub type="misc">
+    <title>FRBRモデルのWork/Expression関係に基づく目録システムの構築</title>
+    <subtitle>国語教科書を例として</subtitle>
+    <author>田辺浩介</author>
+    <author>高久雅生</author>
+    <author>江草由佳</author>
+    <conference>情報処理学会 第97回人文科学とコンピュータ研究会</conference>
+    <year>2013</year>
+    <month>1</month>
+    <city>東京</city>
+    <date>2013-01-25</date>
+    <note>（発表予定）</note>
+  </pub>
+
+  <pub type="misc">
+    <title>物質・材料研究機構におけるライブラリーポータル</title>
+    <subtitle>次世代OPACからEジャーナル、Eリソース管理（ERMS）まで</subtitle>
+    <author>高久雅生</author>
+    <author>田辺浩介</author>
+    <author>谷藤幹子</author>
+    <conference>第14回図書館総合展</conference>
+    <year>2012</year>
+    <month>11</month>
+    <city>横浜</city>
+    <date>2012-11-20</date>
+    <note>（ポスターセッション）</note>
+  </pub>
+
+  <pub type="misc">
     <title>東日本大震災発災期のツイッターにおける地域発信情報の分析の試み</title>
     <author>高久雅生</author>
     <author>江草由佳</author>
