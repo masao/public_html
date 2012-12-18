@@ -214,6 +214,7 @@ Viagra
 View my complete
 WINNING!
 Way to go on
+Welcome to the debate
 Well done
 Well put
 What a joy
@@ -287,6 +288,7 @@ aricetls
 arictles
 arirevd
 aritcle
+aritelcs
 aritlce
 aritlces
 arltices
@@ -349,6 +351,7 @@ beilvee
 betsest
 betsset
 better than a brick
+beucase
 bferoe
 bfreoe
 big help
@@ -363,6 +366,7 @@ blown away
 bluleyse
 bocdiauos
 bodacoius
+boom boom
 borhetr
 bortehr
 borther
@@ -800,6 +804,7 @@ logic set out
 loikong
 loiokn
 lokinog
+lokion
 lokiong
 loknoig
 lokoed
@@ -897,6 +902,7 @@ pjaaams
 pjamaas
 plainyg
 pleasure to read
+pleausre
 plesead
 plesuare
 plsaeed
@@ -931,6 +937,7 @@ problem solved
 probmels
 prodigious writers
 proelbm
+prolebm
 propecia
 prseence
 prsoen
