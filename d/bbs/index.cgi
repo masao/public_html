@@ -276,6 +276,7 @@ appaer
 apprceiaiton
 apprceita
 apprcieate
+apprecaite
 apprecitaion
 approcah
 aprepciate
@@ -288,6 +289,7 @@ aricetls
 arictles
 arirevd
 aritcle
+aritelcs
 aritelcs
 aritlce
 aritlces
@@ -320,6 +322,7 @@ atircle
 atircles
 ativan
 atlrice
+atnyhing
 atrcile
 atrciles
 atricels
@@ -352,6 +355,7 @@ betsest
 betsset
 better than a brick
 beucase
+beucase
 bferoe
 bfreoe
 big help
@@ -367,6 +371,7 @@ bluleyse
 bocdiauos
 bodacoius
 boom boom
+boom boom
 borhetr
 bortehr
 borther
@@ -381,6 +386,7 @@ brliialnt
 brngis
 bseetst
 bsetest
+bsetset
 btesset
 bteter
 btorher
@@ -459,6 +465,7 @@ crackerjack
 crateive
 creative answer
 creative mind
+creiavte
 crietanly
 crystal clear
 cteairnly
@@ -467,6 +474,7 @@ cveler
 cvleer
 cvoreed
 dazlznig
+dbetae
 dcotor
 deabte
 debtae
@@ -667,11 +675,13 @@ hlepnig
 hlepufl
 hlpeed
 hlpeufl
+hnosety
 home run
 hooilgnas
 hoolaigns
 hoolignas
 hot ass
+how awesome
 how clever some
 hpaepir
 hpeflul
@@ -689,6 +699,7 @@ ifnoratimve
 ifnormation
 ifnormatoin
 ifnrmoatoin
+ifnromative
 ifrnomation
 ignronat
 ignsiht
@@ -742,6 +753,7 @@ inrcedblie
 insghit
 insgiht
 insgihts
+inteernt
 inteillegnt
 intelliegcne
 intelligent answer
@@ -804,6 +816,7 @@ logic set out
 loikong
 loiokn
 lokinog
+lokion
 lokion
 lokiong
 loknoig
@@ -903,6 +916,7 @@ pjamaas
 plainyg
 pleasure to read
 pleausre
+pleausre
 plesead
 plesuare
 plsaeed
@@ -937,6 +951,7 @@ problem solved
 probmels
 prodigious writers
 proelbm
+prolebm
 prolebm
 propecia
 prseence
@@ -1011,6 +1026,7 @@ rlaely
 rlealy
 rlelay
 rlieef
+rlolnig
 rmemeber
 rnuning
 rnunnig
@@ -1250,6 +1266,7 @@ tihnking
 tihnknig
 tihnnkig
 time is money
+time to contribute
 tinhgs
 tinhking
 tinhknig
@@ -1296,12 +1313,14 @@ tuhoght
 tuhohgt
 tuohhgt
 turthflluy
+type of insight
 ubneilevblae
 udnersatnd
 udnesrtand
 uefsul
 ufseul
 uiltzie
+unbelieavlbe
 undeniable importance
 understand the issues
 undsretnad
@@ -1316,6 +1335,7 @@ valbulaes
 valium
 valubaels
 vauallbes
+very helpful
 virgins
 vlauables
 voyeur
@@ -1374,6 +1394,7 @@ wrttien
 wsebites
 wthuiot
 wtiring
+wtriing
 wuodla
 wvoheer
 xanax
