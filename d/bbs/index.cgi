@@ -77,6 +77,7 @@ Gee whiz
 Good job
 Got it!
 Grade A stuff
+Grazi
 Great common sense
 Great hammer
 Great posintg
@@ -123,6 +124,7 @@ It was dark
 It's great to read
 Kamagra
 Keep on writing
+Kick the tires
 Klonopin
 Kudos to you
 Kudos!
@@ -351,6 +353,8 @@ beenfit
 beenift
 beettr
 beilvee
+beitang
+best content
 betsest
 betsset
 better than a brick
@@ -400,6 +404,7 @@ call you back
 calling up people
 carnuim
 catpeurs
+cedrit
 ceelvr
 cehered
 cehreed
@@ -438,8 +443,10 @@ cnfoused
 cnocout
 cnocrens
 cnofuesd
+cnofused
 cnomig
 cnortuibting
+cnotbirution
 cnotribtiuon
 cofneusd
 coimng
@@ -517,6 +524,7 @@ epxcet
 epxlain
 epxuonder
 erdutioin
+erudiotin
 erudition
 esaeir
 esaier
@@ -674,6 +682,7 @@ hlepful
 hlepnig
 hlepufl
 hlpeed
+hlpeful
 hlpeufl
 hnosety
 home run
@@ -771,7 +780,10 @@ is power
 isinght
 isinght
 isndie
+isngihts
 isnihgt
+isnihgts
+isuess
 it all makes sense
 job description
 job on that
@@ -800,6 +812,7 @@ knwoeldge
 knwolegde
 knwonig
 konlwedge
+konwdlege
 kownledge
 kyeborad
 laoedd
@@ -843,6 +856,8 @@ macamdaia
 made my day
 magnaed
 mainkg
+makes you think
+maknig
 mangaed
 marvelously good
 mcaaadmia
@@ -863,6 +878,7 @@ monoploy
 more clever
 more from this article
 mortar establishment
+most useful
 movie clips
 mttear
 munties
@@ -881,6 +897,7 @@ never happened
 nggoin
 nice work!
 nicely put
+nielcy
 nilcey
 none can doubt
 nothnig
@@ -923,11 +940,13 @@ plsaeed
 pobrmles
 poeuwrfl
 ponits
+porbelm
 porlbem
 porlebm
 porlebms
 pormiisng
 porn company
+posntig
 posntigs
 possbily
 possbliy
@@ -961,6 +980,7 @@ psosilby
 psoting
 psoting!
 psotnig
+pstoing
 pttunig
 purhcseas
 pussy
@@ -987,6 +1007,7 @@ quseitons
 qusetions
 qusetoins
 qusoetin
+quteisons
 raeding
 raeidng
 raelly
@@ -999,7 +1020,9 @@ readnig
 reaindg
 real intelligence
 really appreciate
+really confused
 really cool way of
+really great
 really helped
 really informative
 really neat
@@ -1026,6 +1049,7 @@ rlaely
 rlealy
 rlelay
 rlieef
+rlloing
 rlolnig
 rmemeber
 rnuning
@@ -1042,7 +1066,9 @@ rtoetn
 ruinnng out
 s***
 saecrehd
+saercehd
 sahring
+saihrng
 sarhing
 satifsied
 satirntg
@@ -1122,6 +1148,7 @@ socrue
 sodnus
 soelvd
 soeomne
+soeonme
 sohcked
 sohlud
 solhud
@@ -1153,6 +1180,7 @@ sreect
 srhanig
 srhwed
 srmats
+srtcuk
 ssnebile
 stadnrad
 standard in the industry
@@ -1189,6 +1217,7 @@ taknhs
 talnikg
 tanhks
 tanlet
+taotlly
 tarpnsaretnly
 tckiet
 tcriky
@@ -1200,10 +1229,12 @@ terrific amount
 tghins
 thakns
 thank you enough
+thank you for posting
 thank you for this
 thank you humbly
 thanks for he answer
 thanks for posting
+thanks to this article
 thanks to your post
 thanks to your posts
 thanks y'all
@@ -1236,6 +1267,7 @@ this is so cool
 this kind of stuff
 this makes it understandable
 this post hits
+this was the best
 thkanufl
 thkinnig
 thkninig
@@ -1253,6 +1285,7 @@ thnkiing
 thoghut
 thohugt
 throguh
+thugoht
 thuoght
 thurogh
 tiakng
@@ -1300,6 +1333,7 @@ topic-bravo
 touchdown
 touhght
 transaprnetly
+trciky
 trehncant
 trencahnt
 trenchant
@@ -1318,6 +1352,7 @@ ubneilevblae
 udnersatnd
 udnesrtand
 uefsul
+ufesul
 ufseul
 uiltzie
 unbelieavlbe
@@ -1369,6 +1404,7 @@ wirter
 witohut
 witring
 wndeoring
+wndoering
 wnodernig
 wnodreing
 wnordenig
@@ -1395,6 +1431,7 @@ wsebites
 wthuiot
 wtiring
 wtriing
+wtrires
 wuodla
 wvoheer
 xanax
