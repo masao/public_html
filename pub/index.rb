@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# -*- coding: utf-8 -*-
 # $Id$
 
 require "cgi"
@@ -199,6 +200,40 @@ class PubData
       coins << matrix.compact.join("&")
    end
 
+   def to_plaintext
+      result = { :meta => [], :author => "", :title => "", :info => [], :note => "" }
+      result[ :meta ] << @type
+      result[ :meta ] << :refereed if @refereed
+      result[ :author ] << @author.join(", ")
+      result[ :title ] << @title
+      result[ :title ] << ": " + @subtitle if @subtitle
+      result[ :info ] << @journal if @journal
+      result[ :info ] << "vol."+@volume if @volume
+      result[ :info ] << "no."+@number if @number
+      result[ :info ] << @conference if @conference
+      result[ :info ] << @city if @city
+      result[ :info ] << @publisher if @publisher
+      if @month
+         result[ :info ] << "#{ @year }-#{ "%02d" % @month.to_i }"
+      else
+         result[ :info ] << @year
+      end
+      if @page
+         result[ :info ] << @page + "p."
+      elsif @page_start
+         result[ :info ] << "pp.#{page_start}-#{page_end}"
+      end
+      if @note
+         result[ :note ] << @note
+      elsif @type == "misc" and @volume.nil? and @number.nil? and @page.nil? and @page_start.nil?
+         result[ :note ] << "（口頭発表）"
+      end
+
+      result_str = result[ :meta ].join( " " )
+      result_str << "\n" if not result_str.empty?
+      result_str << "#{ result[ :author ] }: #{ result[ :title ] }. #{ result[ :info ].join( ", " ) } #{ result[ :note ] }"
+      result_str << "\n"
+   end
    def to_bibtex
       bibtex = {}
       genre =  case @type
@@ -360,6 +395,10 @@ if $0 == __FILE__
       if cgi.params["action"] and cgi.params["action"][0] == "bibtex"
          cgi.out( "application/x-bibtex; charset=UTF-8" ) do
             app.map{|e| e.to_bibtex }.join
+         end
+      elsif cgi.params["action"] and cgi.params["action"][0] == "plaintext"
+         cgi.out( "text/plain; charset=UTF-8" ) do
+            app.map{|e| e.to_plaintext }.join
          end
       else
          cgi.out( "charset" => "UTF-8" ) do
