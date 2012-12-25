@@ -27,7 +27,7 @@
     <month>11</month>
     <city>横浜</city>
     <date>2012-11-20</date>
-    <note>（ポスターセッション）</note>
+    <note>（ポスターセッション発表）</note>
   </pub>
 
   <pub type="misc">
@@ -841,6 +841,7 @@
     <url>http://pubman.mpdl.mpg.de/pubman/item/escidoc:130888</url>
     <slides>http://pubman.mpdl.mpg.de/pubman/item/escidoc:130888:2/component/escidoc:130886/20091110-ThomsonForum-handout.pdf</slides>
     <url>http://www.thomsonscientific.jp/event/lf/</url>
+    <note>（招待講演）</note>
   </pub>
 
   <!--
@@ -1698,6 +1699,7 @@
     <language>ja</language>
     <date>2007-08-28</date>
     <slides>./2007/yahoo-seminar.pdf</slides>
+    <note>（招待講演）</note>
   </pub>
 
   <pub refereed="true" type="conference">
