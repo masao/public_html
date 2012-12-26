@@ -150,6 +150,18 @@
   </pub>
 
   <pub type="misc">
+    <title>Enju導入と運用秘話</title>
+    <author>高久雅生</author>
+    <conference>Code4Lib JAPAN第1回Techサロン</conference>
+    <year>2012</year>
+    <month>1</month>
+    <city>横浜</city>
+    <date>2012-01-06</date>
+    <url>http://www.code4lib.jp/2011/12/733/</url>
+    <note>（招待講演）</note>
+  </pub>
+
+  <pub type="misc">
     <title>学習型情報探索行動を探る</title>
     <subtitle>CRES共同研究プロジェクトの成果から</subtitle>
     <author>高久雅生</author>
