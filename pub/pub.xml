@@ -307,7 +307,7 @@
     <author>Makiko Miwa</author>
     <author>Noriko Kando</author>
     <conference>ASIS&amp;T 2011 Annual Meeting</conference>
-    <city>New Orleans, USA</city>
+    <city>New Orleans, LA, USA</city>
     <year>2011</year>
     <month>10</month>
     <date>2011-10-10</date>
@@ -564,6 +564,7 @@
     <conference>第10回Wikiばな</conference>
     <year>2010</year>
     <month>6</month>
+    <city>東京</city>
     <language>ja</language>
     <date>2010-06-12</date>
     <note>（ライトニングトーク発表）</note>
@@ -1016,7 +1017,7 @@
     <volume>512</volume>
     <year>2009</year>
     <month>7</month>
-    <city>Boston, USA</city>
+    <city>Boston, MA, USA</city>
     <page>4</page>
     <language>en</language>
     <date>2009-07-23</date>
@@ -1333,7 +1334,7 @@
     <journal>Proceedings of the Second International Workshop on Evaluating Information Access (EVIA 2008) (Satellite Workshop of NTCIR-7)</journal>
     <year>2008</year>
     <month>12</month>
-    <city>Tokyo</city>
+    <city>Tokyo, Japan</city>
     <publisher>National Institute of Informatics</publisher>
     <page>
       <start>42</start>
@@ -1723,7 +1724,7 @@
     <journal>Proceedings of the First Workshop on Web Information-Seeking and Interaction (WISI 2007) (SIGIR 2007 Workshop)</journal>
     <year>2007</year>
     <month>7</month>
-    <city>Netherland, Amsterdam</city>
+    <city>Amsterdam, Netherland</city>
     <page>
       <start>49</start>
       <end>52</end>
@@ -1783,7 +1784,7 @@
 <!--    <conference>The First International Workshop on Evaluating Information Access (EVIA 2007)</conference> -->
     <year>2007</year>
     <month>5</month>
-    <city>Tokyo</city>
+    <city>Tokyo, Japan</city>
     <publisher>National Institute of Informatics</publisher>
     <page>
       <start>78</start>
@@ -2067,8 +2068,7 @@
     <journal>International Symposium on Digital Libraries and Knowledge Communities in Networked Information Society 2004 (DLKC'04)</journal>
     <year>2004</year>
     <month>3</month>
-    <country>Japan</country>
-    <city>Tsukuba</city>
+    <city>Tsukuba, Japan</city>
     <page>
       <start>64</start>
       <end>71</end>
