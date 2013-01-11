@@ -65,7 +65,7 @@
     <conference>EnjuKaigi 2012</conference>
     <year>2012</year>
     <month>10</month>
-    <city>松江市</city>
+    <city>松江</city>
     <date>2012-10-27</date>
     <slides>http://www.slideshare.net/tmasao/nextl-enju-14907921</slides>
   </pub>
@@ -128,7 +128,7 @@
     <conference>ワークショップ「研究者と論文とを結びつけるために〜研究者IDサミット2〜」</conference>
     <year>2012</year>
     <month>2</month>
-    <city>大阪市</city>
+    <city>大阪</city>
     <language>ja</language>
     <date>2012-02-14</date>
     <url>http://www.lib.kanazawa-u.ac.jp/kura/nayose_ws/2011.html</url>
@@ -714,7 +714,7 @@
     <conference>DRF International Conference 2009 (DRFIC2009)</conference>
     <year>2009</year>
     <month>12</month>
-    <city>Tokyo</city>
+    <city>Tokyo, Japan</city>
     <language>en</language>
     <date>2009-12-03</date>
     <page>
@@ -740,7 +740,7 @@
     <conference>DRF International Conference 2009 (DRFIC2009)</conference>
     <year>2009</year>
     <month>12</month>
-    <city>Tokyo</city>
+    <city>Tokyo, Japan</city>
     <page>
       <start>116</start>
       <end>116</end>
@@ -758,7 +758,7 @@
     <conference>DRF International Conference 2009 (DRFIC2009)</conference>
     <year>2009</year>
     <month>12</month>
-    <city>Tokyo</city>
+    <city>Tokyo, Japan</city>
     <page>
       <start>104</start>
       <end>104</end>
@@ -1271,7 +1271,7 @@
     <conference>第1回データ工学と情報マネジメントに関するフォーラム (DEIM 2009)</conference>
     <year>2009</year>
     <month>3</month>
-    <city>静岡県掛川市</city>
+    <city>掛川</city>
     <!--
     <page>
       <start>37</start>
@@ -1359,7 +1359,7 @@
     <conference>電子情報通信学会 「Webインテリジェンスとインタラクション」研究会 (IEICE SIG-WI2) 第13回研究会</conference>
     <year>2008</year>
     <month>12</month>
-    <city>神奈川, 横浜近代文学館</city>
+    <city>横浜, 横浜近代文学館</city>
     <page>
       <start>37</start>
       <end>42</end>
@@ -1397,7 +1397,7 @@
     <conference>Joint Meeting of 4th World Conference of the IASC and 6th Conference of the Asian Regional Section of the IASC on Computational Statistics &amp; Data Analysis (IASC 2008)</conference>
     <year>2008</year>
     <month>12</month>
-    <city>Yokohama, Pacifico Yokohama</city>
+    <city>Yokohama, Japan</city>
     <page>
       <start>1509</start>
       <end>1513</end>
@@ -1418,7 +1418,7 @@
     <conference>第10回図書館総合展（フォーラム）</conference>
     <year>2008</year>
     <month>11</month>
-    <city>神奈川, パシフィコ横浜</city>
+    <city>横浜, パシフィコ横浜</city>
     <language>ja</language>
     <url>http://pubman.mpdl.mpg.de/pubman/item/escidoc:39671</url>
     <date>2008-11-27</date>
@@ -1432,7 +1432,8 @@
     <conference>Webとデータベースに関するフォーラム (WebDB Forum 2008)</conference>
     <year>2008</year>
     <month>12</month>
-    <city>東京, 学習院大学</city>
+    <city>東京</city>
+    <place>学習院大学</place>
     <language>ja</language>
     <date>2008-12-01</date>
     <note>ポスター講演</note>
@@ -1448,7 +1449,8 @@
     <conference>第5回情報プロフェッショナルシンポジウム (INFOPRO 2008)</conference>
     <year>2008</year>
     <month>11</month>
-    <city>東京, 日本科学未来館</city>
+    <city>東京</city>
+    <place>日本科学未来館</place>
     <page>
       <start>69</start>
       <end>74</end>
@@ -1548,7 +1550,8 @@
     <conference>情報知識学会 第16回年次大会</conference>
     <year>2008</year>
     <month>5</month>
-    <city>東京, 慶應義塾大学</city>
+    <city>東京</city>
+    <place>慶應義塾大学</place>
     <journal>情報知識学会誌</journal>
     <volume>18</volume>
     <number>2</number>
@@ -1593,7 +1596,8 @@
     <conference>文部科学省情報爆発プロジェクト 平成19年度 成果報告会</conference>
     <year>2008</year>
     <month>3</month>
-    <city>東京, 秋葉原ダイビル</city>
+    <city>東京</city>
+    <place>秋葉原ダイビル</place>
     <language>ja</language>
     <date>2008-03-03</date>
     <note>（ポスター発表）</note>
@@ -1608,7 +1612,8 @@
     <conference>「大規模データ・リンケージ，データマイニングと統計手法」研究会</conference>
     <year>2008</year>
     <month>1</month>
-    <city>東京, 統計数理研究所</city>
+    <city>東京</city>
+    <place>統計数理研究所</place>
     <page>
       <start>31</start>
       <end>36</end>
@@ -1978,7 +1983,7 @@
     <title>Overview of the NTCIR-5 WEB Navigational Retrieval Subtask 2 (Navi-2)</title>
     <journal>Proceedings of the Fifth NTCIR Workshop Meeting on Evaluation of Information Access Technologies: Information Retrieval, Question Answering and Cross-Lingual Information Access</journal>
     <publisher>National Institute of Informatics</publisher>
-    <city>Tokyo</city>
+    <city>Tokyo, Japan</city>
     <year>2005</year>
     <month>12</month>
     <page>
@@ -1995,7 +2000,7 @@
     <title>Proceedings of the Fifth NTCIR Workshop Meeting on Evaluation of Information Access Technologies</title>
     <subtitle>Informaion Retrieval, Question Answering and Cross-Lingual Information Access</subtitle>
     <publisher>National Institute of Informatics</publisher>
-    <city>Tokyo</city>
+    <city>Tokyo, Japan</city>
     <year>2005</year>
     <month>12</month>
     <day>6-9</day>
