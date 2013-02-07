@@ -120,6 +120,7 @@ I've finally found
 Infomrtaion
 Infortmioan
 Infromaiton
+Inisgths
 It was dark
 It's great to read
 Kamagra
@@ -223,6 +224,7 @@ What a joy
 What a joy to find someone
 What a pleasure
 Wheevor
+Wheoevr
 Which came first
 Whoa, whoa
 Woah nelly
@@ -245,6 +247,7 @@ accucray
 achieevd
 actulaly
 addictive
+addsreses
 aenswr
 aenwsr
 aesnwr
@@ -256,6 +259,7 @@ airltce
 airtcle
 airtlce
 airtlces
+aitcon
 alhrgit
 all my problems
 allows free info like this
@@ -275,6 +279,7 @@ anwser
 apeapr
 aplpes
 appaer
+apporcah
 apprceiaiton
 apprceita
 apprcieate
@@ -296,6 +301,7 @@ aritelcs
 aritlce
 aritlces
 arltices
+army knife
 arrtcile
 artciels
 artciles
@@ -429,6 +435,7 @@ cleared the air
 cleevr
 clerlay
 clever 4
+clever answer
 clever by half
 clever way
 clips
@@ -470,6 +477,7 @@ cotnributnig
 couldn't pay me to
 crackerjack
 crateive
+crceakrjcak
 creative answer
 creative mind
 creiavte
@@ -501,6 +509,7 @@ easei
 easily impressed
 easy to understand
 easy-to-understand article
+ecletronic
 ecxalty
 ecxelelnt
 ecxellnet
@@ -523,6 +532,7 @@ eognuh
 epxcet
 epxlain
 epxuonder
+erdiiuton
 erdutioin
 erudiotin
 erudition
@@ -557,6 +567,7 @@ expert answer
 expertise answers
 expetcnig
 exptceing
+exrept answer
 exrpet
 exrtmeely
 extermely
@@ -685,6 +696,8 @@ hlpeed
 hlpeful
 hlpeufl
 hnosety
+hnotesy
+hoeplses
 home run
 hooilgnas
 hoolaigns
@@ -701,6 +714,7 @@ icrndeible
 ideal answer
 idinspensable
 idnispensable
+ietrnnet
 ifnmoratoin
 ifnomred
 ifnoramtion
@@ -752,6 +766,7 @@ inisght
 inisghts
 inishgt
 inofmratvie
+inofmred
 inofmrtaion
 inoframtion
 inoframtoin
@@ -769,6 +784,8 @@ intelligent answer
 intelligent point
 intellignece
 interesntig
+interesting question
+interetsing
 internet hooligans
 internet writer
 intreent
@@ -825,6 +842,7 @@ like yourself
 litlte
 lkonoig
 lkooing
+lkoonig
 logic set out
 loikong
 loiokn
@@ -843,6 +861,7 @@ looikn
 looikng
 looinkg
 look promising
+looking for answers
 looking for your posts
 looknig
 loonikg
@@ -893,6 +912,7 @@ neat articles
 nedeed
 neeedd
 nelicy
+never find this
 never happened
 nggoin
 nice work!
@@ -903,12 +923,18 @@ none can doubt
 nothnig
 ntoihng
 oenped
+oervview
 off the list
+online house
+online india
 onnlie
 paajmas
 paamjas
 padrenr
+pajmaas
 pay me to ignore
+pborlem
+pcuarhses
 pefrect
 pefrtecly
 pelaesd
@@ -937,6 +963,7 @@ pleausre
 plesead
 plesuare
 plsaeed
+pnapoly
 pobrmles
 poeuwrfl
 ponits
@@ -946,6 +973,7 @@ porlebm
 porlebms
 pormiisng
 porn company
+portmoe
 posntig
 posntigs
 possbily
@@ -996,6 +1024,7 @@ qeustions
 qeustoin
 qlaiuty
 qluaity
+qsuetion
 queistnos
 queiston
 questnios
@@ -1013,6 +1042,7 @@ raeidng
 raelly
 ralely
 ralley
+ratiaonl
 rational answer
 rceokn
 reading this
@@ -1063,6 +1093,7 @@ rseocrue
 rseoucre
 rsourece
 rtoetn
+rtoten
 ruinnng out
 s***
 saecrehd
@@ -1091,6 +1122,7 @@ senisble
 sensible answer
 sensilbe
 seomnoe
+seomone
 seotmhing
 sepkas
 serached
@@ -1101,6 +1133,7 @@ setting me straight
 sex
 sexy images
 sglguing
+shafts
 shairng
 shanrig
 sharing your wisdom
@@ -1128,6 +1161,7 @@ smart and intelligent
 smart thinking
 smart way of
 smeoone
+smiple
 smoehntig
 smoenoe
 smoeone
@@ -1294,6 +1328,7 @@ tieckt
 tihgns
 tihiknng
 tihkning
+tihknnig
 tihngs
 tihnking
 tihnknig
@@ -1340,6 +1375,7 @@ trenchant
 tricky question
 trikcy
 trkicy
+trnsapraenlty
 true I guess
 truly appreciate
 ttoally
@@ -1368,6 +1404,7 @@ usfeul
 valaulbes
 valbulaes
 valium
+valuable brains
 valubaels
 vauallbes
 very helpful
@@ -1414,6 +1451,7 @@ wohrty
 woke up down
 wondreing
 wonedrnig
+wonrednig
 wothry
 wrierts
 wrinitg
