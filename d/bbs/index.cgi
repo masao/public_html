@@ -85,6 +85,7 @@ Great stuff
 Great work
 Halleulajh
 Hats off
+Hello good day
 Hey hey hey
 Ho ho
 Holy Toledo
@@ -167,6 +168,7 @@ Son of a gun
 Sooenme
 Stands back
 Stay with this guys
+Stolen credit card
 Suepiror
 Super excited
 Super informative
@@ -838,6 +840,7 @@ learn a lot
 levitra
 liebrty
 like a classroom
+like to pay
 like yourself
 litlte
 lkonoig
