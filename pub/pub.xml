@@ -2,6 +2,19 @@
 <!-- $Id$ -->
 <publist version="$Revision$">
   <pub type="misc">
+    <title>About 2 years of saveMLAK project</title>
+    <author>Masao Takaku</author>
+    <conference>Code4Lib 2013</conference>
+    <year>2013</year>
+    <month>2</month>
+    <city>Chicago, IL, USA</city>
+    <language>en</language>
+    <date>2013-02-12</date>
+    <note>(Presented at Lightning Talks session)</note>
+    <slides>http://www.slideshare.net/tmasao/savemlak-project</slides>
+  </pub>
+
+  <pub type="misc">
     <title>FRBRモデルのWork/Expression関係に基づく目録システムの構築</title>
     <subtitle>国語教科書を例として</subtitle>
     <author>田辺浩介</author>
@@ -836,8 +849,8 @@
     <city>秋葉原, 東京</city>
     <language>ja</language>
     <date>2009-11-19</date>
-    <url>http://www.ipsj.or.jp/katsudou/sig/sighp/fi/cfp/20091119/</url>
-    <url>http://fw8.bookpark.ne.jp/cm/ipsj/search.asp?flag=6&amp;keyword=IPSJ-FI09096002</url>
+    <url>http://id.nii.ac.jp/1001/00066671/</url>
+    <url>http://hdl.handle.net/10424/3005</url>
   </pub>
 
   <pub type="misc">
@@ -1777,6 +1790,8 @@
     </page>
     <language>ja</language>
     <doi>10.2964/jsik.17.69</doi>
+    <slides>http://www.nier.go.jp/yuka/works/JSIK2007-presen.pdf</slides>
+    <video>http://www.nier.go.jp/yuka/works/JSIK2007-demo.exe</video>
   </pub>
 
   <pub type="conference">
