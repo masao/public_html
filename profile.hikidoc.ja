@@ -1,9 +1,9 @@
 title: 高久雅生の経歴
 title.short: 経歴
 date.available: 2007-03-04
-date.modified: 2012-12-07
+date.modified: 2013-02-28
 
-[[{{image './images/201003-c4l10jp.jpg' 'Code4Lib 2010報告会にて（2010年3月）' thumbs 193px right}}|./profile-images.html]]
+[[{{image './images/201302-Sue.jpg' 'シカゴ・フィールズ博物館にて（2013年2月）' thumbs 150px right}}|./profile-images.html]]
 :氏名:高久 雅生 （たかく まさお）
 :連絡先:
 ::E-mail: tmasao@acm.org
@@ -28,16 +28,16 @@ date.modified: 2012-12-07
 
 !!職歴
 :2008-09 -:
-::'''[[物質・材料研究機構|http://www.nims.go.jp/]] [[科学情報室|http://www.nims.go.jp/infrastructure/scientific-information/index.html]] （主任エンジニア）'''
+::'''[[物質・材料研究機構|http://www.nims.go.jp/]] [[科学情報室|http://www.nims.go.jp/infrastructure/scientific-information/index.html]] 主任エンジニア'''
 ::物質・材料分野のデジタルライブラリーシステムの構築。NIMS研究者総覧の構築。専門図書館の運営。
 ::（スキル）Ruby, Solr, eSciDoc, Fedora Commons, SOA, Java, JSP/JSF
 :2006-01 - 2008-08:
-::'''[[情報・システム研究機構|http://www.rois.ac.jp/]] [[新領域融合研究センター|http://www.rois.ac.jp/tric/]] （ポスドク研究員）'''
+::'''[[情報・システム研究機構|http://www.rois.ac.jp/]] [[新領域融合研究センター|http://www.rois.ac.jp/tric/]] 融合プロジェクト特任研究員（ポスドク研究員）'''
 ::情報リンケージの研究に従事。研究者情報サーバの構築（国内研究者のデータを一元化するプロトタイプシステムの構築）。[[科研費報告書データベースβ版|http://kaken.nii.ac.jp/]]、[[研究者リゾルバーα版|http://rns.nii.ac.jp/]]の開発に協力
 ::（研究テーマ）情報リンケージ, 電子図書館, 名寄せ, 書誌同定, 研究者ネットワーク, 可視化
 ::（スキル）Perl, Web API, XML, Ruby
 :2004-10 - 2005-12:
-::'''[[国立情報学研究所|http://www.nii.ac.jp/]] 情報学資源研究センター （ポスドク研究員）'''
+::'''[[国立情報学研究所|http://www.nii.ac.jp/]] 情報学資源研究センター プロジェクト研究員（ポスドク研究員）'''
 ::[[NTCIR-5 WEBタスク|http://research.nii.ac.jp/ntcweb/]]の運営。Web検索テストコレクションの構築。
 ::（研究テーマ）Web検索システム, 情報検索評価, サーチエンジン, テストコレクション
 ::（スキル）Perl, Ruby, GETA, Web API, trec_eval

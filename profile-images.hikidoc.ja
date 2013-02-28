@@ -1,7 +1,11 @@
 title: 近影
-date.modified: 2010-03-24
+date.modified: 2013-02-28
 date.available: 2008-12-20
 subject: profile
+
+!!2013年
+{{image './images/201302-Sue.jpg' 'シカゴ・フィールズ博物館にて（2013年2月）' thumbs 150px left}}
+{{clear}}
 
 !! 2010年
 {{image './images/201003-c4l10jp.jpg' 'Code4Lib 2010報告会にて（2010年3月）' thumbs 193px left}}

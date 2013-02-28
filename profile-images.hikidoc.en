@@ -1,7 +1,11 @@
 title: My recent portraits
-date.modified: 2010-03-24
+date.modified: 2013-02-28
 date.available: 2008-12-20
 subject: profile
+
+!!2013
+{{image './images/201302-Sue.jpg' 'At Fields Museum in Chicago (February, 2013)' thumbs 150px left}}
+{{clear}}
 
 !!2010
 {{image './images/201003-c4l10jp.jpg' 'Workshop on Trip-report of Code4Lib 2010, and more in Tokyo (March 2010)' thumbs 193px left}}
