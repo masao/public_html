@@ -833,6 +833,7 @@ knwoeldge
 knwolegde
 knwonig
 konlwedge
+konlwegde
 konwdlege
 kownledge
 kyeborad
@@ -939,6 +940,7 @@ paajmas
 paamjas
 padrenr
 paid weekly
+pajaams
 pajmaas
 pay me to ignore
 pborlem
