@@ -128,6 +128,7 @@ Kamagra
 Keep on writing
 Kick the tires
 Klonopin
+Knowledge wants to be free
 Kudos to you
 Kudos!
 Learning a ton
@@ -211,6 +212,7 @@ Threesomes
 Tip top
 Tramadol
 Transsexuals
+Truly appreciated
 Unparalleled accuracy
 Unrpaalleled
 Very true
@@ -293,6 +295,7 @@ aprepciate
 aprpecaition
 aprpeication
 arcitles
+arcteils
 arctile
 arctlie
 aricetls
@@ -327,6 +330,7 @@ astute
 aswenr
 asweome
 aswner
+at a high level
 atcriles
 atilrce
 atircle
@@ -351,6 +355,7 @@ awsenr
 awsner
 aymnroe
 aynthing
+baceon
 back from the keyboard
 bareable
 bceasue
@@ -529,6 +534,7 @@ eiasly
 eisaer
 end of the line
 enetrtaniing
+engouh
 enthlraling
 enthralling
 enuogh
@@ -571,6 +577,7 @@ expert answer
 expertise answers
 expetcnig
 exptceing
+exrept
 exrept answer
 exrpet
 exrtmeely
@@ -591,6 +598,7 @@ fgiruing
 fianlly
 filnlay
 finally found
+find someone
 fioricet
 firgue
 first class post
@@ -899,6 +907,7 @@ mituens
 miuents
 mknaig
 mnitue
+mnueits
 mold-breaker
 monoploy
 more clever
@@ -914,6 +923,7 @@ my problem
 naked
 nbaibt
 nciley
+ncliey
 ndeeed
 neat articles
 nedeed
@@ -964,10 +974,12 @@ pertty
 pharmacies
 pianelss
 pills
+pinots
 piotns
 pjaaams
 pjamaas
 plainyg
+plaserue
 pleasure to read
 pleausre
 pleausre
@@ -991,6 +1003,7 @@ possbily
 possbliy
 posting shines
 potinsg
+potnisg
 potsing
 potsings
 potsnig
@@ -1055,6 +1068,7 @@ ralely
 ralley
 ratiaonl
 rational answer
+ratnoial
 rceokn
 reading this
 readnig
@@ -1265,6 +1279,7 @@ tanhks
 tanlet
 taotlly
 tarpnsaretnly
+tceikt
 tckiet
 tcriky
 tealnt
@@ -1274,6 +1289,7 @@ terrfiic
 terrific amount
 tghins
 thakns
+thaknufl
 thank you enough
 thank you for posting
 thank you for this
@@ -1328,6 +1344,7 @@ thninkig
 thnkaful
 thnkas
 thnkiing
+thnkinig
 thoghut
 thohugt
 throguh
@@ -1436,6 +1453,7 @@ weathlier
 web20power
 webiste
 weeeknd
+well spent
 well-written
 well-wrtiten
 what I need
