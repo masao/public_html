@@ -122,12 +122,14 @@ Infomrtaion
 Infortmioan
 Infromaiton
 Inisgths
+Inshgits
 It was dark
 It's great to read
 Kamagra
 Keep on writing
 Kick the tires
 Klonopin
+Knowledge wants to be free
 Knowledge wants to be free
 Kudos to you
 Kudos!
@@ -241,6 +243,7 @@ You've hit the ball
 Your answer
 Your answer lifts
 Your cranium
+Your honesty
 Your post
 a lot easier from here
 abiilty
@@ -295,6 +298,7 @@ aprepciate
 aprpecaition
 aprpeication
 arcitles
+arcteils
 arcteils
 arctile
 arctlie
@@ -355,6 +359,7 @@ awsenr
 awsner
 aymnroe
 aynthing
+baceon
 baceon
 back from the keyboard
 bareable
@@ -535,6 +540,7 @@ eisaer
 end of the line
 enetrtaniing
 engouh
+engouh
 enthlraling
 enthralling
 enuogh
@@ -577,6 +583,7 @@ expert answer
 expertise answers
 expetcnig
 exptceing
+exrept
 exrept
 exrept answer
 exrpet
@@ -696,6 +703,7 @@ hepled
 heplful
 heplnig
 high brow literature
+high level
 hit the ball
 hizool
 hleepd
@@ -908,6 +916,7 @@ miuents
 mknaig
 mnitue
 mnueits
+mnueits
 mold-breaker
 monoploy
 more clever
@@ -923,6 +932,7 @@ my problem
 naked
 nbaibt
 nciley
+ncliey
 ncliey
 ndeeed
 neat articles
@@ -975,10 +985,12 @@ pharmacies
 pianelss
 pills
 pinots
+pinots
 piotns
 pjaaams
 pjamaas
 plainyg
+plaserue
 plaserue
 pleasure to read
 pleausre
@@ -1003,6 +1015,7 @@ possbily
 possbliy
 posting shines
 potinsg
+potnisg
 potnisg
 potsing
 potsings
@@ -1068,6 +1081,7 @@ ralely
 ralley
 ratiaonl
 rational answer
+ratnoial
 ratnoial
 rceokn
 reading this
@@ -1199,6 +1213,7 @@ smoonee
 snseible
 snushnie
 so awesome
+so clearly
 so much learning
 so much simpler
 so straightforward
@@ -1280,6 +1295,7 @@ tanlet
 taotlly
 tarpnsaretnly
 tceikt
+tceikt
 tckiet
 tcriky
 tealnt
@@ -1289,6 +1305,7 @@ terrfiic
 terrific amount
 tghins
 thakns
+thaknufl
 thaknufl
 thank you enough
 thank you for posting
@@ -1344,6 +1361,7 @@ thninkig
 thnkaful
 thnkas
 thnkiing
+thnkinig
 thnkinig
 thoghut
 thohugt
@@ -1453,6 +1471,7 @@ weathlier
 web20power
 webiste
 weeeknd
+well spent
 well spent
 well-written
 well-wrtiten
