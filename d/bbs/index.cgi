@@ -123,6 +123,7 @@ Infortmioan
 Infromaiton
 Inisgths
 Inshgits
+Insights like this
 It was dark
 It's great to read
 Kamagra
@@ -131,6 +132,7 @@ Kick the tires
 Klonopin
 Knowledge wants to be free
 Knowledge wants to be free
+Kudos and such
 Kudos to you
 Kudos!
 Learning a ton
@@ -513,6 +515,7 @@ demnsortated
 detbae
 dicattor
 difficult question
+dificfult
 dilaspy
 doctor ordered
 doing so much
@@ -559,6 +562,7 @@ esbtalishment
 eseair
 esesntial
 esestnial
+essetnails
 esteeemd
 estemeed
 etinrely
@@ -817,6 +821,7 @@ is power
 isinght
 isinght
 isndie
+isngiht
 isngihts
 isnihgt
 isnihgts
@@ -891,6 +896,7 @@ loonkig
 lot easier
 love of God
 love this site
+ltilte
 maacadmia
 maagned
 macadmaia
@@ -1064,6 +1070,7 @@ qluaity
 qsuetion
 queistnos
 queiston
+quesiotn
 questnios
 quetsion
 quetsoin
@@ -1089,6 +1096,7 @@ readnig
 reaindg
 real intelligence
 really appreciate
+really captured
 really confused
 really cool way of
 really great
@@ -1275,6 +1283,7 @@ suonds
 super helpful
 superior thinking
 suppsoes
+suprrised
 surprsied
 susnnhie
 svoled
@@ -1438,6 +1447,7 @@ uefsul
 ufesul
 ufseul
 uiltzie
+unbeeliavble
 unbelieavlbe
 undeniable importance
 understand the issues
