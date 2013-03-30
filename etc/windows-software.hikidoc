@@ -1,7 +1,7 @@
 title: Windows上で使っているソフトウェア達
 subject: etc
 date.available: 2001-10-29
-date.modified: 2012-08-07
+date.modified: 2012-12-16
 
 私がMicrosoft Windows上で使っている主なソフトウェアをメモしておきます。
 
@@ -18,6 +18,7 @@ date.modified: 2012-08-07
 :[[Lhaplus|http://www.vector.co.jp/soft/win95/util/se169348.html]]:圧縮・解凍ツール
 :[[Cygwin|http://cygwin.com/]]:ユーティリティ
 :[[Adobe Acrobat Reader|http://www.adobe.co.jp/]]:PDFリーダ
+:[[Metafile to EPS Converter|http://wiki.lyx.org/Windows/MetafileToEPSConverter]]:
 :[[WMF2EPS|http://www.wmf2eps.de.vu/]]:Windowsアプリケーションの出力をEPSへ変換
 :[[Java2|http://java.sun.com/]]:プログラミング環境
 :[[WinShot|http://www.woodybells.com/winshot.html]]:スクリーンキャプチャ。
