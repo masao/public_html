@@ -13,12 +13,13 @@
 <body>
 <div class="navi"><a href="./..">HOME</a> &gt;
 雑多</div>
-<div class="last-update">最終更新日: 2012年10月23日</div>
+<div class="last-update">最終更新日: 2013年03月30日</div>
 <h1>その他雑多なメモ類のページ</h1>
 <!--#config timefmt="<span class=\"lastmodified\">[%Y-%m-%d]</span>" -->
 <p>雑多な覚え書きその他を置いてあります。  （<span
 class="lastmodified">[日付]</span>は更新日を示します）</p>
 <ul>
+<li><a href="./junii-validator/">JuNii2 Validator</a> <!--#flastmod file="./junii-validator/validator.rhtml" --></li>
 <li><a href="./twitter-followerlist.html">Twitterフォロワーリスト化ツール</a> <!--#flastmod file="twitter-followerlist.html" --></li>
 <li><a href="./webometrics_rep_jp.html">日本国内の機関リポジトリサイトのWeb認知指標</a> <!--#flastmod file="webometrics_rep_jp.hikidoc" --></li>
 <li><a href="../senkyo-koho/">選挙広報集</a> <!--#flastmod virtual="../senkyo-koho/index.hikidoc" --></li>
