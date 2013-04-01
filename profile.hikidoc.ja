@@ -1,7 +1,7 @@
 title: 高久雅生の経歴
 title.short: 経歴
 date.available: 2007-03-04
-date.modified: 2013-02-28
+date.modified: 2013-04-02
 
 [[{{image './images/201302-Sue.jpg' 'シカゴ・フィールズ博物館にて（2013年2月）' thumbs 150px right}}|./profile-images.html]]
 :氏名:高久 雅生 （たかく まさお）
@@ -27,7 +27,10 @@ date.modified: 2013-02-28
 ::博士論文「[[相互連携可能な情報提供システムの研究: 用語体系および検索システムへの適用|./pub/2004/phd-thesis.pdf]]」（用語体系、階層用語シソーラスの閲覧システム、構築支援システムの研究開発）
 
 !!職歴
-:2008-09 -:
+:2013-03 - :
+::'''[[筑波大学|http://www.tsukuba.ac.jp/]] [[図書館情報メディア系|http://www.slis.tsukuba.ac.jp/grad/]] 准教授'''
+::情報検索、情報行動、電子図書館、ドキュメントサービス等の教育と研究に従事。
+:2008-09 - 2013-03:
 ::'''[[物質・材料研究機構|http://www.nims.go.jp/]] [[科学情報室|http://www.nims.go.jp/infrastructure/scientific-information/index.html]] 主任エンジニア'''
 ::物質・材料分野のデジタルライブラリーシステムの構築。NIMS研究者総覧の構築。専門図書館の運営。
 ::（スキル）Ruby, Solr, eSciDoc, Fedora Commons, SOA, Java, JSP/JSF
@@ -145,6 +148,11 @@ date.modified: 2013-02-28
 ::（プラットフォーム）UNIX系OSの管理経験を有する: Sun Solaris(2.6,7,8,9,10), Linux(Redhat,Turbolinux etc.), IBM AIX (4.3), SGI IRIX(5.x)
 
 !!関連リンク
+{{rawhtml(
+<div style="float:right">
+<script type="text/javascript" src="http://samurai.nims.go.jp/gadget.php?userid=TAKAKU_Masao&amp;format=119&amp;width=400&amp;lang=Ja" charset="UTF-8"></script>
+</div>
+}}
 *[[Twitter|http://twitter.com/tmasao]]
 *[[Facebook|http://www.facebook.com/MasaoTakaku]]
 *[[LinkedIn|http://www.linkedin.com/in/masaotakaku]]
