@@ -160,6 +160,12 @@
   #publist .awards  { font-weight: bolder; color: #BE003F; }
   #publist dd.url   { font-size: smaller; }
   #publist div.url  { font-size: smaller; }
+  div.notice {
+    margin: 5px 2em;
+    padding: 0px 5px;
+    border: 1px dashed darkgreen;
+    font-size: smaller;
+  }
 }
 @media print {
   body {
