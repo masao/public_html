@@ -880,6 +880,7 @@ lokiong
 loknoig
 lokoed
 lokonig
+loli
 lolita
 lolitas
 lonoikg
