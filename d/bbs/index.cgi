@@ -1542,6 +1542,7 @@ your answer solved
 your post makes mine
 your posting
 誰損多
+terribly
 EOF
 
 # ユーザ設定ファイルの読み込み
