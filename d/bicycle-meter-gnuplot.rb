@@ -16,6 +16,9 @@ bi_monthes = monthes.select{|d|	# for thumbnail
 tri_monthes = monthes.select{|d|	# for thumbnail
    d.month % 3 == 1 and d.day == 1
 }
+sq_monthes = monthes.select{|d|	# for thumbnail
+   d.month % 6 == 1 and d.day == 1
+}
 #p monthes.map{|e| e.to_s }
 
 open( "|gnuplot", "w" ) do |gnuplot|
@@ -38,10 +41,11 @@ open( "|gnuplot", "w" ) do |gnuplot|
 EOF
    # Thumbnail:
    gnuplot.puts <<EOF
-  	  set size .4
+#  	  set size .4
+	  set term png size 256,192
 	  set out "bicycle-meter-s.png"
-	  set xtics ( #{ tri_monthes.map{|d| %Q["#{d.to_s}"] }.join(",") } )
-	  set y2label "Cumulative Distance (km)" 0,-3
+	  set xtics ( #{ sq_monthes.map{|d| %Q["#{d.to_s}"] }.join(",") } )
+	  set y2label "Cumulative Distance (km)" offset 0,-2
 	  plot ["#{first_date.to_s}":"#{last_date.to_s}"] \
 		"#{DATA_FILE}" using 1:2 with impulses lw 3 notitle, \
 		"#{DATA_FILE}" using 1:4 axes x1y2 with steps notitle
