@@ -91,7 +91,7 @@ class MHikiDoc < HikiDoc
             var = var.to_s.sub(/^/, "@") unless /^@/ =~ var.to_s
             instance_variable_set( var, val )
          end
-      end 
+      end
       class Toc < Plugin
          def expand( *args )
             label, = args
@@ -382,7 +382,7 @@ class ToHTML
          if File.file?( category_file ) 
             result << [ label, category_file ] 
          else File.directory?( category_dir )
-            result << [ label, category_dir + "/" ] 
+            result << [ label, category_dir + "/" ]
          end
       end
       result
