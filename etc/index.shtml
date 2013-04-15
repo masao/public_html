@@ -16,8 +16,7 @@
 <div class="last-update">最終更新日: 2013年03月30日</div>
 <h1>その他雑多なメモ類のページ</h1>
 <!--#config timefmt="<span class=\"lastmodified\">[%Y-%m-%d]</span>" -->
-<p>雑多な覚え書きその他を置いてあります。  （<span
-class="lastmodified">[日付]</span>は更新日を示します）</p>
+<p>雑多な覚え書きその他を置いてあります。  （<span class="lastmodified">[日付]</span>は更新日を示します）</p>
 <ul>
 <li><a href="./junii-validator/">JuNii2 Validator</a> <!--#flastmod file="./junii-validator/validator.rhtml" --></li>
 <li><a href="./twitter-followerlist.html">Twitterフォロワーリスト化ツール</a> <!--#flastmod file="twitter-followerlist.html" --></li>
