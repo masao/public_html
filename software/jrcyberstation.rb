@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# -*- coding: cp932 -*-
 # $Id$
 
 # http://www1.jr.cyberstation.ne.jp/csws/Vacancy.do
@@ -13,15 +14,15 @@ TOPURL = "http://www.jr.cyberstation.ne.jp/vacancy/Vacancy.html"
 URL = "http://www1.jr.cyberstation.ne.jp/csws/Vacancy.do"
 
 mail = nil
-mail = "takaku-masao@ezweb.ne.jp,yuka@nier.go.jp"
+#mail = "takaku-masao@ezweb.ne.jp,yuka@nier.go.jp"
 
 POSTDATA = {
-   :month => 12,
-   :day => 29,
-   :hour => 6,
+   :month => 1,
+   :day => 3,
+   :hour => 15,
    :minute => 30,
-   :dep_stn => "“Œ‹ž", # æŽÔ‰w
-   :arr_stn => "•ŸŽR", # ~ŽÔ‰w
+   :dep_stn => "•ŸŽR", # æŽÔ‰w
+   :arr_stn => "“Œ‹ž", # ~ŽÔ‰w
    :train => 1,	# —ñŽÔŽí•Ê:
 	      # 1:‚Ì‚¼‚ÝE‚Ð‚©‚è
 	      # 2:‚±‚¾‚Ü
@@ -61,6 +62,7 @@ system("curl -s -X POST -e #{TOPURL} -d '#{postdata}' #{URL} > z.jr")
 content = open("z.jr"){|io| io.read }
 
 vacant = content.scan(%r|<tr>\s*<td\s+align="left">([^<]+)</td>\s*<td\s+align="center">([\d\:]+)</td>\s*<td\s+align="center">([\d\:]+)</td>\s*<td\s+align="center">([^<]+)</td>\s*<td\s+align="center">([^<]+)</td>\s*<td\s*align="center">([^<]+)</td>\s*<td\s+align="center">([^<]+)</td>\s*</tr>|)
+#p vacant
 vacant = vacant.find_all{|e| e[1] < DEP_BEFORE } if DEP_BEFORE
 vacant = vacant.find_all{|e| e[2] < ARR_BEFORE } if ARR_BEFORE
 vacant = vacant.find_all{|e| e[3] != "~" }
