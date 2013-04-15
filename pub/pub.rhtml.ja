@@ -29,7 +29,7 @@ author_s
 </span></dd>
 <dd class="bibdata">
 <%
-biborder = [ :conference, :org, :publisher, :city, :journal ]
+biborder = [ :conference, :org, :city, :journal ]
 if type == "book" or type == "chapter"
    biborder = [ :booktitle, :org, :publisher, :city, :series ]
 end

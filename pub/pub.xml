@@ -2,6 +2,19 @@
 <!-- $Id$ -->
 <publist version="$Revision$">
   <pub type="misc">
+    <title>Code4Lib 2013参加報告</title>
+    <subtitle>セッション聴講を中心に</subtitle>
+    <author>高久雅生</author>
+    <conference>Code4Lib Conference 2013参加報告会</conference>
+    <year>2013</year>
+    <month>3</month>
+    <city>横浜</city>
+    <language>ja</language>
+    <date>2013-03-24</date>
+    <slides>http://www.slideshare.net/tmasao/code4lib-2013</slides>
+  </pub>
+
+  <pub type="misc">
     <title>About 2 years of saveMLAK project</title>
     <author>Masao Takaku</author>
     <conference>Code4Lib 2013</conference>
@@ -27,7 +40,7 @@
     <city>東京</city>
     <page>6</page>
     <date>2013-01-25</date>
-    <note>（発表予定）</note>
+    <url>http://id.nii.ac.jp/1001/00089402/</url>
   </pub>
 
   <pub type="misc">

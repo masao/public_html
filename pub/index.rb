@@ -213,15 +213,15 @@ class PubData
       result[ :info ] << @conference if @conference
       result[ :info ] << @city if @city
       result[ :info ] << @publisher if @publisher
-      if @month
-         result[ :info ] << "#{ @year }-#{ "%02d" % @month.to_i }"
-      else
-         result[ :info ] << @year
-      end
       if @page
          result[ :info ] << @page + "p."
       elsif @page_start
          result[ :info ] << "pp.#{page_start}-#{page_end}"
+      end
+      if @month
+         result[ :info ] << "#{ @year }-#{ "%02d" % @month.to_i }"
+      else
+         result[ :info ] << @year
       end
       if @note
          result[ :note ] << @note
