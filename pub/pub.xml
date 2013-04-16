@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist version="$Revision$">
+  <pub type="conference" refereed="true">
+    <title>Using Concept Map to Evaluate Lerning by Searching</title>
+    <author>Hitomi Saito</author>
+    <author>Yuka Egusa</author>
+    <author>Masao Takaku</author>
+    <author>Makiko Miwa</author>
+    <author>Noriko Kando</author>
+    <conference>The 34th Annual Meeting of the Cognitive Science Society (CogSci 2012)</conference>
+    <year>2012</year>
+    <month>8</month>
+    <city>Sapporo, Japan</city>
+    <page>
+      <start>953</start>
+      <end>958</end>
+    </page>
+    <language>en</language>
+    <date>2012-08-03</date>
+    <url>http://mindmodeling.org/cogsci2012/papers/0173/index.html</url>
+  </pub>
+
   <pub type="misc">
     <title>Code4Lib 2013参加報告</title>
     <subtitle>セッション聴講を中心に</subtitle>
