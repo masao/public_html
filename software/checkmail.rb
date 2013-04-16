@@ -2,6 +2,17 @@
 # -*- coding: euc-jp -*-
 # $Id$
 
+### Usage:
+# Use this script with procmail etc.
+# The following is an example of the script execution through procmail:
+# 
+# :0 c
+# * ^Received:.*TAKAKU.Masao@nims.go.jp
+# * ! ^X-Mailer: checkmail.rb
+# * ! ^From: Cron Daemon
+# | $HOME/public_html/software/checkmail.rb
+#
+
 require "mailread"
 require "nkf"
 require "kconv"
