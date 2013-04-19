@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist version="$Revision$">
+  <pub type="misc">
+    <title>疎結合構成によるFRBRモデルに基づく目録システムの試作</title>
+    <author>田辺浩介</author>
+    <author>高久雅生</author>
+    <author>江草由佳</author>
+    <conference>第21回情報知識学会年次大会</conference>
+    <year>2013</year>
+    <month>5</month>
+    <city>東京</city>
+    <language>ja</language>
+    <date>2013-05-25</date>
+    <note>（発表予定）</note>
+  </pub>
+
   <pub type="conference" refereed="true">
     <title>Using Concept Map to Evaluate Lerning by Searching</title>
     <author>Hitomi Saito</author>
