@@ -22,7 +22,7 @@ sq_monthes = monthes.select{|d|	# for thumbnail
 #p monthes.map{|e| e.to_s }
 
 open( "|gnuplot", "w" ) do |gnuplot|
-   gnuplot.puts "set term png transparent"
+   gnuplot.puts "set term png transparent size 1280,960"
    gnuplot.puts "set out 'bicycle-meter.png'"
    gnuplot.puts <<EOF
 	  set title "(Cycling meter)"
