@@ -1,7 +1,7 @@
 title: 高久雅生の経歴
 title.short: 経歴
 date.available: 2007-03-04
-date.modified: 2013-04-12
+date.modified: 2013-05-08
 
 [[{{image './images/201302-Sue.jpg' 'シカゴ・フィールズ博物館にて（2013年2月）' thumbs 150px right}}|./profile-images.html]]
 :氏名:高久 雅生 （たかく まさお）
@@ -126,8 +126,12 @@ date.modified: 2013-04-12
 *情報科学技術協会 会誌『情報の科学と技術』編集委員（2009年-2013年）; 企画協力委員（2013年-）
 *情報処理学会 [[論文誌（データベース）(TOD)|http://ipsjtod.kyoto-su.ac.jp/]] 編集委員（2008年-2012年）
 *情報処理学会 [[情報基礎とアクセス技術研究会|http://ipsj-ifat.org/]] 運営委員（2007-2011年）
-*The Fifth NTCIR Workshop Meeting Publication Co-Chair（2005年）
-**[[第5回NTCIRワークショップ成果報告会|http://research.nii.ac.jp/ntcir-ws5/]]実行委員。プロシーディングス編集およびプレゼンテーションを担当。
+
+!!!!国際会議等における活動
+*The 10th NTCIR Conference Travel Support Committee member （2013年）
+**[[第10回NTCIRワークショップ成果報告会|http://research.nii.ac.jp/ntcir/ntcir-10/conference/]]においてトラベルサポート委員会委員を担当。
+*The 5th NTCIR Workshop Meeting Publication Co-Chair（2005年）
+**[[第5回NTCIRワークショップ成果報告会|http://research.nii.ac.jp/ntcir/ntcir-ws5/]]実行委員。プロシーディングス編集およびプレゼンテーションを担当。
 
 //:論文査読
 //::情報処理学会論文誌（2007年）
@@ -146,7 +150,7 @@ date.modified: 2013-04-12
 
 !!資格その他
 :司書資格:図書館情報大学（1998年）
-:英語:TOEICスコア 915点（2011年）
+:英語:TOEICスコア 925点（2013年）
 :情報処理技術者:国家2種（1996年）
 ::初級システムアドミニストレータ（1997年）
 :計算機スキル:
@@ -154,11 +158,6 @@ date.modified: 2013-04-12
 ::（プラットフォーム）UNIX系OSの管理経験を有する: Sun Solaris(2.6,7,8,9,10), Linux(Redhat,Turbolinux etc.), IBM AIX (4.3), SGI IRIX(5.x)
 
 !!関連リンク
-{{rawhtml(
-<div style="float:right">
-<script type="text/javascript" src="http://samurai.nims.go.jp/gadget.php?userid=TAKAKU_Masao&amp;format=119&amp;width=400&amp;lang=Ja" charset="UTF-8"></script>
-</div>
-}}
 *[[Twitter|http://twitter.com/tmasao]]
 *[[Facebook|http://www.facebook.com/MasaoTakaku]]
 *[[LinkedIn|http://www.linkedin.com/in/masaotakaku]]
