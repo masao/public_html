@@ -7,12 +7,18 @@
     <author>高久雅生</author>
     <author>江草由佳</author>
     <conference>第21回情報知識学会年次大会</conference>
+    <journal>情報知識学会誌</journal>
+    <volume>23</volume>
+    <number>2</number>
     <year>2013</year>
     <month>5</month>
     <city>東京</city>
+    <page>
+      <start>219</start>
+      <end>228</end>
+    </page>
     <language>ja</language>
     <date>2013-05-25</date>
-    <note>（発表予定）</note>
   </pub>
 
   <pub type="conference" refereed="true">
