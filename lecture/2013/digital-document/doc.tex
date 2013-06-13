@@ -1,0 +1,37 @@
+\documentclass[a4j]{jarticle}
+
+\title{\LaTeX とディジタルドキュメント}
+\author{高久雅生}
+
+\begin{document}
+
+\maketitle
+
+\section{はじめに}
+
+この文書は \LaTeX による文書の一例である。
+
+\subsection{\LaTeX の歴史}
+\label{history}
+
+\TeX とは、計算機科学者Donald Knuthが1978年に自身の著書 ``The Art of Computer Programming'' シリーズ\cite{artofcomputerprogramming}の執筆に際して、高品質な組版ツールを得る目的で開発したものです。
+
+\TeX 自体は組版用の出力コマンドやフォント設定を詳細に行える一方で、それらは論理的な文書構造や相互参照を適切に表現しないため、\TeX のマクロ機能を活用した拡張のひとつとして、1980年代に \LaTeX が開発された。
+とりわけ、\TeX が持つ複雑な数式表現機能や組版機能に加えて、\LaTeX による章節構造や相互参照といった文書構造を容易に表現できるようになったことにより、1980年代を通じて、理工系の論文出版や技術文書においては \LaTeX がデファクト標準として広く使われるようになった。
+
+\section{ディジタルドキュメントにおける\LaTeX}
+
+\LaTeX の文書記述は、コマンドと呼ばれる記法（{\tt \verb|\section{節タイトル}|}といったもの）により、ドキュメントの要素を構造化して記述し、表現できる。
+
+特に、テキストベースで文章を書くだけで、文章の段落を表現（空行で段落の区切りを表現）でき、文書内で{\tt \verb|\label{ラベル}|}コマンドによりラベル付けした別の箇所を参照（「前述の\ref{history}節」）したり、脚注\footnote{脚注を文章中に記述すると自動的に適切な箇所に挿入される。}を表現したり、文献参照\cite{latex}といった相互参照の表現も行える。
+これらの相互参照は自動的に付番され、前後関係を入れかえてもその関係を自動的にプログラムが解決することができる利点がある。
+
+\begin{thebibliography}{99}
+ \bibitem{artofcomputerprogramming}
+	 Donald E. Knuth. ``The Art of Computer Programming Volume 1 Fundamental Algorithms Third Edition 日本語版''. 有澤誠, 和田英一監訳. アスキー, 2004, 632p.
+	 
+ \bibitem{latex}
+	 Leslie Lamport. 文書処理システムLATEX2ε.  阿瀬はる美訳.  ピアソン・エデュケーション, 1999, 310p.
+\end{thebibliography}
+
+\end{document}
