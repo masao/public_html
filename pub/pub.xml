@@ -242,7 +242,7 @@
     <slides>./2011/sigic-cres.pdf</slides>
   </pub>
 
-  <pub type="misc">
+  <pub type="conference">
     <title>SAMURAI and Library Portal at NIMS</title>
     <subtitle>Applications of NIMS eSciDoc and eSciDoc Community in Japan</subtitle>
     <author>Masao Takaku</author>
@@ -416,6 +416,7 @@
     </page>
     <abstract>./2011/sentokyo-abstract.pdf</abstract>
     <url>http://www.jsla.or.jp/1/13/13-2.html</url>
+    <slides>./2011/sentokyo-slides.pdf</slides>
   </pub>
 
   <pub type="misc">
