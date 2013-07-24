@@ -2,6 +2,18 @@
 <!-- $Id$ -->
 <publist version="$Revision$">
   <pub type="misc">
+    <title>図書館に期待される役割</title>
+    <subtitle>学術研究、図書館、そして教育の現場から</subtitle>
+    <author>高久雅生</author>
+    <conference>Web of Knowledge 活用セミナー〜文献検索から研究評価まで。図書館に期待される役割〜</conference>
+    <year>2013</year>
+    <month>7</month>
+    <city>東京</city>
+    <language>ja</language>
+    <date>2013-07-03</date>
+  </pub>
+
+  <pub type="misc">
     <title>疎結合構成によるFRBRモデルに基づく目録システムの試作</title>
     <author>田辺浩介</author>
     <author>高久雅生</author>
@@ -19,6 +31,7 @@
     </page>
     <language>ja</language>
     <date>2013-05-25</date>
+    <url>http://hdl.handle.net/2241/119344</url>
   </pub>
 
   <pub type="conference" refereed="true">
