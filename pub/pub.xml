@@ -2,6 +2,19 @@
 <!-- $Id$ -->
 <publist version="$Revision$">
   <pub type="misc">
+    <title>流通する学術情報コンテンツ</title>
+    <subtitle>概論</subtitle>
+    <author>高久雅生</author>
+    <conference>平成25年度国立情報学研究所学術情報ウェブサービス担当者研修</conference>
+    <year>2013</year>
+    <month>7</month>
+    <city>福岡</city>
+    <language>ja</language>
+    <date>2013-07-24</date>
+    <url>https://www.slideshare.net/tmasao/20130723-niiwebserviceseminartakaku</url>
+  </pub>
+
+  <pub type="misc">
     <title>図書館に期待される役割</title>
     <subtitle>学術研究、図書館、そして教育の現場から</subtitle>
     <author>高久雅生</author>
