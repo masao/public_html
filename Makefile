@@ -44,6 +44,7 @@ HTML	= 	index.html.ja index.html.en \
 		lecture/2005/html/index.html \
 		lecture/2007/kiso/index.html \
 		lecture/2013/digital-document/index.html \
+		lecture/2013/grad-seminar-b/index.html \
 		trans/index.html \
 		trans/2008/wikipedia_community_publishing.html \
 
