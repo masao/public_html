@@ -1,6 +1,7 @@
 # $Id$
 
 HTML	= 	index.html.ja index.html.en \
+		biography.html.ja biography.html.en \
 		profile.html.ja profile.html.en \
 		profile-images.html.ja profile-images.html.en \
 		history.html links.html \
