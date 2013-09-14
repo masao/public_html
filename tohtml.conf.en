@@ -2,6 +2,7 @@
 navi: true
 date.format: "%Y-%m-%d"
 subject.label:
+   biography : Biography
    profile : CV
    etc : misc.
    software : software

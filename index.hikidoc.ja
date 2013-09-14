@@ -1,5 +1,5 @@
 title: たかくまさおのホームページ
-date.modified: 2008-01-30
+date.modified: 2013-08-29
 navi: false
 
 {{div class="news"
@@ -13,7 +13,7 @@ navi: false
 
 !! 目次
 
-:[[自己紹介|profile.html]]:高久雅生について。
+:[[自己紹介|biography.html]]:高久雅生について。
 :[[発表文献|./pub/]]:これまでに執筆、発表した文献の一覧です。
 :[[ソフトウェア|./software/]]:自分で書いたスクリプトなどを置いてあります。
 :[[講義資料|./lecture/]]:授業の資料を置いてあります。

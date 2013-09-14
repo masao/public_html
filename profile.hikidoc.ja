@@ -1,7 +1,8 @@
 title: 高久雅生の経歴
 title.short: 経歴
+subject:biography
 date.available: 2007-03-04
-date.modified: 2013-07-24
+date.modified: 2013-09-13
 
 [[{{image './images/201302-Sue.jpg' 'シカゴ・フィールズ博物館にて（2013年2月）' thumbs 150px right}}|./profile-images.html]]
 :氏名:高久 雅生 （たかく まさお）
@@ -162,6 +163,8 @@ date.modified: 2013-07-24
 !!関連リンク
 *[[Twitter|http://twitter.com/tmasao]]
 *[[Facebook|http://www.facebook.com/MasaoTakaku]]
+*[[GitHub|https://github.com/masao]]
+*[[Delicious|http://www.delicious.com/masao]]
 *[[LinkedIn|http://www.linkedin.com/in/masaotakaku]]
 *[[Mixi|http://mixi.jp/show_profile.pl?id=246364]]
 *[[筑波大学研究者総覧 (TRIOS)|http://www.trios.tsukuba.ac.jp/researcher/0000003432]]
@@ -170,8 +173,7 @@ date.modified: 2013-07-24
 *[[NII研究者リゾルバー|http://rns.nii.ac.jp/nr/1000000399271]]
 *[[ResearcherID| http://www.researcherid.com/rid/B-5097-2009]] {{rawhtml "<span id='badgeCont275303' style='width:26px'><script src='http://labs.researcherid.com/mashlets?el=badgeCont275303&mashlet=badge&showTitle=false&className=a&rid=B-5097-2009&size=small'></script></span>"}}
 *[[ORCID|https://orcid.org/0000-0002-2458-6988]]
-*[[GitHub|https://github.com/masao]]
-*[[Delicious|http://www.delicious.com/masao]]
+*[[ResearchGate|https://www.researchgate.net/profile/Masao_Takaku/]]
 
 {{rawhtml(
 <script src="http://fuwat.to/api/widget.js" type="text/javascript" charset="utf-8"></script>
