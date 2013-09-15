@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist version="$Revision$">
+  <pub type="conference">
+    <title>「ふわっと関連検索」のこれまでとこれから</title>
+    <author>高久雅生</author>
+    <conference>Code4Lib JAPANカンファレンス2013</conference>
+    <year>2013</year>
+    <month>8</month>
+    <city>南三陸町</city>
+    <language>ja</language>
+    <date>2013-08-31</date>
+    <slides>http://www.slideshare.net/tmasao/ss-25786099</slides>
+  </pub>
+
   <pub type="misc">
     <title>流通する学術情報コンテンツ</title>
     <subtitle>概論</subtitle>
@@ -45,6 +57,7 @@
     <language>ja</language>
     <date>2013-05-25</date>
     <url>http://hdl.handle.net/2241/119344</url>
+    <doi>10.2964/jsik.23_219</doi>
   </pub>
 
   <pub type="conference" refereed="true">
@@ -525,6 +538,7 @@
     <language>ja</language>
     <date>2010-11-26</date>
     <slides>./2010/ciniiapi-content-fuwatto.pdf</slides>
+    <url>http://id.nii.ac.jp/1001/00070117/</url>
   </pub>
 
   <pub type="conference">
