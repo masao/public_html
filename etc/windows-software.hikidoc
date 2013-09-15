@@ -1,7 +1,7 @@
 title: Windows上で使っているソフトウェア達
 subject: etc
 date.available: 2001-10-29
-date.modified: 2012-12-16
+date.modified: 2013-07-28
 
 私がMicrosoft Windows上で使っている主なソフトウェアをメモしておきます。
 
@@ -12,9 +12,13 @@ date.modified: 2012-12-16
 
 !!(フリー/シェア)ウェア
 
+:[[Free AVG|http://free.avg.co.jp/]]:アンチウイルスソフトウェア
+:[[Google Chrome|http://www.google.co.jp/intl/ja/chrome/]]:Webブラウザ
 :[[Firefox|http://www.mozilla-japan.org/]] (Mozilla Browser):Webブラウザ （[[Firefoxの設定メモ|firefox.html]]も参照のこと）
+:[[TTSSH2|http://ttssh2.sourceforge.jp/]]:SSH/Telnetクライアント
 :[[PuTTY (日本語化版)|http://hp.vector.co.jp/authors/VA024651/#PuTTYkj_top]]:SSH/Telnetクライアント
-:[[WinSCP|http://winscp.sourceforge.net/eng/]]:ファイル転送ツール。（scpをGUIでできる）
+:[[WinSCP|http://winscp.sourceforge.net/eng/]]:ファイル転送ツール。（scp/sftpをGUIでできる）
+:[[Skype|http://www.skype.com/ja/]]:メッセージ、チャットツール
 :[[Lhaplus|http://www.vector.co.jp/soft/win95/util/se169348.html]]:圧縮・解凍ツール
 :[[Cygwin|http://cygwin.com/]]:ユーティリティ
 :[[Adobe Acrobat Reader|http://www.adobe.co.jp/]]:PDFリーダ
