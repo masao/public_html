@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist version="$Revision$">
+  <pub type="misc">
+    <title>学術情報流通システムの連携と情報検索、情報探索システムの評価</title>
+    <author>高久雅生</author>
+    <conference>平成25年度第3回教員セミナー</conference>
+    <year>2013</year>
+    <month>10</month>
+    <city>筑波大学図書館情報メディア系</city>
+    <language>ja</language>
+    <date>2013-10-03</date>
+    <slides>./2013/Faculty-Seminar-Takaku.pdf</slides>
+  </pub>
+
   <pub type="conference">
     <title>「ふわっと関連検索」のこれまでとこれから</title>
     <author>高久雅生</author>
