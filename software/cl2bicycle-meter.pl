@@ -17,11 +17,11 @@ foreach my $ymd (sort keys %{$cl->{all}}) {
     # print Dumper(\%{$cl->{all}->{$ymd}});
     my $entry = $cl->{all}->{$ymd};
     for (my $i = $entry->{curid}; $i >= 1; $i--) {
-	if ($entry->{$i}->{ho} eq 'º£Æü¤Î¥µ¥¤¥¯¥ê¥ó¥°') {
+	if ($entry->{$i}->{ho} eq 'ä»Šæ—¥ã®ã‚µã‚¤ã‚¯ãƒªãƒ³ã‚°') {
 	    my $cont = $entry->{$i}->{co};
 	    #print join( "\t", "<$ymd>", $cont );
-	    my $dist = $1 if $cont =~ /µ÷Î¥:\s*([\d\.]+)\s*km/iso;
-	    my $time = $1 if $cont =~ /»ş´Ö:\s*([\d\.\:]+)/iso;
+	    my $dist = $1 if $cont =~ /è·é›¢:\s*([\d\.]+)\s*km/iso;
+	    my $time = $1 if $cont =~ /æ™‚é–“:\s*([\d\.\:]+)/iso;
 	    $dist_total += $dist;
 	    $time = "0:".$time if not defined((split(/:/, $time))[2]);
 	    print join( "\t", $ymd, $dist, $time, $dist_total ), "\n";

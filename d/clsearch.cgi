@@ -1,12 +1,12 @@
 #!/usr/bin/perl
 # $Id$
-# clsearch.cgi - chalow ¤Ë¤è¤ê HTML ²½¤µ¤ì¤¿ ChangeLog ¤ò¸¡º÷¤¹¤ë CGI
+# clsearch.cgi - chalow ã«ã‚ˆã‚Š HTML åŒ–ã•ã‚ŒãŸ ChangeLog ã‚’æ¤œç´¢ã™ã‚‹ CGI
 use strict;
 
 ### User Setting from here
-# ¤ª¹¥¤ß¤Ë¤¢¤ï¤»¤ÆÊÑ¤¨¤Æ²¼¤µ¤¤
+# ãŠå¥½ã¿ã«ã‚ã‚ã›ã¦å¤‰ãˆã¦ä¸‹ã•ã„
 
-my $numnum = 10;		# °ìÅÙ¤ËÉ½¼¨¤Ç¤­¤ë¿ô
+my $numnum = 10;		# ä¸€åº¦ã«è¡¨ç¤ºã§ãã‚‹æ•°
 my $css_file = "diary.css";
 
 # for simple mode
@@ -27,7 +27,7 @@ my $list_template = << "_TEMPLATE"
 _TEMPLATE
     ;
 
-# simple mode ¤Ç¥Ş¥Ã¥Á¤·¤¿Ê¸»úÎó¤ò¤Ï¤µ¤à¥¿¥°
+# simple mode ã§ãƒãƒƒãƒã—ãŸæ–‡å­—åˆ—ã‚’ã¯ã•ã‚€ã‚¿ã‚°
 my ($open_tag, $close_tag) = 
     (qq(<em style="background-color:yellow">), "</em>");
 
@@ -36,7 +36,7 @@ my ($open_tag, $close_tag) =
 use CGI;
 my $q = new CGI;
 
-my $myself = $q->url();		# ¤³¤ÎCGI¤ÎURL
+my $myself = $q->url();		# ã“ã®CGIã®URL
 my $key = $q->param('key');
 my $from = $q->param('from') || 0;
 my $clen = $q->param('context_length') || 200;
@@ -47,7 +47,7 @@ if (defined $q->param('date')) {
     $key = "date:".$q->param('date');
 }
 
-if ($mode == 2) {		# ¥ê¥¹¥È¥â¡¼¥É¤Î¤È¤­¤ÏÁ´Éô°ìµ¤¤Ë½Ğ¤¹
+if ($mode == 2) {		# ãƒªã‚¹ãƒˆãƒ¢ãƒ¼ãƒ‰ã®ã¨ãã¯å…¨éƒ¨ä¸€æ°—ã«å‡ºã™
     $numnum = 100000000;
     $from = 0;
 }
@@ -59,17 +59,13 @@ if (defined $q->param('cat')) {
 }
 
 
-# ¢£¢£¢£ HTML head ½ĞÎÏ ¢£¢£¢£
-print "Content-type: text/html; charset=euc-jp\n\n";
+# â– â– â–  HTML head å‡ºåŠ› â– â– â– 
+print "Content-type: text/html; charset=utf-8\n\n";
 
 
-# ¢£¢£¢£ ¸¡º÷ ¢£¢£¢£
+# â– â– â–  æ¤œç´¢ â– â– â– 
 my $outstr = "";
 my $cnt = 0;
-
-my $ascii = '[\x00-\x7F]';
-my $twoBytes = '[\x8E\xA1-\xFE][\xA1-\xFE]';
-my $threeBytes = '\x8F[\xA1-\xFE][\xA1-\xFE]';
 
 sub clean {
     local ($_) = @_;
@@ -96,7 +92,7 @@ if (defined $key and $key !~ /^\s*$/) {
 	my @regular_keys;
 
 	my $match_num = 0;
-	foreach my $k (@keys) {	# Ëè²ó¤ä¤ë¤Î¤ÏÌµÂÌ¡£¤¢¤È¤ÇÄ¾¤¹¤Ù¤·¡£
+	foreach my $k (@keys) {	# æ¯å›ã‚„ã‚‹ã®ã¯ç„¡é§„ã€‚ã‚ã¨ã§ç›´ã™ã¹ã—ã€‚
 	    if ($k =~ /^date:(.+)$/) {
 		my $tmp = clean($1);
 		$match_num++ if ($date =~ /\[$tmp/);
@@ -105,15 +101,12 @@ if (defined $key and $key !~ /^\s*$/) {
 		$match_num++ if ($c =~ /^.+\[$tmp\].*\t.*$/);
  	    } else {
 		my $tmp = clean($k);
-	#print "$k\t$tmp\n";
-	if ($c =~ /$tmp/i) {
-		$match_num++
-		    if $c =~ /^(?:$ascii|$twoBytes|$threeBytes)*?$tmp/i;
-	}
+		#print "$k\t$tmp\n";
+		$match_num++ if ($c =~ /$tmp/i);
 		push @regular_keys, $tmp;
 	    }
 	}
-	my $pkey = $regular_keys[0] if (@regular_keys > 0); # ÂåÉ½¥­¡¼
+	my $pkey = $regular_keys[0] if (@regular_keys > 0); # ä»£è¡¨ã‚­ãƒ¼
 
 #print @keys,"<br>\n";
 	
@@ -122,26 +115,37 @@ if (defined $key and $key !~ /^\s*$/) {
 	    $cnt++;
 	    #next if ($cnt < $from + 1);last if ($cnt >= $from + 1 + $numnum);
 	    next if ($cnt < $from + 1 or $cnt >= $from + 1 + $numnum);
-	    # ¢¬¹âÂ®²½¤ÎÍ¾ÃÏ
+	    # â†‘é«˜é€ŸåŒ–ã®ä½™åœ°
 
 	    my $tmp_tmpl = $simple_template;
-	    if ($mode == 0) { # ¥·¥ó¥×¥ë¥â¡¼¥É
-		if (defined $pkey and 
-		    $c =~ m!^((?:$ascii|$twoBytes|$threeBytes)*?)($pkey)(.*)$!i) {
-		    my ($pre, $k, $pos) = ($1, $2, $3);
-		    $pre =~ s/^(?:$ascii|$twoBytes|$threeBytes)//
-			while length($pre) > $clen;
-		    $pos =~ s/(?:$ascii|$twoBytes|$threeBytes)$//
-			while length($pos) > $clen;
-		    $c = qq($pre$k$pos);
+	    if ($mode == 0) { # ã‚·ãƒ³ãƒ—ãƒ«ãƒ¢ãƒ¼ãƒ‰
+		if (defined $pkey and $c =~ m!^(.*?)($pkey)(.*)$!i) {
+		    my ($pre, $k, $post) = ($1, $2, $3);
+		    use utf8;
+		    if ( length( $pre ) > $clen ) {
+			utf8::decode( $pre );
+			$pre = substr( $pre, length($pre)-$clen );
+			utf8::encode( $pre );
+		    }
+		    if ( length( $post ) > $clen ) {
+			utf8::decode( $post );
+			$post = substr( $post, 0, $clen );
+			utf8::encode( $post );
+		    }
+		    #$pre =~ s/^(?:$ascii|$twoBytes|$threeBytes)//
+		    # while length($pre) > $clen;
+		    #$pos =~ s/(?:$ascii|$twoBytes|$threeBytes)$//
+		    # while length($pos) > $clen;
+		    $c = qq($pre$k$post);
 		    my $p = join('|', @regular_keys);
-		    $c =~ s!\G((?:$ascii|$twoBytes|$threeBytes)*?)($p)!$1$open_tag$2$close_tag!gi;
+		    #$c =~ s!\G((?:$ascii|$twoBytes|$threeBytes)*?)($p)!$1$open_tag$2$close_tag!gi;
+		    $c =~ s!($p)!$open_tag$1$close_tag!gi;
 		}
-	    } elsif ($mode == 1) { # ¥¢¥¤¥Æ¥à¥â¡¼¥É
+	    } elsif ($mode == 1) { # ã‚¢ã‚¤ãƒ†ãƒ ãƒ¢ãƒ¼ãƒ‰
 		my ($file, $id) = ($date =~ /href="(.*?.html).*?">\[(.+?)\]/);
 		$c = get_item($file, $id);
 		$tmp_tmpl = $item_template;
-	    } elsif ($mode == 2) { # ¥ê¥¹¥È¥â¡¼¥É
+	    } elsif ($mode == 2) { # ãƒªã‚¹ãƒˆãƒ¢ãƒ¼ãƒ‰
 		$c =~ s/\t.*$//;
 		$tmp_tmpl = $list_template;
 	    }
@@ -157,14 +161,14 @@ if (defined $key and $key !~ /^\s*$/) {
 
 
 
-# ¢£¢£¢£ ²áµîµ­»öÉ½¼¨¤Î¤¿¤á¤ÎÁªÂòËÀ ¢£¢£¢£
+# â– â– â–  éå»è¨˜äº‹è¡¨ç¤ºã®ãŸã‚ã®é¸æŠæ£’ â– â– â– 
 my $page_max = int(($cnt - 1) / $numnum);
 my ($qkey) = ($q->query_string =~ /(key=[^&]+)/);
 ($qkey) = ($q->query_string =~ /(cat=[^&]+)/) if ($qkey eq "");
 
 my $bar = "";
 my ($navip, $navin);
-if ($page_max != 0) {		# 1¥Ú¡¼¥¸¤Î¤ß¤Î¤È¤­¤ÏÁªÂòËÀ¤Ê¤·
+if ($page_max != 0) {		# 1ãƒšãƒ¼ã‚¸ã®ã¿ã®ã¨ãã¯é¸æŠæ£’ãªã—
     for (my $i = 0; $i <= $page_max; $i++) {
 	if ($from / $numnum == $i) {
 	    $bar .= "<strong>".($i + 1).'</strong>';
@@ -176,26 +180,26 @@ if ($page_max != 0) {		# 1¥Ú¡¼¥¸¤Î¤ß¤Î¤È¤­¤ÏÁªÂòËÀ¤Ê¤·
 
 	if ($from / $numnum == $i - 1) {
 	    $navin = $q->a({-href => "$myself?from=".($i * $numnum).
-				"&".$qkey}, "[ ¼¡¤Ø ]");
+				"&".$qkey}, "[ æ¬¡ã¸ ]");
 	} elsif ($from / $numnum == $i + 1) {
 	    $navip = $q->a({-href => "$myself?from=".($i * $numnum).
-				"&".$qkey}, "[ Á°¤Ø ]");
+				"&".$qkey}, "[ å‰ã¸ ]");
 	}
 
     }
 }
 
 if ($cnt == 0) {
-    print "<p>¸«¤Ä¤«¤ê¤Ş¤»¤ó¤Ç¤·¤¿¡£</p>\n";
+    print "<p>è¦‹ã¤ã‹ã‚Šã¾ã›ã‚“ã§ã—ãŸã€‚</p>\n";
 } else {
-    print "<p>$cnt ·ï ¸«¤Ä¤«¤ê¤Ş¤·¤¿¡£</p>\n";
+    print "<p>$cnt ä»¶ è¦‹ã¤ã‹ã‚Šã¾ã—ãŸã€‚</p>\n";
 }
 
 
 my $page_template = << "__TEMPLE"
 
 <html><head><title>CHALOW Search</title>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-JP">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel=stylesheet href="$css_file" media=all>
 </head><body><a href="index.html">ChangeLog INDEX</a>
 
@@ -233,7 +237,7 @@ print $page_template;
 exit;
 
 
-### ¥Õ¥¡¥¤¥ë¤«¤é¡¢ID¤Ë¤è¤ê»ØÄê¤µ¤ì¤¿item¤ò¼è¤ê¤À¤¹
+### ãƒ•ã‚¡ã‚¤ãƒ«ã‹ã‚‰ã€IDã«ã‚ˆã‚ŠæŒ‡å®šã•ã‚ŒãŸitemã‚’å–ã‚Šã ã™
 my %file_cache;
 sub get_item {
     my ($file, $id) = @_;
