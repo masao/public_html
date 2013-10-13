@@ -41,6 +41,7 @@ Absoltuely
 All of my questions
 All posts of this
 Always a good job
+Arceilts
 Arictles
 Aritcels
 Aritecls
@@ -54,6 +55,7 @@ Brilliance
 Bristih
 Calling all cars
 Calnlig
+Charlie Sheen
 Cheers
 Cool!
 Could you write about
@@ -89,6 +91,8 @@ Hello good day
 Hey hey hey
 Ho ho
 Holy Toledo
+Holy Toodle
+Holy Tooeld
 Holy concise
 Hot damn
 How neat
@@ -212,6 +216,7 @@ This has made my day
 This information is off
 This is what we need
 This makes everything
+Thkans
 Threesomes
 Tip top
 Tramadol
@@ -256,6 +261,7 @@ accucray
 accutane insurance
 achieevd
 actulaly
+acveehid
 addictive
 addsreses
 aenswr
@@ -284,7 +290,9 @@ ansewr
 answeerd
 answer from
 answreed
+anwers
 anwesr
+anwrse
 anwser
 apeapr
 aplpes
@@ -300,6 +308,7 @@ aprepciate
 aprpecaition
 aprpeication
 arcitles
+arcleits
 arcteils
 arcteils
 arctile
@@ -312,6 +321,7 @@ aritelcs
 aritelcs
 aritlce
 aritlces
+arlictes
 arltices
 army knife
 arrtcile
@@ -322,6 +332,7 @@ arteilcs
 article perfectly
 article up
 artiecls
+artielcs
 artlcie
 artlcies
 artlice
@@ -376,6 +387,7 @@ beettr
 beilvee
 beitang
 best content
+bestest
 betsest
 betsset
 better than a brick
@@ -408,6 +420,7 @@ brilalint
 brinas
 brings light into
 brliialnt
+brlnliait
 brngis
 bseetst
 bsetest
@@ -419,6 +432,7 @@ btteer
 bullsyee
 buy online
 buy these articles
+buyllese
 cahnge
 cahnigng
 call you back
@@ -437,6 +451,7 @@ cevler
 cgahne
 cgwho
 chganing
+chgilenalng
 chlalengnig
 chugging away
 cialis
@@ -470,7 +485,10 @@ cnomig
 cnortuibting
 cnotbirution
 cnotribtiuon
+cocinvned
+coeedqrnu
 cofneusd
+cofuesnd
 coimng
 come up with that
 come up with the
@@ -514,6 +532,7 @@ defiinetly
 demnsortated
 detbae
 dicattor
+diceovsry
 difficult question
 dificfult
 dilaspy
@@ -591,6 +610,7 @@ exrept
 exrept
 exrept answer
 exrpet
+exrstpiee
 exrtmeely
 extermely
 fabluous
@@ -676,6 +696,8 @@ great thinking
 great to me
 greeatst
 greetast
+grtesneas
+grtesneas
 gtreaset
 gviing
 had no idea
@@ -691,6 +713,7 @@ hear from you
 heelpd
 heepld
 heflpul
+heledp
 helfpul
 hella easy
 helnpig
@@ -786,9 +809,11 @@ infortamoin
 infortmaion
 infromaitve
 ingshit
+inigths
 inisght
 inisghts
 inishgt
+inmoofatirn
 inofmratvie
 inofmred
 inofmrtaion
@@ -812,6 +837,7 @@ interesting question
 interetsing
 internet hooligans
 internet writer
+intmorafive
 intreent
 intrenet
 ipmeraivte
@@ -846,6 +872,7 @@ kliler
 knlowedge
 knolwdege
 know everything
+knowgedle
 knowledge in this article
 knwlodege
 knwloedge
@@ -872,6 +899,7 @@ lkooing
 lkoonig
 logic set out
 loikong
+loinokg
 loiokn
 lokinog
 lokion
@@ -881,6 +909,8 @@ loknoig
 lokoed
 lokonig
 loli
+lolicon
+lolita
 lolita
 lolitas
 lonoikg
@@ -898,6 +928,7 @@ lot easier
 love of God
 love this site
 ltilte
+maaacdmia
 maacadmia
 maagned
 macadmaia
@@ -926,6 +957,7 @@ mnueits
 mnueits
 mold-breaker
 monoploy
+monopoly
 more clever
 more from this article
 mortar establishment
@@ -944,6 +976,7 @@ ncliey
 ndeeed
 neat articles
 nedeed
+needde
 neeedd
 nelicy
 never find this
@@ -988,6 +1021,7 @@ perfect reply
 perfect way
 personal loans
 pertty
+petlecrfy
 pharmacies
 pianelss
 pills
@@ -1054,6 +1088,7 @@ psoting!
 psotnig
 pstoing
 pttunig
+purcsahes
 purhcseas
 pussy
 pussy
@@ -1075,12 +1110,14 @@ quesiotn
 questnios
 quetsion
 quetsoin
+quieston
 qulatiy
 quseiotns
 quseitons
 qusetions
 qusetoins
 qusoetin
+qusotien
 quteisons
 raeding
 raeidng
@@ -1111,6 +1148,7 @@ refsrehing
 reiandg
 relaible
 relaly
+relbaile
 reliable data like this
 reliable information
 relilabe
@@ -1252,6 +1290,7 @@ somonee
 somteinhg
 sooemne
 sopkoy
+sort things
 souhld
 soutolin
 soveld
@@ -1287,6 +1326,7 @@ suppsoes
 suprrised
 surprsied
 susnnhie
+susrpired
 svoled
 svreeal
 sweetheart
@@ -1312,6 +1352,7 @@ tealnt
 tehard
 ternchant
 terrfiic
+terribly
 terrific amount
 tghins
 thakns
@@ -1334,6 +1375,7 @@ the tikcet
 there you
 thgins
 thgnis
+thgnkini
 thguhot
 thienkr
 thigns
@@ -1373,6 +1415,8 @@ thnkas
 thnkiing
 thnkinig
 thnkinig
+thnkniig
+thnnikig
 thoghut
 thohugt
 throguh
@@ -1390,6 +1434,7 @@ tihngs
 tihnking
 tihnknig
 tihnnkig
+tikect
 time is money
 time to contribute
 tinhgs
@@ -1420,6 +1465,7 @@ tohuhgt
 toltaly
 tons of links
 too good
+too tricky
 top of the game
 topic-bravo
 touchdown
@@ -1433,6 +1479,7 @@ tricky question
 trikcy
 trkicy
 trnsapraenlty
+trplnaarestny
 true I guess
 truly appreciate
 ttoally
@@ -1452,6 +1499,7 @@ unbeeliavble
 unbelieavlbe
 undeniable importance
 understand the issues
+undsaetrndable
 undsretnad
 unebilevable
 unebilevbale
@@ -1482,10 +1530,12 @@ weathlier
 web20power
 webiste
 weeeknd
+wehlttlough
 well spent
 well spent
 well-written
 well-wrtiten
+wetntwri
 what I need
 what I needed
 what I was needed
@@ -1496,6 +1546,7 @@ what we need
 what's up
 where to buy
 where to find this info
+whevoer
 who you wrote this
 wirter
 witohut
@@ -1542,7 +1593,6 @@ your answer solved
 your post makes mine
 your posting
 誰損多
-terribly
 EOF
 
 # ユーザ設定ファイルの読み込み
