@@ -81,6 +81,9 @@
     border-color: #aaf;
     border-collapse: collapse;
   }
+  th {
+    min-width: 7em;
+  }
   td {
     padding: 2px;
   }
@@ -135,6 +138,21 @@
     color: #363;
     font-size: smaller;
   }
+
+  /* for Social services */
+  ul#social-service {
+    /*text-align: right;*/
+    padding: 5px;
+    height: 1.5em;
+    vertical-align: bottom;
+  }
+  ul#social-service li {
+    display: block;
+    width: 100px;
+    float: right;
+    margin-left: 10px;
+  }
+
   /* For publication list */
   #publist {
     margin-right: 2em;
