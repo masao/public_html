@@ -206,7 +206,11 @@ class MHikiDoc < HikiDoc
          def expand( *args )
             element_name = self.class.to_s.split(/::/).last.downcase
             str = args.join("\n")
-            %Q[<#{element_name}>#{ str }</#{element_name}>]
+            if str.empty?
+               "<#{ element_name } />"
+            else
+               %Q[<#{element_name}>#{ str }</#{element_name}>]
+            end
          end
       end
       class Code  < SimpleInlinePlugin; end
@@ -215,6 +219,7 @@ class MHikiDoc < HikiDoc
       class Ins   < SimpleInlinePlugin; end
       class Kbd   < SimpleInlinePlugin; end
       class Small < SimpleInlinePlugin; end
+      class Br    < SimpleInlinePlugin; end
       class Clear < Plugin
          def expand( *args )
             return %Q[<div style="clear:both;"/>]
@@ -285,6 +290,9 @@ class ToHTML
          @conf["css"] = HierFilename.new( "default.css", File.dirname( file ) )
       end
       #STDERR.puts @conf
+      basename = file.gsub( /\.hikidoc/, ".html" )
+      basename = basename.sub( /\/index.html\Z/, "/" )
+      @permalink = URI.join( @conf[ "baseurl" ], basename )
    end
    def lang_file( lang = "ja" )
       file = nil
