@@ -1,14 +1,14 @@
 title: たかくまさおのホームページ
-date.modified: 2013-08-29
+date.modified: 2013-10-13
 navi: false
+javascript.src: https://www.google.com/jsapi
+javascript.src: newsfeed.js
 
-{{div class="news"
-!! お知らせ
-:2006-04-29:[[発表文献|./pub/]]のページを作成、公開しました。
-:2006-04-26:個人用に書きためていた[[メモ|./d/]]を公開しました。
-:2006-03-12:長らく休止状態だったWebサイトを http://masao.jpn.org/ へ移行して再開しました。
-
-[[古いお知らせ|history.html]]
+{{rawhtml
+<div class="news">
+<h2>お知らせ</h2>
+<div id="newsfeed"></div>
+</div>
 }}
 
 !! 目次
