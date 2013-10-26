@@ -291,7 +291,7 @@ class ToHTML
       end
       #STDERR.puts @conf
       basename = file.gsub( /\.hikidoc/, ".html" )
-      basename = basename.sub( /\/index.html\Z/, "/" )
+      basename = basename.sub( /(\A|\/)index\.html(\.ja)?\Z/, "/" )
       @permalink = URI.join( @conf[ "baseurl" ], basename )
    end
    def lang_file( lang = "ja" )
