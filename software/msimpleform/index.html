@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="EUC-JP"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head xmlns:og="http://ogp.me/ns#">
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-JP" />
+<link rev="made" href="mailto:tmasao@acm.org" />
+<link rel="stylesheet" href="../../default.css" type="text/css" />
+<title>mformcgi: 登録フォームCGI</title>
+</head>
+<body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+<div class="navi"><a href="./../..">HOME</a> &gt;
+<a class="subject" href="./../../software/">ソフトウェア</a> &gt;
+mformcgi: 登録フォームCGI</div>
+<div class="last-update">最終更新日: 2007年12月22日</div>
+<h1>mformcgi: 登録フォームCGI</h1>
+<p>任意の項目からなるシンプルな登録用フォームを設置できます。</p>
+<p>主に以下の機能があります:</p>
+<ul>
+<li>登録項目のカスタマイズ: 項目名や使用するフォーム部品を自由に設定できます。<ul>
+<li>対応フォーム部品: テキスト入力フィールド、ラジオボタン、ドロップダウン式メニュー、ファイルアップロードなど</li>
+<li>必須入力項目などの設定も可能です。</li>
+<li>設定はYAML形式のテキストファイルで行います</li>
+</ul></li>
+<li>タブ区切りテキスト出力: 登録データはそのままタブ区切りテキストとなっています。Excelなどでまとめて処理できます。</li>
+</ul>
+<p>もともと、イベント参加登録やレポート提出などに使うために作ったものをベースにしています。</p>
+<h2 id="toc1_1">デモ</h2>
+<h2 id="toc1_2">お知らせ</h2>
+<dl>
+<dt>2007-12-XX</dt>
+<dd>初版 msimpleform-0.1 を公開しました。
+</dd>
+</dl>
+<h2 id="toc1_3">ダウンロード</h2>
+<p>msimpleform はGNU Generic Public License version 2に従ったフリーソフトウェアとします。</p>
+<ul>
+<li><a href="../archive/msimpleform-0.1.tar.gz">msimpleform-0.1.tar.gz</a></li>
+</ul>
+<h2 id="toc1_4">使い方</h2>
+<p>実行に当たっては、<a href="http://www.ruby-lang.org/ja/">Ruby</a> 1.8 以降およびCGIプログラムの実行環境が必要となります。</p>
+<p>まず、ファイルを展開し、WebサーバでCGIプログラムを実行可能な場所に置きます。
+（以下はコマンドによる配置例）</p>
+<pre>% gzip -cd msimpleform-0.x.tar.gz | tar xvf -
+% mv msimpleform /var/www/htdoc/</pre>
+<p>必要に応じて、ファイル先頭のRubyコマンドの位置を調整します。</p>
+<pre>#!/usr/bin/ruby</pre>
+<p>ブラウザからアクセスして、登録用フォームが現れればひとまず動作確認まで終了です。</p>
+<p>次に、設定ファイルを編集します。
+サンプルとして <code>msimpleform.conf.sample</code> ファイルがついていますので、これを参考に <code>msimpleform.conf</code> にコピーして、内容を編集してください。</p>
+<p>以上で完了です。
+先に確認したURLにアクセスしてみると、設定内容が反映されていることが確認できると思います。</p>
+<h2 id="toc1_5">連絡先</h2>
+<p>本ツールに対し、質問・意見などありましたら、<a href="mailto:tmasao@acm.org">お気軽にご連絡ください</a>。</p>
+<hr />
+<div class="navi"><a href="./../..">HOME</a> &gt;
+<a class="subject" href="./../../software/">ソフトウェア</a> &gt;
+mformcgi: 登録フォームCGI</div>
+<address>高久雅生 (Masao Takaku)<br />
+<a href="http://masao.jpn.org/">http://masao.jpn.org/</a>,
+<a href="mailto:tmasao@acm.org">tmasao@acm.org</a></address>
+<ul id="social-service">
+<li class="hatena-bookmark">
+<a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard-balloon" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+</li>
+<li class="twitter-button">
+<a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja">ツイート</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</li>
+<li class="facebook-button">
+<div class="fb-like" data-href="http://masao.jpn.org/software/msimpleform/" data-send="false" data-layout="button_count" data-width="100" data-show-faces="true"></div>
+</li>
+</ul>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-389547-1";
+urchinTracker();
+</script>
+</body>
+</html>
