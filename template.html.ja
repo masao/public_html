@@ -21,6 +21,10 @@
 <%    end %>
 <% end %>
 <title><%= title %></title>
+<meta property="og:title" content="<%= title %>" />
+<meta property="og:url" content="<%= @permalink %>" />
+<meta property="og:type" content="website" />
+<meta property="fb:admins" content="662204826" />
 </head>
 <body>
 <div id="fb-root"></div>
