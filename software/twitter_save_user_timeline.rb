@@ -10,7 +10,7 @@ require "twitter"
 
 Faraday::Request.lookup_middleware(:multipart)
 
-def load_twitter_db( file = "twitter.yml" )
+def load_twitter_db( file = "twitter_log.yml" )
    YAML.load( open( file ) ) 
 end
 
@@ -39,9 +39,16 @@ if $0 == __FILE__
       c.oauth_token = config[ "oauth_token" ]
       c.oauth_token_secret = config[ "oauth_token_secret" ]
    end
-   tweets = Twitter.user_timeline( "tmasao" )
-   tweets = tweets.map do |tweet|
-      tweet.attrs.new_str_key
+   done = {}
+   load_twitter_db.each do |tw|
+      # p tw
+      done[ tw[ "id" ] ] = true
    end
-   puts tweets.to_yaml
+   tweets = Twitter.user_timeline( "tmasao" )
+   results = []
+   tweets.each do |tweet|
+      next if done[ tweet["id"] ]
+      results << tweet.attrs.new_str_key
+   end
+   puts results.to_yaml
 end
