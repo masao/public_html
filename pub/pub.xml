@@ -2,6 +2,20 @@
 <!-- $Id$ -->
 <publist version="$Revision$">
   <pub type="misc">
+    <title>ゲームチェンジの時代に</title>
+    <author>高久雅生</author>
+    <journal>情報管理</journal>
+    <volume>56</volume>
+    <number>9</number>
+    <page>3</page>
+    <year>2013</year>
+    <month>12</month>
+    <language>ja</language>
+    <date>2013-12-01</date>
+    <note>印刷中</note>
+  </pub>
+
+  <pub type="misc">
     <title>学術情報流通システムの連携と情報検索、情報探索システムの評価</title>
     <author>高久雅生</author>
     <conference>平成25年度第3回教員セミナー</conference>
