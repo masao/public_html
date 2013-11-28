@@ -1,0 +1,1553 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head><style type="text/css">
+.comment {
+    color: #20A040;
+    font-size: 80%;
+}
+.draft-comment {
+    color: #20A040;
+    font-size: 80%;
+}
+.orig { color:gray; }
+
+div.toc ul li { list-style-type: none; }
+div.toc ul { margin-top: 1ex; margin-bottom: 1ex; }
+</style>
+  <meta http-equiv="content-type" content="text/html; charset=EUC-JP">
+  <title>Mozilla における SOAP スクリプト</title>
+</head>
+  <body>
+<div align="Center">
+<h1>Mozilla における SOAP スクリプト</h1>
+
+Last Modified  Mon, 24 Mar 2003 04:14:30 GMT<br>
+                           
+<div style="font-size:1.17em; margin:1em 0; font-weight:bolder;"><a href="mailto:rayw@netscape.com">Ray Whitmer</a></div>
+                           
+<h2>要約</h2>
+
+</div>
+Microsoft 他が提唱している SOAP は、Web 上のエージェント間でデータ構造を符号化し、交換する手法の一つです。
+SOAP は現在 W3C において Web 標準への標準化作業が行われています
+（<a href="http://www.w3.org/TR">W3C の最新の草案</a>の一覧中の SOAP に関連する複数の提案および作業中の文書をご覧ください）。<br>
+
+      <br>
+ブラウザクライアントは現在存在する Web エージェントの中で最も身近なものであり、JavaScript はブラウザをスクリプトで操作する方法としては標準的で相互運用可能な手法です。
+ブラウザ内でスクリプト可能な SOAP が動作することにより、クライアント・サーバ双方でお互いにより活発なやり取りを行うことができます。
+このやり取りは、
+HTML ベースのユーザインタフェースにおけるリクエストとレスポンスのサイクルに縛られることなく、既存の HTTP-XML リクエストサービスや、スクリプトの持続的な提供や、データベース、そして他の Web サービスへのアクセスという形で行われることでしょう。
+プラットフォーム独立の方法で交換される Web 上のデータ構造は今後、今日の Web コンテンツと同様、Web エージェントにとって欠かせないものになるでしょう。
+この道程において重要なカギとなってくるのは、JavaScript をデータにいかに自然にバインディングするかということになるでしょう。
+つまり、煩わしい XML データの符号化と XML データの取得を行う代わりに、
+スクリプトが単純にデータを利用することができることが重要です。
+<br>
+
+       
+<h2>0 目次</h2>
+
+<div class="toc">
+<ul>
+  <li><a href="#1_SOAP_Services">1 SOAP サービス</a>
+  <li><a href="#2_SOAP_Blocks">2 SOAP ブロック</a>
+      <ul>
+	<li><a href="#2.1_Parameters">2.1 パラメータ</a>
+	<li><a href="#2.2_Header_Blocks">2.2 ヘッダブロック</a>
+	<li><a href="#2.3_Encodings">2.3 エンコーディング</a>
+      </ul>
+  <li><a href="#3_Using_the_Mozilla_Low-Level_SOAP_API">3 Mozilla の低レベル SOAP API を使う</a>
+      <ul>
+	<li><a href="#3.1_Conventions_Used_Below_in">3.1 以下の説明文中で使用する記法の凡例</a>
+	<li><a href="#3.2_Basic_Operations_of_SOAP">3.2 SOAP の基本操作</a>
+	<li><a href="#3.3_Beyond_Basic_Operations">3.3 基本操作以上の操作について</a>
+	<li><a href="#3.4_Header_Operations">3.4 ヘッダ操作</a>
+	<li><a href="#3.5_Non-RPC_Operations">3.5 非 RPC 操作</a>
+	<li><a href="#3.6_SOAPBlock_and_SOAPMessage_Supertypes">3.6 SOAPBlock と SOAPMessage</a>
+	<li><a href="#3.7_More_Operations">3.7 その他の操作</a>
+	<li><a href="#3.8_Using_Schema_Types">3.8 スキーマ型の使用</a>
+	<li><a href="#3.9_Customization_of_Encodings">3.9 エンコーディングのカスタマイズ</a>
+	<li><a href="#3.10_Security_Operations">3.10 セキュリティ操作</a>
+      </ul>
+  <li><a href="#4_Future_Features">4 今後の機能</a>
+      <ul>
+	<li><a href="#4.1_Access_to_SOAP_as_Proxies">4.1 SOAP にプロキシとしてアクセスする</a>
+	<li><a href="#4.2_Arbitrary_Graphs_of_Data">4.2 任意のデータグラフ</a>
+	<li><a href="#4.3_SOAP_With_Attachments">4.3 SOAP アタッチメント</a>
+	<li><a href="#4.4_New_Transports_and_Local_Services">4.4 新しい転送手段およびローカルサービス</a>
+	<li><a href="#4.5_Standards">4.5 標準規格</a>
+      </ul>
+  <li><a href="#5_Samples_and_Testing">5 サンプルとテスト</a>
+  <li><a href="#6_Object_Interfaces">6 オブジェクト・インタフェース</a>
+</ul>
+</div>
+
+
+<h2><a name="1_SOAP_Services">1 SOAP サービス</a></h2>
+
+<a href="http://www.xmethods.com">XMethods のサイト</a>のように、
+Web 上で利用可能なサービスのための情報源も多くあります。
+上記のサイトでは、Mozilla の実装がテストや利用事例として使われています。
+Apache も SOAP 用のモジュールを提供しており、Mozilla 実装をテストしたり
+（もちろん遊んだり）するためのサービスを書くことができます。
+いったん準備ができたら、あとは、
+JavaScript や Java やその他の対応言語などでサービス用の機能を書いて、
+それから、
+サービスを配備するのに使われる XML によるサービス記述も書くだけです。
+さらに、
+Microsoft やその他の Web サーバのベンダが用意している、サービスを構築するためのツールキットも色々あります。
+<br>
+
+
+<h2><a name="2_SOAP_Blocks">2 SOAP ブロック</a></h2>
+
+
+<h3><a name="2.1_Parameters">2.1 パラメータ</a></h3>
+<h3>2.1 Parameters</h3>
+SOAP ベースのサービスでは、メッセージエンベロープをやり取りします。
+このエンベロープには、
+サービス呼び出しのパラメータとほぼ対応する XML データのブロックが入っています。
+RPC スタイルのメッセージが交換される際には、
+通常のパラメータブロックを表現するブロックは、一要素内に格納されます。
+この要素は、呼び出されるオブジェクトとメソッドを指定し、ボディ要素内に置かれます。
+また非 RPC メッセージにおいては、ブロックは、メソッド要素下ではなくボディ要素内に直接置かれます。
+<br>
+
+
+<h3><a name="2.2_Header_Blocks">2.2 ヘッダブロック</a></h3>
+
+省略可能なブロックや、
+独自に追加されたブロック、
+処理が必要なブロックなどがある場合は、
+指定されたロール付きのヘッダ内に入れられて運ばれ、
+受け取り側がそのメッセージを処理する前にそれらのヘッダを理解しなければならないかどうかの印が付けられます。
+<br>
+
+                                                   
+<h3><a name="2.3_Encodings">2.3 エンコーディング</a></h3>
+
+各ブロックの解釈は使用されているエンコーディング方式に依存します。
+このエンコーディング方式はメッセージ中で明示的に指定されます。
+標準的な SOAP エンコーディングが使われた場合は、各ブロック内のデータは XML スキーマの型により解釈されます。
+<br>
+
+
+<h2><a name="3_Using_the_Mozilla_Low-Level_SOAP_API">3 Mozilla の低レベル SOAP API を使う</a></h2>
+<h2>3 Using the Mozilla Low-Level SOAP API</h2>
+低レベル API を使うために、まず、ユーザは SOAPCall オブジェクトを生成し、
+そして、ヘッダとパラメータ付きの関数呼び出しをエンコードします。
+それから、呼び出しを実行します。
+呼び出しによりサービス呼び出しの結果が入ったレスポンスが返ってきます。
+このレスポンスには、呼び出しに失敗した場合にはメッセージを処理したサーバにより出力されたフォールトや、出力パラメータやヘッダブロックが含まれます。
+もし呼び出しが非同期的に行われる場合は、リモートサーバからのレスポンスが届いた際にそのレスポンスを受け取る関数が呼び出し側から与えられます。
+<br>
+
+              <br>
+言語に独立のクロスプラットフォームのインタフェースとアーキテクチャを利用しているため、
+JavaScript に加えて C++/XPCOM や Python のような Mozilla 中で XPConnect が対応している言語でも、以下で述べる操作はおおむね動作します。
+<br>
+
+                                                 
+<h3><a name="3.1_Conventions_Used_Below_in">3.1 以下の説明文中で使用する記法の凡例</a></h3>
+
+ブラケット（&lt;&gt;）中の名称/記述は、
+その名称/記述と一致する値またはオブジェクトを表します。
+これらはリテラル、"new" によるコンストラクタ、変数などの可能性があります。
+また時折、同一の文法で命令を実行するスクリプトを表す場合もあります。
+引用符で囲まれたブラケットは、記述した種類の文字列であることを示します。<br>
+
+             <br>
+以下の例は、<br>
+
+                                                 
+        <ul>
+               <li><font color="#993300"><i>&lt;Foo&gt;</i></font> = new
+Foo(<font color="#993300"><i>          &lt;FooFact&gt;</i></font> );</li>
+               <li><font color="#993300"><i>&lt;Foo&gt;</i></font>.bar =
+            <font color="#993300"><i>          &lt;any value or object&gt;</i></font>
+;</li>
+               <li><font color="#993300"><i>&lt;Baz&gt;</i></font> = <font color="#993300"><i>
+          &lt;Foo&gt;</i></font>.find("<font color="#993300"><i>&lt;name&gt;</i></font>
+           ");</li>
+	       <li><font color="#993300"><i>&lt;検索結果を見る&gt;</i></font></li>
+               
+                                                 
+        </ul>
+実際の JavaScript プログラムでは次のようになるでしょう。<br>
+
+             <br>
+             <code>var myFoo = new Foo(new FooFact("always","Great","Baz"));<br>
+             myFoo.bar = 3.14159265;<br>
+             var myGreatBaz = myFoo.find("Great");<br>
+             if (checkBaz(myGreatBaz)) {<br>
+             &nbsp; alert(myGreatBaz.description);<br>
+             }<br>
+             </code><br>
+上記の例では、"myFoo" は Foo 型のオブジェクトを保持する変数で、
+"myGreatBaz" は Baz 型のオブジェクトを保持しています。
+<br>
+
+                                                   
+<h3><a name="3.2_Basic_Operations_of_SOAP">3.2 SOAP の基本操作</a></h3>
+
+以下は、SOAP のユーザの大部分が行うであろう SOAP の基本操作のほぼ全てです。
+<br>
+
+              <br>
+                                                   
+        <table cellpadding="2" cellspacing="2" border="1" width="100%">
+                <tbody>
+                  <tr>
+                    <td valign="Top" width="50%">基本操作
+		    
+                    </td>
+                    <td valign="Top">実現方法
+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="Top">
+パラメータブロックを生成して、JavaScript の値および RPC スタイル呼び出しの名前を設定する。
+
+
+                    </td>
+                    <td valign="Top">                                   
+                                                                        
+      
+              <ul>
+                     <li><font color="#993300"><i>&lt;SOAPParameter&gt;</i></font>
+          = new SOAPParameter(<font color="#993300"><i>&lt;any value or object&gt;</i></font>
+          ,  "<font color="#993300"><i>&lt;name&gt;</i></font>");</li>
+		     <li> &nbsp;// もしくは</li>
+                     
+                     <li><font color="#993300"><i>&lt;SOAPParameter&gt;</i></font>
+          = new SOAPParameter();</li>
+                     <li><font color="#993300"><i>&lt;SOAPParameter&gt;</i></font>
+         .value = <font color="#993300"><i>&lt;any value or object&gt;</i></font>
+         ;</li>
+                     <li> <font color="#993300"><i>&lt;SOAPParameter&gt;</i></font>
+          .name = "<font color="#993300"><i>&lt;name&gt;</i></font>";</li>
+                                                                        
+                                                      
+              </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="Top">
+		    JavaScript 配列にパラメータを設定
+		    
+                    </td>
+                    <td valign="Top">                                   
+                                                                        
+      
+              <ul>
+                     <li><font color="#993300"><i>&lt;SOAPParameter array&gt;</i></font>
+           = new Array(<font color="#993300"><i>&lt;SOAPParameter&gt;</i></font>
+     <font color="#990000"><i>&lt;,...&gt;</i></font>);</li>
+		     <li> // もしくは</li>
+                     
+                     <li><font color="#993300"><i>&lt;SOAPParameter array&gt;</i></font>
+           = new Array();</li>
+                     <li><font color="#993300"><i>&lt;SOAPParameter array&gt;</i></font>
+          [0] = <font color="#993300"><i>&lt;SOAPParameter&gt;</i></font>
+ ;</li>
+                     <li><font color="#990000"><i>&lt;...&gt;</i></font></li>
+                                                                        
+                                                      
+              </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="Top">
+		    基本的な SOAP 1.1 の RPC スタイルのメッセージのパラメータを生成しエンコードする
+		    
+
+                    </td>
+                    <td valign="Top">                                   
+                                                                        
+      
+              <ul>
+                     <li><font color="#993300"><i>&lt;SOAPCall&gt;</i></font>
+     =  new  SOAPCall();</li>
+                     <li><font color="#993300"><i>&lt;SOAPCall&gt;</i></font>
+    .transportURI    = "<font color="#993300"><i>&lt;http-based service URI&gt;</i></font>
+    "</li>
+                     <li><font color="#993300"><i>&lt;SOAPCall&gt;</i></font>
+    .encode(0,    "<font color="#993300"><i>&lt;method name&gt;</i></font>
+  ",  "<font color="#993300"><i>      &lt;target object  namespaceURI&gt;</i></font>
+    ", 0, null, <font color="#993300"><i>      &lt;SOAPParameter array&gt;</i></font>
+     .length, <font color="#993300"><i>      &lt;SOAPParameter  array&gt;</i></font>
+    );</li>
+                                                                        
+                                                      
+              </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="Top">
+		    呼び出しを実行（呼び出しメッセージを送信し、レスポンスメッセージを受け取る）
+		    
+                    </td>
+                    <td valign="Top">                                   
+                                                                        
+      
+              <ul>
+                     <li><font color="#993300"><i>&lt;SOAPResponse&gt;</i></font>
+         =           <font color="#993300"><i>&lt;SOAPCall&gt;</i></font>
+.invoke();</li>
+		     <li><font color="#993300"><i>&lt;レスポンスの処理 -- 下記参照&gt;</i></font></li>
+                     
+		     <li>// もしくは</li>
+                     
+                     <li> <font color="#993300"><i>&lt;SOAPCall&gt;</i></font>
+     .asyncInvoke(<font color="#993300"><i>     &lt;SOAPResponseListener&gt;</i></font>
+      );</li>
+                                                                        
+                                                      
+              </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                   <td valign="Top">
+		    非同期 SOAP 呼び出しの完了を扱う
+		    
+
+                   </td>
+                   <td valign="Top">                                    
+                                                                        
+     
+              <ul>
+                     <li>function <font color="#993300"><i>&lt;SOAPResponseListener
+     name&gt;</i></font>(<font color="#993300"><i>&lt;SOAPResponse&gt;</i></font>
+           , <font color="#993300"><i>&lt;SOAPCall&gt;</i></font>, <font color="#993300"><i>
+          &lt;error&gt;</i></font>)</li>
+                     <li>{</li>
+                     <li>&nbsp; if (error != 0) {</li>
+		     <li>&nbsp; &nbsp; &nbsp; <font color="#993300"><i>&lt;メッセージの転送に失敗した場合の処理&gt;</i></font></li>
+                     
+                     <li>&nbsp; }</li>
+		     <li>&nbsp; <font color="#993300"><i>&lt;レスポンスの処理 -- 下記参照&gt;</i></font></li>
+                     
+                     <li>}</li>
+                                                                        
+                                                      
+              </ul>
+                   </td>
+                 </tr>
+                 <tr>
+                    <td valign="Top">
+		   サービスの呼び出しが失敗していれば、そのフォールトメッセージを処理する<br>
+		   
+
+                    </td>
+                    <td valign="Top">                                   
+                                                                        
+      
+              <ul>
+                     <li><font color="#993300"><i>&lt;SOAPFault&gt;</i></font>
+      =            <font color="#993300"><i>  &lt;SOAPResponse&gt;</i></font>
+    .fault;</li>
+                     <li>if (<font color="#993300"><i>&lt;SOAPFault&gt;</i></font>
+          != null) {</li>
+                     <li>&nbsp; <font color="#993300"><i>&lt;namespace URI
+ string&gt;</i></font>         = <font color="#993300"><i>&lt;SOAPFault&gt;</i></font>
+   .faultNamespace;</li>
+                     <li>&nbsp; <font color="#993300"><i>&lt;name string&gt;</i></font>
+           = <font color="#993300"><i>&lt;SOAPFault&gt;</i></font> .faultCode;</li>
+                     <li>&nbsp; <font color="#993300"><i>&lt;summary string&gt;</i></font>
+           = <font color="#993300"><i>&lt;SOAPFault&gt;</i></font> .faultString;</li>
+                     <li>&nbsp; <font color="#993300"><i>&lt;actor URI string&gt;</i></font>
+           = <font color="#993300"><i>&lt;SOAPFault&gt;</i></font> .actorURI;</li>
+		     <li>&nbsp; <font color="#993300"><i>&lt;フォールトの場合に行われる処理&gt;</i></font></li>
+                     
+                     <li>}</li>
+                                                                        
+                                                      
+              </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="Top">
+		    RPC スタイルのレスポンスから返り値のパラメータを取得する<br>
+		    
+
+                    </td>
+                    <td valign="Top">                                   
+                                                                        
+      
+              <ul>
+                     <li><font color="#993300"><i>&lt;SOAPParameter array&gt;</i></font>
+           = <font color="#993300"><i>&lt;SOAPResponse&gt;</i></font> .getParameters(true,
+      {});</li>
+                                                                        
+                                                      
+              </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="Top">
+		    返り値パラメータの JavaScript 値などを処理する<br>
+		    
+
+                    </td>
+                    <td valign="Top">                                   
+                                                                        
+      
+              <ul>
+                     <li>for (i = 0; i != <font color="#993300"><i>&lt;SOAPParameter
+     array&gt;</i></font>.length; i++)</li>
+                     <li>{</li>
+                     <li>&nbsp; <font color="#993300"><i>&lt;SOAPParameter&gt;</i></font>
+           = <font color="#993300"><i>&lt;SOAPParameter array&gt;</i></font>
+   [i];</li>
+                     <li>&nbsp; <font color="#993300"><i>&lt;value or object&gt;</i></font>
+           = <font color="#993300"><i>&lt;SOAPParameter&gt;</i></font> .value;</li>
+                     <li>&nbsp; <font color="#993300"><i>&lt;name string&gt;</i></font>
+           = <font color="#993300"><i>&lt;SOAPParameter&gt;</i></font> .name;</li>
+		     <li>&nbsp; <font color="#993300"><i>&lt;結果の確認および処理&gt;</i></font></li>
+                     
+                     <li>}</li>
+                                                                        
+                                                      
+              </ul>
+                    </td>
+                  </tr>
+                                                                        
+      
+          </tbody>                                      
+        </table>
+                                                   
+        <h3><a name="3.3_Beyond_Basic_Operations">3.3 基本操作以上の操作について</a></h3>
+        
+SOAP の低レベルツールキットを使う全てのユーザにとって、サービスリクエストの実行およびレスポンスの解析を行う際には、上記で述べた操作が必要になります。
+実際の動作例については、<a href="#5_Samples_and_Testing">5章</a>をご覧ください。
+その他の操作についてはあまり使われることは無いと思いますが、ある特定の状況で必要になることもあるかもしれません。
+詳細について興味の無い方は、この章の残りの表については飛ばし読みしたり、あるいは、興味のある機能についてだけ拾い読みして頂いて結構です。
+<br>
+
+
+<h3><a name="3.4_Header_Operations">3.4 ヘッダ操作</a></h3>
+
+ユーザは、メッセージ本体に含まれない情報をヘッダブロックとして送ったり受け取ったりできます。
+ヘッダブロックの送信・受信は、上記で述べたパラメータの送信・受信と大して変わりません。
+<br>
+
+             <br>
+                                                 
+        <table cellpadding="2" cellspacing="2" border="1" width="100%">
+               <tbody>
+                 <tr>
+                   <td valign="Top" width="50%">
+		   ヘッダ操作<br>
+		   
+
+                   </td>
+                   <td valign="Top">実現方法<br>
+		   
+
+                   </td>
+                 </tr>
+                 <tr>
+                   <td valign="Top">
+		   ヘッダブロックの生成<br>
+		   
+
+                   </td>
+                   <td valign="Top">                                    
+                                                                        
+     
+              <ul>
+                     <li><font color="#993300"><i>&lt;SOAPHeaderBlock&gt;</i></font>
+           = new SOAPHeaderBlock(<font color="#993300"><i>&lt;any value or
+ object&gt;</i></font>        , "<font color="#993300"><i>&lt;name&gt;</i></font>
+  ", "<font color="#993300"><i>        &lt;namespaceURI&gt;</i></font> ");</li>
+		     <li>  &nbsp;// もしくは</li>
+                     
+                     <li> <font color="#993300"><i>&lt;SOAPHeaderBlock&gt;</i></font>
+           = new SOAPHeaderBlock();</li>
+                     <li> <font color="#993300"><i>&lt;SOAPHeaderBlock&gt;</i></font>
+          .value = <font color="#993300"><i>&lt;any value or object&gt;</i></font>
+         ;</li>
+                     <li>  <font color="#993300"><i>&lt;SOAPHeaderBlock&gt;</i></font>
+          .name = "<font color="#993300"><i>&lt;name&gt;</i></font> ";</li>
+                     <li>  <font color="#993300"><i>&lt;SOAPHeaderBlock&gt;</i></font>
+          .namespaceURI = "<font color="#993300"><i>&lt;namespaceURI&gt;</i></font>
+           ";</li>
+                                                                        
+                                                      
+              </ul>
+                   </td>
+                 </tr>
+                 <tr>
+                   <td valign="Top">
+		   ヘッダブロックにデフォルト以外のロールを与える<br>
+		   
+
+                   </td>
+                   <td valign="Top">                                    
+                                                                        
+     
+              <ul>
+                     <li><font color="#993300"><i>&lt;SOAPHeaderBlock&gt;</i></font>
+          .actorURI = "<font color="#993300"><i>&lt;actorURI&gt;</i></font>
+   ";</li>
+                     <li><font color="#993300"><i>&lt;SOAPHeaderBlock&gt;</i></font>
+          .mustUnderstand = <font color="#993300"><i>&lt;true or false&gt;</i></font>
+          ;</li>
+                                                                        
+                                                      
+              </ul>
+                   </td>
+                 </tr>
+                 <tr>
+                   <td valign="Top">
+		   ヘッダブロックを JavaScript の配列として設定<br>
+		   
+
+                   </td>
+                   <td valign="Top">                                    
+                                                                        
+     
+              <ul>
+                     <li><font color="#993300"><i>&lt;SOAPHeaderBlock array&gt;</i></font>
+           = new Array(<font color="#993300"><i>&lt;SOAPHeaderBlock&gt;</i></font>
+          <font color="#990000"><i>&lt;,...&gt;</i></font>);</li>
+		     <li>  // もしくは</li>
+                     
+                     <li> <font color="#993300"><i>&lt;SOAPHeaderBlock array&gt;</i></font>
+           = new Array();</li>
+                     <li> <font color="#993300"><i>&lt;SOAPHeaderBlock array&gt;</i></font>
+          [0] = <font color="#993300"><i>&lt;SOAPHeaderBlock&gt;</i></font>
+   ;</li>
+                     <li> <font color="#990000"><i>&lt;...&gt;</i></font></li>
+                                                                        
+                                                      
+              </ul>
+                   </td>
+                 </tr>
+                 <tr>
+                   <td valign="Top">
+		   SOAP 1.1 の RPC スタイルのメッセージとしてヘッダをエンコードする<br>
+		   
+
+                   </td>
+                   <td valign="Top">                                    
+                                                                        
+     
+              <ul>
+                     <li><font color="#993300"><i>&lt;SOAPCall&gt;</i></font>
+    .encode(0,    "<font color="#993300"><i>&lt;method name&gt;</i></font>
+  ",  "<font color="#993300"><i>      &lt;target object  namespaceURI&gt;</i></font>
+    ", <font color="#993300"><i>&lt;SOAPHeaderBlock    array&gt;</i></font>
+   .length,           <font color="#993300"><i>&lt;SOAPHeaderBlock     array&gt;</i></font>
+    , <font color="#993300"><i>&lt;SOAPParameter array&gt;</i></font>   
+   .length,           <font color="#993300"><i>&lt;SOAPParameter array&gt;</i></font>
+          );</li>
+                                                                        
+                                                      
+              </ul>
+                   </td>
+                 </tr>
+                 <tr>
+                   <td valign="Top">
+		   レスポンスヘッダを取得する<br>
+		   
+
+                   </td>
+                   <td valign="Top">                                    
+                                                                        
+     
+              <ul>
+                     <li><font color="#993300"><i>&lt;SOAPHeaderBlock array&gt;</i></font>
+           = <font color="#993300"><i>&lt;SOAPResponse&gt;</i></font> .getHeaderBlocks(true,
+      {});</li>
+                                                                        
+                                                      
+              </ul>
+                   </td>
+                 </tr>
+                 <tr>
+                   <td valign="Top">
+		   レスポンスヘッダの JavaScript の値を処理する<br>
+		   
+
+                   </td>
+                   <td valign="Top">                                    
+                                                                        
+     
+              <ul>
+                     <li>for (i = 0; i != <font color="#993300"><i>&lt;SOAPHeaderBlock
+     array&gt;</i></font>.length; i++)</li>
+                     <li>{</li>
+                     <li>&nbsp; <font color="#993300"><i>&lt;SOAPHeaderBlock&gt;</i></font>
+           = <font color="#993300"><i>&lt;SOAPHeaderBlock array&gt;</i></font>
+     [i];</li>
+                     <li>&nbsp; <font color="#993300"><i>&lt;value or object&gt;</i></font>
+           = <font color="#993300"><i>&lt;SOAPHeaderBlock&gt;</i></font>
+.value;</li>
+                     <li>&nbsp; <font color="#993300"><i>&lt;name string&gt;</i></font>
+           = <font color="#993300"><i>&lt;SOAPHeaderBlock&gt;</i></font>
+.name;</li>
+                     <li>&nbsp; <font color="#993300"><i>&lt;namespace URI
+ string&gt;</i></font>         = <font color="#993300"><i>&lt;SOAPHeaderBlock&gt;</i></font>
+   .namespaceURI;</li>
+                     <li>&nbsp; <font color="#993300"><i>&lt;actor URI string&gt;</i></font>
+           = <font color="#993300"><i>&lt;SOAPHeaderBlock&gt;</i></font>
+.actorURI;</li>
+                     <li>&nbsp; <font color="#993300"><i>&lt;must understand
+  boolean&gt;</i></font>       = <font color="#993300"><i>&lt;SOAPHeaderBlock&gt;</i></font>
+     .mustUnderstand;<br>
+                     </li>
+		     <li>&nbsp; <font color="#993300"><i>&lt;結果の確認および処理&gt;</i></font></li>
+                     
+                     <li>}</li>
+                                                                        
+                                                      
+              </ul>
+                   </td>
+                 </tr>
+                                                                        
+  
+          </tbody>                                     
+        </table>
+                                                 
+<h3><a name="3.5_Non-RPC_Operations">3.5 非 RPC 操作</a></h3>
+
+RPC 呼び出しのモデルと適合しないメッセージでは、メソッド名や対象となるオブジェクトの URI は存在せず、パラメータには大抵 namespaceURI が付きます。
+それ以外は、基本操作と同じやり方になります。
+<br>
+
+             <br>
+                                                 
+        <table cellpadding="2" cellspacing="2" border="1" width="100%">
+               <tbody>
+                 <tr>
+                   <td valign="Top" width="50%">
+		   非 RPC 操作<br>
+		   
+                   </td>
+                   <td valign="Top">実現方法<br>
+		   
+                   </td>
+                 </tr>
+                 <tr>
+                   <td valign="Top">
+		   非 RPC パラメータの namespaceURI を設定する<br>
+		   
+                   </td>
+                   <td valign="Top">                                    
+                                                                        
+     
+              <ul>
+                     <li><font color="#993300"><i>&lt;SOAPParameter&gt;</i></font>
+          = new SOAPHeaderBlock(<font color="#993300"><i>&lt;any value or 
+ object&gt;</i></font>        , "<font color="#993300"><i>&lt;name&gt;</i></font>
+  ", "<font color="#993300"><i>        &lt;namespaceURI&gt;</i></font> ");</li>
+		     <li>  &nbsp;// もしくは</li>
+                     
+                     <li><font color="#993300"><i>&lt;SOAPParameter&gt;</i></font>
+         .namespaceURI = "<font color="#993300"><i>&lt;namespaceURI&gt;</i></font>
+          ";</li>
+                                                                        
+                                                      
+              </ul>
+                   </td>
+                 </tr>
+                 <tr>
+                   <td valign="Top">
+		   SOAP 1.1 の非 RPC スタイルメッセージをエンコードする<br>
+		   
+                   </td>
+                   <td valign="Top">                                    
+                                                                        
+     
+              <ul>
+                     <li><font color="#993300"><i>&lt;SOAPCall&gt;</i></font>
+    .encode(0,    "", "", <font color="#993300"><i>&lt;header block array&gt;</i></font>
+    .length,     <font color="#993300"><i>&lt;header block array&gt;</i></font>
+    , <font color="#993300"><i>      &lt;parameter array&gt;</i></font>.length,
+            <font color="#993300"><i> &lt;parameter    array&gt;</i></font>
+    )</li>
+                                                                        
+                                                      
+              </ul>
+                   </td>
+                 </tr>
+                 <tr>
+                   <td valign="Top">
+		   非 RPC スタイルのレスポンスのパラメータを取得する<br>
+		   
+                   </td>
+                   <td valign="Top">                                    
+                                                                        
+     
+              <ul>
+                     <li><font color="#993300"><i>&lt;SOAPParameter array&gt;</i></font>
+           = <font color="#993300"><i>&lt;SOAPResponse&gt;</i></font> .getParameters(false,
+      {});</li>
+                                                                        
+                                                      
+              </ul>
+                   </td>
+                 </tr>
+                                                                        
+  
+          </tbody>                                     
+        </table>
+                                                 
+<h3><a name="3.6_SOAPBlock_and_SOAPMessage_Supertypes">3.6 SOAPBlock と SOAPMessage</a></h3>
+
+以下の操作例では、SOAPHeaderBlock と SOAPParameter とをまとめて SOAPBlock オブジェクトと呼びます。<br>
+
+             <br>
+SOAPCall と SOAPResponse の方も合わせて SOAPMessage オブジェクトと呼びます。<br>
+
+                                                 
+<h3><a name="3.7_More_Operations">3.7 その他の操作</a></h3>
+
+以下の表では、あまり使われない操作について説明します。<br>
+
+             <br>
+                                                 
+        <table cellpadding="2" cellspacing="2" border="1" width="100%">
+               <tbody>
+                 <tr>
+                   <td valign="Top" width="50%">操作<br>
+		   
+                   </td>
+                   <td valign="Top">実現方法<br>
+		   
+                   </td>
+                 </tr>
+		 <tr>
+                   <td valign="Top">
+		   HTTP ヘッダとして渡される actionURI の設定または取得<br>
+		   
+                   </td>
+                   <td valign="Top">                                    
+                                                                        
+     
+              <ul>
+                     <li><font color="#993300"><i>&lt;SOAPMessage&gt;</i></font>
+       .actionURI  = "<font color="#993300"><i>&lt;action URI&gt;</i></font>
+    ";</li>
+		     <li>// もしくは</li>
+                     
+                     <li><font color="#993300"><i>&lt;action URI string&gt;</i></font>
+           = <font color="#993300"><i>&lt;SOAPMessage&gt;</i></font> .actionURI;<br>
+                     </li>
+                                                                        
+                                                      
+              </ul>
+                   </td>
+                 </tr>
+                 <tr>
+                   <td valign="Top">
+		   ブロック中の値のエンコードを無視して、エンコード内容の表現をDOM 要素で直接設定する<br>
+		   
+                   </td>
+                   <td valign="Top">                                    
+                                                                        
+     
+              <ul>
+                     <li><font color="#993300"><i>&lt;SOAPBlock&gt;</i></font>
+     .element   = <font color="#993300"><i>&lt;DOM Element&gt;</i></font>
+ ;<br>
+                     </li>
+                                                                        
+                                                      
+              </ul>
+                   <br>
+                   </td>
+                 </tr>
+                 <tr>
+                   <td valign="Top">
+		   ブロック内の値のデコードを回避して、エンコード内容を表す DOM 要素を直接取得する<br>
+		   
+
+                   </td>
+                   <td valign="Top">                                    
+                                                                        
+     
+              <ul>
+                     <li><font color="#993300"><i>&lt;DOM Element&gt;</i></font>
+        =            <font color="#993300"><i>&lt;SOAPBlock&gt;</i></font>
+ .element;<br>
+                     </li>
+                                                                        
+                                                      
+              </ul>
+                   </td>
+                 </tr>
+                 <tr>
+                   <td valign="Top">
+		   エンコードされたメッセージの SOAP エンベロープやヘッダ、ボディの DOM 要素を直接取得する<br>
+		   
+                   </td>
+                   <td valign="Top">                                    
+                                                                        
+     
+              <ul>
+                     <li><font color="#993300"><i>&lt;DOM Element&gt;</i></font>
+        =            <font color="#993300"><i>&lt;SOAPMessage&gt;</i></font>
+   .envelope;</li>
+                     
+                     <li><font color="#993300"><i>&lt;DOM Element&gt;</i></font>
+        =            <font color="#993300"><i>&lt;SOAPMessage&gt;</i></font>
+   .header;</li>
+                     
+                     <li><font color="#993300"><i>&lt;DOM Element&gt;</i></font>
+        =            <font color="#993300"><i>&lt;SOAPMessage&gt;</i></font>
+   .body;<br>
+                     </li>
+                                                                        
+                                                      
+              </ul>
+                   </td>
+                 </tr>
+                 <tr>
+                   <td valign="Top">
+		   エンコードを回避して、エンコードされたメッセージを DOM ドキュメントとして直接設定する<br>
+		   
+                   </td>
+                   <td valign="Top">                                    
+                                                                        
+     
+              <ul>
+                     <li><font color="#993300"><i>&lt;SOAPMessage&gt;</i></font>
+       .message  = <font color="#993300"><i>&lt;DOM Document&gt;</i></font>
+   ;<br>
+                     </li>
+                                                                        
+                                                      
+              </ul>
+                   <br>
+                   </td>
+                 </tr>
+                 <tr>
+                   <td valign="Top">
+		   エンコードを回避して、メッセージ全体のエンコード内容を DOM ドキュメントとして直接取得する<br>
+		   
+
+                   </td>
+                   <td valign="Top">                                    
+                                                                        
+     
+              <ul>
+                     <li><font color="#993300"><i>&lt;DOM Document&gt;</i></font>
+         =           <font color="#993300"><i>&lt;SOAPMessage&gt;</i></font>
+   .message;<br>
+                     </li>
+                                                                        
+                                                      
+              </ul>
+                   <br>
+                   </td>
+                 </tr>
+                 <tr>
+                   <td valign="Top">
+		   メッセージにメソッド名と対象のオブジェクト URI があれば、それを取得する<br>
+		   
+                   </td>
+                   <td valign="Top">                                    
+               
+              <ul>
+            <li><font color="#993300"><i>&lt;method name string&gt;</i></font>
+           = <font color="#993300"><i>&lt;SOAPMessage&gt;</i></font> .methodName;</li>
+            <li><font color="#993300"><i>&lt;object URI string&gt;</i></font>
+           = <font color="#993300"><i>&lt;SOAPMessage&gt;</i></font> .targetObjectURI;</li>
+                                                       
+              </ul>
+                   </td>
+                 </tr>
+                 <tr>
+                   <td valign="Top">
+		   エンコードされたメッセージの実際の SOAP バージョンを取得する -- SOAP 1.2 なら 0 を、SOAP 1.2 なら 1 を返す<br>
+		   
+                   </td>
+                   <td valign="Top">                                    
+                                                                        
+     
+              <ul>
+                     <li><font color="#993300"><i>&lt;version integer&gt;</i></font>
+           = <font color="#993300"><i>&lt;SOAPMessage&gt;</i></font> .version;</li>
+                                                                        
+                                                      
+              </ul>
+                   </td>
+                 </tr>
+                 <tr>
+                   <td valign="Top">
+		   SOAP 1.2 のメッセージをエンコードする<br>
+		   
+                   </td>
+                   <td valign="Top">                                    
+                                                                        
+     
+              <ul>
+                     <li><font color="#993300"><i>&lt;SOAPCall&gt;</i></font>
+    .encode(1,    "<font color="#993300"><i>&lt;method name&gt;</i></font>
+  ",  "<font color="#993300"><i>      &lt;target object namespaceURI&gt;</i></font>
+    ", <font color="#993300"><i>&lt;SOAPHeaderBlock    array&gt;</i></font>
+   .length,           <font color="#993300"><i>&lt;SOAPHeaderBlock     array&gt;</i></font>
+    , <font color="#993300"><i>&lt;SOAPParameter array&gt;</i></font>   
+   .length,           <font color="#993300"><i>&lt;SOAPParameter array&gt;</i></font>
+          );</li>
+                                                                        
+                                                      
+              </ul>
+                   </td>
+                 </tr>
+                 <tr>
+		   <td valign="Top">
+		   進行中の非同期呼び出しを中止する --
+		   そのメッセージが処理されなくなるという訳では必ずしもありません。
+		   API はメッセージの完了通知を待たなくなります。
+		   <br>
+		   
+                   </td>
+                   <td valign="Top">                                    
+                                                                        
+     
+              <ul>
+                     <li><font color="#993300"><i>&lt;SOAPCallCompletion&gt;</i></font>
+           = <font color="#993300"><i>&lt;SOAPCall&gt;</i></font> .asyncInvoke(<font color="#993300"><i>
+          &lt;SOAPResponseListener&gt;</i></font>);</li>
+                     <li><font color="#990000"><i>&lt;...&gt;</i></font></li>
+                    <li><font color="#993300"><i>&lt;SOAPCallCompletion&gt;</i></font>
+          .abort();<br>
+                     </li>
+                                                                        
+                                                      
+              </ul>
+                   </td>
+                 </tr>
+                 <tr>
+                   <td valign="Top">
+		   メッセージのエンコード・デコードで使われているエンコーディング（スタイル）を取得する。
+		   明示的に設定されていなければ、エンコードされていない呼び出しでは利用できません。 -- 代わりに次の操作を使うこと<br>
+		   
+                   </td>
+                   <td valign="Top">                                    
+                                                                        
+     
+              <ul>
+                     <li><font color="#993300"><i>&lt;SOAPEncoding&gt;</i></font>
+         =           <font color="#993300"><i>&lt;SOAPMessage&gt;</i></font>
+   .encoding;</li>
+                                                                        
+                                                      
+              </ul>
+                   </td>
+                 </tr>
+                 <tr>
+                   <td valign="Top">
+		   メッセージをエンコードするのに優先して使われるエンコーディングスタイルを設定する。
+		   （new で生成された）新しい SOAPEncoding オブジェクトは、
+		   関連付けられた別のエンコーディング集合を起動します。
+		   それらは、getAssociatedEncoding() の呼び出しによる関連付けにのみ、影響を受けます（または生成されます）。
+		   <br>
+		   
+                   </td>
+                   <td valign="Top">                                    
+                                                                        
+     
+              <ul>
+                     <li><font color="#993300"><i>&lt;SOAPEncoding&gt;</i></font>
+         = new SOAPEncoding();</li>
+                     <li><font color="#993300"><i>&lt;SOAPEncoding&gt;</i></font>
+         =           <font color="#993300"><i>&lt;SOAPEncoding&gt;</i></font>
+    .getAssociatedEncoding("<font color="#993300"><i>       &lt;style  URI&gt;</i></font>
+    ",<font color="#993300"><i>&lt;true to  create&gt;</i></font>    );</li>
+                     <li><font color="#993300"><i>&lt;エンコーディングをカスタマイズする&gt;</i></font></li>
+                     
+                     <li><font color="#993300"><i>&lt;SOAPMessage&gt;</i></font>
+       .encoding  = <font color="#993300"><i>&lt;SOAPEncoding&gt;</i></font>
+    ;</li>
+                                                                        
+                                                      
+              </ul>
+                   </td>
+                 </tr>
+                 <tr>
+                   <td valign="Top">
+		   特定のブロックをエンコードまたはデコードするのに使われるエンコーディングスタイルを指定する<br>
+		   
+                   </td>
+                   <td valign="Top">                                    
+                                                                        
+     
+              <ul>
+                     <li><font color="#993300"><i>&lt;SOAPEncoding&gt;</i></font>
+         =           <font color="#993300"><i>&lt;SOAPEncoding&gt;</i></font>
+    .getAssociatedEncoding("<font color="#993300"><i>&lt;style URI&gt;</i></font>
+    ",<font color="#993300"><i>&lt;true to  create&gt;</i></font>    );</li>
+                     <li><font color="#993300"><i>&lt;SOAPBlock&gt;</i></font>
+     .encoding   = <font color="#993300"><i>&lt;SOAPEncoding&gt;</i></font>
+   ;</li>
+                                                                        
+                                                      
+              </ul>
+                   </td>
+                 </tr>
+                                                                        
+  
+          </tbody>                                     
+        </table>
+                                                 
+<h3><a name="3.8_Using_Schema_Types">3.8 スキーマ型の使用</a></h3>
+
+デフォルトの SOAP エンコーディングでは、SOAP の基本型と同様に XML の組み込み型の大半が実装されています。
+指定された型が存在しない場合には、ネイティブの型やオブジェクトは通常、対応するスキーマ型と正しく識別され、マッピングされます。
+JavaScript と XML Schema の型との間での対応関係は完璧ではないため、近めの対応する型にマッピングされる場合もあります。<br>
+
+    <br>
+特定のスキーマ型を提供することにより、望んだ通りのエンコーディングが生成されるようにすることが可能です。
+例えば、JavaScript は一次元配列しかサポートしていないため、多次元配列はネストした配列としてデコードする必要があります。
+スキーマ型が与えられずに配列が多次元配列であると識別された場合、
+ネストした配列として多次元配列をエンコードします。
+正確なスキーマ型を与えることは、SOAP 構造体のような他の複雑なオブジェクトをエンコードしたりデコードしたりする際にも助けになります。
+<br>
+
+             <br>
+エンコードとデコードをより制御できるようにするため、
+エンコーディングの前または返ってきたオブジェクトの値にアクセスする前に、
+スキーマ型をブロックに付与することもできます。
+エンコードとデコードで使用される全てのスキーマ型は、エンコーディングで利用可能なスキーマコレクションに由来するものです。
+（関連付けられたエンコーディングは同じコレクションを共有します）
+<br>
+
+             <br>
+                                                 
+        <table cellpadding="2" cellspacing="2" border="1" width="100%">
+               <tbody>
+                 <tr>
+                   <td valign="Top" width="50%">
+		   スキーマ操作<br>
+		   
+                   </td>
+                   <td valign="Top">実現方法<br>
+		   
+                   </td>
+                 </tr>
+                 <tr>
+                   <td valign="Top">
+		   全ての関連付けられたエンコーディングからスキーマコレクションを取得する<br>
+		   
+                   </td>
+                   <td valign="Top">                                    
+                                                                        
+     
+              <ul>
+                     <li><font color="#993300"><i>&lt;SchemaCollection&gt;</i></font>
+           = <font color="#993300"><i>&lt;SOAPEncoding&gt;</i></font> .schemaCollection;</li>
+                                                                        
+                                                      
+              </ul>
+                   </td>
+                 </tr>
+                 <tr>
+                   <td valign="Top">
+		   XML Schema ファイルからスキーマコレクションに追加のスキーマ型をロードする<br>
+		   
+                   <br>
+                   </td>
+                   <td valign="Top">                                    
+                                                                        
+     
+              <ul>
+                     <li><font color="#993300"><i>&lt;SchemaLoader&gt;</i></font>
+         =           <font color="#993300"><i>&lt;SchemaCollection&gt;</i></font>
+         ;</li>
+		     <li>// としておいてから</li>
+                     
+                     <li><font color="#993300"><i>&lt;SchemaLoader&gt;</i></font>
+        .load("<font color="#993300"><i>  &lt;schema file URI&gt;</i></font>
+    ");</li>
+		     <li>// &nbsp;もしくは</li>
+                     
+                     <li><font color="#993300"><i>&lt;SchemaLoader&gt;</i></font>
+        .loadAsync("<font color="#993300"><i>  &lt;schemaURI&gt;</i></font>
+   ",            <font color="#993300"><i>  &lt;load  completion  function&gt;</i></font>
+      );</li>
+                                                                        
+                                                      
+              </ul>
+                   </td>
+                 </tr>
+                 <tr>
+                   <td valign="Top">
+		   ブロックのエンコード・デコードに使われる XML Schema の型を指定する。
+		   注意: ブロックのデコードは、その値を取得する際に行われます。
+		   つまり、SOAPResponse のような XML でエンコードされたメッセージからブロックを取得した後でも、型情報を追加することは値の評価に影響を与えます。
+		   <br>
+		   
+</td>
+                   <td valign="Top">                                    
+                                                                        
+     
+              <ul>
+                     <li><font color="#993300"><i>&lt;SchemaType&gt;</i></font>
+       =            <font color="#993300"><i> &lt;SchemaCollection&gt;</i></font>
+        .getType("<font color="#993300"><i>  &lt;name&gt;</i></font> ", 
+"<font color="#993300"><i>       &lt;namespaceURI&gt;</i></font>  ");</li>
+                     <li>if (<font color="#993300"><i>&lt;schemaType&gt;</i></font> != null) 
+  {<br>
+                     </li>
+                     <li>&nbsp; <font color="#993300"><i>
+         &lt;SOAPBlock&gt;</i></font> .schemaType = <font color="#993300"><i>
+    &lt;SchemaType&gt;</i></font>      ;</li>
+                     <li>}</li>
+                                                                 
+              </ul>
+            <font color="#993300"><i>       </i></font></td>
+                 </tr>
+                                                                        
+  
+          </tbody>                                     
+        </table>
+                                                 
+<h3><a name="3.9_Customization_of_Encodings">3.9 エンコーディングのカスタマイズ</a></h3>
+
+指定されたエンコーディングには、機能するエンコーダとデコーダが無ければなりません。
+データのエンコードもしくはデコードは、常にデフォルトのエンコーダ・デコーダにより開始されます。
+それから必要に応じて、文字列キーによる追加のエンコーダ・デコーダを探しにいきます。
+バージョン 1.1、1.2 のデフォルトの SOAP エンコーディングにおいては、
+デフォルトのエンコーダ・デコーダは、
+特定のスキーマ型用の追加のエンコーダの探索に、
+"#" で分けられたスキーマ型の namespaceURI とその名称を用います。
+この追加のエンコーダ・デコーダはデフォルトのエンコーディング内に登録され、
+対応する型が処理される際にオブジェクトとして自動的に呼び出されます。
+デフォルトの SOAP 1.1/1.2 エンコーディングのようなシステムに登録済のエンコーディングは、自動的にエンコーダ・デコーダも組み込まれます。
+一方、新しいエンコーディングにはエンコーダもデコーダもありません。
+カスタム・エンコーディングは既存のエンコーダやデコーダを再利用することもできますが、既存のものがあるという保証はありません。
+なぜなら、有限のエンコーダ/デコーダの集合で、無限の組み合わせが可能なデータ型を扱っているため、マッピングが様々だからです。
+<br>
+
+             <br>
+さらに、同じデータ型を記述するのに異なるスキーマ URI を使うというやり方も横行しています。
+これらの異なる URI 同士を混ぜて使う例さえしばしばありますが、これについても適切に機能することが望まれています。
+最も顕著な例としては、SOAP 1.1 仕様書での以下のような用例が挙げられます。
+SOAP 1.1 仕様では、非公式な XML Scheme URI を使っています。
+さらに、SOAP 1.1 仕様で使用している SOAP エンコーディングスキーマ URI は、
+W3C XML Schema および SOAP 1.2 仕様ドラフトで使われているものと互換性がありません。
+WSDL では公式の正しい XML Schema を使っているのにも関わらず、
+SOAP 1.1 仕様に記載された URI を使ったメッセージを送ったり受け取ったりするという例も珍しくありません。
+これらの問題を解決するために、入出力双方のエンコーディングにおいてスキーマ URI に別名を付けることができるようにしました。
+これにより、その他の URI に対応しながら、内部的には SOAP 1.2 と公式の XML Schema のデータ型のみを使うことができるようになりました。
+このデータ型のマッピングは、SOAP 1.1/1.2 のデフォルト・エンコーディングのようなシステムに登録されているエンコーディングに組み込まれています。
+デフォルトの URI マッピングをいじることも可能です。
+例えば、エンコーダ・デコーダを書き直すことなく、公式の XML Schema URI を使った SOAP 1.1 を使いたい場合には、このマッピング変更を行うことになるかもしれません。
+<br>
+
+             <br>
+                                                 
+        <table cellpadding="2" cellspacing="2" border="1" width="100%">
+               <tbody>
+                 <tr>
+                   <td valign="Top" width="50%">
+		   エンコーディングのカスタマイズ操作<br>
+		   
+                   </td>
+                   <td valign="Top">
+		   実現方法<br>
+		   
+                   </td>
+                 </tr>
+                 <tr>
+                   <td valign="Top">
+		   カスタム・エンコーダを作成する<br>
+		   </td>
+                    <td valign="Top">                                    
+                                                                        
+     
+              <ul>
+                     <li>function <font color="#993300"><i>&lt;New DOM Element&gt;</i></font>
+           = <font color="#993300"><i>&lt;SOAPEncoder name&gt;</i></font>
+(<font color="#993300"><i>          &lt;SOAPEncoding&gt;</i></font>,  <font color="#993300"><i>
+&lt;value&gt;</i></font>          , <font color="#993300"><i>&lt;namespaceURI&gt;</i></font>
+ , <font color="#993300"><i>          &lt;name&gt;</i></font>, <font color="#993300"><i>
+&lt;SchemaType&gt;</i></font>          , <font color="#993300"><i>&lt;SOAPAttachments&gt;</i></font>
+ ,                    <font color="#993300"><i>        &lt;Parent DOM  Element&gt;</i></font>
+   )</li>
+                     <li>{</li>
+                     <li><font color="#990000"><i>&lt;...&gt;</i></font><br>
+            </li>
+                     <li><font color="#993300"><i>&lt;DOM Element&gt;</i></font>
+        =            <font color="#993300"><i>&lt;Parent DOM Element&gt;</i></font>
+         .ownerDocument.createElementNS(namespaceURI,name);<br>
+                     </li>
+                     <li><font color="#990000"><i>&lt;...&gt;</i></font><br>
+            </li>
+                     <li>&nbsp; <font color="#993300"><i>&lt;Parent DOM Element&gt;</i></font>
+          .appendChild(<font color="#993300"><i>&lt;DOM Element&gt;</i></font>
+     );<br>
+                     </li>
+                     <li>&nbsp; return <font color="#993300"><i>&lt;DOM Element&gt;</i></font>
+          ;<br>
+                     </li>
+                     <li>}</li>
+		     <li>// こうしておいて</li>
+                     
+                     <li><font color="#993300"><i>&lt;SOAPEncoding&gt;</i></font>
+        .defaultEncoder  = <font color="#993300"><i>&lt;SOAPEncoder&gt;</i></font>
+         ;</li>
+		     <li>// もしくは</li>
+                     
+                     <li> <font color="#993300"><i>&lt;SOAPEncoding&gt;</i></font>
+         .setEncoder("<font color="#993300"><i> &lt;namespaceURI&gt;</i></font>
+       #<font color="#993300"><i>  &lt;name&gt;</i></font> ",<font color="#993300"><i>
+       &lt;SOAPEncoder&gt;</i></font>  );</li>
+                                                                        
+                                                      
+              </ul>
+                   <br>
+                   </td>
+                 </tr>
+                 <tr>
+                   <td valign="Top">
+		   カスタム・デコーダを作成する<br>
+		   
+                   </td>
+                   <td valign="Top">                                    
+                                                                        
+     
+              <ul>
+                     <li>function <font color="#993300"><i>&lt;New DOM Element&gt;</i></font>
+           = <font color="#993300"><i>&lt;SOAPDecoder name&gt;</i></font>
+(<font color="#993300"><i>          &lt;SOAPEncoding&gt;</i></font>,  <font color="#993300"><i>
+&lt;DOM   Element&gt;</i></font>      , <font color="#993300"><i> &lt;SchemaType&gt;</i></font>
+    , <font color="#993300"><i>      &lt;SOAPAttachments&gt;</i></font>)</li>
+                     <li>{</li>
+                     <li><font color="#990000"><i>&lt;...&gt;</i></font></li>
+                  <li>&nbsp; return <font color="#993300"><i>&lt;value or 
+object&gt;</i></font>         ;<br>
+                     </li>
+                     <li>}</li>
+		     <li>// こうしておいて</li>
+                     
+                     <li><font color="#993300"><i>&lt;SOAPEncoding&gt;</i></font>
+        .defaultDecoder  = <font color="#993300"><i>&lt;SOAPDecoder&gt;</i></font>
+         ;</li>
+		     <li>// もしくは</li>
+                     
+                     <li> <font color="#993300"><i>&lt;SOAPEncoding&gt;</i></font>
+         .setDecoder("<font color="#993300"><i> &lt;namespaceURI&gt;</i></font>
+       #<font color="#993300"><i>  &lt;name&gt;</i></font> ",<font color="#993300"><i>
+       &lt;SOAPDecoder&gt;</i></font>  );</li>
+                                                                        
+                                                      
+              </ul>
+                   <br>
+                   </td>
+                 </tr>
+                 <tr>
+                   <td valign="Top">
+		   スキーマ URI に別名をマッピングする。またはマッピングを解除する<br>
+                   </td>
+                   <td valign="Top">                                    
+                                                                        
+     
+              <ul>
+                     <li><font color="#993300"><i>&lt;SOAPEncoding&gt;</i></font>
+        .mapSchemaURI("<font color="#993300"><i>  &lt;external URI&gt;</i></font>
+         ", "<font color="#993300"><i>&lt;internal   URI&gt;</i></font>", 
+                  <font color="#993300"><i>       &lt;true to alias output&gt;</i></font>
+   );</li>
+		     <li>// もしくは</li>
+                     
+                     <li> <font color="#993300"><i>&lt;SOAPEncoding&gt;</i></font>
+         .unmapSchemaURI("<font color="#993300"><i> &lt;external URI&gt;</i></font>
+         ");</li>
+                                                                        
+                                                      
+              </ul>
+                   </td>
+                 </tr>
+                 <tr>
+                   <td valign="Top">
+		   変更したエンコーディングもしくは代替のエンコーディングが、システム内の全ての SOAP スクリプトで自動的に使えるように登録する<br>
+		   
+                   </td>
+                   <td valign="Top">
+		   登録可能なエンコーディングを <code>components/<font color="#993300"><i>&lt;new encoding&gt;</i></font>.js</code> にインストールする<br>
+		   
+                   </td>
+                 </tr>
+          </tbody>                                     
+</table>
+
+<h3><a name="3.10_Security_Operations">3.10 セキュリティ操作</a></h3>
+
+ブラウザにおいては、
+外部からロードした信頼できないスクリプトが、
+ファイアウォール内にある情報にアクセスできたり、
+どこか別の場所に送信できたりするような危険を防ぐために、
+非常に厳格なサンドボックス制限が導入されています。
+これにより、外部のブラウザ・スクリプトは、
+そのスクリプトがロードされたのと同じドメイン上の XML データやサービスにしかリクエストを行えないことになります。
+この同一ドメイン制限は、ブラウザ内で実行される SOAP リクエストにもデフォルトで適用されます。
+このことは、外部からロードされたスクリプトは、
+そのページがロードされた同じドメインにない
+その他の外部サービスを呼び出せないことを意味します。
+そのページがユーザ自身のハードディスクからロードされた場合でさえ、
+そのスクリプトの SOAP 呼び出しの許可を求めなければなりません。
+スクリプトと特定のサービスの間の信頼性に関して、もっと正確に制御できるようにするブラウザの機能拡張は計画中です。
+<br>
+
+             <br>
+SOAP では、受け取り側で解釈が必要なメッセージにヘッダを追加できます。
+これにより、この API では、
+そのメッセージがあるソース URI からロードされた信頼できないスクリプトにより送信されたものであるということを受け取り側に警告するヘッダをリクエストできます。
+不完全な実装の SOAP サービスでは、意識せずにその警告を無視することもあります。
+エンベロープが検証され、ヘッダが追加されていた場合、
+ブラウザはそのスクリプトに対して、その元ドメイン外のサービスへの制限の少ないアクセスを許可します。
+このヘッダを受理することにより、
+本当に例外無く利用可能にしたいという SOAP サービスに対しても、
+ファイアウォール保護やユーザへの許可要求といった危険をユーザに強いることなく
+アクセスできるようになります。
+<br>
+
+             <br>
+                                                    
+        <table cellpadding="2" cellspacing="2" border="1" width="100%">
+                <tbody>
+                  <tr>
+                   <td valign="Top" width="50%">
+		    セキュリティ操作<br>
+		    
+                   </td>
+                   <td valign="Top">
+		    実現方法<br>
+		    
+                   </td>
+                 </tr>
+                 <tr>
+                   <td valign="Top">
+		   その呼び出しが verifySourceHeader 付きであるとマークする。
+		   サービスがこれを許可した場合は、ブラウザはその呼び出しの制限と危険度を下げます。<br>
+		   
+                    </td>
+                    <td valign="Top">                                   
+                                                                        
+      
+              <ul>
+                     <li><font color="#993300"><i>&lt;SOAPCall&gt;</i></font>
+    .verifySourceHeader    = true;</li>
+                                                                        
+                                                      
+              </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="Top">
+		    他のドメインへの検証されていない SOAP 呼び出しを行うために、ローカルもしくは署名付きスクリプト内で危険な権限をリクエストする。<br>
+		    
+                    </td>
+                    <td valign="Top">                                   
+                                                                        
+      
+              <ul>
+                     <li>netscape.security.PrivilegeManager.enablePrivilege("UniversalBrowserRead")</li>
+                                                                        
+                                                      
+              </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="Top">
+		    設定ファイル内のセキュリティ設定を変更して、
+		    あるドメインからのスクリプトが、デフォルトで禁止されている別のドメインへの危険な SOAP 呼び出しを行えるようにする。
+
+		    </td>
+                    <td valign="Top">
+		    <code>default/pref/all.js</code> に設定を追加する。<br>
+
+                                                                        
+                                                      
+              <ul>
+                     <li>pref("<font color="#993300"><i>&lt;some domain prefix&gt;</i></font>
+          .SOAPCall.invoke","allAccess");</li>
+                                                                        
+                                                      
+              </ul>
+                    </td>
+                  </tr>
+		  <tr>
+                <td valign="Top">
+		    設定ファイル内の設定を変更して、
+		    デフォルトでは許可されている verifySource ヘッダ付きのクロスドメイン呼び出しを禁止する。<br>
+		    
+                </td>
+                <td valign="Top">
+		    <code>default/pref/all.js</code> の以下の設定を削除、もしくはコメントアウトする。<br>
+		    
+                                                                        
+                              
+              <ul>
+                  <li>pref("capability.policy.default.SOAPCall.invokeVerifySourceHeader","allAccess");</li>
+                                                                        
+                              
+              </ul>
+                </td>
+              </tr>
+              <tr>
+                    <td valign="Top">
+		代替となる転送手段を登録する。
+		全てのスクリプトで代替の転送手段が利用できるようにし、
+		おそらく http(s) 以外のプロトコル用の代替セキュリティモデルも作成する。
+		考えられる転送についての詳細は、<a href="#4.4_New_Transports_and_Local_Services">今後の機能のセクション</a>をご覧ください。
+		<br>
+		
+                    </td>
+                    <td valign="Top">
+		適切な登録可能なエンコーディングを <code>components/<font color="#993300"><i>&lt;new transport&gt;</i></font>.js</code> にインストールする。<br>
+		
+                    </td>
+                  </tr>
+                                                                        
+      
+          </tbody>                                      
+</table>
+                                                   
+<h2><a name="4_Future_Features">4 今後の機能</a></h2>
+
+
+<h3><a name="4.1_Access_to_SOAP_as_Proxies">4.1 SOAP にプロキシとしてアクセスする</a></h3>
+
+SOAP 呼び出しは、
+ここで説明した低レベル API を使うことにより一般に数十行で書けますが、引数と型の情報を人手で設定することなく、これと同様のことが行えるようにするための情報を含む WSDL 標準もあります。
+サービスを記述した WSDL ファイルからの情報を単純にロードし使用することによる、
+適切な XPConnect インタフェースを備えた Web サービスのプロキシのインスタンス化機能は、現在開発中です。
+このプロキシのインタフェースは、WSDL ファイルに記述されたサービスと適切に対応するような名前の、動的に生成されたメソッドを持ちます。
+このメソッドは、適切なデータ型の引数を受け付け、適切な低レベル SOAP 関数を適切な型情報付きで呼び出します。
+これにより、JavaScript コードからのサービス呼び出しが容易になるだけでなく、
+WSDL ファイルからロードした適切なスキーマ型と引数とを結び付けるのも容易になります。
+このより上位のレベルの API はこの最初のリリースではまだ利用できません。
+利用可能になれば、WSDL に記述された機能の実行が、より容易でより確実にできるようになるでしょう。
+<br>
+
+                                                   
+<h3><a name="4.2_Arbitrary_Graphs_of_Data">4.2 任意のデータグラフ</a></h3>
+
+SOAP 仕様書では、引数にオブジェクトを渡すことが許されており、
+この引数が、その階層構造内には無い他のオブジェクトを参照している場合があります。
+この表現は href 属性を使うことにより実現されます。
+循環参照を持つ COM オブジェクトにおいて参照カウントがリークするという問題のため、この機能は未実装です。
+また、循環参照付きのオブジェクトの出力も未実装です。
+現在、循環参照を持たないオブジェクトの出力では、一オブジェクトの参照毎にそれぞれ別々のコピーを生成しているため、循環参照付きの場合は完了しなくなるのです。
+入力の際は、href による参照は現在のところ無視されます。
+将来的には、この問題を解決して任意の参照が行われているオブジェクトの送受信が可能になるかもしれません。
+しかし、その解決策は、単に弱参照を使うよりもずっと複雑なものになるでしょう。
+<br>
+
+
+<h3><a name="4.3_SOAP_With_Attachments">4.3 SOAP アタッチメント</a></h3>
+
+現在、多くのクライアントおよびサーバは、一つの SOAP メッセージを MIME、DIME、その他のエンベロープ形式にカプセル化することにより、大きな MIME として自動的に送信する機能に対応しています。
+この機能は現在の API 中で考慮されていますが、
+SOAPAttachments API は現在、未実装の将来の機能用の予約の段階にあります。
+<br>
+
+
+<h3><a name="4.4_New_Transports_and_Local_Services">4.4 新しい転送手段およびローカルサービス</a></h3>
+
+有用かもしれない、明らかに新しい転送手段として、以下の 3 つが挙げられます。
+E-mail（SOAP メッセージの交換を email の交換として行う）。
+Peer to Peer によるインタントメッセンジャ。
+SOAP でクライアント上の任意の JavaScript アプリケーションデータを保存・取得できるようにした、制御されたセキュリティモデル付きでサイズ制限の無いローカルマネージャ。
+このようなサービスをできるようにするためには、ブラウザがクライアントの役割を務めるのと同様に、サービスをもホストできるようにする枠組みが必要です。
+この枠組みは既に計画されていますが、
+これらのサービスをうまくできるようにするためには、解決されなければならないセキュリティ上の問題が存在するのは明らかです。
+<br>
+
+
+<h3><a name="4.5_Standards">4.5 標準規格</a></h3>
+
+ここで述べた API のオブジェクトへのインタフェースは、できるだけシンプルで普遍的なものになるように設計しました。
+我々は、これらの API についてのノートを投稿し、
+Web クライアントからこの種のサービスを呼び出す際の API を標準化する
+W3C 提案を支援すべきだと考えています。
+そのような標準化の努力をする中では、
+API の変更というものは避けられず、また、
+Web クライアントにおける相互運用性を確保するための代償として
+歓迎されるものとなるでしょう。
+この API の一部は未完成です。
+特に、エンコーダとデコーダが一意性と参照を制御できるようにする SOAPAttachments オブジェクトや、
+任意のデータグラフの参照を解決するエンコーダ・デコーダ（前述の「任意のデータグラフ」を参照）や、
+外部カプセル化されて送信されてきたメッセージ中のアタッチメントオブジェクトへの参照を解決するエンコーダ・デコーダ（前述の「SOAP アタッチメント」を参照）などが今後の課題です。
+<br>
+
+                                                   
+<h2><a name="5_Samples_and_Testing">5 サンプルとテスト</a></h2>
+
+テストとサンプルは現在、Mozilla ツリーの
+<a href="/lxr/seamonkey/source/extensions/webservices/soap/tests/">mozilla/extensions/webservices/soap/tests/soap*.html</a>
+にあります。
+他の方々からのテストとサンプルの提供を歓迎します。
+上記のリンク場所では、JavaScript ファイルが HTML クロスリファレンスのファイルとして表示されるため、動作しませんのでご注意ください。
+そのため、現在の Mozilla ツリーからクライアントのローカルハードディスクまたはどこかのWebサーバへコピーしてからテストしてください。
+<br>
+
+       <br>
+Web サービスをテストする際には、
+MOZ_DEBUG=1 を付けておくと良いかもしれません。
+Mozilla プログラム自体をデバッグする訳では無くても、
+こうしておくと、
+Mozilla を起動したコマンドシェルが出ていれば、
+やりとりされた SOAP メッセージが標準出力に出力されるのを見ることができます。
+<br>
+
+          <br>
+ray.dsl.xmission.com には、SOAP サービス用のサーバが用意されています。
+<span class="comment">
+[ 訳注: 2003年9月現在、このサービスは停止してしまったようです。 ]
+</span>
+Mozilla における SOAP スクリプトの機能のテストやデモを支援するために、
+更にサービスが追加されるかもしれません。
+ホームページには書いていませんが、
+ポート 8080 の Apache Jakarta サーバがテスト用のサーバです。
+これは現在、前述のディレクトリにある 2 つのテスト、
+soapisprimenumber.html と soapunscramble.html で使われています。
+サービスの追加は、JavaScript や Java、その他の対応言語で関数を書いて、
+XML でデプロイメントを書くのと同じくらい簡単にできます。
+免責:
+このサービスは単なる DSL サービスのエンド加入者として行っているものですので、
+サーバがあまりにも広く公開された場合は、
+サービスを停止しなければならなくなるかもしれません。
+<br>
+
+          <br>
+SOAP のバグは bugzilla.mozilla.org を使って、
+Browser の XML コンポーネントに <a href="mailto:rayw@netscape.com">rayw@netscape.com</a> の担当の新規バグとして報告してください。
+ニュースグループ
+<a href="news:netscape.public.mozilla.xml">netscape.public.mozilla.xml</a>
+やバグ報告で解決できなかった問題がある場合、
+上記のメールアドレスを使えば、私の方まで直接連絡できます。
+<br>
+
+<h2><a name="6_Object_Interfaces">6 オブジェクト・インタフェース</a></h2>
+
+        <h3><a href=http://unstable.elemental.com/mozilla/build/latest/mozilla/extensions/dox/interfacensISOAPBlock.html>SOAPBlock</a></h3>
+        <h3><a href=http://unstable.elemental.com/mozilla/build/latest/mozilla/extensions/dox/interfacensISOAPCall.html>SOAPCall</a></h3>
+        <h3><a href=http://unstable.elemental.com/mozilla/build/latest/mozilla/extensions/dox/interfacensISOAPCallCompletion.html>SOAPCallCompletion</a></h3>
+        <h3><a href=http://unstable.elemental.com/mozilla/build/latest/mozilla/extensions/dox/interfacensISOAPDecoder.html>SOAPDecoder</a></h3>
+        <h3><a href=http://unstable.elemental.com/mozilla/build/latest/mozilla/extensions/dox/interfacensISOAPEncoder.html>SOAPEncoder</a></h3>
+        <h3><a href=http://unstable.elemental.com/mozilla/build/latest/mozilla/extensions/dox/interfacensISOAPEncoding.html>SOAPEncoding</a></h3>
+        <h3><a href=http://unstable.elemental.com/mozilla/build/latest/mozilla/extensions/dox/interfacensISOAPFault.html>SOAPFault</a></h3>
+        <h3><a href=http://unstable.elemental.com/mozilla/build/latest/mozilla/extensions/dox/interfacensISOAPHeaderBlock.html>SOAPHeaderBlock</a></h3>
+        <h3><a href=http://unstable.elemental.com/mozilla/build/latest/mozilla/extensions/dox/interfacensISOAPMessage.html>SOAPMessage</a></h3>
+        <h3><a href=http://unstable.elemental.com/mozilla/build/latest/mozilla/extensions/dox/interfacensISOAPParameter.html>SOAPParameter</a></h3>
+        <h3><a href=http://unstable.elemental.com/mozilla/build/latest/mozilla/extensions/dox/interfacensISOAPResponse.html>SOAPResponse</a></h3>
+        <h3><a href=http://unstable.elemental.com/mozilla/build/latest/mozilla/extensions/dox/interfacensISOAPResponseListener.html>SOAPResponseListener</a></h3>
+        
+<div align="right"><font size="-1">
+訳者： 高久雅生 &lt;<a href="mailto:masao@nii.ac.jp">masao@nii.ac.jp</a>&gt;<br>
+<a href="http://lxr.mozilla.org/mozilla/source/extensions/webservices/docs/Soap_Scripts_in_Mozilla.html">このドキュメントのオリジナルは mozilla.org において英語で公布されています。</a><br>
+またドキュメントの管理の言語は現在も英語です。この日本語訳は、<br>
+利用者の利便のためにもじら組和訳プロジェクトによって提供されたものです。<br>
+フィードバックは英語で、元の著者に送って下さい。<br>
+翻訳された文書の一覧は、現在以下のURLで見ることが出来ます。<br>
+<a href="http://www.mozilla.gr.jp/jt/index.html">http://www.mozilla.gr.jp/jt/index.html</a>
+</font></div>
+</body>
+        </html>
