@@ -3,3 +3,5 @@ score
 *.html.ja
 *.html.en
 *~
+private
+test
