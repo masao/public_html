@@ -4,6 +4,9 @@ index.shtml
 ken_all*
 zipcode.db
 zipcode.log*
+zipcode-mkdb.rb
+zipcode.rb
+.cvsrc
 .alias
 .emacs*
 .mnews_setup
@@ -15,3 +18,4 @@ test-ttf_php.txt
 *.bbl
 *.dvi
 *.blg
+junii-validator
