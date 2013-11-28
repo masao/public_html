@@ -1,6 +1,6 @@
 title: Unihan.txt - 音訓辞書
 date.available: 2006-04-15
-date.modified: 2006-06-09
+date.modified: 2013-11-28
 
 [[Unicode Unihan Database|http://www.unicode.org/Public/UNIDATA/Unihan.html]]には、Unicodeに含まれる文字のうち漢字類の規格種別、字義や由来、読み情報などが載っている。これをExcel等でそのまま処理しやすい音訓辞書として加工したものを以下に置いておきます。
 
@@ -11,7 +11,7 @@ date.modified: 2006-06-09
 !!変換方法
 
 変換の際に使用したスクリプト
-[[unihan-onkun.rb|unihan-onkun.rb]]
+https://github.com/masao/public_html/blob/master/etc/unihan-onkun.rb
 も公開しておきます。
 
 なお、このスクリプトを実行するには以下をインストールする必要があります:
