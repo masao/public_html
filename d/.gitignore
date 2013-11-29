@@ -5,6 +5,7 @@ cat_*.rdf
 ChangeLog
 cl.itemlist
 cl.js
+cl-cat.js
 cl.rdf
 ping
 sitemap.xml
