@@ -7,12 +7,15 @@
     <journal>情報管理</journal>
     <volume>56</volume>
     <number>9</number>
-    <page>3</page>
+    <page>
+      <start>649</start>
+      <end>652</end>
+    </page>
     <year>2013</year>
     <month>12</month>
     <language>ja</language>
     <date>2013-12-01</date>
-    <note>印刷中</note>
+    <doi>10.1241/johokanri.56.649</doi>
   </pub>
 
   <pub type="misc">
