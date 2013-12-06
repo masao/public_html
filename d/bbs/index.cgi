@@ -313,6 +313,7 @@ arcteils
 arcteils
 arctile
 arctlie
+arectlis
 aricetls
 arictles
 arirevd
@@ -826,6 +827,7 @@ inrcedblie
 insghit
 insgiht
 insgihts
+inshigt
 inteernt
 inteillegnt
 intelliegcne
@@ -913,6 +915,7 @@ lolicon
 lolita
 lolita
 lolitas
+lonikog
 lonoikg
 lonokig
 looikn
@@ -995,6 +998,7 @@ off the list
 online house
 online india
 onnlie
+orreded
 out of credit
 paajmas
 paamjas
@@ -1070,6 +1074,7 @@ prboemls
 prbolmes
 preescne
 preteen
+prlbeoms
 probelm
 probelms
 problem solved
@@ -1151,6 +1156,7 @@ relaly
 relbaile
 reliable data like this
 reliable information
+relief of finding
 relilabe
 rellay
 reocgniezd
@@ -1288,6 +1294,7 @@ somneoe
 somoene
 somonee
 somteinhg
+soneome
 sooemne
 sopkoy
 sort things
@@ -1362,6 +1369,7 @@ thank you enough
 thank you for posting
 thank you for this
 thank you humbly
+thankity
 thanks for he answer
 thanks for posting
 thanks to this article
@@ -1505,6 +1513,7 @@ unebilevable
 unebilevbale
 unedrtsadning
 unrdetsanding
+unrsnetadd
 useufl
 usfeul
 valaulbes
