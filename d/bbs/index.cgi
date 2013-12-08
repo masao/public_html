@@ -268,6 +268,7 @@ aenswr
 aenwsr
 aesnwr
 aewomse
+afronteon
 after reading this
 aftrneoon
 airclte
@@ -296,6 +297,8 @@ anwrse
 anwser
 apeapr
 aplpes
+apopeciatirn
+apopnciatire
 appaer
 apporcah
 apprceiaiton
@@ -307,6 +310,7 @@ approcah
 aprepciate
 aprpecaition
 aprpeication
+arcielt
 arcitles
 arcleits
 arcteils
@@ -415,6 +419,7 @@ bortehr
 borther
 brain power
 bravo!
+brhgetined
 brhoetr
 brightened my day
 brilalint
@@ -488,6 +493,7 @@ cnotbirution
 cnotribtiuon
 cocinvned
 coeedqrnu
+coeequrnd
 cofneusd
 cofuesnd
 coimng
@@ -573,6 +579,7 @@ epxlain
 epxuonder
 erdiiuton
 erdutioin
+eriotiudn
 erudiotin
 erudition
 esaeir
@@ -593,12 +600,14 @@ eunogh
 evertyihng
 everynoe
 eveyrewhre
+evherwreye
 evryeday
 exact point
 excatly
 excleelnt
 exclelnet
 exelclent
+exeretisp
 exetrmely
 exlceelnt
 expeictng
@@ -628,6 +637,7 @@ feel stupid
 feelnig
 fgiruing
 fianlly
+figure this out
 filnlay
 finally found
 find someone
@@ -726,6 +736,7 @@ helpful information
 helping me out
 helps me
 helupfl
+hepeld
 hepilng
 hepled
 heplful
@@ -746,11 +757,13 @@ hlpeufl
 hnosety
 hnotesy
 hoeplses
+hoestny
 home run
 hooilgnas
 hoolaigns
 hoolignas
 hot ass
+hotnsey
 how awesome
 how clever some
 hpaepir
@@ -798,6 +811,7 @@ increbdile
 incredilbe
 indebted
 indispeansble
+ineelligtnce
 inetllgicene
 info out
 infoarmtion
@@ -941,6 +955,7 @@ magnaed
 mainkg
 makes you think
 maknig
+mamdaacia
 mangaed
 marvelously good
 mcaaadmia
@@ -990,6 +1005,7 @@ nicely put
 nielcy
 nilcey
 none can doubt
+noramlly
 nothnig
 ntoihng
 oenped
@@ -1009,6 +1025,10 @@ pajmaas
 pay me to ignore
 pborlem
 pcuarhses
+pecerft
+pecfert
+pecfret
+pecreft
 pefrect
 pefrtecly
 pelaesd
@@ -1127,6 +1147,7 @@ quteisons
 raeding
 raeidng
 raelly
+raitnoaltiy
 ralely
 ralley
 ratiaonl
@@ -1194,6 +1215,7 @@ saercehd
 sahring
 saihrng
 sarhing
+sasftiied
 satifsied
 satirntg
 satsifeid
@@ -1275,6 +1297,7 @@ socks off
 socrue
 sodnus
 soelvd
+soenome
 soeomne
 soeonme
 sohcked
@@ -1295,6 +1318,8 @@ somoene
 somonee
 somteinhg
 soneome
+sonhteimg
+sonmoee
 sooemne
 sopkoy
 sort things
@@ -1381,11 +1406,13 @@ that posting
 that really helped
 the tikcet
 there you
+thghout
 thgins
 thgnis
 thgnkini
 thguhot
 thienkr
+thignikn
 thigns
 thiiknng
 thiinkng
@@ -1426,6 +1453,7 @@ thnkinig
 thnkniig
 thnnikig
 thoghut
+thoguht
 thohugt
 throguh
 thugoht
@@ -1512,6 +1540,7 @@ undsretnad
 unebilevable
 unebilevbale
 unedrtsadning
+uneirstanddng
 unrdetsanding
 unrsnetadd
 useufl
@@ -1552,11 +1581,13 @@ what a quick and easy
 what info I want
 what the dotcor ordered
 what we need
+what you write
 what's up
 where to buy
 where to find this info
 whevoer
 who you wrote this
+whoeevr
 wirter
 witohut
 witring
