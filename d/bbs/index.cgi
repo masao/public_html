@@ -1633,6 +1633,14 @@ your answer solved
 your post makes mine
 your posting
 誰損多
+Toodel
+inonmratifo
+Apaperntl
+imsirspeve
+wrtniig
+what I was looking for
+sonoeme
+knogeldwe
 EOF
 
 # ユーザ設定ファイルの読み込み
