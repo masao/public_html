@@ -1641,6 +1641,19 @@ wrtniig
 what I was looking for
 sonoeme
 knogeldwe
+arlcites
+inrtneet
+Halullejah
+meh--tat
+chlnaelging
+direcvosy
+arcielts
+Arciltes
+helpful answers
+artecli
+Arlcites
+quetoisn
+shrewd answer
 EOF
 
 # ユーザ設定ファイルの読み込み
