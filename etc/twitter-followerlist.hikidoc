@@ -1,6 +1,6 @@
 title: Twitterフォロワーリスト化ツール
 date.available: 2012-10-23
-date.modified: 2012-10-23
+date.modified: 2014-01-06
 css.content:
   #preview {
     margin: 1ex;
@@ -9,6 +9,13 @@ css.content:
     width: 100%;
   }
 subject: etc
+
+{{div class="notice"
+2014年1月現在、本ツールは動作しません。
+Twitter社のAPI提供方式が変更になったためです。
+
+参照: https://dev.twitter.com/blog/api-v1-is-retired
+}}
 
 Twitterの特定のアカウントのフォロワーをリスト化します。
 なお、Twitter APIを使っているので、フォロワー数が一定限度に達するとエラーになります（おそらく1万フォロー以上あるアカウントには対応できません）。
@@ -114,6 +121,6 @@ function normalize_text( str ) {
 }}
 
 !! 履歴
-
-:2012-10-23:初版作成
+:2014-01-06:Twitter API v1 廃止に伴って動作しない旨を明記。
+:2012-10-23:初版作成。
 
