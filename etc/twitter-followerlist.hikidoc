@@ -10,7 +10,7 @@ css.content:
   }
 subject: etc
 
-{{div class="notice"
+{{div class="warning"
 2014年1月現在、本ツールは動作しません。
 Twitter社のAPI提供方式が変更になったためです。
 
