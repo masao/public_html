@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist version="$Revision$">
+  <pub type="journal">
+    <title>図書館サービスとオープンソースソフトウェア</title>
+    <author>高久雅生</author>
+    <journal>情報の科学と技術</journal>
+    <volume>64</volume>
+    <number>2</number>
+    <year>2014</year>
+    <month>2</month>
+    <date>2014-02-01</date>
+    <language>ja</language>
+    <page>
+      <start>48</start>
+      <end>53</end>
+    </page>
+  </pub>
+
   <pub type="misc">
     <title>ゲームチェンジの時代に</title>
     <author>高久雅生</author>
