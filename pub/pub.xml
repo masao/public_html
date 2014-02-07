@@ -1,6 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist version="$Revision$">
+  <pub type="misc">
+    <title>saveMLAKの活動と課題</title>
+    <author>高久雅生</author>
+    <conference>第4回DAN (Digital Archive Network) ワークショップ</conference>
+    <year>2014</year>
+    <month>2</month>
+    <city>琉球大学</city>
+    <language>ja</language>
+    <date>2014-02-14</date>
+    <url>http://www.soumu.go.jp/menu_news/s-news/01ryutsu02_02001000.html</url>
+  </pub>
+
+  <pub type="journal" refereed="true">
+    <title>Researcher name resolver</title>
+    <subtitle>Identifier management system for Japanese researchers</subtitle>
+    <author>Kei Kurakawa</author>
+    <author>Hideaki Takeda</author>
+    <author>Masao Takaku</author>
+    <author>Akiko Aizawa</author>
+    <author>Ryo Shiozaki</author>
+    <author>Shun Morimoto</author>
+    <author>Hideki Uchijima</author>
+    <journal>International Journal on Digital Libraries</journal>
+    <year>2014</year>
+    <month>3</month>
+    <volume>14</volume>
+    <date>2014-03-01</date>
+    <language>en</language>
+    <note>(in press)</note>
+  </pub>
+
   <pub type="journal">
     <title>図書館サービスとオープンソースソフトウェア</title>
     <author>高久雅生</author>
