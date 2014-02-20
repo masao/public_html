@@ -2,6 +2,7 @@ index.shtml
 *.ttf
 *.TTF
 ken_all*
+KEN_ALL*
 zipcode.db
 zipcode.log*
 zipcode-mkdb.rb
