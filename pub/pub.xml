@@ -4,17 +4,18 @@
   <pub type="misc">
     <title>saveMLAKの活動と課題</title>
     <author>高久雅生</author>
-    <conference>第4回DAN (Digital Archive Network) ワークショップ</conference>
+    <conference>第4回DAN (Digital Archives Network) ワークショップ</conference>
     <year>2014</year>
     <month>2</month>
     <city>琉球大学</city>
     <language>ja</language>
     <date>2014-02-14</date>
+    <slides>http://www.slideshare.net/tmasao/20140214-savemlakdanokinawa</slides>
     <url>http://www.soumu.go.jp/menu_news/s-news/01ryutsu02_02001000.html</url>
   </pub>
 
   <pub type="journal" refereed="true">
-    <title>Researcher name resolver</title>
+    <title>Researcher Name Resolver</title>
     <subtitle>Identifier management system for Japanese researchers</subtitle>
     <author>Kei Kurakawa</author>
     <author>Hideaki Takeda</author>
@@ -25,11 +26,11 @@
     <author>Hideki Uchijima</author>
     <journal>International Journal on Digital Libraries</journal>
     <year>2014</year>
-    <month>3</month>
+    <month>2</month>
     <volume>14</volume>
-    <date>2014-03-01</date>
+    <date>2014-02-19</date>
     <language>en</language>
-    <note>(in press)</note>
+    <doi>10.1007/s00799-014-0109-z</doi>
   </pub>
 
   <pub type="journal">
