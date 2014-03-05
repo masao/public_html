@@ -92,7 +92,7 @@
     margin: 10px 0px 0px;
   }
   body a[href $=".pdf"] {
-    background: url("icons/pdf.gif") center right no-repeat;
+    background: url("images/pdf.gif") center right no-repeat;
     padding-right: 16px;
   }
   /* For interlang switch */
