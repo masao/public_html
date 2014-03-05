@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist>
+  <pub type="chapter">
+    <title>情報検索</title>
+    <subtitle>情報の収集と探索の方法</subtitle>
+    <author>高久雅生</author>
+    <booktitle>大学新入生のための情報リテラシー</booktitle>
+    <author role="editor">堀幸雄</author>
+    <publisher>学術図書出版社</publisher>
+    <year>2014</year>
+    <month>3</month>
+    <language>ja</language>
+    <page>
+      <start>10</start>
+      <end>17</end>
+    </page>
+    <date>2014-03-31</date>
+    <!--
+    <isbn></isbn>
+    -->
+  </pub>
+
   <pub type="misc">
     <title>saveMLAKの活動と課題</title>
     <author>高久雅生</author>
