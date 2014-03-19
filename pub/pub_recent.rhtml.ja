@@ -22,7 +22,7 @@ author_s
 <% if not file.nil? %></a><% end %>
 </span>.
 <span class="bibdata">
-<% [ :conference, :org, :publisher, :city, :journal ].each do |field| %>
+<% [ :conference, :org, :publisher, :city, :journal, :booktitle ].each do |field| %>
 <% if not send( field ).nil? %>
 <span class="<%= field %>"><%=h send( field ) %>;</span>
 <% end %>
