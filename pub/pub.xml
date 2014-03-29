@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist>
+  <pub type="misc">
+    <title>先輩から</title>
+    <author>高久雅生</author>
+    <year>2014</year>
+    <month>3</month>
+    <journal>筑波大学情報学群知識情報・図書館学類パンフレット</journal>
+    <language>ja</language>
+    <page>
+      <start>23</start>
+      <end>23</end>
+    </page>
+    <!--
+    <url>http://klis.tsukuba.ac.jp/ebook/2015schoolguide/</url>
+    -->
+  </pub>
+
   <pub type="chapter">
     <title>情報検索</title>
     <subtitle>情報の収集と探索の方法</subtitle>
