@@ -22,7 +22,7 @@
     <subtitle>情報の収集と探索の方法</subtitle>
     <author>高久雅生</author>
     <booktitle>大学新入生のための情報リテラシー</booktitle>
-    <author role="editor">堀幸雄</author>
+    <author role="editor">香川大学総合情報センター</author>
     <publisher>学術図書出版社</publisher>
     <year>2014</year>
     <month>3</month>
@@ -31,10 +31,8 @@
       <start>10</start>
       <end>17</end>
     </page>
-    <date>2014-03-31</date>
-    <!--
-    <isbn></isbn>
-    -->
+    <date>2014-03-25</date>
+    <isbn>978-4-7806-0389-7</isbn>
   </pub>
 
   <pub type="misc">
