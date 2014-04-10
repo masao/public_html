@@ -81,7 +81,7 @@ chalow:
 # Rsync to http://masao.jpn.org/
 rsync:
 	./rsync.pl etk2:www/masao/d/bbs/kblog/ ./d/bbs/kblog/
-	./rsync.pl --exclude=test/ --exclude=private/ --exclude=official/ \
+	./rsync.pl --exclude=.git/ --exclude=test/ --exclude=private/ --exclude=official/ \
 		--delete-after --copy-unsafe-links \
 		./ etk2:www/masao/
 
