@@ -170,6 +170,8 @@ Play informative
 Porn
 Posts like this
 Ppl like you
+Quotes Chimp
+QuotesChimp
 San Diego
 Scniece
 Shoot,
@@ -377,6 +379,7 @@ atrilce
 atrilecs
 atrlcie
 aucrcate
+auto insurance
 avdice
 awalys
 awnesr
@@ -857,6 +860,7 @@ insghit
 insgiht
 insgihts
 inshigt
+insurance policy
 inteernt
 inteillegnt
 intelliegcne
@@ -1060,6 +1064,7 @@ perfcet
 perfect insight
 perfect reply
 perfect way
+personal insurance
 personal loans
 pertty
 petlecrfy
@@ -1111,6 +1116,7 @@ prboemls
 prbolmes
 preescne
 preteen
+private insurance
 prlbeoms
 probelm
 probelms
@@ -1574,6 +1580,7 @@ valium
 valuable brains
 valubaels
 vauallbes
+vehicle insurance
 very helpful
 virgins
 vlauables
