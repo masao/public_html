@@ -2,6 +2,29 @@
 <!-- $Id$ -->
 <publist>
   <pub type="misc">
+    <title>FRBR に基づく件名・分類管理システムの試作</title>
+    <subtitle>教科書分類を例として</subtitle>
+    <author>田辺浩介</author>
+    <author>江草由佳</author>
+    <author>高久雅生</author>
+    <conference>第22回情報知識学会年次大会</conference>
+    <journal>情報知識学会誌</journal>
+    <volume>24</volume>
+    <number>2</number>
+    <year>2014</year>
+    <month>5</month>
+    <city>和歌山</city>
+    <!--
+    <page>
+      <start>219</start>
+      <end>228</end>
+    </page>
+    -->
+    <language>ja</language>
+    <date>2014-05-24</date>
+  </pub>
+
+  <pub type="misc">
     <title>先輩から</title>
     <author>高久雅生</author>
     <year>2014</year>
