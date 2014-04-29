@@ -2,6 +2,24 @@
 <!-- $Id$ -->
 <publist>
   <pub type="misc">
+    <title>Code4Lib 2014参加報告</title>
+    <author>高久雅生</author>
+    <journal>人文情報学月報</journal>
+    <number>DHM033</number>
+    <year>2014</year>
+    <month>4</month>
+    <!--
+    <page>
+      <start>219</start>
+      <end>228</end>
+    </page>
+    -->
+    <language>ja</language>
+    <date>2014-04-29</date>
+    <url>http://www.dhii.jp/DHM/</url>
+  </pub>
+
+  <pub type="misc">
     <title>FRBR に基づく件名・分類管理システムの試作</title>
     <subtitle>教科書分類を例として</subtitle>
     <author>田辺浩介</author>
