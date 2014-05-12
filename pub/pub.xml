@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist>
+  <pub type="journal">
+    <title>Web APIの過去・現在・未来</title>
+    <author>高久雅生</author>
+    <journal>情報の科学と技術</journal>
+    <volume>64</volume>
+    <number>5</number>
+    <year>2014</year>
+    <month>5</month>
+    <date>2014-05-01</date>
+    <language>ja</language>
+    <page>
+      <start>162</start>
+      <end>169</end>
+    </page>
+    <url>http://hdl.handle.net/2241/121387</url>
+  </pub>
+
   <pub type="misc">
     <title>Code4Lib 2014参加報告</title>
     <author>高久雅生</author>
