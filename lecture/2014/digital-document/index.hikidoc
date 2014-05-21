@@ -1,16 +1,7 @@
 title: ディジタルドキュメント（2014年・春）
-date.modified:2014-05-16
+date.modified:2014-05-21
 date.available:2014-04-07
 subject:lecture
-
-{{rawhtml
-<div style="float:right">
-<script type="text/javascript" src="http://crowd4u.org/script/task_loader.js?requester=314&amp;length=10"></script>
-<a class="microtask repeat" href="javascript:void(0)">
-  <img src="http://crowd4u.org/img/crowd4u_banner_lcrowd1_230x93.png">
-</a>
-</div>
-}}
 
 2014年度春学期に開講する「ディジタルドキュメント」科目についての情報を提供します。
 
@@ -22,7 +13,7 @@ subject:lecture
 #第3回（5/1）: 学術研究分野におけるディジタルドキュメント（その2）（[[授業資料|20140501-Digital-Document-3.pdf]]） '''[第2回レポート課題]'''
 #第4回（5/8）: 電子書籍とその利用環境（その1）（[[授業資料|20140508-Digital-Document-4.pdf]]）
 #第5回（5/15）: 電子書籍とその利用環境（その2）（[[授業資料|20140515-Digital-Document-5.pdf]]）'''[第3回レポート課題]'''
-#第6回（5/22）: Webとハイパーテキスト
+#第6回（5/22）: Webとハイパーテキスト（[[授業資料|20140522-Digital-Document-6.pdf]]）
 #第7回（5/29）: ディジタルドキュメントのフォーマット（その1）
 #第8回（6/5）: ディジタルドキュメントのフォーマット（その2）
 #第9回（6/12）: ディジタルドキュメントのフォーマット（その3）
@@ -65,3 +56,12 @@ subject:lecture
 ||GE70401 ディジタルライブラリ||
 ||GE71701 テキスト処理||
 ||GE80301 学術情報基盤論||
+
+{{rawhtml
+<div><!-- style="float:right"-->
+<script type="text/javascript" src="http://crowd4u.org/script/task_loader.js?requester=314&amp;length=10"></script>
+<a class="microtask repeat" href="javascript:void(0)">
+  <img src="http://crowd4u.org/img/crowd4u_banner_lcrowd1_230x93.png">
+</a>
+</div>
+}}
