@@ -25,15 +25,9 @@
     <number>DHM033</number>
     <year>2014</year>
     <month>4</month>
-    <!--
-    <page>
-      <start>219</start>
-      <end>228</end>
-    </page>
-    -->
     <language>ja</language>
     <date>2014-04-29</date>
-    <url>http://www.dhii.jp/DHM/</url>
+    <url>http://www.dhii.jp/DHM/dhm33-2</url>
   </pub>
 
   <pub type="misc">
@@ -49,12 +43,10 @@
     <year>2014</year>
     <month>5</month>
     <city>和歌山</city>
-    <!--
     <page>
-      <start>219</start>
-      <end>228</end>
+      <start>99</start>
+      <end>105</end>
     </page>
-    -->
     <language>ja</language>
     <date>2014-05-24</date>
   </pub>
