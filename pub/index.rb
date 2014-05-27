@@ -8,7 +8,10 @@ require "date"
 require "uri"
 require "yaml"
 
-ENV["GEM_HOME"] = "/home/etk2/.gem" if File.directory?( "/home/etk2/.gem" )
+if File.directory?( "/home/etk2/.gem" )
+   ENV["GEM_HOME"] = "/home/etk2/.gem"
+   ENV["GEM_PATH"] = "/home/etk2/.gem:/home/etk2/.gem/ruby/#{ RUBY_VERSION[0..2] }"
+end
 
 begin
    require "rubygems"
