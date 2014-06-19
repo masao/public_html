@@ -33,21 +33,21 @@ if $0 == __FILE__
    config = YAML.load( open( config_file ) )["test"]
    username = config["login"]
    #p config
-   Twitter.configure do |c|
+   client = Twitter::REST::Client.new do |c|
       c.consumer_key = config[ "oauth_consumer_token" ]
       c.consumer_secret = config[ "oauth_consumer_secret" ]
-      c.oauth_token = config[ "oauth_token" ]
-      c.oauth_token_secret = config[ "oauth_token_secret" ]
+      c.access_token = config[ "oauth_token" ]
+      c.access_token_secret = config[ "oauth_token_secret" ]
    end
    done = {}
    load_twitter_db.each do |tw|
       # p tw
-      done[ tw[ "id" ] ] = true
+      done[ tw["id"] ] = true
    end
-   tweets = Twitter.user_timeline( "tmasao" )
+   tweets = client.user_timeline( "tmasao" )
    results = []
    tweets.each do |tweet|
-      next if done[ tweet["id"] ]
+      next if done[ tweet.id ]
       results << tweet.attrs.new_str_key
    end
    puts results.to_yaml
