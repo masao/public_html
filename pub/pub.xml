@@ -1,6 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist>
+  <pub type="misc">
+    <title>利用者の行動観察のための手法</title>
+    <author>高久雅生</author>
+    <conference>平成26年度国立情報学研究所学術情報システム総合ワークショップ</conference>
+    <city>東京</city>
+    <year>2014</year>
+    <month>7</month>
+    <date>2014-07-04</date>
+    <language>ja</language>
+    <url>http://www.nii.ac.jp/hrd/ja/ciws/h26/curritxt.html</url>
+  </pub>
+
+  <pub type="conference" refereed="true">
+    <title>How to Evaluate Searching as Learning</title>
+    <author>Yuka Egusa</author>
+    <author>Masao Takaku</author>
+    <author>Hitomi Saito</author>
+    <conference>Searching as Learning Workshop (IIiX 2014 workshop)</conference>
+    <year>2014</year>
+    <month>8</month>
+    <city>Regensburg, Germany</city>
+    <language>en</language>
+    <date>2014-08-30</date>
+  </pub>
+  <pub type="conference" refereed="true">
+    <title>How Concept Maps Change if a User Does Search or Not?</title>
+    <author>Yuka Egusa</author>
+    <author>Masao Takaku</author>
+    <author>Hitomi Saito</author>
+    <conference>The Information Interaction in Context : IIiX 2014</conference>
+    <year>2014</year>
+    <month>8</month>
+    <city>Regensburg, Germany</city>
+    <language>en</language>
+    <date>2014-08-26</date>
+  </pub>
+
   <pub type="journal">
     <title>Web APIの過去・現在・未来</title>
     <author>高久雅生</author>
