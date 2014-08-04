@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist>
+  <pub type="conference" refereed="true">
+    <title>A Simple Document-by-Document Search Tool &#x201c;Fuwatto Search&#x201d; using Web API</title>
+    <author>Masao Takaku</author>
+    <author>Yuka Egusa</author>
+    <conference>16th International Conference on Asia-Pacific Digital Libraries (ICADL)</conference>
+    <year>2014</year>
+    <month>11</month>
+    <city>Chiang Mai, Thailand</city>
+    <language>en</language>
+    <date>2014-11-05</date>
+    <page>8</page>
+  </pub>
+
   <pub type="misc">
     <title>利用者の行動観察のための手法</title>
     <author>高久雅生</author>
@@ -24,6 +37,7 @@
     <city>Regensburg, Germany</city>
     <language>en</language>
     <date>2014-08-30</date>
+    <page>4</page>
   </pub>
   <pub type="conference" refereed="true">
     <title>How Concept Maps Change if a User Does Search or Not?</title>
@@ -36,6 +50,7 @@
     <city>Regensburg, Germany</city>
     <language>en</language>
     <date>2014-08-26</date>
+    <page>8</page>
   </pub>
 
   <pub type="journal">
