@@ -50,7 +50,10 @@
     <city>Regensburg, Germany</city>
     <language>en</language>
     <date>2014-08-26</date>
-    <page>8</page>
+    <page>
+      <start>68</start>
+      <end>75</end>
+    </page>
   </pub>
 
   <pub type="journal">
