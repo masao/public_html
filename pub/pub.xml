@@ -37,7 +37,10 @@
     <city>Regensburg, Germany</city>
     <language>en</language>
     <date>2014-08-30</date>
-    <page>4</page>
+    <page>
+      <start>40</start>
+      <end>43</end>
+    </page>
   </pub>
   <pub type="conference" refereed="true">
     <title>How Concept Maps Change if a User Does Search or Not?</title>
