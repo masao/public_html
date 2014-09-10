@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist>
+  <pub type="misc">
+    <title>Helping Memory Institutions in the Networked Information Society</title>
+    <author>Masao Takaku</author>
+    <conference>International Summer School of Informatics: A Joint by T3 Information Schools (Taiwan-Thailand-Tsukuba)</conference>
+    <year>2014</year>
+    <month>9</month>
+    <city>University of Tsukuba</city>
+    <language>en</language>
+    <date>2014-09-09</date>
+    <slides>http://www.slideshare.net/tmasao/helping-memory-institutions-in-the-networked-information-society</slides>
+  </pub>
   <pub type="conference" refereed="true">
     <title>Simple Document-by-Document Search Tool &#x201c;Fuwatto Search&#x201d; using Web API</title>
     <author>Masao Takaku</author>
