@@ -2,7 +2,7 @@ title: 高久雅生の経歴
 title.short: 経歴
 subject:biography
 date.available: 2007-03-04
-date.modified: 2014-04-21
+date.modified: 2014-09-17
 
 [[{{image './images/201302-Sue.jpg' 'シカゴ・フィールズ博物館にて（2013年2月）' thumbs 150px right}}|./profile-images.html]]
 :氏名:高久 雅生 （たかく まさお）
@@ -67,6 +67,7 @@ date.modified: 2014-04-21
 
 !!! セミナー講師等
 
+:[[平成26年度 国立情報学研究所 学術情報システム総合ワークショップ|http://www.nii.ac.jp/hrd/ja/ciws/h26/curritxt.html]]（2014年7月-11月・東京都千代田区）:「利用者の行動観察のための手法」と題する講義および調査研究アドバイザーを担当。
 :[[平成25年度 国立情報学研究所 学術情報ウェブサービス担当者研修|http://www.nii.ac.jp/hrd/ja/portal/h25/curritxt.html]]（2013年7月・福岡県福岡市）:「流通する学術情報コンテンツ」と題する講義を担当。
 :[[平成23年度 第3回東京都図書館研究交流会・東京都図書館協会IT講習会|http://www.code4lib.jp/2011/11/670/]] （2011年11月・東京都豊島区）:OPACシステム改善のための手法「OPAC+」演習におけるファシリテーションを担当。
 :[[国立情報学研究所 学術ポータル研修|http://www.nii.ac.jp/hrd/ja/portal/h23/curritxt.html]] （2011年8月・東京都千代田区）:「学術情報流通を実現する技術（1）‐要素技術」と題して講義、受講生のファシリテーションを担当。
@@ -134,10 +135,10 @@ date.modified: 2014-04-21
 *情報科学技術協会 評議委員（2011年）
 *情報科学技術協会 会誌『情報の科学と技術』編集委員（2009年-2013年）; 企画協力委員（2013年-）
 *情報処理学会 [[論文誌（データベース）(TOD)|http://ipsjtod.kyoto-su.ac.jp/]] 編集委員（2008年-2012年）
-*情報処理学会 [[情報基礎とアクセス技術研究会|http://ipsj-ifat.org/]] 運営委員（2007-2011年）
-*Code4Lib JAPANカンファレンス実行委員 (2013年-）
+*情報処理学会 [[情報基礎とアクセス技術研究会|http://ipsj-ifat.org/]] 運営委員（2007年-2011年）
+*Code4Lib JAPANカンファレンス実行委員 (2013年, 2014年）
 
-!!!!国際会議等における活動
+!!!国際会議等における活動
 *The 10th NTCIR Conference Travel Support Committee member （2013年）
 **[[第10回NTCIRワークショップ成果報告会|http://research.nii.ac.jp/ntcir/ntcir-10/conference/]]においてトラベルサポート委員会委員を担当。
 *The 5th NTCIR Workshop Meeting Publication Co-Chair（2005年）
