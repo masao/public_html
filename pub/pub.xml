@@ -17,12 +17,18 @@
     <author>Masao Takaku</author>
     <author>Yuka Egusa</author>
     <conference>16th International Conference on Asia-Pacific Digital Libraries (ICADL)</conference>
+    <journal>Lecture Notes in Computer Science (LNCS)</journal>
+    <volume>8839</volume>
+    <publisher>Springer</publisher>
     <year>2014</year>
     <month>11</month>
     <city>Chiang Mai, Thailand</city>
     <language>en</language>
     <date>2014-11-05</date>
-    <page>8</page>
+    <page>
+      <start>312</start>
+      <end>319</end>
+    </page>
   </pub>
 
   <pub type="misc">
@@ -2237,11 +2243,14 @@
     <author>Keizo Oyama</author>
     <author>Akiko Aizawa</author>
     <title>An Analysis on Topic Features and Difficulties Based on Web Navigational Retrieval Experiments</title>
-    <journal>Proceedings of the Third Asia Information Retrieval Symposium (AIRS) 2006</journal>
+    <conference>The Third Asia Information Retrieval Symposium (AIRS) 2006</conference>
+    <booktitle>Proceedings of the Third Asia Information Retrieval Symposium (AIRS) 2006</booktitle>
     <year>2006</year>
     <month>10</month>
     <city>Singapore</city>
-    <publisher>Springer, LNCS 4182</publisher>
+    <publisher>Springer</publisher>
+    <journal>Lecture Notes in Computer Science (LNCS)</journal>
+    <volume>4182</volume>
     <page>
       <start>625</start>
       <end>632</end>
