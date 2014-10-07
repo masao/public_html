@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist>
+  <pub type="journal" refereed="true">
+    <title>疎結合構成によるFRBRモデルに基づく書誌情報システム</title>
+    <author>田辺浩介</author>
+    <author>常川真央</author>
+    <author>高久雅生</author>
+    <author>江草由佳</author>
+    <journal>情報知識学会誌</journal>
+    <volume>24</volume>
+    <number>3</number>
+    <year>2014</year>
+    <month>10</month>
+    <date>2014-10-31</date>
+    <language>ja</language>
+    <page>21</page>
+  </pub>
+
   <pub type="misc">
     <title>Helping Memory Institutions in the Networked Information Society</title>
     <author>Masao Takaku</author>
