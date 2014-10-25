@@ -12,9 +12,12 @@
     <number>3</number>
     <year>2014</year>
     <month>10</month>
-    <date>2014-10-31</date>
+    <date>2014-10-23</date>
     <language>ja</language>
-    <page>21</page>
+    <page>
+      <start>321</start>
+      <end>341</end>
+    </page>
   </pub>
 
   <pub type="misc">
