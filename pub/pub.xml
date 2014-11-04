@@ -18,6 +18,7 @@
       <start>321</start>
       <end>341</end>
     </page>
+    <url>http://pubman.nims.go.jp/pubman/item/escidoc:1703179</url>
   </pub>
 
   <pub type="misc">
@@ -31,6 +32,7 @@
     <date>2014-09-09</date>
     <slides>http://www.slideshare.net/tmasao/helping-memory-institutions-in-the-networked-information-society</slides>
   </pub>
+
   <pub type="conference" refereed="true">
     <title>Simple Document-by-Document Search Tool &#x201c;Fuwatto Search&#x201d; using Web API</title>
     <author>Masao Takaku</author>
@@ -48,6 +50,7 @@
       <start>312</start>
       <end>319</end>
     </page>
+    <doi>10.1007/978-3-319-12823-8_32</doi>
   </pub>
 
   <pub type="misc">
