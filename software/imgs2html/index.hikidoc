@@ -2,44 +2,44 @@ title: imgs2html & ps2imgs
 date.modified: 2008-08-30
 subject: software
 
-PostScript¥Õ¥¡¥¤¥ë¤òWebÍÑ¤Î²èÁü·Á¼°¤ËÊÑ´¹¤¹¤ë¥¹¥¯¥ê¥×¥È¡Êps2imgs¡Ë¡¢
-¤¿¤¯¤µ¤ó¤Î²èÁü¥Õ¥¡¥¤¥ë¤ò°ìµ¤¤ËHTML¥Õ¥¡¥¤¥ë¤ØÊÑ´¹¤¹¤ë¥¹¥¯¥ê¥×¥È¡Êimgs2html¡Ë¤Î2¤Ä¤ÎPerl¥¹¥¯¥ê¥×¥È¤òÃÖ¤¤¤Æ¤¤¤Ş¤¹¡£
+PostScriptãƒ•ã‚¡ã‚¤ãƒ«ã‚’Webç”¨ã®ç”»åƒå½¢å¼ã«å¤‰æ›ã™ã‚‹ã‚¹ã‚¯ãƒªãƒ—ãƒˆï¼ˆps2imgsï¼‰ã€
+ãŸãã•ã‚“ã®ç”»åƒãƒ•ã‚¡ã‚¤ãƒ«ã‚’ä¸€æ°—ã«HTMLãƒ•ã‚¡ã‚¤ãƒ«ã¸å¤‰æ›ã™ã‚‹ã‚¹ã‚¯ãƒªãƒ—ãƒˆï¼ˆimgs2htmlï¼‰ã®2ã¤ã®Perlã‚¹ã‚¯ãƒªãƒ—ãƒˆã‚’ç½®ã„ã¦ã„ã¾ã™ã€‚
 
-Îã¤¨¤Ğ¡¢¥×¥ì¥¼¥ó¥Æ¡¼¥·¥ç¥ó»ñÎÁ¤ò¸µ¤Ë¡¢[[Ê£¿ô¤Î²èÁü¤È¤½¤Î°ìÍ÷¤«¤é¤Ê¤ë¥Ú¡¼¥¸|http://phase.hpcc.jp/la/SLIDES/0012-hasegawa/index.html]]¤òºî¤ì¤Ş¤¹¡£
+ä¾‹ãˆã°ã€ãƒ—ãƒ¬ã‚¼ãƒ³ãƒ†ãƒ¼ã‚·ãƒ§ãƒ³è³‡æ–™ã‚’å…ƒã«ã€[[è¤‡æ•°ã®ç”»åƒã¨ãã®ä¸€è¦§ã‹ã‚‰ãªã‚‹ãƒšãƒ¼ã‚¸|http://phase.hpcc.jp/la/SLIDES/0012-hasegawa/index.html]]ã‚’ä½œã‚Œã¾ã™ã€‚
 
-¥Ğ¥°Êó¹ğ¡¦Í×Ë¾¡¦´¶ÁÛ¤Ê¤É¤Ï[[tmasao@acm.org|mailto:tmasao@acm.org]]¤Ş¤Ç¤ª´ó¤»²¼¤µ¤¤¡£¤ªµ¤·Ú¤Ë¤É¤¦¤¾¡£
+ãƒã‚°å ±å‘Šãƒ»è¦æœ›ãƒ»æ„Ÿæƒ³ãªã©ã¯[[tmasao@acm.org|mailto:tmasao@acm.org]]ã¾ã§ãŠå¯„ã›ä¸‹ã•ã„ã€‚ãŠæ°—è»½ã«ã©ã†ãã€‚
 
-!!¥Ş¥Ë¥å¥¢¥ë
+!!ãƒãƒ‹ãƒ¥ã‚¢ãƒ«
 
 *[[imgs2html(1)|imgs2html-man.html]]
 *[[ps2imgs(1)|ps2imgs-man.html]]
 
-!!¥À¥¦¥ó¥í¡¼¥É
+!!ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰
 
 *[[imgs2html-0.3.3.tar.gz|../archive/imgs2html-0.3.3.tar.gz]]
 
-¥é¥¤¥»¥ó¥¹¤Ï[[GNU Generic Public License version 2|http://www.gnu.org/copyleft/gpl.html]]¤Ë½¾¤Ã¤¿¥Õ¥ê¡¼¥½¥Õ¥È¥¦¥§¥¢¤È¤·¤Ş¤¹¡£
+ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã¯[[GNU Generic Public License version 2|http://www.gnu.org/copyleft/gpl.html]]ã«å¾“ã£ãŸãƒ•ãƒªãƒ¼ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ã¨ã—ã¾ã™ã€‚
 
-!!¹¹¿·¾ğÊó
+!!æ›´æ–°æƒ…å ±
 
 {{include(/home/masao/cvswork/imgs2html/NEWS)}}
-¡Ê¸µ¡¹¤Ï¡¢[[LA¸¦µæ²ñ|http://phase.hpcc.jp/la/]]¤Î¤¿¤á¤ËºîÀ®¤·¤¿¥¹¥¯¥ê¥×¥È¤Ç¤¹¡£¡Ë
+ï¼ˆå…ƒã€…ã¯ã€[[LAç ”ç©¶ä¼š|http://phase.hpcc.jp/la/]]ã®ãŸã‚ã«ä½œæˆã—ãŸã‚¹ã‚¯ãƒªãƒ—ãƒˆã§ã™ã€‚ï¼‰
 
-!!Îà»÷¥½¥Õ¥È¥¦¥§¥¢
+!!é¡ä¼¼ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢
 
-¡ÊÂ¾¤Ë¤â¤´Â¸¤¸¤ÎÊı¤Ï[[¤ªÃÎ¤é¤»|mailto:tmasao@acm.org]]¤¤¤¿¤À¤±¤ì¤Ğ¹¬¤¤¤Ç¤¹¡Ë
+ï¼ˆä»–ã«ã‚‚ã”å­˜ã˜ã®æ–¹ã¯[[ãŠçŸ¥ã‚‰ã›|mailto:tmasao@acm.org]]ã„ãŸã ã‘ã‚Œã°å¹¸ã„ã§ã™ï¼‰
 
 *[[WebMagick|http://www.simplesystems.org/WebMagick/]]
 *[[thumbnail_index|http://www.acme.com/software/thumbnail_index/]]
-*[[MagicPoint|http://www.mew.org/MagicPoint/]]: ¥×¥ì¥¼¥ó¥Æ¡¼¥·¥ç¥ó¥Ä¡¼¥ë¡£
-*[[gPhoto|http://www.gphoto.org/]]: ¥Ç¥¸¥¿¥ë¥«¥á¥éÍÑ¥½¥Õ¥È¥¦¥§¥¢¡£¥µ¥à¥Í¡¼¥ë²èÁü¤ò´Ş¤àHTML¤ò½ĞÎÏ¤¹¤ëµ¡Ç½¤¬¤¢¤ë¡£
+*[[MagicPoint|http://www.mew.org/MagicPoint/]]: ãƒ—ãƒ¬ã‚¼ãƒ³ãƒ†ãƒ¼ã‚·ãƒ§ãƒ³ãƒ„ãƒ¼ãƒ«ã€‚
+*[[gPhoto|http://www.gphoto.org/]]: ãƒ‡ã‚¸ã‚¿ãƒ«ã‚«ãƒ¡ãƒ©ç”¨ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ã€‚ã‚µãƒ ãƒãƒ¼ãƒ«ç”»åƒã‚’å«ã‚€HTMLã‚’å‡ºåŠ›ã™ã‚‹æ©Ÿèƒ½ãŒã‚ã‚‹ã€‚
 *[[SWIGS: Structured Web Image Gallery system|http://swigs.sourceforge.net/]]
-*[[RubyPhoto|http://plig.net/~ture/rubyphoto/]]: SWIGS¤ò»²¹Í¤Ë¤·¤Æºî¤é¤ì¤¿¤â¤Î¡£XML¤Ç¤Î¥Æ¥ó¥×¥ì¡¼¥Èµ­½Ò¡£
-*[[BINS|http://bins.sautret.org/]]: SWIGS¤Î³ÈÄ¥ÈÇ¡£gettext¤ò»È¤Ã¤¿¹ñºİ²½¤Ê¤É¡£
-*[[mkthum.pl|http://radar.sci.hokudai.ac.jp/~kato/computer/Util/mkthumb/index.html]]: ¥Ç¥¸¥«¥á²èÁü¤ÎÀ°ÍıÍÑ!?¡ÊExifÂĞ±ş¡Ë
+*[[RubyPhoto|http://plig.net/~ture/rubyphoto/]]: SWIGSã‚’å‚è€ƒã«ã—ã¦ä½œã‚‰ã‚ŒãŸã‚‚ã®ã€‚XMLã§ã®ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆè¨˜è¿°ã€‚
+*[[BINS|http://bins.sautret.org/]]: SWIGSã®æ‹¡å¼µç‰ˆã€‚gettextã‚’ä½¿ã£ãŸå›½éš›åŒ–ãªã©ã€‚
+*[[mkthum.pl|http://radar.sci.hokudai.ac.jp/~kato/computer/Util/mkthumb/index.html]]: ãƒ‡ã‚¸ã‚«ãƒ¡ç”»åƒã®æ•´ç†ç”¨!?ï¼ˆExifå¯¾å¿œï¼‰
 *[[cthumb|http://cthumb.sourceforge.net/]]
 *[[Gallery.py|http://www.net-es.dk/~pj/python/]]
 *[[Gallery|http://gallery.menalto.com/]]
 *[[IDS|http://ids.sourceforge.net/]]
-*[[Gimp Gallery|http://skylab.org/~plumpy/gg/]]: HTML¤òÀ¸À®¤¹¤ëGIMP¡£
+*[[Gimp Gallery|http://skylab.org/~plumpy/gg/]]: HTMLã‚’ç”Ÿæˆã™ã‚‹GIMPã€‚
 *[[iGal: online image gallery generator|http://www.stanford.edu/~epop/igal/]]

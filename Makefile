@@ -18,7 +18,6 @@ HTML	= 	index.html.ja index.html.en \
 		etc/webometrics_rep_jp.html \
 		etc/webometrics_rep_jp_201001.html \
 		etc/webometrics_rep_jp_201002.html \
-		etc/histogram.html \
 		etc/twitter-followerlist.html \
 		senkyo-koho/index.html \
 		senkyo-koho/200907-tokyo/Adachi/index.html \

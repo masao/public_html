@@ -1,4 +1,4 @@
-title: Twitter�ե�����ꥹ�Ȳ��ġ���
+title: Twitterフォロワーリスト化ツール
 date.available: 2012-10-23
 date.modified: 2014-01-06
 css.content:
@@ -11,16 +11,16 @@ css.content:
 subject: etc
 
 {{div class="warning"
-2014ǯ1��ߡ��ܥġ����ư��ޤ���
-Twitter�Ҥ�API���������ѹ��ˤʤä�����Ǥ���
+2014年1月現在、本ツールは動作しません。
+Twitter社のAPI提供方式が変更になったためです。
 
-����: https://dev.twitter.com/blog/api-v1-is-retired
+参照: https://dev.twitter.com/blog/api-v1-is-retired
 }}
 
-Twitter������Υ�������ȤΥե������ꥹ�Ȳ����ޤ���
-�ʤ���Twitter API��ȤäƤ���Τǡ��ե��������������٤�ã����ȥ��顼�ˤʤ�ޤ��ʤ����餯1���ե������ʾ夢�륢������Ȥˤ��б��Ǥ��ޤ���ˡ�
+Twitterの特定のアカウントのフォロワーをリスト化します。
+なお、Twitter APIを使っているので、フォロワー数が一定限度に達するとエラーになります（おそらく1万フォロー以上あるアカウントには対応できません）。
 
-�ɤ߹��ߤ���λ����ȡ��ե�����Υץ��ե�����ʥ��������̾��̾�����ץ��ե����롢��ꡢURL�������������Ͽ���ˤ򥿥ֶ��ڤ�ǰ�Ԥ��Ȥˤ������Ƥ��ƥ����ȥ��ꥢ���и�����Τǡ����ԡ�&�ڡ����Ȥ���Excel�ե��������ǰ����ޤ���
+読み込みが終了すると、フォロワーのプロフィール（アカウント名、名前、プロフィール、場所、URL、アカウント登録日）をタブ区切りで一行ごとにした内容がテキストエリアが出現するので、コピー&ペーストしてExcelファイル等で扱えます。
 
 {{rawhtml
 <script type="text/javascript">
@@ -50,14 +50,14 @@ function load_twitter_rate_limit_status() {
 function check_rate_limit( data ) {
   var remaining_hits = data[ "remaining_hits" ];
   if ( remaining_hits == 0 ) {
-    alert( "Twitter API�θƤӽФ�������Ǥ���" );
-    throw( "Twitter API�θƤӽФ�������Ǥ���" );
+    alert( "Twitter APIの呼び出し制限中です。" );
+    throw( "Twitter APIの呼び出し制限中です。" );
   }
 }
 function preview_list() {
   var userid = document.forms.form1.userid.value;
   if ( !userid || userid == "" ) {
-    alert( "���������̾�����Ϥ��Ƥ�������" );
+    alert( "アカウント名を入力してください" );
     return false;
   }
   load_twitter_rate_limit_status();
@@ -102,25 +102,25 @@ function normalize_text( str ) {
 </script>
 <form action="" id="form1" onsubmit="preview_list();return false;">
 <div class="form">
-<label>���������̾: <input type="text" name="userid" size="40" /></label>
+<label>アカウント名: <input type="text" name="userid" size="40" /></label>
 <!--
-<label>�ꥹ���о�: <select name="target">
-<option value="followers">�ե���������Ƥ���</option>
-<option value="following">�ե��������Ƥ���</option>
+<label>リスト対象: <select name="target">
+<option value="followers">フォローされている</option>
+<option value="following">フォローしている</option>
 </select>
 </label>
-<label>���Ϸ���: <select name="format">
-<option value="html">ɽ����</option>
-<option value="text">�ƥ�����</option>
+<label>出力形式: <select name="format">
+<option value="html">表形式</option>
+<option value="text">テキスト</option>
 </select>
 -->
-<input type="submit" value=" ���� " />
+<input type="submit" value=" 出力 " />
 </div>
 </form>
 <div id="preview"></div>
 }}
 
-!! ����
-:2014-01-06:Twitter API v1 �ѻߤ�ȼ�ä�ư��ʤ��ݤ�������
-:2012-10-23:���Ǻ�����
+!! 履歴
+:2014-01-06:Twitter API v1 廃止に伴って動作しない旨を明記。
+:2012-10-23:初版作成。
 

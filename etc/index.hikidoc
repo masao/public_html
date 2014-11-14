@@ -1,32 +1,32 @@
-title: ¤½¤ÎÂ¾»¨Â¿¤Ê¥á¥âÎà¤Î¥Ú¡¼¥¸
-title.short: »¨Â¿
+title: ãã®ä»–é›‘å¤šãªãƒ¡ãƒ¢é¡ã®ãƒšãƒ¼ã‚¸
+title.short: é›‘å¤š
 date.modified: 2013-03-30
 css.content: .lastmodified { color: maroon; font-size: smaller; }
 
 {{ rawhtml '<!--#config timefmt="<span class=\"lastmodified\">[%Y-%m-%d]</span>" -->' }}
 
-»¨Â¿¤Ê³Ğ¤¨½ñ¤­¤½¤ÎÂ¾¤òÃÖ¤¤¤Æ¤¢¤ê¤Ş¤¹¡£  ¡Ê{{ rawhtml('<span class="lastmodified">[ÆüÉÕ]</span>') }}¤Ï¹¹¿·Æü¤ò¼¨¤·¤Ş¤¹¡Ë
+é›‘å¤šãªè¦šãˆæ›¸ããã®ä»–ã‚’ç½®ã„ã¦ã‚ã‚Šã¾ã™ã€‚  ï¼ˆ{{ rawhtml('<span class="lastmodified">[æ—¥ä»˜]</span>') }}ã¯æ›´æ–°æ—¥ã‚’ç¤ºã—ã¾ã™ï¼‰
 
 *[[JuNii2 Validator|./junii-validator/]] {{ rawhtml( '<!--#flastmod file="./junii-validator/validator.rhtml" -->') }}
-*[[Twitter¥Õ¥©¥í¥ï¡¼¥ê¥¹¥È²½¥Ä¡¼¥ë|./twitter-followerlist.html]] {{ rawhtml( '<!--#flastmod file="twitter-followerlist.html" -->') }}
-*[[ÆüËÜ¹ñÆâ¤Îµ¡´Ø¥ê¥İ¥¸¥È¥ê¥µ¥¤¥È¤ÎWebÇ§ÃÎ»ØÉ¸|./webometrics_rep_jp.html]] {{ rawhtml( '<!--#flastmod file="webometrics_rep_jp.hikidoc" -->') }}
-*[[Áªµó¹­Êó½¸|../senkyo-koho/]] {{ rawhtml( '<!--#flastmod virtual="../senkyo-koho/index.hikidoc" -->') }}
-*[[Filefox: ¥Ö¥Ã¥¯¥Ş¡¼¥¯¡¢³ÈÄ¥¡¢ÀßÄê¤Ê¤É|firefox.html]] {{ rawhtml( '<!--#flastmod file="firefox.hikidoc" -->') }}
-*[[¾ğÊó¸¡º÷´ØÏ¢¤ÎÏÀÊ¸»ï|ir-journal.html]] {{ rawhtml( '<!--#flastmod file="ir-journal.hikidoc" -->' }}
-*[[Unihan.txt - ²»·±¼­½ñ|unihan-onkun.html]] {{ rawhtml( '<!--#flastmod file="unihan-onkun.hikidoc" -->' }}
-*[[Í¹ÊØÈÖ¹æ¸¡º÷|zipcode.cgi]] {{ rawhtml( '<!--#flastmod file="zipcode.db" -->' }}
-*[[TrueType¥Õ¥©¥ó¥È¤Î¥Æ¥¹¥È|test-ttf.php]] {{ rawhtml( '<!--#flastmod file="test-ttf.php" -->' }}
-*[[ÏÀÊ¸Åê¹ÆÁ°¤Î¥Á¥§¥Ã¥¯¥ê¥¹¥È|paper-checklist.html]] {{ rawhtml( '<!--#flastmod file="paper-checklist.hikidoc" -->' }}
-*[[WikiClone¤Ë¤Ä¤¤¤Æ¤Î¥á¥â|wikiwiki.html]] {{ rawhtml( '<!--#flastmod file="wikiwiki.hikidoc" -->' }}
+*[[Twitterãƒ•ã‚©ãƒ­ãƒ¯ãƒ¼ãƒªã‚¹ãƒˆåŒ–ãƒ„ãƒ¼ãƒ«|./twitter-followerlist.html]] {{ rawhtml( '<!--#flastmod file="twitter-followerlist.html" -->') }}
+*[[æ—¥æœ¬å›½å†…ã®æ©Ÿé–¢ãƒªãƒã‚¸ãƒˆãƒªã‚µã‚¤ãƒˆã®WebèªçŸ¥æŒ‡æ¨™|./webometrics_rep_jp.html]] {{ rawhtml( '<!--#flastmod file="webometrics_rep_jp.hikidoc" -->') }}
+*[[é¸æŒ™åºƒå ±é›†|../senkyo-koho/]] {{ rawhtml( '<!--#flastmod virtual="../senkyo-koho/index.hikidoc" -->') }}
+*[[Filefox: ãƒ–ãƒƒã‚¯ãƒãƒ¼ã‚¯ã€æ‹¡å¼µã€è¨­å®šãªã©|firefox.html]] {{ rawhtml( '<!--#flastmod file="firefox.hikidoc" -->') }}
+*[[æƒ…å ±æ¤œç´¢é–¢é€£ã®è«–æ–‡èªŒ|ir-journal.html]] {{ rawhtml( '<!--#flastmod file="ir-journal.hikidoc" -->' }}
+*[[Unihan.txt - éŸ³è¨“è¾æ›¸|unihan-onkun.html]] {{ rawhtml( '<!--#flastmod file="unihan-onkun.hikidoc" -->' }}
+*[[éƒµä¾¿ç•ªå·æ¤œç´¢|zipcode.cgi]] {{ rawhtml( '<!--#flastmod file="zipcode.db" -->' }}
+*[[TrueTypeãƒ•ã‚©ãƒ³ãƒˆã®ãƒ†ã‚¹ãƒˆ|test-ttf.php]] {{ rawhtml( '<!--#flastmod file="test-ttf.php" -->' }}
+*[[è«–æ–‡æŠ•ç¨¿å‰ã®ãƒã‚§ãƒƒã‚¯ãƒªã‚¹ãƒˆ|paper-checklist.html]] {{ rawhtml( '<!--#flastmod file="paper-checklist.hikidoc" -->' }}
+*[[WikiCloneã«ã¤ã„ã¦ã®ãƒ¡ãƒ¢|wikiwiki.html]] {{ rawhtml( '<!--#flastmod file="wikiwiki.hikidoc" -->' }}
 *[[Useful Softwares on Windows|windows-software.html]] {{ rawhtml( '<!--#flastmod file="windows-software.hikidoc" -->' }}
-*[[Clover¾å¤ÇPAPI(Performance API)¤òÆ°ºî¤µ¤»¤ë|clover-papi.html]] {{ rawhtml( '<!--#flastmod file="clover-papi.html" -->' }}
-*[[RPM¤Î»È¤¤Êı|rpm.html]] {{ rawhtml( '<!--#flastmod file="rpm.hikidoc" -->' }}
-*[[Emacs20¤ÇUnicode¤ò»È¤ª¤¦!|emacs20-unicode.html]] {{ rawhtml( '<!--#flastmod file="emacs20-unicode.hikidoc" -->' }}
-*[[³Æ¼ïÀßÄê¥Õ¥¡¥¤¥ë|config.html]] {{ rawhtml( '<!--#flastmod file="config.hikidoc" -->' }}
+*[[Cloverä¸Šã§PAPI(Performance API)ã‚’å‹•ä½œã•ã›ã‚‹|clover-papi.html]] {{ rawhtml( '<!--#flastmod file="clover-papi.html" -->' }}
+*[[RPMã®ä½¿ã„æ–¹|rpm.html]] {{ rawhtml( '<!--#flastmod file="rpm.hikidoc" -->' }}
+*[[Emacs20ã§Unicodeã‚’ä½¿ãŠã†!|emacs20-unicode.html]] {{ rawhtml( '<!--#flastmod file="emacs20-unicode.hikidoc" -->' }}
+*[[å„ç¨®è¨­å®šãƒ•ã‚¡ã‚¤ãƒ«|config.html]] {{ rawhtml( '<!--#flastmod file="config.hikidoc" -->' }}
 
-°Ê²¼¤Î¤â¤Î¤Ï¤À¤¤¤ÖÀÎ¤Ë½ñ¤¤¤¿¤â¤Î¤Ç¡¢¹¹¿·¤ÎÍ½Äê¤Ï¤¢¤ê¤Ş¤»¤ó¡£
+ä»¥ä¸‹ã®ã‚‚ã®ã¯ã ã„ã¶æ˜”ã«æ›¸ã„ãŸã‚‚ã®ã§ã€æ›´æ–°ã®äºˆå®šã¯ã‚ã‚Šã¾ã›ã‚“ã€‚
 
-*[[Mozilla¤ÎÉÔ¶ñ¹ç¥á¥â|mozilla.html]]
-*[[¥Õ¥¡¥¤¥ëÌ¾¤Î°ì³çÊÑ´¹¤ÎÊıË¡|man-change-allfilename.html]]
-*[[Windows 95 ¥È¥é¥Ö¥ë¥·¥å¡¼¥Æ¥£¥ó¥°|man-win95-trouble.html]]
-*[[ÅÅÂî¥¢¥Ã¥×¥ì¥Ã¥È|calc.html]]
+*[[Mozillaã®ä¸å…·åˆãƒ¡ãƒ¢|mozilla.html]]
+*[[ãƒ•ã‚¡ã‚¤ãƒ«åã®ä¸€æ‹¬å¤‰æ›ã®æ–¹æ³•|man-change-allfilename.html]]
+*[[Windows 95 ãƒˆãƒ©ãƒ–ãƒ«ã‚·ãƒ¥ãƒ¼ãƒ†ã‚£ãƒ³ã‚°|man-win95-trouble.html]]
+*[[é›»å“ã‚¢ãƒƒãƒ—ãƒ¬ãƒƒãƒˆ|calc.html]]

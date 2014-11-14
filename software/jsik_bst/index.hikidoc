@@ -1,60 +1,60 @@
-title: �����μ��ز�� BibTeX�� ʸ�����ѥ�������ե�����
+title: 情報知識学会誌 BibTeX用 文献引用スタイルファイル
 date.modified: 2013-03-17
 date.available:2009-02-11
 subject: software
 
-[[�����μ��ز��|http://wwwsoc.nii.ac.jp/jsik/gakkaishi.html]]�μ�ɮ���Τ˱�ä���ʸ�����ѥ�������Ǥν��Ϥ�Ԥ� BibTeX ��������ե������������ޤ���
+[[情報知識学会誌|http://wwwsoc.nii.ac.jp/jsik/gakkaishi.html]]の執筆要領に沿った、文献引用スタイルでの出力を行う BibTeX スタイルファイルを公開します。
 
 {{div class="notice" style="color:red"
-����BibTeX���������ޤ�LaTeX�������뤬��������ޤ�����
-�ǿ��Ǥ�[[Sourceforge.jp�Υץ���������|http://sourceforge.jp/projects/latex-jsik/]]�������������ɤ��Ƥ���������
+このBibTeXスタイルを含むLaTeXスタイルが公開されました。
+最新版は[[Sourceforge.jpのプロジェクト|http://sourceforge.jp/projects/latex-jsik/]]からダウンロードしてください。
 }}
 
 {{div class="notice"
-'''����''': �ܥ�������ե�����Ϥ����ޤǤ�Ŀ��Ѥ˺���������������ʤ�ΤǤ���
-�ܥ�������ե�����ϳز�Ｙɮ���Τ˽������Ȥ�տޤ��Ƥ���ޤ��������ˤ�äƤϸ����ޤळ�Ȥ�����ޤ���
-�����ޤǤ��Խ��Ѱ�����Ӽ�ɮ���Τλؼ��˽����褦���ꤤ���ޤ���
-�ޤ�����������ե�����˲����������򸫤Ĥ����顢��פޤǤ�Ϣ���򤪴ꤤ���ޤ���
-�Խ��Ѱ��񤪤�ӳز��̳�ɤؤ��䤤��碌�Ϥʤ���ʤ��褦���ꤤ�������ޤ���
+'''注意''': 本スタイルファイルはあくまでも個人用に作成した、非公式なものです。
+本スタイルファイルは学会誌執筆要領に従うことを意図しておりますが、場合によっては誤りを含むことがあります。
+あくまでも編集委員および執筆要領の指示に従うようお願いします。
+また、スタイルファイルに何か問題等を見つけたら、高久までご連絡をお願いします。
+編集委員会および学会事務局への問い合わせはなさらないようお願いいたします。
 }}
 
-!!��������
-:2009-04-12:2009ǯ4��12���Ǥ������
-::���Ԥȥ����ȥ�֤ζ��ڤ�Ρ�:�ʥ�����ˡפ����˶�����������ʤ��褦�ѹ���
-::{{code 'InBook'}}, {{code 'InCollection'}}, {{code 'Misc'}}��������ʤɤǤ����ԡ������ȥ���ڤ꤬��:�סʥ�����ˤȤʤ�ʤ��Х�������
-:2009-04-09:2009ǯ4��9���Ǥ������
-::{{code 'Book'}}��������ʽ��ҡˤλ��ѻ��ˡ�{{code 'pages'}}�ʥڡ������˥ե�����ɤ���ά����Ƥ���ȥ��顼�ˤʤäƤ��ޤ��Х�������
-:2009-02-11:���Ǹ�����
+!!更新履歴
+:2009-04-12:2009年4月12日版を公開。
+::著者とタイトル間の区切りの「:（コロン）」の前に空白を挿入しないよう変更。
+::{{code 'InBook'}}, {{code 'InCollection'}}, {{code 'Misc'}}スタイルなどでの著者・タイトル区切りが「:」（コロン）とならないバグを修正。
+:2009-04-09:2009年4月9日版を公開。
+::{{code 'Book'}}スタイル（書籍）の使用時に、{{code 'pages'}}（ページ数）フィールドが省略されているとエラーになってしまうバグを修正。
+:2009-02-11:初版公開。
 
-!!�����������
+!!ダウンロード
 
-* [[jsik.bst]] ��2009ǯ4��12���ǡ�
+* [[jsik.bst]] （2009年4月12日版）
 
-!!��������ե�����ν�����
+!!スタイルファイルの出力例
 
-{{image jsik.png "��������ե�����ν�����" thumbs right}}
+{{image jsik.png "スタイルファイルの出力例" thumbs right}}
 
-���ޤϼ�ɮ���Τ˼�����Ƥ������Ƹ����Ƥߤ���ΤǤ���
+右図は執筆要領に示されている例を再現してみたものです。
 
-���ϥե������ [[jsik.bib]] �Ǥ���
+入力ファイルは [[jsik.bib]] です。
 
-PDF�����Ǥν������ [[jsik.pdf]] ��������������
+PDF形式での出力例は [[jsik.pdf]] をご覧ください。
 
-�ʤ����ܥ�������ե������ʸ��[7]��20��ǯ���̹渶�Ƥκ����κݤ˻��Ѥ�����Τ��Ȥˤ��Ƥ��ꡢ�����ǤΥƥ��ȤϤۤȤ�ɤ��Ƥ���ޤ���Τǡ����Τۤ��η����˴ؤ��Ƥϡ����ޤ����Ϥ���ʤ���ǽ��������ޤ���
-�ƥ��ȷ�̤��Τ餻����������й����Ǥ���
+なお、本スタイルファイルは文献[7]の20周年特別号原稿の作成の際に使用したものをもとにしており、自前でのテストはほとんどしておりませんので、このほかの形式に関しては、うまく出力されない可能性があります。
+テスト結果をお知らせいただければ幸いです。
 
-�긵�Ǥ�Linux���[[ptetex�ѥå������Ķ�|http://www.nn.iij4u.or.jp/~tutimura/tex/ptetex.html]]��ư���ǧ��ԤäƤ��ޤ���
+手元ではLinux上の[[ptetexパッケージ環境|http://www.nn.iij4u.or.jp/~tutimura/tex/ptetex.html]]で動作確認を行っています。
 
-!!�饤����
+!!ライセンス
 
-jBibTeX��Ʊ��Υ饤���󥹤Ȥ��ޤ��ʻ���: [[COPYRIGHT|http://www.ctan.org/tex-archive/languages/japanese/ptex/COPYRIGHT]]�ˡ�
+jBibTeXと同一のライセンスとします（参考: [[COPYRIGHT|http://www.ctan.org/tex-archive/languages/japanese/ptex/COPYRIGHT]]）。
 
-!!�ռ�
+!!謝辞
 
-�ܥ�������ե������ jBibTeX ��°�� junsrt.bst ��������ΰ������ѹ����ƺ���������ΤǤ���
-jBibTeX�����junsrt��������κ�ԤǤ��뾾�����줵��˴��դ������ޤ���
+本スタイルファイルは jBibTeX 付属の junsrt.bst スタイルの一部を変更して作成したものです。
+jBibTeXおよびjunsrtスタイルの作者である松井正一さんに感謝いたします。
 
-!!��Ϣ���
+!!関連リンク
 
-*[[�����μ��ز�ۡ���ڡ���|http://wwwsoc.nii.ac.jp/jsik/]]
-*[[�ؾ����μ��ز��ټ�ɮ����|http://wwwsoc.nii.ac.jp/jsik/gakkaishi/tokokitei/shippitsu0707.pdf]]
+*[[情報知識学会ホームページ|http://wwwsoc.nii.ac.jp/jsik/]]
+*[[『情報知識学会誌』執筆要領|http://wwwsoc.nii.ac.jp/jsik/gakkaishi/tokokitei/shippitsu0707.pdf]]

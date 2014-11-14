@@ -1,7 +1,8 @@
-#!/usr/local/bin/perl -w
+#!/usr/bin/env perl
 # $Id$
 
 use Pod::POM;
+use warnings;
 use strict;
 
 # create custom view
@@ -17,7 +18,7 @@ sub view_pod {
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="ja">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-JP">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" href="../../default.css" type="text/css">
 <link rev="made" href="mailto:$email">
 <title>$title</title>
@@ -28,7 +29,7 @@ sub view_pod {
 EOF
     my $footer = <<EOF;
 <hr>
-<address>¹âµ×²íÀ¸ (Takaku Masao)<br />
+<address>é«˜ä¹…é›…ç”Ÿ (Takaku Masao)<br />
 <a href="$home">$home</a>,
 <a href="mailto:$email">$email</a></address>
 <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
@@ -58,6 +59,13 @@ sub view_head2 {
 	. $item->title->present($self)
 	. "</h3>\n"
 	. $item->content->present($self);
+}
+
+sub encode {
+    my($self,$text) = @_;
+    return $text;
+    #require Encode;
+    #return Encode::encode("utf-8", $text, Encode::FB_XMLCREF());
 }
 
 package main;

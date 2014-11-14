@@ -1,28 +1,28 @@
-title: Firefox: ¥Ö¥Ã¥¯¥Ş¡¼¥¯¡¢³ÈÄ¥¡¢ÀßÄê¤Ê¤É
-title.short: FirefoxÀßÄê½¸
+title: Firefox: ãƒ–ãƒƒã‚¯ãƒãƒ¼ã‚¯ã€æ‹¡å¼µã€è¨­å®šãªã©
+title.short: Firefoxè¨­å®šé›†
 date.available: 2006-04-20
 date.modified:  2011-08-22
 subject: etc
 
-¾ïÍÑ¥Ö¥é¥¦¥¶¤È¤·¤Æ[[Mozilla Firefox|http://www.mozilla-japan.org/]]¤ò»È¤Ã¤Æ¤¤¤Ş¤¹¤¬¡¢Firefox¾å¤Ç¤Î¥Ö¥Ã¥¯¥Ş¡¼¥¯¡¢³ÈÄ¥¡¢ÀßÄê¾ğÊó¤Î¥á¥â¤Ç¤¹¡£
+å¸¸ç”¨ãƒ–ãƒ©ã‚¦ã‚¶ã¨ã—ã¦[[Mozilla Firefox|http://www.mozilla-japan.org/]]ã‚’ä½¿ã£ã¦ã„ã¾ã™ãŒã€Firefoxä¸Šã§ã®ãƒ–ãƒƒã‚¯ãƒãƒ¼ã‚¯ã€æ‹¡å¼µã€è¨­å®šæƒ…å ±ã®ãƒ¡ãƒ¢ã§ã™ã€‚
 
-!! ¥Ö¥Ã¥¯¥Ş¡¼¥¯
-!!!¥Ö¥Ã¥¯¥Ş¡¼¥¯¡¦¥­¡¼¥ï¡¼¥É
-*[[alc|http://eow.alc.co.jp/%s]] ¡Ê±Ñ¼­Ïº¸¡º÷; by ¥¢¥ë¥¯¡Ë
-*[[goo|http://dictionary.goo.ne.jp/search.php?MT=%s&kind=jn]] ¡ÊGooÆüËÜ¸ì¼­½ñ¡Ë
-//*[[en|http://encarta.msn.com/dictionary_/%s.html]] ¡Ê¥¨¥ó¥«¥ë¥¿±Ñ±Ñ¼­½ñ¡Ë
-*[[en|http://www.merriam-webster.com/dictionary/%s]] ¡ÊMerriam-Webster Dictionary; ±Ñ±Ñ¼­½ñ¡Ë
-*[[wp|http://ja.wikipedia.org/wiki/%E7%89%B9%E5%88%A5:Search?search=%s]] ¡Ê¥¦¥£¥­¥Ú¥Ç¥£¥¢ÆüËÜ¸ìÈÇ¡Ë
-//*[[kawaguchi|http://www.kawaguchi-lib.jp/opw1/OPW/OPWSRCHLIST.CSP?DB=LIB&FLG=SEARCH&MODE=1&opr%281%29=OR&qual%281%29=ALL&text%281%29=%s]] ¡ÊÀî¸ı»Ô¿Ş½ñ´ÛOPAC¸¡º÷¡Ë
-*[[100|http://100.yahoo.co.jp/search?p=%s]] ¡ÊYahoo!É´²Ê»öÅµ; ÆüËÜÂçÉ´²ÊÁ´½ñ¡Ë
-*[[adachi|https://www.lib.adachi.tokyo.jp/licsxp-opac/WOpacTifSchCmpdExecAction.do?condition1Text=%s]] ¡ÊÂ­Î©¶èÎ©¿Ş½ñ´ÛOPAC¸¡º÷¡Ë
+!! ãƒ–ãƒƒã‚¯ãƒãƒ¼ã‚¯
+!!!ãƒ–ãƒƒã‚¯ãƒãƒ¼ã‚¯ãƒ»ã‚­ãƒ¼ãƒ¯ãƒ¼ãƒ‰
+*[[alc|http://eow.alc.co.jp/%s]] ï¼ˆè‹±è¾éƒæ¤œç´¢; by ã‚¢ãƒ«ã‚¯ï¼‰
+*[[goo|http://dictionary.goo.ne.jp/search.php?MT=%s&kind=jn]] ï¼ˆGooæ—¥æœ¬èªè¾æ›¸ï¼‰
+//*[[en|http://encarta.msn.com/dictionary_/%s.html]] ï¼ˆã‚¨ãƒ³ã‚«ãƒ«ã‚¿è‹±è‹±è¾æ›¸ï¼‰
+*[[en|http://www.merriam-webster.com/dictionary/%s]] ï¼ˆMerriam-Webster Dictionary; è‹±è‹±è¾æ›¸ï¼‰
+*[[wp|http://ja.wikipedia.org/wiki/%E7%89%B9%E5%88%A5:Search?search=%s]] ï¼ˆã‚¦ã‚£ã‚­ãƒšãƒ‡ã‚£ã‚¢æ—¥æœ¬èªç‰ˆï¼‰
+//*[[kawaguchi|http://www.kawaguchi-lib.jp/opw1/OPW/OPWSRCHLIST.CSP?DB=LIB&FLG=SEARCH&MODE=1&opr%281%29=OR&qual%281%29=ALL&text%281%29=%s]] ï¼ˆå·å£å¸‚å›³æ›¸é¤¨OPACæ¤œç´¢ï¼‰
+*[[100|http://100.yahoo.co.jp/search?p=%s]] ï¼ˆYahoo!ç™¾ç§‘äº‹å…¸; æ—¥æœ¬å¤§ç™¾ç§‘å…¨æ›¸ï¼‰
+*[[adachi|https://www.lib.adachi.tokyo.jp/licsxp-opac/WOpacTifSchCmpdExecAction.do?condition1Text=%s]] ï¼ˆè¶³ç«‹åŒºç«‹å›³æ›¸é¤¨OPACæ¤œç´¢ï¼‰
 
 !!! Boolmarklet
-*[[¾å|javascript:if (location.hash) location.hash = ''; else if (location.search) location.search = ''; else if (location.pathname.charAt(location.pathname.length-1) == %22/%22) location = %22..%22; else if (location.pathname) location = %22.%22; void 0]]
+*[[ä¸Š|javascript:if (location.hash) location.hash = ''; else if (location.search) location.search = ''; else if (location.pathname.charAt(location.pathname.length-1) == %22/%22) location = %22..%22; else if (location.pathname) location = %22.%22; void 0]]
 *[[Bloglines|javascript:location.href='http://www.bloglines.com/sub/'+location.href]]
 *[[Delicious|javascript:location.href='http://del.icio.us/new/masao?v=4&url='+encodeURIComponent(location.href)+'&title='+encodeURIComponent(document.title)]]
 
-!! ³ÈÄ¥
+!! æ‹¡å¼µ
 *[[FireBug|https://addons.mozilla.org/ja/firefox/addon/1843]]
 *[[IE View|https://addons.mozilla.org/ja/firefox/addon/35]]
 *[[Link Widget|https://addons.mozilla.org/ja/firefox/addon/2933]]
@@ -32,16 +32,16 @@ subject: etc
 *[[QuickProxy|https://addons.mozilla.org/ja/firefox/addon/quickproxy/]]
 *[[Resizeable Textarea|https://addons.mozilla.org/ja/firefox/addon/3818]]
 *[[TwitterFox|https://addons.mozilla.org/ja/firefox/addon/5081]]
-!!!°Ê²¼¤ÏÍ¥ÀèÅÙ¤ÎÄã¤¤³ÈÄ¥µ¡Ç½¡Ê¤Û¤È¤ó¤É»È¤ï¤Ê¤¤¡Ë
+!!!ä»¥ä¸‹ã¯å„ªå…ˆåº¦ã®ä½ã„æ‹¡å¼µæ©Ÿèƒ½ï¼ˆã»ã¨ã‚“ã©ä½¿ã‚ãªã„ï¼‰
 *[[ChatZilla|https://addons.mozilla.org/ja/firefox/addon/16]]
 *[[Checky|http://checky.sourceforge.net/]]
 *[[Diggler|http://diggler.mozdev.org/]]
 *[[Linky|http://gemal.dk/mozilla/linky.html]]
 *[[Save Complete|https://addons.mozilla.org/ja/firefox/addon/4723]]
 *[[UndoCloseTab|http://mozilla.dorando.at/readme.html]]
-*[[Web Developer|http://www.infoaxia.com/tools/webdeveloper/]] ¡ÊÆüËÜ¸ìÈÇ¡Ë
+*[[Web Developer|http://www.infoaxia.com/tools/webdeveloper/]] ï¼ˆæ—¥æœ¬èªç‰ˆï¼‰
 
-!! ÀßÄê
-* ¡ÖÉ½¼¨¡×¡Á¡Ö¥Ä¡¼¥ë¥Ğ¡¼¡×¡Á¡Ö¥«¥¹¥¿¥Ş¥¤¥º...¡×¡Á¡ÖÉ½¼¨ÊıË¡:¡×¤ò¡Ö¥¢¥¤¥³¥ó¤ÈÊ¸»ú¡×¤Ë¤¹¤ë
-* PDF¥Õ¥¡¥¤¥ë¤ÏAcrobat Reader¤ò³°Éôµ¯Æ°¡Ê¥×¥é¥°¥¤¥ó¤Ï»È¤ï¤Ê¤¤¡Ë
-* [[about:config]]¤Ë¤ª¤¤¤Æ¡¢{{code network.standard-url.escape-utf8}} ¤ò {{code true}} ¤ËÀßÄê¡Ê¾åµ­Wikipedia¤Ø¤Î¥Ö¥Ã¥¯¥Ş¡¼¥¯¥­¡¼¥ï¡¼¥É¤òÍ­¸ú¤Ë¤¹¤ë¤¿¤á¡Ë
+!! è¨­å®š
+* ã€Œè¡¨ç¤ºã€ã€œã€Œãƒ„ãƒ¼ãƒ«ãƒãƒ¼ã€ã€œã€Œã‚«ã‚¹ã‚¿ãƒã‚¤ã‚º...ã€ã€œã€Œè¡¨ç¤ºæ–¹æ³•:ã€ã‚’ã€Œã‚¢ã‚¤ã‚³ãƒ³ã¨æ–‡å­—ã€ã«ã™ã‚‹
+* PDFãƒ•ã‚¡ã‚¤ãƒ«ã¯Acrobat Readerã‚’å¤–éƒ¨èµ·å‹•ï¼ˆãƒ—ãƒ©ã‚°ã‚¤ãƒ³ã¯ä½¿ã‚ãªã„ï¼‰
+* [[about:config]]ã«ãŠã„ã¦ã€{{code network.standard-url.escape-utf8}} ã‚’ {{code true}} ã«è¨­å®šï¼ˆä¸Šè¨˜Wikipediaã¸ã®ãƒ–ãƒƒã‚¯ãƒãƒ¼ã‚¯ã‚­ãƒ¼ãƒ¯ãƒ¼ãƒ‰ã‚’æœ‰åŠ¹ã«ã™ã‚‹ãŸã‚ï¼‰

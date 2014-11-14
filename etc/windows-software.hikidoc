@@ -1,38 +1,38 @@
-title: Windows¾å¤Ç»È¤Ã¤Æ¤¤¤ë¥½¥Õ¥È¥¦¥§¥¢Ã£
+title: Windowsä¸Šã§ä½¿ã£ã¦ã„ã‚‹ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢é”
 subject: etc
 date.available: 2001-10-29
 date.modified: 2013-07-28
 
-»ä¤¬Microsoft Windows¾å¤Ç»È¤Ã¤Æ¤¤¤ë¼ç¤Ê¥½¥Õ¥È¥¦¥§¥¢¤ò¥á¥â¤·¤Æ¤ª¤­¤Ş¤¹¡£
+ç§ãŒMicrosoft Windowsä¸Šã§ä½¿ã£ã¦ã„ã‚‹ä¸»ãªã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ã‚’ãƒ¡ãƒ¢ã—ã¦ãŠãã¾ã™ã€‚
 
-!!¾¦ÍÑ¥½¥Õ¥È¥¦¥§¥¢
+!!å•†ç”¨ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢
 :[[Microsoft|http://www.microsoft.com/japan/]]:Windows, Internet Explorer, MS Office, etc.
-:[[Astec X|http://www.astec.co.jp/]]:X¥µ¡¼¥Ğ
-:[[Norton AntiVirus|http://www.symantec.co.jp/]]:¥¦¥¤¥ë¥¹ÂĞºö
+:[[Astec X|http://www.astec.co.jp/]]:Xã‚µãƒ¼ãƒ
+:[[Norton AntiVirus|http://www.symantec.co.jp/]]:ã‚¦ã‚¤ãƒ«ã‚¹å¯¾ç­–
 
-!!(¥Õ¥ê¡¼/¥·¥§¥¢)¥¦¥§¥¢
+!!(ãƒ•ãƒªãƒ¼/ã‚·ã‚§ã‚¢)ã‚¦ã‚§ã‚¢
 
-:[[Free AVG|http://free.avg.co.jp/]]:¥¢¥ó¥Á¥¦¥¤¥ë¥¹¥½¥Õ¥È¥¦¥§¥¢
-:[[Google Chrome|http://www.google.co.jp/intl/ja/chrome/]]:Web¥Ö¥é¥¦¥¶
-:[[Firefox|http://www.mozilla-japan.org/]] (Mozilla Browser):Web¥Ö¥é¥¦¥¶ ¡Ê[[Firefox¤ÎÀßÄê¥á¥â|firefox.html]]¤â»²¾È¤Î¤³¤È¡Ë
-:[[TTSSH2|http://ttssh2.sourceforge.jp/]]:SSH/Telnet¥¯¥é¥¤¥¢¥ó¥È
-:[[PuTTY (ÆüËÜ¸ì²½ÈÇ)|http://hp.vector.co.jp/authors/VA024651/#PuTTYkj_top]]:SSH/Telnet¥¯¥é¥¤¥¢¥ó¥È
-:[[WinSCP|http://winscp.sourceforge.net/eng/]]:¥Õ¥¡¥¤¥ëÅ¾Á÷¥Ä¡¼¥ë¡£¡Êscp/sftp¤òGUI¤Ç¤Ç¤­¤ë¡Ë
-:[[Skype|http://www.skype.com/ja/]]:¥á¥Ã¥»¡¼¥¸¡¢¥Á¥ã¥Ã¥È¥Ä¡¼¥ë
-:[[Lhaplus|http://www.vector.co.jp/soft/win95/util/se169348.html]]:°µ½Ì¡¦²òÅà¥Ä¡¼¥ë
-:[[Cygwin|http://cygwin.com/]]:¥æ¡¼¥Æ¥£¥ê¥Æ¥£
-:[[Adobe Acrobat Reader|http://www.adobe.co.jp/]]:PDF¥ê¡¼¥À
+:[[Free AVG|http://free.avg.co.jp/]]:ã‚¢ãƒ³ãƒã‚¦ã‚¤ãƒ«ã‚¹ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢
+:[[Google Chrome|http://www.google.co.jp/intl/ja/chrome/]]:Webãƒ–ãƒ©ã‚¦ã‚¶
+:[[Firefox|http://www.mozilla-japan.org/]] (Mozilla Browser):Webãƒ–ãƒ©ã‚¦ã‚¶ ï¼ˆ[[Firefoxã®è¨­å®šãƒ¡ãƒ¢|firefox.html]]ã‚‚å‚ç…§ã®ã“ã¨ï¼‰
+:[[TTSSH2|http://ttssh2.sourceforge.jp/]]:SSH/Telnetã‚¯ãƒ©ã‚¤ã‚¢ãƒ³ãƒˆ
+:[[PuTTY (æ—¥æœ¬èªåŒ–ç‰ˆ)|http://hp.vector.co.jp/authors/VA024651/#PuTTYkj_top]]:SSH/Telnetã‚¯ãƒ©ã‚¤ã‚¢ãƒ³ãƒˆ
+:[[WinSCP|http://winscp.sourceforge.net/eng/]]:ãƒ•ã‚¡ã‚¤ãƒ«è»¢é€ãƒ„ãƒ¼ãƒ«ã€‚ï¼ˆscp/sftpã‚’GUIã§ã§ãã‚‹ï¼‰
+:[[Skype|http://www.skype.com/ja/]]:ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã€ãƒãƒ£ãƒƒãƒˆãƒ„ãƒ¼ãƒ«
+:[[Lhaplus|http://www.vector.co.jp/soft/win95/util/se169348.html]]:åœ§ç¸®ãƒ»è§£å‡ãƒ„ãƒ¼ãƒ«
+:[[Cygwin|http://cygwin.com/]]:ãƒ¦ãƒ¼ãƒ†ã‚£ãƒªãƒ†ã‚£
+:[[Adobe Acrobat Reader|http://www.adobe.co.jp/]]:PDFãƒªãƒ¼ãƒ€
 :[[Metafile to EPS Converter|http://wiki.lyx.org/Windows/MetafileToEPSConverter]]:
-:[[WMF2EPS|http://www.wmf2eps.de.vu/]]:Windows¥¢¥×¥ê¥±¡¼¥·¥ç¥ó¤Î½ĞÎÏ¤òEPS¤ØÊÑ´¹
-:[[Java2|http://java.sun.com/]]:¥×¥í¥°¥é¥ß¥ó¥°´Ä¶­
-:[[WinShot|http://www.woodybells.com/winshot.html]]:¥¹¥¯¥ê¡¼¥ó¥­¥ã¥×¥Á¥ã¡£
-:[[TeraPad|http://www5f.biglobe.ne.jp/~t-susumu/library/tpad.html]]:¥Æ¥­¥¹¥È¥¨¥Ç¥£¥¿
-:[[NTEmacs|http://www.gnu.org/software/emacs/windows/]]:¥¨¥Ç¥£¥¿
-:[[FileSum|http://www.vector.co.jp/soft/winnt/util/se030005.html]]:¥Ç¥£¥¹¥¯ÍÆÎÌ·×Â¬¥Ä¡¼¥ë
-:[[Xming|http://sourceforge.net/projects/xming]]:X¥µ¡¼¥Ğ¡ÊCygwin¥Ù¡¼¥¹¡Ë: Astec X¤¬»È¤¨¤Ê¤¤´Ä¶­¤Ç½ÅÊõ
-:[[De4Exif|http://www002.upp.so-net.ne.jp/candynag/digicam/de4exif.html]]:Exif ÆüÉÕ»ş¹ï¾ğÊóÉü¸µ¥Ä¡¼¥ë
-:[[Intel Application Accelerator|http://support.intel.co.jp/jp/support/chipsets/iaa/index.htm]]:CPU/IO¤Î¥Ñ¥Õ¥©¡¼¥Ş¥ó¥¹¸ş¾å¤¿¤á¤Î¥æ¡¼¥Æ¥£¥ê¥Æ¥£¡£
-:[[Seti@Home|http://setiathome.berkeley.edu/]]:¥æ¡¼¥Æ¥£¥ê¥Æ¥£
-:[[Ghostscript, Ghostview and GSview|http://www.cs.wisc.edu/~ghost/]] ¡Ê[[ÆüËÜ¸ìÂĞ±şÈÇ|http://auemath.aichi-edu.ac.jp/~khotta/ghost/]]¡Ë:PostScript¥Ó¥å¡¼¥ï
-:[[ºù»ş·×|http://www.venus.dti.ne.jp/~uno/index.html]]:»ş¹ïÆ±´ü(NTP)¡£¡ÊWin9x·ÏÎó¤Î¤ß¡Ë
-:[[HLPRMON|http://www.vector.co.jp/soft/win95/writing/se048195.html]]:lpr/lpd¤Ç¥×¥ê¥ó¥¿¤Ø¤Î°õºş¡£¡ÊWin9x·ÏÎó¤Î¤ß¡Ë
+:[[WMF2EPS|http://www.wmf2eps.de.vu/]]:Windowsã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã®å‡ºåŠ›ã‚’EPSã¸å¤‰æ›
+:[[Java2|http://java.sun.com/]]:ãƒ—ãƒ­ã‚°ãƒ©ãƒŸãƒ³ã‚°ç’°å¢ƒ
+:[[WinShot|http://www.woodybells.com/winshot.html]]:ã‚¹ã‚¯ãƒªãƒ¼ãƒ³ã‚­ãƒ£ãƒ—ãƒãƒ£ã€‚
+:[[TeraPad|http://www5f.biglobe.ne.jp/~t-susumu/library/tpad.html]]:ãƒ†ã‚­ã‚¹ãƒˆã‚¨ãƒ‡ã‚£ã‚¿
+:[[NTEmacs|http://www.gnu.org/software/emacs/windows/]]:ã‚¨ãƒ‡ã‚£ã‚¿
+:[[FileSum|http://www.vector.co.jp/soft/winnt/util/se030005.html]]:ãƒ‡ã‚£ã‚¹ã‚¯å®¹é‡è¨ˆæ¸¬ãƒ„ãƒ¼ãƒ«
+:[[Xming|http://sourceforge.net/projects/xming]]:Xã‚µãƒ¼ãƒï¼ˆCygwinãƒ™ãƒ¼ã‚¹ï¼‰: Astec XãŒä½¿ãˆãªã„ç’°å¢ƒã§é‡å®
+:[[De4Exif|http://www002.upp.so-net.ne.jp/candynag/digicam/de4exif.html]]:Exif æ—¥ä»˜æ™‚åˆ»æƒ…å ±å¾©å…ƒãƒ„ãƒ¼ãƒ«
+:[[Intel Application Accelerator|http://support.intel.co.jp/jp/support/chipsets/iaa/index.htm]]:CPU/IOã®ãƒ‘ãƒ•ã‚©ãƒ¼ãƒãƒ³ã‚¹å‘ä¸ŠãŸã‚ã®ãƒ¦ãƒ¼ãƒ†ã‚£ãƒªãƒ†ã‚£ã€‚
+:[[Seti@Home|http://setiathome.berkeley.edu/]]:ãƒ¦ãƒ¼ãƒ†ã‚£ãƒªãƒ†ã‚£
+:[[Ghostscript, Ghostview and GSview|http://www.cs.wisc.edu/~ghost/]] ï¼ˆ[[æ—¥æœ¬èªå¯¾å¿œç‰ˆ|http://auemath.aichi-edu.ac.jp/~khotta/ghost/]]ï¼‰:PostScriptãƒ“ãƒ¥ãƒ¼ãƒ¯
+:[[æ¡œæ™‚è¨ˆ|http://www.venus.dti.ne.jp/~uno/index.html]]:æ™‚åˆ»åŒæœŸ(NTP)ã€‚ï¼ˆWin9xç³»åˆ—ã®ã¿ï¼‰
+:[[HLPRMON|http://www.vector.co.jp/soft/win95/writing/se048195.html]]:lpr/lpdã§ãƒ—ãƒªãƒ³ã‚¿ã¸ã®å°åˆ·ã€‚ï¼ˆWin9xç³»åˆ—ã®ã¿ï¼‰

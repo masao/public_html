@@ -1,69 +1,69 @@
-title: PukiWiki ��Ϣ�ġ���
+title: PukiWiki 関連ツール
 date.modified: 2011-01-16
 date.available: 2009-02-08
 subject: software
 
-[[PukiWiki|http://pukiwiki.sourceforge.jp]]��Ϣ�Υġ���Ǥ���
+[[PukiWiki|http://pukiwiki.sourceforge.jp]]関連のツールです。
 
-�긵��PukiWiki�Ѥ˺��������ʰץץ饰��������ѥ�����ץȤ��֤��Ƥ����ޤ���
+手元のPukiWiki用に作成した簡易プラグインや作業用スクリプトを置いておきます。
 
-!! jstage�ץ饰����
+!! jstageプラグイン
 
-�ʳص��ѿ������������Ĥ���ؽ���ʸ�ץ�åȥե�����[[J-Stage|http://www.jstage.jst.go.jp]]��API�����Ѥ��ơ���ʸ�ܼ���ɽ������ץ饰����Ǥ���
+科学技術振興機構が運営する学術論文プラットフォーム[[J-Stage|http://www.jstage.jst.go.jp]]のAPIを利用して、論文目次を表示するプラグインです。
 
-:�����������:
+:ダウンロード:
 ::https://gist.github.com/762100
-::{{small '�ʥ���������ɸ�ˡ�plugin�ǥ��쥯�ȥ�� jstage.inc.php �Ȥ���̾�����֤������ִ�λ��'}}
-:�Ȥ���:
+::{{small '（ダウンロード後に、pluginディレクトリに jstage.inc.php という名前で置けば設置完了）'}}
+:使い方:
 ::{{code '#jstage(issn=0917-1436)'}}
-::{{small '�ʡؾ����μ��ز��٤��ܼ���ɽ�������'}}
-:����:
-::��1����: J-STAGE���Ф��븡�������ꡣISSN�ʳ��ˤ�Ǻܻ�̾�䥿���ȥ븡���ʤɤ��ǽ��������Ȥ��ƻȤ���񼰤ˤĤ��Ƥ�[[J-STAGE WebAPI|http://info.jstage.jst.go.jp/info_server_api/index.html]]��������������
+::{{small '（『情報知識学会誌』の目次を表示する）'}}
+:引数:
+::第1引数: J-STAGEに対する検索クエリ。ISSN以外にも掲載誌名やタイトル検索なども可能。クエリとして使える書式については[[J-STAGE WebAPI|http://info.jstage.jst.go.jp/info_server_api/index.html]]をご覧ください。
 
-!! calc �ץ饰����
+!! calc プラグイン
 
-���ξ�Ǵʰ׷׻���Ԥ��ץ饰����Ǥ���
-�׻�����񤱤С����ξ�Ƿ׻����Ʒ׻���̤��Ѵ�����ɽ�����ޤ���
+その場で簡易計算を行うプラグインです。
+計算式を書けば、その場で計算して計算結果に変換して表示します。
 
-:�����������:
+:ダウンロード:
 ::[[./calc_inc_php.txt]]
-::{{small '�ʥ���������ɸ�ˡ�plugin�ǥ��쥯�ȥ�� calc.inc.php ��̾�����Ѥ����֤������ִ�λ��'}}
-:�Ȥ���:
-::{{code '&calc(1 + 2 + 3);              // �� 6'}}
-::{{code '&calc(12345 * 1.05);           // �� 12962'}}
-::{{code '&calc(12345 * 1.05, 2);        // �� 12962.25'}}
-::{{code '&calc(12345 * 1.05, 2, comma); // �� 12,962.25'}}
-:����:
-::��1����: �׻������Τ�Ρ���ά�Բġ�
-::��2����: �������ʲ��η������ά����0�ʾ������ʲ���ɽ�����ʤ��ˡ�
-::��3����: 'comma'�Ȼ��ꤷ�����Τ�3�头�ȤΥ���ޤ�ɽ������ά���ϥ����ɽ��̵����
-:��ϢURL: [[PukiWiki/1.4/����ץ饰����/calc�ץ饰����|http://pukiwiki.sourceforge.jp/dev/?PukiWiki%2F1.4%2F%BC%AB%BA%EE%A5%D7%A5%E9%A5%B0%A5%A4%A5%F3%2Fcalc%A5%D7%A5%E9%A5%B0%A5%A4%A5%F3]] ���ܲȥ����Ⱦ�ξҲ�ڡ�����
+::{{small '（ダウンロード後に、pluginディレクトリに calc.inc.php と名前を変えて置けば設置完了）'}}
+:使い方:
+::{{code '&calc(1 + 2 + 3);              // ⇒ 6'}}
+::{{code '&calc(12345 * 1.05);           // ⇒ 12962'}}
+::{{code '&calc(12345 * 1.05, 2);        // ⇒ 12962.25'}}
+::{{code '&calc(12345 * 1.05, 2, comma); // ⇒ 12,962.25'}}
+:引数:
+::第1引数: 計算式そのもの。省略不可。
+::第2引数: 小数点以下の桁数。省略時は0（小数点以下を表示しない）。
+::第3引数: 'comma'と指定した場合のみ3桁ごとのカンマを表示。省略時はカンマ表示無し。
+:関連URL: [[PukiWiki/1.4/自作プラグイン/calcプラグイン|http://pukiwiki.sourceforge.jp/dev/?PukiWiki%2F1.4%2F%BC%AB%BA%EE%A5%D7%A5%E9%A5%B0%A5%A4%A5%F3%2Fcalc%A5%D7%A5%E9%A5%B0%A5%A4%A5%F3]] （本家サイト上の紹介ページ）
 
-!! tracker_mylist �ץ饰����
+!! tracker_mylist プラグイン
 
-PukiWiki��tracker�ץ饰����Ǻ������줿�ڡ������ΰ�������������ץ饰����ǡ�ɸ��ź�դ�tracker_list�Ȥ������㤦��ΤǤ�����ñ���ʸ���󸡺��ˤ��ե��륿��ǽ���ɲä��Ƥ���ޤ���
+PukiWikiのtrackerプラグインで作成されたページ群の一覧を生成するプラグインで、標準添付のtracker_listとは全く違うものですが、単純な文字列検索によるフィルタ機能を追加してあります。
 
-:�����������:
-::[[./tracker_mylist.inc.php.txt]] ��2009ǯ2��13���ǡ�
-::{{small '�ʥ���������ɸ�ˡ�plugin�ǥ��쥯�ȥ�� tracker_mylist.inc.php ��̾�����Ѥ����֤������ִ�λ��'}}
-:�Ȥ���:
+:ダウンロード:
+::[[./tracker_mylist.inc.php.txt]] （2009年2月13日版）
+::{{small '（ダウンロード後に、pluginディレクトリに tracker_mylist.inc.php と名前を変えて置けば設置完了）'}}
+:使い方:
 ::{{code '#tracker_mylist(Issue)'}}
 ::{{code '#tracker_mylist(Issue,IssueGoal/2009-03)'}}
-:����:
-::��1����: tracker�ڡ��������֤��Ƥ���ڡ����Υ١���̾��{{code Issue}}�Ƚ񤱤С�Issue/1, Issue/2 �ʤɤΥڡ�����ɽ���оݤȤʤ롣��ά�Բġ�
-::��2����: �ڡ��������ɽ���оݤȤʤ�ڡ�������ꤹ�븡��ʸ���󡣤���ʸ���󤬽񤫤�Ƥ���ڡ����Τߤ��оݤȤ��롣��ά�������ƤΥڡ�����ɽ�����롣
-:��ϢURL: [[tracker_plus.inc.php|http://www2.g-com.ne.jp/~jjyun/twilight-breeze/?Lab%2Ftracker_plus.inc.php]] - �ⵡǽ�� tracker_plus �ץ饰���󡣤��������������������줿��ǽ���󶡤��Ƥ��ޤ����ʼ긵�δĶ��Ǥ��ޤ����󥹥ȡ���Ǥ��ʤ��ä��Τǡ����Υץ饰�������ޤ�������
+:引数:
+::第1引数: trackerページ群の置いてあるページのベース名。{{code Issue}}と書けば、Issue/1, Issue/2 などのページが表示対象となる。省略不可。
+::第2引数: ページ群中で表示対象となるページを指定する検索文字列。その文字列が書かれているページのみを対象とする。省略時は全てのページを表示する。
+:関連URL: [[tracker_plus.inc.php|http://www2.g-com.ne.jp/~jjyun/twilight-breeze/?Lab%2Ftracker_plus.inc.php]] - 高機能版 tracker_plus プラグイン。こちらの方がより洗練された機能を提供しています。（手元の環境でうまくインストールできなかったので、このプラグインを作りました。）
 
-!!!��������
-:2009ǯ2��13��: �ڡ����ξ����˱����������֤�ɽ�����뤿��Υѥ����󸡺�ʸ������ѿ������ǽ�ˤ���({{code 'PLUGIN_TRACKER_MYLIST_CLOSED_PATTERN'}})��
-:2009ǯ2��8��: ���Ǹ�����
+!!!更新履歴
+:2009年2月13日: ページの状況に応じた解決状態を表示するためのパターン検索文字列を変数設定可能にした({{code 'PLUGIN_TRACKER_MYLIST_CLOSED_PATTERN'}})。
+:2009年2月8日: 初版公開。
 
 !! csv2tracker.rb
 
-CSV�����Υե������ tracker �ץ饰���󤬰����褦�ʷ����Υե�����˽��Ϥ���Ruby������ץȡ�
+CSV形式のファイルを tracker プラグインが扱うような形式のファイルに出力するRubyスクリプト。
 
-:�����������:
+:ダウンロード:
 ::[[./csv2tracker.rb]]
-:�Ȥ���:
+:使い方:
 ::{{kbd './csv2tracker.rb issue.csv'}}
-::�ե�����̾������Ȥ��ƻ��ꤷ�ơ��¹Ԥ���ȡ�PukiWiki�����Υƥ����ȥե�������������ޤ������Υե�����򤽤Τޤ�pukiwiki�� wiki �ǥ��쥯�ȥ��ž����������ǡ������Ǥ���褦�ˤʤ�ޤ����ڡ�����̾���ʥե�����̾�ˤ�������ƥƥ�ץ졼�Ȥϥ�������������Ƭ���ѿ����Ѥ����ޤ���
+::ファイル名を引数として指定して、実行すると、PukiWiki形式のテキストファイルを生成します。そのファイルをそのままpukiwikiの wiki ディレクトリに転送するだけで、閲覧できるようになります。ページの名前（ファイル名）および内容テンプレートはソースコード先頭の変数で変えられます。

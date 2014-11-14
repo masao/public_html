@@ -1,11 +1,11 @@
-title: �����Τ��Τ餻
+title: 以前のお知らせ
 date.modified: 2006-05-17
 
-:2003-12-18:[[Web����Х�|photo/]]��쿷���ޤ������Ƽ̿���URL���ѹ����ޤ������ޤ���������󥯤����������ʤäƤ���ʤ��Դ�������ʬ������ޤ����������Ť�ľ���Ƥ���ͽ��Ǥ���
-:2003-12-10:[[͹���ֹ渡��|etc/zipcode.cgi]]��������ޤ�����
-:2003-06-24:[[TrueType�ե���Ȥ�ɽ���ƥ���|etc/test-ttf.php]]��������ޤ�����
-:2002-12-24:[[���󥿡��˥塼�����������ƥ�|ipc-search/ipcnews/news.cgi]]��������ޤ�����
-:2002-12-14:[[��ʸ������Υ����å��ꥹ��|etc/paper-checklist.html]]��������ޤ�����
-:2002-11-24:[[Web����Х�|photo/]]�θ�����Ϥ�ޤ�����
-:2001-06-06:�ޥ���ξ㳲�Τ��ᡢ���Υǡ��������Ƽ����Ƥ��ޤ��ޤ��������[[Google|http://www.google.com/]]�Υ���å��夫�饳��ƥ�Ĥ��������ޤ�����������˱����Ǥ��ʤ�����ƥ�Ĥ����ޤ�¿��¸�ߤ��ޤ���
-:2000-03-XX:ULIS Search Engine(���⸡�������ƥ�)��'''�ĺ�'''���ޤ�����[[[���Τ餻����]|etc/ulissearchclose.txt]]
+:2003-12-18:[[Webアルバム|photo/]]を一新しました。各写真のURLも変更しました。まだ、一部リンクがおかしくなっているなど不完全な部分がありますが、少しづつ直していく予定です。
+:2003-12-10:[[郵便番号検索|etc/zipcode.cgi]]を公開しました。
+:2003-06-24:[[TrueTypeフォントの表示テスト|etc/test-ttf.php]]を公開しました。
+:2002-12-24:[[センターニュース閲覧システム|ipc-search/ipcnews/news.cgi]]を公開しました。
+:2002-12-14:[[論文投稿前のチェックリスト|etc/paper-checklist.html]]を公開しました。
+:2002-11-24:[[Webアルバム|photo/]]の公開を始めました。
+:2001-06-06:マシンの障害のため、過去のデータが全て失われてしまいました。主に[[Google|http://www.google.com/]]のキャッシュからコンテンツを復元しましたが、正常に閲覧できないコンテンツがいまだ多数存在します。
+:2000-03-XX:ULIS Search Engine(学内検索システム)は'''閉鎖'''しました。[[[お知らせ記事]|etc/ulissearchclose.txt]]

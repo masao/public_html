@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="EUC-JP"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
 <head xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-JP" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rev="made" href="mailto:tmasao@acm.org" />
 <link rel="stylesheet" href="<%= css %>" type="text/css" />
 <% if css_content %>
@@ -12,12 +12,8 @@
 </style>
 <% end %>
 <% if javascript_src %>
-<%    if javascript_src.size > 1 %>
-<%       javascript_src.each do |js| %>
+<%    [ javascript_src ].flatten.each do |js| %>
 <script type="text/javascript" src="<%= js %>"></script>
-<%       end %>
-<%    else %>
-<script type="text/javascript" src="<%= javascript_src %>"></script>
 <%    end %>
 <% end %>
 <title><%= title %></title>
@@ -45,10 +41,10 @@
 </div>
 <% end %>
 <% if date_available %>
-<div class="last-update">½éÈÇ¸ø³«Æü: <%= date_available.strftime( date_format ) %></div>
+<div class="last-update">åˆç‰ˆå…¬é–‹æ—¥: <%= date_available.strftime( date_format ) %></div>
 <% end %>
 <% if date_modified %>
-<div class="last-update">ºÇ½ª¹¹¿·Æü: <%= date_modified.strftime( date_format ) %></div>
+<div class="last-update">æœ€çµ‚æ›´æ–°æ—¥: <%= date_modified.strftime( date_format ) %></div>
 <% end %>
 <% if lang_switch.size > 1 %>
 <ul id="interlang">
@@ -68,26 +64,21 @@
 <hr />
 <% if not navi == "false" %>
 <div class="navi"><a href="<%= rootdir %>">HOME</a> &gt;
-<% subject.to_a.each do |category| %>
-<%   label = subject_label[category] || category %>
-<a class="subject" href="<%= rootdir %>/<%= category %>/"><%= label %></a> &gt;
+<% subject_path.each do |label, path| %>
+<a class="subject" href="<%= path %>"><%= label %></a> &gt;
 <% end %>
-<% if title_short %>
-<%= title_short %>
-<% else %>
-<%= title %>
-<% end %>
+<%= title_short( true ) %>
 </div>
 <% end %>
-<address>¹âµ×²íÀ¸ (Masao Takaku)<br />
+<address>é«˜ä¹…é›…ç”Ÿ (Masao Takaku)<br />
 <a href="http://masao.jpn.org/">http://masao.jpn.org/</a>,
 <a href="mailto:tmasao@acm.org">tmasao@acm.org</a></address>
 <ul id="social-service">
 <li class="hatena-bookmark">
-<a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard-balloon" title="¤³¤Î¥¨¥ó¥È¥ê¡¼¤ò¤Ï¤Æ¤Ê¥Ö¥Ã¥¯¥Ş¡¼¥¯¤ËÄÉ²Ã"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="¤³¤Î¥¨¥ó¥È¥ê¡¼¤ò¤Ï¤Æ¤Ê¥Ö¥Ã¥¯¥Ş¡¼¥¯¤ËÄÉ²Ã" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+<a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard-balloon" title="ã“ã®ã‚¨ãƒ³ãƒˆãƒªãƒ¼ã‚’ã¯ã¦ãªãƒ–ãƒƒã‚¯ãƒãƒ¼ã‚¯ã«è¿½åŠ "><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="ã“ã®ã‚¨ãƒ³ãƒˆãƒªãƒ¼ã‚’ã¯ã¦ãªãƒ–ãƒƒã‚¯ãƒãƒ¼ã‚¯ã«è¿½åŠ " width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
 </li>
 <li class="twitter-button">
-<a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja">¥Ä¥¤¡¼¥È</a>
+<a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja">ãƒ„ã‚¤ãƒ¼ãƒˆ</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </li>
 <li class="facebook-button">

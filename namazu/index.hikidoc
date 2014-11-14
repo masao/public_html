@@ -1,12 +1,12 @@
-title: ��ʸ���������ƥ�Namazu��Ϣ�ѥå�
+title: 全文検索システムNamazu関連パッチ
 date.modified: 2007-02-25
 date.available: 2000-03-01
 subject: software
 
-�䤬�Ŀ�Ū�ˡ�[[��ʸ���������ƥ�Namazu|http://www.namazu.org/]]�򤤤��äƤ�����ǡ����Τ˼����ޤ�ʤ��ä��ѥå��ʤɤ��ܥڡ������󶡤��Ƥ������ȻפäƤޤ���
+私が個人的に、[[全文検索システムNamazu|http://www.namazu.org/]]をいじってきた中で、本体に取り込まれなかったパッチなどを本ページで提供していこうと思ってます。
 
-:���ո����ѥѥå�:[[namazu-2.0-datequery.patch.gz|namazu-2.0-datequery.patch.gz]]
-::���ո�����Ԥ���褦�ˤ���ѥå��Ǥ����ۤȤ�ɥƥ��Ȥ�ԤäƤ��ޤ���Τǡ����ޤ�ư����ݾڤϤ���ޤ��󡣥ߥ������ä��ꡢ��ä��ɤ�������ˡ������ޤ����顢���Ҥ��Τ餻��������
-::����: [[[namazu-dev 1781]|http://www.namazu.org/ml/namazu-dev/msg01775.html]]
-:ULIS-CORE Metadata (ucmeta) �ѥѥå�:[[namazu2-ulisdl-1.2.patch.gz|namazu2-ulisdl-1.2.patch.gz]] (2002-03-04 ����) -- �ƥ�ץ졼�Ȥ�Ʊ����
-::[[�޽�۾������ �ǥ�������޽�ۡ�ULIS-DL��|http://lib.ulis.ac.jp/]]�Ǻ�������Ƥ���᥿�ǡ����θ������Ԥ���褦�ˤ���ѥå��Ǥ���
+:日付検索用パッチ:[[namazu-2.0-datequery.patch.gz|namazu-2.0-datequery.patch.gz]]
+::日付検索を行えるようにするパッチです。ほとんどテストを行っていませんので、うまく動作する保証はありません。ミスがあったり、もっと良い実装方法がありましたら、ぜひお知らせ下さい。
+::参考: [[[namazu-dev 1781]|http://www.namazu.org/ml/namazu-dev/msg01775.html]]
+:ULIS-CORE Metadata (ucmeta) 用パッチ:[[namazu2-ulisdl-1.2.patch.gz|namazu2-ulisdl-1.2.patch.gz]] (2002-03-04 公開) -- テンプレートを同梱。
+::[[図書館情報大学 ディジタル図書館（ULIS-DL）|http://lib.ulis.ac.jp/]]で作成されているメタデータの検索が行えるようにするパッチです。

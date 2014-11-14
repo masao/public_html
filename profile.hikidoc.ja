@@ -1,189 +1,189 @@
-title: ��ײ����η���
-title.short: ����
+title: 高久雅生の経歴
+title.short: 経歴
 subject:biography
 date.available: 2007-03-04
 date.modified: 2014-09-17
 
-[[{{image './images/201302-Sue.jpg' '���������ե����륺��ʪ�ۤˤơ�2013ǯ2���' thumbs 150px right}}|./profile-images.html]]
-:��̾:��� ���� �ʤ����� �ޤ�����
-:Ϣ����:
+[[{{image './images/201302-Sue.jpg' 'シカゴ・フィールズ博物館にて（2013年2月）' thumbs 150px right}}|./profile-images.html]]
+:氏名:高久 雅生 （たかく まさお）
+:連絡先:
 ::E-mail: tmasao@acm.org
 ::URL: http://masao.jpn.org/
-:Ϣ����ʿ����:
-::��305-8550 ��븩�Ĥ��лԽ���1-2 ������ؿ޽�۾����ǥ�����
+:連絡先（職場）:
+::〒305-8550 茨城県つくば市春日1-2 筑波大学図書館情報メディア系
 ::E-mail: masao@slis.tsukuba.ac.jp
 ::Tel: 029-859-1394
 // ::Fax: 029-859-2400
 
-!!����ơ���
-���󸡺�, �Żҿ޽��, �����ư, �ؽѥ��ߥ�˥��������, ����޽��
+!!研究テーマ
+情報検索, 電子図書館, 情報行動, 学術コミュニケーション, 専門図書館
 
-!!����
-:1998-03:[[��Ω�޽�۾������|http://www.ulis.ac.jp/jindex.html]] �޽�۾������ ´�ȡ��޽�۾���سػ�
-::´����ʸ��[[���ꥨ��ơ���󥰶����ѥ�����κ���|./pub/1998/grad-thesis.pdf]]�ס�VRML��Java���Ѥ����Ϸ��޻��ȥ����ƥ�ι��ۡ�
-:2000-03:[[��Ω�޽�۾������|http://www.ulis.ac.jp/jindex.html]]��ر� �޽�۾���ظ���� ��λ�����Ρʾ���ء�
-::������ʸ��[[Z39.50�˴�Ť����ǡ������������ƥ�ι���|./pub/2000/master-thesis.pdf]]�ס�Z39.50�ץ��ȥ���˴�Ť����ܸ�����󸡺������ƥ�θ��泫ȯ��
-:2004-09:[[�������|http://www.tsukuba.ac.jp/]]��ر� [[�޽�۾����ǥ��������|http://www.slis.tsukuba.ac.jp/grad/]] ��θ������ �ʾ����ǥ����칶�� ��λ����Ρʾ���ءˡ�
-::��''���ػ��� �޽�۾��������ر� �����ǥ�������� ��θ����������2004ǯ�����Ω���ˡ�Ͳ���ˡΧ�ˤ��޽�۾�����ؤ��ĳؤ��� �߹���������������ؤ˰��Ҥ��뤳�Ȥˤʤä�������ҡ�''
-::�����ʸ��[[���Ϣ�Ȳ�ǽ�ʾ����󶡥����ƥ�θ���: �Ѹ��ηϤ���Ӹ��������ƥ�ؤ�Ŭ��|./pub/2004/phd-thesis.pdf]]�ס��Ѹ��ηϡ������Ѹ쥷�����饹�α��������ƥࡢ���ۻٱ祷���ƥ�θ��泫ȯ��
+!!学歴
+:1998-03:[[国立図書館情報大学|http://www.ulis.ac.jp/jindex.html]] 図書館情報学部 卒業。図書館情報学学士
+::卒業論文「[[オリエンテーリング教育用ゲームの作成|./pub/1998/grad-thesis.pdf]]」（VRMLとJavaを用いた地形図参照システムの構築）
+:2000-03:[[国立図書館情報大学|http://www.ulis.ac.jp/jindex.html]]大学院 図書館情報学研究科 修了。修士（情報学）
+::修士論文「[[Z39.50に基づく書誌データ検索システムの構築|./pub/2000/master-thesis.pdf]]」（Z39.50プロトコルに基づく日本語書誌情報検索システムの研究開発）
+:2004-09:[[筑波大学|http://www.tsukuba.ac.jp/]]大学院 [[図書館情報メディア研究科|http://www.slis.tsukuba.ac.jp/grad/]] 博士後期課程 （情報メディア専攻） 修了。博士（情報学）。
+::※''入学時は 図書館情報大学大学院 情報メディア研究科 博士後期課程。（2004年４月、国立大学法人化の法律により図書館情報大学が閉学し、 在校生は全員筑波大学に移籍することになったため移籍）''
+::博士論文「[[相互連携可能な情報提供システムの研究: 用語体系および検索システムへの適用|./pub/2004/phd-thesis.pdf]]」（用語体系、階層用語シソーラスの閲覧システム、構築支援システムの研究開発）
 
-!!����
-:2013-03 - ����:
-::'''[[�������|http://www.tsukuba.ac.jp/]] [[�޽�۾����ǥ�����|http://www.slis.tsukuba.ac.jp/grad/]] �ڶ���'''
-::���󸡺��������ư���Żҿ޽�ۡ��ɥ�����ȥ����ӥ����ζ���ȸ���˽�����
+!!職歴
+:2013-03 - 現在:
+::'''[[筑波大学|http://www.tsukuba.ac.jp/]] [[図書館情報メディア系|http://www.slis.tsukuba.ac.jp/grad/]] 准教授'''
+::情報検索、情報行動、電子図書館、ドキュメントサービス等の教育と研究に従事。
 :2008-09 - 2013-03:
-::'''[[ʪ�����������浡��|http://www.nims.go.jp/]] [[�ʳؾ���|http://www.nims.go.jp/infrastructure/scientific-information/index.html]] ��Ǥ���󥸥˥�'''
-::ʪ��������ʬ��Υǥ�����饤�֥�꡼�����ƥ�ι��ۡ�NIMS����������ι��ۡ�����޽�ۤα��ġ�
-::�ʥ������Ruby, Solr, eSciDoc, Fedora Commons, SOA, Java, JSP/JSF
+::'''[[物質・材料研究機構|http://www.nims.go.jp/]] [[科学情報室|http://www.nims.go.jp/infrastructure/scientific-information/index.html]] 主任エンジニア'''
+::物質・材料分野のデジタルライブラリーシステムの構築。NIMS研究者総覧の構築。専門図書館の運営。
+::（スキル）Ruby, Solr, eSciDoc, Fedora Commons, SOA, Java, JSP/JSF
 :2006-01 - 2008-08:
-::'''[[���󡦥����ƥฦ�浡��|http://www.rois.ac.jp/]] [[���ΰ�ͻ�縦�楻�󥿡�|http://www.rois.ac.jp/tric/]] ͻ��ץ�����������Ǥ������ʥݥ��ɥ��������'''
-::�����󥱡����θ���˽���������Ծ��󥵡��Фι��ۡʹ��⸦��ԤΥǡ�����층������ץ��ȥ����ץ����ƥ�ι��ۡˡ�[[�ʸ�������ǡ����١�������|http://kaken.nii.ac.jp/]]��[[����ԥ꥾��С�����|http://rns.nii.ac.jp/]]�γ�ȯ�˶���
-::�ʸ���ơ��ޡ˾����󥱡���, �Żҿ޽��, ̾��, ���Ʊ��, ����ԥͥåȥ��, �Ļ벽
-::�ʥ������Perl, Web API, XML, Ruby
+::'''[[情報・システム研究機構|http://www.rois.ac.jp/]] [[新領域融合研究センター|http://www.rois.ac.jp/tric/]] 融合プロジェクト特任研究員（ポスドク研究員）'''
+::情報リンケージの研究に従事。研究者情報サーバの構築（国内研究者のデータを一元化するプロトタイプシステムの構築）。[[科研費報告書データベースβ版|http://kaken.nii.ac.jp/]]、[[研究者リゾルバーα版|http://rns.nii.ac.jp/]]の開発に協力
+::（研究テーマ）情報リンケージ, 電子図書館, 名寄せ, 書誌同定, 研究者ネットワーク, 可視化
+::（スキル）Perl, Web API, XML, Ruby
 :2004-10 - 2005-12:
-::'''[[��Ω����ظ����|http://www.nii.ac.jp/]] ����ػ񸻸��楻�󥿡� �ץ��������ȸ�����ʥݥ��ɥ��������'''
-::[[NTCIR-5 WEB������|http://research.nii.ac.jp/ntcweb/]]�α��ġ�Web�����ƥ��ȥ��쥯�����ι��ۡ�
-::�ʸ���ơ��ޡ�Web���������ƥ�, ���󸡺�ɾ��, ���������󥸥�, �ƥ��ȥ��쥯�����
-::�ʥ������Perl, Ruby, GETA, Web API, trec_eval
+::'''[[国立情報学研究所|http://www.nii.ac.jp/]] 情報学資源研究センター プロジェクト研究員（ポスドク研究員）'''
+::[[NTCIR-5 WEBタスク|http://research.nii.ac.jp/ntcweb/]]の運営。Web検索テストコレクションの構築。
+::（研究テーマ）Web検索システム, 情報検索評価, サーチエンジン, テストコレクション
+::（スキル）Perl, Ruby, GETA, Web API, trec_eval
 
-!!������
+!!教育歴
 
-:[[�������|http://www.tsukuba.ac.jp/]]:
-::���μ����󡦿޽�۳����- ������ü½���2014ǯ��-��
-::���μ����󡦿޽�۳����- ����-1��2013ǯ��-��
-::���μ����󡦿޽�۳����- �μ����󥷥��ƥ�½���2013ǯ��-��
-::���μ����󡦿޽�۳���/�����ǥ������������- �ǥ�������ɥ�����ȡ�2013ǯ��-��
-::����ر� �޽�۾����ǥ�������� �������������- �ǥ�����ɥ�����ȡ�2013ǯ��-��
-::����ر� �޽�۾����ǥ�������� �������������- �����ǥ����齬B��2013ǯ��-��
-:[[����������|http://www.keio.ac.jp/]] ���йֻ�:
-::��2007ǯ�١�ʸ�����˴��þ������ - ����Ū�ʥ���ԥ塼����ƥ饷�ιֵ��ȱ齬
-:[[�ḫ���|http://www.tsurumi-u.ac.jp/]] ���йֻ�:
-::��2005ǯ�١�ʸ�����˾�����ñ齬II�ʥ��󥿡��ͥåȡ�- WWW, HTML�λ��Ȥߤβ����Web�ڡ��������α齬
-::��2005ǯ�١�ʸ�����˾�����ñ齬III�ʥ��ץꥱ��������- Microsoft Windows���ץꥱ�������ΰ���Ȥ���ɽ�׻����եȥ�����Excel�λ���ˡ����⡢�齬
-:[[�޽�۾������|http://www.ulis.ac.jp/]] �ƥ������󥰥���������ȡ�TA��:
-::��2000ǯ�١��޽�۾�������˥ץ�����ߥ󥰸���齬I - C�����Ȥä��齬
-::��2000ǯ�١��޽�۾�������˥ץ�����ߥ󥰸���齬II - C�����Ȥä��齬
-::��2000ǯ�١��޽�۾�������˴��þ������ - HTML�λ��Ȥߤ�PowerPoint/Excel/Photoshop�ʤɤΥ��ץꥱ�������λ���ˡ�β���ȱ齬
+:[[筑波大学|http://www.tsukuba.ac.jp/]]:
+::（知識情報・図書館学類）- 情報基礎実習（2014年度-）
+::（知識情報・図書館学類）- 統計-1（2013年度-）
+::（知識情報・図書館学類）- 知識情報システム実習（2013年度-）
+::（知識情報・図書館学類/情報メディア創成学類）- ディジタルドキュメント（2013年度-）
+::（大学院 図書館情報メディア研究科 博士前期課程）- デジタルドキュメント（2013年度-）
+::（大学院 図書館情報メディア研究科 博士前期課程）- 情報メディア演習B（2013年度-）
+:[[慶應義塾大学|http://www.keio.ac.jp/]] 非常勤講師:
+::（2007年度・文学部）基礎情報処理 - 基礎的なコンピュータリテラシの講義と演習
+:[[鶴見大学|http://www.tsurumi-u.ac.jp/]] 非常勤講師:
+::（2005年度・文学部）情報基礎演習II（インターネット）- WWW, HTMLの仕組みの解説とWebページ作成の演習
+::（2005年度・文学部）情報基礎演習III（アプリケーション）- Microsoft Windowsアプリケーションの一例として表計算ソフトウェアExcelの使用法を解説、演習
+:[[図書館情報大学|http://www.ulis.ac.jp/]] ティーチングアシスタント（TA）:
+::（2000年度・図書館情報学部）プログラミング言語演習I - C言語を使った演習
+::（2000年度・図書館情報学部）プログラミング言語演習II - C言語を使った演習
+::（2000年度・図書館情報学部）基礎情報処理 - HTMLの仕組みやPowerPoint/Excel/Photoshopなどのアプリケーションの使用法の解説と演習
 
-!!! ���ߥʡ��ֻ���
+!!! セミナー講師等
 
-:[[ʿ��26ǯ�� ��Ω����ظ���� �ؽѾ��󥷥��ƥ�����������å�|http://www.nii.ac.jp/hrd/ja/ciws/h26/curritxt.html]]��2014ǯ7��-11�����������Ķ��:�����ѼԤι�ư�ѻ��Τ���μ�ˡ�פ��ꤹ��ֵ������Ĵ�����楢�ɥХ�������ô����
-:[[ʿ��25ǯ�� ��Ω����ظ���� �ؽѾ��󥦥��֥����ӥ�ô���Ը���|http://www.nii.ac.jp/hrd/ja/portal/h25/curritxt.html]]��2013ǯ7�ʡ����ʡ���ԡ�:��ή�̤���ؽѾ��󥳥�ƥ�ġפ��ꤹ��ֵ���ô����
-:[[ʿ��23ǯ�� ��3������Կ޽�۸����ή������Կ޽�۶���IT�ֽ���|http://www.code4lib.jp/2011/11/670/]] ��2011ǯ11������˭����:OPAC�����ƥ�����Τ���μ�ˡ��OPAC+�ױ齬�ˤ�����ե�����ơ�������ô����
-:[[��Ω����ظ���� �ؽѥݡ����븦��|http://www.nii.ac.jp/hrd/ja/portal/h23/curritxt.html]] ��2011ǯ8�����������Ķ��:�ֳؽѾ���ή�̤�¸����뵻�ѡ�1�ˡ����ǵ��ѡפ��ꤷ�ƹֵ����������Υե�����ơ�������ô����
-:[[��6��Code4Lib JAPAN�������å�|http://d.hatena.ne.jp/josei002-10/20110728/1311816868]] ��2011ǯ7����θ�̾�Ų��ԡ�:OPAC�����ƥ�����Τ���μ�ˡ��OPAC+�ױ齬�ˤ�����ե�����ơ�������ô����
-:[[��3��Code4Lib JAPAN�������å�|http://d.hatena.ne.jp/josei002-10/20101213/1292251500]] ��2010ǯ12�ʡ�温�����ԡ�:������API, RSS���Ѥ����������åפˤ�����ֻդȥե�����ơ�������ô����
-:[[��2��Code4Lib JAPAN�������å�|http://d.hatena.ne.jp/josei002-10/20101025/1288003806]] ��2010ǯ10���븩�Ĥ��лԡ�:�����֥������������μ���Ū�ʲ��ϼ�ˡ�Υ������åױ齬�ˤ�����ֻդȥե�����ơ�������ô����
-:Yahoo! Japan���ѹֱ�� ��2007ǯ8�����Թ����:�ְۼ�ǡ����١�������˴�Ť�����Ծ��󸡺��פ��ꤷ������Ծ�����濴�Ȥ���ؽѾ���ή�̤Υȥԥå��ˤĤ��ƹֱ顣
+:[[平成26年度 国立情報学研究所 学術情報システム総合ワークショップ|http://www.nii.ac.jp/hrd/ja/ciws/h26/curritxt.html]]（2014年7月-11月・東京都千代田区）:「利用者の行動観察のための手法」と題する講義および調査研究アドバイザーを担当。
+:[[平成25年度 国立情報学研究所 学術情報ウェブサービス担当者研修|http://www.nii.ac.jp/hrd/ja/portal/h25/curritxt.html]]（2013年7月・福岡県福岡市）:「流通する学術情報コンテンツ」と題する講義を担当。
+:[[平成23年度 第3回東京都図書館研究交流会・東京都図書館協会IT講習会|http://www.code4lib.jp/2011/11/670/]] （2011年11月・東京都豊島区）:OPACシステム改善のための手法「OPAC+」演習におけるファシリテーションを担当。
+:[[国立情報学研究所 学術ポータル研修|http://www.nii.ac.jp/hrd/ja/portal/h23/curritxt.html]] （2011年8月・東京都千代田区）:「学術情報流通を実現する技術（1）‐要素技術」と題して講義、受講生のファシリテーションを担当。
+:[[第6回Code4Lib JAPANワークショップ|http://d.hatena.ne.jp/josei002-10/20110728/1311816868]] （2011年7月・愛知県名古屋市）:OPACシステム改善のための手法「OPAC+」演習におけるファシリテーションを担当。
+:[[第3回Code4Lib JAPANワークショップ|http://d.hatena.ne.jp/josei002-10/20101213/1292251500]] （2010年12月・福井県あわら市）:ウェブAPI, RSSを用いたワークショップにおける講師とファシリテーションを担当。
+:[[第2回Code4Lib JAPANワークショップ|http://d.hatena.ne.jp/josei002-10/20101025/1288003806]] （2010年10月・茨城県つくば市）:ウェブアクセスログの実践的な解析手法のワークショップ演習における講師とファシリテーションを担当。
+:Yahoo! Japan技術講演会 （2007年8月・東京都港区）:「異種データベース統合に基づく研究者情報検索」と題し、研究者情報を中心とする学術情報流通のトピックについて講演。
 
-!!����¾�γ�ư
-:��ݸ����Ͼ��󥷥��ƥ�Ѱ��� �Ѱ� (2013 - ):
-::���ܸ����ϸ��泫ȯ�����ˤ������ݸ����Ͼ��󥷥��ƥ��INIS�ǡ����١����ˤθ�Ƥ�Ѱ��Ȥ��ƻ��á�
-:����ѥ��󥯥��󥿡����İѰ��� �����ƥൻ��ʬ�ʲ� (2012 - ):
-::�����ƥൻ��ʬ�ʲ�Ѱ���-2013�˵ڤ�ͭ���ԡ�2013-�ˤȤ��ƻ��á�
+!!その他の活動
+:国際原子力情報システム委員会 委員 (2013 - ):
+::日本原子力研究開発機構における国際原子力情報システム（INISデータベース）の検討委員として参加。
+:ジャパンリンクセンター運営委員会 システム技術分科会 (2012 - ):
+::システム技術分科会委員（-2013）及び有識者（2013-）として参加。
 :[[saveMLAK|http://savemlak.jp]] (2011 - ):
-::��������̺Ҹ��Ω���夬�ä���ʪ�ۡ��޽�ۡ�ʸ��ۡ���̱������ʸ�������Ϣ���ߤ���ҡ��߱����ν�����󶡡��ٱ��ư��ԤäƤ��륳�ߥ�˥ƥ��������ƥ�ô���Ȥ��ƻ��á�
+::東日本大震災後に立ち上がった博物館、図書館、文書館、公民館等の文化教育関連施設の被災・救援情報の集約と提供、支援活動を行っているコミュニティ。システム担当として参加。
 :[[Code4Lib JAPAN|http://www.code4lib.jp]] (2010 - ):
-::���ܤˤ�����޽�۴�Ϣ�ε��ѼԤΥ��ߥ�˥ƥ����޽�ۿ������Ĥ���ν�����2010ǯ�ˡ��������С��Ȥ��Ƴ�ư��
-:[[DRF���ѥ���󥰥��롼��|http://drf.lib.hokudai.ac.jp/]] ��2009 - 2012ǯ��:
-::���ܹ���ˤ����뵡�إ�ݥ��ȥꥳ�ߥ�˥ƥ��ε��ѥ��ݡ��ȥ���󥰥��롼�פ˻���
-:[[CRES��Ʊ����ץ���������|http://cres.jpn.org/]] ��2007 - ��:
-::Web��ˤ��������õ����ư������׵�ι�¤������ܻؤ���Ʊ����ץ��������ȡ����ץ��С��ΰ�ͤȤ��Ƴ�ư��
-::�ʥ�����˥桼���¸�, �֥饦������, ������¬����
-:[[Next-L�ץ���������|http://www.next-l.jp]] ��2007 - ��:
-::�����ץ󥽡������եȥ������ˤ�뼡����޽�ۥ����ƥ�γ�ȯ���ܻؤ��ץ��������ȡ��컲�üԤȤ��ƥץ��������Ȥ˻��衣
-:ULIS-DL���������ƥ� ��2002 - 2003ǯ��:
-::Namazu�ˤ��᥿�ǡ��������ġ���ε�ǽ���ۡ���ȯ��
-::�ʥ������C����, Perl, WWW/CGI, HTML, Unix, SGML, Dublin Core
-:�Ĥ��л�IT���ðѰ� ��2001 - 2002ǯ��:
-::�Ĥ��л�IT���ȿ�ʤΤ���γ�������Ѱ��񡣿޽��������ѥ����ƥ��GIS�γ���������ơ�
-:[[LA�����|http://phase.hpcc.jp/la/]] ��1998 - 2004ǯ��:
-::����������Web������CD-ROM���������������ô����
-::�ʥ������HTML, PDF, �����Ѵ�, Perl
-:[[Namazu Project|http://www.namazu.org/]]����ʸ�������󥸥�Namazu�γ�ȯ�ץ��������ȡ����ߥå����� ��1998 - 2000ǯ��:
-::��ǽ�ƥ��Ȥ���ӥ���������ǽ���ɲäʤɤ�ô��
-::�ʥ������C����, Perl, WWW/CGI, HTML, Unix
-:Japan/MARC���������ƥ�γ�ȯ ��1998 - 2001ǯ��:
-::���ܽ��Japan/MARC�ǡ�����13ǯʬ100���쥳���ɤ�ʳ�������Web������
-::�ʥ������Japan/MARC, C����, Perl, DBM, �����ơ���
+::日本における図書館関連の技術者のコミュニティ。図書館振興財団からの助成（2010年）。コアメンバーとして活動。
+:[[DRF技術ワーキンググループ|http://drf.lib.hokudai.ac.jp/]] （2009 - 2012年）:
+::日本国内における機関リポジトリコミュニティの技術サポートワーキンググループに参加
+:[[CRES共同研究プロジェクト|http://cres.jpn.org/]] （2007 - ）:
+::Web上における情報探索行動や情報要求の構造理解を目指す共同研究プロジェクト。主要メンバーの一人として活動。
+::（スキル）ユーザ実験, ブラウザログ, 視線計測装置
+:[[Next-Lプロジェクト|http://www.next-l.jp]] （2007 - ）:
+::オープンソースソフトウェアによる次世代図書館システムの開発を目指すプロジェクト。一参加者としてプロジェクトに参画。
+:ULIS-DL検索システム （2002 - 2003年）:
+::Namazuによるメタデータ検索ツールの機能構築、開発。
+::（スキル）C言語, Perl, WWW/CGI, HTML, Unix, SGML, Dublin Core
+:つくば市IT懇話委員 （2001 - 2002年）:
+::つくば市IT事業推進のための学生諮問委員会。図書館相互利用システムやGISの活用等を提案。
+:[[LA研究会|http://phase.hpcc.jp/la/]] （1998 - 2004年）:
+::研究会資料のWeb公開、CD-ROM化、広報補助等を担当。
+::（スキル）HTML, PDF, 画像変換, Perl
+:[[Namazu Project|http://www.namazu.org/]]（全文検索エンジンNamazuの開発プロジェクト・コミッター） （1998 - 2000年）:
+::機能テストおよびアクセス機能の追加などを担当
+::（スキル）C言語, Perl, WWW/CGI, HTML, Unix
+:Japan/MARC閲覧システムの開発 （1998 - 2001年）:
+::日本書誌Japan/MARCデータ約13年分100万レコードを（学内限定）Web公開。
+::（スキル）Japan/MARC, C言語, Perl, DBM, 磁気テープ
 
-!!����
-:ʪ�����������浡������Ĺ�޹׸��ޡ�2013ǯ��:�ָ��������SAMURAI�γ�ȯ����ӥ����ȥ꡼�����ӡפι׸��˴ؤ��Ƽ��ޤ��ޤ�����
-:��10������μ��ز���ʸ�ޡ�2011ǯ��:�ؾ����μ��ز���20��3��ǺܤΡ֥��������̤ȥ桼�������ΰ㤤��Web����õ����ư��Ϳ����ƶ�: ��屿ư�ǡ�������ӱ�����ư�������Ѥ���ʬ�ϡסʹ���ͳ��, �����, �ƣ�ҤȤ�, �������ڻ�, ����ŵ�� �Ȥζ����ˤ����ޤ��ޤ����ʢ�[[�ܺ�|http://www.jsik.jp/?paper_award2011]]��
-:��2��CiNii������API����ƥ���ͥ���ޡ�2010ǯ��:��ȯ���ץꥱ�������֤դ�ä�CiNii��Ϣ���Ը����פ����ޤ��ޤ����ʢ�[[�ܺ�|http://ci.nii.ac.jp/info/ja/web_api_contest_2010_results.html]]��
+!!受賞
+:物質・材料研究機構理事長賞貢献賞（2013年）:「研究者総覧SAMURAIの開発およびアウトリーチ実績」の貢献に関して受賞しました。
+:第10回情報知識学会論文賞（2011年）:『情報知識学会誌』20巻3号掲載の「タスク種別とユーザ特性の違いがWeb情報探索行動に与える影響: 眼球運動データおよび閲覧行動ログを用いた分析」（江草由佳, 寺井仁, 齋藤ひとみ, 三輪眞木子, 神門典子 との共著）が受賞しました（→[[詳細|http://www.jsik.jp/?paper_award2011]]）
+:第2回CiNiiウェブAPIコンテスト優秀賞（2010年）:開発アプリケーション「ふわっとCiNii関連著者検索」が受賞しました（→[[詳細|http://ci.nii.ac.jp/info/ja/web_api_contest_2010_results.html]]）
 
-!!�Ƕ�μ������ʪ
+!!最近の主な著作物
 {{recent_publication}}
 
-��ȯɽʸ��������[[ȯɽʸ������|./pub/]]�򻲾ȤΤ��ȡ�
+全発表文献一覧は[[発表文献一覧|./pub/]]を参照のこと。
 
-!!��°�ض���
+!!所属学協会
 *[[ACM (Association for Computing Machinery)|http://www.acm.org/]]
-*[[��������ز�|http://www.ipsj.or.jp/]]
-*[[�����μ��ز�|http://www.jsik.jp/]]������ 2008ǯ��-��
-*[[����ʳص��Ѷ���|http://www.infosta.or.jp]]��ɾ�İ� 2011ǯ��; ����Ѱ� 2012ǯ�١�
-*[[���ܿ޽�۾���ز�|http://wwwsoc.nii.ac.jp/jslis/]]
-*[[���ܥǡ����١����ز�|http://www.dbsj.org/]]
+*[[情報処理学会|http://www.ipsj.or.jp/]]
+*[[情報知識学会|http://www.jsik.jp/]]（理事 2008年度-）
+*[[情報科学技術協会|http://www.infosta.or.jp]]（評議員 2011年度; 諮問委員 2012年度）
+*[[日本図書館情報学会|http://wwwsoc.nii.ac.jp/jslis/]]
+*[[日本データベース学会|http://www.dbsj.org/]]
 
-!!!�ز����ˤ������ư
-*���ܿ޽�۾���ز� ����Ѱ���Ѱ���2014ǯ-��
-*�����μ��ز�������2008ǯ-��
-*�����μ��إե������¹԰Ѱ���2005ǯ, 2006ǯ, 2007ǯ, 2008ǯ, 2010ǯ, 2011ǯ, 2012ǯ��
-*�����μ��ز�ǯ�����¹԰Ѱ���2009ǯ, 2010ǯ��
-*�����μ��ز�ǯ����� ��꾩�������Ѱ�Ĺ��2014ǯ��
-*����ʳص��Ѷ��� ����Ѱ���2012ǯ��
-*����ʳص��Ѷ��� ɾ�İѰ���2011ǯ��
-*����ʳص��Ѷ��� ���ؾ���βʳؤȵ��ѡ��Խ��Ѱ���2009ǯ-2013ǯ��; ��趨�ϰѰ���2013ǯ-��
-*��������ز� [[��ʸ��ʥǡ����١�����(TOD)|http://ipsjtod.kyoto-su.ac.jp/]] �Խ��Ѱ���2008ǯ-2012ǯ��
-*��������ز� [[������äȥ����������Ѹ����|http://ipsj-ifat.org/]] ���İѰ���2007ǯ-2011ǯ��
-*Code4Lib JAPAN����ե���󥹼¹԰Ѱ� (2013ǯ, 2014ǯ��
+!!!学会等における活動
+*日本図書館情報学会 研究委員会委員（2014年-）
+*情報知識学会理事（2008年-）
+*情報知識学フォーラム実行委員（2005年, 2006年, 2007年, 2008年, 2010年, 2011年, 2012年）
+*情報知識学会年次大会実行委員（2009年, 2010年）
+*情報知識学会年次大会 若手奨励賞選定委員長（2014年）
+*情報科学技術協会 諮問委員（2012年）
+*情報科学技術協会 評議委員（2011年）
+*情報科学技術協会 会誌『情報の科学と技術』編集委員（2009年-2013年）; 企画協力委員（2013年-）
+*情報処理学会 [[論文誌（データベース）(TOD)|http://ipsjtod.kyoto-su.ac.jp/]] 編集委員（2008年-2012年）
+*情報処理学会 [[情報基礎とアクセス技術研究会|http://ipsj-ifat.org/]] 運営委員（2007年-2011年）
+*Code4Lib JAPANカンファレンス実行委員 (2013年, 2014年）
 
-!!!��ݲ�����ˤ������ư
-*The 10th NTCIR Conference Travel Support Committee member ��2013ǯ��
-**[[��10��NTCIR�������å���������|http://research.nii.ac.jp/ntcir/ntcir-10/conference/]]�ˤ����ƥȥ�٥륵�ݡ��ȰѰ���Ѱ���ô����
-*The 5th NTCIR Workshop Meeting Publication Co-Chair��2005ǯ��
-**[[��5��NTCIR�������å���������|http://research.nii.ac.jp/ntcir/ntcir-ws5/]]�¹԰Ѱ����ץ������ǥ��󥰥��Խ�����ӥץ쥼��ơ�������ô����
+!!!国際会議等における活動
+*The 10th NTCIR Conference Travel Support Committee member （2013年）
+**[[第10回NTCIRワークショップ成果報告会|http://research.nii.ac.jp/ntcir/ntcir-10/conference/]]においてトラベルサポート委員会委員を担当。
+*The 5th NTCIR Workshop Meeting Publication Co-Chair（2005年）
+**[[第5回NTCIRワークショップ成果報告会|http://research.nii.ac.jp/ntcir/ntcir-ws5/]]実行委員。プロシーディングス編集およびプレゼンテーションを担当。
 
-//:��ʸ����
-//::��������ز���ʸ���2007ǯ��
-//::�����μ��ز���2006ǯ��
-//::SACSIS 2005 ��2005ǯ��
+//:論文査読
+//::情報処理学会論文誌（2007年）
+//::情報知識学会誌（2006年）
+//::SACSIS 2005 （2005年）
 
-!!���������
-*2014ǯ��-2016ǯ��: �ʳظ���������� ���׸���(C) ��[[��ﵭ�Ҥο������ǡ�����ǥ�FRBR�ڤ�RDA�˴�Ť������󥷥��ƥ�θ���|http://kaken.nii.ac.jp/ja/p/26330362]]�סʲ����ֹ�:26330362�˸�����ɽ��
-*2012ǯ��: ��Ω����ظ���� ���緿��Ʊ���� �֥桼�����äˤ��̺Ҵ�Ϣ�����Linked Open Data���˴ؤ��븦��סʸ�����ɽ��: [[����쵱|http://researchmap.jp/i2k/]]�� ��Ʊ����� ��[[saveMLAK�ץ���������|http://savemlak.jp]]��
-*2010ǯ��-2011ǯ��: �ʳظ���������� ��긦��(B) ��[[���إ�ݥ��ȥꡦ�����ǡ����١�����Ϣ�Ȳ�ǽ������IDή�̥����ƥ�|http://kaken.nii.ac.jp/ja/p/22700253]]�סʲ����ֹ�:22700253�˸�����ɽ��
-*2009ǯ��-2011ǯ��: �ʳظ���������� ���׸���(C) ��[[�����ֶ��֤��Ф�����ǥ����αƶ���ʬ�Ϥ˴ؤ��븦��|http://kaken.nii.ac.jp/ja/p/21500107]]�סʲ����ֹ�:21500107�ˡʸ�����ɽ��:[[�ܺ����|http://www.mz.cs.it-chiba.ac.jp/]]�� ����ʬô��
-*2009ǯ��-2011ǯ��: �ʳظ���������� ���׸���(B) ��[[�����������Ϥ�ǧ��Ū����ˤ�����ѼԤ�õ��Ū�ʾ��󸡺���ư�θ���|http://kaken.nii.ac.jp/ja/p/21300096]]�סʲ����ֹ�:21300096�ˡʸ�����ɽ��:[[����ŵ��|http://research.nii.ac.jp/~kando/]]�� Ϣ�ȸ����
-*2008ǯ��-2011ǯ��: ��Ω����ظ���� ���緿��Ʊ���� �־���õ����ư��ǧ�Υ�ǥ�ι��ۤȤ��α��Ѥ˴ؤ��븦��סʸ�����ɽ��: [[�ƣ�ҤȤ�|http://rhino.ics.aichi-edu.ac.jp/]]�� ��Ʊ����� ��[[CRES�ץ���������|http://cres.jpn.org/]]��
-*2006ǯ��-2008ǯ��: �ʳظ���������� ���׸���(C) ��[[�絬��WWW�ǡ�������ξ���񸻹��ۤΤ���ι���ǽʬ�������θ���|http://kaken.nii.ac.jp/ja/p/18300037]]�סʲ����ֹ�:18300037�ˡʸ�����ɽ��:[[�绳�ɻ�|http://research.nii.ac.jp/~oyama/]]�� ����ʬô��
-*2006ǯ��-2008ǯ��: �ʳظ���������� �����ΰ踦��ʷײ踦��A01-00-04�� ��[[������ȯ����ξ��󸡺����׵���|http://research.nii.ac.jp/ix/A01-00-04/]]�סʲ����ֹ�:[[18049069|http://kaken.nii.ac.jp/ja/p/18049069]]�ˡʸ�����ɽ��:[[��ã��|http://www.nii.ac.jp/index.php?action=pages_view_main&page_id=129]]�� ���涨�ϼ�
-*2005ǯ��-2007ǯ��: �ʳظ���������� ��긦��(B) ��[[WWW�奵���ȥޥåפκ�����¥�ʤΤ����ʬ�����Ѹ��η��󶡥����ƥ�θ���|http://kaken.nii.ac.jp/ja/p/17700130]]�סʲ����ֹ�:17700130�� ������ɽ��
-*2004ǯ��-2005ǯ��: �ʳظ���������� �����ΰ踦��ʷײ踦��A02-00-1�� ��[[�ԶѼ�����ƥ�Ĥ��Ф��������ѥ����ƥ�˴ؤ��븦��|http://kaken.nii.ac.jp/ja/p/13224087 ]]�סʲ����ֹ�:13224087�ˡʸ�����ɽ��:[[��ã��|http://www.nii.ac.jp/index.php?action=pages_view_main&page_id=129]]�� ���涨�ϼ�
+!!研究助成金
+*2014年度-2016年度: 科学研究費補助金 基盤研究(C) 「[[書誌記述の新しいデータモデルFRBR及びRDAに基づく書誌情報システムの研究|http://kaken.nii.ac.jp/ja/p/26330362]]」（課題番号:26330362）研究代表者
+*2012年度: 国立情報学研究所 公募型共同研究 「ユーザ参加による震災関連情報のLinked Open Data化に関する研究」（研究代表者: [[大向一輝|http://researchmap.jp/i2k/]]） 共同研究者 （[[saveMLAKプロジェクト|http://savemlak.jp]]）
+*2010年度-2011年度: 科学研究費補助金 若手研究(B) 「[[機関リポジトリ・外部データベースと連携可能な著者ID流通システム|http://kaken.nii.ac.jp/ja/p/22700253]]」（課題番号:22700253）研究代表者
+*2009年度-2011年度: 科学研究費補助金 基盤研究(C) 「[[ウェブ空間に対する紙メディアの影響力分析に関する研究|http://kaken.nii.ac.jp/ja/p/21500107]]」（課題番号:21500107）（研究代表者:[[宮崎収兄|http://www.mz.cs.it-chiba.ac.jp/]]） 研究分担者
+*2009年度-2011年度: 科学研究費補助金 基盤研究(B) 「[[検索ログ解析と認知的研究による利用者の探索的な情報検索行動の研究|http://kaken.nii.ac.jp/ja/p/21300096]]」（課題番号:21300096）（研究代表者:[[神門典子|http://research.nii.ac.jp/~kando/]]） 連携研究者
+*2008年度-2011年度: 国立情報学研究所 公募型共同研究 「情報探索行動の認知モデルの構築とその応用に関する研究」（研究代表者: [[齋藤ひとみ|http://rhino.ics.aichi-edu.ac.jp/]]） 共同研究者 （[[CRESプロジェクト|http://cres.jpn.org/]]）
+*2006年度-2008年度: 科学研究費補助金 基盤研究(C) 「[[大規模WWWデータからの情報資源構築のための高性能分類方式の研究|http://kaken.nii.ac.jp/ja/p/18300037]]」（課題番号:18300037）（研究代表者:[[大山敬三|http://research.nii.ac.jp/~oyama/]]） 研究分担者
+*2006年度-2008年度: 科学研究費補助金 特定領域研究（計画研究A01-00-04） 「[[情報爆発時代の情報検索基盤技術|http://research.nii.ac.jp/ix/A01-00-04/]]」（課題番号:[[18049069|http://kaken.nii.ac.jp/ja/p/18049069]]）（研究代表者:[[安達淳|http://www.nii.ac.jp/index.php?action=pages_view_main&page_id=129]]） 研究協力者
+*2005年度-2007年度: 科学研究費補助金 若手研究(B) 「[[WWW上サイトマップの再利用促進のための分散型用語体系提供システムの研究|http://kaken.nii.ac.jp/ja/p/17700130]]」（課題番号:17700130） 研究代表者
+*2004年度-2005年度: 科学研究費補助金 特定領域研究（計画研究A02-00-1） 「[[不均質コンテンツに対する情報活用システムに関する研究|http://kaken.nii.ac.jp/ja/p/13224087 ]]」（課題番号:13224087）（研究代表者:[[安達淳|http://www.nii.ac.jp/index.php?action=pages_view_main&page_id=129]]） 研究協力者
 
-!!!�����ⶥ��Ū���
-*2013ǯ��: �޽�۾����ǥ����ϥץ��������ȸ����˨��Ū����ٱ�ˡ�������ء� �ֿ��������쥳���ɥ�ǥ�FRBR�ڤ�RDA���б����뼡������Ͽ�����ƥ�ι��ۡ׸�����ɽ��
+!!!機関内競争的資金
+*2013年度: 図書館情報メディア系プロジェクト研究（萌芽的研究支援）（筑波大学） 「新しい書誌レコードモデルFRBR及びRDAに対応する次世代目録システムの構築」研究代表者
 
-!!��ʤ���¾
-:�ʽ���:�޽�۾�����ء�1998ǯ��
-:�Ѹ�:TOEIC������ 925����2013ǯ��
-:����������Ѽ�:���2���1996ǯ��
-::��饷���ƥॢ�ɥߥ˥��ȥ졼����1997ǯ��
-:�׻���������:
-::�ʥץ�����ߥ󥰸���� C, Ruby, Perl, Unix������([kb]sh, [t]csh), Java
-::�ʥץ�åȥե������UNIX��OS�δ����и���ͭ����: Sun Solaris(2.6,7,8,9,10), Linux(Redhat,Turbolinux etc.), IBM AIX (4.3), SGI IRIX(5.x)
+!!資格その他
+:司書資格:図書館情報大学（1998年）
+:英語:TOEICスコア 925点（2013年）
+:情報処理技術者:国家2種（1996年）
+::初級システムアドミニストレータ（1997年）
+:計算機スキル:
+::（プログラミング言語） C, Ruby, Perl, Unixシェル([kb]sh, [t]csh), Java
+::（プラットフォーム）UNIX系OSの管理経験を有する: Sun Solaris(2.6,7,8,9,10), Linux(Redhat,Turbolinux etc.), IBM AIX (4.3), SGI IRIX(5.x)
 
-!!��Ϣ���
+!!関連リンク
 *[[Twitter|http://twitter.com/tmasao]]
 *[[Facebook|http://www.facebook.com/MasaoTakaku]]
 *[[GitHub|https://github.com/masao]]
 *[[Delicious|http://www.delicious.com/masao]]
 *[[LinkedIn|http://www.linkedin.com/in/masaotakaku]]
 *[[Mixi|http://mixi.jp/show_profile.pl?id=246364]]
-*[[������ظ�������� (TRIOS)|http://www.trios.tsukuba.ac.jp/researcher/0000003432]]
+*[[筑波大学研究者総覧 (TRIOS)|http://www.trios.tsukuba.ac.jp/researcher/0000003432]]
 *[[Researchmap|http://researchmap.jp/masao]]
-*[[JST ReaD�ǡ����١���������Ծ���|http://read.jst.go.jp/public/cs_ksh_008EventAction.do?action4=event&lang_act4=J&judge_act4=2&knkysh_name_code=1000302228]]
-*[[NII����ԥ꥾��С�|http://rns.nii.ac.jp/nr/1000000399271]]
+*[[JST ReaDデータベース・研究者情報|http://read.jst.go.jp/public/cs_ksh_008EventAction.do?action4=event&lang_act4=J&judge_act4=2&knkysh_name_code=1000302228]]
+*[[NII研究者リゾルバー|http://rns.nii.ac.jp/nr/1000000399271]]
 *[[ResearcherID| http://www.researcherid.com/rid/B-5097-2009]] {{rawhtml "<span id='badgeCont275303' style='width:26px'><script src='http://labs.researcherid.com/mashlets?el=badgeCont275303&mashlet=badge&showTitle=false&className=a&rid=B-5097-2009&size=small'></script></span>"}}
 *[[ORCID|https://orcid.org/0000-0002-2458-6988]]
 *[[ResearchGate|https://www.researchgate.net/profile/Masao_Takaku/]]

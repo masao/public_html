@@ -1,8 +1,9 @@
-#!/usr/local/bin/perl -w
+#!/usr/bin/env perl
 # $Id$
 
 # NEWS を index.html に反映させる。
 
+use warnings;
 use strict;
 main();
 sub main {

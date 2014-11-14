@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="ja">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-JP">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" href="../../default.css" type="text/css">
 <link rev="made" href="mailto:tmasao@acm.org">
 <title>imgs2html - generate HTML files from images files
@@ -21,63 +21,63 @@
 [<b>--icon-<i>role</i>-file</b>=FILE] [<b>--nav-<i>role</i>-str</b>=STR] [<b>--logo</b>]
 [<b>--notitle</b>] [<b>--unit-str</b>=STR] [<b>--version</b>] [<b>--help</b>]</p>
 <h2>DESCRIPTION</h2>
-<p>imgs2html��ʣ���β����ե�����򸵤�HTML�ե������������ޤ���</p>
-<p>���Υ�����ץȤ�¹Ԥ���ȥ����ȥǥ��쥯�ȥ�ˤ�������ե������õ����
-�����ΰ����ȳƲ�������ʤ�HTML�ե����뷲���������ޤ���</p>
-<p>���������HTML�ե������ʸ�������ɤ�ISO-2022-JP�Ǥ���</p>
+<p>imgs2htmlは複数の画像ファイルを元にHTMLファイルを作成します。</p>
+<p>このスクリプトを実行するとカレントディレクトリにある画像ファイルを探し、
+それらの一覧と各画像からなるHTMLファイル群を生成します。</p>
+<p>生成されるHTMLファイルの文字コードはISO-2022-JPです。</p>
 <h2>OPTIONS</h2>
-<p>�ʲ��Υ��ץ��������Ǥ��ޤ���</p>
+<p>以下のオプションを指定できます。</p>
 <ul>
 <li><a name="item__b__i__b____b___interactive__b_"></a><b><b>-i</b>, <b>--interactive</b></b>
-<p>����Ū���������λ����ԤäƤ���¹ԤǤ��ޤ���
-�ʥǥե���Ȥ����ü¹Ԥ��ޤ����</p>
-<p>�ʤ������ü¹Ի������ꤷ���ͤϡ� <i>.imgs2html.options</i> �ե��������¸���졢
-���ټ¹Ԥ����ݤˤϤ����ͤ��Ȥ���褦�ˤʤ�ޤ���</p>
+<p>対話的に設定事項の指定を行ってから実行できます。
+（デフォルトは対話実行しません）</p>
+<p>なお、対話実行時に設定した値は、 <i>.imgs2html.options</i> ファイルに保存され、
+再度実行した際にはその値が使われるようになります。</p>
 </li>
 <li><a name="item__b__s__b____b___suffix_SUFFIX__b_"></a><b><b>-s</b>, <b>--suffix=SUFFIX</b></b>
-<p>�оݤȤ�������γ�ĥ�Ҥ���ꤷ�ޤ���
-�ʥǥե���Ȥ� gif �Ǥ���</p>
+<p>対象とする画像の拡張子を指定します。
+（デフォルトは gif です）</p>
 </li>
 <li><a name="item__b__r__b____b___thumbnail_ratio_SIZE__b_"></a><b><b>-r</b>, <b>--thumbnail-ratio=SIZE</b></b>
-<p>����͡�������θ������������Ψ����ꤷ�ޤ���
-�ʥǥե���Ȥ� 15% �Ǥ���</p>
+<p>サムネール画像の元画像からの比率を指定します。
+（デフォルトは 15% です）</p>
 </li>
 <li><a name="item__b___reverse__b_"></a><b><b>--reverse</b></b>
-<p>������ե�����̾�εս���¤٤ޤ���</p>
+<p>画像をファイル名の逆順に並べます。</p>
 </li>
 <li><a name="item__b__u__b____b___homepage_url_URL__b_"></a><b><b>-u</b>, <b>--homepage-url=URL</b></b>
-<p>�ۡ����URL����ꤷ�ޤ���
-�ʥǥե���ȤǤϡ�1�˴Ķ��ѿ� <i>$WWW_HOME</i> �����ꤵ��Ƥ���С������� 2��<i>$USER</i> �����ꤵ��Ƥ���� "/~$USER"�������Ķ��ѿ������̵꤬������ <i>../</i> �Ȥʤ�ޤ�����</p>
+<p>ホームのURLを指定します。
+（デフォルトでは、1）環境変数 <i>$WWW_HOME</i> が設定されていれば、その値 2）<i>$USER</i> が設定されていれば "/~$USER"、これら環境変数の設定が無い場合は <i>../</i> となります。）</p>
 </li>
 <li><a name="item__b___icon_dir_DIR__b_"></a><b><b>--icon-dir=DIR</b></b>
-<p>�ʥӥ�������󡦥�������Υǥ��쥯�ȥ�
-�ʥǥե���Ȥ� <i>../image/</i> �Ǥ���</p>
+<p>ナビゲーション・アイコンのディレクトリ
+（デフォルトは <i>../image/</i> です）</p>
 </li>
 <li><a name="item__b___style_URL__b_"></a><b><b>--style=URL</b></b>
-<p>HTML�ե���������Ѥ��륹�����륷���Ȥ�URL����ꤷ�ޤ���
-�ʥǥե���ȤǤϥ������륷���ȤϻȤ��ޤ����</p>
+<p>HTMLファイルで利用するスタイルシートのURLを指定します。
+（デフォルトではスタイルシートは使いません）</p>
 </li>
 <li><a name="item__b___logo__b_"></a><b><b>--logo</b></b>
-<p>������ɽ�����ޤ���
-�ʥǥե���ȤǤ�ɽ�����ޤ����</p>
+<p>ロゴを表示します。
+（デフォルトでは表示しません）</p>
 </li>
 <li><a name="item__b___notitle__b_"></a><b><b>--notitle</b></b>
-<p>�����ȥ�ʡ����ܡˤ�ɽ�����ޤ���
-�ʥǥե���ȤǤ�ɽ�����ޤ���</p>
-<p>���ꤵ�줿��硢<code>&lt;title&gt;</code> ���Ǥˤϲ����ե�����̾������ޤ���</p>
+<p>タイトル（○枚目）を表示しません。
+（デフォルトでは表示します）</p>
+<p>指定された場合、<code>&lt;title&gt;</code> 要素には画像ファイル名が入ります。</p>
 </li>
 <li><a name="item__b___htmlonly__b_"></a><b><b>--htmlonly</b></b>
-<p>HTML ���ϤΤ߹Ԥ�������ͥ�����������ޤ���
-�ʥǥե���ȤǤϥ���ͥ����������˹Ԥ��ޤ���</p>
+<p>HTML 出力のみ行い、サムネイルを生成しません。
+（デフォルトではサムネイル生成を常に行います）</p>
 </li>
 <li><a name="item__b___unit_str__b__STR"></a><b><b>--unit-str</b>=STR</b>
-<p>�֡����ܡפȤ�������ñ�̤򼨤�ɽ�����ѹ����ޤ���
-�ʥǥե���ȤǤ�"����"��</p>
+<p>「〜枚目」という出力単位を示す表示を変更します。
+（デフォルトでは"枚目"）</p>
 </li>
-<li><a name="item___________________________"></a><b>(�ʥӥ��������С�������)</b>
-<p>�ʥӥ��������С�����ʬ�Υ��������ʸ����ʤɤ��ѹ�����ˤϡ��ʲ��Υ�
-�ץ�������ѤǤ��ޤ���</p>
-<p><i>role</i>����ʬ�ˤϤ��줾�졢
+<li><a name="item_______________________________________"></a><b>(ナビゲーションバーの設定)</b>
+<p>ナビゲーションバーの部分のアイコンや文字列などを変更するには、以下のオ
+プションが利用できます。</p>
+<p><i>role</i>の部分にはそれぞれ、
 <b>first</b>,
 <b>prev</b>,
 <b>next</b>,
@@ -85,15 +85,15 @@
 <b>logo</b>,
 <b>index</b>,
 <b>home</b>
-�Τ����줫������ޤ���</p>
+のいずれかが入ります。</p>
 <ul>
 <li><a name="item__b___icon___b__i_role__i__b__file_FILE__b_"></a><b><b>--icon-</b><i>role</i><b>-file=FILE</b></b>
-<p>�ʥӥ��������С��γư��֤Υ�������Υե�����̾����ꤷ�ޤ���
-�ʥե����뤬¸�ߤ��ʤ����ϥ��������ɽ�����ޤ����</p>
+<p>ナビゲーションバーの各位置のアイコンのファイル名を指定します。
+（ファイルが存在しない場合はアイコンは表示しません）</p>
 </li>
 <li><a name="item__b___nav___b__i_role__i__b__str_STR__b_"></a><b><b>--nav-</b><i>role</i><b>-str=STR</b></b>
-<p>�ʥӥ��������С��γư��֤�����ʸ��������ꤷ�ޤ���</p>
-<p>�ǥե���Ȥ�����ϰʲ����̤ꡧ</p>
+<p>ナビゲーションバーの各位置の説明文字列を設定します。</p>
+<p>デフォルトの設定は以下の通り：</p>
 <ul>
 <li><a name="item__b___icon_first_file__b__first_gif"></a><b><b>--icon-first-file</b>	first.gif</b>
 </li>
@@ -109,52 +109,52 @@
 </li>
 <li><a name="item__b___icon_logo_file__b__logo_gif"></a><b><b>--icon-logo-file</b>	logo.gif</b>
 </li>
-<li><a name="item__b___nav_first_str__b______________"></a><b><b>--nav-first-str</b>	�ǽ�Υڡ���</b>
+<li><a name="item__b___nav_first_str__b____________________"></a><b><b>--nav-first-str</b>	最初のページ</b>
 </li>
-<li><a name="item__b___nav_prev_str__b_____________"></a><b><b>--nav-prev-str</b>		���Υڡ���</b>
+<li><a name="item__b___nav_prev_str__b__________________"></a><b><b>--nav-prev-str</b>		前のページ</b>
 </li>
-<li><a name="item__b___nav_next_str__b_____________"></a><b><b>--nav-next-str</b>		���Υڡ���</b>
+<li><a name="item__b___nav_next_str__b__________________"></a><b><b>--nav-next-str</b>		次のページ</b>
 </li>
-<li><a name="item__b___nav_last_str__b_______________"></a><b><b>--nav-last-str</b>		�Ǹ�Υڡ���</b>
+<li><a name="item__b___nav_last_str__b_____________________"></a><b><b>--nav-last-str</b>		最後のページ</b>
 </li>
-<li><a name="item__b___nav_home_str__b_______________"></a><b><b>--nav-home-str</b>		�ۡ���ڡ���</b>
+<li><a name="item__b___nav_home_str__b_____________________"></a><b><b>--nav-home-str</b>		ホームページ</b>
 </li>
-<li><a name="item__b___nav_index_str__b______"></a><b><b>--nav-index-str</b>	����</b>
+<li><a name="item__b___nav_index_str__b________"></a><b><b>--nav-index-str</b>	一覧</b>
 </li>
-<li><a name="item__b___nav_logo_str__b_______"></a><b><b>--nav-logo-str</b>		����</b>
+<li><a name="item__b___nav_logo_str__b_________"></a><b><b>--nav-logo-str</b>		ロゴ</b>
 </li>
 </ul>
 </li>
 </ul>
 </li>
 <li><a name="item__b___version__b_"></a><b><b>--version</b></b>
-<p>�С�������ɽ�����ޤ���</p>
+<p>バージョンを表示します。</p>
 </li>
 <li><a name="item__b__h__b____b___help__b_"></a><b><b>-h</b>, <b>--help</b></b>
-<p>���Υإ�פ�ɽ�����ޤ���</p>
+<p>このヘルプを表示します。</p>
 </li>
 </ul>
 <h2>COMMENT</h2>
-<p>�����ե������Ʊ���ǥ��쥯�ȥ�� <i>.comment</i> �ե�������֤����Ȥǲ���
-���Ф��륳���Ȥ���Ϳ���뤳�Ȥ��Ǥ��ޤ���<i>.comment</i> �ե�����ν񼰤�</p>
-<pre>  �ե�����̾	...������...</pre>
+<p>画像ファイルと同じディレクトリに <i>.comment</i> ファイルを置くことで画像
+に対するコメントを付与することができます。<i>.comment</i> ファイルの書式は</p>
+<pre>  ファイル名	...コメント...</pre>
 
-<p>�Ȥʤꡢ�ե�����̾�ȥ����Ȥδ֤ϥ��֡�"\t"�ˤǶ��ڤ��ޤ����ʲ������
-�����ޤ���</p>
-<pre>  foo.gif	������1
-  bar.gif	������2</pre>
+<p>となり、ファイル名とコメントの間はタブ（"\t"）で区切られます。以下に例を
+示します。</p>
+<pre>  foo.gif	コメント1
+  bar.gif	コメント2</pre>
 
-<p>�ޤ����ե����� <i>.comment</i> ��¸�ߤ��ʤ����ϡ��¹Ի��˼�ưŪ�˺���
-�ޤ���</p>
+<p>また、ファイル <i>.comment</i> が存在しない場合は、実行時に自動的に作られ
+ます。</p>
 <h2>PREREQUISITES</h2>
-<p>���Υ�����ץȤϡ������ν�����ImageMagick�����Ѥ��ޤ���
-�ޤ������ܸ�Υ������Ѵ���nkf�����Ѥ��ޤ���</p>
+<p>このスクリプトは、画像の処理にImageMagickを利用します。
+また、日本語のコード変換にnkfを利用します。</p>
 <h2>COREQUISITES</h2>
-<p><b>ps2imgs</b>������ץȤȰ��˻Ȥ��ȸ���Ū���⤷��ޤ���͡�</p>
+<p><b>ps2imgs</b>スクリプトと一緒に使うと効果的かもしれませんね。</p>
 <h2>AUTHOR</h2>
-<p>��� ���� &lt;tmasao@acm.org&gt;</p>
+<p>高久 雅生 &lt;tmasao@acm.org&gt;</p>
 <hr>
-<address>��ײ��� (Takaku Masao)<br />
+<address>高久雅生 (Takaku Masao)<br />
 <a href="http://masao.jpn.org/">http://masao.jpn.org/</a>,
 <a href="mailto:tmasao@acm.org">tmasao@acm.org</a></address>
 <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">

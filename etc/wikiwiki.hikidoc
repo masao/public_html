@@ -1,33 +1,33 @@
-title: WikiClone¤Ë¤Ä¤¤¤Æ¤Î¥á¥â
+title: WikiCloneã«ã¤ã„ã¦ã®ãƒ¡ãƒ¢
 date.available: 2002-04-24
 date.modified: 2007-01-12
 subject: etc
 
-¾ğÊóÄó¶¡¥·¥¹¥Æ¥à¤Î°ì¼ï¤Ç¤¢¤ëWikiWikiWeb¤Î¼ÂÁõ¤Ë´Ø¤¹¤ë¥á¥â¤Ç¤¹¡£
-¤ª¤â¤Ë¡¢[[¥·¥¹¥Æ¥àÊ¬Ìî¤Î¥Ú¡¼¥¸|http://amazon.slis.tsukuba.ac.jp/sys/]]¤Î¤è¤¦¤ÊÊ¸½ñ¤òÊ£¿ô¿Í¤Ç´ÉÍı¤¹¤ë¤¿¤á¤ËºÎÍÑ¤Ç¤­¤Ê¤¤¤«¤È¤¤¤¦¸¡Æ¤¤ò¹Ô¤¦¤¿¤á¤ËÄ´ºº¤·¤¿ºİ¤Î¤â¤Î¤Ç¤¹¡£°Ê²¼¡¢Ä´ºº¤·¤¿WikiClone¤ÎÌ¾¾Î¡¢³«È¯¸µ¡¢¥³¥á¥ó¥È¤Ê¤É¤ò½ñ¤¤¤Æ¤ª¤­¤Ş¤¹¡£
+æƒ…å ±æä¾›ã‚·ã‚¹ãƒ†ãƒ ã®ä¸€ç¨®ã§ã‚ã‚‹WikiWikiWebã®å®Ÿè£…ã«é–¢ã™ã‚‹ãƒ¡ãƒ¢ã§ã™ã€‚
+ãŠã‚‚ã«ã€[[ã‚·ã‚¹ãƒ†ãƒ åˆ†é‡ã®ãƒšãƒ¼ã‚¸|http://amazon.slis.tsukuba.ac.jp/sys/]]ã®ã‚ˆã†ãªæ–‡æ›¸ã‚’è¤‡æ•°äººã§ç®¡ç†ã™ã‚‹ãŸã‚ã«æ¡ç”¨ã§ããªã„ã‹ã¨ã„ã†æ¤œè¨ã‚’è¡Œã†ãŸã‚ã«èª¿æŸ»ã—ãŸéš›ã®ã‚‚ã®ã§ã™ã€‚ä»¥ä¸‹ã€èª¿æŸ»ã—ãŸWikiCloneã®åç§°ã€é–‹ç™ºå…ƒã€ã‚³ãƒ¡ãƒ³ãƒˆãªã©ã‚’æ›¸ã„ã¦ãŠãã¾ã™ã€‚
 
-¤Ê¤ª¡¢ºÇ¶á¤Ë¤Ê¤Ã¤Æ¡¢[[ÆüËÜÈ¯¤Î wiki ¥¯¥í¡¼¥ó¥ê¥¹¥È|http://www1.neweb.ne.jp/wa/yamdas/column/technique/clonelist.html]]¤È¤¤¤¦¥Ú¡¼¥¸¤ò¸«¤Ä¤±¤Ş¤·¤¿¡£¤³¤Á¤é¤ÎÊı¤¬»ä¤Î¥ê¥¹¥È¤è¤ê¤â¤º¤Ã¤ÈÌÖÍåÅª¤Ç¾Ü¤·¤¤¤È»×¤¦¤Î¤Ç¡¢¤³¤Á¤é¤â»²¾È¤·¤Æ¤¯¤À¤µ¤¤¡£
+ãªãŠã€æœ€è¿‘ã«ãªã£ã¦ã€[[æ—¥æœ¬ç™ºã® wiki ã‚¯ãƒ­ãƒ¼ãƒ³ãƒªã‚¹ãƒˆ|http://www1.neweb.ne.jp/wa/yamdas/column/technique/clonelist.html]]ã¨ã„ã†ãƒšãƒ¼ã‚¸ã‚’è¦‹ã¤ã‘ã¾ã—ãŸã€‚ã“ã¡ã‚‰ã®æ–¹ãŒç§ã®ãƒªã‚¹ãƒˆã‚ˆã‚Šã‚‚ãšã£ã¨ç¶²ç¾…çš„ã§è©³ã—ã„ã¨æ€ã†ã®ã§ã€ã“ã¡ã‚‰ã‚‚å‚ç…§ã—ã¦ãã ã•ã„ã€‚
 
-:[[Tiki|http://www.todo.org/]]:Ruby¥Ù¡¼¥¹¡£¥Ğ¥Ã¥¯¥¨¥ó¥É¤Ï¥×¥ì¥¤¥ó¥Æ¥­¥¹¥È¤Î¥Õ¥¡¥¤¥ë·²¡£
-::ÆüËÜ¸ì¤¬ÄÌ¤ë¤â¤Î¤È¤·¤Æ¤ÏºÇ¸Å»²¡Ê¤¿¤Ö¤ó¡Ë¡£
-:[[YukiWiki|http://www.hyuki.com/yukiwiki/]]:Perl¥Ù¡¼¥¹¡£¥Ğ¥Ã¥¯¥¨¥ó¥É¤Ï DBM ·Á¼°¡£·Ç¼¨ÈÄÉ÷¡©
-:[[PukiWiki|http://www.pukiwiki.org/]]:PHP¥Ù¡¼¥¹¡£YukiWiki¤ò»²¹Í¤ËPHP¤Ç¼ÂÁõ¡£¹âµ¡Ç½¡£
-:[[RWiki|http://rwiki.jin.gr.jp/cgi-bin/rw-cgi.rb?cmd=view;name=top]]:Ruby¥Ù¡¼¥¹¡£RD ·Á¼°¤Çµ­½Ò¤¹¤ë¡£
-::RD ¤È¤¤¤¦É¸½à¥Õ¥©¡¼¥Ş¥Ã¥È¤¬¤­¤Á¤ó¤ÈÄêµÁ¤µ¤ì¤Æ¤¤¤ë¤Î¤¬Ì¥ÎÏ¤Ç¡¢¤Á¤ç¤Ã¤È¥¤¥ó¥¹¥È¡¼¥ë¤·¤Æ¤ß¤è¤¦¤«¤È»×¤Ã¤¿¤±¤É¡¢ÌÌÅİ¤À¤«¤é¤ä¤á¤ë¡£¤Ê¤Ë¤»¡¢dRuby ¤ò»È¤¦¤Î¤Ç¡¢¥Ç¡¼¥â¥ó¤òÎ©¤Á¤¢¤²¤Æ¤ª¤«¤Ê¤¤¤È¤¤¤±¤Ê¤¤¤é¤·¤¤¡Ä¡£¤³¤ì¤Ç¤Ï¡¢ËÜ±¿ÍÑ¤¹¤ë¤Ë¤Ï¤Á¤ç¤¤ÌäÂê¤¢¤ê¡£
-:[[MoinMoin|http://www.gembook.jp/html/moin/moin.cgi/FrontPage]]:Python¥Ù¡¼¥¹¡£
-:[[Swiki|http://minnow.cc.gatech.edu/swiki]]:Squeak¥Ù¡¼¥¹¡£
-::[[Squeak¤ÇWiki¤ò¤¿¤Á¤¢¤²¤è¤¦!!|http://www.mars.dti.ne.jp/~umejava/smalltalk/squeak/swiki/index.html]]¡¢[[Swiki-ml|http://ichijo.hn.org:8000/Swiki]]¡¢[[ComSWiki|http://ma2tak.dyndns.org:8888/ma2tak/14]]¤Ê¤É¤Ë¾ğÊó¤¬¤¢¤ë¡£
-:[[vikky|http://vivi.dyndns.org/vikky2/vikky.phtml?title=TopPage]]:PHP + PostgreSQL ¥Ù¡¼¥¹¡£
-::É½ÁÈ¤ß¡¢¥Õ¥©¡¼¥à¡¢¥í¥°¥¤¥ó¤Ê¤ÉË­ÉÙ¤Êµ¡Ç½¤ò»ı¤Ã¤Æ¤¤¤Æ¤«¤Ê¤ê¶¯ÎÏ¡£
-:[[Wiki¤â¤É¤­|http://moonrock.jp/~don/wikimodoki/wikimodoki.cgi]]:Ruby ¥Ù¡¼¥¹¡£RD ·Á¼°¤Çµ­½Ò¤¹¤ë¡£
-::Ã±½ã¤Ë¸À¤Ã¤Æ¤·¤Ş¤¨¤Ğ¡¢RWiki ¤Îµ¡Ç½¤ò dRuby È´¤­¤Ç¼Â¸½¤·¤¿¤â¤Î¡£
-:[[EmacsWiki|http://www.gci-net.com/users/j/johnw/EmacsResources.html]]:Emacs-Lisp¥Ù¡¼¥¹¡£
-::Web¾å¤ÇÊÔ½¸¤Ç¤­¤ë¤È¤¤¤¦Wiki¤ÎÆÃÄ§¤Ï¤Á¤ç¤Ã¤È°ã¤¦¤â¤Î¤Î¡¢<q>¸Ä¿Í¤Î¾ğÊó´ÉÍı¥Ä¡¼¥ë¤È¤·¤Æ¤ÏÍ­ÍÑ</q>¤È¤Î[[Êó¹ğ|http://www.ops.dti.ne.jp/~cake-smd/wiki/EmacsWiki.html]]¤â¡£
-:[[TWiki|http://twiki.org/]]:Perl¥Ù¡¼¥¹¡£³¤³°¤Ç¤Ï¤±¤Ã¤³¤¦Í­Ì¾¤ß¤¿¤¤¡£¹âµ¡Ç½¡£
-::ÆüËÜ¸ì¤ÏÄÌ¤é¤Ê¤¤¡£cf. [[TWiki.Codev.KanjiCharacterSet|http://twiki.org/cgi-bin/view/Codev/KanjiCharacterSet" title="TWiki¤Ë¤ª¤±¤ëÆüËÜ¸ì½èÍı¤Ë¤Ä¤¤¤Æ¤ÎµÄÏÀ]]
-::¤¿¤À¡¢GPL¤Ê¤Î¤Ë¥À¥¦¥ó¥í¡¼¥É»ş¤ËÅĞÏ¿¤·¤Ê¤¤¤È¤¤¤±¤Ê¤¤¤Î¤¬¤Á¤ç¤Ã¤È¥¤¥ä¡£
-:[[UseModWiki|http://www.usemod.com/cgi-bin/wiki.pl?UseModWiki]]:[[http://emacswiki.org/|http://emacswiki.org/]] ¤¬ºÎÍÑ¤¹¤ë¤Ê¤É¡¢³¤³°¤Ç¤Ï·ë¹½¿Íµ¤¤Î¤¢¤ë¤ß¤¿¤¤¡£
-::ÆüËÜ¸ì¤Ï¤½¤Î¤Ş¤Ş¤Ç¤ÏÄÌ¤é¤Ê¤¤¤¬¡¢[[p5eeWiki:WikiName|http://p5ee.net/wiki.pl?WikiName]]¤ä[[WikiWiki clone - UseModWiki|http://www.ceres.dti.ne.jp/~george/jdiaryA11001.html#2001100502]]¤Ê¤É¤ËÆüËÜ¸ìÂĞ±ş¥Ñ¥Ã¥Á¤¢¤ê¡£
+:[[Tiki|http://www.todo.org/]]:Rubyãƒ™ãƒ¼ã‚¹ã€‚ãƒãƒƒã‚¯ã‚¨ãƒ³ãƒ‰ã¯ãƒ—ãƒ¬ã‚¤ãƒ³ãƒ†ã‚­ã‚¹ãƒˆã®ãƒ•ã‚¡ã‚¤ãƒ«ç¾¤ã€‚
+::æ—¥æœ¬èªãŒé€šã‚‹ã‚‚ã®ã¨ã—ã¦ã¯æœ€å¤å‚ï¼ˆãŸã¶ã‚“ï¼‰ã€‚
+:[[YukiWiki|http://www.hyuki.com/yukiwiki/]]:Perlãƒ™ãƒ¼ã‚¹ã€‚ãƒãƒƒã‚¯ã‚¨ãƒ³ãƒ‰ã¯ DBM å½¢å¼ã€‚æ²ç¤ºæ¿é¢¨ï¼Ÿ
+:[[PukiWiki|http://www.pukiwiki.org/]]:PHPãƒ™ãƒ¼ã‚¹ã€‚YukiWikiã‚’å‚è€ƒã«PHPã§å®Ÿè£…ã€‚é«˜æ©Ÿèƒ½ã€‚
+:[[RWiki|http://rwiki.jin.gr.jp/cgi-bin/rw-cgi.rb?cmd=view;name=top]]:Rubyãƒ™ãƒ¼ã‚¹ã€‚RD å½¢å¼ã§è¨˜è¿°ã™ã‚‹ã€‚
+::RD ã¨ã„ã†æ¨™æº–ãƒ•ã‚©ãƒ¼ãƒãƒƒãƒˆãŒãã¡ã‚“ã¨å®šç¾©ã•ã‚Œã¦ã„ã‚‹ã®ãŒé­…åŠ›ã§ã€ã¡ã‚‡ã£ã¨ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã—ã¦ã¿ã‚ˆã†ã‹ã¨æ€ã£ãŸã‘ã©ã€é¢å€’ã ã‹ã‚‰ã‚„ã‚ã‚‹ã€‚ãªã«ã›ã€dRuby ã‚’ä½¿ã†ã®ã§ã€ãƒ‡ãƒ¼ãƒ¢ãƒ³ã‚’ç«‹ã¡ã‚ã’ã¦ãŠã‹ãªã„ã¨ã„ã‘ãªã„ã‚‰ã—ã„â€¦ã€‚ã“ã‚Œã§ã¯ã€æœ¬é‹ç”¨ã™ã‚‹ã«ã¯ã¡ã‚‡ã„å•é¡Œã‚ã‚Šã€‚
+:[[MoinMoin|http://www.gembook.jp/html/moin/moin.cgi/FrontPage]]:Pythonãƒ™ãƒ¼ã‚¹ã€‚
+:[[Swiki|http://minnow.cc.gatech.edu/swiki]]:Squeakãƒ™ãƒ¼ã‚¹ã€‚
+::[[Squeakã§Wikiã‚’ãŸã¡ã‚ã’ã‚ˆã†!!|http://www.mars.dti.ne.jp/~umejava/smalltalk/squeak/swiki/index.html]]ã€[[Swiki-ml|http://ichijo.hn.org:8000/Swiki]]ã€[[ComSWiki|http://ma2tak.dyndns.org:8888/ma2tak/14]]ãªã©ã«æƒ…å ±ãŒã‚ã‚‹ã€‚
+:[[vikky|http://vivi.dyndns.org/vikky2/vikky.phtml?title=TopPage]]:PHP + PostgreSQL ãƒ™ãƒ¼ã‚¹ã€‚
+::è¡¨çµ„ã¿ã€ãƒ•ã‚©ãƒ¼ãƒ ã€ãƒ­ã‚°ã‚¤ãƒ³ãªã©è±Šå¯Œãªæ©Ÿèƒ½ã‚’æŒã£ã¦ã„ã¦ã‹ãªã‚Šå¼·åŠ›ã€‚
+:[[Wikiã‚‚ã©ã|http://moonrock.jp/~don/wikimodoki/wikimodoki.cgi]]:Ruby ãƒ™ãƒ¼ã‚¹ã€‚RD å½¢å¼ã§è¨˜è¿°ã™ã‚‹ã€‚
+::å˜ç´”ã«è¨€ã£ã¦ã—ã¾ãˆã°ã€RWiki ã®æ©Ÿèƒ½ã‚’ dRuby æŠœãã§å®Ÿç¾ã—ãŸã‚‚ã®ã€‚
+:[[EmacsWiki|http://www.gci-net.com/users/j/johnw/EmacsResources.html]]:Emacs-Lispãƒ™ãƒ¼ã‚¹ã€‚
+::Webä¸Šã§ç·¨é›†ã§ãã‚‹ã¨ã„ã†Wikiã®ç‰¹å¾´ã¯ã¡ã‚‡ã£ã¨é•ã†ã‚‚ã®ã®ã€<q>å€‹äººã®æƒ…å ±ç®¡ç†ãƒ„ãƒ¼ãƒ«ã¨ã—ã¦ã¯æœ‰ç”¨</q>ã¨ã®[[å ±å‘Š|http://www.ops.dti.ne.jp/~cake-smd/wiki/EmacsWiki.html]]ã‚‚ã€‚
+:[[TWiki|http://twiki.org/]]:Perlãƒ™ãƒ¼ã‚¹ã€‚æµ·å¤–ã§ã¯ã‘ã£ã“ã†æœ‰åã¿ãŸã„ã€‚é«˜æ©Ÿèƒ½ã€‚
+::æ—¥æœ¬èªã¯é€šã‚‰ãªã„ã€‚cf. [[TWiki.Codev.KanjiCharacterSet|http://twiki.org/cgi-bin/view/Codev/KanjiCharacterSet" title="TWikiã«ãŠã‘ã‚‹æ—¥æœ¬èªå‡¦ç†ã«ã¤ã„ã¦ã®è­°è«–]]
+::ãŸã ã€GPLãªã®ã«ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰æ™‚ã«ç™»éŒ²ã—ãªã„ã¨ã„ã‘ãªã„ã®ãŒã¡ã‚‡ã£ã¨ã‚¤ãƒ¤ã€‚
+:[[UseModWiki|http://www.usemod.com/cgi-bin/wiki.pl?UseModWiki]]:[[http://emacswiki.org/|http://emacswiki.org/]] ãŒæ¡ç”¨ã™ã‚‹ãªã©ã€æµ·å¤–ã§ã¯çµæ§‹äººæ°—ã®ã‚ã‚‹ã¿ãŸã„ã€‚
+::æ—¥æœ¬èªã¯ãã®ã¾ã¾ã§ã¯é€šã‚‰ãªã„ãŒã€[[p5eeWiki:WikiName|http://p5ee.net/wiki.pl?WikiName]]ã‚„[[WikiWiki clone - UseModWiki|http://www.ceres.dti.ne.jp/~george/jdiaryA11001.html#2001100502]]ãªã©ã«æ—¥æœ¬èªå¯¾å¿œãƒ‘ãƒƒãƒã‚ã‚Šã€‚
 
-!! »²¾ÈURL
-*[[ËÜ²È¤Î¥µ¥¤¥È|http://c2.com/cgi/wiki?WikiEngines]]
+!! å‚ç…§URL
+*[[æœ¬å®¶ã®ã‚µã‚¤ãƒˆ|http://c2.com/cgi/wiki?WikiEngines]]

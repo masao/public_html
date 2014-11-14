@@ -1,4 +1,4 @@
-title: �������ޤ����Υۡ���ڡ���
+title: たかくまさおのホームページ
 date.modified: 2013-10-13
 navi: false
 javascript.src: https://www.google.com/jsapi
@@ -6,18 +6,18 @@ javascript.src: newsfeed.js
 
 {{rawhtml
 <div class="news">
-<h2>���Τ餻</h2>
+<h2>お知らせ</h2>
 <div id="newsfeed"></div>
 </div>
 }}
 
-!! �ܼ�
+!! 目次
 
-:[[���ʾҲ�|biography.html]]:��ײ����ˤĤ��ơ�
-:[[ȯɽʸ��|./pub/]]:����ޤǤ˼�ɮ��ȯɽ����ʸ���ΰ����Ǥ���
-:[[���եȥ�����|./software/]]:��ʬ�ǽ񤤤�������ץȤʤɤ��֤��Ƥ���ޤ���
-:[[�ֵ�����|./lecture/]]:���Ȥλ������֤��Ƥ���ޤ���
-:[[����¾����|./etc/]]:�嵭�Τ�ΰʳ�
-:[[��󥯽�|links.html]]:��ʬ�Τ褯�Ԥ������ʤȤ����򽸤᤿��󥯽�
-:[[Web����Х�|./photo/]]:�ǥ��������Ӥ�����������ʤ򤤤��������äƤޤ���
-:[[�ޤ�����ChangeLog���|./d/]]:�Ŀ��ѤΥ��������ˤǤ�����������˺Ͽ����˽񤤤Ƥޤ���
+:[[自己紹介|biography.html]]:高久雅生について。
+:[[発表文献|./pub/]]:これまでに執筆、発表した文献の一覧です。
+:[[ソフトウェア|./software/]]:自分で書いたスクリプトなどを置いてあります。
+:[[講義資料|./lecture/]]:授業の資料を置いてあります。
+:[[その他諸々|./etc/]]:上記のもの以外
+:[[リンク集|links.html]]:自分のよく行きそうなところを集めたリンク集
+:[[Webアルバム|./photo/]]:デジカメを携帯して日常の風景をいろいろ撮ってます。
+:[[まさおのChangeLogメモ|./d/]]:個人用のメモ（日記）です。日々の備忘録代わりに書いてます。

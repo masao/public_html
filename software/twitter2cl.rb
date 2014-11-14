@@ -11,7 +11,7 @@ SCREEN_NAME = "tmasao"
 
 list = []
 dup = {}
-YAML.each_document( ARGF ) do |doc|
+YAML.load_stream( ARGF ) do |doc|
    doc.each do |status|
       next if dup[ status["id"] ]
       list << status

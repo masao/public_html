@@ -1,5 +1,5 @@
 #!/usr/local/bin/ruby
-# -*- coding: euc-jp -*-
+# -*- coding: utf-8 -*-
 # $Id$
 
 require "pathname"
@@ -30,6 +30,7 @@ class HierFilename < Pathname
       @file.to_s
    end
    alias :to_s :to_str
+   alias :to_path :to_str
 end
 
 class HikiDoc::HTMLOutput
@@ -95,7 +96,7 @@ class MHikiDoc < HikiDoc
       class Toc < Plugin
          def expand( *args )
             label, = args
-            label = "ÌÜ¼¡" unless label
+            label = "ç›®æ¬¡" unless label
             result = %Q[<h2>#{label}</h2><ul class="toc">\n]
             pre_level = nil
             @doc.toc.each_with_index do |bag, lidx|
@@ -132,7 +133,7 @@ class MHikiDoc < HikiDoc
             Dir.chdir( "./pub" ) do
                cgi = {}
                def cgi.params; Hash.new( "" ); end
-               require "index.rb"
+               require_relative File.join( File.dirname(__FILE__), "pub", "index.rb" )
                app = PubApp::new( cgi )
                app.load_pubdata( open(PUBDATA) )
                result = []
@@ -155,7 +156,7 @@ class MHikiDoc < HikiDoc
                #list = list.find_all{|e| /refereed/ =~ e }[0...5]
                #contents = list.map{|e| e.gsub( /<span class="(refereed|type|year)">.*?<\/span>/, "" ).gsub( /<(\/?)d[td](.*)>/, "<\\1span\\2>" ) }.join( "<li " )
                #contents = %Q[<ul id="publist"><li #{ contents }</ul>]
-               NKF.nkf( "-em0", contents )
+               #NKF.nkf( "-em0", contents )
             end
          end
       end
@@ -355,7 +356,8 @@ class ToHTML
                nil, "<>" ).result( binding )
    end
    def expand_plugin( text )
-      #STDERR.puts text
+      #STDERR.puts text.inspect
+      #STDERR.puts text.encoding
       text.gsub(/<(div|span) class="plugin">\{\{\s*(\w+)\s*(.*?)\s*\}\}<\/\1>/m) do |match|
          #STDERR.puts match
          style = $1
@@ -382,7 +384,9 @@ class ToHTML
    end
    def subject_path
       result = []
-      @conf["subject"].to_a.each do |category|
+      subjects = @conf["subject"] 
+      subjects = [ subjects ] unless subjects.respond_to? :to_a
+      subjects.to_a.each do |category|
          label = @conf["subject.label"][category] || category
          category_dir  = File.join( rootdir, category )
          category_file = HierFilename.new( "#{category}.html" )

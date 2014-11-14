@@ -1,34 +1,34 @@
-title: ���եȥ�����
+title: ソフトウェア
 date.modified: 2011-01-17
 css.content: div.obsolete { opacity:0.5; color:gray; }
 
-�����Ǥϡ��䤬�񤤤���ñ�ʥġ����Ҳ𤷤ޤ���
+ここでは、私が書いた簡単なツールを紹介します。
 
-:[[mnewsprint|mnewsprint/]]:E-mail��NetNews�Υ�å��������������ư������륹����ץȡ�
-:[[Yahoo!��å��󥸥㡼�����������֡��֥饦��|yim/]]:Yahoo!��å��󥸥㡼�Ǥβ������Ƥ���¸������å��������������֡��ե�������ñ�˱����������Ǥ���褦�ˤ����ġ��롣
-:[[imgs2html & ps2imgs|imgs2html/]]:PostScript�ե������Web�Ѥβ����������Ѵ������ps2imgs�ˤ���Ӥ�������β����ե������쵤��HTML�ե�������Ѵ������imgs2html��2�Ĥ�Perl������ץȤǤ���
-:[[Graphviz���ܸ��б�|graphviz-ja/]]:[[Graphviz|http://www.research.att.com/sw/tools/graphviz/]]�����ܸ���б����������ʤ��ȻפäƤ���ޤ���
-:[[͹���ֹ渡��������ץȡ�CGI�ץ�������|zipcode_cgi.html]]:͹���ֹ渡���Ѥ�CGI������ץȤǤ���
-:[[Namazu�ѥѥå�|../namazu/]]:��ʸ�������󥸥�Namazu�Ѥε�ǽ�ɲåѥå��򤤤��Ĥ��������Ƥ��ޤ���
-:[[JAPAN/MARC��Ϣ�ġ���|./jmarcfilter/]]:JAPAN/MARC�쥳���ɥǡ�����ץ쥤��ƥ����Ȥ��Ѵ�����ץ�������������Ƥ��ޤ���
-:[[PukiWiki��Ϣ�ġ���|pukiwiki.html]]: PukiWiki�ץ饰����Ⱥ���ѥ�����ץȤǤ���
-:[[�ؾ����μ��ز��ٰ��ѷ�����������ե�����|./jsik_bst/]]: �����μ��ز��ؤ������ʸ�Ѥ�BibTeX����ʸ����������ե������������Ƥ��ޤ���
-:[[PDF�����å��ġ���|./pdf-checker]]: ʣ����PDF�ե�����ξ�������Ĵ���Ǥ��륳�ޥ�ɥ饤��ġ���Ǥ���
+:[[mnewsprint|mnewsprint/]]:E-mailやNetNewsのメッセージを整形して印刷するスクリプト。
+:[[Yahoo!メッセンジャー・アーカイブ・ブラウザ|yim/]]:Yahoo!メッセンジャーでの会話内容を保存したメッセージアーカイブ・ファイルを簡単に閲覧・検索できるようにしたツール。
+:[[imgs2html & ps2imgs|imgs2html/]]:PostScriptファイルをWeb用の画像形式に変換する（ps2imgs）およびたくさんの画像ファイルを一気にHTMLファイルへ変換する（imgs2html）2つのPerlスクリプトです。
+:[[Graphviz日本語対応|graphviz-ja/]]:[[Graphviz|http://www.research.att.com/sw/tools/graphviz/]]を日本語に対応させたいなぁと思っております。
+:[[郵便番号検索スクリプト（CGIプログラム）|zipcode_cgi.html]]:郵便番号検索用のCGIスクリプトです。
+:[[Namazu用パッチ|../namazu/]]:全文検索エンジンNamazu用の機能追加パッチをいくつか公開しています。
+:[[JAPAN/MARC関連ツール|./jmarcfilter/]]:JAPAN/MARCレコードデータをプレインテキストに変換するプログラムを公開しています。
+:[[PukiWiki関連ツール|pukiwiki.html]]: PukiWikiプラグインと作業用スクリプトです。
+:[[『情報知識学会誌』引用形式スタイルファイル|./jsik_bst/]]: 情報知識学会誌への投稿論文用のBibTeX参照文献スタイルファイルを公開しています。
+:[[PDFチェックツール|./pdf-checker]]: 複数のPDFファイルの情報を一括で調査できるコマンドラインツールです。
 
-!! ��ʪ
-�ʲ��Ϥ���äȤ����Ż��򤹤뤿��Υ��饤�ʡ�Ū������ץȤǤ���
+!! 小物
+以下はちょっとした仕事をするためのワンライナー的スクリプトです。
 
-:[[mailer-stat.pl|mailer-stat.html]]:MH�����Υ᡼��ե����뤫��MUA�ξ����������륹����ץȡ�
-:[[rename_ppt_imgs.pl|rename_ppt_imgs.pl]]:MS PowerPoint ����������ե�����̾���Unix��ʤɤǰ����䤹���褦�ˡ��ѹ����ޤ�������:�֥��饤��1.GIF�ע���001.gif�ס�
+:[[mailer-stat.pl|mailer-stat.html]]:MH形式のメールファイルからMUAの情報を取得するスクリプト。
+:[[rename_ppt_imgs.pl|rename_ppt_imgs.pl]]:MS PowerPoint が生成するファイル名を（Unix上などで扱いやすいように）変更します。（例:「スライド1.GIF」→「001.gif」）
 
 {{rawhtml('<div class="obsolete">')}}
 !! Obsolete
 
-�ʲ��ϴ��˻Ȥ�ʤ��ʤäƤ��ꡢ�ݼ餵���ͽ���̵����ΤǤ���
+以下は既に使わなくなっており、保守される予定の無いモノです。
 
-:[[killfile|killfile.html]]:mnews��killfile���ɲä��륹����ץȡ�
-:[[random.cgi|random_cgi.txt]]:[[����������|http://www-student.ulis.ac.jp/]]�ǻȤäƤ���������������CGI������ץȡ�
-:[[google-cache.pl|google-cache.html]]:[[Google|http://www.google.com/]]�Υ���å���ǡ������顢Web�ڡ������������륹����ץȤǤ���
-:[[gnujdoc-latest-only.pl|gnujdoc-latest-only.pl]]:[[gnujdoc�ץ���������|http://openlab.ring.gr.jp/gnujdoc/]]������ʪ�򥳥�ѥ��뤹��ݤ˺ǿ��С�������ʸ��������оݤˤ���{{code( './configure' )}}���뤿��Υ�����ץȡ�
+:[[killfile|killfile.html]]:mnewsのkillfileを追加するスクリプト。
+:[[random.cgi|random_cgi.txt]]:[[学生サーバ|http://www-student.ulis.ac.jp/]]で使っている学内ランダムリンク用CGIスクリプト。
+:[[google-cache.pl|google-cache.html]]:[[Google|http://www.google.com/]]のキャッシュデータから、Webページを復元するスクリプトです。
+:[[gnujdoc-latest-only.pl|gnujdoc-latest-only.pl]]:[[gnujdocプロジェクト|http://openlab.ring.gr.jp/gnujdoc/]]の成果物をコンパイルする際に最新バージョンの文書だけを対象にして{{code( './configure' )}}するためのスクリプト。
 
 {{rawhtml(</div>)}}

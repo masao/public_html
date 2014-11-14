@@ -1,58 +1,58 @@
-title: RPM�λȤ���
+title: RPMの使い方
 subject: etc
 date.available: 2000-12-14
 date.modified: 2007-02-09
 
-�¤ϡ�Linux�Ϥ�ä��˴����������Ȥ�̵���Τǡ�
-�����λ������Τ�ʤ��ä��ꡢ˺�줿�ꤹ�뤳�Ȥ�¿���Τǡ�
-�ޤ���RPM�λȤ�������񤤤Ƥ����ޤ��礦��
+実は、Linuxはめったに管理したことが無いので、
+管理の仕方を知らなかったり、忘れたりすることが多いので、
+まずはRPMの使い方から書いておきましょう。
 
-!! RPM�Ȥ�
+!! RPMとは
 
-RedHat Linux�����Ѥ����ѥå��������������ƥ�ǡ�
-¿���Υǥ����ȥ�ӥ塼����󤬺��Ѥ��Ƥ��롣
-�����Ȥ��ȥ��եȥ������ΰ�¸�ط��˴�Ť���������ñ�˹Ԥ���
-���եȥ������Υ��󥹥ȡ����Ȥ������ˤʤ�Ȥ�����Ρ�
-�ޤ������եȥ����������ۤ�Ԥ�¦�Ǥ�
-¿���Υ����Ȥ�RPM�����ǤΥХ��ʥ����ۤ��Ԥ��Ƥ��롣
+RedHat Linuxが採用したパッケージ管理システムで、
+多くのディストリビューションが採用している。
+これを使うとソフトウェアの依存関係に基づく管理が簡単に行え、
+ソフトウェアのインストール作業が便利になるというもの。
+また、ソフトウェアの配布を行う側でも
+多くのサイトでRPM形式でのバイナリ配布が行われている。
 
-!! RPM��Ȥä����󥹥ȡ���
+!! RPMを使ったインストール
 
-�㤨�С�hogehoge-1.0.0-k1.rpm �����ꤷ���顢
-���󥹥ȡ��븢�¤���ĥ桼����root�ˤˤʤäơ�
-�ʲ��Υ��ޥ�ɤ��Ǥġ�
+例えば、hogehoge-1.0.0-k1.rpm を入手したら、
+インストール権限を持つユーザ（root）になって、
+以下のコマンドを打つ。
  # rpm -ivh hogehoge-1.0.0-k1.i386.rpm
-�ʾ�����ǡ����󥹥ȡ���ϴ�λ�Ȥʤ롣
+以上だけで、インストールは完了となる。
 
-�⤷����¸�ط��ʤɤ����꤬�Ǥ����ϡ�
-ɬ�פȤ���륽�եȤ򥤥󥹥ȡ��뤷�Ƥ�����
-�⤷�⡢����Ū�˥��󥹥ȡ��뤷�����Ȥ��ϡ�
-{{code --nodeps}}���ץ�����Ĥ��롣
+もし、依存関係などに問題がでた場合は、
+必要とされるソフトをインストールしておく。
+もしも、強制的にインストールしたいときは、
+{{code --nodeps}}オプションをつける。
 
-�ޤ������եȥ������򹹿����������ϡ�
+また、ソフトウェアを更新したい場合は、
  # rpm -Fvh hogehoge-2.0.0-k1.i386.rpm
-�Ȥ��롣
-��{{code -F}}���ץ����Ϲ�����ɽ����
+とする。
+（{{code -F}}オプションは更新を表す）
 
-!!SRPM��Ȥä����󥹥ȡ���
-sparc�ʤ�intel�ϰʳ��Υ������ƥ������Ѥ�RPM���󶡤���Ƥ��ʤ����Ȥ����롣
-���ξ���������ˡ��SRPM�Τ褦����
-����ϡ֥������ե�����ܥѥå���Spec�ե�����פ���ʤäƤ��ꡢ
-�ºݤ˥��եȥ������򤽤η׻�����ǥ���ѥ��뤷��
-���Υ������ƥ������Ѥ�RPM���ȼ��˺���褦�ˤ�����Ρ�
+!!SRPMを使ったインストール
+sparcなどintel系以外のアーキテクチャ用のRPMは提供されていないことがある。
+その場合の配布方法がSRPMのようだ。
+これは「ソースファイル＋パッチ＋Specファイル」からなっており、
+実際にソフトウェアをその計算機上でコンパイルし、
+そのアーキテクチャ用のRPMを独自に作れるようにしたもの。
 
-SRPM���饤�󥹥ȡ��뤷�������ϡ�
-�㤨�С�hogehoge-1.0.0-k1.src.rpm �����ꤷ���顢
-���󥹥ȡ��븢�¤���ĥ桼����root�ˤˤʤäơ�
-�ʲ��Υ��ޥ�ɤ��Ǥġ�
+SRPMからインストールしたい場合は、
+例えば、hogehoge-1.0.0-k1.src.rpm を入手したら、
+インストール権限を持つユーザ（root）になって、
+以下のコマンドを打つ。
  # rpm --rebuild hogehoge-1.0.0-k1.src.rpm
-����ǡ����Υ������ƥ����������RPM�ѥå��������Ĥ���졢
-{{code /usr/src/redhat/RPMS}}���֤���롣
-���Ȥϡ���ۤɤ�Ʊ�ͤˡ�
+これで、そのアーキテクチャ向きのRPMパッケージがつくられ、
+{{code /usr/src/redhat/RPMS}}に置かれる。
+あとは、先ほどと同様に、
  # cd /usr/src/redhat/RPMS
  # rpm -ivh hogehoge-1.0.0-k1.sparc.rpm
-�Ȥ���С����󥹥ȡ��뤬��λ���롣
+とすれば、インストールが完了する。
 
-!! ����URL�ʤ�
-*[[www.rpm.org|http://www.rpm.org/]]: RPM���եȥ������γ�ȯ��
-*[[RPM�ˤ��ѥå���������|http://www.redhat.co.jp/manual/Doc72/RH-DOCS/rhl-cg-ja-7.2/ch-rpm.html]]: RedHat Linux 7.2J �Υޥ˥奢�롣
+!! 参考URLなど
+*[[www.rpm.org|http://www.rpm.org/]]: RPMソフトウェアの開発元
+*[[RPMによるパッケージ管理|http://www.redhat.co.jp/manual/Doc72/RH-DOCS/rhl-cg-ja-7.2/ch-rpm.html]]: RedHat Linux 7.2J のマニュアル。

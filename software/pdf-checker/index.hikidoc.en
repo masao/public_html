@@ -18,8 +18,6 @@ The tool currently checks the following properties of PDF files:
 ** Number of characters (text length) within a page
 
 !! News
-
-!!¹¹¿·ÍúÎò
 :2010-09-14:Version 20110914 released.
 ::New TSV format introduced for filter-utility friendly.
 ::Add a check for protection permissions.

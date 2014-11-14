@@ -8,6 +8,8 @@ require "date"
 require "uri"
 require "yaml"
 
+Encoding.default_external = 'utf-8'
+
 if File.directory?( "/home/etk2/.gem" )
    ENV["GEM_HOME"] = "/home/etk2/.gem"
    ENV["GEM_PATH"] = "/home/etk2/.gem:/home/etk2/.gem/ruby/#{ RUBY_VERSION[0..2] }"
@@ -135,13 +137,11 @@ class PubData
          values = element.get_elements( target )
          if values.empty?
             next
-         elsif values.size > 1
+         else
             instance_eval( "@#{ target } = []" )
             values.each do |e|
                instance_eval( "@#{ target } << e.text" )
             end
-         else
-            instance_eval( "@#{ target } = values.first.text" )
          end
       end
       @file = element.text("file")

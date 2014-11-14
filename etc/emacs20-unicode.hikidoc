@@ -1,43 +1,43 @@
-title: Emacs20��Unicode��Ȥ���!
+title: Emacs20でUnicodeを使おう!
 date.available: 2001-11-02
 date.modified: 2007-02-09
 subject: etc
 
-���Υڡ����Ǥϡ�GNU Emacs20��Unicode�ƥ����Ȥ򰷤���ˡ�ˤĤ��ƽҤ٤ޤ���
+このページでは、GNU Emacs20でUnicodeテキストを扱う方法について述べます。
 
-�ޤ���Emacs20��ɸ��Ǥ�Unicode�򥵥ݡ��Ȥ��Ƥ��ޤ���
-�����ǡ�Mule-UCS�ȸƤФ��Unicode���󥳡��ǥ��󥰤�
-�б������뤿��Υѥå���Ƴ������ɬ�פ�����ޤ���
+まず、Emacs20は標準ではUnicodeをサポートしていません。
+そこで、Mule-UCSと呼ばれるUnicodeエンコーディングに
+対応させるためのパッチを導入する必要があります。
 
-���ʤߤˡ�Emacs�ΥС������19.XX�١�����Mule�ξ��ϡ�
-�����ǽҤ٤���ˡ��Ȥ뤳�ȤϤǤ��ޤ���
-��ľ��(?)Emacs20�˥С�������夲�ޤ��礦��
+ちなみに、Emacsのバージョンが19.XXベースのMuleの場合は、
+ここで述べる方法をとることはできません。
+素直に(?)Emacs20にバージョンを上げましょう。
 
-!!Ƴ���μ��
+!!導入の手順
 
-Ƴ����ɬ�פʥե����뷲�ϰʲ���URL�ʤɤ������ꤷ�Ƥ���������
+導入に必要なファイル群は以下のURLなどから入手してください。
 *[[emacs-20.7.tar.gz|ftp://ftp.m17n.org/pub/mule/emacs-20.7.tar.gz]]
 *[[leim-20.7.tar.gz|ftp://ftp.m17n.org/pub/mule/leim-20.7.tar.gz]]
 *[[Mule-UCS-0.84.tar.gz|ftp://ftp.m17n.org/pub/mule/Mule-UCS/Mule-UCS-0.84.tar.gz]]
 
-�ʲ��ˡ�Ƴ���μ��򼨤��ޤ���
- 	(�ե������Ÿ��)
+以下に、導入の手順を示します。
+ 	(ファイルの展開)
  % tar zxvf ~/src/emacs-20.7.tar.gz
  % tar zxvf ~/src/leim-20.7.tar.gz
  % tar zxvf ~/src/Mule-UCS-0.84.tar.gz
  
- 	(�ѥå��򤢤Ƥ�)
+ 	(パッチをあてる)
  % cd emacs-20.7
  % patch -p1 < ../Mule-UCS-0.84/emacs-20.7-mule-4.1.patch.txt
  
- 	(����ѥ���ȥ��󥹥ȡ���)
+ 	(コンパイルとインストール)
  % ./configure
  % make
  % su
  Password: ******
  # make install 
  
- 	(Mule-UCS�ѥå�������Ƴ��)
+ 	(Mule-UCSパッケージの導入)
  % cd ../Mule-UCS-0.84
  % emacs -q --no-site-file -batch -l mucs-comp.el
  % su
@@ -45,41 +45,41 @@ subject: etc
  # mkdir ${prefix}/share/emacs/site-lisp/Mule-UCS
  # cp -r lisp/* ${prefix}/share/emacs/site-lisp/Mule-UCS
 
-!! ����
+!! 設定
 
-Ƴ�������ޤ����ä��顢���˸ĿʹĶ�������򤪤��ʤ��ޤ���
-Mule-UCS�����Ѥ���ˤϡ�
-�ʲ��������{{code ~/.emacs}}���ɲä��������OK�Ǥ���
-(��¸��Emacs19�Ѥ�����ȻȤ�ʬ���뤿��ˤ�{{code ~/.emacs}}�򤤤��餺��
-{{code ~/.emacs.el}}������Emacs20�Ѥ������񤯤Ȥ�����ˡ�⤢��ޤ�)
+導入がうまくいったら、次に個人環境の設定をおこないます。
+Mule-UCSを利用するには、
+以下の設定を{{code ~/.emacs}}に追加するだけでOKです。
+(既存のEmacs19用の設定と使い分けるためには{{code ~/.emacs}}をいじらず、
+{{code ~/.emacs.el}}の方にEmacs20用の設定を書くという方法もあります)
 
  (require 'un-define)
 
-�ޤ���X�����Ф�����Unicode��ɽ���Ǥ���ե���Ȥ��Ѱդ��Ƥ����ʤ��ȡ�
-����ɽ������Ƥ��ޤ��ޤ���
-������н褹��ˤϡ�Emacs�����˳�ȯ���줿
-Unicode�б��ե���ȥѥå�����intlfonts�򥤥󥹥ȡ��뤹��ɬ�פ�����ޤ���
+また、Xサーバの方にUnicodeが表示できるフォントを用意してあげないと、
+□で表示されてしまいます。
+これに対処するには、Emacs向けに開発された
+Unicode対応フォントパッケージintlfontsをインストールする必要があります。
 
-!! �Ȥ���
+!! 使い方
 
-���꤬���ޤ��ʤ���Ƥ���С�Emacs����
-utf-8�ʤ�Unicode�١����Υ��󥳡��ǥ��󥰤Υե�����򳫤���
-Ŭ�ڤ˥��󥳡��ǥ��󥰤β�᤬�����ʤ���
-Unicode�ƥ����Ȥ�ɽ�����Խ����Ǥ���褦�ˤʤ�ޤ���
+設定がうまくなされていれば、Emacsから
+utf-8などUnicodeベースのエンコーディングのファイルを開くと
+適切にエンコーディングの解釈がおこなわれて
+Unicodeテキストの表示や編集ができるようになります。
 
-�ޤ����Խ���ΥХåե���ʸ�������ɤ��ѹ�������ˡ�ˤϡ�
-{{code C-x [RETURN] f}}���Ǥ�����ǡ�
-�Хåե���ʸ�����󥳡��ǥ��󥰤�Ҥͤ�줿�顢
-{{code utf-8}}�ʤɤ��Ǥ������OK�Ǥ���
+まず、編集中のバッファの文字コードを変更する方法には、
+{{code C-x [RETURN] f}}と打ちこんで、
+バッファの文字エンコーディングを尋ねられたら、
+{{code utf-8}}などと打ち込めばOKです。
 
-�ޤ������̤�IME�ʤɤ������ϤǤ��ʤ�ʸ���ˤĤ��Ƥϡ�
-Unicode�Υ������ֹ椫�����Ϥ��뤳�Ȥ��Ǥ���褦�Ǥ���
-�㤨�С�U+FA19�ˤ�����ʸ����&#xfa19;: �ֿ��פε���ΤǤ��ˤ����Ϥ����硢
-{{code M-x insert-ucs-character [RETURN]}}�Ȥ��Ƥ���
-{{code ?\xFA19}}���Ǥ�����ȡ�
-����ʸ�������Ϥ���ޤ���
+また、一般のIMEなどから入力できない文字については、
+Unicodeのコード番号から入力することができるようです。
+例えば、U+FA19にあたる文字（&#xfa19;: 「神」の旧字体です）を入力する場合、
+{{code M-x insert-ucs-character [RETURN]}}としてから
+{{code ?\xFA19}}と打ちこむと、
+その文字が入力されます。
 
-!!��ϢURL
-*[[GNU Emacs|http://www.gnu.org/software/emacs/]]: �ܲȤΥ����ȤǤ��� (Emacs21��ФƤޤ���)
-*[[Unicode Consortium|http://www.unicode.org/]]: Unicode����ε����Ǥ���
-*[[UTF-8 and Unicode FAQ for Linux|http://www.cl.cam.ac.uk/~mgk25/unicode.html]]: �ºݤ�Unicode�򰷤��Ķ��Ȥ��Ƥ� Unix, Linux �ˤĤ��Ƥξ������ܡ� (Mule-UCS�ˤĤ��Ƥϥ������Τ�ޤ���)
+!!関連URL
+*[[GNU Emacs|http://www.gnu.org/software/emacs/]]: 本家のサイトです。 (Emacs21も出てます…)
+*[[Unicode Consortium|http://www.unicode.org/]]: Unicode情報の拠点です。
+*[[UTF-8 and Unicode FAQ for Linux|http://www.cl.cam.ac.uk/~mgk25/unicode.html]]: 実際にUnicodeを扱う環境としての Unix, Linux についての情報が満載。 (Mule-UCSについてはココで知りました)

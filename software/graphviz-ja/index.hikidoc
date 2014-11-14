@@ -4,38 +4,38 @@ date.available: 2001-10-10
 date.modified: 2008-01-30
 
 {{div style="color:red;margin:0 5%;border:1px dashed gray;padding:10px"
-'''����: �ʲ��ε��Ҥ������Ť���ΤǤ���'''
+'''注意: 以下の記述は相当古いものです。'''
 
-�ʲ��ϡ��䤬 GraphViz ��ȤäƤ��� 2000ǯ��2002ǯ���ޤǤΤ�Τ��оݤˤ��������Ǥ���
-2007ǯ10��˳�ǧ�����ϰϤǤϡ�GraphViz�ܲȤε�ǽ��ĥ�ˤ�ꡢ�ʲ��ε��Ҥ�¿���Ϻǿ��Ǥ�GraphViz�ˤϤ��ƤϤޤ�ޤ���
-�����դ���������
+以下は、私が GraphViz を使っていた 2000年〜2002年頃までのものを対象にした説明です。
+2007年10月に確認した範囲では、GraphViz本家の機能拡張により、以下の記述の多くは最新版のGraphVizにはあてはまりません。
+ご注意ください。
 }}
 
-!!����
-[[Graphviz|http://www.research.att.com/sw/tools/graphviz/]]�ϥ���չ�¤�����������衢�Խ������ƥ�Ǥ���
+!!概要
+[[Graphviz|http://www.research.att.com/sw/tools/graphviz/]]はグラフ構造の整形、描画、編集システムです。
 
-2001ǯ10��ߡ��ޤä������ܸ�ʤɤ�ASCII�ʳ��θ��쥳���ɤ��б����Ƥ��ʤ��Τǡ�
-�Ȥꤢ���������ܸ���̤������ʤ��Ȼפäƥѥå����äƤߤޤ�����
+2001年10月現在、まったく日本語などのASCII以外の言語コードに対応していないので、
+とりあえず、日本語は通したいなぁと思ってパッチを作ってみました。
 
-���Υѥå��򤢤Ƥ뤳�Ȥˤ�ꡢ
-���ܸ�EUC-JP�����ɤκ����ä� dot �����Υե������
-GD�饤�֥����ͳ������������ GIF, PNG, JPEG�ʤɤ�
-���ϤǤ���褦�ˤʤ�ޤ���
-�ʤ��������ե���ȥե�����Ȥ��ơ�
-watanabe-mincho.ttf �� wadalab-gothic.ttf �ʤ�
-��ɬ�פˤʤ�ޤ�����
+このパッチをあてることにより、
+日本語EUC-JPコードの混じった dot 形式のファイルを
+GDライブラリを経由した画像形式 GIF, PNG, JPEGなどで
+出力できるようになります。
+（ただし、フォントファイルとして、
+watanabe-mincho.ttf や wadalab-gothic.ttf など
+が必要になります。）
 
-��ư���ǧ�� RedHat Linux 6.1J �ξ�ǤΤ߹ԤäƤ��ޤ�����
+（動作確認は RedHat Linux 6.1J の上でのみ行っています。）
 
-'''����ʤ����ȡ�'''
-*Postscript��PDF�ʤɤ����ܸ���Ϥ�̤�б��Ǥ���
-*�ڹ�졢����ʤɤ�ɽ����̤��ǧ�Ǥ���
+'''出来ないこと：'''
+*PostscriptやPDFなどの日本語出力は未対応です。
+*韓国語、中国語などの表示は未確認です。
 
-'''�ѥå�����������'''
-*�ե���ȥե����������̵�Ѥǡ�watanabe-mincho.ttf �� wadalab-gothic.ttf��Ȥ��褦�ˤʤ�ޤ���Bold�Ȥ�������å��Ȥ��� dot �Ǥλ���ϸ����ʤ��Ȼפ���¿ʬ�ˡ�
+'''パッチの問題点：'''
+*フォントファイルは問答無用で、watanabe-mincho.ttf か wadalab-gothic.ttfを使うようになります。Boldとかイタリックとかの dot での指定は効かないと思う（多分）。
 
-!!�Ȥ���
-�ޤ������ܸ��ѥѥå��Τ����ä� Graphviz �򥤥󥹥ȡ��뤷�ޤ���
+!!使い方
+まず、日本語用パッチのあたった Graphviz をインストールします。
   % tar zxvf graphviz-1.7.9.tar.gz
   % cd graphviz-1.7.9
   % patch -p1 < ../graphviz-1.7.9-ja0.patch
@@ -43,44 +43,44 @@ watanabe-mincho.ttf �� wadalab-gothic.ttf �ʤ�
   % make
   % su
   # make install
-����ˡ����ܸ��TrueType�ե���ȥե����뤬ɬ�פǤ���
-���㤨�С�
+さらに、日本語のTrueTypeフォントファイルが必要です。
+（例えば、
 {{code /usr/X11R6/lib/fonts/TruType/watanabe-mincho.ttf}}
-�ե����뤬���뤳�Ȥ��ǧ���Ƥ�����������
+ファイルがあることを確認してください。）
 
-���ܸ������ dot �ե����������Ǥ��ޤ���
-�㤨�С�[[{{code ff9.dot}}|ff9.dot]]�ߤ����Ρ�
-�ޤ���ʸ�������ɤ� EUC-JP �Ǥ��뤳�Ȥ��ǧ���Ƥ���������
-���ޥ�ɥ饤�󤫤顢���Τ褦�ʥ��ޥ�ɤ��Ǥ�����ȡ�
-GIF �ե����뤬��������ޤ���
-��{{code -T���ץ����}}���ѹ�����С�JPEG �� PNG �����������Ǥ��ޤ�����
+日本語入りの dot ファイルを処理できます。
+例えば、[[{{code ff9.dot}}|ff9.dot]]みたいの。
+また、文字コードは EUC-JP であることを確認してください。
+コマンドラインから、次のようなコマンドを打ち込むと、
+GIF ファイルが生成されます。
+（{{code -Tオプション}}を変更すれば、JPEG や PNG 形式も生成できます。）
   % dot -Tgif ff9.dot > ff9.gif
-�嵭��GIF�ե���������ܸ����ʬ��ʸ���������Ƥ�����ϡ�
-���ܸ�ե���Ȥ����Ĥ���ʤ������Ȼפ��ޤ���
-���ξ�硢{{code watanabe-mincho.ttf}}��
-{{code ${HOME}/share/fonts}}�ʤɤ��֤���
-{{code DOTFONTPATH}}�Ķ��ѿ��򤽤Υǥ��쥯�ȥ�����ꤷ�Ƥ���
-{{code dot}}���ޥ�ɤ�¹Ԥ�������ܸ�ե��������β����ե�����������Ǥ��ޤ���
-������
-*[[PNG����|ff9.png]], [[������|ff9.dot]]:  ���Ȥʤ�ǡ�����[[���ݣƣƤ��ä���ˣԣ��̣ˡ�|http://ff-11.com/9ff/9ff.html]]������Ф�����ΤǤ���
-*[[PNG����|info.png]], [[������|info.dot]]: ���Ȥʤ�ǡ�����[[������Ƥ���|http://www.ulis.ac.jp/~chinatsu/]]���餤����������ΤǤ���
+上記のGIFファイルで日本語の部分が文字化けしている場合は、
+日本語フォントが見つからない場合だと思います。
+この場合、{{code watanabe-mincho.ttf}}を
+{{code ${HOME}/share/fonts}}などに置いて
+{{code DOTFONTPATH}}環境変数をそのディレクトリに設定してから
+{{code dot}}コマンドを実行すると日本語フォント入りの画像ファイルを生成できます。
+描画例
+*[[PNG画像|ff9.png]], [[ソース|ff9.dot]]:  元となるデータは[[９−ＦＦいっしょにＴＡＬＫ！|http://ff-11.com/9ff/9ff.html]]から抽出したものです。
+*[[PNG画像|info.png]], [[ソース|info.dot]]: 元となるデータは[[伊東千夏さん|http://www.ulis.ac.jp/~chinatsu/]]からいただいたものです。
 
-�����������
-*[[graphviz-1.7.9-ja0.patch|../archive/graphviz-1.7.9-ja0.patch]] (2001-10-09 ����)
-**����ѹ����ϡ��ʲ����̤�Ǥ�:
-***��٥����η׻���EUC-JP���б���������
-***GD�饤�֥��Υե����õ����ͥ�褵����褦�ˤ�����
-***IMAP�����ѥե��륿�Υե�������׻��ΥХ�������
+ダウンロード
+*[[graphviz-1.7.9-ja0.patch|../archive/graphviz-1.7.9-ja0.patch]] (2001-10-09 公開)
+**主な変更点は、以下の通りです:
+***ラベル幅の計算をEUC-JPに対応させた。
+***GDライブラリのフォント探索を優先させるようにした。
+***IMAP生成用フィルタのフォント幅計算のバグ修正。
 
-!!��������
-:2007-10-10:���Ƥ��Ť��Τǡ����ս񤭤��ɲá�
-:2001-10-11:{{code graphviz-1.7.9-ja0.patch}}��������ޤ�����
-::URL�򤹤����ѹ����ޤ�����
-:2000-11-10:{{code graphviz-1.7-ja0.patch}}��������ޤ�����
-::��������ǡ�
+!!更新履歴
+:2007-10-10:内容が古いので、注意書きを追加。
+:2001-10-11:{{code graphviz-1.7.9-ja0.patch}}を公開しました。
+::URLをすこし変更しました。
+:2000-11-10:{{code graphviz-1.7-ja0.patch}}を公開しました。
+::初期公開版。
 
-!!����URL
-*[[Graphviz|http://www.research.att.com/sw/tools/graphviz/]]: �ܲȥ����� �ʥɥ�����Ȥʤɡ�
-*[[Welcome to GraphViz|http://www.graphviz.org/]]: ��ȯ�Ը��������ȡ�CVS��ݥ��ȥ�ʤɡ�
-*[[Grappa|http://www.research.att.com/~john/Grappa/]]: ��������襨�󥸥��Java������
-*[[GraphViz�����ܸ��Ȥ�����|http://ma2tak.dyndns.org:8888/ma2tak/974]]: �����褦�ʤ��Ȥ�ͤ��Ƥ����������ޤ�����
+!!参考URL
+*[[Graphviz|http://www.research.att.com/sw/tools/graphviz/]]: 本家サイト （ドキュメントなど）
+*[[Welcome to GraphViz|http://www.graphviz.org/]]: 開発者向けサイト（CVSレポジトリなど）
+*[[Grappa|http://www.research.att.com/~john/Grappa/]]: グラフ描画エンジンのJava実装。
+*[[GraphVizで日本語を使いたい|http://ma2tak.dyndns.org:8888/ma2tak/974]]: 似たようなことを考えていた方がいました。

@@ -1,23 +1,23 @@
-title: �����󽸡��Ż��ǡ�
+title: 選挙広報集（電子版）
 date.modified: 2009-09-12
 date.available: 2009-08-21
 css.content: div.note { margin:2em;padding:10px;font-size:smaller;background-color:#ddd;border: 1px solid darkgreen; }
 
-��������ˡ�˴�Ť������ۤ��������������Ԥ��Ȥ�ȴ���Ф��ơ��ŻҲ�������Τ򲼵��˺ܤ��Ƥ����ޤ���
+公職選挙法に基づいて頒布される選挙広報を候補者ごとに抜き出して、電子化したものを下記に載せておきます。
 
 {{div class="note"
-�ʲ��Ǹ������Ƥ���ʸ�Ϥ���Ӳ�����������˵��ܤ��줿����򤽤Τޤ��ŻҲ����Ǻܤ�����Τǡ����ߤΤȤ����Ŀ�Ū�ʥ�����Ū�Ȥ������������֤Ǥ���
-�⤷�Ǻܤ���뤳�Ȥ����꤬������Ϥ�Ϣ������������й����Ǥ���
+以下で公開している文章および画像は選挙広報に記載された情報をそのまま電子化し掲載したもので、現在のところ個人的なメモを目的としたアーカイブです。
+もし掲載されることに問題がある場合はご連絡いただければ幸いです。
 }}
 
-!!2009-08 ���ı��İ�����
-*[[�����12��|./200908-shugiin/Tokyo_12/]]
-*[[�����13��|./200908-shugiin/Tokyo_13/]]
-*[[������ɽ ����֥��å�|./200908-shugiin/Tokyo_block/]]
+!!2009-08 衆議院議員選挙
+*[[東京第12区|./200908-shugiin/Tokyo_12/]]
+*[[東京第13区|./200908-shugiin/Tokyo_13/]]
+*[[比例代表 東京ブロック|./200908-shugiin/Tokyo_block/]]
 
-!!2009-07 ����ԵĲ�İ�����
-*[[­Ω�����|./200907-tokyo/Adachi/]]
+!!2009-07 東京都議会議員選挙
+*[[足立選挙区|./200907-tokyo/Adachi/]]
 
-!!��Ϣ���
+!!関連リンク
 
-*[[2003ǯ�������������|http://freett.com/sugawara_taku/old/data/data02.html]] ��������ˡ���� ���縦�漼�ˤ��������Ϣ�������ǡ�������
+*[[2003年総選挙・選挙公報集|http://freett.com/sugawara_taku/old/data/data02.html]] （東京大学法学部 蒲島研究室による政治関連資料・データ集）

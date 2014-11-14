@@ -1,44 +1,44 @@
-title: PDF�����å��ġ��� (pdf-checker)
+title: PDFチェックツール (pdf-checker)
 date.available: 2011-01-16
 date.modified: 2011-09-14
 subject: software
 
-���Υġ����ʣ����PDF�ե�����ξ�����礷�ƥ����å����뤿��Υġ���Ǥ���
-��Ȥ�ȡ��޽�����ˤ��������̤λ�����򥹥���󤹤�ɬ�פ�������ˤ����ơ�Ǽ�ʤ��줿PDF�ե������OCR���եȥ����������Ϥ���PDF�ե�����򡢡ʤ������٤ޤǡ˼�ưŪ�˥����å��������Ȥ����ˡ������б�����ġ���Ȥ��ƻ�����ΤǤ���
-���ߡ��ʲ��ι��ܤ�����å����ƽ��Ϥ��뵡ǽ��ͭ���Ƥ��ޤ���
+このツールは複数のPDFファイルの情報を一括してチェックするためのツールです。
+もともと、図書館等における大量の紙資料をスキャンする必要がある場合において、納品されたPDFファイルやOCRソフトウェアが出力したPDFファイルを、（ある程度まで）自動的にチェックしたいというニーズに対応するツールとして試作したものです。
+現在、以下の項目をチェックして出力する機能を有しています：
 
-* PDF�ΥС������
-* PDF�ڡ�����
-* PDF�ˤ�����줿���ԡ��������Υ������ƥ�����
-* �ʳƥڡ����ˤĤ��ưʲ��γƹ���:��
-** �ڡ����������ޤ줿�����η���
-** �ڡ����������ޤ줿�����β����١�DPI��
-** �ڡ�����������ޤ줿�ƥ����Ȥ�ʸ����
+* PDFのバージョン
+* PDFページ数
+* PDFにかけられたコピー制限等のセキュリティ設定
+* （各ページについて以下の各項目:）
+** ページに埋め込まれた画像の形式
+** ページに埋め込まれた画像の解像度（DPI）
+** ページ内に埋め込まれたテキストの文字数
 
-!!��������
-:2010-09-14:�С������ 20110914 �������
-::���Ϸ������������ѹ����ޤ�����
-::PDF�ե�����˥������ƥ����꤬�����äƤ����硢���ξ������Ϥ���褦�ˤ��ޤ�����
-::������TIFF���������ߥե����뤬���顼�ˤʤäƥ����å��Ǥ��ʤ��ä��Զ�������
-::�ѥ���ɥץ��ƥ��Ȥ��줿�ե�����ν����˼��Ԥ����ե��������ƤΥ����å����Ǥ��ʤ��ä�������б����ޤ�����
-:2010-01-16:����(20110116)�������
+!!更新履歴
+:2010-09-14:バージョン 20110914 を公開。
+::出力形式を大幅に変更しました。
+::PDFファイルにセキュリティ設定がかかっている場合、その情報を出力するようにしました。
+::一部のTIFF画像埋め込みファイルがエラーになってチェックできなかった不具合を修正。
+::パスワードプロテクトされたファイルの処理に失敗し、ファイル内容のチェックができなかった問題に対応しました。
+:2010-01-16:初版(20110116)を公開。
 
-!!�����������
+!!ダウンロード
 
-pdf-checker �� [[GNU AGPL version 3|http://www.gnu.org/licenses/agpl.html]] �˽��ä��ե꡼���եȥ������Ȥ��ޤ���
+pdf-checker は [[GNU AGPL version 3|http://www.gnu.org/licenses/agpl.html]] に従ったフリーソフトウェアとします。
 
 *[[pdf-checker-20110914.zip]]
 
-���ǿ��Υ����������ɤ� http://github.com/masao/pdf-checker/ ��������Ǥ��ޤ���
+※最新のソースコードは http://github.com/masao/pdf-checker/ から入手できます。
 
-!!������ˡ
-Java�ǽ񤫤�Ƥ��ޤ��Τǡ�Widnows/Mac/Unix�ʤ�OS�Ķ�����鷺�Ȥ��ޤ���
-���ѤˤϤޤ�Java�򥳥ޥ�ɥ饤�󤫤�Ȥ���褦�˥��󥹥ȡ��뤷�Ƥ������Ȥ�ɬ�פǤ���
-ɬ�פǤ���� http://www.java.com/ja/download/ �������������ɤ����󥹥ȡ��뤷�Ƥ���������
+!!利用方法
+Javaで書かれていますので、Widnows/Mac/UnixなどOS環境を問わず使えます。
+利用にはまずJavaをコマンドラインから使えるようにインストールしておくことが必要です。
+必要であれば http://www.java.com/ja/download/ からダウンロードしインストールしてください。
 
-Java�����󥹥ȡ��뤵��Ƥ���褦�ʤ顢
-�嵭�ΥХ��ʥ꡼�ѥå�������{{code "pdf-checker-YYYYMMDD.zip"}}�ˤ����������ɤ�Ÿ�����Ƥ��Τޤ޻ȤäƤ���������
-�ܥġ����Ȥ��ˤϡ��ѥå�������Ÿ�������ե�����˥��ޥ�ɥ饤���ǰ�ư���������Τ褦�� {{code 'java -jar PdfChecker.jar '}} ��³���ơ������å������ե�����̾����ꤷ�ޤ�:
+Javaがインストールされているようなら、
+上記のバイナリーパッケージ（{{code "pdf-checker-YYYYMMDD.zip"}}）をダウンロードし展開してそのまま使ってください。
+本ツールを使うには、パッケージを展開したフォルダにコマンドライン上で移動し、下記のように {{code 'java -jar PdfChecker.jar '}} に続けて、チェックしたファイル名を指定します:
 
   % unzip pdf-checker-YYYYMMDD.zip
   % java -jar PdfChecker.jar pdf/2010J00*.pdf
@@ -69,27 +69,27 @@ Java�����󥹥ȡ��뤵��Ƥ���褦�ʤ顢
   pdf/2010J0001.pdf	page4	text length	1794
   .....
 
-�嵭�λ�����ν��ϤǤϡ�PDF�ե������PDF�С�������{{code "version"}}�ˤ�3�Ǥ��뤳�ȡ��Ź沽���Υ������ƥ���{{code "encryption"}}�ˤ������äƤ��ʤ����ȡ�PDF����������{{code "creationdate"}}�ˤ�2006ǯ6��27���Ǥ��뤳�ȡ��ե�������������եȥ�������{{code "producer"}}�ˤ�PDFlib�Ȥ����ġ���Ǥ��뤳�ȡ��ڡ�������8�ڡ�����{{code "pages"}}�ˤǤ��뤳�Ȥ��狼��ޤ���
-����ˡ�����PDF�ե�����γƥڡ����ϡ�595x842�פȤ����Ĳ���������{{code "pagesize"}}�ˤ���ʤꡢ��300dpi�β����١�{{code "dpi-x/y"}}�ˤβ�������PNG������{{code "imagetype"}}�ˤǰ��̤���������ޤ�Ƥ��뤳�Ȥ��狼��ޤ���
-�ƥ����Ȥ�ڡ����ˤ�ꡢ80��1800�����١�{{code "text length"}}�������ޤ�Ƥ��ꡢOCR���ν����������äƤ��뤳�Ȥ�狼��ޤ���
+上記の使用例の出力では、PDFファイルのPDFバージョン（{{code "version"}}）が3であること、暗号化等のセキュリティ（{{code "encryption"}}）がかかっていないこと、PDF生成日時（{{code "creationdate"}}）は2006年6月27日であること、ファイルの生成ソフトウェア（{{code "producer"}}）はPDFlibというツールであること、ページ数は8ページ（{{code "pages"}}）であることがわかります。
+さらに、このPDFファイルの各ページは「595x842」という縦横サイズ（{{code "pagesize"}}）からなり、約300dpiの解像度（{{code "dpi-x/y"}}）の画像が、PNG形式（{{code "imagetype"}}）で圧縮されて埋め込まれていることがわかります。
+テキストもページにより、80〜1800字程度（{{code "text length"}}）埋め込まれており、OCR等の処理がかかっていることもわかります。
 
-�ʤ��������Υե�����̾��ʣ�����ꤹ�뤳�Ȥǰ�����ˤʤ�ޤ���
-ʣ���ե��������ꤷ�����������˥ե�����̾�����Ϥ���ޤ���
+なお、引数のファイル名を複数指定することで一括指定になります。
+複数ファイルを指定した場合は第一列にファイル名が出力されます。
 
-���Ϸ�����ñ��ʥ��ֶ��ڤ�ƥ����ȤǤ��Τǡ��ƥ����ȥե�����Ȥ��ƽ񤭽Ф��ơ�Excel�ʤɤ����ɤ߹���ǥ����å����뤳�Ȥ����ꤷ�Ƥ��ޤ���
+出力形式は単純なタブ区切りテキストですので、テキストファイルとして書き出して、Excelなどから読み込んでチェックすることを想定しています。
 
 !!TODO
 
-������2011ǯ9��ߤ�̤�б��ι���:
+下記は2011年9月現在で未対応の項目:
 
-:���顼����:
-::PDF�ե�����ʳ��η����䡢�ɤ߹��ߤ˥��顼��ȯ������褦�ʥե�������Ф��ƴ��Ǥʤ����ᡢ����ǥ��顼�Ȥ�������Ƥ��ޤ����Ȥ����롣
-::�������ˤ�����PDF�ǤϤʤ���Word������������줿PDF�ե�����Ǥϡ������ޤ�������¿�ͤʤ��ᡢ���顼��ȯ�������ꡢ�������Ƥ��������ʤ�Τˤʤ��礬���롣
+:エラー処理:
+::PDFファイル以外の形式や、読み込みにエラーが発生するようなファイルに対して頑健でないため、途中でエラーとして落ちてしまうことがある。
+::スキャンによる画像PDFではなく、Word等から作成されたPDFファイルでは、埋め込まれる画像が多様なため、エラーが発生したり、出力内容がおかしなものになる場合がある。
 
-!!�ռ�
+!!謝辞
 
-�ܥġ���Ǥϡ�PDF���ϤΤ����iText Java�饤�֥�꡼�򡢥������ƥ��Ź沽�ե�������ɤ߹��ߤΤ����Bouncy Castle Crypto APIs�򤽤줾���Ѥ���Ʊ�����ƺ����ۤ��Ƥ��ޤ����ƥġ���Υ����������ɤ���Ӿܺ٤ʾ���ϲ����Υ����Ȥ��������ǽ�Ǥ�:
+本ツールでは、PDF解析のためにiText Javaライブラリーを、セキュリティ暗号化ファイルの読み込みのためにBouncy Castle Crypto APIsをそれぞれ用い、同梱して再配布しています。各ツールのソースコードおよび詳細な情報は下記のサイトから入手可能です:
 * iText: http://itextpdf.com/
 * Bouncy Castle Crypto APIs: http://www.bouncycastle.org/java.html
 
-�ܥġ���ι��ۤˤ����äƤϡ�ʿ��22ǯ��CSI�������ȡֵ��إ�ݥ��ȥ�ô���Ԥοͺ�����פˤ�����[[���ѥ������åס�ʿ��22ǯ9��15����9��18�� �ڰ������ߥʡ��ϥ����ˤ����Ƴ��š�|http://drf.lib.hokudai.ac.jp/drf/index.php?DRFtech-Karuizawa2010]]��Ĵ���򻲹ͤˤ��Ƥ��ޤ���
+本ツールの構築にあたっては、平成22年度CSI委託事業「機関リポジトリ担当者の人材育成」における[[技術ワークショップ（平成22年9月15日〜9月18日 軽井沢セミナーハウスにおいて開催）|http://drf.lib.hokudai.ac.jp/drf/index.php?DRFtech-Karuizawa2010]]の調査を参考にしています。

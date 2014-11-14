@@ -1,9 +1,9 @@
-date.format: "%YÇ¯%m·î%dÆü"
+date.format: "%Yå¹´%mæœˆ%dæ—¥"
 subject.label:
-   biography : ¼«¸Ê¾Ò²ğ
-   profile : ¼«¸Ê¾Ò²ğ
-   etc : »¨Â¿
-   software : ¥½¥Õ¥È¥¦¥§¥¢
-   lecture : ¹ÖµÁ»ñÎÁ
-   trans : ËİÌõ
-   senkyo-koho: Áªµó¹­Êó½¸
+   biography : è‡ªå·±ç´¹ä»‹
+   profile : è‡ªå·±ç´¹ä»‹
+   etc : é›‘å¤š
+   software : ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢
+   lecture : è¬›ç¾©è³‡æ–™
+   trans : ç¿»è¨³
+   senkyo-koho: é¸æŒ™åºƒå ±é›†

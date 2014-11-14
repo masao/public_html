@@ -1,56 +1,56 @@
-title: ͹���ֹ渡��������ץȡ�CGI�ץ�������
+title: 郵便番号検索スクリプト（CGIプログラム）
 subject: software
 date.available: 2007-02-04
 date.modified: 2007-02-04
 
-SQLite�ǡ����١������Ѥν���Ȥ��ƺ�������͹���ֹ渡���Υ�����ץȤǤ���
+SQLiteデータベース利用の習作として作成した郵便番号検索のスクリプトです。
 
-ư�����[[͹���ֹ渡��|../etc/zipcode.cgi]]��������������
+動作例は[[郵便番号検索|../etc/zipcode.cgi]]をご覧ください。
 
-!! ����
+!! 履歴
 
-:2007-02-04:zipcode_cgi-0.1 ���������
+:2007-02-04:zipcode_cgi-0.1 初期公開。
 
-!! �����������
+!! ダウンロード
 
 * [[zipcode_cgi-0.1.tar.gz|../archive/zipcode_cgi-0.1.tar.gz]]
 
-[[Ruby���ΤΥ饤����|http://www.ruby-lang.org/ja/LICENSE.txt]]��Ʊ��ξ��Ǽ�ͳ�˻ȤäƤ��������ƹ����ޤ���
+[[Ruby本体のライセンス|http://www.ruby-lang.org/ja/LICENSE.txt]]と同一の条件で自由に使っていただいて構いません。
 
-!! �ե����빽��
+!! ファイル構成
 
-:zipcode.rb:CGI ������ץ�
-:zipcode-mkdb.rb:�ǡ����١�������������ץ�
-:zipcode.rhtml:ɽ���� eRuby �ե�����
+:zipcode.rb:CGI スクリプト
+:zipcode-mkdb.rb:データベース作成スクリプト
+:zipcode.rhtml:表示用 eRuby ファイル
 
-!! ư���׷�
+!! 動作要件
 
-�ܥġ����ư��ˤϡ��ʲ��Υ��եȥ���������ɬ�פȤʤ�ޤ������Ѥ���ݤˤϡ����餫���ᥤ�󥹥ȡ��롢��������Ѥޤ��Ƥ���������
+本ツールの動作には、以下のソフトウェア群が必要となります。使用する際には、あらかじめインストール、設定等を済ませてください。
 
-* CGI�ץ�����बư���ǽ�ʥ����֥�����
+* CGIプログラムが動作可能なウェブサーバ
 * [[SQLite|http://sqlite.org/]]
 * [[Ruby|http://www.ruby-lang.org/ja/]]
-* Ruby �⥸�塼�� - SQLite ��SQLite�ΥС������ˤ�äưۤʤ롣��
+* Ruby モジュール - SQLite （SQLiteのバージョンによって異なる。）
 ** SQLite 2.x : [[Ruby/DBI + DBD/SQLite|http://rubyforge.org/projects/ruby-dbi]]
 ** SQLite 3.x : [[sqlite3-ruby|http://rubyforge.org/projects/sqlite-ruby]]
 
-!! �Ȥ���
+!! 使い方
 
-�ޤ���͹�ضɥ����Ȥ��󶡤��Ƥ���͹���ֹ�ǡ�����CSV���������������ɤ���������Ȥ˥ǡ����١�����������ޤ���
-�ʲ��Υ��ޥ�ɥ饤��ǤǤ��ޤ���
+まず、郵便局サイトが提供している郵便番号データのCSV形式をダウンロードし、それをもとにデータベースを作成します。
+以下のコマンドラインでできます。
 
  % wget http://www.post.japanpost.jp/zipcode/dl/kogaki/lzh/ken_all.lzh
  % lha -x ken_all.lzh
  % nkf -Se ken_all.csv | ./zipcode-mkdb.rb 
 
-�ǡ����١����κ�������λ�����顢{{code zipcode.rb}}�� CGI ������ץȤȤ��Ƽ¹Ԥ���С��������Ǥ���褦�ˤʤ�Ȼפ��ޤ���
+データベースの作成が完了したら、{{code zipcode.rb}}を CGI スクリプトとして実行すれば、検索ができるようになると思います。
 
-ɽ����ˡ�ʤɤϡ�{{code zipcode.rhtml}}���ѹ�����Х������ޥ����Ǥ��ޤ���
+表示方法などは、{{code zipcode.rhtml}}を変更すればカスタマイズできます。
 
-!! �ռ�
+!! 謝辞
 
-�ܥץ������ϡ��ʲ��Υ��եȥ������ʤɤˤ���������Ƥ��ޤ���
-�ƥ��եȥ������κ�Ԥ������˴��դ������ޤ���
+本プログラムは、以下のソフトウェアなどにより実装されています。
+各ソフトウェアの作者の方々に感謝いたします。
 *[[Ruby|http://www.ruby-lang.org/ja/]]
 *[[ERB|http://www2a.biglobe.ne.jp/~seki/ruby/erb.html]]
 *[[SQLite|http://www.sqlite.org/]]

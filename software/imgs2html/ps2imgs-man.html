@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="ja">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-JP">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" href="../../default.css" type="text/css">
 <link rev="made" href="mailto:tmasao@acm.org">
 <title>ps2imgs - generate images files from PostScript file
@@ -18,30 +18,30 @@
 <h2>SYNOPSIS</h2>
 <p>ps2imgs [<b>--help</b>] [<b>--format</b>=FORMAT] file.ps ...</p>
 <h2>DESCRIPTION</h2>
-<p>ps2imgs �ϡ�PostScript �ե����������ե�������Ѵ����ޤ���</p>
-<p>������������Υե�����̾�ϡ�PostScript �ե�����γ�ĥ�Ҥ��������ʬ��
-�����Ϣ�֤���ưŪ�ˤդ��ޤ����㤨�С�ex.ps �Ȥ����ե�������Ѵ�����
-�ȡ� ex001.gif, ex002.gif, ... �Τ褦�ʥե����뤬��������ޤ���</p>
+<p>ps2imgs は、PostScript ファイルを画像ファイルに変換します。</p>
+<p>生成する画像のファイル名は、PostScript ファイルの拡張子を除いた部分＋
+３桁の連番が自動的にふられます。例えば、ex.ps というファイルを変換する
+と、 ex001.gif, ex002.gif, ... のようなファイルが生成されます。</p>
 <h2>OPTIONS</h2>
-<p>�ʲ��Υ��ץ��������Ǥ��ޤ���</p>
+<p>以下のオプションを指定できます。</p>
 <ul>
 <li><a name="item__b___format_FORMAT__b_"></a><b><b>--format=FORMAT</b></b>
-<p>������������ե�����η�������ꤷ�ޤ���
-�ʥǥե���Ȥ� gif �Ǥ���</p>
+<p>生成する画像ファイルの形式を指定します。
+（デフォルトは gif です）</p>
 </li>
 <li><a name="item__b___help__b_"></a><b><b>--help</b></b>
-<p>���Τإ�פ�ɽ�����ޤ���</p>
+<p>このへルプを表示します。</p>
 </li>
 </ul>
 <h2>PREREQUISITES</h2>
-<p>���Υ�����ץȤϡ�PostScript�ν�����Ghostscript�򡢲����ν�����
-ImageMagick�����Ѥ��Ƥ��ޤ���</p>
+<p>このスクリプトは、PostScriptの処理にGhostscriptを、画像の処理に
+ImageMagickを利用しています。</p>
 <h2>COREQUISITES</h2>
-<p>�������������ϡ�<b>imgs2html</b>��Ȥ���WWW�Ǥ����˸����Ǥ��ޤ���</p>
+<p>生成した画像は、<b>imgs2html</b>を使うとWWWですぐに公開できます。</p>
 <h2>AUTHOR</h2>
-<p>��� ���� &lt;tmasao@acm.org&gt;</p>
+<p>高久 雅生 &lt;tmasao@acm.org&gt;</p>
 <hr>
-<address>��ײ��� (Takaku Masao)<br />
+<address>高久雅生 (Takaku Masao)<br />
 <a href="http://masao.jpn.org/">http://masao.jpn.org/</a>,
 <a href="mailto:tmasao@acm.org">tmasao@acm.org</a></address>
 <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">

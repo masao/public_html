@@ -1,33 +1,33 @@
-title: ���إ�ݥ��ȥ��Ϣ��󥯽�
+title: 機関リポジトリ関連リンク集
 date.modified: 2009-02-28
 date.available:
 subject: etc
 
-���إ�ݥ��ȥ��Ϣ�����ȤؤΥ�󥯽��Ǥ���
+機関リポジトリ関連サイトへのリンク集です。
 
-!!CSI����
+!!CSI事業
 
--����������
--���إ�ݥ��ȥ����
+-公式サイト
+-機関リポジトリ一覧
 
-!!�ϡ��٥��ȥ�����
+!!ハーベストサイト
 
 -OAIster
 -OpenDOAR
 -ROAR
 
-!!�ƹ�ϡ��٥��ȥ�����
+!!各国ハーベストサイト
 
 -Jairo
 -Intute
 
-!!���Ǽҥݥꥷ��Ĵ��
+!!出版社ポリシー調査
 
 -Sherpa/ROMEO
 -SCPJ
 -DULCINEA
 
-!!��ݥ��ȥꥷ���ƥ�
+!!リポジトリシステム
 
 -DSpace
 -Eprints
@@ -39,7 +39,7 @@ subject: etc
 -NetLibrary (Infocom)
 -DigitalCommons
 
-!!ɸ�൬��
+!!標準規格
 
 -OAI-PMH
 -OAI-ORE
@@ -48,11 +48,11 @@ subject: etc
 --CrossRef
 -OpenURL
 
-!!��³URL
+!!永続URL
 -Handle
 -PURL
 
-!!�᥿�ǡ���
+!!メタデータ
 
 -DRIVER
 -JuNii2

@@ -5,66 +5,66 @@ subject: software
 keyword: Google cache WWW Perl Wget
 
 {{div style="color:red;margin:0 5%;border:1px dashed gray;padding:10px"
-'''����: �ܥ��եȥ������ϻ��ͤΤ���˻Ĥ��Ƥ����Τǡ���������ߤ��Ƥ��ޤ���'''
+'''注意: 本ソフトウェアは参考のために残してあるもので、更新を停止しています。'''
 
-[[Yahoo Web Search API|http://developer.yahoo.co.jp/search/]]��[[Google Web API|http://www.google.com/apis/]]�ʤɡ�����å���˥��������Ǥ���褦��API���󶡤���Ƥ��ޤ���
-���ߤǤϡ��ܥ�����ץȤ�̵�ѤΤ�ΤȤʤäƤ���Ȥ��⤤�ޤ��Τǡ�API�����Ѥ���ʤɤ���褦�ˤ��Ƥ���������
+[[Yahoo Web Search API|http://developer.yahoo.co.jp/search/]]や[[Google Web API|http://www.google.com/apis/]]など、キャッシュにアクセスできるようなAPIが提供されています。
+現在では、本スクリプトは無用のものとなっているとおもいますので、APIを利用するなどするようにしてください。
 }}
 
 {{toc}}
 
-!! ����
-2001ǯ5��ˡ��ޥ���Υȥ�֥�ˤ�ä�
-��ʬ�ΤĤ��äƤ���Web�ڡ����Υǡ��������٤ƾä��Ƥ��ޤ��ޤ�����
-�줫���ľ���Τϡ�����ä��ᤷ���ä��Τǡ�
-[[Google�Υ���å���|http://www.google.com/help/features.html#cached]]����Ƶ�Ū�˥ǡ������äƤ��륹����ץȤ�񤤤Ƥߤޤ�����
+!! 概要
+2001年5月に、マシンのトラブルによって
+自分のつくっていたWebページのデータがすべて消えてしまいました。
+一から書き直すのは、ちょっと悲しかったので、
+[[Googleのキャッシュ|http://www.google.com/help/features.html#cached]]から再帰的にデータを取ってくるスクリプトを書いてみました。
 
-ư��ˤϡ�
-[[Perl5|http://www.perl.com/]], [[URI.pm��Perl�⥸�塼���|http://search.cpan.org/dist/URI/]], [[GNU wget|http://wget.sunsite.dk/]]��ɬ�פˤʤ�ޤ���
-��ư���ǧ�ϼ긵��Solaris7�Ǥ����ԤäƤ��ޤ��󡣡�
+動作には、
+[[Perl5|http://www.perl.com/]], [[URI.pm（Perlモジュール）|http://search.cpan.org/dist/URI/]], [[GNU wget|http://wget.sunsite.dk/]]が必要になります。
+（動作確認は手元のSolaris7でしか行っていません。）
 
-!!��
+!!例
  perl google-r.pl -l 5 http://cosmo.ulis.ac.jp/~masao/ 
-�嵭�Τ褦��ư�����ȡ�
-{{code http://cosmo.ulis.ac.jp/~masao/}}��URL���餿�ɤ��
-Google�Υ���å����5��٥�ޤǺƵ�Ū�˼������ޤ���
-{{code "-l NUM"}}���ץ������ά����ȡ�
-���ꤷ��URL�ΰ�ե�����������äƤ��ޤ���
+上記のように動かすと、
+{{code http://cosmo.ulis.ac.jp/~masao/}}のURLからたどれる
+Googleのキャッシュを5レベルまで再帰的に取得します。
+{{code "-l NUM"}}オプションを省略すると、
+指定したURLの一ファイルだけを取ってきます。
 
-���������ե�����ϡ������ȥǥ��쥯�ȥ�ˤ��Τޤ�
-��¸����Ƥ����Τ����դ�ɬ�פ��⤷��ޤ���
-��{{code "-O DIR"}} ���ץ�������ꤹ��С�
-���Ϥ���ǥ��쥯�ȥ�����Ǥ��ޤ���
+取得したファイルは、カレントディレクトリにそのまま
+保存されていくので注意が必要かもしれません。
+（{{code "-O DIR"}} オプションを指定すれば、
+出力するディレクトリを指定できます）
 
-!!�����������
+!!ダウンロード
 *[[google-cache.pl]]
 
-[[GPL2|http://www.gnu.org/copyleft/gpl.html]]�˽��ä��ե꡼�����եȥ������Ȥ��Ƹ������ޤ���
+[[GPL2|http://www.gnu.org/copyleft/gpl.html]]に従ったフリー・ソフトウェアとして公開します。
 
-!!����
-:2001-09-22:���󥿡��Х���� 1 �ô� sleep ����褦�ѹ���
-:2001-06-11:��������ǡ�
+!!履歴
+:2001-09-22:インターバル毎に 1 秒間 sleep するよう変更。
+:2001-06-11:初期公開版。
 
-!!���ջ���
-'''���̤Υ���ƥ�Ĥ����URL���ȯ���ˤ��ƺƵ�Ū�˼������뤳�Ȥϡ��ͥåȥ�����礭����٤򤫤��ޤ��Τǡ���ʬ�����դ��Ƽ¹Ԥ��Ƥ���������'''
+!!注意事項
+'''大量のコンテンツを持つURLを出発点にして再帰的に取得することは、ネットワークに大きな負荷をかけますので、十分に注意して実行してください。'''
 
-�����Τ��Ȥʤ��顢�������������륷���Ȥʤɤ�ޤᡢ
-Google�ǥ���å��夵��Ƥ��ʤ��ե�����ϼ����Ǥ��ޤ���
+当然のことながら、画像、スタイルシートなどを含め、
+Googleでキャッシュされていないファイルは取得できません。
 
-�ޤ������ʤꥢ�ɥۥå��ʤ��Ȥ��äƤ�Τǡ�
-[[Google|http://www.google.com/]]�ν��Ϥ���HTML���ѹ����줿�顢
-���ޤ������ʤ��ʤ�ޤ������̤�ư���Ȼפ����ɡġ�
+また、かなりアドホックなことをやってるので、
+[[Google|http://www.google.com/]]の出力するHTMLが変更されたら、
+うまくいかなくなります。当面は動くと思うけど…。
 
-!!������!? (TODO)
-:application/pdf: �ƥ����ȥС�����󤷤��ĤäƤ��ʤ��ġ�
-:text/plain: �ץ쥤��ƥ����Ȥ��Ф��Ƥ���Ƭ��������{{code '<html><body> ... </body></html>'}}����������Ƥ��롣�ޤ���URL�ȿ���Ǥ���ʸ����ˤĤ��Ƥϡ�{{code '<a href="...">...</a>'}}�Ȥ��������ǥϥ��ѡ���󥯤�ĥ����褦�ʥ������ղä���Ƥ��롣
-:����Ĺ: 102,400 �Х��Ȱʾ�Υ���å���ϥե���������������줿��Τ��������Ǥ��ʤ���
+!!問題点!? (TODO)
+:application/pdf: テキストバージョンしか残っていない…。
+:text/plain: プレインテキストに対しては先頭と末尾に{{code '<html><body> ... </body></html>'}}が挿入されている。また、URLと推定できる文字列については、{{code '<a href="...">...</a>'}}という感じでハイパーリンクが張られるようなタグも付加されている。
+:最大長: 102,400 バイト以上のキャッシュはファイルの末尾が削られたものしか取得できない。
 
-*��[[WWW::Cache::Google|http://search.cpan.org/dist/WWW-Cache-Google/]]��Ȥ�!?��
+*（[[WWW::Cache::Google|http://search.cpan.org/dist/WWW-Cache-Google/]]を使う!?）
 
-�Զ��ʤɤ���ޤ����顢
-tmasao@acm.org �ޤ�
-�����ڤˤ��Τ餻��������
+不具合などありましたら、
+tmasao@acm.org まで
+お気軽にお知らせ下さい。
 
-!!�����
-����Υ��եȥ������ʤɤ���С������Ƥ���������
+!!類似品
+類似のソフトウェアなどあれば、教えてください。
