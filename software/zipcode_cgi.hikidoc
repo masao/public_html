@@ -1,7 +1,7 @@
 title: 郵便番号検索スクリプト（CGIプログラム）
 subject: software
 date.available: 2007-02-04
-date.modified: 2007-02-04
+date.modified: 2015-01-02
 
 SQLiteデータベース利用の習作として作成した郵便番号検索のスクリプトです。
 
@@ -9,13 +9,16 @@ SQLiteデータベース利用の習作として作成した郵便番号検索�
 
 !! 履歴
 
+:2015-01-02:zipcode_cgi-2.0 公開。デフォルトの文字コードを UTF-8 に変更しました。
 :2007-02-04:zipcode_cgi-0.1 初期公開。
 
 !! ダウンロード
 
-* [[zipcode_cgi-0.1.tar.gz|../archive/zipcode_cgi-0.1.tar.gz]]
+* https://github.com/masao/zipcode_cgi/releases/
 
 [[Ruby本体のライセンス|http://www.ruby-lang.org/ja/LICENSE.txt]]と同一の条件で自由に使っていただいて構いません。
+
+ソースコードも [[Github|http://github.com/masao/zipcode_cgi]] より入手できます。
 
 !! ファイル構成
 
@@ -30,8 +33,7 @@ SQLiteデータベース利用の習作として作成した郵便番号検索�
 * CGIプログラムが動作可能なウェブサーバ
 * [[SQLite|http://sqlite.org/]]
 * [[Ruby|http://www.ruby-lang.org/ja/]]
-* Ruby モジュール - SQLite （SQLiteのバージョンによって異なる。）
-** SQLite 2.x : [[Ruby/DBI + DBD/SQLite|http://rubyforge.org/projects/ruby-dbi]]
+* Ruby モジュール - sqlite3
 ** SQLite 3.x : [[sqlite3-ruby|http://rubyforge.org/projects/sqlite-ruby]]
 
 !! 使い方
@@ -41,7 +43,7 @@ SQLiteデータベース利用の習作として作成した郵便番号検索�
 
  % wget http://www.post.japanpost.jp/zipcode/dl/kogaki/lzh/ken_all.lzh
  % lha -x ken_all.lzh
- % nkf -Se ken_all.csv | ./zipcode-mkdb.rb 
+ % nkf -Sw ken_all.csv | ./zipcode-mkdb.rb 
 
 データベースの作成が完了したら、{{code zipcode.rb}}を CGI スクリプトとして実行すれば、検索ができるようになると思います。
 
@@ -54,4 +56,4 @@ SQLiteデータベース利用の習作として作成した郵便番号検索�
 *[[Ruby|http://www.ruby-lang.org/ja/]]
 *[[ERB|http://www2a.biglobe.ne.jp/~seki/ruby/erb.html]]
 *[[SQLite|http://www.sqlite.org/]]
-*[[sqlite3-ruby|http://rubyforge.org/projects/sqlite-ruby/]] or [[Ruby/DBI|http://ruby-dbi.sourceforge.net/]]
+*[[sqlite3-ruby|http://rubyforge.org/projects/sqlite-ruby/]]
