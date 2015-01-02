@@ -8,7 +8,7 @@ require "date"
 require "uri"
 require "yaml"
 
-Encoding.default_external = 'utf-8'
+Encoding.default_external = 'utf-8' if defined? Encoding
 
 if File.directory?( "/home/etk2/.gem" )
    ENV["GEM_HOME"] = "/home/etk2/.gem"
