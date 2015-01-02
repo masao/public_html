@@ -25,10 +25,16 @@ sub ssh_agent_starttime {
     return time;
 }
 
-if ( -r $SSH_AGENT_ENV and ssh_agent_starttime() <= (stat($SSH_AGENT_ENV))[9] ) {
+my $is_tty = ! ( `tty` =~ /not a tty/ );
+my $mtime_agent_file = (stat($SSH_AGENT_ENV))[9];
+
+if ( -r $SSH_AGENT_ENV and ssh_agent_starttime() <= $mtime_agent_file ) {
     load_sshenv();
-    system($RSYNC, "-ar", @ARGV);
+} elsif ( $is_tty ) {
 } else {
     print "load_sshenv() failed.\n";
-    print "Warn: ssh-agent start(". ssh_agent_starttime() .") > $SSH_AGENT_ENV mtime(". (stat($SSH_AGENT_ENV))[9] .")\n";
+    print "Warn: ssh-agent start(". ssh_agent_starttime() .") > $SSH_AGENT_ENV mtime($mtime_agent_file\n";
+    exit 1;
 }
+
+system($RSYNC, "-ar", @ARGV);
