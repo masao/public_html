@@ -2,10 +2,10 @@
    "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="ja">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-JP">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" href="../default.css" type="text/css">
 <link rev="made" href="mailto:tmasao@acm.org">
-<title>͹���ֹ渡��<%=
+<title>郵便番号検索<%=
 if @keyword then
    ": " + h(@keyword)
 elsif @city then
@@ -33,12 +33,12 @@ h1, h2 {
 </style>
 </head>
 <body>
-<h1>͹���ֹ渡��</h1>
+<h1>郵便番号検索</h1>
 <form action="./zipcode.cgi" method="GET">
 <p class="form">
-�������:
+キーワード:
 <input type="text" name="keyword" value="<%=h @keyword %>" size="40">
-<input type="submit" value="����">
+<input type="submit" value="検索">
 </p>
 </form>
 <% if @result then %>
@@ -52,91 +52,91 @@ elsif @pref
    h(@pref)
 end
 %></strong>:
-<%= @result.size %> ��ҥåȤ��ޤ���</p>
+<%= @result.size %> 件ヒットしました</p>
 <ul>
 <% @result.each do |e| %>
   <li><%= e %>
 <% end %>
 </ul>
-<p style="font-size:smaller;">�����ˤ����ä����� <%= "%.2f" % @search_time %>��</p>
+<p style="font-size:smaller;">検索にかかった時間 <%= "%.2f" % @search_time %>秒</p>
 <% end %>
-<h2>��������ˡ</h2>
+<h2>検索の方法</h2>
 <p>
-�ʲ���3����θ������Ԥ��ޤ���
+以下の3種類の検索が行えます。
 </p>
 <dl>
-  <dt>ʸ����ʥ�����ɡ˸���</dt>
-  <dd>�Զ�Į¼̾��Į��̾��Ǥ�դΥ�����ɤ��ޤޤ���Τ򸡺����ޤ���
-      �ʤ������ʽ񤭤��������ɤߤ⸡�����ޤ���<br>
-      ��: <var>����</var>, <var>������</var> �ʤ�
-  <dt>͹���ֹ渡��</dt>
-  <dd>�֥�����ɡ���˿������Ǥ�����С�͹���ֹ�Ȥ����������׸�����Ԥ��ޤ���<br>
-      ��: <var>305</var>, <var>115-0012</var> �ʤ�
+  <dt>文字列（キーワード）検索</dt>
+  <dd>市区町村名、町域名に任意のキーワードが含まれるものを検索します。
+      なお、カナ書きした場合は読みも検索します。<br>
+      例: <var>気仙</var>, <var>けせん</var> など
+  <dt>郵便番号検索</dt>
+  <dd>「キーワード」欄に数字を打ち込めば、郵便番号として前方一致検索を行います。<br>
+      例: <var>305</var>, <var>115-0012</var> など
 
-  <dt>�ϰ�����</dt>
-  <dd>�ʲ��������󤫤���ƻ�ܸ������򤷤ơ�ɽ�����ޤ���
+  <dt>地域選択</dt>
+  <dd>以下の選択欄から都道府県を選択して、表示します。
       <div class="prefs">
       <ul class="prefs-group">
-	<li><a href="./zipcode.cgi?pref=<%=u "�̳�ƻ" %>">�̳�ƻ</a>
+	<li><a href="./zipcode.cgi?pref=<%=u "北海道" %>">北海道</a>
       </ul>
-      <ul class="prefs-group"><!-- ���� -->
-      <% %w[ �Ŀ��� ��긩 �ܾ븩 ���ĸ� ������ ʡ�縩 ].each do |pref| %>
+      <ul class="prefs-group"><!-- 東北 -->
+      <% %w[ 青森県 岩手県 宮城県 秋田県 山形県 福島県 ].each do |pref| %>
         <li><a href="./zipcode.cgi?pref=<%=u pref %>"><%=h pref %></a>
       <% end %>
       </ul>
-      <ul class="prefs-group"><!-- ���� -->
-      <% %w[ ����� ����� ��̸� ���ո� ��븩 ���ڸ� ���ϸ� ������ ].each do |pref| %>
+      <ul class="prefs-group"><!-- 関東 -->
+      <% %w[ 東京都 神奈川県 埼玉県 千葉県 茨城県 栃木県 群馬県 山梨県 ].each do |pref| %>
         <li><a href="./zipcode.cgi?pref=<%=u pref %>"><%=h pref %></a>
       <% end %>
       </ul>
-      <ul class="prefs-group"><!-- ���ۡ���Φ -->
-      <% %w[ ���㸩 Ĺ� �ٻ��� ��� ʡ�温 ].each do |pref| %>
+      <ul class="prefs-group"><!-- 信越・北陸 -->
+      <% %w[ 新潟県 長野県 富山県 石川県 福井県 ].each do |pref| %>
         <li><a href="./zipcode.cgi?pref=<%=u pref %>"><%=h pref %></a>
       <% end %>
       </ul>
-      <ul class="prefs-group"><!-- �쳤 -->
-      <% %w[ ���θ� ���츩 �Ų��� ���Ÿ� ].each do |pref| %>
+      <ul class="prefs-group"><!-- 東海 -->
+      <% %w[ 愛知県 岐阜県 静岡県 三重県 ].each do |pref| %>
         <li><a href="./zipcode.cgi?pref=<%=u pref %>"><%=h pref %></a>
       <% end %>
       </ul>
-      <ul class="prefs-group"><!-- �ᵦ -->
-      <% %w[ ����� ʼ�˸� ������ ���츩 ���ɸ� �²λ��� ].each do |pref| %>
+      <ul class="prefs-group"><!-- 近畿 -->
+      <% %w[ 大阪府 兵庫県 京都府 滋賀県 奈良県 和歌山県 ].each do |pref| %>
         <li><a href="./zipcode.cgi?pref=<%=u pref %>"><%=h pref %></a>
       <% end %>
       </ul>
-      <ul class="prefs-group"><!-- ��� -->
-      <% %w[ Ļ�踩 �纬�� ������ ���縩 ������ ].each do |pref| %>
+      <ul class="prefs-group"><!-- 中国 -->
+      <% %w[ 鳥取県 島根県 岡山県 広島県 山口県 ].each do |pref| %>
         <li><a href="./zipcode.cgi?pref=<%=u pref %>"><%=h pref %></a>
       <% end %>
       </ul>
-      <ul class="prefs-group"><!-- �͹� -->
-      <% %w[ ���縩 ��� ��ɲ�� ���θ� ].each do |pref| %>
+      <ul class="prefs-group"><!-- 四国 -->
+      <% %w[ 徳島県 香川県 愛媛県 高知県 ].each do |pref| %>
         <li><a href="./zipcode.cgi?pref=<%=u pref %>"><%=h pref %></a>
       <% end %>
       </ul>
-      <ul class="prefs-group"><!-- �彣������ -->
-      <% %w[ ʡ���� ���츩 Ĺ�긩 ���ܸ� ��ʬ�� �ܺ긩 �����縩 ���츩 ].each do |pref| %>
+      <ul class="prefs-group"><!-- 九州・沖縄 -->
+      <% %w[ 福岡県 佐賀県 長崎県 熊本県 大分県 宮崎県 鹿児島県 沖縄県 ].each do |pref| %>
         <li><a href="./zipcode.cgi?pref=<%=u pref %>"><%=h pref %></a>
       <% end %>
       </ul>
       </div>
 </dl>
 
-<h2>����¾</h2>
+<h2>その他</h2>
 <p>
-���߸����Ǥ���<a href="http://www.post.japanpost.jp/zipcode/index.html">͹���ֹ�ǡ���</a>�� <strong>2014ǯ1��31��</strong>�����ǤǤ����ǿ��Υǡ�����ȿ�Ǥ��Ƥ��ʤ����줬����ޤ��������դ���������
+現在検索できる<a href="http://www.post.japanpost.jp/zipcode/index.html">郵便番号データ</a>は <strong>2014年12月26日</strong>更新版です。最新のデータを反映していない恐れがあります。ご注意ください。
 </p>
 <p>
-���Υ����ƥ�ϡ��Ŀ�Ū�����Ӥ˴�Ť����Ĥ��Ƥ����ΤǤ���
-���Ƥ��������ʤɤˤĤ��Ƥϡ�̵�ݾڤǤ���
-<a href="http://www.post.japanpost.jp/zipcode/index.html">͹������</a>�ʤɤ����󶡤���Ƥ��������Ǥ�Ŭ�����Ȥ��Ƥ���������
+このシステムは、個人的な用途に基づき運営しているものです。
+内容の正確性などについては、無保証です。
+<a href="http://www.post.japanpost.jp/zipcode/index.html">郵政公社</a>などから提供されている正式版を適宜参照してください。
 </p>
 <p>
-�ޤ����ܸ����ץ������Υ����������ɤϡ�<a href="../software/zipcode_cgi.html">͹���ֹ渡��������ץȡ�CGI�ץ�������</a>�ˤƸ������Ƥ��ޤ���
-����̣�Τ������Ϥ�����򤴻��Ȥ���������
+また、本検索プログラムのソースコードは、<a href="../software/zipcode_cgi.html">郵便番号検索スクリプト（CGIプログラム）</a>にて公開しています。
+ご興味のある方はそちらをご参照ください。
 <hr>
 <address>
-��ײ��� (Takaku Masao)<br>
+高久雅生 (Takaku Masao)<br>
 <a href="http://masao.jpn.org/">http://masao.jpn.org/</a>,
 <a href="mailto:tmasao@acm.org">tmasao@acm.org</a>
 </address>

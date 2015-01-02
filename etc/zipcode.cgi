@@ -1,7 +1,9 @@
 #!/bin/sh
 # $Id$
-# <title>Í¹ÊØÈÖ¹æ¸¡º÷</title>
+# <title>éƒµä¾¿ç•ªå·æ¤œç´¢</title>
 
-export HOME=/home/etk2	# sakura¤Ç¤Ï $HOME ¤¬Ì¤ÄêµÁ¤Ê¤Î¤ÇÌÀ¼¨Åª¤Ë»ØÄê¤¹¤ë
-export LD_LIBRARY_PATH=$HOME/lib
+if [ -d /home/etk2 ]; then
+  export HOME=/home/etk2;	# sakuraã§ã¯ $HOME ãŒæœªå®šç¾©ãªã®ã§æ˜ç¤ºçš„ã«æŒ‡å®šã™ã‚‹
+  export LD_LIBRARY_PATH=$HOME/lib;
+fi
 ruby -I $HOME/lib/ruby/site_ruby/1.8 ./zipcode.rb "$@"
