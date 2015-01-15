@@ -167,6 +167,7 @@
     </page>
     <language>ja</language>
     <date>2014-05-24</date>
+    <doi>10.2964/jsik_2014_004</doi>
   </pub>
 
   <pub type="misc">
@@ -180,9 +181,7 @@
       <start>23</start>
       <end>23</end>
     </page>
-    <!--
-    <url>http://klis.tsukuba.ac.jp/ebook/2015schoolguide/</url>
-    -->
+    <url>http://klis.tsukuba.ac.jp/assets/files/klis15.pdf</url>
   </pub>
 
   <pub type="chapter">
