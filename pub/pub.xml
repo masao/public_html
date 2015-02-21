@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist>
+  <pub type="misc">
+    <title>Wikipediaとは? Wikipediaに投稿する方法?</title>
+    <author>高久雅生</author>
+    <conference>ウィキペディア・タウン流山</conference>
+    <city>流山</city>
+    <language>ja</language>
+    <date>2015-02-21</date>
+    <year>2015</year>
+    <month>2</month>
+    <slides>http://www.slideshare.net/tmasao/20150222-wikipedia-townnagareyamatakaku</slides>
+  </pub>
   <pub type="conference">
     <title>検索の前後における利用者のコンセプトマップの分析</title>
     <subtitle>検索の有無による比較</subtitle>
