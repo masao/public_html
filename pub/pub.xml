@@ -2,6 +2,16 @@
 <!-- $Id$ -->
 <publist>
   <pub type="misc">
+    <title>はじめて学ぶWeb API</title>
+    <author>高久雅生</author>
+    <conference>INFOSTAセミナー</conference>
+    <city>東京</city>
+    <date>2015-03-16</date>
+    <year>2015</year>
+    <month>3</month>
+    <url>http://www.infosta.or.jp/seminars/semi150316/</url>
+  </pub>
+  <pub type="misc">
     <title>Wikipediaとは? Wikipediaに投稿する方法?</title>
     <author>高久雅生</author>
     <conference>ウィキペディア・タウン流山</conference>
