@@ -76,7 +76,7 @@ end
 <% end %>
 <% if not doi.nil? %>
 <dd class="url">
-<span class="doi">DOI <a href="http://dx.doi.org/<%=h doi %>"><%=h doi %></a></span>
+<span class="doi">DOI <a href="http://doi.org/<%=h doi %>"><%=h doi %></a></span>
 </dd>
 <% end %>
 <% %w[ abstract slides poster ].each do |target| %>
