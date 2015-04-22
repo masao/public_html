@@ -364,16 +364,11 @@ class ToHTML
          name = $2
          args = $3
          args.sub!(/\A\s*\(/, "") && args.sub!(/\)\s*\Z/, "")
-         case style
-         when "div"
-            args = args.split(/\n/)
-            args = Shellwords.shellwords( args.join("\n") ) if args.size == 1
-         when "span"
-            #STDERR.puts args
-            args = Shellwords.shellwords( args )
-         else
-            raise "unknown plugin style: #{style}"
-         end
+	 #STDERR.puts args.inspect
+	 #STDERR.puts match.inspect
+         args = args.split(/\n/)
+         #STDERR.puts args.inspect
+         args = Shellwords.shellwords( args.join("\n") ) if args.size == 1
          plugin_class = MHikiDoc::Plugin.const_get( name.capitalize )
          plugin = plugin_class.new( :doc => @doc,
                                     :style => style,
