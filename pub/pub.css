@@ -5,6 +5,7 @@ body {
 dd { text-indent: 0; }
 dt {
   margin-top: 0.5em;
+  margin-bottom: 0.3em;
 }
 
 #toc {
