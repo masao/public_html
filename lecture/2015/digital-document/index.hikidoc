@@ -19,6 +19,11 @@ subject:lecture
 #第9回（6/11）: Semantic WebとLinked Open Data (LOD) 
 #第10回（6/18）: 多人数協調によるディジタルドキュメント
 
+{{rawhtml(
+<a width="520" class="twitter-timeline" href="https://twitter.com/hashtag/klis_dd" data-widget-id="590695320377565184">#klis_dd のツイート</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs); } }(document,"script","twitter-wjs");</script>
+)}}
+
 !!シラバス記載事項
 
 ||!授業科目名||ディジタルドキュメント||
