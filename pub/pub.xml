@@ -2,6 +2,20 @@
 <!-- $Id$ -->
 <publist>
   <pub type="misc">
+    <title>先輩から</title>
+    <author>高久雅生</author>
+    <year>2015</year>
+    <month>3</month>
+    <journal>筑波大学情報学群知識情報・図書館学類パンフレット</journal>
+    <language>ja</language>
+    <page>
+      <start>21</start>
+      <end>21</end>
+    </page>
+    <url>http://klis.tsukuba.ac.jp/assets/files/klis16.pdf</url>
+  </pub>
+
+  <pub type="misc">
     <title>はじめて学ぶWeb API</title>
     <author>高久雅生</author>
     <conference>INFOSTAセミナー</conference>
@@ -155,6 +169,7 @@
       <start>162</start>
       <end>169</end>
     </page>
+    <url>http://ci.nii.ac.jp/naid/110009810692</url>
     <url>http://hdl.handle.net/2241/121387</url>
   </pub>
 
@@ -275,6 +290,7 @@
       <start>48</start>
       <end>53</end>
     </page>
+    <url>http://ci.nii.ac.jp/naid/110009767460</url>
     <url>http://hdl.handle.net/2241/120865</url>
   </pub>
 
