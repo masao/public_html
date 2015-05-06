@@ -2,6 +2,49 @@
 <!-- $Id$ -->
 <publist>
   <pub type="misc">
+    <title>うろ覚えマンガに対する質問分析の試み</title>
+    <author>渡辺葵</author>
+    <author>高久雅生</author>
+    <conference>第23回情報知識学会年次大会</conference>
+    <journal>情報知識学会誌</journal>
+    <volume>25</volume>
+    <number>2</number>
+    <year>2015</year>
+    <month>5</month>
+    <city>東京</city>
+    <page>8
+<!--
+      <start>99</start>
+      <end>105</end>
+-->
+    </page>
+    <language>ja</language>
+    <date>2015-05-23</date>
+  </pub>
+
+  <pub type="misc">
+    <title>日本語版WikipediaにおけるDOIリンクの予備的分析</title>
+    <author>吉川次郎</author>
+    <author>高久雅生</author>
+    <author>逸村裕</author>
+    <conference>第23回情報知識学会年次大会</conference>
+    <journal>情報知識学会誌</journal>
+    <volume>25</volume>
+    <number>2</number>
+    <year>2015</year>
+    <month>5</month>
+    <city>東京</city>
+    <page>6
+<!--
+      <start>99</start>
+      <end>105</end>
+-->
+    </page>
+    <language>ja</language>
+    <date>2015-05-23</date>
+  </pub>
+
+  <pub type="misc">
     <title>先輩から</title>
     <author>高久雅生</author>
     <year>2015</year>
