@@ -327,13 +327,18 @@ div.amazon_img {
         background: #ffff88;
 }
 
-/* bicycle-meter */
-.bicycle-meter {
+/* bicycle-meter, research-meter */
+.bicycle-meter, .research-meter {
   float: right;
+  text-align: right;
 }
-.bicycle-meter a img {
+.bicycle-meter a img, .research-meter a img {
   border: 1px dotted gray;
   background-color: #f0f0f0;
+}
+.research-meter .fewer {
+    color: red;
+    text-decoration: underline;
 }
 
 /* twitter */

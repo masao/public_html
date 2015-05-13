@@ -31,7 +31,9 @@ foreach my $ymd (sort keys %{$cl->{all}}) {
 		my @times = split( /,\s*/, $1 );
 		foreach my $time ( @times ) {
 		    my ( $start, $end ) = split( /\s*\-\s*/, $time );
-		    $minutes += time_parse( $end ) - time_parse( $start );
+		    if ( length($start) > 0 and length($end) > 0 ) {
+			$minutes += time_parse( $end ) - time_parse( $start );
+		    }
 		}
 	    }
 	    next if $minutes == 0;
