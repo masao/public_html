@@ -2,6 +2,22 @@
 <!-- $Id$ -->
 <publist>
   <pub type="misc">
+    <title>Web API入門に向けて</title>
+    <author>高久雅生</author>
+    <journal>大学の図書館</journal>
+    <volume>34</volume>
+    <number>4</number>
+    <year>2015</year>
+    <month>5</month>
+    <page>
+      <start>50</start>
+      <end>51</end>
+    </page>
+    <language>ja</language>
+    <date>2015-05-31</date>
+  </pub>
+
+  <pub type="misc">
     <title>うろ覚えマンガに対する質問分析の試み</title>
     <author>渡辺葵</author>
     <author>高久雅生</author>
