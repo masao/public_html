@@ -2,6 +2,18 @@
 <!-- $Id$ -->
 <publist>
   <pub type="misc">
+    <title>大学図書館員のためのWeb API入門</title>
+    <author>高久雅生</author>
+    <conference>第23回大図研オープンカレッジ</conference>
+    <year>2015</year>
+    <month>5</month>
+    <city>東京</city>
+    <language>ja</language>
+    <date>2015-05-31</date>
+    <url>http://d.hatena.ne.jp/dtk-doc/20150408/1428464462</url>
+  </pub>
+
+  <pub type="misc">
     <title>Web API入門に向けて</title>
     <author>高久雅生</author>
     <journal>大学の図書館</journal>
