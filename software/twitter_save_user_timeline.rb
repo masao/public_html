@@ -11,7 +11,7 @@ require "twitter"
 Faraday::Request.lookup_middleware(:multipart)
 
 def load_twitter_db( file = "twitter_log.yml" )
-   YAML.load( open( file ) ) 
+   YAML.load_stream( open( file ) ).flatten
 end
 
 class Hash
@@ -41,14 +41,16 @@ if $0 == __FILE__
    end
    done = {}
    load_twitter_db.each do |tw|
-      # p tw
       done[ tw["id"] ] = true
    end
+   max_id = done.keys.max
+   #STDERR.puts max_id.inspect
    tweets = client.user_timeline( "tmasao" )
+   #tweets = client.user_timeline( "tmasao", max_id: 608421794534576128 )
    results = []
    tweets.each do |tweet|
       next if done[ tweet.id ]
       results << tweet.attrs.new_str_key
    end
-   puts results.to_yaml
+   puts results.to_yaml if not results.empty?
 end
