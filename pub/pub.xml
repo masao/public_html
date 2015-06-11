@@ -2,6 +2,25 @@
 <!-- $Id$ -->
 <publist>
   <pub type="misc">
+    <title>日本語版および英語版Wikipedia におけるDOIリンクの重複分析</title>
+    <author>吉川次郎</author>
+    <author>佐藤翔</author>
+    <author>高久雅生</author>
+    <author>逸村裕</author>
+    <conference>第14回情報メディア学会研究大会</conference>
+    <year>2015</year>
+    <month>6</month>
+    <city>京都</city>
+    <page>4</page>
+<!--
+      <start>160</start>
+      <end>165</end>
+-->
+    <language>ja</language>
+    <date>2015-06-27</date>
+  </pub>
+
+  <pub type="misc">
     <title>大学図書館員のためのWeb API入門</title>
     <author>高久雅生</author>
     <conference>第23回大図研オープンカレッジ</conference>
