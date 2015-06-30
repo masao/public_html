@@ -11,11 +11,10 @@
     <year>2015</year>
     <month>6</month>
     <city>京都</city>
-    <page>4</page>
-<!--
-      <start>160</start>
-      <end>165</end>
--->
+    <page>
+      <start>27</start>
+      <end>30</end>
+    </page>
     <language>ja</language>
     <date>2015-06-27</date>
   </pub>
