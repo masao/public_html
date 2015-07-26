@@ -52,6 +52,7 @@ HTML	= 	index.html.ja index.html.en \
 		lecture/2014/grad-seminar-b.html \
 		lecture/2014/grad-digital-document/index.html \
 		lecture/2015/digital-document/index.html \
+		lecture/2015/grad-seminar-b/index.html \
 		trans/index.html \
 		trans/2008/wikipedia_community_publishing.html \
 
