@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist>
+  <pub type="conference">
+    <title>Evaluation of real web search engines for diversified search intents</title>
+    <author>Song Ximei</author>
+    <author>Masao Takaku</author>
+    <conference>Asia Summer School in Information Access (ASSIA 2015)</conference>
+    <year>2015</year>
+    <month>8</month>
+    <city>Taipei, Taiwan</city>
+    <date>2015-08-24</date>
+  </pub>
   <pub type="misc">
     <title>日本語版および英語版Wikipedia におけるDOIリンクの重複分析</title>
     <author>吉川次郎</author>
