@@ -3,10 +3,9 @@ index.shtml
 *.TTF
 ken_all*
 KEN_ALL*
-zipcode.db
+zipcode.db*
 zipcode.log*
 zipcode-mkdb.rb
-zipcode.rb
 .cvsrc
 .alias
 .emacs*
