@@ -1,6 +1,7 @@
 index.shtml
 *.ttf
 *.TTF
+*.ttc
 ken_all*
 KEN_ALL*
 zipcode.db*

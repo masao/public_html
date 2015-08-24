@@ -5,16 +5,10 @@ switch ($_POST['type']) {
     $fontfile = "./hogehoge-gothic.ttf";
     break;
   case 'ipag':
-    $fontfile = "./ipag.ttf";
-    break;
-  case 'ipagui':
-    $fontfile = "./ipagui.ttf";
+    $fontfile = "./ipaexg.ttf";
     break;
   case 'ipam':
-    $fontfile = "./ipam.ttf";
-    break;
-  case 'ipamp':
-    $fontfile = "./ipamp.ttf";
+    $fontfile = "./ipaexm.ttf";
     break;
   case 'sazanami-gothic':
     $fontfile = "./sazanami-gothic.ttf";
@@ -26,7 +20,7 @@ switch ($_POST['type']) {
     $fontfile = "./dejima-mincho.ttf";
     break;
   case 'mikachan':
-    $fontfile = "./mikachan.ttf";
+    $fontfile = "./mikachan.ttc";
     break;
   case 'cyberbit':
     $fontfile = "./Cyberbit.ttf";
@@ -103,18 +97,16 @@ if (strlen($text) > 0) {
 ここに文章を書いてください。</textarea><br>
 フォント: <select name="type">
   <option value="ipag">IPAゴシック</option>
-  <option value="ipagui">IPA UIゴシック</option>
   <option value="ipam">IPA明朝</option>
-  <option value="ipamp">IPA P明朝</option>
-  <option value="hogehoge-gothic">ほげほげゴシック</option>
   <option value="sazanami-gothic">さざなみゴチック</option>
   <option value="sazanami-mincho">さざなみ明朝</option>
   <option value="dejima-mincho">出島明朝</option>
   <option value="mikachan">みかちゃんフォント</option>
   <option value="cyberbit">Bitstream Cyberbit</option>
   <option value="vera">Bitstream Vera</option>
-  <option value="code2002">Code2002</option>
 <!--
+  <option value="hogehoge-gothic">ほげほげゴシック</option>
+  <option value="code2002">Code2002</option>
   <option value="caslon">Caslon</option>
   <option value="batang">Baekmuk明朝（batang）</option>
   <option value="dotum">Baekmukゴチック（dotum）</option>
@@ -149,17 +141,17 @@ PHPに同梱されているGDライブラリの機能を使って、
 一応、使っているフォントとそのバージョンを以下に示します。
 </p>
 <ul>
-  <li><a href="http://ossipedia.ipa.go.jp/ipafont/">IPAフォント</a>: IPAfont00201.zip
-  <li><a href="http://f59.aaa.livedoor.jp/~aito/hogehoge/">ほげほげゴシックフォント</a>: hoge-gothic0.2.tar.gz
-  <li><a href="http://sourceforge.jp/projects/efont/">さざなみフォント</a>: sazanami-20040629.tar.bz2
-  <li><a href="http://code.google.com/p/dejima-fonts/">出島明朝</a>: dejima-mincho-r126.ttf
+  <li><a href="http://ossipedia.ipa.go.jp/ipafont/">IPAフォント</a>: IPAexfont00201.zip
+  <li><a href="https://osdn.jp/projects/efont/">さざなみフォント</a>: sazanami-20040629.tar.bz2
+  <li><a href="http://code.google.com/p/dejima-fonts/">出島明朝</a>: dejima-mincho-r227.ttf
   <li><a href="http://mikachan-font.com">みかちゃんフォント</a>: ver9.1.lzh
-  <li><a href="ftp://ftp.netscape.com/pub/communicator/extras/fonts/windows/">Cyberbit</a>: Cyberbit Version 2.0
-  <li><a href="http://home.att.net/~jameskass/">Code2002</a>: CODE2002.ZIP
+  <li><a href="http://ftp.netscape.com/pub/communicator/extras/fonts/windows/">Cyberbit</a>: Cyberbit Version 2.0
   <li><a href="http://www.gnome.org/fonts/">Bitstream Vera Fonts</a>: ttf-bitstream-vera-1.10.tar.bz2
 <!--
-  <li><a href="http://bibliofile.mc.duke.edu/gww/fonts/Caslon/Caslon.html#Unicode">Caslon</a>: CasUni.zip
-  <li><a href="ftp://ftp.mizi.com/pub/baekmuk">Baekmuk</a>（※ 韓国語用です）: baekmuk-ttf-2.1.tar.gz
+<li><a href="http://f59.aaa.livedoor.jp/~aito/hogehoge/">ほげほげゴシックフォント</a>: hoge-gothic0.2.tar.gz
+<li><a href="http://bibliofile.mc.duke.edu/gww/fonts/Caslon/Caslon.html#Unicode">Caslon</a>: CasUni.zip
+<li><a href="ftp://ftp.mizi.com/pub/baekmuk">Baekmuk</a>（※ 韓国語用です）: baekmuk-ttf-2.1.tar.gz
+<li><a href="http://home.att.net/~jameskass/">Code2002</a>: CODE2002.ZIP
 -->
 </ul>
 <h2>制限事項</h2>
