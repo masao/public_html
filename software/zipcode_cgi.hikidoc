@@ -1,7 +1,7 @@
 title: 郵便番号検索スクリプト（CGIプログラム）
 subject: software
 date.available: 2007-02-04
-date.modified: 2015-01-02
+date.modified: 2015-08-24
 
 SQLiteデータベース利用の習作として作成した郵便番号検索のスクリプトです。
 
@@ -41,9 +41,9 @@ SQLiteデータベース利用の習作として作成した郵便番号検索�
 まず、郵便局サイトが提供している郵便番号データのCSV形式をダウンロードし、それをもとにデータベースを作成します。
 以下のコマンドラインでできます。
 
- % wget http://www.post.japanpost.jp/zipcode/dl/kogaki/lzh/ken_all.lzh
- % lha -x ken_all.lzh
- % nkf -Sw ken_all.csv | ./zipcode-mkdb.rb 
+ % wget http://www.post.japanpost.jp/zipcode/dl/kogaki/zip/ken_all.zip
+ % unzip ken_all.zip
+ % nkf -Sw KEN_ALL.CSV | ./zipcode-mkdb.rb
 
 データベースの作成が完了したら、{{code zipcode.rb}}を CGI スクリプトとして実行すれば、検索ができるようになると思います。
 
