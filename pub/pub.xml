@@ -2,6 +2,17 @@
 <!-- $Id$ -->
 <publist>
   <pub type="conference">
+    <title>JuNii2 Validator</title>
+    <author>高久雅生</author>
+    <conference>Code4Lib JAPANカンファレンス2015</conference>
+    <year>2015</year>
+    <month>9</month>
+    <city>東京</city>
+    <date>2015-09-06</date>
+    <language>ja</language>
+    <slides>http://www.slideshare.net/tmasao/20150906-junii2validator</slides>
+  </pub>
+  <pub type="conference">
     <title>Evaluation of real web search engines for diversified search intents</title>
     <author>Song Ximei</author>
     <author>Masao Takaku</author>
@@ -10,6 +21,7 @@
     <month>8</month>
     <city>Taipei, Taiwan</city>
     <date>2015-08-24</date>
+    <language>en</language>
   </pub>
   <pub type="misc">
     <title>日本語版および英語版Wikipedia におけるDOIリンクの重複分析</title>
