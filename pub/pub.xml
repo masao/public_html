@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist>
-  <pub type="conference">
+  <pub type="misc">
     <title>JuNii2 Validator</title>
     <author>高久雅生</author>
     <conference>Code4Lib JAPANカンファレンス2015</conference>
@@ -11,6 +11,7 @@
     <date>2015-09-06</date>
     <language>ja</language>
     <slides>http://www.slideshare.net/tmasao/20150906-junii2validator</slides>
+    <note>ライトニングトーク発表</note>
   </pub>
   <pub type="conference">
     <title>Evaluation of real web search engines for diversified search intents</title>
