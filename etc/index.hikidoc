@@ -1,13 +1,13 @@
 title: その他雑多なメモ類のページ
 title.short: 雑多
-date.modified: 2013-03-30
+date.modified: 2015-09-07
 css.content: .lastmodified { color: maroon; font-size: smaller; }
 
 {{ rawhtml '<!--#config timefmt="<span class=\"lastmodified\">[%Y-%m-%d]</span>" -->' }}
 
 雑多な覚え書きその他を置いてあります。  （{{ rawhtml('<span class="lastmodified">[日付]</span>') }}は更新日を示します）
 
-*[[JuNii2 Validator|./junii-validator/]] {{ rawhtml( '<!--#flastmod file="./junii-validator/validator.rhtml" -->') }}
+*[[JuNii2 Validator|./junii-validator/]]
 *[[Twitterフォロワーリスト化ツール|./twitter-followerlist.html]] {{ rawhtml( '<!--#flastmod file="twitter-followerlist.html" -->') }}
 *[[日本国内の機関リポジトリサイトのWeb認知指標|./webometrics_rep_jp.html]] {{ rawhtml( '<!--#flastmod file="webometrics_rep_jp.hikidoc" -->') }}
 *[[選挙広報集|../senkyo-koho/]] {{ rawhtml( '<!--#flastmod virtual="../senkyo-koho/index.hikidoc" -->') }}
