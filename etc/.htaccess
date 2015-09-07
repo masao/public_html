@@ -5,3 +5,5 @@ DirectoryIndex index.shtml index.html
 order deny,allow
 deny from all
 </FilesMatch>
+
+RedirectPermanent /etc/junii-validator/ http://junii2-validator.herokuapp.com/
