@@ -6,4 +6,4 @@ order deny,allow
 deny from all
 </FilesMatch>
 
-RedirectPermanent /etc/junii-validator/ https://junii2-validator.herokuapp.com/
+RedirectPermanent /etc/junii-validator/ http://junii2-validator.herokuapp.com/
