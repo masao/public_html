@@ -2,6 +2,19 @@
 <!-- $Id$ -->
 <publist>
   <pub type="misc">
+    <title>アクセスログに基づくDOIリンクの参照状況の分析: JaLC DOIを対象に</title>
+    <author>吉川次郎</author>
+    <author>高久雅生</author>
+    <author>武田英明</author>
+    <author>逸村裕</author>
+    <conference>三田図書館・情報学会 2015年度研究大会</conference>
+    <year>2015</year>
+    <month>11</month>
+    <city>東京</city>
+    <date>2015-11-14</date>
+    <language>ja</language>
+  </pub>
+  <pub type="misc">
     <title>JuNii2 Validator</title>
     <author>高久雅生</author>
     <conference>Code4Lib JAPANカンファレンス2015</conference>
