@@ -44,7 +44,7 @@ subject: software
 PukiWikiのtrackerプラグインで作成されたページ群の一覧を生成するプラグインで、標準添付のtracker_listとは全く違うものですが、単純な文字列検索によるフィルタ機能を追加してあります。
 
 :ダウンロード:
-::[[./tracker_mylist.inc.php.txt]] （2009年2月13日版）
+::[[./tracker_mylist_inc_php.txt]] （2009年2月13日版）
 ::{{small '（ダウンロード後に、pluginディレクトリに tracker_mylist.inc.php と名前を変えて置けば設置完了）'}}
 :使い方:
 ::{{code '#tracker_mylist(Issue)'}}
