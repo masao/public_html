@@ -2,6 +2,17 @@
 <!-- $Id$ -->
 <publist>
   <pub type="misc">
+    <title>Linked Dataの概要と課題</title>
+    <author>高久雅生</author>
+    <conference>第63回日本図書館情報学会研究大会シンポジウム</conference>
+    <year>2015</year>
+    <month>10</month>
+    <city>東京</city>
+    <date>2015-10-18</date>
+    <language>ja</language>
+    <slides>http://www.slideshare.net/tmasao/20151018-jslislodsympotakaku</slides>
+  </pub>
+  <pub type="misc">
     <title>アクセスログに基づくDOIリンクの参照状況の分析: JaLC DOIを対象に</title>
     <author>吉川次郎</author>
     <author>高久雅生</author>
