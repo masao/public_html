@@ -1,9 +1,10 @@
 title: My recent portraits
-date.modified: 2015-09-09
+date.modified: 2015-10-19
 date.available: 2008-12-20
 subject: biography
 
 !!2015
+{{image './images/20151018-jslis.jpg' 'At the Symposium in Annual Meeting of Japan Society of Library and Information Science (October, 2015)' thumbs 200px left}}
 {{image './images/20150905-c4ljp15.jpg' 'Code4Lib JAPAN Conference 2015 (September, 2015)' thumbs 150px left}}
 {{clear}}
 
