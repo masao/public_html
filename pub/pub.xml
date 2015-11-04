@@ -2,6 +2,19 @@
 <!-- $Id$ -->
 <publist>
   <pub type="misc">
+    <title>検索の前後における利用者のコンセプトマップの分析</title>
+    <subtitle>検索の有無による比較</subtitle>
+    <author>齋藤ひとみ</author>
+    <author>江草由佳</author>
+    <author>高久雅生</author>
+    <conference>Webインテリジェンスとインタラクション研究会 第3回ステージ発表</conference>
+    <year>2015</year>
+    <month>11</month>
+    <city>東京</city>
+    <language>ja</language>
+    <date>2015-11-27</date>
+  </pub>
+  <pub type="misc">
     <title>Linked Dataの概要と課題</title>
     <author>高久雅生</author>
     <conference>第63回日本図書館情報学会研究大会シンポジウム</conference>
