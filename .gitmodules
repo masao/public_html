@@ -1,0 +1,3 @@
+[submodule "etc/ndcld"]
+	path = etc/ndcld
+	url = git@github.com:masao/ndcld.git
