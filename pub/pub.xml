@@ -308,6 +308,7 @@
     </page>
     <doi>10.1145/2637002.2637012</doi>
     <url>http://hdl.handle.net/2241/00123666</url>
+    <url>http://dl.acm.org/authorize?N00510</url>
   </pub>
 
   <pub type="journal">
@@ -1113,7 +1114,7 @@
     <language>en</language>
     <date>2010-08-18</date>
     <doi>10.1145/1840784.1840810</doi>
-    <url>http://dl.acm.org/authorize?N87807</url>
+    <url>http://dl.acm.org/authorize?N87893</url>
   </pub>
 
   <pub type="misc">
@@ -2067,7 +2068,7 @@
     <language>en</language>
     <doi>10.1145/1414694.1414728</doi>
     <date>2008-10-17</date>
-    <url>http://dl.acm.org/authorize?N87808</url>
+    <url>http://dl.acm.org/authorize?N87894</url>
   </pub>
 
   <pub refereed="true" type="misc">
