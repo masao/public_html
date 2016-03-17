@@ -20,6 +20,7 @@ subject: etc
 *[[Wayback|javascript:location.href='http://web.archive.org/save/'+document.location.href;]]
 *[[archive.today|javascript:void(open('http://archive.today/?run=1&url='+encodeURIComponent(document.location)))]]
 *[[e-hon|https://www.e-hon.ne.jp/bec/secure/CB/MemberHome?kaiinID=B5AA69F]]
+*[[exproxy|javascript:window.location.hostname=window.location.hostname+".ezproxy.tulips.tsukuba.ac.jp";]]
 
 !! 拡張
 *[[Any.do|https://web.any.do/]] - Todo管理
