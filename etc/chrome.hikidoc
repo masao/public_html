@@ -1,0 +1,32 @@
+title: Chrome: ブックマーク、拡張、設定など
+title.short: Chrome設定集
+date.available: 2016-03-16
+date.modified:  2016-03-17
+subject: etc
+
+常用ブラウザとして[[Google Chrome|https://www.google.co.jp/chrome/]]を使っていますが、Chrome上でのブックマーク、拡張、設定情報のメモです。
+
+!! ブックマーク
+!!!ブックマーク・キーワード
+*[[alc|http://eow.alc.co.jp/%s]] （英辞郎検索; by アルク）
+*[[en|http://www.merriam-webster.com/dictionary/%s]] （Merriam-Webster Dictionary; 英英辞書）
+*[[wp|http://ja.wikipedia.org/wiki/%E7%89%B9%E5%88%A5:Search?search=%s]] （ウィキペディア日本語版）
+*[[adachi|https://www.lib.adachi.tokyo.jp/licsxp-opac/WOpacTifSchCmpdExecAction.do?condition1Text=%s]] （足立区立図書館OPAC検索）
+
+!!! Boolmarklet
+*[[上|javascript:if (location.hash) location.hash = ''; else if (location.search) location.search = ''; else if (location.pathname.charAt(location.pathname.length-1) == %22/%22) location = %22..%22; else if (location.pathname) location = %22.%22; void 0]]
+*[[Bloglines|javascript:location.href='http://www.bloglines.com/sub/'+location.href]]
+*[[Delicious|javascript:location.href='http://del.icio.us/new/masao?v=4&url='+encodeURIComponent(location.href)+'&title='+encodeURIComponent(document.title)]]
+*[[Wayback|javascript:location.href='http://web.archive.org/save/'+document.location.href;]]
+*[[archive.today|javascript:void(open('http://archive.today/?run=1&url='+encodeURIComponent(document.location)))]]
+*[[e-hon|https://www.e-hon.ne.jp/bec/secure/CB/MemberHome?kaiinID=B5AA69F]]
+
+!! 拡張
+*[[Any.do|https://web.any.do/]] - Todo管理
+*[[Awesome Screenshot|https://www.awesomescreenshot.com/]] - スクリーンショット
+*[[XML Tree|https://chrome.google.com/webstore/detail/xml-tree/gbammbheopgpmaagmckhpjbfgdfkpadb]] - XMLファイル表示
+!!! 以下は優先度の低い拡張機能（ほとんど使っていない）
+*[[Proxy SwitchSharp|https://chrome.google.com/webstore/detail/proxy-switchysharp/dpplabbmogkhghncfbfdeeokoefdjegm]] - プロクシ切替
+*[[appear.in|https://chrome.google.com/webstore/detail/appearin/pokjppmpccggefgcenpngoleemajgnmo]] - 遠隔会議（画面共有等）
+*[[Refresh for Twitter|https://chrome.google.com/webstore/detail/refresh-for-twitter/hdpiilkeoldobfomlhipnnfanmgfllmp]] - ツイッターWeb再読込
+*[[EditThisCookie|http://www.editthiscookie.com/]] - クッキー表示・編集

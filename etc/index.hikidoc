@@ -1,17 +1,17 @@
 title: その他雑多なメモ類のページ
 title.short: 雑多
-date.modified: 2015-09-07
+date.modified: 2016-03-17
 css.content: .lastmodified { color: maroon; font-size: smaller; }
 
 {{ rawhtml '<!--#config timefmt="<span class=\"lastmodified\">[%Y-%m-%d]</span>" -->' }}
 
 雑多な覚え書きその他を置いてあります。  （{{ rawhtml('<span class="lastmodified">[日付]</span>') }}は更新日を示します）
 
+*[[Chrome: ブックマーク、拡張など|chrome.html]] {{ rawhtml( '<!--#flastmod file="chrome.hikidoc" -->') }}
 *[[JuNii2 Validator|./junii-validator/]]
 *[[Twitterフォロワーリスト化ツール|./twitter-followerlist.html]] {{ rawhtml( '<!--#flastmod file="twitter-followerlist.html" -->') }}
 *[[日本国内の機関リポジトリサイトのWeb認知指標|./webometrics_rep_jp.html]] {{ rawhtml( '<!--#flastmod file="webometrics_rep_jp.hikidoc" -->') }}
 *[[選挙広報集|../senkyo-koho/]] {{ rawhtml( '<!--#flastmod virtual="../senkyo-koho/index.hikidoc" -->') }}
-*[[Filefox: ブックマーク、拡張、設定など|firefox.html]] {{ rawhtml( '<!--#flastmod file="firefox.hikidoc" -->') }}
 *[[情報検索関連の論文誌|ir-journal.html]] {{ rawhtml( '<!--#flastmod file="ir-journal.hikidoc" -->' }}
 *[[Unihan.txt - 音訓辞書|unihan-onkun.html]] {{ rawhtml( '<!--#flastmod file="unihan-onkun.hikidoc" -->' }}
 *[[郵便番号検索|zipcode.cgi]] {{ rawhtml( '<!--#flastmod file="zipcode.db" -->' }}
@@ -26,6 +26,7 @@ css.content: .lastmodified { color: maroon; font-size: smaller; }
 
 以下のものはだいぶ昔に書いたもので、更新の予定はありません。
 
+*[[Filefox: ブックマーク、拡張、設定など|firefox.html]]
 *[[Mozillaの不具合メモ|mozilla.html]]
 *[[ファイル名の一括変換の方法|man-change-allfilename.html]]
 *[[Windows 95 トラブルシューティング|man-win95-trouble.html]]

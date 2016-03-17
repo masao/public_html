@@ -7,6 +7,7 @@ HTML	= 	index.html.ja index.html.en \
 		history.html links.html \
 		etc/index.shtml \
 		etc/firefox.html \
+		etc/chrome.html \
 		etc/ir-journal.html \
 		etc/unihan-onkun.html \
 		etc/wikiwiki.html \
