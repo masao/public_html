@@ -2,6 +2,27 @@
 <!-- $Id$ -->
 <publist>
   <pub type="misc">
+    <title>電子書籍と紙の書籍の購入のための比較項目</title>
+    <author>縵沢奈穂美</author>
+    <author>高久雅生</author>
+    <conference>第24回情報知識学会年次大会</conference>
+    <journal>情報知識学会誌</journal>
+    <volume>26</volume>
+    <number>2</number>
+    <year>2016</year>
+    <month>5</month>
+    <city>つくば</city>
+    <!--
+    <page>
+      <start>172</start>
+      <end>179</end>
+    </page>
+    -->
+    <language>ja</language>
+    <date>2016-05-14</date>
+  </pub>
+
+  <pub type="misc">
     <title>検索の前後における利用者のコンセプトマップの分析</title>
     <subtitle>検索の有無による比較</subtitle>
     <author>齋藤ひとみ</author>
