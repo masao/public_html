@@ -2,6 +2,18 @@
 <!-- $Id$ -->
 <publist>
   <pub type="misc">
+    <title>Wikipediaとは? Wikipediaの編集方法</title>
+    <author>高久雅生</author>
+    <conference>ウィキペディア・タウン筑波山</conference>
+    <city>つくば</city>
+    <language>ja</language>
+    <date>2016-04-24</date>
+    <year>2016</year>
+    <month>4</month>
+    <slides>http://www.slideshare.net/tmasao/20160424-wikipedia-towntsukubasantakaku</slides>
+  </pub>
+
+  <pub type="misc">
     <title>電子書籍と紙の書籍の購入のための比較項目</title>
     <author>縵沢奈穂美</author>
     <author>高久雅生</author>
