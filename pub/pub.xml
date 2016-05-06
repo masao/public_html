@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist>
+  <pub type="conference">
+    <title>IRCE at NTCIR-12 IMine-2 Task</title>
+    <author>Ximei Song</author>
+    <author>Yuka Egusa</author>
+    <author>Hitomi Saito</author>
+    <author>Masao Takaku</author>
+    <conference>The 12th NTCIR Conference (NTCIR-12)</conference>
+    <year>2016</year>
+    <month>6</month>
+    <city>Tokyo</city>
+    <date>2016-06-07</date>
+    <language>en</language>
+    <page>5</page>
+  </pub>
   <pub type="misc">
     <title>Wikipediaとは? Wikipediaの編集方針</title>
     <author>高久雅生</author>
