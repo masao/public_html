@@ -1,6 +1,6 @@
 title: Curriculum Vitae (Masao Takaku)
 subject: biography
-date.modified: 2016-05-03
+date.modified: 2016-05-13
 date.available: 2007-03-04
 
 [[{{image './images/20151018-jslis.jpg' 'At the Symposium in Annual Meeting of Japan Society of Library and Information Science (October, 2015)' thumbs 200px right}}|./profile-images.html]]
@@ -101,6 +101,7 @@ Information retrieval, Digital library, Information behaviour, Scholarly communi
 ::(Skills) Japan/MARC, C, Perl, DBM, Magnetic tapes
 
 !!Awards
+:Best Teacher Award at College of Knowledge and Library Sciences, University of Tsukuba (2016):Received for my educational activities in 2015.
 :Contribution Presitent Award at National Institute for Materials Science (2013):Received my contribution to "Developement of Researchers Directory Service, SAMURAI, and Accomplishment on Outreach Activities".
 :The 10th Best Paper Award of Journal of Information and Knowledge (2011):The paper entitled "Influence of Task Type and User Group on Web-based Information Seeking Behavior: Analysis of Eye Movement Data and Client-side Browsing Logs", co-authored with Yuka Egusa, Hitoshi Terai, Hitomi Saito, Makiko Miwa, Noriko Kando, published on ''Journal of Information and Knowledge'' Volume 20, Issue 3 got received the Best Paper Award. ([[details|http://www.jsik.jp/?paper_award2011]])
 :The Best Application Award at the 2nd CiNii Web API Contest (2010):My application "[[Fuwatto CiNii Author Search|http://fuwat.to/cinii-author]]" got received the Best Application Award. ([[details|http://ci.nii.ac.jp/info/ja/web_api_contest_2010_results.html]])
