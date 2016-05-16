@@ -29,61 +29,62 @@ author_s
 </span></dd>
 <dd class="bibdata">
 <%
+fields = []
 biborder = [ :conference, :org, :city, :booktitle, :journal ]
 if type == "book" or type == "chapter"
    biborder = [ :booktitle, :org, :publisher, :city, :series ]
 end
+biborder.each do |field|
+  if not send( field ).nil?
+    fields << %Q[<span class="#{ field }">#{h send( field ) }</span>]
+  end
+end
+if not volume.nil?
+  fields << %Q[<span class="volume">vol.#{h volume }</span>]
+end
+if not number.nil?
+  fields << %Q[<span class="number">no.#{h number }</span>]
+end
+if not sequence_number.nil?
+  fields << %Q[<span class="sequence_number">#{h sequence_number }</span>]
+end
+if page_start and page_end
+  fields << %Q[<span class="page">pp.#{h page_start }-#{h page_end }</span>]
+elsif page
+  fields << %Q[<span class="page">#{h page }p.</span>]
+end
 %>
-<% biborder.each do |field| %>
-<% if not send( field ).nil? %>
-<span class="<%= field %>"><%=h send( field ) %>;</span>
-<% end %>
-<% end %>
-<% if not volume.nil? %>
-<span class="volume">vol.<%=h volume %>;</span>
-<% end %>
-<% if not number.nil? %>
-<span class="number">no.<%=h number %>;</span>
-<% end %>
-<% if not sequence_number.nil? %>
-<span class="sequence_number"><%=h sequence_number %>;</span>
-<% end %>
-<% if page_start and page_end %>
-<span class="page">pp.<%=h page_start %>-<%=h page_end %>;</span>
-<% elsif page %>
-<span class="page"><%=h page %>p.</span>
-<% end %>
+<%= fields.join(", ") %>
 <% if not year.nil? %>
-<span class="pubdate">(<%=h year %><% if not month.nil? %><span class="month">-<%= "%02d" % month.to_i %></span><% end %>)
-</span>
+  <span class="pubdate">(<%=h year %><% if not month.nil? %><span class="month">-<%= "%02d" % month.to_i %></span><% end %>)</span>
 <% end %>
 <% if not isbn.nil? %>
-<span class="isbn">(ISBN:<%=h isbn %>)</span>
+  <span class="isbn">(ISBN:<%=h isbn %>)</span>
 <% end %>
 <% if not note.nil? %>
-<span class="note"><%=h note %></span>
+  <span class="note"><%=h note %></span>
 <% end %>
 <% if not awards.nil? %>
-<span class="awards"><%=h awards %></span>
+  <span class="awards"><%=h awards %></span>
 <% end %>
 </dd>
 <% if not url.nil? %>
-<% send( :url ).to_a.each do |val| %>
-<dd class="url">
-<span class="url"><a href="<%=h val %>"><%=h val %></a></span>
-</dd>
+  <% send( :url ).to_a.each do |val| %>
+  <dd class="url">
+    <span class="url"><a href="<%=h val %>"><%=h val %></a></span>
+  </dd>
 <% end %>
 <% end %>
 <% if not doi.nil? %>
-<dd class="url">
-<span class="doi">DOI <a href="http://doi.org/<%=h doi %>"><%=h doi %></a></span>
-</dd>
+  <dd class="url">
+    <span class="doi">DOI <a href="http://doi.org/<%=h doi %>"><%=h doi %></a></span>
+  </dd>
 <% end %>
 <% %w[ abstract slides poster ].each do |target| %>
-<% send( target ).to_a.each do |val| %>
-<dd class="url">
-<span class="<%= target %>">[<%= target.capitalize %>] <a href="<%=h val %>"><%=h val %></a></span>
-</dd>
-<% end %>
+  <% send( target ).to_a.each do |val| %>
+    <dd class="url">
+    <span class="<%= target %>">[<%= target.capitalize %>] <a href="<%=h val %>"><%=h val %></a></span>
+    </dd>
+  <% end %>
 <% end %>
 <dd><span class="Z3988" title="<%=h to_coins %>"></span></dd>
