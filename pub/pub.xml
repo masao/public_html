@@ -1,6 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist>
+  <pub type="misc">
+    <title>唐詩情報のLinked Data化の試み</title>
+    <author>叢艶</author>
+    <author>高久雅生</author>
+    <conference>第15回情報メディア学会研究大会</conference>
+    <year>2016</year>
+    <month>6</month>
+    <city>つくば</city>
+    <language>ja</language>
+    <date>2016-06-25</date>
+  </pub>
+  <pub type="misc">
+    <title>Wikipedia上のJ-STAGEコンテンツの分析</title>
+    <subtitle>研究分野を中心に</subtitle>
+    <author>吉川次郎</author>
+    <author>高久雅生</author>
+    <conference>第15回情報メディア学会研究大会</conference>
+    <year>2016</year>
+    <month>6</month>
+    <city>つくば</city>
+    <!--
+    <page>
+      <start>27</start>
+      <end>30</end>
+    </page>
+    -->
+    <language>ja</language>
+    <date>2016-06-25</date>
+  </pub>
   <pub type="conference">
     <title>IRCE at NTCIR-12 IMine-2 Task</title>
     <author>Ximei Song</author>
