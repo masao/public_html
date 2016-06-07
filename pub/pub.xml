@@ -42,7 +42,11 @@
     <city>Tokyo</city>
     <date>2016-06-07</date>
     <language>en</language>
-    <page>5</page>
+    <page>
+      <start>55</start>
+      <end>59</end>
+    </page>
+    <url>http://research.nii.ac.jp/ntcir/workshop/OnlineProceedings12/pdf/ntcir/IMINE/08-NTCIR12-IMINE-SongM.pdf</url>
   </pub>
   <pub type="misc">
     <title>Wikipediaとは? Wikipediaの編集方針</title>
