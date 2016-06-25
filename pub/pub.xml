@@ -9,6 +9,10 @@
     <year>2016</year>
     <month>6</month>
     <city>つくば</city>
+    <page>
+      <start>17</start>
+      <end>20</end>
+    </page>
     <language>ja</language>
     <date>2016-06-25</date>
   </pub>
@@ -21,12 +25,10 @@
     <year>2016</year>
     <month>6</month>
     <city>つくば</city>
-    <!--
     <page>
-      <start>27</start>
-      <end>30</end>
+      <start>39</start>
+      <end>42</end>
     </page>
-    -->
     <language>ja</language>
     <date>2016-06-25</date>
   </pub>
