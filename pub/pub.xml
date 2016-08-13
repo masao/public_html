@@ -2,6 +2,18 @@
 <!-- $Id$ -->
 <publist>
   <pub type="misc">
+    <title>Scholarly Communication through Wikipedias</title>
+    <subtitle>Duplicates of DOI Links among English, Japanese and Chinese Wikipedia</subtitle>
+    <author>Jiro Kikkawa</author>
+    <author>Masao Takaku</author>
+    <conference>International Conference on Media Usage and Cross-cultural Communication under the Digital Era (Workshop of TGSW 2016)</conference>
+    <year>2016</year>
+    <month>9</month>
+    <city>Tsukuba</city>
+    <language>en</language>
+    <date>2016-09-19</date>
+  </pub>
+  <pub type="misc">
     <title>唐詩情報のLinked Data化の試み</title>
     <author>叢艶</author>
     <author>高久雅生</author>
