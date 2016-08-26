@@ -2,6 +2,45 @@
 <!-- $Id$ -->
 <publist>
   <pub type="misc">
+    <title>Wikipedia上の学術情報のLOD化に向けた予備的分析</title>
+    <author>吉川次郎</author>
+    <author>高久雅生</author>
+    <author>加藤文彦</author>
+    <author>大向一輝</author>
+    <author>武田英明</author>
+    <conference>第39回セマンティックウェブとオントロジー研究会</conference>
+    <year>2016</year>
+    <month>9</month>
+    <city>東京</city>
+    <page>10</page>
+    <language>ja</language>
+    <date>2016-09-05</date>
+  </pub>
+  <pub type="misc">
+    <title>唐詩情報のLinked Open Data化とその利活用の試み</title>
+    <author>叢艶</author>
+    <author>江草由佳</author>
+    <author>高久雅生</author>
+    <conference>第39回セマンティックウェブとオントロジー研究会</conference>
+    <year>2016</year>
+    <month>9</month>
+    <city>東京</city>
+    <page>6</page>
+    <language>ja</language>
+    <date>2016-09-05</date>
+  </pub>
+  <pub type="misc">
+    <title>唐詩情報のLinked Data化に向けて</title>
+    <author>叢艶</author>
+    <author>高久雅生</author>
+    <conference>Code4Lib JAPAN Conference 2016</conference>
+    <year>2016</year>
+    <month>9</month>
+    <city>大阪</city>
+    <language>ja</language>
+    <date>2016-09-10</date>
+  </pub>
+  <pub type="misc">
     <title>Scholarly Communication through Wikipedias</title>
     <subtitle>Duplicates of DOI Links among English, Japanese and Chinese Wikipedia</subtitle>
     <author>Jiro Kikkawa</author>
