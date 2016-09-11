@@ -2,6 +2,17 @@
 <!-- $Id$ -->
 <publist>
   <pub type="misc">
+    <title>LitCurate</title>
+    <subtitle>文献レビュー支援ツール</subtitle>
+    <author>高久雅生</author>
+    <conference>Code4Lib JAPANカンファレンス2016</conference>
+    <year>2016</year>
+    <month>9</month>
+    <city>大阪</city>
+    <language>ja</language>
+    <date>2016-09-11</date>
+  </pub>
+  <pub type="misc">
     <title>Wikipedia上の学術情報のLOD化に向けた予備的分析</title>
     <author>吉川次郎</author>
     <author>高久雅生</author>
