@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist>
+  <pub type="journal" refereed="true">
+    <title>FRSADとLinked Dataに基づく主題情報共有システム</title>
+    <author>田辺浩介</author>
+    <author>高久雅生</author>
+    <author>江草由佳</author>
+    <journal>情報知識学会誌</journal>
+    <volume>26</volume>
+    <number>3</number>
+    <year>2016</year>
+    <month>10</month>
+    <date>2016-10-31</date>
+    <language>ja</language>
+  </pub>
   <pub type="misc">
     <title>LitCurate</title>
     <subtitle>文献レビュー支援ツール</subtitle>
