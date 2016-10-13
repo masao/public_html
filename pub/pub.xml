@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist>
+  <pub type="conference" refereed="true">
+    <title>DOI Links on Wikipedia</title>
+    <subtitle>Analyses of English, Japanese, and Chinese Wikipedias</subtitle>
+    <author>Jiro Kikkawa</author>
+    <author>Masao Takaku</author>
+    <author>Fuyuki Yoshikane</author>
+    <conference>The 18th International Conference on Asia-Pacific Digital Libraries</conference>
+    <year>2016</year>
+    <month>12</month>
+    <city>Tsukuba</city>
+    <language>en</language>
+    <date>2016-12-05</date>
+  </pub>
   <pub type="journal" refereed="true">
     <title>FRSADとLinked Dataに基づく主題情報共有システム</title>
     <author>田辺浩介</author>
