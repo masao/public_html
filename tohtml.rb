@@ -75,11 +75,13 @@ class MHikiDoc < HikiDoc
 
    # For Interwiki
    def fix_uri(uri)
-      if /^(\w+):(.*)$/ =~ uri and @interwiki.has_key?( $1 )
+      if /^(\w+):(.*)$/ =~ uri
          prefix = $1
          str = $2
-         uri = @interwiki[prefix]
-         uri << str if not uri.gsub!(/%s/, str)
+         if @interwiki.has_key?( prefix )
+            uri = @interwiki[prefix].dup
+            uri.gsub!(/%s/, str) or uri << str
+         end
       elsif %r|://| !~ uri and /\Amailto:/ !~ uri
          uri.sub(/\A\w+:/, "")
       end

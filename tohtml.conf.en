@@ -8,6 +8,3 @@ subject.label:
    software : software
    lecture : lecture
    trans : translation
-
-interwiki:
-   amazon: "http://www.amazon.co.jp/exec/obidos/ASIN/%s/masaotakakush-22/ref=nosim"
