@@ -349,7 +349,7 @@ class PubApp
          if @config and @config["author_map"]
             author_map = @config["author_map"]
             author_map.keys.each do |k|
-               if author_map[ k ] == author
+               if author_map[ k ] == author or author_map[ k ].include?( author )
                   # STDERR.puts "#{ k } == #{ author_map[ k ] }"
                   author = k
                   break
