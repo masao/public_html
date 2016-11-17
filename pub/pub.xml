@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist>
+  <pub type="chapter">
+    <author>高久雅生</author>
+    <title>メタデータ利用を支える技術</title>
+    <publisher>勉誠出版</publisher>
+    <booktitle>メタデータとウェブサービス</booktitle>
+    <chapter>第2部第3章</chapter>
+    <author role="editor">日本図書館情報学会研究委員会</author>
+    <city>東京</city>
+    <page>
+      <start>145</start>
+      <end>160</end>
+    </page>
+    <series>わかる! 図書館情報学シリーズ</series>
+    <number>3</number>
+    <isbn>978-4-585-20503-6</isbn>
+    <year>2016</year>
+    <month>11</month>
+    <date>2016-11-16</date>
+    <language>ja</language>
+  </pub>
+
   <pub type="misc">
     <title>検索意図を考慮したナビゲーション支援システム</title>
     <author>宋曦媚</author>
