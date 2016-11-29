@@ -48,8 +48,12 @@
     <month>12</month>
     <city>Tsukuba, Japan</city>
     <language>en</language>
-    <page>12</page>
+    <page>
+      <start>369</start>
+      <end>380</end>
+    </page>
     <date>2016-12-05</date>
+    <doi>10.1007/978-3-319-49304-6_40</doi>
   </pub>
   <pub type="journal" refereed="true">
     <title>FRSADとLinked Dataに基づく主題情報共有システム</title>
