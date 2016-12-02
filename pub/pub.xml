@@ -30,7 +30,10 @@
     <year>2016</year>
     <month>12</month>
     <city>東京</city>
-    <page>6</page>
+    <page>
+      <start>1</start>
+      <end>6</end>
+    </page>
     <language>ja</language>
     <date>2016-12-02</date>
   </pub>
