@@ -68,17 +68,17 @@ end
   <span class="awards"><%=h awards %></span>
 <% end %>
 </dd>
+<% if not doi.nil? %>
+  <dd class="url">
+    <span class="doi">DOI <a href="http://doi.org/<%=h doi %>"><%=h doi %></a></span>
+  </dd>
+<% end %>
 <% if not url.nil? %>
   <% send( :url ).to_a.each do |val| %>
   <dd class="url">
     <span class="url"><a href="<%=h val %>"><%=h val %></a></span>
   </dd>
 <% end %>
-<% end %>
-<% if not doi.nil? %>
-  <dd class="url">
-    <span class="doi">DOI <a href="http://doi.org/<%=h doi %>"><%=h doi %></a></span>
-  </dd>
 <% end %>
 <% %w[ abstract slides poster ].each do |target| %>
   <% send( target ).to_a.each do |val| %>
