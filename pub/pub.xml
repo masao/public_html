@@ -618,6 +618,8 @@
     </page>
     <date>2014-03-25</date>
     <isbn>978-4-7806-0389-7</isbn>
+    <url>http://www.gakujutsu.co.jp/mybooks/ISBN978-4-7806-0389-7.html</url>
+    <url>https://www.amazon.co.jp/dp/4780603897/masaotakakush-22</url>
   </pub>
 
   <pub type="misc">
@@ -2398,7 +2400,7 @@
       <end>20</end>
     </page>
     <language>ja</language>
-    <url>http://www.dbsj.org/Japanese/DBSJLetters/vol6/no4/thesis/aizawa.pdf</url>
+    <url>http://dbsj.org/journal/dbsj_letters/dbsj_letters_vol_6_no_4_17_20/</url>
     <date>2008-03-27</date>
   </pub>
 
