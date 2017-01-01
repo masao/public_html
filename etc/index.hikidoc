@@ -1,12 +1,13 @@
 title: その他雑多なメモ類のページ
 title.short: 雑多
-date.modified: 2016-03-17
+date.modified: 2017-01-01
 css.content: .lastmodified { color: maroon; font-size: smaller; }
 
 {{ rawhtml '<!--#config timefmt="<span class=\"lastmodified\">[%Y-%m-%d]</span>" -->' }}
 
 雑多な覚え書きその他を置いてあります。  （{{ rawhtml('<span class="lastmodified">[日付]</span>') }}は更新日を示します）
 
+*[[Atom: 設定ほか|atom.html]] {{ rawhtml( '<!--#flastmod file="atom.hikidoc" -->') }}
 *[[Chrome: ブックマーク、拡張など|chrome.html]] {{ rawhtml( '<!--#flastmod file="chrome.hikidoc" -->') }}
 *[[JuNii2 Validator|./junii-validator/]]
 *[[Twitterフォロワーリスト化ツール|./twitter-followerlist.html]] {{ rawhtml( '<!--#flastmod file="twitter-followerlist.html" -->') }}

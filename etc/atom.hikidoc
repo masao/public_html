@@ -1,0 +1,22 @@
+title:Atom: 設定ほか
+date.modified: 2017-01-01
+date.available: 2017-01-01
+subject: etc
+
+エディタAtomの設定関連のメモです。
+いまのところ、LaTeX関連のみ記します。
+
+!!拡張パッケージ
+
+*language-latex
+*latex-friend
+*symbols-tree-view
+
+!!テーマ
+
+*UI Theme: One Dark
+*Syntax Theme: Solarized Light
+
+!!関連リンク
+
+*[[ATOM Editor をそろそろ始めようか|http://qiita.com/spiegel-im-spiegel/items/3d41d98dacc107d73431]]
