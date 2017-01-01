@@ -3,14 +3,14 @@ date.modified: 2017-01-01
 date.available: 2017-01-01
 subject: etc
 
-エディタAtomの設定関連のメモです。
+[[エディタAtom|https://atom.io/]]の設定関連のメモです。
 いまのところ、LaTeX関連のみ記します。
 
 !!拡張パッケージ
 
 *language-latex
-*latex-friend
-*symbols-tree-view
+*latex-friend （アウトライン機能）
+*symbols-tree-view （アウトライン機能に必要）
 
 !!テーマ
 
