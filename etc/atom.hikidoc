@@ -8,9 +8,9 @@ subject: etc
 
 !!拡張パッケージ
 
-*language-latex
-*latex-friend （アウトライン機能）
-*symbols-tree-view （アウトライン機能に必要）
+*[[language-latex|https://atom.io/packages/language-latex]]
+*[[latex-friend|https://atom.io/packages/latex-friend]] （アウトライン機能）
+*[[symbols-tree-view|https://atom.io/packages/symbols-tree-view]] （アウトライン機能に必要）
 
 !!テーマ
 
