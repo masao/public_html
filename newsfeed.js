@@ -25,7 +25,6 @@ $().ready(function(){
         list.appendChild(dt);
 
         var dd = document.createElement("dd");
-//            dd.appendChild(document.createTextNode(entry.title);
         var content = entry["content:encoded"];
         content = content.substr( 0, content.indexOf( "。" ) );
         content = content.replace( /<.*?>|[\r\n]+/g, " " ).trim();
@@ -33,7 +32,7 @@ $().ready(function(){
 
         var link = document.createElement("a");
         link.href = entry.link;
-        link.appendChild(document.createTextNode(entry.title));
+        $(link).html(entry.title);
         dd.appendChild(link);
         list.appendChild(dd);
         i++;
