@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist>
+  <pub type="misc">
+    <title>唐詩情報のLinked Open Data化</title>
+    <author>叢艶</author>
+    <author>高久雅生</author>
+    <conference>LODチャレンジ2016</conference>
+    <year>2017</year>
+    <month>1</month>
+    <language>ja</language>
+    <date>2017-01-13</date>
+    <url>http://idea.linkdata.org/idea/idea1s2144i</url>
+    <note>データセット部門エントリー作品</note>
+  </pub>
+
   <pub type="chapter">
     <author>高久雅生</author>
     <title>メタデータ利用を支える技術</title>
