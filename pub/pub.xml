@@ -2,6 +2,18 @@
 <!-- $Id$ -->
 <publist>
   <pub type="misc">
+    <title>教科書LOD</title>
+    <author>江草由佳</author>
+    <author>高久雅生</author>
+    <conference>LODチャレンジ2016</conference>
+    <year>2017</year>
+    <month>1</month>
+    <language>ja</language>
+    <date>2017-01-15</date>
+    <url>http://idea.linkdata.org/idea/idea1s2213i</url>
+    <note>データセット部門エントリー作品</note>
+  </pub>
+  <pub type="misc">
     <title>唐詩情報のLinked Open Data化</title>
     <author>叢艶</author>
     <author>高久雅生</author>
