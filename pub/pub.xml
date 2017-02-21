@@ -2,6 +2,16 @@
 <!-- $Id$ -->
 <publist>
   <pub type="misc">
+    <title>講演会: デジタル・ヒューマニティーズ</title>
+    <author>高久雅生</author>
+    <year>2017</year>
+    <month>2</month>
+    <language>ja</language>
+    <date>2017-02-24</date>
+    <url>https://www.goethe.de/ins/jp/ja/sta/tok/ver.cfm?fuseaction=events.detail&amp;event_id=20910941</url>
+    <note>(司会)</note>
+  </pub>
+  <pub type="misc">
     <title>教科書LOD</title>
     <author>江草由佳</author>
     <author>高久雅生</author>
@@ -304,7 +314,7 @@
   </pub>
   <pub type="conference">
     <title>Evaluation of real web search engines for diversified search intents</title>
-    <author>Song Ximei</author>
+    <author>Ximei Song</author>
     <author>Masao Takaku</author>
     <conference>Asia Summer School in Information Access (ASSIA 2015)</conference>
     <year>2015</year>
