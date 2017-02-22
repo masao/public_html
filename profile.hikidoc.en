@@ -1,6 +1,6 @@
 title: Curriculum Vitae (Masao Takaku)
 subject: biography
-date.modified: 2017-02-15
+date.modified: 2017-02-22
 date.available: 2007-03-04
 
 [[{{image './images/201609-c4ljp.jpg' 'At Code4Lib JAPAN Conference 2016 (September, 2016)' thumbs 200px right}}|./profile-images.html]]
@@ -101,6 +101,7 @@ Information retrieval, Digital library, Information behaviour, Scholarly communi
 ::(Skills) Japan/MARC, C, Perl, DBM, Magnetic tapes
 
 !!Awards
+:LOD Challenge 2016 Theme Awards - Education LOD Award:Received for developing and providing [[Textbook LOD Dataset|https://w3id.org/jp-textbook/]].
 :Best Teacher Award at College of Knowledge and Library Sciences, University of Tsukuba (2016):Received for my educational activities in 2015.
 :Contribution Presitent Award at National Institute for Materials Science (2013):Received my contribution to "Developement of Researchers Directory Service, SAMURAI, and Accomplishment on Outreach Activities".
 :The 10th Best Paper Award of Journal of Information and Knowledge (2011):The paper entitled "Influence of Task Type and User Group on Web-based Information Seeking Behavior: Analysis of Eye Movement Data and Client-side Browsing Logs", co-authored with Yuka Egusa, Hitoshi Terai, Hitomi Saito, Makiko Miwa, Noriko Kando, published on ''Journal of Information and Knowledge'' Volume 20, Issue 3 got received the Best Paper Award. ([[details|http://www.jsik.jp/?paper_award2011]])

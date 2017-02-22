@@ -2,7 +2,7 @@ title: 高久雅生の経歴
 title.short: 経歴
 subject:biography
 date.available: 2007-03-04
-date.modified: 2017-02-15
+date.modified: 2017-02-22
 
 [[{{image './images/201609-c4ljp.jpg' 'Code4Lib JAPANカンファレンス2016にて（2016年9月）' thumbs 200px right}}|./profile-images.html]]
 :氏名:高久 雅生 （たかく まさお）
@@ -115,6 +115,7 @@ date.modified: 2017-02-15
 ::（スキル）Japan/MARC, C言語, Perl, DBM, 磁気テープ
 
 !!受賞
+:LODチャレンジ2016テーマ賞「教育LOD賞」:[[教科書LODデータセット|https://w3id.org/jp-textbook/]]の提供公開に対して受賞。
 :筑波大学知識情報・図書館学類ベストティーチャー賞（2016年4月）:2015年度の教育活動に関して受賞。
 :物質・材料研究機構理事長賞貢献賞（2013年4月）:「研究者総覧SAMURAIの開発およびアウトリーチ実績」の貢献に関して受賞しました。
 :第10回情報知識学会論文賞（2011年5月）:『情報知識学会誌』20巻3号掲載の「タスク種別とユーザ特性の違いがWeb情報探索行動に与える影響: 眼球運動データおよび閲覧行動ログを用いた分析」（江草由佳, 寺井仁, 齋藤ひとみ, 三輪眞木子, 神門典子 との共著）が受賞しました（→[[詳細|http://www.jsik.jp/?paper_award2011]]）
