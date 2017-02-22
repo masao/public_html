@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist>
+  <pub type="conference">
+    <title>How to Evaluate Interactive Complex Search Task Using Concept Map</title>
+    <author>Yuka Egusa</author>
+    <author>Masao Takaku</author>
+    <author>Hitomi Saito</author>
+    <conference>Supporting Complex Search Tasks CHIIR 2017 Workshop (CHIIR 2017 Workshop)</conference>
+    <year>2017</year>
+    <month>3</month>
+    <city>Oslo, Norway</city>
+    <date>2017-03-11</date>
+    <language>en</language>
+    <page>2</page>
+  </pub>
   <pub type="misc">
     <title>講演会: デジタル・ヒューマニティーズ</title>
     <author>高久雅生</author>
