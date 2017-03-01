@@ -2,17 +2,20 @@
 <!-- $Id$ -->
 <publist>
   <pub type="conference">
-    <title>How to Evaluate Interactive Complex Search Task Using Concept Map</title>
+    <title>Evaluating Complex Interactive Searches Using Concept Maps</title>
     <author>Yuka Egusa</author>
     <author>Masao Takaku</author>
     <author>Hitomi Saito</author>
-    <conference>Supporting Complex Search Tasks CHIIR 2017 Workshop (CHIIR 2017 Workshop)</conference>
+    <conference>Supporting Complex Search Tasks Workshop (CHIIR 2017 Workshop)</conference>
+    <journal>CEUR Workshop Proceedings</journal>
+    <volume>1798</volume>
     <year>2017</year>
     <month>3</month>
     <city>Oslo, Norway</city>
     <date>2017-03-11</date>
     <language>en</language>
-    <page>2</page>
+    <page>3</page>
+    <url>http://ceur-ws.org/Vol-1798/</url>
   </pub>
   <pub type="misc">
     <title>講演会: デジタル・ヒューマニティーズ</title>
