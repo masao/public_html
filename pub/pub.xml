@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist>
+  <pub type="misc">
+    <title>ウィキペディアタウン筑波山</title>
+    <subtitle>自治体との協働による情報発信</subtitle>
+    <author>関洋平</author>
+    <author>高久雅生</author>
+    <year>2017</year>
+    <month>3</month>
+    <language>ja</language>
+    <conference>ウィキペディアタウンサミット2017</conference>
+    <city>京都</city>
+    <date>2017-03-05</date>
+  </pub>
   <pub type="conference">
     <title>Evaluating Complex Interactive Searches Using Concept Maps</title>
     <author>Yuka Egusa</author>
@@ -25,6 +37,7 @@
     <language>ja</language>
     <date>2017-02-24</date>
     <url>https://www.goethe.de/ins/jp/ja/sta/tok/ver.cfm?fuseaction=events.detail&amp;event_id=20910941</url>
+    <city>東京, ドイツ文化センター</city>
     <note>(司会)</note>
   </pub>
   <pub type="misc">
