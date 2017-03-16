@@ -2,6 +2,17 @@
 <!-- $Id$ -->
 <publist>
   <pub type="misc">
+    <title>書誌データのシステム活用に向けて</title>
+    <author>高久雅生</author>
+    <year>2017</year>
+    <month>3</month>
+    <language>ja</language>
+    <conference>平成28年度書誌調整連絡会議</conference>
+    <city>東京</city>
+    <date>2017-03-16</date>
+    <url>http://ndl.go.jp/jp/data/basic_policy/conference/index.html</url>
+  </pub>
+  <pub type="misc">
     <title>ウィキペディアタウン筑波山</title>
     <subtitle>自治体との協働による情報発信</subtitle>
     <author>関洋平</author>
