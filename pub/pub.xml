@@ -2,6 +2,17 @@
 <!-- $Id$ -->
 <publist>
   <pub type="misc">
+    <title>教科書LOD</title>
+    <author>江草由佳</author>
+    <author>高久雅生</author>
+    <conference>LODチャレンジ2016受賞式シンポジウム</conference>
+    <year>2017</year>
+    <month>3</month>
+    <language>ja</language>
+    <date>2017-03-11</date>
+    <slides>https://www.slideshare.net/tmasao/20170311-lod-challenge2016-textbook</slides>
+  </pub>
+  <pub type="misc">
     <title>書誌データのシステム活用に向けて</title>
     <author>高久雅生</author>
     <year>2017</year>
