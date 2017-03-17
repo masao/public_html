@@ -1,6 +1,6 @@
 title: Curriculum Vitae (Masao Takaku)
 subject: biography
-date.modified: 2017-02-22
+date.modified: 2017-03-17
 date.available: 2007-03-04
 
 [[{{image './images/201609-c4ljp.jpg' 'At Code4Lib JAPAN Conference 2016 (September, 2016)' thumbs 200px right}}|./profile-images.html]]
@@ -16,14 +16,6 @@ date.available: 2007-03-04
 
 !!Research interests
 Information retrieval, Digital library, Information behaviour, Scholarly communication, Special library
-
-!!Education
-:1998-03:BSc in library and information science from [[University of Library and Information Science, Japan|http://www.ulis.ac.jp/]].
-::Graduate thesis: "[[Building an orienteering game for education|./pub/1998/grad-thesis.pdf]] (in Japanese)" (Built an interactive geographic system based on VRML and Java)
-:2000-03:MSc in Information Science from Graduate School of Information and Media Studies, [[University of Library and Information Science, Japan|http://www.ulis.ac.jp/]]
-::Master thesis: "[[Construction of Information Retrieval System based on Z39.50 Protocol for Bibliographic Data|./pub/2000/master-thesis.pdf]] (in Japanese)"
-:2004-09:PhD in Information Science from [[Graduate School of Library, Information and Media Studies|http://www.slis.tsukuba.ac.jp/]], [[University of Tsukuba, Japan|http://www.tsukuba.ac.jp/]]
-::PhD dissertation: "[[A Study of Cooperative Information Service Systems: Applications to Terminological Systems and Information Retrieval Systems|./pub/2004/phd-thesis.pdf]] (in Japanese)"
 
 !!Work
 :2013-04 - :
@@ -44,6 +36,14 @@ Information retrieval, Digital library, Information behaviour, Scholarly communi
 ::One of organizers of [[NTCIR-5 WEB task|http://research.nii.ac.jp/ntcweb/]]. Building a Web test collection.
 ::(Keywords) Web information retrieval, IR evaluation, search engine, test collection
 ::(Skills) Perl, Ruby, GETA, Web API, trec_eval
+
+!!Education
+:1998-03:BSc in library and information science from [[University of Library and Information Science, Japan|http://www.ulis.ac.jp/]].
+::Graduate thesis: "[[Building an orienteering game for education|./pub/1998/grad-thesis.pdf]] (in Japanese)" (Built an interactive geographic system based on VRML and Java)
+:2000-03:MSc in Information Science from Graduate School of Information and Media Studies, [[University of Library and Information Science, Japan|http://www.ulis.ac.jp/]]
+::Master thesis: "[[Construction of Information Retrieval System based on Z39.50 Protocol for Bibliographic Data|./pub/2000/master-thesis.pdf]] (in Japanese)"
+:2004-09:PhD in Information Science from [[Graduate School of Library, Information and Media Studies|http://www.slis.tsukuba.ac.jp/]], [[University of Tsukuba, Japan|http://www.tsukuba.ac.jp/]]
+::PhD dissertation: "[[A Study of Cooperative Information Service Systems: Applications to Terminological Systems and Information Retrieval Systems|./pub/2004/phd-thesis.pdf]] (in Japanese)"
 
 !!Teaching
 :[[University of Tsukuba|http://www.tsukuba.ac.jp/english/]]:
@@ -101,7 +101,7 @@ Information retrieval, Digital library, Information behaviour, Scholarly communi
 ::(Skills) Japan/MARC, C, Perl, DBM, Magnetic tapes
 
 !!Awards
-:LOD Challenge 2016 Theme Awards - Education LOD Award:Received for developing and providing [[Textbook LOD Dataset|https://w3id.org/jp-textbook/]].
+:LOD Challenge 2016 Theme Awards - Education LOD Award:Received for developing and providing [[Japanese Textbook LOD Dataset|https://w3id.org/jp-textbook/]].
 :Best Teacher Award at College of Knowledge and Library Sciences, University of Tsukuba (2016):Received for my educational activities in 2015.
 :Contribution Presitent Award at National Institute for Materials Science (2013):Received my contribution to "Developement of Researchers Directory Service, SAMURAI, and Accomplishment on Outreach Activities".
 :The 10th Best Paper Award of Journal of Information and Knowledge (2011):The paper entitled "Influence of Task Type and User Group on Web-based Information Seeking Behavior: Analysis of Eye Movement Data and Client-side Browsing Logs", co-authored with Yuka Egusa, Hitoshi Terai, Hitomi Saito, Makiko Miwa, Noriko Kando, published on ''Journal of Information and Knowledge'' Volume 20, Issue 3 got received the Best Paper Award. ([[details|http://www.jsik.jp/?paper_award2011]])
