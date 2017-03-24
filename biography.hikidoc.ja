@@ -1,6 +1,6 @@
 title:高久雅生の自己紹介（プロフィール）
 title.short:自己紹介
-date.modified:2016-09-12
+date.modified:2017-03-25
 date.available:2013-08-23
 
 [[{{image './images/201609-c4ljp.jpg' 'Code4Lib JAPANカンファレンス2016にて（2016年9月）' thumbs 200px right}}|./profile-images.html]]
@@ -18,6 +18,7 @@ date.available:2013-08-23
 
 これまでに開発したサービスやシステムには以下等があります:
 
+* [[教科書LOD|https://w3id.org/jp-textbook/]]
 * [[ふわっと関連検索|http://fuwat.to]]
 * [[NIMS研究者総覧SAMURAI|http://samurai.nims.go.jp]]
 
