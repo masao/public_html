@@ -70,7 +70,7 @@ end
 </dd>
 <% if not doi.nil? %>
   <dd class="url">
-    <span class="doi">DOI <a href="http://doi.org/<%=h doi %>"><%=h doi %></a></span>
+    <span class="doi">DOI <a href="https://doi.org/<%=h doi %>">https://doi.org/<%=h doi %></a></span>
   </dd>
 <% end %>
 <% if not url.nil? %>
