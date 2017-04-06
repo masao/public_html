@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist>
+  <pub type="chapter">
+    <author>高久雅生</author>
+    <title>知識をリンクする技術</title>
+    <publisher>世界思想社</publisher>
+    <booktitle>図書館情報学を学ぶ人のために</booktitle>
+    <chapter>第5部第19章</chapter>
+    <author role="editor">逸村裕</author>
+    <author role="editor">田窪直規</author>
+    <author role="editor">原田隆史</author>
+    <city>京都</city>
+    <page>
+      <start>201</start>
+      <end>213</end>
+    </page>
+    <isbn>978-4-7907-1695-2</isbn>
+    <year>2017</year>
+    <month>4</month>
+    <date>2017-04-30</date>
+    <language>ja</language>
+    <url>http://sekaishisosha.jp/cgi-bin/search.cgi?mode=display&amp;code=1695</url>
+    <url>https://www.amazon.co.jp/exec/obidos/ASIN/4790716953/masaotakakush-22</url>
+  </pub>
+
   <pub type="misc">
     <title>教科書LOD</title>
     <author>江草由佳</author>
