@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist>
+  <pub type="misc">
+    <title>電子書籍と紙の比較項目が購入判断に及ぼす影響</title>
+    <subtitle>提示する比較項目と選好の関係から</subtitle>
+    <author>縵沢奈穂美</author>
+    <author>高久雅生</author>
+    <conference>第25回情報知識学会年次大会</conference>
+    <journal>情報知識学会誌</journal>
+    <volume>27</volume>
+    <number>2</number>
+    <year>2017</year>
+    <month>5</month>
+    <city>京都</city>
+    <page>12</page>
+<!--
+      <start>165</start>
+      <end>173</end>
+    </page>
+    -->
+    <language>ja</language>
+    <date>2017-05-27</date>
+  </pub>
   <pub type="chapter">
     <author>高久雅生</author>
     <title>知識をリンクする技術</title>
