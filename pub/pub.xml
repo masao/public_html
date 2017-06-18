@@ -2,6 +2,17 @@
 <!-- $Id$ -->
 <publist>
   <pub type="misc">
+    <title>教科書LOD</title>
+    <author>江草由佳</author>
+    <author>高久雅生</author>
+    <conference>GLAMtech Vol.2</conference>
+    <year>2017</year>
+    <month>6</month>
+    <language>ja</language>
+    <date>2017-06-18</date>
+    <slides>https://www.slideshare.net/tmasao/20170618-textbook-lod</slides>
+  </pub>
+  <pub type="misc">
     <title>電子書籍と紙の比較項目が購入判断に及ぼす影響</title>
     <subtitle>提示する比較項目と選好の関係から</subtitle>
     <author>縵沢奈穂美</author>
