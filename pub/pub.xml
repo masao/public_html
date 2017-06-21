@@ -2,7 +2,8 @@
 <!-- $Id$ -->
 <publist>
   <pub type="misc">
-    <title>教科書LOD</title>
+    <title>教科書LOD解説</title>
+    <subtitle>技術的側面から</subtitle>
     <author>江草由佳</author>
     <author>高久雅生</author>
     <conference>GLAMtech Vol.2</conference>
