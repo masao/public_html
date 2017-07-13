@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist>
+  <pub type="conference" refereed="true">
+    <title>Prototype of Linked Open Data Model for Tang Poems</title>
+    <author>Yan Cong</author>
+    <author>Masao Takaku</author>
+    <conference>Japanese Association for Digital Humanities Conference 2017 (JADH2017)</conference>
+    <year>2017</year>
+    <month>9</month>
+    <city>Kyoto, Japan</city>
+    <date>2017-09-11</date>
+    <language>en</language>
+    <page>3</page>
+  </pub>
   <pub type="misc">
     <title>教科書LOD解説</title>
     <subtitle>技術的側面から</subtitle>
