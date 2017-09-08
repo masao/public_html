@@ -12,6 +12,18 @@
     <city>熊本</city>
     <language>ja</language>
     <date>2017-09-02</date>
+    <slides>https://www.slideshare.net/yegusa/20170903-c4ljplod</slides>
+  </pub>
+  <pub type="misc">
+    <title>タスク重要</title>
+    <author>高久雅生</author>
+    <conference>Code4Lib JAPANカンファレンス2017</conference>
+    <year>2017</year>
+    <month>9</month>
+    <city>熊本</city>
+    <language>ja</language>
+    <date>2017-09-02</date>
+    <slides>https://www.slideshare.net/tmasao/20170903-code4-liblttasks</slides>
   </pub>
   <pub type="conference" refereed="true">
     <title>Prototype of Linked Open Data Model for Tang Poems</title>
