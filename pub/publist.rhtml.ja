@@ -24,9 +24,9 @@
 <a href="./?sort_mode=year">発表年月</a>
 <% end %>
 <li><% if sort_mode == :type %>
-<strong>論文種別</strong>
+<strong>文献種別</strong>
 <% else %>
-<a href="./?sort_mode=type">論文種別</a>
+<a href="./?sort_mode=type">文献種別</a>
 <% end %>
 <li><% if sort_mode == :author %>
 <strong>筆頭著者</strong>
