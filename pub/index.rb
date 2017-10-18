@@ -98,6 +98,7 @@ class PubData
    attr_reader :language
    attr_reader :refereed
    attr_reader :date
+   attr_reader :chapter
    def initialize( element, config )
       @config = config
       @type = element.attributes["type"]
@@ -112,6 +113,7 @@ class PubData
       @subtitle = element.text("subtitle")
       @journal = element.text("journal")
       @booktitle = element.text("booktitle")
+      @chapter = element.text("chapter")
       @series = element.text("series")
       @conference = element.text("conference")
       @org = element.text("org")

@@ -32,7 +32,7 @@ author_s
 fields = []
 biborder = [ :conference, :org, :city, :booktitle, :journal ]
 if type == "book" or type == "chapter"
-   biborder = [ :booktitle, :org, :publisher, :city, :series ]
+   biborder = [ :booktitle, :chapter, :org, :publisher, :city, :series ]
 end
 biborder.each do |field|
   if not send( field ).nil?
