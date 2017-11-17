@@ -2,6 +2,17 @@
 <!-- $Id$ -->
 <publist>
   <pub type="misc">
+    <title>研究室紹介</title>
+    <author>高久雅生</author>
+    <conference>第19回図書館総合展ARGブース企画「研究室100連発」</conference>
+    <year>2017</year>
+    <month>11</month>
+    <city>横浜</city>
+    <language>ja</language>
+    <date>2017-11-07</date>
+    <slides>https://www.slideshare.net/tmasao/20171107-argtakaku-labintro</slides>
+  </pub>
+  <pub type="misc">
     <title>教科書LOD</title>
     <author>江草由佳</author>
     <author>高久雅生</author>
