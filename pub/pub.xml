@@ -2,6 +2,24 @@
 <!-- $Id$ -->
 <publist>
   <pub type="misc">
+    <title>WikipediaにおけるDOIリンクの経年変化の予備的分析</title>
+    <author>吉川次郎</author>
+    <author>高久雅生</author>
+    <conference>第22回情報知識学フォーラム</conference>
+    <journal>情報知識学会誌</journal>
+    <volume>27</volume>
+    <number>4</number>
+    <year>2017</year>
+    <month>12</month>
+    <city>東京</city>
+    <page>
+      <start>329</start>
+      <end>336</end>
+    </page>
+    <language>ja</language>
+    <date>2017-12-02</date>
+  </pub>
+  <pub type="misc">
     <title>研究室紹介</title>
     <author>高久雅生</author>
     <conference>第19回図書館総合展ARGブース企画「研究室100連発」</conference>
