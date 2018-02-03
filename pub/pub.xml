@@ -2,6 +2,17 @@
 <!-- $Id$ -->
 <publist>
   <pub type="misc">
+    <title>GLAMtech これまでの道のり</title>
+    <author>高久雅生</author>
+    <conference>GLAMtech Vol.6</conference>
+    <year>2018</year>
+    <month>2</month>
+    <city>東京</city>
+    <language>ja</language>
+    <date>2018-02-03</date>
+    <url>https://www.slideshare.net/tmasao/20180203-glamtechvol6takaku</url>
+  </pub>
+  <pub type="misc">
     <title>WikipediaにおけるDOIリンクの経年変化の予備的分析</title>
     <author>吉川次郎</author>
     <author>高久雅生</author>
