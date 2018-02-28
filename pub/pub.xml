@@ -2,6 +2,17 @@
 <!-- $Id$ -->
 <publist>
   <pub type="misc">
+    <title>OPAC利用ログを用いた文献探索手法</title>
+    <author>高久雅生</author>
+    <conference>筑波大学附属図書館研究開発室 平成29年度研究成果報告会</conference>
+    <year>2018</year>
+    <month>2</month>
+    <city>つくば</city>
+    <language>ja</language>
+    <date>2018-02-27</date>
+    <url>https://www.tulips.tsukuba.ac.jp/lib/ja/information/20180219</url>
+  </pub>
+  <pub type="misc">
     <title>GLAMtech これまでの道のり</title>
     <author>高久雅生</author>
     <conference>GLAMtech Vol.6</conference>
