@@ -1,7 +1,7 @@
 title: Chrome: ブックマーク、拡張、設定など
 title.short: Chrome設定集
 date.available: 2016-03-16
-date.modified:  2016-07-01
+date.modified:  2018-03-04
 subject: etc
 
 常用ブラウザとして[[Google Chrome|https://www.google.co.jp/chrome/]]を使っていますが、Chrome上でのブックマーク、拡張、設定情報のメモです。
@@ -16,7 +16,7 @@ subject: etc
 !!! Boolmarklet
 *[[上|javascript:if (location.hash) location.hash = ''; else if (location.search) location.search = ''; else if (location.pathname.charAt(location.pathname.length-1) == %22/%22) location = %22..%22; else if (location.pathname) location = %22.%22; void 0]]
 *[[e-hon|https://www.e-hon.ne.jp/bec/secure/CB/MemberHome?kaiinID=B5AA69F]]
-*[[ezproxy|javascript:window.location.hostname=window.location.hostname+".ezproxy.tulips.tsukuba.ac.jp";]]
+*[[ezproxy|javascript:window.location.hostname=window.location.hostname.replace(/\./g,"-")+".ezproxy.tulips.tsukuba.ac.jp";]]
 *[[Delicious|javascript:location.href='http://del.icio.us/new/masao?v=4&url='+encodeURIComponent(location.href)+'&title='+encodeURIComponent(document.title)]]
 *[[Wayback|javascript:location.href='http://web.archive.org/save/'+document.location.href;]]
 *[[archive.today|javascript:void(open('http://archive.today/?run=1&url='+encodeURIComponent(document.location)))]]
