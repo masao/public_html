@@ -1,5 +1,5 @@
 title: Masao Takaku's Website
-date.modified: 2013-08-29
+date.modified: 2018-03-08
 date.available: 2007-03-04
 navi: false
 
@@ -10,8 +10,6 @@ navi: false
 
 !!Table of Contents
 
-Note: Most pages below are provided only in Japanese.
-
 :[[Biography|biography.html]]:About me.
 :[[Publications|./pub/]]:A list of publications written by me.
 :[[Softwares|./software/]]:My software/scripts.
@@ -20,3 +18,5 @@ Note: Most pages below are provided only in Japanese.
 :[[My favorite links|links.html]]:Links to my favorite websites.
 :[[Web album|./photo/]]:Photos taken by me.
 :[[My memo|./d/]]:My memo/diary.
+
+* Laboratory website: http://www.slis.tsukuba.ac.jp/takaku-lab/en/

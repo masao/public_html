@@ -1,5 +1,5 @@
 title: たかくまさおのホームページ
-date.modified: 2013-10-13
+date.modified: 2018-03-08
 navi: false
 javascript.src: https://www.google.com/jsapi
 javascript.src: newsfeed.js
@@ -21,3 +21,5 @@ javascript.src: newsfeed.js
 :[[リンク集|links.html]]:自分のよく行きそうなところを集めたリンク集
 :[[Webアルバム|./photo/]]:デジカメを携帯して日常の風景をいろいろ撮ってます。
 :[[まさおのChangeLogメモ|./d/]]:個人用のメモ（日記）です。日々の備忘録代わりに書いてます。
+
+* 研究室サイト: http://www.slis.tsukuba.ac.jp/takaku-lab/
