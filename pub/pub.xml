@@ -2,6 +2,37 @@
 <!-- $Id$ -->
 <publist>
   <pub type="misc">
+    <title>唐詩作品の本文フルテキストに対するTEIマークアップ手法の提案</title>
+    <author>叢艶</author>
+    <author>高久雅生</author>
+    <conference>第26回情報知識学会年次大会</conference>
+    <journal>情報知識学会誌</journal>
+    <volume>28</volume>
+    <number>2</number>
+    <year>2018</year>
+    <month>5</month>
+    <city>東京</city>
+    <page>12</page>
+    <language>ja</language>
+    <date>2018-05-26</date>
+  </pub>
+  <pub type="misc">
+    <title>OPAC利用ログに基づく文献検索システムの試作と評価</title>
+    <author>高久雅生</author>
+    <author>小幡将司</author>
+    <author>江草由佳</author>
+    <conference>第26回情報知識学会年次大会</conference>
+    <journal>情報知識学会誌</journal>
+    <volume>28</volume>
+    <number>2</number>
+    <year>2018</year>
+    <month>5</month>
+    <city>東京</city>
+    <page>10</page>
+    <language>ja</language>
+    <date>2018-05-26</date>
+  </pub>
+  <pub type="misc">
     <title>OPAC利用ログを用いた文献探索手法</title>
     <author>高久雅生</author>
     <conference>筑波大学附属図書館研究開発室 平成29年度研究成果報告会</conference>
