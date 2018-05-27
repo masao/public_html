@@ -12,7 +12,10 @@
     <year>2018</year>
     <month>5</month>
     <city>東京</city>
-    <page>12</page>
+    <page>
+      <start>174</start>
+      <end>185</end>
+    </page>
     <language>ja</language>
     <date>2018-05-26</date>
   </pub>
@@ -28,7 +31,10 @@
     <year>2018</year>
     <month>5</month>
     <city>東京</city>
-    <page>10</page>
+    <page>
+      <start>111</start>
+      <end>120</end>
+    </page>
     <language>ja</language>
     <date>2018-05-26</date>
   </pub>
