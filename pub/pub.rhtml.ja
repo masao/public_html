@@ -64,9 +64,6 @@ end
 <% if not note.nil? %>
   <span class="note"><%=h note %></span>
 <% end %>
-<% if not awards.nil? %>
-  <span class="awards"><%=h awards %></span>
-<% end %>
 </dd>
 <% if not doi.nil? %>
   <dd class="url">
@@ -86,5 +83,8 @@ end
     <span class="<%= target %>">[<%= target.capitalize %>] <a href="<%=h val %>"><%=h val %></a></span>
     </dd>
   <% end %>
+<% end %>
+<% if not awards.nil? %>
+<dd class="awards"><%=h awards %></dd>
 <% end %>
 <dd><span class="Z3988" title="<%=h to_coins %>"></span></dd>
