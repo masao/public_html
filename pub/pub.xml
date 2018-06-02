@@ -2,6 +2,19 @@
 <!-- $Id$ -->
 <publist>
   <pub type="misc">
+    <title>英語版WikipediaにおけるDOIリンクの初出時点の分析</title>
+    <subtitle>研究分野を中心に</subtitle>
+    <author>吉川次郎</author>
+    <author>高久雅生</author>
+    <conference>情報メディア学会第17回研究大会</conference>
+    <year>2018</year>
+    <month>6</month>
+    <city>東京</city>
+    <page>4</page>
+    <language>ja</language>
+    <date>2018-06-23</date>
+  </pub>
+  <pub type="misc">
     <title>唐詩作品の本文フルテキストに対するTEIマークアップ手法の提案</title>
     <author>叢艶</author>
     <author>高久雅生</author>
