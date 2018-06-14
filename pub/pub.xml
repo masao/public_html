@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist>
+  <pub type="journal">
+    <title>教科書Linked Open Data（LOD）の構築と公開</title>
+    <author>江草由佳</author>
+    <author>高久雅生</author>
+    <journal>情報の科学と技術</journal>
+    <volume>68</volume>
+    <number>7</number>
+    <year>2018</year>
+    <month>7</month>
+    <date>2018-07-01</date>
+    <language>ja</language>
+    <page>7</page>
+    <!--
+      <start>162</start>
+      <end>169</end>
+    </page>
+    -->
+  </pub>
   <pub type="misc">
     <title>英語版WikipediaにおけるDOIリンクの初出時点の分析</title>
     <subtitle>研究分野を中心に</subtitle>
