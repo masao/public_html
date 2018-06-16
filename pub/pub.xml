@@ -28,12 +28,10 @@
     <month>7</month>
     <date>2018-07-01</date>
     <language>ja</language>
-    <page>7</page>
-    <!--
-      <start>162</start>
-      <end>169</end>
+    <page>
+      <start>375</start>
+      <end>381</end>
     </page>
-    -->
   </pub>
   <pub type="misc">
     <title>英語版WikipediaにおけるDOIリンクの初出時点の分析</title>
@@ -65,6 +63,7 @@
     </page>
     <language>ja</language>
     <date>2018-05-26</date>
+    <doi>10.2964/jsik_2018_017</doi>
     <awards>2018年度情報知識学会年次大会学生奨励賞を受賞</awards>
   </pub>
   <pub type="misc">
@@ -85,6 +84,7 @@
     </page>
     <language>ja</language>
     <date>2018-05-26</date>
+    <doi>10.2964/jsik_2018_008</doi>
   </pub>
   <pub type="misc">
     <title>OPAC利用ログを用いた文献探索手法</title>
