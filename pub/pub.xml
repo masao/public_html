@@ -42,7 +42,10 @@
     <year>2018</year>
     <month>6</month>
     <city>東京</city>
-    <page>4</page>
+    <page>
+      <start>25</start>
+      <end>28</end>
+    </page>
     <language>ja</language>
     <date>2018-06-23</date>
   </pub>
