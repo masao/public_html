@@ -1,7 +1,7 @@
 title: Windows上で使っているソフトウェア達
 subject: etc
 date.available: 2001-10-29
-date.modified: 2016-05-01
+date.modified: 2018-07-02
 
 私がMicrosoft Windows上で使っている主なソフトウェアをメモしておきます。
 
@@ -22,6 +22,7 @@ date.modified: 2016-05-01
 :[[Lhaplus|http://www.vector.co.jp/soft/win95/util/se169348.html]]:圧縮・解凍ツール
 :[[Cygwin|http://cygwin.com/]]:ユーティリティ
 :[[Adobe Acrobat Reader|http://www.adobe.co.jp/]]:PDFリーダ
+:[[SumatraPDF|http://www.sumatrapdfreader.org/]]:PDFリーダ（軽量リーダで他のアプリケーションと同時に使えるのでTeX文書のプレビュー用に）
 :[[Metafile to EPS Converter|http://wiki.lyx.org/Windows/MetafileToEPSConverter]]:
 :[[WMF2EPS|http://www.wmf2eps.de.vu/]]:Windowsアプリケーションの出力をEPSへ変換
 :[[Java2|http://java.sun.com/]]:プログラミング環境
@@ -29,7 +30,7 @@ date.modified: 2016-05-01
 :[[TeraPad|http://www5f.biglobe.ne.jp/~t-susumu/library/tpad.html]]:テキストエディタ
 :[[NTEmacs|http://www.gnu.org/software/emacs/windows/]]:エディタ
 :[[FileSum|http://www.vector.co.jp/soft/winnt/util/se030005.html]]:ディスク容量計測ツール
-:[[SumatraPDF|http://www.sumatrapdfreader.org/]]:PDFリーダ（軽量リーダで他のアプリケーションと同時に使えるのでTeX文書のプレビュー用に）
+:[[SharpKeys|https://github.com/randyrants/sharpkeys]]:キーバインド切替ツール
 :[[Xming|http://sourceforge.net/projects/xming]]:Xサーバ（Cygwinベース）: Astec Xが使えない環境で重宝
 :[[De4Exif|http://www002.upp.so-net.ne.jp/candynag/digicam/de4exif.html]]:Exif 日付時刻情報復元ツール
 :[[Intel Application Accelerator|http://support.intel.co.jp/jp/support/chipsets/iaa/index.htm]]:CPU/IOのパフォーマンス向上ためのユーティリティ。
