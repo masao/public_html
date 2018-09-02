@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist>
+  <pub type="misc">
+    <title>Linked Open Data on Github Pages</title>
+    <subtitle>教科書LODの経験から</subtitle>
+    <author>高久雅生</author>
+    <conference>Code4Lib JAPANカンファレンス2018</conference>
+    <year>2018</year>
+    <month>9</month>
+    <city>長野</city>
+    <date>2018-09-01</date>
+    <language>ja</language>
+    <slides>https://speakerdeck.com/masao/lod-on-github-pages</slides>
+  </pub>
   <pub type="conference" refereed="true">
     <title>A TEI Markup for the Contents of Tang Poems</title>
     <author>Yan Cong</author>
