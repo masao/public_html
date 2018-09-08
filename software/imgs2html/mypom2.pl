@@ -12,7 +12,7 @@ use base qw( Pod::POM::View::HTML );
 sub view_pod {
     my ($self, $pod) = @_;
     my $title = $pod->head1->[0]->content;
-    my $home = 'http://masao.jpn.org/';
+    my $home = 'https://masao.jpn.org/';
     my $email = 'tmasao@acm.org';
     my $header = <<EOF;
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -32,7 +32,7 @@ EOF
 <address>高久雅生 (Takaku Masao)<br />
 <a href="$home">$home</a>,
 <a href="mailto:$email">$email</a></address>
-<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+<script src="https://www.google-analytics.com/urchin.js" type="text/javascript">
 </script>
 <script type="text/javascript">
 _uacct = "UA-389547-1";

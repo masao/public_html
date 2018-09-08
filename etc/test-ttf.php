@@ -175,11 +175,11 @@ PHPに同梱されているGDライブラリの機能を使って、
 <hr>
 <address>
 高久雅生 (Takaku Masao)<br>
-<a href="http://masao.jpn.org/">http://masao.jpn.org/</a>, 
+<a href="https://masao.jpn.org/">https://masao.jpn.org/</a>, 
 <a href="mailto:tmasao@acm.org">tmasao@acm.org</a>
 </address>
 <div class="id">$Id$</div>
-<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+<script src="https://www.google-analytics.com/urchin.js" type="text/javascript">
 </script>
 <script type="text/javascript">
 _uacct = "UA-389547-1";
