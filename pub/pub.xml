@@ -23,11 +23,10 @@
     <city>Tokyo, Japan</city>
     <date>2018-09-09</date>
     <language>en</language>
-    <page>3</page>
-      <!--
-      <start>50</start>
-      <end>52</end>
-    </page>-->
+    <page>
+      <start>80</start>
+      <end>81</end>
+    </page>
   </pub>
   <pub type="journal">
     <title>教科書Linked Open Data（LOD）の構築と公開</title>
