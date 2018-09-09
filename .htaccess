@@ -3,5 +3,6 @@ SetEnvIf REDIRECT_HTTPS (.*) HTTPS=$1
 RewriteEngine on
 RewriteCond %{ENV:HTTPS} !on
 RewriteCond %{HTTP_HOST} !^localhost
+RewriteCond %{HTTP_HOST} !^fuwat.to
 RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L] 
 </IfModule>
