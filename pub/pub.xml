@@ -13,6 +13,18 @@
     <language>ja</language>
     <slides>https://speakerdeck.com/masao/lod-on-github-pages</slides>
   </pub>
+  <pub type="conference">
+    <title>TEI Markup for Tang Poems from Japanese Textbooks</title>
+    <author>Yan Cong</author>
+    <author>Masao Takaku</author>
+    <conference>TEI 2018</conference>
+    <year>2018</year>
+    <month>9</month>
+    <city>Tokyo, Japan</city>
+    <date>2018-09-09</date>
+    <language>en</language>
+    <note>Lightning Talk at East Asian and Japanese SIG Session</note>
+  </pub>
   <pub type="conference" refereed="true">
     <title>A TEI Markup for the Contents of Tang Poems</title>
     <author>Yan Cong</author>
