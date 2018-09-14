@@ -2,6 +2,17 @@
 <!-- $Id$ -->
 <publist>
   <pub type="misc">
+    <title>図書館情報学におけるITスキル教育</title>
+    <author>高久雅生</author>
+    <conference>平成30年度国立情報学研究所学術情報システム総合ワークショップ</conference>
+    <city>東京</city>
+    <year>2018</year>
+    <month>9</month>
+    <date>2014-09-13</date>
+    <language>ja</language>
+    <url>http://www.nii.ac.jp/hrd/ja/ciws/h30/curritxt.html</url>
+  </pub>
+  <pub type="misc">
     <title>Linked Open Data on Github Pages</title>
     <subtitle>教科書LODの経験から</subtitle>
     <author>高久雅生</author>
