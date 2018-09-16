@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist>
+  <pub type="chapter">
+    <title>利用ログに基づく情報実践の分析</title>
+    <subtitle>筑波大学附属図書館における文献探索の記録から</subtitle>
+    <author>高久雅生</author>
+    <booktitle>筑波大学図書館情報メディア系 情報プラクティスリサーチグループ 成果報告書（2013年8月～2018年7月）</booktitle>
+    <chapter>第4章</chapter>
+    <publisher>筑波大学図書館情報メディア系</publisher>
+    <city>つくば</city>
+    <year>2018</year>
+    <month>8</month>
+    <date>2018-08-31</date>
+    <language>ja</language>
+    <page>
+      <start>49</start>
+      <end>61</end>
+    </page>
+  </pub>
   <pub type="misc">
     <title>図書館情報学におけるITスキル教育</title>
     <author>高久雅生</author>
