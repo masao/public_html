@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist>
+  <pub type="journal">
+    <title>「Europeanaの翻刻プロジェクトと日本の翻刻プロジェクト」に参加して</title>
+    <author>高久雅生</author>
+    <journal>デジタルアーカイブ学会誌</journal>
+    <volume>2</volume>
+    <number>3</number>
+    <year>2018</year>
+    <month>6</month>
+    <date>2018-06-15</date>
+    <language>ja</language>
+    <page>
+      <start>298</start>
+      <end>299</end>
+    </page>
+    <doi>10.24506/jsda.2.3_298</doi>
+  </pub>
   <pub type="chapter">
     <title>利用ログに基づく情報実践の分析</title>
     <subtitle>筑波大学附属図書館における文献探索の記録から</subtitle>
