@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist>
+  <pub type="misc">
+    <title>新書本を用いた学問発見支援手法の提案</title>
+    <author>清水花菜子</author>
+    <author>高久雅生</author>
+    <conference>第23回情報知識学フォーラム</conference>
+    <journal>情報知識学会誌</journal>
+    <volume>28</volume>
+    <number>4</number>
+    <year>2018</year>
+    <month>12</month>
+    <city>大阪</city>
+    <page>4</page>
+    <language>ja</language>
+    <date>2018-12-08</date>
+  </pub>
   <pub type="journal">
     <title>「Europeanaの翻刻プロジェクトと日本の翻刻プロジェクト」に参加して</title>
     <author>高久雅生</author>
@@ -170,6 +185,7 @@
     <language>ja</language>
     <date>2018-02-27</date>
     <url>https://www.tulips.tsukuba.ac.jp/lib/ja/information/20180219</url>
+    <url>http://www.tulips.tsukuba.ac.jp/RDO/?%E5%B9%B4%E6%AC%A1%E5%A0%B1%E5%91%8A%E6%9B%B8</url>
   </pub>
   <pub type="misc">
     <title>GLAMtech これまでの道のり</title>
