@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist>
+  <pub type="conference">
+    <title>Expanding Tang Poems LOD Dataset with External Resources</title>
+    <author>Yan Cong</author>
+    <author>Masao Takaku</author>
+    <conference>ALIRG 2018</conference>
+    <year>2018</year>
+    <month>12</month>
+    <city>Kyushu, Japan</city>
+    <date>2018-12-15</date>
+    <language>en</language>
+  </pub>
   <pub type="misc">
     <title>新書本を用いた学問発見支援手法の提案</title>
     <author>清水花菜子</author>
