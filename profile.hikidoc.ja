@@ -2,7 +2,7 @@ title: 高久雅生の経歴
 title.short: 経歴
 subject:biography
 date.available: 2007-03-04
-date.modified: 2018-09-03
+date.modified: 2018-11-09
 
 [[{{image 'images/201809-c4ljp2018.jpg' 'Code4Lib JAPANカンファレンス2018にて（2018年9月）（撮影: Fumihiro Kato）' thumbs 188px right}}|./profile-images.html]]
 
@@ -120,6 +120,7 @@ date.modified: 2018-09-03
 ::（スキル）Japan/MARC, C言語, Perl, DBM, 磁気テープ
 
 !!受賞
+:LODチャレンジ2018テーマ賞「LODプロモーション賞」:[[Poorman's LOD Toolkit|https://github.com/jp-textbook/jp-textbook.github.io/wiki/Toolkit]]の公開に対して受賞。
 :LODチャレンジ2016テーマ賞「教育LOD賞」:[[教科書LODデータセット|https://w3id.org/jp-textbook/]]の提供公開に対して受賞。
 :筑波大学知識情報・図書館学類ベストティーチャー賞（2016年4月）:2015年度の教育活動に関して受賞。
 :物質・材料研究機構理事長賞貢献賞（2013年4月）:「研究者総覧SAMURAIの開発およびアウトリーチ実績」の貢献に関して受賞しました。
