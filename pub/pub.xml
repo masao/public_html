@@ -23,7 +23,10 @@
     <year>2018</year>
     <month>12</month>
     <city>大阪</city>
-    <page>4</page>
+    <page>
+      <start>310</start>
+      <end>313</end>
+    </page>
     <language>ja</language>
     <date>2018-12-08</date>
   </pub>
