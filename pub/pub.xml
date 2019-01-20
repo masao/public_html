@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist>
+  <pub type="misc">
+    <title>タスク重要</title>
+    <subtitle>ユーザタスク指向のプラットフォーム設計と開発を目指して</subtitle>
+    <author>高久雅生</author>
+    <journal>情報知識学会誌</journal>
+    <volume>28</volume>
+    <number>5</number>
+    <year>2019</year>
+    <month>3</month>
+    <page>4</page>
+    <language>ja</language>
+    <date>2019-03-01</date>
+  </pub>
   <pub type="journal">
     <title>ウィキペディアタウンと図書館の連携が可能にする未来の知的環境</title>
     <author>高久雅生</author>
