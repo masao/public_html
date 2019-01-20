@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist>
+  <pub type="journal">
+    <title>ウィキペディアタウンと図書館の連携が可能にする未来の知的環境</title>
+    <author>高久雅生</author>
+    <journal>LRG : ライブラリー・リソース・ガイド</journal>
+    <number>25</number>
+    <year>2019</year>
+    <month>1</month>
+    <page>16</page>
+    <language>ja</language>
+    <date>2019-01-28</date>
+  </pub>
   <pub type="conference">
     <title>Expanding Tang Poems LOD Dataset with External Resources</title>
     <author>Yan Cong</author>
