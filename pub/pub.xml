@@ -21,7 +21,10 @@
     <number>25</number>
     <year>2019</year>
     <month>1</month>
-    <page>16</page>
+    <page>
+      <start>36</start>
+      <end>50</end>
+    </page>
     <language>ja</language>
     <date>2019-01-28</date>
   </pub>
