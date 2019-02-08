@@ -93,7 +93,7 @@ class PubData
    attr_reader :journal, :conference, :org, :publisher
    attr_reader :booktitle, :series
    attr_reader :volume, :number, :sequence_number, :year, :month, :city
-   attr_reader :page_start, :page_end, :page, :isbn, :note, :awards
+   attr_reader :page_start, :page_end, :page, :isbn, :note, :awards, :awards_url
    attr_reader :url, :doi, :slides, :poster, :file, :abstract
    attr_reader :language
    attr_reader :refereed
@@ -134,6 +134,7 @@ class PubData
       @note = element.text("note")
       @language = element.text("language")
       @awards = element.text("awards")
+      @awards_url = element.text("awards_url")
       @doi = element.text("doi")
       %w[ abstract slides poster url ].each do |target|
          values = element.get_elements( target )

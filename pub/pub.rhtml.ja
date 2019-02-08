@@ -85,6 +85,10 @@ end
   <% end %>
 <% end %>
 <% if not awards.nil? %>
-<dd class="awards"><%=h awards %></dd>
+<dd class="awards"><%=h awards %>
+<% if not awards_url.nil? %>
+<a href="<%=h awards_url %>">[受賞関連ページ]</a>
+<% end %>
+</dd>
 <% end %>
 <dd><span class="Z3988" title="<%=h to_coins %>"></span></dd>

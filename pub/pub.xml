@@ -175,7 +175,9 @@
     </page>
     <language>ja</language>
     <date>2018-06-23</date>
+    <poster>https://speakerdeck.com/corgies/jsims2018</poster>
     <awards>最優秀ポスター発表賞を受賞</awards>
+    <awards_url>http://www.jsims.jp/kenkyu-taikai/17.html#interview</awards_url>
   </pub>
   <pub type="misc">
     <title>唐詩作品の本文フルテキストに対するTEIマークアップ手法の提案</title>
@@ -196,6 +198,7 @@
     <date>2018-05-26</date>
     <doi>10.2964/jsik_2018_017</doi>
     <awards>2018年度情報知識学会年次大会学生奨励賞を受賞</awards>
+    <awards_url>http://www.jsik.jp/?2018report</awards_url>
   </pub>
   <pub type="misc">
     <title>OPAC利用ログに基づく文献検索システムの試作と評価</title>
@@ -356,6 +359,7 @@
     <doi>10.2964/jsik_2017_019</doi>
     <url>http://hdl.handle.net/2241/00150352</url>
     <awards>2017年度情報知識学会年次大会学生奨励賞を受賞</awards>
+    <awards_url>http://www.jsik.jp/?2017report</awards_url>
   </pub>
   <pub type="chapter">
     <author>高久雅生</author>
@@ -452,7 +456,8 @@
     <date>2017-01-15</date>
     <url>http://idea.linkdata.org/idea/idea1s2213i</url>
     <note>データセット部門エントリー作品</note>
-    <awards>（LODチャレンジ2016テーマ賞「教育LOD賞」受賞）</awards>
+    <awards>LODチャレンジ2016テーマ賞「教育LOD賞」受賞</awards>
+    <awards_url>http://lodc.jp/2015/concrete5/blog/2017-02-17</awards_url>
   </pub>
   <pub type="misc">
     <title>唐詩情報のLinked Open Data化</title>
@@ -1883,7 +1888,8 @@
     <!--早期公開: <date>2009-10-30</date> -->
     <date>2009-11-30</date>
     <doi>10.2964/jsik.20-026</doi>
-    <awards>（2011年度 情報知識学会 論文賞受賞）</awards>
+    <awards>2011年度 情報知識学会 論文賞受賞</awards>
+    <awards_url>http://www.jsik.jp/?paper_award2011</awards_url>
   </pub>
 
   <pub type="misc">
