@@ -1,1 +1,1 @@
-../../cvswork/zipcode_cgi/zipcode-db.rb
+/home/masao/cvswork/zipcode_cgi/zipcode-db.rb
