@@ -2,6 +2,16 @@
 <!-- $Id$ -->
 <publist>
   <pub type="misc">
+    <title>典拠データを生かす検索サービス、情報探索行動の変化、LODの社会的効果</title>
+    <author>高久雅生</author>
+    <conference>国立国会図書館・識別子の方針策定に係る意見聴取会</conference>
+    <year>2019</year>
+    <month>3</month>
+    <language>ja</language>
+    <date>2019-03-20</date>
+    <slides>https://speakerdeck.com/masao/2019-03-20-ndl-identifier</slides>
+  </pub>
+  <pub type="misc">
     <title>タスク重要</title>
     <subtitle>ユーザタスク指向のプラットフォーム設計と開発を目指して</subtitle>
     <author>高久雅生</author>
@@ -221,6 +231,7 @@
     <language>ja</language>
     <date>2018-05-26</date>
     <doi>10.2964/jsik_2018_008</doi>
+    <url>http://hdl.handle.net/2241/00154663</url>
   </pub>
   <pub type="misc">
     <title>OPAC利用ログを用いた文献探索手法</title>
