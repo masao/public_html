@@ -6,6 +6,7 @@ require "date"
 require "yaml"
 
 require "rubygems"
+require "faraday"
 require "twitter"
 
 Faraday::Request.lookup_middleware(:multipart)
