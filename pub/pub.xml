@@ -20,9 +20,13 @@
     <number>5</number>
     <year>2019</year>
     <month>3</month>
-    <page>4</page>
+    <page>
+      <start>363</start>
+      <end>366</end>
+    </page>
     <language>ja</language>
     <date>2019-03-01</date>
+    <doi>10.2964/jsik_2019_015</doi>
   </pub>
   <pub type="journal">
     <title>ウィキペディアタウンと図書館の連携が可能にする未来の知的環境</title>
