@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist>
+  <pub type="journal">
+    <title>進化する情報検索技術</title>
+    <author>高久雅生</author>
+    <journal>情報の科学と技術</journal>
+    <number>5</number>
+    <volume>69</volume>
+    <year>2019</year>
+    <month>5</month>
+    <page>
+      <start>182</start>
+      <end>188</end>
+    </page>
+    <language>ja</language>
+    <date>2019-05-01</date>
+    <doi>10.18919/jkg.69.5_182</doi>
+  </pub>
   <pub type="misc">
     <title>典拠データを生かす検索サービス、情報探索行動の変化、LODの社会的効果</title>
     <author>高久雅生</author>
