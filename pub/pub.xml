@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist>
+  <pub type="misc">
+    <title>Book Recommender System Using Linked Data for Improving Serendipity</title>
+    <author>Renlou Weng</author>
+    <author>Masao Takaku</author>
+    <conference>第27回情報知識学会年次大会</conference>
+    <journal>情報知識学会誌</journal>
+    <volume>29</volume>
+    <number>2</number>
+    <year>2019</year>
+    <month>5</month>
+    <city>つくば</city>
+    <page>
+      <start>164</start>
+      <end>169</end>
+    </page>
+    <language>ja</language>
+    <date>2019-05-25</date>
+  </pub>
   <pub type="journal">
     <title>進化する情報検索技術</title>
     <author>高久雅生</author>
