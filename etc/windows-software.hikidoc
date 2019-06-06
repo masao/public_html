@@ -1,7 +1,7 @@
 title: Windows上で使っているソフトウェア達
 subject: etc
 date.available: 2001-10-29
-date.modified: 2018-07-02
+date.modified: 2019-06-07
 
 私がMicrosoft Windows上で使っている主なソフトウェアをメモしておきます。
 
@@ -12,13 +12,13 @@ date.modified: 2018-07-02
 
 !!(フリー/シェア)ウェア
 
-:[[Free AVG|http://free.avg.co.jp/]]:アンチウイルスソフトウェア
 :[[Google Chrome|http://www.google.co.jp/intl/ja/chrome/]]:Webブラウザ
 :[[Firefox|http://www.mozilla-japan.org/]] (Mozilla Browser):Webブラウザ （[[Firefoxの設定メモ|firefox.html]]も参照のこと）
 :[[TTSSH2|http://ttssh2.sourceforge.jp/]]:SSH/Telnetクライアント
 :[[PuTTY (日本語化版)|http://hp.vector.co.jp/authors/VA024651/#PuTTYkj_top]]:SSH/Telnetクライアント
 :[[WinSCP|http://winscp.sourceforge.net/eng/]]:ファイル転送ツール。（scp/sftpをGUIでできる）
 :[[Skype|http://www.skype.com/ja/]]:メッセージ、チャットツール
+:[[Free AVG|http://free.avg.co.jp/]]:アンチウイルスソフトウェア
 :[[Lhaplus|http://www.vector.co.jp/soft/win95/util/se169348.html]]:圧縮・解凍ツール
 :[[Cygwin|http://cygwin.com/]]:ユーティリティ
 :[[Adobe Acrobat Reader|http://www.adobe.co.jp/]]:PDFリーダ
@@ -27,6 +27,7 @@ date.modified: 2018-07-02
 :[[WMF2EPS|http://www.wmf2eps.de.vu/]]:Windowsアプリケーションの出力をEPSへ変換
 :[[Java2|http://java.sun.com/]]:プログラミング環境
 :[[WinShot|http://www.woodybells.com/winshot.html]]:スクリーンキャプチャ。
+:[[TVClock|http://thsb.webcrow.jp/tvclock.html]]:時計表示ツール。
 :[[TeraPad|http://www5f.biglobe.ne.jp/~t-susumu/library/tpad.html]]:テキストエディタ
 :[[NTEmacs|http://www.gnu.org/software/emacs/windows/]]:エディタ
 :[[FileSum|http://www.vector.co.jp/soft/winnt/util/se030005.html]]:ディスク容量計測ツール
