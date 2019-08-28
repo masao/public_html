@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist>
+  <pub type="conference">
+    <title>A Case Study of Japanese Textbook Linked Open Data: Publishing a Small Bibliographic Collection from a Special Library</title>
+    <author>Yuka Egusa</author>
+    <author>Masao Takaku</author>
+    <conference>DCMI 2019</conference>
+    <year>2019</year>
+    <month>9</month>
+    <city>Seoul, South Korea</city>
+    <date>2019-09-23</date>
+    <language>en</language>
+  </pub>
   <pub type="misc">
     <title>Book Recommender System Using Linked Data for Improving Serendipity</title>
     <author>Renlou Weng</author>
