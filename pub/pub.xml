@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist>
+  <pub type="misc">
+    <title>図書館における情報技術</title>
+    <author>高久雅生</author>
+    <conference>令和元年度新任図書館長研修</conference>
+    <city>東京</city>
+    <date>2019-09-06</date>
+    <year>2019</year>
+    <month>9</month>
+    <url>https://speakerdeck.com/masao/information-technology-in-library</url>
+  </pub>
   <pub type="conference">
     <title>A Case Study of Japanese Textbook Linked Open Data: Publishing a Small Bibliographic Collection from a Special Library</title>
     <author>Yuka Egusa</author>
