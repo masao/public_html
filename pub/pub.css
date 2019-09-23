@@ -41,3 +41,8 @@ span.author_map {
 .author_mine {
   font-weight: bolder;
 }
+
+span.title {
+    display: block;
+    margin-top: 5px;
+}
