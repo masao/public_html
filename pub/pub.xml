@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist>
-  <pub type="misc">
+  <pub type="conference">
+    <title>A Prototype of the Method on How to Collate Tang Poems</title>
+    <author>Yan Cong</author>
+    <author>Masao Takaku</author>
+    <conference>ALIRG 2019</conference>
+    <year>2019</year>
+    <month>11</month>
+    <city>Beijing, China</city>
+    <date>2019-11-28</date>
+    <language>en</language>
+  </pub>
+  <pub type="conference">
+    <title>A Lightweight Application Profile Description with Shapes Constraints Language (SHACL)</title>
+    <subtitle>A Case Study from Japanese Textbook Linked Open Data</subtitle>
+    <author>Masao Takaku</author>
+    <author>Yuka Egusa</author>
+    <conference>ALIRG 2019</conference>
+    <year>2019</year>
+    <month>11</month>
+    <city>Beijing, China</city>
+    <date>2019-11-28</date>
+    <language>en</language>
+  </pub>
+  <pub type="misc" refereed="true">
     <title>唐詩の構造化に関する研究</title>
     <subtitle>テキストの差異提示機能の検討</subtitle>
     <author>叢艶</author>
@@ -13,7 +36,7 @@
     <date>2019-12-14</date>
     <language>ja</language>
   </pub>
-  <pub type="misc">
+  <pub type="misc"refereed="true">
     <title>Linked Dataによる無形民俗文化財情報の構造化の試み</title>
     <author>佐藤いつみ</author>
     <author>高久雅生</author>
