@@ -2,6 +2,29 @@
 <!-- $Id$ -->
 <publist>
   <pub type="misc">
+    <title>唐詩の構造化に関する研究</title>
+    <subtitle>テキストの差異提示機能の検討</subtitle>
+    <author>叢艶</author>
+    <author>高久雅生</author>
+    <conference>人文科学とコンピュータシンポジウム2019</conference>
+    <year>2019</year>
+    <month>12</month>
+    <city>茨木</city>
+    <date>2019-12-14</date>
+    <language>ja</language>
+  </pub>
+  <pub type="misc">
+    <title>Linked Dataによる無形民俗文化財情報の構造化の試み</title>
+    <author>佐藤いつみ</author>
+    <author>高久雅生</author>
+    <conference>人文科学とコンピュータシンポジウム2019</conference>
+    <year>2019</year>
+    <month>12</month>
+    <city>茨木</city>
+    <date>2019-12-14</date>
+    <language>ja</language>
+  </pub>
+  <pub type="misc">
     <title>ttl2html</title>
     <subtitle>RDF/Turtle to HTML</subtitle>
     <author>高久雅生</author>
