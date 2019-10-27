@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist>
+  <pub type="misc">
+    <title>論文紹介: One Way or Another I’m Gonna Find Ya: The Influence of Input Mechanism on Scrolling in Complex Digital Collections</title>
+    <author>高久雅生</author>
+    <conference>IR Reading 2019秋</conference>
+    <year>2019</year>
+    <month>10</month>
+    <city>東京</city>
+    <date>2019-10-27</date>
+    <language>ja</language>
+    <url>http://sigir.jp/post/irreading_2019fall/</url>
+    <slides>https://speakerdeck.com/masao/20191027-irreadings-takaku</slides>
+  </pub>
   <pub type="conference">
     <title>A Prototype of the Method on How to Collate Tang Poems</title>
     <author>Yan Cong</author>
