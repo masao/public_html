@@ -23,6 +23,10 @@
     <city>Beijing, China</city>
     <date>2019-11-28</date>
     <language>en</language>
+    <page>
+      <start>59</start>
+      <end>59</end>
+    </page>
   </pub>
   <pub type="conference">
     <title>A Lightweight Application Profile Description with Shapes Constraints Language (SHACL)</title>
@@ -35,6 +39,10 @@
     <city>Beijing, China</city>
     <date>2019-11-28</date>
     <language>en</language>
+    <page>
+      <start>26</start>
+      <end>26</end>
+    </page>
   </pub>
   <pub type="misc" refereed="true">
     <title>唐詩の構造化に関する研究</title>
@@ -79,7 +87,7 @@
     <date>2019-09-06</date>
     <year>2019</year>
     <month>9</month>
-    <url>https://speakerdeck.com/masao/information-technology-in-library</url>
+    <slides>https://speakerdeck.com/masao/information-technology-in-library</slides>
   </pub>
   <pub type="conference" refereed="true">
     <title>A Case Study of Japanese Textbook Linked Open Data: Publishing a Small Bibliographic Collection from a Special Library</title>
