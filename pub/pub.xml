@@ -55,6 +55,11 @@
     <city>茨木</city>
     <date>2019-12-14</date>
     <language>ja</language>
+    <page>
+      <start>273</start>
+      <end>280</end>
+    </page>
+    <url>http://id.nii.ac.jp/1001/00201012/</url>
   </pub>
   <pub type="misc" refereed="true">
     <title>Linked Dataによる無形民俗文化財情報の構造化の試み</title>
@@ -66,6 +71,11 @@
     <city>茨木</city>
     <date>2019-12-14</date>
     <language>ja</language>
+    <page>
+      <start>245</start>
+      <end>252</end>
+    </page>
+    <url>http://id.nii.ac.jp/1001/00201008/</url>
   </pub>
   <pub type="misc">
     <title>ttl2html</title>
