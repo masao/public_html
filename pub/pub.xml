@@ -2,6 +2,17 @@
 <!-- $Id$ -->
 <publist>
   <pub type="misc">
+    <title>日本のORCIDコンソーシアム検討状況</title>
+    <author>高久雅生</author>
+    <conference>ORCID説明会</conference>
+    <year>2019</year>
+    <month>12</month>
+    <city>つくば</city>
+    <date>2019-12-20</date>
+    <language>ja</language>
+    <url>https://www.tulips.tsukuba.ac.jp/lib/ja/information/20191028</url>
+  </pub>
+  <pub type="misc">
     <title>論文紹介: One Way or Another I’m Gonna Find Ya: The Influence of Input Mechanism on Scrolling in Complex Digital Collections</title>
     <author>高久雅生</author>
     <conference>IR Reading 2019秋</conference>
