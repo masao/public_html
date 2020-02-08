@@ -2,6 +2,25 @@
 <!-- $Id$ -->
 <publist>
   <pub type="misc">
+    <title>Author-Oriented Book Recommendation Using Linked Open Data for Improving Serendipity</title>
+    <author>Renlou Weng</author>
+    <author>Masao Takaku</author>
+    <conference>第137回情報基礎とアクセス技術研究発表会</conference>
+    <journal>情報処理学会研究報告</journal>
+    <volume>2020-IFAT-137</volume>
+    <number>1</number>
+    <year>2020</year>
+    <month>2</month>
+    <city>東京</city>
+    <page>
+      <start>1</start>
+      <end>6</end>
+    </page>
+    <language>ja</language>
+    <date>2019-02-15</date>
+    <url>http://id.nii.ac.jp/1001/00202979/</url>
+  </pub>
+  <pub type="misc">
     <title>日本のORCIDコンソーシアム検討状況</title>
     <author>高久雅生</author>
     <conference>ORCID説明会</conference>
