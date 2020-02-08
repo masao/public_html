@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist>
+  <pub type="journal" refereed="true">
+    <title>DOIリンクに基づくWikipedia 上の参照記述における編集者の分析</title>
+    <author>吉川次郎</author>
+    <author>高久雅生</author>
+    <author>芳鐘冬樹</author>
+    <journal>情報知識学会誌</journal>
+    <volume>30</volume>
+    <number>1</number>
+    <year>2020</year>
+    <month>3</month>
+    <page>21</page>
+    <!--
+    <page>
+      <start>329</start>
+      <end>336</end>
+    </page>
+    -->
+    <language>ja</language>
+  </pub>
   <pub type="misc">
     <title>Author-Oriented Book Recommendation Using Linked Open Data for Improving Serendipity</title>
     <author>Renlou Weng</author>
