@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist>
+  <pub type="misc">
+    <title>Information Organization in the Web Age = ウェブ時代の情報組織化</title>
+    <author>Masao Takaku</author>
+    <conference>TSUKUBA Short-term Study Program (TSSP)</conference>
+    <year>2020</year>
+    <month>2</month>
+    <date>2020-02-14</date>
+    <slides>https://speakerdeck.com/masao/information-organization-in-the-web-age</slides>
+  </pub>
   <pub type="journal" refereed="true">
     <title>DOIリンクに基づくWikipedia 上の参照記述における編集者の分析</title>
     <author>吉川次郎</author>
