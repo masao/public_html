@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist>
+  <pub type="chapter">
+    <title>レファレンスサービスの要素技術</title>
+    <author>高久雅生</author>
+    <booktitle>レファレンスサービスの射程と展開</booktitle>
+    <chapter>第2章</chapter>
+    <publisher>日本図書館協会</publisher>
+    <city>東京</city>
+    <year>2020</year>
+    <month>3</month>
+    <date>2020-02-29</date>
+    <language>ja</language>
+    <!--
+    <page>
+      <start>49</start>
+      <end>61</end>
+    </page>
+    -->
+    <url>http://www.jla.or.jp/publications/tabid/87/pdid/p11-0000000543/Default.aspx</url>
+  </pub>
   <pub type="misc">
     <title>Information Organization in the Web Age = ウェブ時代の情報組織化</title>
     <author>Masao Takaku</author>
