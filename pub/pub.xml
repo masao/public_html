@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist>
+  <pub type="journal">
+    <title>図書館業務に関連するプログラム開発事例とその諸要素</title>
+    <author>高久雅生</author>
+    <journal>情報の科学と技術</journal>
+    <number>4</number>
+    <volume>70</volume>
+    <year>2020</year>
+    <month>4</month>
+    <page>
+      <start>192</start>
+      <end>196</end>
+    </page>
+    <language>ja</language>
+    <date>2020-04-01</date>
+    <doi>10.18919/jkg.70.4_192</doi>
+  </pub>
   <pub type="chapter">
     <title>レファレンスサービスの要素技術</title>
     <author>高久雅生</author>
