@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist>
+  <pub type="misc">
+    <title>Web ページ閲覧履歴を用いた情報収集行動の振り返り支援</title>
+    <author>佐藤千尋</author>
+    <author>高久雅生</author>
+    <conference>第28回情報知識学会年次大会</conference>
+    <journal>情報知識学会誌</journal>
+    <volume>30</volume>
+    <number>2</number>
+    <year>2020</year>
+    <month>5</month>
+    <page>
+      <start>220</start>
+      <end>229</end>
+    </page>
+    <language>ja</language>
+    <date>2020-05-23</date>
+  </pub>
   <pub type="journal">
     <title>図書館業務に関連するプログラム開発事例とその諸要素</title>
     <author>高久雅生</author>
