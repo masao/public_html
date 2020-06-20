@@ -2,6 +2,17 @@
 <!-- $Id$ -->
 <publist>
   <pub type="misc">
+    <title>軽量Linked Open Data公開ワークフロー</title>
+    <subtitle>Poorman's ToolkitからXlsx2Shapesまで</subtitle>
+    <author>高久雅生</author>
+    <conference>Code4Lib JAPANカンファレンス2020</conference>
+    <year>2020</year>
+    <month>6</month>
+    <date>2020-06-21</date>
+    <language>ja</language>
+    <slides>https://speakerdeck.com/masao/20200621-lightweight-linked-open-data-workflow</slides>
+  </pub>
+  <pub type="misc">
     <title>Web ページ閲覧履歴を用いた情報収集行動の振り返り支援</title>
     <author>佐藤千尋</author>
     <author>高久雅生</author>
