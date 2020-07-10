@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist>
+  <pub type="journal" refereed="true">
+    <title>Wikipediaに学術文献の参照記述を追加する編集の特定手法</title>
+    <author>吉川次郎</author>
+    <author>高久雅生</author>
+    <author>芳鐘冬樹</author>
+    <journal>情報知識学会誌</journal>
+    <volume>30</volume>
+    <number>3</number>
+    <year>2020</year>
+    <month>10</month>
+    <date>2020-10-01</date>
+    <page>20</page>
+    <!--
+    <page>
+      <start>21</start>
+      <end>41</end>
+    </page>
+    ->
+    <language>ja</language>
+    <doi>10.2964/jsik_2020_033</doi>
+  </pub>
   <pub type="misc">
     <title>軽量Linked Open Data公開ワークフロー</title>
     <subtitle>Poorman's ToolkitからXlsx2Shapesまで</subtitle>
