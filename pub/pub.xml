@@ -2,6 +2,19 @@
 <!-- $Id$ -->
 <publist>
   <pub type="misc">
+    <title>討議報告 『分類を構成する要素の解釈の明確化 ―Linked Data化を想定して―』</title>
+    <author>高久雅生</author>
+    <booktitle>TP&amp;Dフォーラムシリーズ 整理技術・情報管理等研究論集</booktitle>
+    <page>
+      <start>27</start>
+      <end>29</end>
+    </page>
+    <year>2020</year>
+    <month>4</month>
+    <date>2020-04-30</date>
+    <language>ja</language>
+  </pub>
+  <pub type="misc">
     <title>『IFLA図書館参照モデル』輪読会 第4章後半(4.1.3節)</title>
     <author>高久雅生</author>
     <conference>情報組織化研究グループ勉強会</conference>
