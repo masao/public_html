@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist>
+  <pub type="journal">
+    <title>図書館におけるテクノロジー活用を促進する 「場」の創出</title>
+    <subtitle>Code4Lib JAPAN コミュニティの取組み</subtitle>
+    <author>江草由佳</author>
+    <author>岡本真</author>
+    <author>清田陽司</author>
+    <author>高久雅生</author>
+    <author>常川真央</author>
+    <journal>人工知能</journal>
+    <volume>35</volume>
+    <number>6</number>
+    <year>2020</year>
+    <month>11</month>
+    <date>2020-11-01</date>
+    <page>
+      <start>766</start>
+      <end>774</end>
+    </page>
+    <language>ja</language>
+  </pub>
   <pub type="misc">
     <title>討議報告 『分類を構成する要素の解釈の明確化 ―Linked Data化を想定して―』</title>
     <author>高久雅生</author>
