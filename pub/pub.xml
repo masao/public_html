@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist>
+  <pub type="journal" refereed="true">
+    <title>Wikipedia上の学術文献の参照記述の追加に関する時系列分析</title>
+    <author>吉川次郎</author>
+    <author>高久雅生</author>
+    <author>芳鐘冬樹</author>
+    <journal>情報知識学会誌</journal>
+    <volume>31</volume>
+    <number>1</number>
+    <year>2021</year>
+    <month>1</month>
+    <date>2021-01-30</date>
+    <page>17</page>
+    <!--
+    <page>
+      <start>370</start>
+      <end>389</end>
+    </page>
+    -->
+    <language>ja</language>
+    <doi>10.2964/jsik_2020_037</doi>
+  </pub>
   <pub type="journal">
     <title>図書館におけるテクノロジー活用を促進する 「場」の創出</title>
     <subtitle>Code4Lib JAPAN コミュニティの取組み</subtitle>
