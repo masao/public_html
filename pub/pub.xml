@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist>
+  <pub type="misc" refereed="true">
+    <title>Linked Open Dataを用いた年中行事・祭礼情報の構造化とその利活用</title>
+    <author>佐藤いつみ</author>
+    <author>高久雅生</author>
+    <conference>人文科学とコンピュータシンポジウム2020</conference>
+    <year>2020</year>
+    <month>12</month>
+    <date>2020-12-12</date>
+    <language>ja</language>
+    <!--
+    <page>
+      <start>245</start>
+      <end>252</end>
+    </page>
+    <url>http://id.nii.ac.jp/1001/00201008/</url>
+    -->
+  </pub>
   <pub type="journal" refereed="true">
     <title>Wikipedia上の学術文献の参照記述の追加に関する時系列分析</title>
     <author>吉川次郎</author>
