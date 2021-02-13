@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist>
+  <pub type="misc">
+    <title>Keyword extraction method using users' mouse behavior</title>
+    <author>He Chunyang</author>
+    <author>Masao Takaku</author>
+    <conference>第141回情報基礎とアクセス技術研究発表会</conference>
+    <journal>情報処理学会研究報告</journal>
+    <volume>2021-IFAT-141</volume>
+    <number>2</number>
+    <year>2021</year>
+    <month>2</month>
+    <city>東京</city>
+    <page>
+      <start>1</start>
+      <end>6</end>
+    </page>
+    <language>ja</language>
+    <date>2021-02-13</date>
+    <url>http://id.nii.ac.jp/1001/00209247/</url>
+  </pub>
   <pub type="misc" refereed="true">
     <title>ウィキペディアタウンサミット2021</title>
     <subtitle>冒頭解説</subtitle>
