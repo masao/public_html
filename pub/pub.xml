@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist>
+  <pub type="conference">
+    <title>Aggregation and Utilization of Metadata for Intangible Folk Cultural Properties Using Linked Open Data</title>
+    <author>Itsumi Sato</author>
+    <author>Masao Takaku</author>
+    <conference>iConference 2021</conference>
+    <year>2021</year>
+    <month>3</month>
+    <date>2021-03-23</date>
+    <language>en</language>
+    <page>11</page>
+    <!--
+    <page>
+      <start>59</start>
+      <end>59</end>
+    </page>
+    -->
+  </pub>
   <pub type="misc">
     <title>Keyword extraction method using users' mouse behavior</title>
     <author>He Chunyang</author>
