@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id$ -->
 <publist>
-  <pub type="conference">
+  <pub type="misc">
+    <title>利用スタイルに適合した次期図書館システムの検討</title>
+    <author>高久雅生</author>
+    <author>宇陀紀彦</author>
+    <author>鈴木秀樹</author>
+    <conference>2020年度（令和2年度）研究開発室成果報告</conference>
+    <year>2020</year>
+    <month>3</month>
+    <city>つくば</city>
+    <language>ja</language>
+    <date>2021-03-01</date>
+    <url>https://www.tulips.tsukuba.ac.jp/lib/about/rdo/2020posters</url>
+    <poster>https://www.tulips.tsukuba.ac.jp/lib/sites/default/files/attach/rdo2020poster_proj7.pdf</poster>
+    <url>https://www.tulips.tsukuba.ac.jp/lib/sites/default/files/attach/rdo2020poster_proj7.mp4</url>
+  </pub>
+  <pub type="conference" refereed="true">
     <title>Aggregation and Utilization of Metadata for Intangible Folk Cultural Properties Using Linked Open Data</title>
     <author>Itsumi Sato</author>
     <author>Masao Takaku</author>
