@@ -21,17 +21,18 @@
     <author>Itsumi Sato</author>
     <author>Masao Takaku</author>
     <conference>iConference 2021</conference>
+    <journal>Lecture Notes in Computer Science (LNCS)</journal>
+    <volume>12645</volume>
+    <publisher>Springer</publisher>
     <year>2021</year>
     <month>3</month>
     <date>2021-03-23</date>
     <language>en</language>
-    <page>11</page>
-    <!--
     <page>
-      <start>59</start>
-      <end>59</end>
+      <start>154</start>
+      <end>164</end>
     </page>
-    -->
+    <doi>10.1007/978-3-030-71292-1_14</doi>
   </pub>
   <pub type="misc">
     <title>Keyword extraction method using users' mouse behavior</title>
