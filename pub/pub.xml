@@ -2,6 +2,45 @@
 <!-- $Id$ -->
 <publist>
   <pub type="misc">
+    <title>情報収集行動の振り返り支援を目的とする閲覧履歴提示手法</title>
+    <author>佐藤千尋</author>
+    <author>高久雅生</author>
+    <conference>第29回情報知識学会年次大会</conference>
+    <journal>情報知識学会誌</journal>
+    <volume>31</volume>
+    <number>2</number>
+    <year>2021</year>
+    <month>5</month>
+    <page>10</page>
+    <page>
+      <!--
+      <start>220</start>
+      <end>229</end>
+    </page>
+    <language>ja</language>
+    <date>2021-05-22</date>
+  </pub>
+  <pub type="misc">
+    <title>時系列を考慮したクエリ満足度の推定</title>
+    <author>楊之卓</author>
+    <author>高久雅生</author>
+    <conference>第29回情報知識学会年次大会</conference>
+    <journal>情報知識学会誌</journal>
+    <volume>31</volume>
+    <number>2</number>
+    <year>2021</year>
+    <month>5</month>
+    <page>12</page>
+    <!--
+    <page>
+      <start>220</start>
+      <end>229</end>
+    </page>
+    -->
+    <language>ja</language>
+    <date>2021-05-22</date>
+  </pub>
+  <pub type="misc">
     <title>利用スタイルに適合した次期図書館システムの検討</title>
     <author>高久雅生</author>
     <author>宇陀則彦</author>
