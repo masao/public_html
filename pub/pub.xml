@@ -11,13 +11,10 @@
     <number>2</number>
     <year>2021</year>
     <month>5</month>
-    <page>10</page>
-    <!--
     <page>
-      <start>220</start>
-      <end>229</end>
+      <start>333</start>
+      <end>342</end>
     </page>
-    -->
     <language>ja</language>
     <date>2021-05-22</date>
   </pub>
@@ -31,13 +28,10 @@
     <number>2</number>
     <year>2021</year>
     <month>5</month>
-    <page>12</page>
-    <!--
     <page>
-      <start>220</start>
-      <end>229</end>
+      <start>343</start>
+      <end>354</end>
     </page>
-    -->
     <language>ja</language>
     <date>2021-05-22</date>
   </pub>
