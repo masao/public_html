@@ -2,6 +2,24 @@
 <!-- $Id$ -->
 <publist>
   <pub type="misc">
+    <title>教科書編修趣意書を介した学習内容とデジタルコンテンツ接続可能性の検討</title>
+    <author>阿児雄之</author>
+    <author>有山裕美子</author>
+    <author>江草由佳</author>
+    <author>榎本聡</author>
+    <author>大井将生</author>
+    <author>高久雅生</author>
+    <conference>アート・ドキュメンテーション学会2021年度年次大会</conference>
+    <year>2021</year>
+    <month>6</month>
+    <page>
+      <start>17</start>
+      <end>18</end>
+    </page>
+    <language>ja</language>
+    <date>2021-06-19</date>
+  </pub>
+  <pub type="misc">
     <title>情報収集行動の振り返り支援を目的とする閲覧履歴提示手法</title>
     <author>佐藤千尋</author>
     <author>高久雅生</author>
