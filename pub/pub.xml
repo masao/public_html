@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Id$ -->
 <publist>
+  <pub type="misc" refereed="true">
+    <title>経緯説明</title>
+    <subtitle>研究データ管理支援者に求められるスキル</subtitle>
+    <author>高久雅生</author>
+    <conference>NIIオープンフォーラム2021</conference>
+    <year>2021</year>
+    <month>7</month>
+    <date>2021-07-08</date>
+    <language>ja</language>
+    <url>https://www.nii.ac.jp/openforum/2021/day3_rcos6.html</url>
+  </pub>
   <pub type="misc">
     <title>教科書編修趣意書を介した学習内容とデジタルコンテンツ接続可能性の検討</title>
     <author>阿児雄之</author>
@@ -111,7 +121,7 @@
     <date>2021-02-13</date>
     <url>http://id.nii.ac.jp/1001/00209247/</url>
   </pub>
-  <pub type="misc" refereed="true">
+  <pub type="misc">
     <title>ウィキペディアタウンサミット2021</title>
     <subtitle>冒頭解説</subtitle>
     <author>高久雅生</author>
