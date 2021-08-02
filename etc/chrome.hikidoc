@@ -1,7 +1,7 @@
 title: Chrome: ブックマーク、拡張、設定など
 title.short: Chrome設定集
 date.available: 2016-03-16
-date.modified:  2018-03-04
+date.modified:  2021-08-02
 subject: etc
 
 常用ブラウザとして[[Google Chrome|https://www.google.co.jp/chrome/]]を使っていますが、Chrome上でのブックマーク、拡張、設定情報のメモです。
@@ -26,7 +26,7 @@ subject: etc
 //*[[Any.do|https://web.any.do/]] - Todo管理
 *[[Awesome Screenshot|https://www.awesomescreenshot.com/]] - スクリーンショット
 *[[XML Tree|https://chrome.google.com/webstore/detail/xml-tree/gbammbheopgpmaagmckhpjbfgdfkpadb]] - XMLファイル表示
-*[[Card Counter for Trello|https://chrome.google.com/webstore/detail/cardcounter-for-trello/miejdnaildjcmahbhmfngfdoficmkdhi]]
+*[[Card Counter for Trello|https://chrome.google.com/webstore/detail/card-counter-for-trello/gaafcohgckclklihjchllmhlhpclogfm]]
 !!! 以下は優先度の低い拡張機能（ほとんど使っていない）
 *[[Proxy SwitchSharp|https://chrome.google.com/webstore/detail/proxy-switchysharp/dpplabbmogkhghncfbfdeeokoefdjegm]] - プロクシ切替
 *[[appear.in|https://chrome.google.com/webstore/detail/appearin/pokjppmpccggefgcenpngoleemajgnmo]] - 遠隔会議（画面共有等）
