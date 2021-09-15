@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <publist>
   <pub type="misc">
+    <title>OPAC評価ワーキンググループ「opaceval」の目指すもの</title>
+    <author>田辺浩介</author>
+    <author>江草由佳</author>
+    <author>高久雅生</author>
+    <author>吉本龍司</author>
+    <conference>Code4Lib JAPANカンファレンス2021</conference>
+    <year>2021</year>
+    <month>9</month>
+    <date>2021-09-12</date>
+    <language>ja</language>
+    <slides>https://docs.google.com/presentation/d/1oWQEQUY-wudFJsvgPB1eFAOGHZ40R258zCY4hOgM8Ws/edit?usp=sharing</slides>
+  </pub>
+  <pub type="misc">
     <title>オンライン授業に対する個人的な感想</title>
     <author>高久雅生</author>
     <year>2021</year>
