@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <publist>
   <pub type="misc">
+    <title>SHACL (Shapes Constraint Language) によるアプリケーションプロファイル記述の試み</title>
+    <author>高久雅生</author>
+    <author>江草由佳</author>
+    <conference>第55回セマンティックウェブとオントロジー研究会</conference>
+    <year>2021</year>
+    <month>11</month>
+    <city>オンライン</city>
+    <page>7</page>
+    <language>ja</language>
+    <date>2021-11-26</date>
+    <url>https://www.sigswo.org/papers/55program</url>
+  </pub>
+  <pub type="misc">
     <title>OPAC評価ワーキンググループ「opaceval」の目指すもの</title>
     <author>田辺浩介</author>
     <author>江草由佳</author>
