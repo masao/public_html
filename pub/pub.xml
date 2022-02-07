@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <publist>
+  <pub type="journal" refereed="true">
+    <title>漢詩の構造化に関する研究</title>
+    <subtitle>唐詩作品を中心に</subtitle>
+    <author>叢艶</author>
+    <author>高久雅生</author>
+    <journal>情報知識学会誌</journal>
+    <volume>32</volume>
+    <number>1</number>
+    <year>2022</year>
+    <month>2</month>
+    <date>2022-02-28</date>
+    <!--
+    <page>
+      <start>3</start>
+      <end>19</end>
+    </page>
+    -->
+    <language>ja</language>
+  </pub>
   <pub type="misc">
     <title>SHACL (Shapes Constraint Language) によるアプリケーションプロファイル記述の試み</title>
     <author>高久雅生</author>
