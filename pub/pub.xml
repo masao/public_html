@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <publist>
   <pub type="journal" refereed="true">
+    <title>Dataset of first appearances of the scholarly bibliographic references on Wikipedia articles</title>
+    <author>Jiro Kikkawa</author>
+    <author>Masao Takaku</author>
+    <author>Fuyuki Yoshikane</author>
+    <journal>Scientific Data</journal>
+    <volume>9</volume>
+    <publisher>Springer Nature</publisher>
+    <year>2022</year>
+    <month>2</month>
+    <language>en</language>
+    <date>2022-02-28</date>
+  </pub>
+  <pub type="journal" refereed="true">
     <title>漢詩の構造化に関する研究</title>
     <subtitle>唐詩作品を中心に</subtitle>
     <author>叢艶</author>
