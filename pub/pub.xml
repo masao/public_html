@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <publist>
+  <pub type="misc">
+    <title>チーム開発のためのソースコード閲覧履歴可視化システム</title>
+    <author>石島菜々香</author>
+    <author>高久雅生</author>
+    <conference>第14回データ工学と情報マネジメントに関するフォーラム (DEIM2022)</conference>
+    <year>2022</year>
+    <month>2</month>
+    <language>ja</language>
+    <date>2022-02-28</date>
+  </pub>
   <pub type="journal" refereed="true">
     <title>Dataset of first appearances of the scholarly bibliographic references on Wikipedia articles</title>
     <author>Jiro Kikkawa</author>
