@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <publist>
   <pub type="misc">
+    <title>学習指導要領LOD</title>
+    <author>高久雅生</author>
+    <author>大井将生</author>
+    <author>榎本聡</author>
+    <author>江草由佳</author>
+    <author>有山裕美子</author>
+    <author>阿児雄之</author>
+    <conference>LODチャレンジ2021オンライン授賞式シンポジウム</conference>
+    <year>2022</year>
+    <month>3</month>
+    <language>ja</language>
+    <date>2022-03-13</date>
+    <slides>https://speakerdeck.com/masao/2022-03-13-jp-cos-lod</slides>
+  </pub>
+  <pub type="misc">
     <title>チーム開発のためのソースコード閲覧履歴可視化システム</title>
     <author>石島菜々香</author>
     <author>高久雅生</author>
