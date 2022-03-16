@@ -93,6 +93,7 @@ class PubData
    attr_reader :journal, :conference, :org, :publisher
    attr_reader :booktitle, :series
    attr_reader :volume, :number, :sequence_number, :year, :month, :city
+   attr_reader :articleno
    attr_reader :page_start, :page_end, :page, :isbn, :note, :awards, :awards_url
    attr_reader :url, :doi, :slides, :poster, :file, :abstract
    attr_reader :language
@@ -121,6 +122,7 @@ class PubData
       @volume = element.text("volume")
       @number = element.text("number")
       @sequence_number = element.text("sequence-number")
+      @articleno = element.text("articleno")
       @year = element.text("year")
       @month = element.text("month")
       @city = element.text("city")

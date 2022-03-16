@@ -45,6 +45,9 @@ end
 if not number.nil?
   fields << %Q[<span class="number">no.#{h number }</span>]
 end
+if not articleno.nil?
+  fields << %Q[<span class="articleno">#{h articleno }</span>]
+end
 if not sequence_number.nil?
   fields << %Q[<span class="sequence_number">#{h sequence_number }</span>]
 end
