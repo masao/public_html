@@ -26,6 +26,10 @@
     <year>2022</year>
     <month>5</month>
     <language>ja</language>
+    <page>
+      <start>135</start>
+      <end>142</end>
+    </page>
     <date>2022-05-28</date>
     <doi>10.15077/jsetstudy.2022.1_135</doi>
   </pub>
@@ -53,6 +57,7 @@
     <month>2</month>
     <language>ja</language>
     <date>2022-02-28</date>
+    <file>https://proceedings-of-deim.github.io/DEIM2022/papers/F23-2.pdf</file>
   </pub>
   <pub type="journal" refereed="true">
     <title>Dataset of first appearances of the scholarly bibliographic references on Wikipedia articles</title>
