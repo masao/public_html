@@ -1,6 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <publist>
   <pub type="misc">
+    <title>海外学術情報基盤のダッシュボード比較分析</title>
+    <author>池谷瑠絵</author>
+    <author>大波純一</author>
+    <author>金沢輝一</author>
+    <author>高久雅生</author>
+    <author>山地一禎</author>
+    <conference>第30回情報知識学会年次大会</conference>
+    <journal>情報知識学会誌</journal>
+    <volume>32</volume>
+    <number>2</number>
+    <year>2022</year>
+    <month>5</month>
+    <language>ja</language>
+    <date>2022-05-28</date>
+  </pub>
+  <pub type="misc">
+    <title>楽曲探索を支援するための類似楽曲提示手法</title>
+    <author>小林恭輔</author>
+    <author>高久雅生</author>
+    <conference>第30回情報知識学会年次大会</conference>
+    <journal>情報知識学会誌</journal>
+    <volume>32</volume>
+    <number>2</number>
+    <year>2022</year>
+    <month>5</month>
+    <language>ja</language>
+    <date>2022-05-28</date>
+  </pub>
+  <pub type="misc">
+    <title>日本のテレビ放送における番組のシリーズを同定する手法の開発</title>
+    <author>藤岡雄大</author>
+    <author>高久雅生</author>
+    <conference>第30回情報知識学会年次大会</conference>
+    <journal>情報知識学会誌</journal>
+    <volume>32</volume>
+    <number>2</number>
+    <year>2022</year>
+    <month>5</month>
+    <language>ja</language>
+    <date>2022-05-28</date>
+  </pub>
+  <pub type="misc">
     <title>学習指導要領LODの公開と活用の検討</title>
     <author>阿児雄之</author>
     <author>有山裕美子</author>
