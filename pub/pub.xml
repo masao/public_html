@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <publist>
   <pub type="misc">
+    <title>趣旨説明</title>
+    <subtitle>研究データ管理支援人材に求められるスキル</subtitle>
+    <author>高久雅生</author>
+    <conference>NIIオープンフォーラム2022</conference>
+    <year>2022</year>
+    <month>6</month>
+    <date>2022-06-02</date>
+    <language>ja</language>
+    <url>https://www.nii.ac.jp/openforum/2022/day4_nii-rdc6.html</url>
+  </pub>
+  <pub type="misc">
     <title>海外学術情報基盤のダッシュボード比較分析</title>
     <author>池谷瑠絵</author>
     <author>大波純一</author>
