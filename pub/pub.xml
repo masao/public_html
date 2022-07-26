@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <publist>
+  <pub type="conference" refereed="true">
+    <title>Analysis of the deletions of DOIs</title>
+    <subtitle>What factors undermine their persistence and to what extent?</subtitle>
+    <author>Jiro Kikkawa</author>
+    <author>Masao Takaku</author>
+    <author>Fuyuki Yoshikane</author>
+    <conference>The 26th International Conference on Theory and Practice of Digital Libraries (TPDL 2022)</conference>
+    <journal>Lecture Notes in Computer Science (LNCS)</journal>
+    <!--
+    <volume>10075</volume>
+    -->
+    <publisher>Springer</publisher>
+    <year>2022</year>
+    <month>9</month>
+    <city>Padova, Italy</city>
+    <language>en</language>
+    <page>14</page>
+    <!--
+    <page>
+      <start>369</start>
+      <end>380</end>
+    </page>
+    -->
+    <date>2022-09-20</date>
+    <url>https://arxiv.org/abs/2207.12018</url>
+  </pub>
   <pub type="misc">
     <title>ビデオゲームMOD配布プラットフォームにおける説明文のコンテンツ分類</title>
     <author>島村翔</author>
