@@ -25,6 +25,10 @@
     -->
     <date>2022-09-20</date>
     <url>https://arxiv.org/abs/2207.12018</url>
+    <dataset>
+      <title>Dataset of the deleted DOIs extracted from the difference set between Crossref DOIs as of March 2017 and January 2021</title>
+      <doi>10.5281/zenodo.6841257</doi>
+    </dataset>
   </pub>
   <pub type="misc">
     <title>ビデオゲームMOD配布プラットフォームにおける説明文のコンテンツ分類</title>

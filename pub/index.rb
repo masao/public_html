@@ -100,6 +100,7 @@ class PubData
    attr_reader :refereed
    attr_reader :date
    attr_reader :chapter
+   attr_reader :dataset_title, :dataset_url
    def initialize( element, config )
       @config = config
       @type = element.attributes["type"]
@@ -138,6 +139,9 @@ class PubData
       @awards = element.text("awards")
       @awards_url = element.text("awards_url")
       @doi = element.text("doi")
+      @dataset_title = element.text("dataset/title")
+      @dataset_url = element.text("dataset/url")
+      @dataset_url = "https://doi.org/" + element.text("dataset/doi") if element.text("dataset/doi")
       %w[ abstract slides poster url ].each do |target|
          values = element.get_elements( target )
          if values.empty?

@@ -87,6 +87,9 @@ end
     </dd>
   <% end %>
 <% end %>
+<% if not dataset_title.nil? %>
+<dd class="dataset"><span class="dataset">[Dataset] <a href="<%=h send( :dataset_url ) %>"><%=h title %></a></dd>
+<% end %>
 <% if not awards.nil? %>
 <dd class="awards"><%=h awards %>
 <% if not awards_url.nil? %>
