@@ -389,7 +389,10 @@
     <date>2021-01-23</date>
     <language>ja</language>
     <slides>https://speakerdeck.com/masao/wikipedia-summit-2021</slides>
-    <url>10.6084/m9.figshare.13632950</url>
+    <dataset>
+      <title>20210123-WikipediaTownSummit-Data.xlsx</title>
+      <doi>10.6084/m9.figshare.13632950</doi>
+    </dataset>
   </pub>
   <pub type="misc" refereed="true">
     <title>Linked Open Dataを用いた年中行事・祭礼情報の構造化とその利活用</title>
