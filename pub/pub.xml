@@ -191,6 +191,10 @@
     <language>en</language>
     <date>2022-02-28</date>
     <doi>10.1038/s41597-022-01190-z</doi>
+    <dataset>
+      <title>corgies/sdata2021</title>
+      <doi>https://doi.org/10.5281/zenodo.5776203</doi>
+    </dataset>
   </pub>
   <pub type="journal" refereed="true">
     <title>漢詩の構造化に関する研究</title>
@@ -760,7 +764,10 @@
     <date>2019-05-01</date>
     <doi>10.18919/jkg.69.5_182</doi>
     <url>http://hdl.handle.net/2241/00157017</url>
-    <url>https://doi.org/10.6084/m9.figshare.7731191</url>
+    <dataset>
+      <title>SIGIR 2009-2018 Titles</title>
+      <doi>10.6084/m9.figshare.7731191</doi>
+    </dataset>
   </pub>
   <pub type="misc">
     <title>典拠データを生かす検索サービス、情報探索行動の変化、LODの社会的効果</title>
@@ -866,7 +873,10 @@
       <end>61</end>
     </page>
     <url>http://hdl.handle.net/2241/00154529</url>
-    <url>https://doi.org/10.6084/m9.figshare.7028033</url>
+    <dataset>
+      <title>Usage Log Analysis of OPAC of University of Tsukuba Library</title>
+      <doi>10.6084/m9.figshare.7028033</doi>
+    </dataset>
   </pub>
   <pub type="misc">
     <title>図書館情報学におけるITスキル教育</title>
