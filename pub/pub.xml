@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <publist>
+  <pub type="misc">
+    <title>海外主要4学術情報基盤のダッシュボード比較分析</title>
+    <subtitle>オープンサイエンス指標に注目して</subtitle>
+    <author>池谷瑠絵</author>
+    <author>大波純一</author>
+    <author>金沢輝一</author>
+    <author>高久雅生</author>
+    <author>山地一禎</author>
+    <conference>RA協議会第8回年次大会</conference>
+    <year>2022</year>
+    <month>8</month>
+    <language>ja</language>
+    <date>2022-08-30</date>
+  </pub>
   <pub type="conference" refereed="true">
     <title>Analysis of the deletions of DOIs</title>
     <subtitle>What factors undermine their persistence and to what extent?</subtitle>
