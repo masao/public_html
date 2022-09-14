@@ -23,22 +23,19 @@
     <author>Fuyuki Yoshikane</author>
     <conference>The 26th International Conference on Theory and Practice of Digital Libraries (TPDL 2022)</conference>
     <journal>Lecture Notes in Computer Science (LNCS)</journal>
-    <!--
-    <volume>10075</volume>
-    -->
+    <volume>13541</volume>
     <publisher>Springer</publisher>
     <year>2022</year>
     <month>9</month>
     <city>Padova, Italy</city>
     <language>en</language>
     <page>14</page>
-    <!--
     <page>
-      <start>369</start>
-      <end>380</end>
+      <start>161</start>
+      <end>174</end>
     </page>
-    -->
     <date>2022-09-20</date>
+    <doi>10.1007/978-3-031-16802-4_13</doi>
     <url>https://arxiv.org/abs/2207.12018</url>
     <dataset>
       <title>Dataset of the deleted DOIs extracted from the difference set between Crossref DOIs as of March 2017 and January 2021</title>
