@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <publist>
   <pub type="misc">
+    <title>学習指導要領コードで紐づくデジタルコンテンツ</title>
+    <author>榎本聡</author>
+    <author>大井将生</author>
+    <author>高久雅生</author>
+    <author>阿児雄之</author>
+    <author>有山裕美子</author>
+    <author>江草由佳</author>
+    <conference>第48回全日本教育工学研究協議会全国大会</conference>
+    <year>2022</year>
+    <month>10</month>
+    <!--
+    <page>
+      <start>17</start>
+      <end>17</end>
+    </page>
+    -->
+    <language>ja</language>
+    <date>2022-10-28</date>
+    <url>https://conv.jaet.jp/2022/</url>
+  </pub>
+  <pub type="misc">
     <title>海外主要4学術情報基盤のダッシュボード比較分析</title>
     <subtitle>オープンサイエンス指標に注目して</subtitle>
     <author>池谷瑠絵</author>
