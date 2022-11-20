@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <publist>
   <pub type="misc">
+    <title>漢詩作品の自動生成とその評価システムの試み</title>
+    <author>叢艶</author>
+    <author>高久雅生</author>
+    <conference>第27回情報知識学フォーラム</conference>
+    <journal>情報知識学会誌</journal>
+    <volume>32</volume>
+    <number>4</number>
+    <year>2022</year>
+    <month>12</month>
+    <city>東京</city>
+    <page>12</page>
+    <!--
+    <page>
+      <start>174</start>
+      <end>185</end>
+    </page>
+    -->
+    <language>ja</language>
+    <date>2022-12-18</date>
+  </pub>
+  <pub type="conference">
+    <title>Prototype of evaluation system for Chinese poetry generation</title>
+    <author>Cong Yan</author>
+    <author>Masao Takaku</author>
+    <conference>AP-iConference 2022</conference>
+    <year>2022</year>
+    <month>12</month>
+    <city>Online</city>
+    <language>en</language>
+    <date>2022-12-02</date>
+  </pub>
+  <pub type="misc">
     <title>学習指導要領コードで紐づくデジタルコンテンツ</title>
     <author>榎本聡</author>
     <author>大井将生</author>
