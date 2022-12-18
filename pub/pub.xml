@@ -12,14 +12,16 @@
     <month>12</month>
     <city>東京</city>
     <page>12</page>
-    <!--
     <page>
-      <start>174</start>
-      <end>185</end>
+      <start>393</start>
+      <end>405</end>
     </page>
-    -->
     <language>ja</language>
     <date>2022-12-18</date>
+    <dataset>
+      <title>漢詩の自動生成の評価システム.txt</title>
+      <doi>10.6084/m9.figshare.21517941.v2</doi>
+    </dataset>
   </pub>
   <pub type="conference">
     <title>Prototype of evaluation system for Chinese poetry generation</title>
