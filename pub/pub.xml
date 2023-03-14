@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <publist>
+  <pub type="conference" refereed="true">
+    <title>Time Lag Analysis of Adding Scholarly References to English Wikipedia</title>
+    <subtitle>How Rapidly Are They Added to and How Fresh Are They?</subtitle>
+    <author>Jiro Kikkawa</author>
+    <author>Masao Takaku</author>
+    <author>Fuyuki Yoshikane</author>
+    <conference>iConference 2023</conference>
+    <journal>Lecture Notes in Computer Science (LNCS)</journal>
+    <volume>13972</volume>
+    <publisher>Springer</publisher>
+    <year>2023</year>
+    <month>3</month>
+    <city>Barcelona, Spain</city>
+    <language>en</language>
+    <page>14</page>
+    <!--
+    <page>
+      <start>161</start>
+      <end>174</end>
+    </page>
+    -->
+    <date>2023-03-13</date>
+    <doi>10.1007/978-3-031-28032-0_33</doi>
+  </pub>
   <pub type="misc">
     <title>漢詩作品の自動生成とその評価システムの試み</title>
     <author>叢艶</author>
