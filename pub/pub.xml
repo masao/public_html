@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <publist>
+  <pub type="misc">
+    <title>利用スタイルに適合した次期図書館システムの検討</title>
+    <author>高久雅生</author>
+    <conference>2022年度（令和4年度）研究開発室成果報告</conference>
+    <year>2022</year>
+    <month>3</month>
+    <city>つくば</city>
+    <language>ja</language>
+    <date>2023-03-10</date>
+    <url>https://www.tulips.tsukuba.ac.jp/lib/ja/information/20230306</url>
+  </pub>
   <pub type="conference" refereed="true">
     <title>Time Lag Analysis of Adding Scholarly References to English Wikipedia</title>
     <subtitle>How Rapidly Are They Added to and How Fresh Are They?</subtitle>
