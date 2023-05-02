@@ -53,6 +53,7 @@
     </page>
     <language>ja</language>
     <date>2022-12-18</date>
+    <doi>10.2964/jsik_2022_034</doi>
     <dataset>
       <title>漢詩の自動生成の評価システム.txt</title>
       <doi>10.6084/m9.figshare.21517941.v2</doi>
@@ -80,12 +81,8 @@
     <conference>第48回全日本教育工学研究協議会全国大会</conference>
     <year>2022</year>
     <month>10</month>
-    <!--
-    <page>
-      <start>17</start>
-      <end>17</end>
-    </page>
-    -->
+    <page>4</page>
+    <articleno>3-G-4</articleno>
     <language>ja</language>
     <date>2022-10-28</date>
     <url>https://conv.jaet.jp/2022/</url>
