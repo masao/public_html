@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <publist>
   <pub type="misc">
+    <title>国内における機関向けダッシュボード提供指標に対する需要の予備的調査</title>
+    <author>池谷瑠絵</author>
+    <author>大波純一</author>
+    <author>金沢輝一</author>
+    <author>西岡千文</author>
+    <author>高久雅生</author>
+    <author>山地一禎</author>
+    <conference>第31回情報知識学会年次大会</conference>
+    <journal>情報知識学会誌</journal>
+    <volume>33</volume>
+    <number>2</number>
+    <year>2023</year>
+    <month>5</month>
+    <page>
+      <start>254</start>
+      <end>263</end>
+    </page>
+    <language>ja</language>
+    <date>2023-05-20</date>
+  </pub>
+  <pub type="misc">
     <title>利用スタイルに適合した次期図書館システムの検討</title>
     <author>高久雅生</author>
     <conference>2022年度（令和4年度）研究開発室成果報告</conference>
@@ -315,6 +336,8 @@
     </page>
     <doi>10.2964/jsik_2022_002</doi>
     <language>ja</language>
+    <awards>第20回 情報知識学会 論文賞受賞</awards>
+    <awards_url>http://www.jsik.jp/?gakkaishi#award</awards_url>
   </pub>
   <pub type="misc">
     <title>SHACL (Shapes Constraint Language) によるアプリケーションプロファイル記述の試み</title>
