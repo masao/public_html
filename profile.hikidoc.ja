@@ -2,7 +2,7 @@ title: 高久雅生の経歴
 title.short: 経歴
 subject:biography
 date.available: 2007-03-04
-date.modified: 2023-05-25
+date.modified: 2023-06-09
 
 [[{{image 'images/201809-c4ljp2018.jpg' 'Code4Lib JAPANカンファレンス2018にて（2018年9月）（撮影: Fumihiro Kato）' thumbs 188px right}}|./profile-images.html]]
 
@@ -127,6 +127,7 @@ date.modified: 2023-05-25
 ::（スキル）Japan/MARC, C言語, Perl, DBM, 磁気テープ
 
 !!受賞
+:第20回情報知識学会論文賞（2023年5月）:『情報知識学会誌』32巻1号掲載の「漢詩の構造化に関する研究　－唐詩作品を中心に」（叢艶との共著）が受賞しました（→[[詳細|http://www.jsik.jp/?gakkaishi#award]]）
 :デジタルアーカイブ学会第４回学会賞「学術賞（基盤・システム)」:[[教科書LOD|https://w3id.org/jp-textbook/]]の提供と公開に対して受賞（→[[詳細|https://digitalarchivejapan.org/awards/4thawards/4thawardee]]）。
 :LODチャレンジ2021最優秀賞およびプラチナスポンサー賞「オラクル賞」:[[学習指導要領LODデータセット|https://w3id.org/jp-cos/]]の提供公開に対して受賞（→[[詳細|https://2021.lodc.jp/awardPressRelease2021.html]]）。
 :第18回情報知識学会論文賞（2021年5月）:『情報知識学会誌』30巻1号掲載の「DOIリンクに基づくWikipedia 上の参照記述における編集者の分析」（吉川次郎, 芳鐘冬樹 との共著）が受賞しました（→[[詳細|http://www.jsik.jp/?gakkaishi#award]]）
