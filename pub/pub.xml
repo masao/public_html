@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <publist>
   <pub type="misc">
+    <title>公開査読(OPR)を実施しているプラットフォームのWeb調査</title>
+    <author>井野詩織</author>
+    <author>高久雅生</author>
+    <conference>情報メディア学会（2023年度）第22回研究大会</conference>
+    <year>2023</year>
+    <month>7</month>
+    <page>
+      <start>25</start>
+      <end>26</end>
+    </page>
+    <language>ja</language>
+    <date>2023-07-15</date>
+  </pub>
+  <pub type="misc">
     <title>RDM人材育成作業部会の取り組み紹介</title>
     <author>高久雅生</author>
     <conference>NIIオープンフォーラム2023</conference>
