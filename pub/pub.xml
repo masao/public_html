@@ -1,5 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <publist>
+  <pub type="conference" refereed="true">
+    <title>Quantitative Analysis of Scholarly References on YouTube</title>
+    <subtitle>Focusing on their Research Fields and Contributors</subtitle>
+    <author>Jiro Kikkawa</author>
+    <author>Masao Takaku</author>
+    <author>Fuyuki Yoshikane</author>
+    <conference>ICADL 2023</conference>
+    <journal>Lecture Notes in Computer Science (LNCS)</journal>
+    <!--
+    <volume>13972</volume>
+    -->
+    <publisher>Springer</publisher>
+    <year>2023</year>
+    <month>12</month>
+    <city>Taipei, Taiwan</city>
+    <language>en</language>
+    <page>10</page>
+    <!--
+    <page>
+      <start>161</start>
+      <end>174</end>
+    </page>
+    -->
+    <date>2023-12-04</date>
+  </pub>
+  <pub type="conference" refereed="true">
+    <title>Enhancing Learning of Chinese Poem Creation through Auto-Generation and Evaluation System</title>
+    <author>Yan Cong</author>
+    <author>Masao Takaku</author>
+    <conference>ICADL 2023</conference>
+    <journal>Lecture Notes in Computer Science (LNCS)</journal>
+    <!--
+    <volume>13972</volume>
+    -->
+    <publisher>Springer</publisher>
+    <year>2023</year>
+    <month>12</month>
+    <city>Taipei, Taiwan</city>
+    <language>en</language>
+    <page>15</page>
+    <!--
+    <page>
+      <start>161</start>
+      <end>174</end>
+    </page>
+    -->
+    <date>2023-12-04</date>
+  </pub>
   <pub type="misc">
     <title>公開査読(OPR)を実施しているプラットフォームのWeb調査</title>
     <author>井野詩織</author>
@@ -72,13 +120,10 @@
     <month>3</month>
     <city>Barcelona, Spain</city>
     <language>en</language>
-    <page>14</page>
-    <!--
     <page>
-      <start>161</start>
-      <end>174</end>
+      <start>425</start>
+      <end>438</end>
     </page>
-    -->
     <date>2023-03-13</date>
     <doi>10.1007/978-3-031-28032-0_33</doi>
   </pub>
@@ -597,7 +642,7 @@
       <end>774</end>
     </page>
     <language>ja</language>
-    <url>http://id.nii.ac.jp/1004/00010768/</url>
+    <doi>10.11517/jjsai.35.6_766</doi>
   </pub>
   <pub type="misc">
     <title>討議報告 『分類を構成する要素の解釈の明確化 ―Linked Data化を想定して―』</title>
