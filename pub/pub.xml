@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <publist>
   <pub type="conference" refereed="true">
+    <title>Long-term Progress of DOI Links on Wikipedia: Comparative Analysis of English and Japanese Wikipedia from 2015 to 2023</title>
+    <author>Jiro Kikkawa</author>
+    <author>Masao Takaku</author>
+    <author>Fuyuki Yoshikane</author>
+    <conference>A-LIEP 2023</conference>
+    <year>2023</year>
+    <month>12</month>
+    <city>Taipei, Taiwan</city>
+    <language>en</language>
+    <page>16</page>
+    <!--
+    <page>
+      <start>161</start>
+      <end>174</end>
+    </page>
+    -->
+    <date>2023-12-04</date>
+  </pub>
+  <pub type="conference" refereed="true">
     <title>Quantitative Analysis of Scholarly References on YouTube</title>
     <subtitle>Focusing on their Research Fields and Contributors</subtitle>
     <author>Jiro Kikkawa</author>
@@ -8,9 +27,7 @@
     <author>Fuyuki Yoshikane</author>
     <conference>ICADL 2023</conference>
     <journal>Lecture Notes in Computer Science (LNCS)</journal>
-    <!--
-    <volume>13972</volume>
-    -->
+    <volume>14457</volume>
     <publisher>Springer</publisher>
     <year>2023</year>
     <month>12</month>
@@ -31,9 +48,7 @@
     <author>Masao Takaku</author>
     <conference>ICADL 2023</conference>
     <journal>Lecture Notes in Computer Science (LNCS)</journal>
-    <!--
-    <volume>13972</volume>
-    -->
+    <volume>14457</volume>
     <publisher>Springer</publisher>
     <year>2023</year>
     <month>12</month>
