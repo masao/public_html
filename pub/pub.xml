@@ -50,13 +50,11 @@
     <month>12</month>
     <city>Taipei, Taiwan</city>
     <language>en</language>
-    <page>10</page>
-    <!--
     <page>
-      <start>161</start>
-      <end>174</end>
+      <start>149</start>
+      <end>158</end>
     </page>
-    -->
+    <doi>10.1007/978-981-99-8085-7_13</doi>
     <date>2023-12-04</date>
   </pub>
   <pub type="conference" refereed="true">
@@ -71,14 +69,12 @@
     <month>12</month>
     <city>Taipei, Taiwan</city>
     <language>en</language>
-    <page>15</page>
-    <!--
     <page>
-      <start>161</start>
-      <end>174</end>
+      <start>3</start>
+      <end>17</end>
     </page>
-    -->
     <date>2023-12-04</date>
+    <doi>10.1007/978-981-99-8085-7_1</doi>
   </pub>
   <pub type="misc">
     <title>公開査読(OPR)を実施しているプラットフォームのWeb調査</title>
