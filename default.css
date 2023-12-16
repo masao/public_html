@@ -162,16 +162,18 @@
     text-decoration: underline;
   }
 
-  #publist .type {
+  #publist .type, #publist .year {
     padding: 1px;
     border: 1px solid gray;
     background-color: white;
+  }
+  #publist .type {
     color: #c33;
   }
   #publist .year {
-    padding: 1px;
-    border: 1px solid gray;
-    background-color: white;
+    color: #3c3;
+  }
+  #publist .refereed {
     color: #3c3;
   }
   #publist .bibdata { font-size: smaller; }

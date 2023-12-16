@@ -1,8 +1,8 @@
 <dt class="title"><a name="pubid<%= object_id %>" id="pubid<%= object_id %>"><span class="year"><%=h year %></span>
-<% if refereed %>
-<span class="refereed"><img src="refereed.png" alt="refereed" title="refereed"></span>
-<% end %>
 <span class="type"><%=h type %></span></a>
+<% if refereed %>
+<span class="refereed"><img src="refereed.png" alt="refereed" title="refereed">refereed</span>
+<% end %>
 <span class="title">
 <% if not file.nil? %>
 <a href="<%=h file %>">
