@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <publist>
   <pub type="misc">
+    <title>利用スタイルに適合した次期図書館システムの検討</title>
+    <author>高久雅生</author>
+    <conference>2023年度（令和5年度）研究開発室成果報告</conference>
+    <year>2024</year>
+    <month>3</month>
+    <city>つくば</city>
+    <language>ja</language>
+    <date>2024-03-07</date>
+    <url>https://www.tulips.tsukuba.ac.jp/lib/ja/information/20240221</url>
+  </pub>
+  <pub type="misc">
     <title>多様性リランキングにより栄養バランスを考慮したレシピ気分検索システムの評価</title>
     <author>三塚麟太郎</author>
     <author>高久雅生</author>
