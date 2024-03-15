@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <publist>
+  <pub type="journal">
+    <title>海外学術情報基盤が提供する機関向けダッシュボードの比較分析</title>
+    <author>池谷瑠絵</author>
+    <author>大波純一</author>
+    <author>金沢輝一</author>
+    <author>西岡千文</author>
+    <author>高久雅生</author>
+    <author>山地一禎</author>
+    <journal>情報知識学会誌</journal>
+    <volume>34</volume>
+    <number>1</number>
+    <year>2024</year>
+    <month>2</month>
+    <page>
+      <start>3</start>
+      <end>17</end>
+    </page>
+    <language>ja</language>
+    <date>2024-02-29</date>
+  </pub>
   <pub type="misc">
     <title>利用スタイルに適合した次期図書館システムの検討</title>
     <author>高久雅生</author>
