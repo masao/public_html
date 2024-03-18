@@ -126,6 +126,7 @@
       <start>25</start>
       <end>26</end>
     </page>
+    <city>都留</city>
     <language>ja</language>
     <date>2023-07-15</date>
     <url>https://www.jsims.jp/kenkyu-taikai/yokoku/jsims_2023_22nd_proceedings.pdf#page=29</url>
@@ -138,6 +139,7 @@
     <year>2023</year>
     <month>5</month>
     <date>2023-05-30</date>
+    <city>東京</city>
     <language>ja</language>
     <url>https://www.nii.ac.jp/openforum/2023/day2_rcos-lms.html</url>
   </pub>
@@ -159,6 +161,7 @@
       <start>254</start>
       <end>263</end>
     </page>
+    <city>金沢</city>
     <language>ja</language>
     <date>2023-05-20</date>
   </pub>
@@ -220,7 +223,7 @@
   </pub>
   <pub type="conference">
     <title>Prototype of evaluation system for Chinese poetry generation</title>
-    <author>Cong Yan</author>
+    <author>Yan Cong</author>
     <author>Masao Takaku</author>
     <conference>AP-iConference 2022</conference>
     <year>2022</year>
