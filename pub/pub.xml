@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <publist>
-  <pub type="journal" refereed="true">
-    <title>Data Model Development for the Evolution of Ancient Book Editions with Linked Open Data ― Shishuo Xinyu as an Example</title>
+  <pub type="misc">
+    <title>Data Model Development for the Evolution of Ancient Book Editions with Linked Open Data</title>
+    <subtitle>Shishuo Xinyu as an Example</subtitle>
     <author>Xiaoyan Ye</author>
     <author>Masao Takaku</author>
+    <conference>第31回情報知識学会年次大会</conference>
     <journal>情報知識学会誌</journal>
     <volume>34</volume>
     <number>2</number>
     <year>2024</year>
     <month>5</month>
+    <city>東京</city>
     <page>
       <start>163</start>
       <end>183</end>
