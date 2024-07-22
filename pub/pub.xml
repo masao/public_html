@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <publist>
   <pub type="misc">
+    <title>意見交換</title>
+    <author>高久雅生</author>
+    <conference>2024年度第1回JPCOAR Webinar 「機関リポジトリの利用実態に関するアンケート調査報告会」</conference>
+    <year>2024</year>
+    <month>7</month>
+    <language>ja</language>
+    <date>2024-07-02</date>
+    <url>https://jpcoar.repo.nii.ac.jp/monthly#webinar_20240711</url>
+  </pub>
+  <pub type="misc">
     <title>Data Model Development for the Evolution of Ancient Book Editions with Linked Open Data</title>
     <subtitle>Shishuo Xinyu as an Example</subtitle>
     <author>Xiaoyan Ye</author>
