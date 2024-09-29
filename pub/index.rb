@@ -204,7 +204,7 @@ class PubData
          key = "rft." + e[0].to_s
          val = e[1]
          if val
-            "#{key}=#{URI.escape( val )}"
+            "#{key}=#{URI.encode_www_form_component( val )}"
          else
             nil
          end
@@ -296,7 +296,7 @@ class PubApp
 
    def initialize( cgi, lang = "ja" )
       @cgi = cgi
-      @config = YAML.load( open( "config.yml") )
+      @config = YAML.safe_load( open( "config.yml"), permitted_classes: [ Regexp ] )
       @lang = lang
    end
 
