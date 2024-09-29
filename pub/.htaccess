@@ -1,2 +1,2 @@
-AddHandler cgi-script .rb
-DirectoryIndex index.rb
+AddHandler cgi-script .rb .cgi
+DirectoryIndex index.cgi
