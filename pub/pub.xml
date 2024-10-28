@@ -1,5 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <publist>
+  <pub type="misc">
+    <title>学習指導案に学習指導要領コードを付与する効果と課題</title>
+    <author>榎本聡</author>
+    <author>大井将生</author>
+    <author>高久雅生</author>
+    <author>阿児雄之</author>
+    <author>有山裕美子</author>
+    <author>江草由佳</author>
+    <conference>第50回全日本教育工学研究協議会全国大会</conference>
+    <year>2024</year>
+    <month>10</month>
+    <page>4</page>
+    <articleno>3-L-2</articleno>
+    <language>ja</language>
+    <date>2024-10-26</date>
+    <url>https://smartconf.jp/content/jaet2024/</url>
+  </pub>
+  <pub type="misc">
+    <title>教科書に掲載されている図版のウェブコンテンツ所在調査</title>
+    <subtitle>小学校6年生社会科を対象にして</subtitle>
+    <author>阿児雄之</author>
+    <author>榎本聡</author>
+    <author>大井将生</author>
+    <author>有山裕美子</author>
+    <author>江草由佳</author>
+    <author>高久雅生</author>
+    <conference>第50回全日本教育工学研究協議会全国大会</conference>
+    <year>2024</year>
+    <month>10</month>
+    <page>4</page>
+    <articleno>3-F-3</articleno>
+    <language>ja</language>
+    <date>2024-10-26</date>
+    <url>https://smartconf.jp/content/jaet2024/</url>
+  </pub>
   <pub type="conference" refereed="true">
     <title>Enhancing Identification of Scholarly Reference on YouTube</title>
     <subtitle>Method Development and Analysis of External Link Characteristics</subtitle>
