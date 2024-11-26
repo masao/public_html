@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <publist>
   <pub type="misc">
+    <title>Knowledge Representation of Educational Metadata in Linked Open Data: Promoting the Educational Use of Digital Cultural Heritage</title>
+    <author>Masao Takaku</author>
+    <author>Yuka Egusa</author>
+    <author>Satoshi Enomoto</author>
+    <author>Masao Oi</author>
+    <author>Yumiko Ariyama</author>
+    <author>Takayuki Ako</author>
+    <conference>2024 Rich Semantics Workshop</conference>
+    <year>2024</year>
+    <month>12</month>
+    <page>1</page>
+    <city>Kuala Lumpur, Malaysia</city>
+    <language>en</language>
+    <date>2024-12-06</date>
+    <url>https://richsemantics.org/</url>
+  </pub>
+  <pub type="misc">
     <title>浮世絵の主題内容に着目したメタデータ構造化の試み</title>
     <author>小池珠恵</author>
     <author>高久雅生</author>
@@ -8,6 +25,7 @@
     <year>2024</year>
     <month>12</month>
     <page>1</page>
+    <city>東京都八王子市</city>
     <language>ja</language>
     <date>2024-12-01</date>
     <url>http://jads.org/news/2024/20241201.html</url>
@@ -21,6 +39,7 @@
     <author>有山裕美子</author>
     <author>江草由佳</author>
     <conference>第50回全日本教育工学研究協議会全国大会</conference>
+    <city>東京都港区</city>
     <year>2024</year>
     <month>10</month>
     <page>4</page>
@@ -39,6 +58,7 @@
     <author>江草由佳</author>
     <author>高久雅生</author>
     <conference>第50回全日本教育工学研究協議会全国大会</conference>
+    <city>東京都港区</city>
     <year>2024</year>
     <month>10</month>
     <page>4</page>
@@ -1544,7 +1564,6 @@
     <url>http://sekaishisosha.jp/book/b353650.html</url>
     <url>https://www.amazon.co.jp/exec/obidos/ASIN/4790716953/masaotakakush-22</url>
   </pub>
-
   <pub type="misc">
     <title>教科書LOD</title>
     <author>江草由佳</author>
