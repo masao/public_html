@@ -24,7 +24,10 @@
     <conference>2024年度アート・ドキュメンテーション学会第17回秋季研究集会</conference>
     <year>2024</year>
     <month>12</month>
-    <page>1</page>
+    <page>
+      <start>5</start>
+      <end>5</end>
+    </page>
     <city>東京都八王子市</city>
     <language>ja</language>
     <date>2024-12-01</date>
