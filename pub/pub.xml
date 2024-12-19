@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <publist>
+  <pub type="journal" refereed="true">
+    <title>オープンサイエンスを背景とした機関向け指標への国内ニーズ分析</title>
+    <subtitle>国内機関の図書館員とURAを対象として</subtitle>
+    <author>池谷瑠絵</author>
+    <author>高久雅生</author>
+    <author>山地一禎</author>
+    <journal>情報知識学会誌</journal>
+    <volume>35</volume>
+    <number>1</number>
+    <year>2025</year>
+    <month>2</month>
+    <page>15</page>
+    <language>ja</language>
+    <date>2025-02-29</date>
+    <doi>10.2964/jsik_2024_025</doi>
+  </pub>
   <pub type="misc">
     <title>Knowledge Representation of Educational Metadata in Linked Open Data: Promoting the Educational Use of Digital Cultural Heritage</title>
     <author>Masao Takaku</author>
