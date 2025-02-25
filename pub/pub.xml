@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <publist>
   <pub type="misc">
+    <title>利用スタイルに適合した次期図書館システムの検討</title>
+    <author>高久雅生</author>
+    <conference>2024年度（令和6年度）研究開発室成果報告</conference>
+    <year>2024</year>
+    <month>2</month>
+    <city>つくば</city>
+    <language>ja</language>
+    <date>2025-02-14</date>
+    <url>https://www.tulips.tsukuba.ac.jp/lib/ja/information/20250207</url>
+  </pub>
+  <pub type="misc">
+    <title>観光口コミサイトにおける穴場スポットの抽出手法の提案</title>
+    <author>Lyu Yuetong</author>
+    <author>高久雅生</author>
+    <conference>第17回データ工学と情報マネジメントに関するフォーラム (DEIM 2024)</conference>
+    <year>2025</year>
+    <month>2</month>
+    <city>福岡</city>
+    <language>ja</language>
+    <date>2025-02-27</date>
+    <page>10</page>
+    <articleno>1J-01</articleno>
+    <url>https://pub.confit.atlas.jp/ja/event/deim2025/presentation/1J-01</url>
+  </pub>
+  <pub type="misc">
     <title>Linked Dataデータセットを基盤とする研究入門</title>
     <author>高久雅生</author>
     <conference>附属駒場高等学校2年生筑波大学研究室訪問</conference>
