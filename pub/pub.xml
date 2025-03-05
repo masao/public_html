@@ -74,7 +74,10 @@
     <number>1</number>
     <year>2025</year>
     <month>2</month>
-    <page>15</page>
+    <page>
+      <start>3</start>
+      <end>17</end>
+    </page>
     <language>ja</language>
     <date>2025-02-28</date>
     <doi>10.2964/jsik_2024_025</doi>
