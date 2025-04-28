@@ -3093,6 +3093,7 @@
     <page>6</page>
     <file>./2010/IPSJ-IFAT10099014.pdf</file>
     <slides>./2010/ifat99-fuwatto-slides.pdf</slides>
+    <url>https://ipsj.ixsq.nii.ac.jp/records/70117</url>
   </pub>
 
   <pub refereed="true" type="conference">
@@ -3657,6 +3658,7 @@
     <language>ja</language>
     <date>2009-07-14</date>
     <url>https://www.jstage.jst.go.jp/article/fss/25/0/25_0_140/_article/-char/ja/</url>
+    <doi>10.14864/fss.25.0.140.0</doi>
   </pub>
 
   <pub type="conference">
@@ -4116,6 +4118,7 @@
     <language>ja</language>
     <file>./2008/ipsj-academic-linkage.pdf</file>
     <date>2008-08-15</date>
+    <url>https://ipsj.ixsq.nii.ac.jp/records/61031</url>
   </pub>
 
   <pub type="misc">
@@ -4571,6 +4574,7 @@
     </page>
     <slides>./2005/jsikforum-slides.pdf</slides>
     <language>ja</language>
+    <doi>10.2964/jsik_KJ00003803605</doi>
   </pub>
 
   <pub type="conference">
