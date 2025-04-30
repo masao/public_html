@@ -1131,6 +1131,7 @@
     <month>2</month>
     <date>2020-02-14</date>
     <slides>https://speakerdeck.com/masao/information-organization-in-the-web-age</slides>
+    <language>en</language>
   </pub>
   <pub type="journal" refereed="true">
     <title>DOIリンクに基づくWikipedia 上の参照記述における編集者の分析</title>
@@ -1282,6 +1283,7 @@
     <year>2019</year>
     <month>9</month>
     <slides>https://speakerdeck.com/masao/information-technology-in-library</slides>
+    <language>ja</language>
   </pub>
   <pub type="conference" refereed="true">
     <title>A Case Study of Japanese Textbook Linked Open Data: Publishing a Small Bibliographic Collection from a Special Library</title>
@@ -2239,6 +2241,7 @@
     <year>2015</year>
     <month>3</month>
     <url>http://www.infosta.or.jp/seminars/semi150316/</url>
+    <language>ja</language>
   </pub>
   <pub type="misc">
     <title>Wikipediaとは? Wikipediaに投稿する方法?</title>
@@ -2661,6 +2664,7 @@
     <conference>情報処理学会 第97回人文科学とコンピュータ研究会</conference>
     <year>2013</year>
     <month>1</month>
+    <language>ja</language>
     <city>東京</city>
     <page>6</page>
     <date>2013-01-25</date>
@@ -2678,9 +2682,9 @@
     <month>11</month>
     <city>横浜</city>
     <date>2012-11-20</date>
+    <language>ja</language>
     <note>（ポスターセッション発表）</note>
   </pub>
-
   <pub type="misc">
     <title>東日本大震災発災期のツイッターにおける地域発信情報の分析の試み</title>
     <author>高久雅生</author>
@@ -2690,6 +2694,7 @@
     <month>11</month>
     <city>福山</city>
     <date>2012-11-10</date>
+    <language>ja</language>
     <page>
       <start>81</start>
       <end>84</end>
@@ -2706,6 +2711,7 @@
     <year>2012</year>
     <month>10</month>
     <city>東京</city>
+    <language>ja</language>
     <date>2012-10-28</date>
     <slides>http://www.slideshare.net/tmasao/ss-14915945</slides>
   </pub>
@@ -2717,6 +2723,7 @@
     <year>2012</year>
     <month>10</month>
     <city>松江</city>
+    <language>ja</language>
     <date>2012-10-27</date>
     <slides>http://www.slideshare.net/tmasao/nextl-enju-14907921</slides>
   </pub>
@@ -2735,6 +2742,7 @@
       <start>400</start>
       <end>401</end>
     </page>
+    <language>ja</language>
     <doi>10.18919/jkg.62.9_400_2</doi>
   </pub>
 
@@ -2750,6 +2758,7 @@
     <city>東京</city>
     <date>2012-09-25</date>
     <page>6</page>
+    <language>ja</language>
     <url>http://id.nii.ac.jp/1001/00085749/</url>
     <slides>http://www.slideshare.net/tmasao/20120925-savemlakifat108</slides>
   </pub>
@@ -2811,6 +2820,7 @@
     <date>2012-01-06</date>
     <url>http://www.code4lib.jp/2011/12/733/</url>
     <note>（招待講演）</note>
+    <language>ja</language>
   </pub>
 
   <pub type="misc">
@@ -2822,6 +2832,7 @@
     <month>12</month>
     <city>横浜</city>
     <date>2011-12-16</date>
+    <language>ja</language>
     <url>http://taurus.c.u-tokyo.ac.jp/SigIC/</url>
     <note>（招待講演）</note>
     <slides>./2011/sigic-cres.pdf</slides>
@@ -2837,6 +2848,7 @@
     <month>10</month>
     <city>Berlin, Germany</city>
     <date>2011-10-26</date>
+    <language>en</language>
     <url>https://www.escidoc.org/JSPWiki/en/ESciDocDays2011Program</url>
     <slides>https://www.escidoc.org/pdf/escidoc-days-2011/day1-takaku-samurai.pdf</slides>
   </pub>
@@ -2856,6 +2868,7 @@
     <city>福岡</city>
     <date>2011-11-22</date>
     <page>7</page>
+    <language>ja</language>
     <url>http://id.nii.ac.jp/1001/00078502</url>
     <slides>http://www.slideshare.net/yegusa/20111122-104ifat</slides>
   </pub>
@@ -2868,6 +2881,7 @@
     <year>2011</year>
     <month>10</month>
     <date>2011-10-13</date>
+    <language>ja</language>
     <url>http://pubman.nims.go.jp/pubman/item/escidoc:1164613</url>
     <slides>http://pubman.nims.go.jp/pubman/item/escidoc:1164613/component/escidoc:1164610/NIMSeSciDocWorkShop_Takaku_Summary2011Oct.pdf</slides>
     <slides>http://pubman.nims.go.jp/pubman/item/escidoc:1164613/component/escidoc:1164611/NIMSeSciDocWorkShop_Takaku_Summary2011Oct-en.pdf</slides>
@@ -2900,6 +2914,7 @@
     <year>2011</year>
     <month>11</month>
     <date>2011-11-11</date>
+    <language>ja</language>
     <url>http://2011.libraryfair.jp/node/169</url>
     <slides>http://www.slideshare.net/tmasao/nextl-enju</slides>
   </pub>
@@ -2913,6 +2928,7 @@
     <month>9</month>
     <city>東京</city>
     <date>2011-09-19</date>
+    <language>ja</language>
     <url>http://savemlak.jp/wiki/saveMLAK:Event/20110919</url>
     <slides>http://savemlak.jp/wiki/File:20110919-saveMLAK-wikidata.pptx</slides>
     <slides>http://www.slideshare.net/tmasao/savemlak</slides>
@@ -3996,6 +4012,7 @@
     <author>Makiko Miwa</author>
     <title>Visualization of User Eye Movements for Search Result Pages</title>
     <journal>Proceedings of the Second International Workshop on Evaluating Information Access (EVIA 2008) (Satellite Workshop of NTCIR-7)</journal>
+    <conference>The 7th NTCIR Workshop Meeting</conference>
     <year>2008</year>
     <month>12</month>
     <city>Tokyo, Japan</city>
@@ -4066,6 +4083,7 @@
       <start>1509</start>
       <end>1513</end>
     </page>
+    <language>en</language>
     <file>./2008/iasc2008_proceedings.pdf</file>
     <abstract>./2008/iasc2008_abstract.pdf</abstract>
     <slides>./2008/iasc2008-slides.pdf</slides>
@@ -4119,6 +4137,7 @@
       <start>69</start>
       <end>74</end>
     </page>
+    <language>ja</language>
     <url>https://www.jstage.jst.go.jp/article/infopro/2008/0/2008_0_69/_article/-char/ja/</url>
     <date>2008-11-13</date>
   </pub>
@@ -4134,6 +4153,7 @@
     <year>2008</year>
     <month>10</month>
     <journal>Proceedings of the Second International Symposium on Information Interaction in Context (IIiX 2008)</journal>
+    <conference>IIiX 2008</conference>
     <city>UK, London</city>
     <page>
       <start>152</start>
@@ -4307,7 +4327,7 @@
     <date>2008-01-28</date>
   </pub>
 
-  <pub refereed="true" type="conference">
+  <pub type="conference">
     <author>相澤彰子</author>
     <author>大山敬三</author>
     <author>高久雅生</author>
@@ -4393,6 +4413,7 @@
     <author>Hitoshi Terai</author>
     <title>Comparing System Evaluation with User Experiments for Japanese Web Navigational Retrieval</title>
     <journal>Proceedings of the First Workshop on Web Information-Seeking and Interaction (WISI 2007) (SIGIR 2007 Workshop)</journal>
+    <conference>WISI 2007</conference>
     <year>2007</year>
     <month>7</month>
     <city>Amsterdam, Netherland</city>
@@ -4454,7 +4475,7 @@
     <author>Hitoshi Terai</author>
     <title>An Application of the NTCIR-WEB Raw-data Archive Dataset for User Experiments</title>
     <journal>Proceedings of the First International Workshop on Evaluating Information Access (EVIA 2007) (NTCIR-6 Pre-Meeting Workshop)</journal>
-<!--    <conference>The First International Workshop on Evaluating Information Access (EVIA 2007)</conference> -->
+    <conference>EVIA 2007</conference>
     <year>2007</year>
     <month>5</month>
     <city>Tokyo, Japan</city>
@@ -4654,6 +4675,7 @@
     <author>Hayato Yamana</author>
     <title>Overview of the NTCIR-5 WEB Navigational Retrieval Subtask 2 (Navi-2)</title>
     <journal>Proceedings of the Fifth NTCIR Workshop Meeting on Evaluation of Information Access Technologies: Information Retrieval, Question Answering and Cross-Lingual Information Access</journal>
+    <conference>The 5th NTCIR Workshop Meeting</conference>
     <publisher>National Institute of Informatics</publisher>
     <city>Tokyo, Japan</city>
     <year>2005</year>
@@ -4745,6 +4767,7 @@
     <author>Hidehiro Ishizuka</author>
     <title>Network Community Oriented Information Sharing System for Databases</title>
     <journal>International Symposium on Digital Libraries and Knowledge Communities in Networked Information Society 2004 (DLKC'04)</journal>
+    <conference>DLKC 2004</conference>
     <year>2004</year>
     <month>3</month>
     <city>Tsukuba, Japan</city>
