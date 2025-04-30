@@ -158,7 +158,7 @@
     <url>https://2024.lodc.jp/</url>
     <slides>https://speakerdeck.com/masao/turtle-to-html-0655068d-a12b-46a7-aad8-774e8775e85b</slides>
   </pub>
-  <pub type="journal" refereed="true">
+  <pub type="journal" refereed="true" reviewType="full">
     <title>オープンサイエンスを背景とした機関向け指標への国内ニーズ分析</title>
     <subtitle>国内機関の図書館員とURAを対象として</subtitle>
     <author>池谷瑠絵</author>
@@ -249,7 +249,7 @@
     <url>https://smartconf.jp/content/jaet2024/</url>
     <slides>https://researchmap.jp/ta_niiyan/presentations/48293702</slides>
   </pub>
-  <pub type="conference" refereed="true">
+  <pub type="conference" refereed="true" reviewType="full">
     <title>Enhancing Identification of Scholarly Reference on YouTube</title>
     <subtitle>Method Development and Analysis of External Link Characteristics</subtitle>
     <author>Jiro Kikkawa</author>
@@ -301,7 +301,7 @@
     <date>2024-05-25</date>
     <doi>10.2964/jsik_2024_013</doi>
   </pub>
-  <pub type="journal" refereed="true">
+  <pub type="journal" refereed="true" reviewType="full">
     <title>海外学術情報基盤が提供する機関向けダッシュボードの比較分析</title>
     <author>池谷瑠絵</author>
     <author>大波純一</author>
@@ -364,7 +364,7 @@
     <date>2023-10-27</date>
     <url>https://conv.jaet.jp/2023/</url>
   </pub>
-  <pub type="conference" refereed="true">
+  <pub type="conference" refereed="true" reviewType="full">
     <title>Long-term Progress of DOI Links on Wikipedia: Comparative Analysis of English and Japanese Wikipedia from 2015 to 2023</title>
     <author>Jiro Kikkawa</author>
     <author>Masao Takaku</author>
@@ -378,7 +378,7 @@
     <date>2023-12-04</date>
     <url>https://a-liep.org/wp-content/uploads/2023/12/2023-A-LIEP-Proceedings.pdf#page=43</url>
   </pub>
-  <pub type="conference" refereed="true">
+  <pub type="conference" refereed="true" reviewType="full">
     <title>Quantitative Analysis of Scholarly References on YouTube</title>
     <subtitle>Focusing on their Research Fields and Contributors</subtitle>
     <author>Jiro Kikkawa</author>
@@ -399,7 +399,7 @@
     <doi>10.1007/978-981-99-8085-7_13</doi>
     <date>2023-12-04</date>
   </pub>
-  <pub type="conference" refereed="true">
+  <pub type="conference" refereed="true" reviewType="full">
     <title>Enhancing Learning of Chinese Poem Creation through Auto-Generation and Evaluation System</title>
     <author>Yan Cong</author>
     <author>Masao Takaku</author>
@@ -480,7 +480,7 @@
     <date>2023-03-10</date>
     <url>https://www.tulips.tsukuba.ac.jp/lib/ja/information/20230306</url>
   </pub>
-  <pub type="conference" refereed="true">
+  <pub type="conference" refereed="true" reviewType="full">
     <title>Time Lag Analysis of Adding Scholarly References to English Wikipedia</title>
     <subtitle>How Rapidly Are They Added to and How Fresh Are They?</subtitle>
     <author>Jiro Kikkawa</author>
@@ -568,7 +568,7 @@
     <date>2022-08-30</date>
     <url>https://confit.atlas.jp/guide/event/rman8th2022/subject/1E_poster01-50-20/advanced</url>
   </pub>
-  <pub type="conference" refereed="true">
+  <pub type="conference" refereed="true" reviewType="full">
     <title>Analysis of the deletions of DOIs</title>
     <subtitle>What factors undermine their persistence and to what extent?</subtitle>
     <author>Jiro Kikkawa</author>
@@ -745,7 +745,7 @@
     <date>2022-02-28</date>
     <file>https://proceedings-of-deim.github.io/DEIM2022/papers/F23-2.pdf</file>
   </pub>
-  <pub type="journal" refereed="true">
+  <pub type="journal" refereed="true" reviewType="full">
     <title>Dataset of first appearances of the scholarly bibliographic references on Wikipedia articles</title>
     <author>Jiro Kikkawa</author>
     <author>Masao Takaku</author>
@@ -764,7 +764,7 @@
       <doi>10.5281/zenodo.5776203</doi>
     </dataset>
   </pub>
-  <pub type="journal" refereed="true">
+  <pub type="journal" refereed="true" reviewType="full">
     <title>漢詩の構造化に関する研究</title>
     <subtitle>唐詩作品を中心に</subtitle>
     <author>叢艶</author>
@@ -911,7 +911,7 @@
     <poster>https://www.tulips.tsukuba.ac.jp/lib/sites/default/files/attach/rdo2020poster_proj7.pdf</poster>
     <url>https://www.tulips.tsukuba.ac.jp/lib/sites/default/files/attach/rdo2020poster_proj7.mp4</url>
   </pub>
-  <pub type="conference" refereed="true">
+  <pub type="conference" refereed="true" reviewType="full">
     <title>Aggregation and Utilization of Metadata for Intangible Folk Cultural Properties Using Linked Open Data</title>
     <author>Itsumi Sato</author>
     <author>Masao Takaku</author>
@@ -964,7 +964,7 @@
       <doi>10.6084/m9.figshare.13632950</doi>
     </dataset>
   </pub>
-  <pub type="misc" refereed="true">
+  <pub type="misc" refereed="true" reviewType="abstract">
     <title>Linked Open Dataを用いた年中行事・祭礼情報の構造化とその利活用</title>
     <author>佐藤いつみ</author>
     <author>高久雅生</author>
@@ -979,7 +979,7 @@
     </page>
     <url>http://id.nii.ac.jp/1001/00208583/</url>
   </pub>
-  <pub type="journal" refereed="true">
+  <pub type="journal" refereed="true" reviewType="full">
     <title>Wikipedia上の学術文献の参照記述の追加に関する時系列分析</title>
     <author>吉川次郎</author>
     <author>高久雅生</author>
@@ -1041,7 +1041,7 @@
     <language>ja</language>
     <slides>https://speakerdeck.com/masao/ifla-lrm-4-dot-1-3</slides>
   </pub>
-  <pub type="journal" refereed="true">
+  <pub type="journal" refereed="true" reviewType="full">
     <title>Wikipediaに学術文献の参照記述を追加する編集の特定手法</title>
     <author>吉川次郎</author>
     <author>高久雅生</author>
@@ -1133,7 +1133,7 @@
     <slides>https://speakerdeck.com/masao/information-organization-in-the-web-age</slides>
     <language>en</language>
   </pub>
-  <pub type="journal" refereed="true">
+  <pub type="journal" refereed="true" reviewType="full">
     <title>DOIリンクに基づくWikipedia 上の参照記述における編集者の分析</title>
     <author>吉川次郎</author>
     <author>高久雅生</author>
@@ -1229,7 +1229,7 @@
       <end>26</end>
     </page>
   </pub>
-  <pub type="misc" refereed="true">
+  <pub type="misc" refereed="true" reviewType="abstract">
     <title>唐詩の構造化に関する研究</title>
     <subtitle>テキストの差異提示機能の検討</subtitle>
     <author>叢艶</author>
@@ -1246,7 +1246,7 @@
     </page>
     <url>http://id.nii.ac.jp/1001/00201012/</url>
   </pub>
-  <pub type="misc" refereed="true">
+  <pub type="misc" refereed="true" reviewType="abstract">
     <title>Linked Dataによる無形民俗文化財情報の構造化の試み</title>
     <author>佐藤いつみ</author>
     <author>高久雅生</author>
@@ -1285,7 +1285,7 @@
     <slides>https://speakerdeck.com/masao/information-technology-in-library</slides>
     <language>ja</language>
   </pub>
-  <pub type="conference" refereed="true">
+  <pub type="conference" refereed="true" reviewType="full">
     <title>A Case Study of Japanese Textbook Linked Open Data: Publishing a Small Bibliographic Collection from a Special Library</title>
     <author>Yuka Egusa</author>
     <author>Masao Takaku</author>
@@ -1488,7 +1488,7 @@
     <language>en</language>
     <note>Lightning Talk at East Asian and Japanese SIG Session</note>
   </pub>
-  <pub type="conference" refereed="true">
+  <pub type="conference" refereed="true" reviewType="abstract">
     <title>A TEI Markup for the Contents of Tang Poems</title>
     <author>Yan Cong</author>
     <author>Masao Takaku</author>
@@ -1674,7 +1674,7 @@
     <date>2017-09-02</date>
     <slides>https://www.slideshare.net/tmasao/20170903-code4-liblttasks</slides>
   </pub>
-  <pub type="conference" refereed="true">
+  <pub type="conference" refereed="true" reviewType="abstract">
     <title>Prototype of Linked Open Data Model for Tang Poems</title>
     <author>Yan Cong</author>
     <author>Masao Takaku</author>
@@ -1874,7 +1874,7 @@
     <date>2016-12-02</date>
     <url>http://www.sigwi2.org/wp-content/uploads/2017/12/WI2-2016-17.pdf</url>
   </pub>
-  <pub type="conference" refereed="true">
+  <pub type="conference" refereed="true" reviewType="full">
     <title>DOI Links on Wikipedia</title>
     <subtitle>Analyses of English, Japanese, and Chinese Wikipedias</subtitle>
     <author>Jiro Kikkawa</author>
@@ -1896,7 +1896,7 @@
     <doi>10.1007/978-3-319-49304-6_40</doi>
     <url>http://hdl.handle.net/2241/00144576</url>
   </pub>
-  <pub type="journal" refereed="true">
+  <pub type="journal" refereed="true" reviewType="full">
     <title>FRSADとLinked Dataに基づく主題情報共有システム</title>
     <author>田辺浩介</author>
     <author>江草由佳</author>
@@ -2273,7 +2273,7 @@
     </page>
     <file>http://www.sigwi2.org/wp-content/uploads/2016/02/WI2-2014-38.pdf</file>
   </pub>
-  <pub type="journal" refereed="true">
+  <pub type="journal" refereed="true" reviewType="full">
     <title>疎結合構成によるFRBRモデルに基づく書誌情報システム</title>
     <author>田辺浩介</author>
     <author>常川真央</author>
@@ -2306,7 +2306,7 @@
     <slides>http://www.slideshare.net/tmasao/helping-memory-institutions-in-the-networked-information-society</slides>
   </pub>
 
-  <pub type="conference" refereed="true">
+  <pub type="conference" refereed="true" reviewType="full">
     <title>Simple Document-by-Document Search Tool &#x201c;Fuwatto Search&#x201d; using Web API</title>
     <author>Masao Takaku</author>
     <author>Yuka Egusa</author>
@@ -2339,7 +2339,7 @@
     <url>http://www.nii.ac.jp/hrd/ja/ciws/h26/curritxt.html</url>
   </pub>
 
-  <pub type="conference" refereed="true">
+  <pub type="conference" refereed="true" reviewType="workshop">
     <title>How to Evaluate Searching as Learning</title>
     <author>Yuka Egusa</author>
     <author>Masao Takaku</author>
@@ -2356,7 +2356,7 @@
     </page>
     <url>http://www.diigubc.ca/IIIXSAL/Papers/Egusaetal.pdf</url>
   </pub>
-  <pub type="conference" refereed="true">
+  <pub type="conference" refereed="true" reviewType="full">
     <title>How Concept Maps Change if a User Does Search or Not?</title>
     <author>Yuka Egusa</author>
     <author>Masao Takaku</author>
@@ -2476,7 +2476,7 @@
     <url>http://www.soumu.go.jp/menu_news/s-news/01ryutsu02_02001000.html</url>
   </pub>
 
-  <pub type="journal" refereed="true">
+  <pub type="journal" refereed="true" reviewType="full">
     <title>Researcher Name Resolver</title>
     <subtitle>Identifier management system for Japanese researchers</subtitle>
     <author>Kei Kurakawa</author>
@@ -2608,7 +2608,7 @@
     <doi>10.2964/jsik.23_219</doi>
   </pub>
 
-  <pub type="conference" refereed="true">
+  <pub type="conference" refereed="true" reviewType="full">
     <title>Using Concept Map to Evaluate Learning by Searching</title>
     <author>Hitomi Saito</author>
     <author>Yuka Egusa</author>
@@ -2888,7 +2888,7 @@
     <url>http://www.nims.go.jp/publicity/events/hdfqf10000006hoy.html</url>
   </pub>
 
-  <pub type="journal" refereed="true">
+  <pub type="journal" refereed="true" reviewType="full">
     <title>A method to capture information encountering embedded in exploratory Web searches</title>
     <author>Makiko Miwa</author>
     <author>Yuka Egusa</author>
@@ -3141,7 +3141,7 @@
     <note>(Notebook Paper)</note>
   </pub>
   
-  <pub refereed="true" type="conference">
+  <pub refereed="true" type="conference" reviewType="full">
     <author>Hitomi Saito</author>
     <author>Masao Takaku</author>
     <author>Yuka Egusa</author>
@@ -3181,7 +3181,7 @@
     <url>https://ipsj.ixsq.nii.ac.jp/records/70117</url>
   </pub>
 
-  <pub refereed="true" type="conference">
+  <pub refereed="true" type="conference" reviewType="full">
     <author>Yuka Egusa</author>
     <author>Hitomi Saito</author>
     <author>Masao Takaku</author>
@@ -3245,7 +3245,7 @@
     <slides>http://www.slideshare.net/tmasao/ss-4482056</slides>
   </pub>
 
-  <pub refereed="true" type="journal">
+  <pub refereed="true" type="journal" reviewType="full">
     <title>タスク種別とユーザ特性の違いがWeb情報探索行動に与える影響</title>
     <subtitle>眼球運動データおよび閲覧行動ログを用いた分析</subtitle>
     <author>高久雅生</author>
@@ -3283,7 +3283,7 @@
     <url>http://archive.mag2.com/0000005669/20100510100948000.html</url>
   </pub>
   
-  <pub refereed="true" type="conference">
+  <pub refereed="true" type="conference" reviewType="abstract">
     <author>Kei Kurakawa</author>
     <author>Hideaki Takeda</author>
     <author>Akiko Aizawa</author>
@@ -3363,7 +3363,7 @@
     <note>(Presented at Lightning Talks session)</note>
   </pub>
 
-  <pub type="conference" refereed="true">
+  <pub type="conference" refereed="true" reviewType="full">
     <author>Yuka Egusa</author>
     <author>Hitomi Saito</author>
     <author>Masao Takaku</author>
@@ -3682,7 +3682,7 @@
     <url>http://hdl.handle.net/10424/2816</url>
   </pub>
 
-  <pub type="conference" refereed="true">
+  <pub type="conference" refereed="true" reviewType="workshop">
     <author>Hitomi Saito</author>
     <author>Hitoshi Terai</author>
     <author>Yuka Egusa</author>
@@ -3861,7 +3861,7 @@
     <date>2009-05-16</date>
   </pub>
 
-  <pub refereed="true" type="conference">
+  <pub refereed="true" type="conference" reviewType="abstract">
     <author>Kei Kurakawa</author>
     <author>Hideaki Takeda</author>
     <author>Masao Takaku</author>
@@ -3964,7 +3964,7 @@
     <url>http://db-event.jpn.org/deim2009/proceedings/files/B8-4.pdf</url>
   </pub>
 
-  <pub refereed="true" type="journal">
+  <pub refereed="true" type="journal" reviewType="full">
     <author>Akiko Aizawa</author>
     <author>Atsuhiro Takasu</author>
     <author>Daiji Fukagawa</author>
@@ -4003,7 +4003,7 @@
     <date>2008-12-08</date>
   </pub>
 
-  <pub refereed="true" type="conference">
+  <pub refereed="true" type="conference" reviewType="workshop">
     <author>Yuka Egusa</author>
     <author>Masao Takaku</author>
     <author>Hitomi Saito</author>
@@ -4142,7 +4142,7 @@
     <date>2008-11-13</date>
   </pub>
 
-  <pub refereed="true" type="conference">
+  <pub refereed="true" type="conference" reviewType="full">
     <author>Hitoshi Terai</author>
     <author>Hitomi Saito</author>
     <author>Masao Takaku</author>
@@ -4165,7 +4165,7 @@
     <url>http://dl.acm.org/authorize?N87894</url>
   </pub>
 
-  <pub refereed="true" type="misc">
+  <pub refereed="true" type="misc" reviewType="abstract">
     <author>齋藤ひとみ</author>
     <author>寺井仁</author>
     <author>高久雅生</author>
@@ -4251,7 +4251,7 @@
     <date>2008-05-24</date>
   </pub>
 
-  <pub refereed="true" type="journal">
+  <pub refereed="true" type="journal" reviewType="full">
     <author>相澤彰子</author>
     <author>高久雅生</author>
     <author>大山敬三</author>
@@ -4372,7 +4372,7 @@
     <poster>./2007/tric-wakate.pdf</poster>
   </pub>
 
-  <pub refereed="true" type="misc">
+  <pub refereed="true" type="misc" reviewType="abstract">
     <author>齋藤ひとみ</author>
     <author>寺井仁</author>
     <author>高久雅生</author>
@@ -4406,7 +4406,7 @@
     <note>（招待講演）</note>
   </pub>
 
-  <pub refereed="true" type="conference">
+  <pub refereed="true" type="conference" reviewType="workshop">
     <author>Masao Takaku</author>
     <author>Yuka Egusa</author>
     <author>Hitomi Saito</author>
@@ -4571,7 +4571,7 @@
     <language>ja</language>
   </pub>
 
-  <pub refereed="true" type="conference">
+  <pub refereed="true" type="conference" reviewType="full">
     <author>Masao Takaku</author>
     <author>Keizo Oyama</author>
     <author>Akiko Aizawa</author>
@@ -4722,7 +4722,7 @@
     <poster>http://www.nii.ac.jp/openhouse/h17/archive/pdf/606.pdf</poster>
   </pub>
 
-  <pub refereed="true" type="journal">
+  <pub refereed="true" type="journal" reviewType="full">
     <author>高久雅生</author>
     <author>江草由佳</author>
     <author>石塚英弘</author>
@@ -4741,7 +4741,7 @@
     <url>http://ci.nii.ac.jp/naid/110003320769</url>
   </pub>
 
-  <pub refereed="true" type="journal">
+  <pub refereed="true" type="journal" reviewType="full">
     <author>江草由佳</author>
     <author>高久雅生</author>
     <author>石塚英弘</author>
@@ -4760,7 +4760,7 @@
     <url>http://ci.nii.ac.jp/naid/110003320787</url>
   </pub>
 
-  <pub refereed="true" type="conference">
+  <pub refereed="true" type="conference" reviewType="full">
     <language>en</language>
     <author>Yuka Egusa</author>
     <author>Masao Takaku</author>
@@ -4778,7 +4778,7 @@
     <url>http://www.kc.tsukuba.ac.jp/dlkc/e-proceedings/papers/dlkc04pp64.pdf</url>
   </pub>
 
-  <pub refereed="true" type="journal">
+  <pub refereed="true" type="journal" reviewType="full">
     <author>高久雅生</author>
     <author>江草由佳</author>
     <author>伊東千夏</author>
@@ -4798,7 +4798,7 @@
     <url>http://ci.nii.ac.jp/naid/110003320760</url>
   </pub>
 
-  <pub refereed="true" type="journal">
+  <pub refereed="true" type="journal" reviewType="full">
     <author>江草由佳</author>
     <author>高久雅生</author>
     <author>宇陀則彦</author>
@@ -4860,7 +4860,7 @@
     <doi>10.2964/jsikproc.9.0_37</doi>
   </pub>
 
-  <pub refereed="true" type="journal">
+  <pub refereed="true" type="journal" reviewType="full">
     <author>宇陀則彦</author>
     <author>江草由佳</author>
     <author>高久雅生</author>
