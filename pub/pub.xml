@@ -1,6 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <publist>
   <pub type="misc">
+    <title>LODデータセットのメタデータ互換性の検討</title>
+    <author>叢艶</author>
+    <author>高久雅生</author>
+    <author>南山泰之</author>
+    <author>青木学聡</author>
+    <conference>情報知識学会第33回年次大会</conference>
+    <city>つくば</city>
+    <journal>情報知識学会誌</journal>
+    <volume>35</volume>
+    <number>2</number>
+    <year>2025</year>
+    <month>5</month>
+    <!--
+    <page>
+      <start>1</start>
+      <end>11</end>
+    </page>
+    -->
+    <page>11</page>
+    <language>ja</language>
+    <date>2026-05-31</date>
+  </pub>
+  <pub type="misc">
+    <title>浮世絵の主題情報に着目したデータベース構築の試み</title>
+    <author>高久雅生</author>
+    <author>小池珠恵</author>
+    <conference>情報知識学会第33回年次大会</conference>
+    <city>つくば</city>
+    <journal>情報知識学会誌</journal>
+    <volume>35</volume>
+    <number>2</number>
+    <year>2025</year>
+    <month>5</month>
+    <!--
+    <page>
+      <start>1</start>
+      <end>11</end>
+    </page>
+    -->
+    <page>13</page>
+    <language>ja</language>
+    <date>2026-05-31</date>
+  </pub>
+  <pub type="misc">
+    <title>デジタルアーカイブの教育利用促進を目指したメタデータLOD基盤に関する研究</title>
+    <author>高久雅生</author>
+    <author>江草由佳</author>
+    <author>榎本聡</author>
+    <author>大井将生</author>
+    <author>有山裕美子</author>
+    <author>阿児雄之</author>
+    <conference>情報知識学会第33回年次大会</conference>
+    <city>つくば</city>
+    <journal>情報知識学会誌</journal>
+    <volume>35</volume>
+    <number>2</number>
+    <year>2025</year>
+    <month>5</month>
+    <!--
+    <page>
+      <start>1</start>
+      <end>11</end>
+    </page>
+    -->
+    <page>16</page>
+    <language>ja</language>
+    <date>2026-05-31</date>
+  </pub>
+  <pub type="misc">
     <title>学校教育におけるデジタルアーカイブ活用促進にむけた教職員のICT活用状況調査</title>
     <author>有山裕美子</author>
     <author>大井将生</author>
