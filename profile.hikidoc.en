@@ -1,6 +1,6 @@
 title: Curriculum Vitae (Masao Takaku)
 subject: biography
-date.modified: 2025-06-08
+date.modified: 2025-07-13
 date.available: 2007-03-04
 
 [[{{image 'images/201809-c4ljp2018.jpg' 'Code4Lib JAPAN Conference 2018 (September 2018) (photo by: Fumihiro Kato)' thumbs 188px right}}|./profile-images.html]]
@@ -15,18 +15,19 @@ date.available: 2007-03-04
 ::Tel: +81-29-859-1394
 ::Fax: +81-29-859-1093
 :Laboratory website
-::http://www.slis.tsukuba.ac.jp/takaku-lab/en/
+::https://takaku-lab.slis.tsukuba.ac.jp/en/
 
 !!Research interests
-Information retrieval, Digital library, Information behaviour, Information Organization, Scholarly communication, Special library
 
-!!Work
+My research interests include digital libraries, information organization, information retrieval, information behavior, and scholarly communication.
+
+!!Work Experience
 :2019-01 - 2021-04:
 ::'''[[National Institute of Informatics|http://www.nii.ac.jp]] (Visiting Associate Professor)'''
 ::Discussions on operations and strategies at Working Group for Open Science Research Data Infrastructure WG, [[Organization for Science Network Operations and Coordination|https://www.sinet.ad.jp/en/aboutsinet-en/organization]].
 :2013-04 - :
 ::'''[[Institute of Library, Information and Media Science|http://www.slis.tsukuba.ac.jp/grad/english/]], [[University of Tsukuba|http://www.tsukuba.ac.jp/]] (Associate Professor)'''
-::Education and Study on Information Retrieval, Information Behavior, Digital Library, and Digital Document Services.
+::Education and study on digital libraries, information organization, information retrieval, information behavior, and scholarly communication.
 :2008-09 - 2013-03:
 ::'''[[Scientific Information Office|http://www.nims.go.jp/eng/infrastructure/scientific-information/index.html]], [[National Institute for Materials Science|http://www.nims.go.jp/]]  (Senior Engineer)'''
 ::Developing an digital library system and researchers directory for the institute. Operation in a special library at NIMS.
@@ -141,6 +142,7 @@ A full list of publications are available at [[./pub/]].
 *[[Japan Art Documentation Society|http://www.jads.org/]]
 
 !!!Activities on academic societies
+*The 26nd International Conference on Asia-Pacific Digital Libraries ([[ICADL 2024|https://icadl.net/icadl2023/]]), PC Committee Member (2024)
 *The 25nd International Conference on Asia-Pacific Digital Libraries ([[ICADL 2023|https://icadl.net/icadl2023/]]), PC Committee Member (2023)
 *The 17th NTCIR Conference ([[NTCIR-17|http://research.nii.ac.jp/ntcir/ntcir-17/conference.html]]), Organizing committee member (2023)
 *The 24nd International Conference on Asia-Pacific Digital Libraries ([[ICADL 2022|https://icadl.net/icadl2022/]]), PC Committee Member (2022)
