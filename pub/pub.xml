@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <publist>
+  <pub type="misc">
+    <title>デジタルアーカイブを取り巻く情報探索の課題とポイント</title>
+    <author>高久雅生</author>
+    <journal>デジタルアーカイブ学会誌</journal>
+    <volume>9</volume>
+    <number>2</number>
+    <year>2025</year>
+    <month>5</month>
+    <page>
+      <start>74</start>
+      <end>75</end>
+    </page>
+    <language>ja</language>
+    <date>2025-05-01</date>
+    <doi>10.24506/jsda.9.2_74</doi>
+  </pub>
   <pub type="conference" refereed="true" reviewType="full">
     <title>How Retracted Article Persists on YouTube</title>
     <subtitle>Retraction Severity, Visibility, and Disclosure</subtitle>
