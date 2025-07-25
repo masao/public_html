@@ -1,5 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <publist>
+  <pub type="conference" refereed="true" reviewType="full">
+    <title>A Preliminary Study on Metadata Compatibility and Automatic Conversion among LOD Datasets</title>
+    <author>Yan Cong</author>
+    <author>Masao Takaku</author>
+    <author>Yasuyuki Minamiyama</author>
+    <author>Takaaki Aoki</author>
+    <author>Shigeki Matsubara</author>
+    <conference>DCMI 2025</conference>
+    <year>2025</year>
+    <month>10</month>
+    <city>Barcelona, Spain</city>
+    <language>en</language>
+    <page>11</page>
+    <!--
+    <page>
+      <start>3</start>
+      <end>17</end>
+    </page>
+    -->
+    <date>2025-10-19</date>
+  </pub>
   <pub type="misc">
     <title>デジタルアーカイブを取り巻く情報探索の課題とポイント</title>
     <author>高久雅生</author>
@@ -32,6 +53,7 @@
     <month>9</month>
     <city>Tampere, Finland</city>
     <language>en</language>
+    <page>19</page>
     <!--
     <page>
       <start>326</start>
