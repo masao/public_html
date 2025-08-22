@@ -1,5 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <publist>
+  <pub type="misc">
+    <title>学習指導要領と解説に基づく学習内容の構造化の試み</title>
+    <author>高久雅生</author>
+    <author>江草由佳</author>
+    <author>榎本聡</author>
+    <author>大井将生</author>
+    <author>有山裕美子</author>
+    <author>阿児雄之</author>
+    <conference>第51回全日本教育工学研究協議会全国大会</conference>
+    <city>つくば</city>
+    <year>2025</year>
+    <month>11</month>
+    <page>4</page>
+    <!--
+      <start>262</start>
+      <end>277</end>
+    </page>
+    -->
+    <language>ja</language>
+    <date>2025-11-14</date>
+  </pub>
   <pub type="conference" refereed="true" reviewType="full">
     <title>A Preliminary Study on Metadata Compatibility and Automatic Conversion among LOD Datasets</title>
     <author>Yan Cong</author>
@@ -42,7 +63,6 @@
     <subtitle>Retraction Severity, Visibility, and Disclosure</subtitle>
     <author>Jiro Kikkawa</author>
     <author>Masao Takaku</author>
-    <author>Fuyuki Yoshikane</author>
     <conference>TPDL 2025</conference>
     <journal>Lecture Notes in Computer Science (LNCS)</journal>
     <!--
