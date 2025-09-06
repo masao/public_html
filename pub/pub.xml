@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <publist>
   <pub type="misc">
+    <title>JPCOAR Validator</title>
+    <subtitle>JPCOARメタデータスキーマ検証ツール</subtitle>
+    <author>高久雅生</author>
+    <conference>Code4Lib JAPANカンファレンス2025</conference>
+    <city>オンライン</city>
+    <year>2025</year>
+    <month>9</month>
+    <language>ja</language>
+    <date>2025-09-06</date>
+    <slides>https://speakerdeck.com/masao/jpcoar-validator</slides>
+  </pub>
+  <pub type="misc">
     <title>学習指導要領と解説に基づく学習内容の構造化の試み</title>
     <author>高久雅生</author>
     <author>江草由佳</author>
