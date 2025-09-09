@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <publist>
+  <pub type="conference" refereed="true" reviewType="full">
+    <title>A Linked Open Data Infrastructure for Promoting the Educational Use of Digital Archives</title>
+    <author>Masao Takaku</author>
+    <author>Yuka Egusa</author>
+    <author>Satoshi Enomoto</author>
+    <author>Masao Oi</author>
+    <author>Yumiko Ariyama</author>
+    <author>Takayuki Ako</author>
+    <conference>ICADL 2025 - The 27th International Conference on Asia-Pacific Digital Libraries</conference>
+    <year>2025</year>
+    <month>12</month>
+    <!--
+    <page>1</page>
+    -->
+    <city>Metro Manila, Philippines</city>
+    <language>en</language>
+    <date>2025-12-03</date>
+  </pub>
   <pub type="misc">
     <title>教育向けLOD基盤の活用に向けて</title>
     <author>高久雅生</author>
