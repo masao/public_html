@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <publist>
   <pub type="misc">
+    <title>教育向けLOD基盤の活用に向けて</title>
+    <author>高久雅生</author>
+    <author>江草由佳</author>
+    <conference>Code4Lib JAPANカンファレンス2025</conference>
+    <city>オンライン</city>
+    <year>2025</year>
+    <month>9</month>
+    <language>ja</language>
+    <date>2025-09-07</date>
+    <slides>https://speakerdeck.com/masao/edudata-lod-number-c4ljp</slides>
+  </pub>
+  <pub type="misc">
     <title>JPCOAR Validator</title>
     <subtitle>JPCOARメタデータスキーマ検証ツール</subtitle>
     <author>高久雅生</author>
