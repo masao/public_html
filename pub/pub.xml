@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <publist>
   <pub type="conference" refereed="true" reviewType="full">
+    <title>Analyzing Graduation Thesis-related Questions on Yahoo! Chiebukuro: Question Distribution, Temporal Trends, and Topical Structures</title>
+    <author>Jiro Kikkawa</author>
+    <author>Masao Takaku</author>
+    <conference>A-LIEP 2025 - The 12th Asia-Pacific Library and Information Education and Practice Conference</conference>
+    <year>2025</year>
+    <month>12</month>
+    <!--
+    <page>1</page>
+    -->
+    <city>Taguig, Metro Manila, Philippines</city>
+    <language>en</language>
+    <date>2025-12-03</date>
+  </pub>
+  <pub type="conference" refereed="true" reviewType="full">
+    <title>Analyzing References to Scholarly Content on Yahoo! Chiebukuro: With Insights from 200 Million Questions and 500 Million Answers</title>
+    <author>Jiro Kikkawa</author>
+    <author>Masao Takaku</author>
+    <conference>A-LIEP 2025 - The 12th Asia-Pacific Library and Information Education and Practice Conference</conference>
+    <year>2025</year>
+    <month>12</month>
+    <!--
+    <page>1</page>
+    -->
+    <city>Taguig, Metro Manila, Philippines</city>
+    <language>en</language>
+    <date>2025-12-03</date>
+  </pub>
+  <pub type="conference" refereed="true" reviewType="full">
     <title>A Linked Open Data Infrastructure for Promoting the Educational Use of Digital Archives</title>
     <author>Masao Takaku</author>
     <author>Yuka Egusa</author>
@@ -11,9 +39,7 @@
     <conference>ICADL 2025 - The 27th International Conference on Asia-Pacific Digital Libraries</conference>
     <year>2025</year>
     <month>12</month>
-    <!--
-    <page>1</page>
-    -->
+    <page>17</page>
     <city>Taguig, Metro Manila, Philippines</city>
     <language>en</language>
     <date>2025-12-03</date>
