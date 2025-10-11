@@ -1,6 +1,6 @@
 title: Curriculum Vitae (Masao Takaku)
 subject: biography
-date.modified: 2025-10-04
+date.modified: 2025-10-11
 date.available: 2007-03-04
 
 [[{{image 'images/201809-c4ljp2018.jpg' 'Code4Lib JAPAN Conference 2018 (September 2018) (photo by: Fumihiro Kato)' thumbs 188px right}}|./profile-images.html]]
@@ -116,6 +116,7 @@ My research interests include digital libraries, information organization, infor
 ::(Skills) Japan/MARC, C, Perl, DBM, Magnetic tapes
 
 !!Awards
+:TPDL 2025 Best Paper Award (2025):The paper "How Retracted Article Persists on YouTube: Retraction Severity, Visibility, and Disclosure (Jiro Kikkawa, Masao Takaku)" won the Best Paper Award at the 29th International Conference on Theory and Practice of Digital Libraries (TPDL 2025). ([[details|https://tpdl2025.github.io/]])
 :The 22nd Best Paper Award of Journal of Information and Knowledge (2025):The paper entitled "Comparative Analysis of Institutional Dashboards Provided by Overseas Scholarly Infrastructures", co-authored with Rue Ikeya, et al., published on ''Journal of Information and Knowledge'' Volume 34, Issue 1 got received the Best Paper Award. ([[details|http://www.jsik.jp/?gakkaishi#award]])
 :LOD Challenge 2024 Theme Awards - Technology Award:Received for Static LOD Website Generator [[ttl2html|https://github.com/masao/ttl2html/]]. ([[details|https://2024.lodc.jp/awardPressRelease2024.html]])
 :The 20th Best Paper Award of Journal of Information and Knowledge (2023):The paper entitled "The Study on Structured Data for Chinese Poetry — Focus on Tang Poem", co-authored with Cong Yan, published on published on ''Journal of Information and Knowledge'' Volume 32, Issue 1 got received the Best Paper Award. ([[details|http://www.jsik.jp/?gakkaishi#award]])
