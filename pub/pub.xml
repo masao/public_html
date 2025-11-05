@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <publist>
+  <pub type="misc">
+    <title>教職員の ICT 活用とデジタルアーカイブ利用の実態分析</title>
+    <author>有山裕美子</author>
+    <author>大井将生</author>
+    <author>阿児雄之</author>
+    <author>江草由佳</author>
+    <author>榎本聡</author>
+    <author>阿児雄之</author>
+    <author>高久雅生</author>
+    <conference>情報メディア学会第27回研究会</conference>
+    <city>東京</city>
+    <year>2025</year>
+    <month>11</month>
+    <page>4</page>
+    <!--
+      <start>262</start>
+      <end>277</end>
+    </page>
+    -->
+    <language>ja</language>
+    <date>2025-11-15</date>
+  </pub>
   <pub type="conference" refereed="true" reviewType="full">
     <title>Analyzing Graduation Thesis-related Questions on Yahoo! Chiebukuro: Question Distribution, Temporal Trends, and Topical Structures</title>
     <author>Jiro Kikkawa</author>
@@ -86,6 +108,7 @@
       <end>277</end>
     </page>
     -->
+    <articleno>3-D-3</articleno>
     <language>ja</language>
     <date>2025-11-14</date>
   </pub>
