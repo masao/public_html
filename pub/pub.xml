@@ -104,15 +104,11 @@
     <year>2025</year>
     <month>11</month>
     <page>4</page>
-    <!--
-      <start>262</start>
-      <end>277</end>
-    </page>
-    -->
     <articleno>3-D-3</articleno>
     <language>ja</language>
     <date>2025-11-14</date>
     <url>https://smartconf.jp/content/jaet2025/</url>
+    <slides>https://speakerdeck.com/masao/course-of-study-commentary-lod-jaet-2025</slides>
   </pub>
   <pub type="conference" refereed="true" reviewType="full">
     <title>A Preliminary Study on Metadata Compatibility and Automatic Conversion among LOD Datasets</title>
