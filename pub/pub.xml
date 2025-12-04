@@ -65,12 +65,10 @@
     <journal>Lecture Notes in Computer Science (LNCS)</journal>
     <volume>16242</volume>
     <publisher>Springer</publisher>
-    <page>17</page>
-    <!--
-      <start>1</start>
-      <end>17</end>
+    <page>
+      <start>153</start>
+      <end>169</end>
     </page>
-    -->
     <city>Taguig, Metro Manila, Philippines</city>
     <language>en</language>
     <doi>10.1007/978-981-95-4861-3_14</doi>
