@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <publist>
   <pub type="misc">
+    <title>Wikipedia 25週年を迎えて</title>
+    <author>高久雅生</author>
+    <conference>ウィキペディア25周年記念交流会イベント</conference>
+    <city>東京</city>
+    <year>2026</year>
+    <month>3</month>
+    <date>2026-03-01</date>
+    <url>https://meta.wikimedia.org/wiki/Wikimedians_of_Japan_User_Group/events/%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A225%E5%91%A8%E5%B9%B4%E8%A8%98%E5%BF%B5%E4%BA%A4%E6%B5%81%E4%BC%9A</url>
+    <slides>https://speakerdeck.com/masao/2026-03-01-wikipedia-25-talk</slides>
+  </pub>
+  <pub type="misc">
     <title>教職員の ICT 活用とデジタルアーカイブ利用の実態分析</title>
     <author>有山裕美子</author>
     <author>大井将生</author>
