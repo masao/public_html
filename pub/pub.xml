@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <publist>
   <pub type="misc">
+    <title>ドキュメンテーションスタディーズ入門</title>
+    <subtitle>記録される知の理論のために</subtitle>
+    <author>高久雅生</author>
+    <journal>専門図書館</journal>
+    <number>325</number>
+    <page>
+      <start>53</start>
+      <end>54</end>
+    </page>
+    <year>2026</year>
+    <month>3</month>
+    <date>2026-03-31</date>
+    <note>資料紹介</note>
+  </pub>
+  <pub type="misc">
     <title>主題項目に基づいた浮世絵のデータセット構築および探索支援システムの評価</title>
     <author>小池珠恵</author>
     <author>高久雅生</author>
