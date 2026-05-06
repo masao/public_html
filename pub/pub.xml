@@ -22,6 +22,27 @@
     <date>2025-05-16</date>
   </pub>
   <pub type="misc">
+    <title>研究サイクルにおける学術情報検索ツールの利用変遷と経験の影響</title>
+    <author>松原友紀子</author>
+    <author>高久雅生</author>
+    <conference>情報知識学会第34回年次大会</conference>
+    <city>函館</city>
+    <journal>情報知識学会誌</journal>
+    <volume>36</volume>
+    <number>2</number>
+    <year>2026</year>
+    <month>5</month>
+    <page>10</page>
+    <!--
+    <page>
+      <start>304</start>
+      <end>314</end>
+    </page>
+    -->
+    <language>ja</language>
+    <date>2025-05-23</date>
+  </pub>
+  <pub type="misc">
     <title>教育リソースLOD基盤を用いた教材横断検索手法の提案</title>
     <author>LYU YUETONG</author>
     <author>高久雅生</author>
