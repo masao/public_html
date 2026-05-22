@@ -29,13 +29,10 @@
     <number>2</number>
     <year>2026</year>
     <month>5</month>
-    <page>10</page>
-    <!--
     <page>
-      <start>304</start>
-      <end>314</end>
+      <start>295</start>
+      <end>304</end>
     </page>
-    -->
     <language>ja</language>
     <date>2025-05-23</date>
   </pub>
@@ -50,13 +47,10 @@
     <number>2</number>
     <year>2026</year>
     <month>5</month>
-    <page>10</page>
-    <!--
     <page>
-      <start>304</start>
-      <end>314</end>
+      <start>224</start>
+      <end>233</end>
     </page>
-    -->
     <language>ja</language>
     <date>2025-05-23</date>
   </pub>
@@ -71,13 +65,10 @@
     <number>2</number>
     <year>2026</year>
     <month>5</month>
-    <page>18</page>
-    <!--
     <page>
-      <start>304</start>
-      <end>314</end>
+      <start>124</start>
+      <end>141</end>
     </page>
-    -->
     <language>ja</language>
     <date>2025-05-23</date>
   </pub>
