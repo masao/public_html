@@ -1,5 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <publist>
+  <pub type="conference" refereed="true" reviewType="full">
+    <title>A Workflow-Based Approach for Metadata Interoperability via Domain-Specific Schema Mapping to DataCite</title>
+    <author>Yan Cong</author>
+    <author>Masao Takaku</author>
+    <author>Yasuyuki Minamiyama</author>
+    <author>Takaaki Aoki</author>
+    <author>Shigeki Matsubara</author>
+    <conference>DCMI 2026</conference>
+    <year>2026</year>
+    <month>8</month>
+    <city>Seoul, South Korea</city>
+    <language>en</language>
+    <page>12</page>
+    <!--
+    <page>
+      <start>3</start>
+      <end>17</end>
+    </page>
+    -->
+    <date>2026-08-03</date>
+  </pub>
   <pub type="misc">
     <title>Construction of an LOD Model for Chinese Literary Theory</title>
     <author>Xiaoyan Ye</author>
