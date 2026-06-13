@@ -1,22 +1,28 @@
 title: Masao Takaku's Website
-date.modified: 2018-03-08
+date.modified: 2026-06-14
 date.available: 2007-03-04
 navi: false
 
-{{div class="news"
-!! News
-:2007-03-04:English version of my website has been opened.
-}}
+{{image 'images/20181219-Profile.jpg' 'Masao Takaku' thumbs right}}
 
-!!Table of Contents
+I am a researcher specializing in Library and Information Science, Digital Libraries, Digital Archives, Knowledge Organization, Metadata, Information Retrieval, Information Seeking Behavior, and Web Information Systems.
 
-:[[Biography|biography.html]]:About me.
-:[[Publications|./pub/]]:A list of publications written by me.
-:[[Softwares|./software/]]:My software/scripts.
-:[[Lecture|./lecture/]]:Meterials for lectures.
-:[[Misc.|./etc/]]:Miscellaneous contents.
-:[[My favorite links|links.html]]:Links to my favorite websites.
-:[[Web album|./photo/]]:Photos taken by me.
-:[[My memo|./d/]]:My memo/diary.
+My research focuses on how information and knowledge can be organized, discovered, and accessed through digital systems and services.
 
-* Laboratory website: http://www.slis.tsukuba.ac.jp/takaku-lab/en/
+!! Biography
+
+Information about my affiliation, academic background, research interests, and contact details.
+
+* [[Biography|biography.html]]
+
+!! Publications
+
+A list of journal articles, conference papers, presentations, and other scholarly works.
+
+* [[Publications|pub/]]
+
+!! Research Lab
+
+Information about our research topics, members, and activities.
+
+* [[Takaku Lab|https://www.slis.tsukuba.ac.jp/takaku-lab/]]

@@ -1,25 +1,26 @@
-title: たかくまさおのホームページ
-date.modified: 2018-03-08
+title: 高久雅生のホームページ
+date.modified: 2026-06-14
 navi: false
-javascript.src: https://www.google.com/jsapi
-javascript.src: newsfeed.js
 
-{{rawhtml
-<div class="news">
-<h2>お知らせ</h2>
-<div id="newsfeed"></div>
-</div>
-}}
+{{image 'images/20181219-Profile.jpg' 'Masao Takaku' thumbs right}}
 
-!! 目次
+図書館情報学、デジタルライブラリ、デジタルアーカイブ、情報組織化、メタデータ、情報検索、情報探索行動、ウェブ情報システムを専門とする研究者です。
+人が求める知識と情報へのアクセスを支える仕組みを、研究、教育、実践の側面から探究しています。
 
-:[[自己紹介|biography.html]]:高久雅生について。
-:[[発表文献|./pub/]]:これまでに執筆、発表した文献の一覧です。
-:[[ソフトウェア|./software/]]:自分で書いたスクリプトなどを置いてあります。
-:[[講義資料|./lecture/]]:授業の資料を置いてあります。
-:[[その他諸々|./etc/]]:上記のもの以外
-:[[リンク集|links.html]]:自分のよく行きそうなところを集めたリンク集
-:[[Webアルバム|./photo/]]:デジカメを携帯して日常の風景をいろいろ撮ってます。
-:[[まさおのChangeLogメモ|./d/]]:個人用のメモ（日記）です。日々の備忘録代わりに書いてます。
+!! 自己紹介
 
-* 研究室サイト: http://www.slis.tsukuba.ac.jp/takaku-lab/
+所属、略歴、研究分野、連絡先などを掲載しています。
+
+* [[自己紹介|biography.html]]
+
+!! 研究業績
+
+論文、国際会議発表、研究発表、講演資料などの一覧です。
+
+* [[研究業績を見る|pub/]]
+
+!! 研究室
+
+研究テーマ、メンバー、研究室での活動について紹介しています。
+
+* [[研究室サイトを見る|https://www.slis.tsukuba.ac.jp/takaku-lab/]]
