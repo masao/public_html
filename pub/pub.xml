@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <publist>
+  <pub type="mics">
+    <title>テキストの自動主題索引付与 (Automatic Subject Indexing of Text)</title>
+    <author>高久雅生</author>
+    <conference>第8回知識組織論研究会</conference>
+    <year>2026</year>
+    <month>6</month>
+    <city>オンライン</city>
+    <language>ja</language>
+    <page>5</page>
+    <date>2026-06-13</date>
+    <url>https://sites.google.com/view/korgj/meetings</url>
+  </pub>
   <pub type="conference" refereed="true" reviewType="full">
     <title>A Workflow-Based Approach for Metadata Interoperability via Domain-Specific Schema Mapping to DataCite</title>
     <author>Yan Cong</author>
