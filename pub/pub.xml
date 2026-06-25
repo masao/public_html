@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <publist>
+  <pub type="conference">
+    <title>Sustainable Linked Open Data Publishing through Static Site Generation</title>
+    <subtitle>A Decade of Educational LOD Infrastructure</subtitle>
+    <author>Masao Takaku</author>
+    <author>Yuka Egusa</author>
+    <conference>DCMI 2026</conference>
+    <year>2026</year>
+    <month>8</month>
+    <city>Seoul, South Korea</city>
+    <language>en</language>
+    <!--
+    <page>12</page>
+    <page>
+      <start>3</start>
+      <end>17</end>
+    </page>
+    -->
+    <date>2026-08-03</date>
+  </pub>
   <pub type="mics">
     <title>テキストの自動主題索引付与 (Automatic Subject Indexing of Text)</title>
     <author>高久雅生</author>
