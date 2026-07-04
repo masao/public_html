@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <publist>
+  <pub type="mics">
+    <title>教育基盤LODの提供と利活用</title>
+    <subtitle>可視化と構造化の側面から</subtitle>
+    <author>高久雅生</author>
+    <conference>科研費成果報告会「学校教育とデジタルアーカイブを架橋する」</conference>
+    <year>2026</year>
+    <month>7</month>
+    <city>東京</city>
+    <language>ja</language>
+    <date>2026-07-23</date>
+    <url>https://edudataplus.notion.site/top</url>
+  </pub>
   <pub type="conference">
     <title>Sustainable Linked Open Data Publishing through Static Site Generation</title>
     <subtitle>A Decade of Educational LOD Infrastructure</subtitle>
