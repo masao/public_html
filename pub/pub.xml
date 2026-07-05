@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <publist>
-  <pub type="mics">
+  <pub type="misc">
     <title>教育基盤LODの提供と利活用</title>
     <subtitle>可視化と構造化の側面から</subtitle>
     <author>高久雅生</author>
@@ -31,7 +31,7 @@
     -->
     <date>2026-08-03</date>
   </pub>
-  <pub type="mics">
+  <pub type="misc">
     <title>テキストの自動主題索引付与 (Automatic Subject Indexing of Text)</title>
     <author>高久雅生</author>
     <conference>第8回知識組織論研究会</conference>
