@@ -13,3 +13,10 @@ author_map:
   "Ximei Song": 宋曦媚
   "Yan Cong": 叢艶
   "Itsumi Sato": 佐藤いつみ
+review_label:
+  refereed: Peer reviewed
+  short: Short paper
+  full: Full paper
+  poster: Poster paper
+  invited: Invited
+  abstract: Extended abstract

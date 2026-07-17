@@ -97,7 +97,7 @@ class PubData
    attr_reader :page_start, :page_end, :page, :isbn, :note, :awards, :awards_url
    attr_reader :url, :doi, :slides, :poster, :file, :abstract
    attr_reader :language
-   attr_reader :refereed
+   attr_reader :refereed, :review_type
    attr_reader :date
    attr_reader :chapter
    attr_reader :dataset_title, :dataset_url
@@ -105,6 +105,7 @@ class PubData
       @config = config
       @type = element.attributes["type"]
       @refereed = element.attributes["refereed"]
+      @review_type = element.attributes["reviewType"]
       @author = []
       @author_role = {}
       element.each_elements( "author" ) do |e|
@@ -282,6 +283,15 @@ class PubData
 #{bibtex_s}
 }
 EOF
+   end
+   def review_label(str)
+      review_labels = @config["review_label"]
+      #p [str, review_labels]
+      if review_labels and review_labels[str]
+         review_labels[str]
+      else
+         str
+      end
    end
 
    def eval_rhtml( tmpl )

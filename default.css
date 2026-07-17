@@ -176,6 +176,26 @@
   #publist .refereed {
     color: #3c3;
   }
+  #publist .review_type.full {
+    color: #fff;
+    background-color: #49378c;
+    border: 1px solid #332568;
+  }
+  #publist .review_type.short {
+    color: #fff;
+    background-color: #286da8;
+    border: 1px solid #1e527f;
+  }
+  #publist .review_type.poster {
+    color: #173f4b;
+    background-color: #c7e5eb;
+    border: 1px solid #659ca8;
+  }
+  #publist .review_type.abstract {
+    color: #555;
+    background-color: #f1f2f2;
+    border: 1px solid #aeb5b8;
+  }
   #publist .bibdata { font-size: smaller; }
   #publist .awards  { font-weight: bolder; color: #BE003F; font-size: smaller; }
   #publist dd.url   { font-size: smaller; }
