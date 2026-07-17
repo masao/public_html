@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <publist>
+  <pub type="conference">
+    <title>Linked open data model and visualization system for the evolution of Chinese ancient book editions: Shishuo Xinyu as an example</title>
+    <author>Xiaoyan Ye</author>
+    <author>Masao Takaku</author>
+    <conference>DH2026</conference>
+    <city>Daejeon, South Korea</city>
+    <!--
+    <journal></journal>
+    <volume>2026-CH-141</volume>
+    <number>2</number>
+    -->
+    <year>2026</year>
+    <month>7</month>
+    <!--
+    <page>
+      <start>1</start>
+      <end>7</end>
+    </page>
+    -->
+    <language>en</language>
+    <date>2026-07-27</date>
+  </pub>
   <pub type="misc">
     <title>教育基盤LODの提供と利活用</title>
     <subtitle>可視化と構造化の側面から</subtitle>
@@ -80,7 +102,7 @@
       <end>7</end>
     </page>
     <language>ja</language>
-    <date>2025-05-16</date>
+    <date>2026-05-16</date>
     <url>https://ipsj.ixsq.nii.ac.jp/records/2009496</url>
   </pub>
   <pub type="misc">
