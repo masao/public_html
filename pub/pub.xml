@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <publist>
-  <pub type="conference">
+  <pub type="conference" refereed="true" reviewType="abstract">
     <title>Linked open data model and visualization system for the evolution of Chinese ancient book editions: Shishuo Xinyu as an example</title>
     <author>Xiaoyan Ye</author>
     <author>Masao Takaku</author>
@@ -13,6 +13,7 @@
     -->
     <year>2026</year>
     <month>7</month>
+    <page>5</page>
     <!--
     <page>
       <start>1</start>
@@ -101,7 +102,7 @@
       <start>1</start>
       <end>7</end>
     </page>
-    <language>ja</language>
+    <language>en</language>
     <date>2026-05-16</date>
     <url>https://ipsj.ixsq.nii.ac.jp/records/2009496</url>
   </pub>
