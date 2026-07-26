@@ -6,22 +6,15 @@
     <author>Masao Takaku</author>
     <conference>DH2026</conference>
     <city>Daejeon, South Korea</city>
-    <!--
-    <journal></journal>
-    <volume>2026-CH-141</volume>
-    <number>2</number>
-    -->
     <year>2026</year>
     <month>7</month>
-    <page>5</page>
-    <!--
     <page>
-      <start>1</start>
-      <end>7</end>
+      <start>693</start>
+      <end>695</end>
     </page>
-    -->
     <language>en</language>
     <date>2026-07-27</date>
+    <doi>10.5281/zenodo.21495909</doi>
   </pub>
   <pub type="misc">
     <title>教育基盤LODの提供と利活用</title>
