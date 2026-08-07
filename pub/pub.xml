@@ -39,14 +39,9 @@
     <month>8</month>
     <city>Seoul, South Korea</city>
     <language>en</language>
-    <!--
-    <page>12</page>
-    <page>
-      <start>3</start>
-      <end>17</end>
-    </page>
-    -->
     <date>2026-08-03</date>
+    <url>https://www.dublincore.org/conferences/2026/sessions/best-practices/#recxKvmOQQ3kv5GVE</url>
+    <slides>https://speakerdeck.com/masao/sustainable-linked-open-data-publishing-through-static-site-generation-a-decade-of-educational-lod-infrastructure</slides>
   </pub>
   <pub type="misc">
     <title>テキストの自動主題索引付与 (Automatic Subject Indexing of Text)</title>
