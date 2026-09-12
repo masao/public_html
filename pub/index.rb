@@ -95,7 +95,7 @@ class PubData
    attr_reader :volume, :number, :sequence_number, :year, :month, :city
    attr_reader :articleno
    attr_reader :page_start, :page_end, :page, :isbn, :note, :awards, :awards_url
-   attr_reader :url, :doi, :slides, :poster, :file, :abstract
+   attr_reader :url, :doi, :slides, :poster, :file, :abstract, :video
    attr_reader :language
    attr_reader :refereed, :review_type
    attr_reader :date
@@ -143,7 +143,7 @@ class PubData
       @dataset_title = element.text("dataset/title")
       @dataset_url = element.text("dataset/url")
       @dataset_url = "https://doi.org/" + element.text("dataset/doi") if element.text("dataset/doi")
-      %w[ abstract slides poster url ].each do |target|
+      %w[ abstract slides poster url video ].each do |target|
          values = element.get_elements( target )
          if values.empty?
             next

@@ -83,7 +83,7 @@ end
   </dd>
 <% end %>
 <% end %>
-<% %w[ abstract slides poster ].each do |target| %>
+<% %w[ abstract slides poster video ].each do |target| %>
   <% send( target ).to_a.each do |val| %>
     <dd class="url">
     <span class="<%= target %>">[<%= target.capitalize %>] <a href="<%=h val %>"><%=h val %></a></span>
