@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <publist>
+  <pub type="misc">
+    <title>ウェブサイト運営における生成AIの影響と今後の課題</title>
+    <author>高久雅生</author>
+    <conference>saveMLAK 図書館総合展2026 企画「近況報告」</conference>
+    <year>2026</year>
+    <month>11</month>
+    <city>オンライン</city>
+    <language>ja</language>
+    <date>2026-11-01</date>
+    <url>https://savemlak.jp/wiki/saveMLAK:Event/LibraryFair2026</url>
+    <slides>https://speakerdeck.com/masao/20261101-savemlak-genai-bot</slides>
+  </pub>
   <pub type="conference" refereed="true" reviewType="abstract">
     <title>Linked open data model and visualization system for the evolution of Chinese ancient book editions: Shishuo Xinyu as an example</title>
     <author>Xiaoyan Ye</author>
