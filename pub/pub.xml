@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <publist>
   <pub type="misc">
+    <title>OAIS参照モデルに関するこれまでの議論と第3版改訂における現在地</title>
+    <subtitle>日本における長期デジタル保存課題に対する有効な標準ポートフォリオの検討に向けて</subtitle>
+    <author>川嶌健一</author>
+    <author>高久雅生</author>
+    <conference>デジタルアーカイブ学会第11回研究大会</conference>
+    <city>東大阪市</city>
+    <journal>デジタルアーカイブ学会誌</journal>
+    <volume>10</volume>
+    <number>s2</number>
+    <year>2026</year>
+    <month>11</month>
+    <page>
+      <start>s87</start>
+      <end>s90</end>
+    </page>
+    <language>ja</language>
+    <date>2025-11-07</date>
+    <doi>10.24506/jsda.10.s2_s87</doi>
+  </pub>
+  <pub type="misc">
     <title>ウェブサイト運営における生成AIの影響と今後の課題</title>
     <author>高久雅生</author>
     <conference>saveMLAK 図書館総合展2026 企画「近況報告」</conference>
