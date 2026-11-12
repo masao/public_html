@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <publist>
   <pub type="misc">
+    <title>AI時代に学術情報をどう探し、どう使うか</title>
+    <subtitle>研究の様々な場面と一研究者の経験から</subtitle>
+    <author>高久雅生</author>
+    <conference>ウェビナー「研究者の情報探索はどう変わるのか：学術情報の利用と評価を考える」</conference>
+    <year>2026</year>
+    <month>11</month>
+    <city>オンライン</city>
+    <language>ja</language>
+    <date>2026-11-12</date>
+    <url>https://libraryfair.jp/forum/2026/2513</url>
+    <slides>https://speakerdeck.com/masao/20261112-libraryfair2026-springerwebinar-takaku</slides>
+  </pub>
+  <pub type="misc">
     <title>OAIS参照モデルに関するこれまでの議論と第3版改訂における現在地</title>
     <subtitle>日本における長期デジタル保存課題に対する有効な標準ポートフォリオの検討に向けて</subtitle>
     <author>川嶌健一</author>
